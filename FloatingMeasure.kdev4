@@ -1,0 +1,26 @@
+[Launch]
+Launch Configurations=Launch Configuration 0
+
+[Launch][Launch Configuration 0]
+Configured Launch Modes=execute
+Configured Launchers=nativeAppLauncher
+Name=FloatingMeasure Launcher
+Type=Native Application
+
+[Launch][Launch Configuration 0][Data]
+Arguments=
+Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x00)
+Dependency Action=Nothing
+EnvironmentGroup=
+Executable=file:///home/michae/projects/MeasureNum/build/bin/FloatingMeasure
+External Terminal=konsole --noclose --workdir %workdir -e %exe
+Project Target=FloatingMeasure
+Use External Terminal=true
+Working Directory=
+isExecutable=true
+
+[Project]
+CreatedFrom=
+Manager=KDevCustomBuildSystem
+Name=FloatingMeasure
+VersionControl=kdevsubversion
