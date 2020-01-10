@@ -1,0 +1,3 @@
+/home/michae/projects/FloatingMeasure/Test/CMakeFiles/rebuild_cache.dir
+/home/michae/projects/FloatingMeasure/Test/CMakeFiles/TestRunner.dir
+/home/michae/projects/FloatingMeasure/Test/CMakeFiles/edit_cache.dir

@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/TestRunner.dir/TestRunner.cpp.o  -o TestRunner /usr/lib/x86_64-linux-gnu/libcppunit.so ../build/lib/libFloatingMeasure.a 
