@@ -72,3 +72,4 @@ typedef CSingleton<CMeasureOperator> CMeasureOperatorSingleton;
 void Invert(eOperation& Op2Invert);
 
 #endif // CMEASUREOPERATOR_H
+

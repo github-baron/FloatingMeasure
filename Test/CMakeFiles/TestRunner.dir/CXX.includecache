@@ -58,6 +58,8 @@ Test/../src/Measure/MeasureOperator.h
 DigFloat/DigFloat.h
 -
 
+Test/../src/Measure/ComplexMeasureMacros.h
+
 Test/../src/Measure/MeasureOperator.h
 VectorHandle.h
 Test/../src/Measure/VectorHandle.h

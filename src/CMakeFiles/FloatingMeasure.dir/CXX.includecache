@@ -6,14 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/michae/projects/FloatingMeasure/src/DigFloat/DigFloat.cpp
-DigFloat.h
-/home/michae/projects/FloatingMeasure/src/DigFloat/DigFloat.h
-
-/home/michae/projects/FloatingMeasure/src/DigFloat/DigFloat.h
-Utils/Utils.h
--
-
 /home/michae/projects/FloatingMeasure/src/FloatingMeasure/FloatingMeasure.cpp
 FloatingMeasure.h
 /home/michae/projects/FloatingMeasure/src/FloatingMeasure/FloatingMeasure.h
@@ -69,10 +61,6 @@ VectorHandle.h
 /home/michae/projects/FloatingMeasure/src/Measure/VectorHandle.h
 
 /home/michae/projects/FloatingMeasure/src/Measure/VectorHandle.h
-Utils/Utils.h
--
-
-/home/michae/projects/FloatingMeasure/src/Utils/Utils.cpp
 Utils/Utils.h
 -
 

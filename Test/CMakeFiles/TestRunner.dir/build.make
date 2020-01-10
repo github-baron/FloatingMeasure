@@ -80,7 +80,7 @@ TestRunner_EXTERNAL_OBJECTS =
 Test/TestRunner: Test/CMakeFiles/TestRunner.dir/TestRunner.cpp.o
 Test/TestRunner: Test/CMakeFiles/TestRunner.dir/build.make
 Test/TestRunner: /usr/lib/x86_64-linux-gnu/libcppunit.so
-Test/TestRunner: build/lib/libFloatingMeasure.a
+Test/TestRunner: build/lib/libFloatingMeasure.so
 Test/TestRunner: Test/CMakeFiles/TestRunner.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/michae/projects/FloatingMeasure/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable TestRunner"
 	cd /home/michae/projects/FloatingMeasure/Test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TestRunner.dir/link.txt --verbose=$(VERBOSE)

@@ -24,6 +24,7 @@
 
 #ifndef CVECTORHANDLE_H
 #define CVECTORHANDLE_H
+
 #include<Utils/Utils.h>
 
 /**

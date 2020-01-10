@@ -51,9 +51,9 @@ using namespace __gnu_cxx;
 #define UNKNOWN_VALUE       myNAN
 #define INVALID_EXPONENT    -666
 
-static string mu(GREEK_SMALL_MU);
-static string Omega(GREEK_CAPITAL_OMEGA);
-static string pm("\u00B1");
+#define mu string(GREEK_SMALL_MU)
+#define Omega string(GREEK_CAPITAL_OMEGA)
+#define pm string("\u00B1")
 
 // need to derive machine epsilon for double
 /**

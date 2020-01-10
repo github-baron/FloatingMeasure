@@ -184,7 +184,6 @@ public:
         // operator /=
         dfFac2 /=10.;
         dfFac1 = dfFac2 * 10; 
-        dfFac1/dfFac2 == CDigFloat(10);
         CPPUNIT_ASSERT_MESSAGE( "exp = " + to_string(0) + "\n" + dfFac1.Print() + "\n" + dfFac2.Print()+ "\n" + (dfFac1/dfFac2 ).Print(),
                                     dfFac1/dfFac2 == CDigFloat(10));
     

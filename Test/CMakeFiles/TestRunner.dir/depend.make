@@ -6,6 +6,7 @@ Test/CMakeFiles/TestRunner.dir/TestRunner.cpp.o: Test/../src/DigFloat/DigFloat.h
 Test/CMakeFiles/TestRunner.dir/TestRunner.cpp.o: Test/../src/FloatingMeasure/FloatingMeasure.h
 Test/CMakeFiles/TestRunner.dir/TestRunner.cpp.o: Test/../src/Measure/BaseMeasure.h
 Test/CMakeFiles/TestRunner.dir/TestRunner.cpp.o: Test/../src/Measure/ComplexMeasure.h
+Test/CMakeFiles/TestRunner.dir/TestRunner.cpp.o: Test/../src/Measure/ComplexMeasureMacros.h
 Test/CMakeFiles/TestRunner.dir/TestRunner.cpp.o: Test/../src/Measure/MeasureOperator.h
 Test/CMakeFiles/TestRunner.dir/TestRunner.cpp.o: Test/../src/Measure/PreMeasure.h
 Test/CMakeFiles/TestRunner.dir/TestRunner.cpp.o: Test/../src/Measure/SimpleMeasure.h

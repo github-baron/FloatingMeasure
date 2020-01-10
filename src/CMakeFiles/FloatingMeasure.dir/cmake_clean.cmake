@@ -9,7 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/FloatingMeasure.dir/DigFloat/DigFloat.cpp.o"
   "CMakeFiles/FloatingMeasure.dir/FloatingMeasure/FloatingMeasure.cpp.o"
   "../build/lib/libFloatingMeasure.pdb"
-  "../build/lib/libFloatingMeasure.a"
+  "../build/lib/libFloatingMeasure.so"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -7,6 +7,7 @@ Test/CMakeFiles/TestRunner.dir/TestRunner.cpp.o
  Test/../src/FloatingMeasure/FloatingMeasure.h
  Test/../src/Measure/BaseMeasure.h
  Test/../src/Measure/ComplexMeasure.h
+ Test/../src/Measure/ComplexMeasureMacros.h
  Test/../src/Measure/MeasureOperator.h
  Test/../src/Measure/PreMeasure.h
  Test/../src/Measure/SimpleMeasure.h
