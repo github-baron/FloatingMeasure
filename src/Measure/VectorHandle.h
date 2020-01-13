@@ -64,7 +64,7 @@ public:
      */    
     int GetIndexByShortLabel(const string& strShortLabel)
     {
-        return FindElementInVectorGetIndex(strShortLabel, vstrShort, vstrShort.size()-1);
+        return FindElementInVectorGetIndex(strShortLabel, vstrShort, (int)(vstrShort.size()-1));
     }
 
     /**
@@ -75,7 +75,7 @@ public:
      */
     int GetIndexByLongLabel(const string& strLongLabel)
     {
-        return FindElementInVectorGetIndex(strLongLabel, vstrLong, vstrLong.size()-1);
+        return FindElementInVectorGetIndex(strLongLabel, vstrLong, (int)(vstrLong.size()-1));
     }
 
     ///////////////////////////////////////////////////

@@ -9,8 +9,6 @@ project(Measure_test)
 add_executable(TestRunner TestRunner.cpp)
 
 include_directories(../src/)
-##target_link_libraries(TestRunner ${CMAKE_BUILD_DIR}/lib/MeasureNum.so)
-
 
 #Find the CppUnit includes and library
 
@@ -28,7 +26,8 @@ FIND_PATH(CPPUNIT_INCLUDE_DIRS
     ${CMAKE_INSTALL_PREFIX}/include
     PATHS
     /usr/local/include
-    /usr/include
+    /usr/include/
+    C:\\Users\\Michae\\CMakeBuilds\\1845e5d2-61fb-2730-a89b-d6e571dd8254\\install\\x64-Release\\include
 )
 message("found cppunit includes " ${CPPUNIT_INCLUDE_DIRS}) 
 
@@ -42,6 +41,7 @@ FIND_LIBRARY(CPPUNIT_LIBRARIES
     /usr/local/lib
     /usr/lib
     /usr/lib/x86_64-linux-gnu/
+    C:\\Users\\Michae\\CMakeBuilds\\1845e5d2-61fb-2730-a89b-d6e571dd8254\\install\\x64-Release\\lib
 )
 
 message("found cppunit libraries " ${CPPUNIT_LIBRARIES}) 

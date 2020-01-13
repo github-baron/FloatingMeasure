@@ -36,7 +36,12 @@
 #include<ostream>
 
 using namespace std;
+#ifdef __linux__
 using namespace __gnu_cxx;
+
+#endif
+
+
 
 ///////////////////////////////////////////////////
 // definitions
