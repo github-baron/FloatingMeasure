@@ -36,7 +36,7 @@
  * - recalculation offset and factor to SI measure of the CPreMeasure and CBaseMeasure
  * 
  */
-class CSimpleMeasure
+class DLLEXPORT_CMD CSimpleMeasure
 {
 friend class CPreMeasure;
 friend class CBaseMeasure;

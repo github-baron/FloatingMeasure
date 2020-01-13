@@ -46,7 +46,7 @@ class CFloatingMeasure;
  * be considered within this class (i.e. ohm = volt / ampere )
  * 
  */
-class CComplexMeasure 
+class DLLEXPORT_CMD CComplexMeasure
 {
     // friends
     friend class CFloatingMeasure;

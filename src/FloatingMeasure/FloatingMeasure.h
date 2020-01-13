@@ -36,7 +36,7 @@
  * - handling of the precision of the floating part for output and calculations
  * 
  */
-class CFloatingMeasure
+class DLLEXPORT_CMD CFloatingMeasure
 {
     friend class CComplexMeasure;
 public:

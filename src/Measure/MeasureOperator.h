@@ -39,7 +39,7 @@ typedef enum{
  * @brief CMeasureOperator: this class is actually unused ...
  * 
  */
-class CMeasureOperator :  public CVectorHandle
+class DLLEXPORT_CMD CMeasureOperator :  public CVectorHandle
 {
 public:
     /**

@@ -34,7 +34,7 @@
  *        handling.
  * 
  */
-class CVectorHandle
+class DLLEXPORT_CMD CVectorHandle
 {
     
 public:    

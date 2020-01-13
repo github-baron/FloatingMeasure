@@ -35,17 +35,22 @@
 #include<assert.h>
 #include<ostream>
 
+///////////////////////////////////////////////////
+// namespaces
+///////////////////////////////////////////////////
 using namespace std;
 #ifdef __linux__
 using namespace __gnu_cxx;
-
 #endif
 
-
-
 ///////////////////////////////////////////////////
-// definitions
+// macro definitions
 ///////////////////////////////////////////////////
+#undef DLLEXPORT_CMD   
+#ifdef _WIN32
+#define DLLEXPORT_CMD __declspec(dllexport) 
+#endif
+
 
 #define myNAN               nan("1")
 #define GREEK_SMALL_MU      "\u00b5"
@@ -90,7 +95,7 @@ union dbl_64{
  * @param dValue: double which error is calculated
  * @return double
  */
-double DoubleMachineEpsilon (double dValue) ;
+double DLLEXPORT_CMD DoubleMachineEpsilon (double dValue) ;
 
 /**
  * @brief cuts double according to precision 
@@ -101,14 +106,14 @@ double DoubleMachineEpsilon (double dValue) ;
  * @param nPrecision: the wanted precision
  * @return double
  */
-double Round2Precision(const double dValue, const int nPrecision);
+double DLLEXPORT_CMD Round2Precision(const double dValue, const int nPrecision);
 /**
  * @brief returns "true" or "false" as string
  * 
  * @param bBool: bool to convert to string
  * @return string
  */
-string Bool2String(const bool bBool);
+string DLLEXPORT_CMD Bool2String(const bool bBool);
 
 
 ///////////////////////////////////////////////////
@@ -120,7 +125,7 @@ string Bool2String(const bool bBool);
   * 
   */
  template <typename SingletonObject>
- class CSingleton
+ class DLLEXPORT_CMD CSingleton
  {
  public:
      /**

@@ -72,7 +72,7 @@ enum ePreMeasure
  * - short label
  * - long label
  */
-class CPreMeasure : public CVectorHandle
+class DLLEXPORT_CMD CPreMeasure : public CVectorHandle
 {
     
 public:
