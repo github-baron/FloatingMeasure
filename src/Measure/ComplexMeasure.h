@@ -197,22 +197,22 @@ public:
     /**
      * @brief prints the short label of the CComplexMeasure::opEnum
      * 
-     * @return string
+     * @return wstring
      */
-    string OPShort() {return CMeasureOperatorSingleton::instance()->Short(opEnum);}
+    wstring OPShort() {return CMeasureOperatorSingleton::instance()->Short(opEnum);}
     /**
      * @brief prints the premeasure and the base measure short labels
      * 
-     * @return string
+     * @return wstring
      */
-    string PrintAllShort();
+    wstring PrintAllShort();
     
     /**
      * @brief prints all members: can be applied for debugging purpose
      * 
-     * @return string
+     * @return wstring
      */
-    string DebugOut();
+    wstring DebugOut();
 
 protected:
     /////////////////////////////////////////////////////

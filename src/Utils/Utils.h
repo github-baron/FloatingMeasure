@@ -25,7 +25,7 @@
 #ifndef UTILS_H
 #define UTILS_H
 
-#include<string>
+#include <string>
 #include<vector>
 #include<map>
 #include<cmath>
@@ -47,23 +47,33 @@ using namespace __gnu_cxx;
 // macro definitions
 ///////////////////////////////////////////////////
 #undef DLLEXPORT_CMD   
+#ifdef __linux__
+#endif
 #ifdef _WIN32
 #define DLLEXPORT_CMD __declspec(dllexport) 
 #endif
 
-
+#ifdef _UNICODE
+typedef std::wstring tstring;
+typedef wchar_t tchar;
+#   define TEXT(s) L##s
+#else
+typedef std::wstring tstring;
+typedef char tchar;
+#   define TEXT(s) s
+#endif
 #define myNAN               nan("1")
-#define GREEK_SMALL_MU      "\u00b5"
-#define GREEK_CAPITAL_OMEGA "\u03a9"
-#define UNKNOWN_SHORT       "n.a."
-#define UNKNOWN_LONG        "unknown"
+#define GREEK_SMALL_MU      L"\u00b5"
+#define GREEK_CAPITAL_OMEGA L"\u03a9"
+#define UNKNOWN_SHORT       L"n.a."
+#define UNKNOWN_LONG        L"unknown"
 #define UNKNOWN_INDEX       -1
 #define UNKNOWN_VALUE       myNAN
 #define INVALID_EXPONENT    -666
 
-#define mu string(GREEK_SMALL_MU)
-#define Omega string(GREEK_CAPITAL_OMEGA)
-#define pm string("\u00B1")
+#define mu wstring(GREEK_SMALL_MU)
+#define Omega wstring(GREEK_CAPITAL_OMEGA)
+#define pm wstring(L"\u00B1")
 
 // need to derive machine epsilon for double
 /**
@@ -108,12 +118,12 @@ double DLLEXPORT_CMD DoubleMachineEpsilon (double dValue) ;
  */
 double DLLEXPORT_CMD Round2Precision(const double dValue, const int nPrecision);
 /**
- * @brief returns "true" or "false" as string
+ * @brief returns "true" or "false" as wstring
  * 
- * @param bBool: bool to convert to string
- * @return string
+ * @param bBool: bool to convert to wstring
+ * @return wstring
  */
-string DLLEXPORT_CMD Bool2String(const bool bBool);
+wstring DLLEXPORT_CMD Bool2String(const bool bBool);
 
 
 ///////////////////////////////////////////////////

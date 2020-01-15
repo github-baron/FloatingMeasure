@@ -297,7 +297,7 @@
 # define COMPILER_ID ""
 #endif
 
-/* Construct the string literal in pieces to prevent the source from
+/* Construct the wstring literal in pieces to prevent the source from
    getting matched.  Store it in a pointer rather than an array
    because some compilers will just produce instructions to fill the
    array rather than assigning a pointer to a static array.  */
@@ -499,7 +499,7 @@ char const *info_cray = "INFO" ":" "compiler_wrapper[CrayPrgEnv]";
   ('0' + ((n)>>4  & 0xF)), \
   ('0' + ((n)     & 0xF))
 
-/* Construct a string literal encoding the version number components. */
+/* Construct a wstring literal encoding the version number components. */
 #ifdef COMPILER_VERSION_MAJOR
 char const info_version[] = {
   'I', 'N', 'F', 'O', ':',
@@ -517,7 +517,7 @@ char const info_version[] = {
   ']','\0'};
 #endif
 
-/* Construct a string literal encoding the internal version number. */
+/* Construct a wstring literal encoding the internal version number. */
 #ifdef COMPILER_VERSION_INTERNAL
 char const info_version_internal[] = {
   'I', 'N', 'F', 'O', ':',
@@ -526,7 +526,7 @@ char const info_version_internal[] = {
   COMPILER_VERSION_INTERNAL,']','\0'};
 #endif
 
-/* Construct a string literal encoding the version number components. */
+/* Construct a wstring literal encoding the version number components. */
 #ifdef SIMULATE_VERSION_MAJOR
 char const info_simulate_version[] = {
   'I', 'N', 'F', 'O', ':',
@@ -544,7 +544,7 @@ char const info_simulate_version[] = {
   ']','\0'};
 #endif
 
-/* Construct the string literal in pieces to prevent the source from
+/* Construct the wstring literal in pieces to prevent the source from
    getting matched.  Store it in a pointer rather than an array
    because some compilers will just produce instructions to fill the
    array rather than assigning a pointer to a static array.  */

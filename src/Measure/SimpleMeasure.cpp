@@ -73,24 +73,24 @@ void CSimpleMeasure::SetByID(const ePreMeasure PreMeasureEnum, const eBaseMeasur
     strLong   = PRE->Long(PreID()) + BASE->Long(BaseID()) ;
     strShort  = PRE->Short(PreID()) + BASE->Short(BaseID()) ;
 }
-void CSimpleMeasure::SetByShort(const string& strPreLabelShort, const string& strBaseLabelShort)
+void CSimpleMeasure::SetByShort(const wstring& strPreLabelShort, const wstring& strBaseLabelShort)
 {
     SetByID( PRE->GetIDByShortLabel(strPreLabelShort), BASE->GetIDByShortLabel(strBaseLabelShort));
 }
-void CSimpleMeasure::SetByLong(const string& strPreLabelLong, const string& strBaseLabelLong)
+void CSimpleMeasure::SetByLong(const wstring& strPreLabelLong, const wstring& strBaseLabelLong)
 {
     SetByID( PRE->GetIDByLongLabel(strPreLabelLong), BASE->GetIDByLongLabel(strBaseLabelLong));
 }
 
-const string CSimpleMeasure::DebugOut() 
+const wstring CSimpleMeasure::DebugOut() 
 {
-   return "Main (" + to_string(PreID()) + ", " + to_string(BaseID()) + "):\n" +
-          "\tSIOffset = " + to_string(SIOffset()) + "\n" +
-          "\tSIFactor = " + to_string(SIFactor()) + "\n" +
-          "\tShort = " + Short() + "\n" +
-          "\tLong = " + Long() + "\n\n" + 
-          "Pre (" + to_string(PreID()) + "):\n" + PRE->DebugOut(PreID()) + "\n\n" +
-          "Base (" + to_string(BaseID()) + "):\n" + BASE->DebugOut(BaseID());
+   return L"Main (" + to_wstring(PreID()) + L", " + to_wstring(BaseID()) + L"):\n" +
+          L"\tSIOffset = " + to_wstring(SIOffset()) + L"\n" +
+          L"\tSIFactor = " + to_wstring(SIFactor()) + L"\n" +
+          L"\tShort = " + Short() + L"\n" +
+          L"\tLong = " + Long() + L"\n\n" + 
+          L"Pre (" + to_wstring(PreID()) + L"):\n" + PRE->DebugOut(PreID()) + L"\n\n" +
+          L"Base (" + to_wstring(BaseID()) + L"):\n" + BASE->DebugOut(BaseID());
           
 }
 

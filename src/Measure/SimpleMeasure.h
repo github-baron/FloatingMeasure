@@ -114,14 +114,14 @@ public:
      * @param strPreLabelShort: short label searched in CPreMeasure::vstrShort in #PRE
      * @param strBaseLabelShort: short label searchedin CBaseMeasure::vstrShort in #BASE
      */
-    void SetByShort(const string& strPreLabelShort, const string& strBaseLabelShort);
+    void SetByShort(const wstring& strPreLabelShort, const wstring& strBaseLabelShort);
     /**
      * @brief calls CSimpleMeasure::SetByID with the indices defined by the corresponding long labels
      * 
      * @param strPreLabelLong: long label searched in CPreMeasure::vstrLong in #PRE
      * @param strBaseLabelLong: long label searched in CPreMeasure::vstrLong in #BASE
      */
-    void SetByLong(const string& strPreLabelLong, const string& strBaseLabelLong);
+    void SetByLong(const wstring& strPreLabelLong, const wstring& strBaseLabelLong);
     /**
      * @brief checks if CSimpleMeasure::PreIndex and CSimpleMeasure::BaseIndex are valid indices <br>
      * defined in #ePreMeasure and #eBaseMeasure
@@ -130,11 +130,11 @@ public:
      */
     bool Valid() {return PreIndex < pmUnknown && PreIndex >= pmFirst && BaseIndex < bmUnknown && BaseIndex >= bmFirst;}
     /**
-     * @brief prints all members as string for debugging.
+     * @brief prints all members as wstring for debugging.
      * 
-     * @return const string
+     * @return const wstring
      */
-    const string DebugOut();
+    const wstring DebugOut();
 
     ////////////////////////////////////
     // public getter 
@@ -154,15 +154,15 @@ public:
     /**
      * @brief getter of CSimpleMeasure::strShort
      * 
-     * @return const string&
+     * @return const wstring&
      */
-    const string& Short(void) {return strShort;}
+    const wstring& Short(void) {return strShort;}
     /**
      * @brief getter of CSimpleMeasure::strLong
      * 
-     * @return const string&
+     * @return const wstring&
      */
-    const string& Long(void) {return strLong;}
+    const wstring& Long(void) {return strLong;}
     /**
      * @brief getter of CSimpleMeasure::BaseIndex
      * 
@@ -236,7 +236,7 @@ protected:
      * and the base-measure short label (see BASE::Short)
      * 
      */
-    string strShort;
+    wstring strShort;
     
     /**
      * @brief long label of this CSimpleMeasure: <br>
@@ -244,7 +244,7 @@ protected:
      * and the base-measure long label (see BASE::Long)
      * 
      */
-    string strLong;
+    wstring strLong;
     
     
 };

@@ -271,15 +271,15 @@ void CFloatingMeasure::_Precision(const CFloatingMeasure* pOtherPrecision)
 }
 
 
-string CFloatingMeasure::PrintShort()
+wstring CFloatingMeasure::PrintShort()
 {
-    ostringstream oss;
+    wostringstream oss;
     oss << dfFloating.Print(false) << "*" << cmMeasure.PrintAllShort();
     return oss.str();
 }
-string CFloatingMeasure::DebugOut()
+wstring CFloatingMeasure::DebugOut()
 {
-    ostringstream oss;
+    wostringstream oss;
     oss << "floating measure valid : " << Bool2String(Valid()) << endl
         << "precision fm: " ;
     if(pfmPrecision != nullptr)
