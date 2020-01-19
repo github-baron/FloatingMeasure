@@ -262,26 +262,26 @@ void CDigFloat::_Init()
     PrecisionActive(false);
 }
 
-wstring CDigFloat::Print(bool bWithError /*= true*/) const
+string CDigFloat::Print(bool bWithError /*= true*/) const
 {
     return RawPrint(Precision(),bWithError);
 }
 
-wstring CDigFloat::RawPrint(const int UserPrecision,bool bWithError /*= true*/) const
+string CDigFloat::RawPrint(const int UserPrecision,bool bWithError /*= true*/) const
 {
     
-    wostringstream oss;
+    ostringstream oss;
     oss << fixed << setprecision(UserPrecision) << Value() ;
     if ( bWithError)
         oss << pm << Error();
     return oss.str();
 }
-wstring CDigFloat::DebugOut()
+string CDigFloat::DebugOut()
 {
-    wostringstream oss;
+    ostringstream oss;
     oss << "CDigFloat valid: " << Bool2String(Valid()) << endl
         << "Raw =" <<  RawPrint(20, true) << endl 
-        << "precision (L" << Precision() << ") : " << Print() << endl
+        << "precision (" << Precision() << ") : " << Print() << endl
         << "precision active: " << (PrecisionActive() ? "true" : "false")  << endl 
         << "resolution = " << dPrecisionResolution << endl
         << "rounded value: " << setprecision(40) << Round2Precision(dValue,Precision()) << endl 

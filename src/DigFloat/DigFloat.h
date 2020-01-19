@@ -394,25 +394,25 @@ public:
      * @brief prints CDigFloat::dValue and conditionally CDigFloat::dError formatted according to CDigFloat::nPrecision.
      * 
      * @param bWithError: if true, CDigFloat::dError is printed, too
-     * @return wstring, formatted CDigFloat::dValue [\f$\pm\f$ CDigFloat::dError] according to CDigFloat::nPrecision
+     * @return string, formatted CDigFloat::dValue [\f$\pm\f$ CDigFloat::dError] according to CDigFloat::nPrecision
      */
-    wstring Print(bool bWithError = true) const;
+    string Print(bool bWithError = true) const;
     
     /**
      * @brief prints CDigFloat::dValue and conditionally CDigFloat::dError formatted according to UserPrecision.
      * 
      * @param UserPrecision: int defining the precision
      * @param bWithError: bool, switching printing of CDigFloat::dError
-     * @return wstring, formatted CDigFloat::dValue [\f$\pm\f$ CDigFloat::dError] according to UserPrecision 
+     * @return string, formatted CDigFloat::dValue [\f$\pm\f$ CDigFloat::dError] according to UserPrecision 
      */
-    wstring RawPrint(const int UserPrecision, bool bWithError = true) const;
+    string RawPrint(const int UserPrecision, bool bWithError = true) const;
     
     /**
-     * @brief prints all members into a wstring for debugging purpose
+     * @brief prints all members into a string for debugging purpose
      * 
-     * @return wstring
+     * @return string
      */
-    wstring DebugOut();
+    string DebugOut();
 
     
 protected:

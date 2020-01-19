@@ -38,110 +38,110 @@ void CBaseMeasure::_Init()
     vdOffset.resize(bmLast+1);
     vdFactor.resize(bmLast+1);
     
-    vstrShort[bmNumber]=(L"1");
-    vstrLong[bmNumber]=(L"one");
+    vstrShort[bmNumber]=("1");
+    vstrLong[bmNumber]=("one");
     vnSIIndex[bmNumber]=(bmNumber);
     vdOffset[bmNumber]=(0.);
     vdFactor[bmNumber]=(1.);
     
-    vstrShort[bmVolt]=(L"V");
-    vstrLong[bmVolt]=(L"volt");
+    vstrShort[bmVolt]=("V");
+    vstrLong[bmVolt]=("volt");
     vnSIIndex[bmVolt]=(bmVolt);
     vdOffset[bmVolt]=(0.);
     vdFactor[bmVolt]=(1.);
     
-    vstrShort[bmAmpere]=(L"A");
-    vstrLong[bmAmpere]=(L"ampere");
+    vstrShort[bmAmpere]=("A");
+    vstrLong[bmAmpere]=("ampere");
     vnSIIndex[bmAmpere]=(bmAmpere);
     vdOffset[bmAmpere]=(0.);
     vdFactor[bmAmpere]=(1.);
     
-    vstrShort[bmDegKelvin]=(L"°K");
-    vstrLong[bmDegKelvin]=(L"degree kelvin");
+    vstrShort[bmDegKelvin]=("°K");
+    vstrLong[bmDegKelvin]=("degree kelvin");
     vnSIIndex[bmDegKelvin]=(bmDegKelvin);
     vdOffset[bmDegKelvin]=(0.);
     vdFactor[bmDegKelvin]=(1.);
     
-    vstrShort[bmDegCelsius]=(L"°C");
-    vstrLong[bmDegCelsius]=(L"degree celsius");
+    vstrShort[bmDegCelsius]=("°C");
+    vstrLong[bmDegCelsius]=("degree celsius");
     vnSIIndex[bmDegCelsius]=(bmDegKelvin);
     vdOffset[bmDegCelsius]=(273.15);
     vdFactor[bmDegCelsius]=(1.);
     
-    vstrShort[bmDegFahrenheit]=(L"°F");
+    vstrShort[bmDegFahrenheit]=("°F");
     vstrLong[bmDegFahrenheit]=(bmDegKelvin);
     vnSIIndex[bmDegFahrenheit]=(bmDegKelvin);
     vdOffset[bmDegFahrenheit]=(32-5./9.*273.15);
     vdFactor[bmDegFahrenheit]=(5./9.);
     
     vstrShort[bmOhm]=(Omega);
-    vstrLong[bmOhm]=(L"ohm");
+    vstrLong[bmOhm]=("ohm");
     vnSIIndex[bmOhm]=(bmOhm);
     vdOffset[bmOhm]=(0.);
     vdFactor[bmOhm]=(1.);
     
-    vstrShort[bmFarad]=(L"F");
-    vstrLong[bmFarad]=(L"farad");
+    vstrShort[bmFarad]=("F");
+    vstrLong[bmFarad]=("farad");
     vnSIIndex[bmFarad]=(bmFarad);
     vdOffset[bmFarad]=(0.);
     vdFactor[bmFarad]=(1.);
     
-    vstrShort[bmHertz]=(L"Hz");
-    vstrLong[bmHertz]=(L"hertz");
+    vstrShort[bmHertz]=("Hz");
+    vstrLong[bmHertz]=("hertz");
     vnSIIndex[bmHertz]=(bmHertz);
     vdOffset[bmHertz]=(0.);
     vdFactor[bmHertz]=(1.);
     
-    vstrShort[bmSecond]=(L"s");
-    vstrLong[bmSecond]=(L"second");
+    vstrShort[bmSecond]=("s");
+    vstrLong[bmSecond]=("second");
     vnSIIndex[bmSecond]=(bmSecond);
     vdOffset[bmSecond]=(0.);
     vdFactor[bmSecond]=(1.);
     
-    vstrShort[bmMinute]=(L"min");
-    vstrLong[bmMinute]=(L"minute");
+    vstrShort[bmMinute]=("min");
+    vstrLong[bmMinute]=("minute");
     vnSIIndex[bmMinute]=(bmSecond);
     vdOffset[bmMinute]=(0.);
     vdFactor[bmMinute]=(60.);
     
-    vstrShort[bmHour]=(L"h");
-    vstrLong[bmHour]=(L"hour");
+    vstrShort[bmHour]=("h");
+    vstrLong[bmHour]=("hour");
     vnSIIndex[bmHour]=(bmSecond);
     vdOffset[bmHour]=(0.);
     vdFactor[bmHour]=(3600);
     
-    vstrShort[bmDay]=(L"d");
-    vstrLong[bmDay]=(L"day");
+    vstrShort[bmDay]=("d");
+    vstrLong[bmDay]=("day");
     vnSIIndex[bmDay]=(bmSecond);
     vdOffset[bmDay]=(0.);
     vdFactor[bmDay]=(86400.);
     
-    vstrShort[bmMeter]=(L"m");
-    vstrLong[bmMeter]=(L"meter");
+    vstrShort[bmMeter]=("m");
+    vstrLong[bmMeter]=("meter");
     vnSIIndex[bmMeter]=(bmMeter);
     vdOffset[bmMeter]=(0.);
     vdFactor[bmMeter]=(1.);
     
-    vstrShort[bmInch]=(L"in");
-    vstrLong[bmInch]=(L"inch");
+    vstrShort[bmInch]=("in");
+    vstrLong[bmInch]=("inch");
     vnSIIndex[bmInch]=(bmMeter);
     vdOffset[bmInch]=(0.);
     vdFactor[bmInch]=(0.0254);
     
-    vstrShort[bmFoot]=(L"ft");
-    vstrLong[bmFoot]=(L"foot");
+    vstrShort[bmFoot]=("ft");
+    vstrLong[bmFoot]=("foot");
     vnSIIndex[bmFoot]=(bmMeter);
     vdOffset[bmFoot]=(0.);
     vdFactor[bmFoot]=(0.3048);
     
-    vstrShort[bmYard]=(L"yd");
-    vstrLong[bmYard]=(L"yard");
+    vstrShort[bmYard]=("yd");
+    vstrLong[bmYard]=("yard");
     vnSIIndex[bmYard]=(bmMeter);
     vdOffset[bmYard]=(0.);
     vdFactor[bmYard]=(0.9144);
     
-    vstrShort[bmMile]=(L"mi");
-    vstrLong[bmMile]=(L"mile");
+    vstrShort[bmMile]=("mi");
+    vstrLong[bmMile]=("mile");
     vnSIIndex[bmMile]=(bmMeter);
     vdOffset[bmMile]=(0.);
     vdFactor[bmMile]=(1609.344);
@@ -161,12 +161,12 @@ void CBaseMeasure::_DeInit()
     vnSIIndex.clear();
 }
 
-const wstring CBaseMeasure::DebugOut(const eBaseMeasure BaseMeasureEnum)
+const string CBaseMeasure::DebugOut(const eBaseMeasure BaseMeasureEnum)
 {
-    return L"Offset = " + to_wstring(Offset(BaseMeasureEnum)) + L"\n" +
-           L"Factor = " + to_wstring(Factor(BaseMeasureEnum)) + L"\n" +   
-           L"Short = " + Short(BaseMeasureEnum) + L"\n" +
-           L"Long = " + Long(BaseMeasureEnum)  + L"\n" +
-           L"SIIndex = " + to_wstring( SIID(BaseMeasureEnum) );
+    return "Offset = " + to_string(Offset(BaseMeasureEnum)) + "\n" +
+           "Factor = " + to_string(Factor(BaseMeasureEnum)) + "\n" +   
+           "Short = " + Short(BaseMeasureEnum) +"\n" +
+           "Long = " + Long(BaseMeasureEnum)  +"\n" +
+           "SIIndex = " + to_string( SIID(BaseMeasureEnum) );
   
 }

@@ -264,15 +264,15 @@ public:
     /**
      * @brief debugging output for every member
      * 
-     * @return wstring
+     * @return string
      */
-    wstring DebugOut();
+    string DebugOut();
     /**
      * @brief printing short output: e.g. "10*mv/V"
      * 
-     * @return wstring
+     * @return string
      */
-    wstring PrintShort();
+    string PrintShort();
 
     /////////////////////////////////////////////////////
     // public getter 

@@ -134,9 +134,9 @@ public:
      * @brief output for debugging purpose for given index
      * 
      * @param BaseMeasureEnum: index of base measure
-     * @return const wstring
+     * @return const string
      */
-    const wstring DebugOut(const eBaseMeasure BaseMeasureEnum); 
+    const string DebugOut(const eBaseMeasure BaseMeasureEnum); 
 
         
     /**
@@ -145,7 +145,7 @@ public:
      * @param strShortLabel: short label of the base measure (e.g. "V" )
      * @return eBaseMeasure: the base-measure index (e.g. eBaseMeasure::bmVolt)
      */
-    eBaseMeasure GetIDByShortLabel( const wstring& strShortLabel)
+    eBaseMeasure GetIDByShortLabel( const string& strShortLabel)
     {
         return (eBaseMeasure) CVectorHandle::GetIndexByShortLabel(strShortLabel);
     }
@@ -156,7 +156,7 @@ public:
      * @param strLongLabel: 
      * @return eBaseMeasure
      */
-    eBaseMeasure GetIDByLongLabel( const wstring& strLongLabel)
+    eBaseMeasure GetIDByLongLabel( const string& strLongLabel)
     {
         return (eBaseMeasure) CVectorHandle::GetIndexByLongLabel(strLongLabel);
     }    

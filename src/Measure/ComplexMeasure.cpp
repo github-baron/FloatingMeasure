@@ -220,12 +220,12 @@ void CComplexMeasure::_InvertOP()
         }
   
 }
-wstring CComplexMeasure::PrintAllShort()
+string CComplexMeasure::PrintAllShort()
 {
-    wstring strAllShort;
+    string strAllShort;
     strAllShort = pMeasureLeft->Short();
     
-    // use recursive call to get the whole wstring
+    // use recursive call to get the whole string
     if( pMeasureRight != nullptr )
         strAllShort+=  OPShort() + pMeasureRight->PrintAllShort();
     
@@ -668,9 +668,9 @@ const double CComplexMeasure::ReleaseExp10AndFactor()
 }
 
 
-wstring CComplexMeasure::DebugOut()
+string CComplexMeasure::DebugOut()
 {
-    wostringstream oss;
+    ostringstream oss;
     
     oss << "CComplexMeasure valid: " << Bool2String(Valid()) << endl
         << "this: " << this << endl <<

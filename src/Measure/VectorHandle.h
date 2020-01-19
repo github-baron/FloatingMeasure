@@ -28,7 +28,7 @@
 #include<Utils/Utils.h>
 
 /**
- * @brief This class keeps three vectors (two wstring : Short and Long and
+ * @brief This class keeps three vectors (two string : Short and Long and
  *        one double : Factor). These vectors are common to classes CPreMeasure
  *        and CBaseMeasure and are therefore packed into this class for vector
  *        handling.
@@ -57,23 +57,23 @@ public:
     // index getter
     ///////////////////////////////////////////////////
     /**
-     * @brief returns the index of the pre-unit if the user given wstring matches one of the elemens in CPreUnit::m_vstrPreUnitShort
+     * @brief returns the index of the pre-unit if the user given string matches one of the elemens in CPreUnit::m_vstrPreUnitShort
      * 
      * @param strShortLabel p_strPreUnitShortLabel:user given short label of the demanded unit
      * @return const unsigned int&
      */    
-    int GetIndexByShortLabel(const wstring& strShortLabel)
+    int GetIndexByShortLabel(const string& strShortLabel)
     {
         return FindElementInVectorGetIndex(strShortLabel, vstrShort, (int)(vstrShort.size()-1));
     }
 
     /**
-     * @brief returns the index of the pre-unit if the user given wstring matches one of the elemens in CPreUnit::m_vstrPreUnitLong
+     * @brief returns the index of the pre-unit if the user given string matches one of the elemens in CPreUnit::m_vstrPreUnitLong
      * 
      * @param strLongLabel p_strPreUnitLongLabel: user given long label of the demanded unit
      * @return const unsigned int&
      */
-    int GetIndexByLongLabel(const wstring& strLongLabel)
+    int GetIndexByLongLabel(const string& strLongLabel)
     {
         return FindElementInVectorGetIndex(strLongLabel, vstrLong, (int)(vstrLong.size()-1));
     }
@@ -85,9 +85,9 @@ public:
      * @brief gets element from CVectorHandle::vstrShort by index
      * 
      * @param uiIndex: index
-     * @return wstring: long label
+     * @return string: long label
      */
-    const wstring& Long(const unsigned int uiIndex) 
+    const string& Long(const unsigned int uiIndex) 
     {
         return GetElementFromVectorByIndex(vstrLong, uiIndex);
     }
@@ -96,9 +96,9 @@ public:
      * @brief gets element from CVectorHandle::vstrLong by index
      * 
      * @param uiIndex: index
-     * @return wstring: short label
+     * @return string: short label
      */
-    const wstring& Short(const unsigned int uiIndex) 
+    const string& Short(const unsigned int uiIndex) 
     {
         return GetElementFromVectorByIndex(vstrShort, uiIndex);
     }
@@ -153,7 +153,7 @@ protected:
      * - CBaseMeasure: volt --> "volt"
      * 
      */
-    vector <wstring> vstrLong;
+    vector<string> vstrLong;
  
     /**
      * @brief vector keeping the short label:<br>
@@ -162,7 +162,7 @@ protected:
      * - CBaseMeasure: volt --> "V"
      * 
      */
-    vector <wstring> vstrShort;    
+    vector<string> vstrShort;    
   
 };
 

@@ -40,11 +40,11 @@ void CMeasureOperator::_Init()
     vstrLong.resize(eOperation::opLast+1);
     vstrShort.resize(eOperation::opLast+1);
     
-    vstrShort[opMult] = L"*";
-    vstrLong[opMult] = L"*";
+    vstrShort[opMult] = "*";
+    vstrLong[opMult] = "*";
     
-    vstrShort[opDivide] = L"/";
-    vstrLong[opDivide] = L"divide";
+    vstrShort[opDivide] = "/";
+    vstrLong[opDivide] = "divide";
     
     vstrShort[opUnknown] = UNKNOWN_SHORT;
     vstrLong[opUnknown] = UNKNOWN_LONG;

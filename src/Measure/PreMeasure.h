@@ -106,18 +106,18 @@ public:
     // public printing functions
     ///////////////////////////////////////////////////
     /**
-     * @brief returns all representations in a wstring
+     * @brief returns all representations in a string
      * 
-     * @return wstring: output wstring
+     * @return string: output string
      */
-    wstring DebugOut(const int nIndex);
+    string DebugOut(const int nIndex);
     /**
-     * @brief returns all representations in a wstring
+     * @brief returns all representations in a string
      * 
      * @param PreMeasureEnum p_PreMeasureEnum:...
-     * @return wstring
+     * @return string
      */
-    wstring DebugOut(const ePreMeasure PreMeasureEnum);
+    string DebugOut(const ePreMeasure PreMeasureEnum);
 
     ///////////////////////////////////////////////////
     // element getter (by ID)
@@ -142,7 +142,7 @@ public:
      * @param strShortLabel: short label of the enum (e.g. "m" returns ePreMeasure::pmMilli)
      * @return ePreMeasure
      */
-    ePreMeasure GetIDByShortLabel( const wstring& strShortLabel)
+    ePreMeasure GetIDByShortLabel( const string& strShortLabel)
     {
         return (ePreMeasure) CVectorHandle::GetIndexByShortLabel(strShortLabel);
     }
@@ -153,7 +153,7 @@ public:
      * @param strLongLabel: long label of the enum (e.g. "milli" 
      * @return ePreMeasure: the pre-measure index (e.g. ePreMeasure::pmMilli)
      */
-    ePreMeasure GetIDByLongLabel( const wstring& strLongLabel)
+    ePreMeasure GetIDByLongLabel( const string& strLongLabel)
     {
         return (ePreMeasure) CVectorHandle::GetIndexByLongLabel(strLongLabel);
     }

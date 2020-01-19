@@ -38,7 +38,7 @@ double Round2Precision(const double dValue,const int nPrecision)
     bool bPos = dValue >0;
     return double ( (long)(dValue*dFactor + (bPos ? 1 : -1)*(0.5)) )/dFactor; 
 }
-wstring Bool2String(const bool bBool)
+string Bool2String(const bool bBool)
 {
-    return bBool ? L"true" : L"false";
+    return bBool ? "true" : "false";
 }
