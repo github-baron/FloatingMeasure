@@ -41,6 +41,8 @@ CSimpleMeasure::CSimpleMeasure(const CSimpleMeasure* other)
 }
 CSimpleMeasure::~CSimpleMeasure()
 {
+    SecureDeleteObjectPointer(strShort);
+    SecureDeleteObjectPointer(strLong);
 }
 
 CSimpleMeasure& CSimpleMeasure::operator=(const CSimpleMeasure& other)
@@ -70,8 +72,8 @@ void CSimpleMeasure::SetByID(const ePreMeasure PreMeasureEnum, const eBaseMeasur
     
     dSIFactor = PRE->Factor(PreID()) * BASE->Factor(BaseID());
     dSIOffset = PRE->Factor(PreID()) *BASE->Offset(BaseID());
-    strLong   = PRE->Long(PreID()) + BASE->Long(BaseID()) ;
-    strShort  = PRE->Short(PreID()) + BASE->Short(BaseID()) ;
+    *strLong   = PRE->Long(PreID()) + BASE->Long(BaseID()) ;
+    *strShort  = PRE->Short(PreID()) + BASE->Short(BaseID()) ;
 }
 void CSimpleMeasure::SetByShort(const string& strPreLabelShort, const string& strBaseLabelShort)
 {
@@ -98,4 +100,6 @@ void CSimpleMeasure::_Init()
 {
     PreIndex=pmUnknown;
     BaseIndex=bmUnknown;
+    strShort = new string;
+    strLong = new string;
 }

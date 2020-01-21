@@ -51,7 +51,7 @@ public:
      * @brief destructor: calls CVectorHandle::_DeInit()
      * 
      */
-    ~CVectorHandle(){ _DeInit();}
+    ~CVectorHandle();
 
     ///////////////////////////////////////////////////
     // index getter
@@ -64,7 +64,7 @@ public:
      */    
     int GetIndexByShortLabel(const string& strShortLabel)
     {
-        return FindElementInVectorGetIndex(strShortLabel, vstrShort, (int)(vstrShort.size()-1));
+        return FindElementInVectorGetIndex(strShortLabel, vstrShort, (int)(vstrShort->size()-1));
     }
 
     /**
@@ -75,7 +75,7 @@ public:
      */
     int GetIndexByLongLabel(const string& strLongLabel)
     {
-        return FindElementInVectorGetIndex(strLongLabel, vstrLong, (int)(vstrLong.size()-1));
+        return FindElementInVectorGetIndex(strLongLabel, vstrLong, (int)(vstrLong->size()-1));
     }
 
     ///////////////////////////////////////////////////
@@ -118,21 +118,6 @@ protected:
     ///////////////////////////////////////////////////
     // protected functions
     ///////////////////////////////////////////////////
-    /**
-     * @brief software interface for intializing all member vectors 
-     * these are the vectors:
-     * - CVectorHandle::vdFactor
-     * - CVectorHandle::vstrShort
-     * - CVectorHandle::vstrLong
-     * 
-     */
-    virtual void _Init() = 0;
-    
-    /**
-     * @brief clear all member vectors
-     * 
-     */
-    virtual void _DeInit();
     
     ///////////////////////////////////////////////////
     // protected variables
@@ -144,7 +129,7 @@ protected:
      * - CBaseMeasure: °F --> 5/9 (SI recalculation factor for °K)
      * 
      */
-    vector<double> vdFactor;
+    vector<double>* vdFactor;
     
     /**
      * @brief vector keeping the long label<br>
@@ -153,7 +138,7 @@ protected:
      * - CBaseMeasure: volt --> "volt"
      * 
      */
-    vector<string> vstrLong;
+    vector<string>* vstrLong;
  
     /**
      * @brief vector keeping the short label:<br>
@@ -162,7 +147,7 @@ protected:
      * - CBaseMeasure: volt --> "V"
      * 
      */
-    vector<string> vstrShort;    
+    vector<string>* vstrShort;    
   
 };
 

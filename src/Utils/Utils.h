@@ -47,9 +47,6 @@ using namespace __gnu_cxx;
 // macro definitions
 ///////////////////////////////////////////////////
 #undef DLLEXPORT_CMD   
-#ifdef _WIN32
-#define DLLEXPORT_CMD __declspec(dllexport) 
-#endif
 
 
 #define myNAN               nan("1")
@@ -61,9 +58,19 @@ using namespace __gnu_cxx;
 #define UNKNOWN_VALUE       myNAN
 #define INVALID_EXPONENT    -666
 
+// windows definition
+#ifdef _WIN32
+#define DLLEXPORT_CMD __declspec(dllexport) 
+#undef GREEK_CAPITAL_OMEGA
+#define GREEK_CAPITAL_OMEGA "\xd5"
+#endif
+
+
 #define mu string(GREEK_SMALL_MU)
 #define Omega string(GREEK_CAPITAL_OMEGA)
 #define pm string("\u00B1")
+
+
 
 // need to derive machine epsilon for double
 /**
@@ -203,20 +210,50 @@ int FindElementInVectorGetIndex(const T& Value, const vector<T>&  Vec, int nDefa
 
 /**
  * @brief returns the index of an element within a vector
- * 
- * @tparam T: template type 
+ *
+ * @tparam T: template type
  * @param Vec: the vector where the element will be searched
- * @param uiIndex: the index of the value returned, in case it exceeds the 
+ * @param uiIndex: the index of the value returned, in case it exceeds the
  *                         vector size, the last element of the vector is returned
  * @return int
  */
 template< typename T >
-const T& GetElementFromVectorByIndex(const vector<T>&  Vec, const unsigned int uiIndex )
+const T& GetElementFromVectorByIndex(const vector<T>&  Vec, const unsigned int uiIndex)
 {
-    return uiIndex < Vec.size() ? 
-            Vec[uiIndex] : Vec.back();
+    return uiIndex < Vec.size() ?
+        Vec[uiIndex] : Vec.back();
 }
-  
+
+/**
+ * @brief returns the index of an element within a vector
+ *
+ * @tparam T: template type
+ * @param Value: value to find  in the vector
+ * @param pVec: the pointer of the vector where the element will be searched
+ * @param nDefaultIndex: the index returned in case the element is not found in the vector
+ * @return int
+ */
+template< typename T >
+int FindElementInVectorGetIndex(const T& Value, const vector<T>*  pVec, int nDefaultIndex)
+{
+    return FindElementInVectorGetIndex(Value, *pVec, nDefaultIndex);
+}
+
+/**
+ * @brief returns the index of an element within a vector
+ *
+ * @tparam T: template type
+ * @param pVec: the pointer of the vector where the element will be searched
+ * @param uiIndex: the index of the value returned, in case it exceeds the
+ *                         vector size, the last element of the vector is returned
+ * @return int
+ */
+template< typename T >
+const T& GetElementFromVectorByIndex(const vector<T>*  pVec, const unsigned int uiIndex)
+{
+    return GetElementFromVectorByIndex(*pVec, uiIndex);
+}
+
 /**
  * @brief safely deletes pointers to objects of type T:<br>
  * "safely" holds only if unused pointers are initialized with nullptr

@@ -27,12 +27,19 @@
 
 CVectorHandle::CVectorHandle()
 {
+    vdFactor = new vector<double>;
+    vstrShort = new vector<string>;
+    vstrLong = new vector<string>;
 }
 
 
-void CVectorHandle::_DeInit()
+CVectorHandle::~CVectorHandle()
 {
-    vdFactor.clear();
-    vstrLong.clear();
-    vstrShort.clear();
+    vdFactor->clear();
+    vstrLong->clear();
+    vstrShort->clear();
+
+    SecureDeleteObjectPointer(vdFactor);
+    SecureDeleteObjectPointer(vstrShort);
+    SecureDeleteObjectPointer(vstrLong);
 }

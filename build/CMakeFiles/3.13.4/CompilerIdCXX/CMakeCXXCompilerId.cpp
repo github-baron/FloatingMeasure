@@ -120,7 +120,7 @@
 
 
 #elif defined(__ibmxl__) || (defined(__IBMCPP__) && !defined(__COMPILER_VER__) && __IBMCPP__ >= 800)
-# define COMPILER_ID "XL"
+# define COMPILER_ID "X"
 # if defined(__ibmxl__)
 #  define COMPILER_VERSION_MAJOR DEC(__ibmxl_version__)
 #  define COMPILER_VERSION_MINOR DEC(__ibmxl_release__)

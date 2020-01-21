@@ -31,23 +31,21 @@ CMeasureOperator::CMeasureOperator()
 
 CMeasureOperator::~CMeasureOperator()
 {
-    _DeInit();
-
 }
 
 void CMeasureOperator::_Init()
 {
-    vstrLong.resize(eOperation::opLast+1);
-    vstrShort.resize(eOperation::opLast+1);
+    vstrLong->resize(eOperation::opLast+1);
+    vstrShort->resize(eOperation::opLast+1);
     
-    vstrShort[opMult] = "*";
-    vstrLong[opMult] = "*";
+    (*vstrShort)[opMult] = "*";
+    (*vstrLong)[opMult] = "*";
     
-    vstrShort[opDivide] = "/";
-    vstrLong[opDivide] = "divide";
+    (*vstrShort)[opDivide] = "/";
+    (*vstrLong)[opDivide] = "divide";
     
-    vstrShort[opUnknown] = UNKNOWN_SHORT;
-    vstrLong[opUnknown] = UNKNOWN_LONG;
+    (*vstrShort)[opUnknown] = UNKNOWN_SHORT;
+    (*vstrLong)[opUnknown] = UNKNOWN_LONG;
 }
 
 // non-class function

@@ -81,27 +81,21 @@ public:
     // constructors / destructor
     ///////////////////////////////////////////////////
     /**
-     * @brief default constructor: simply calls CPreMeasure::_Init()
-     * 
-     */
-    CPreMeasure(){ _Init(); };
-
-    /**
-     * @brief Destructor
-     */
-    ~CPreMeasure(){};
-    
-    /**
-     * @brief initialize all member vectors of CPreMeasure:
-     * the vectors are:
+     * @brief default constructor:
+     * initialize all member vectors of CPreMeasure:
      * - CPreMeasure::vdFactor
      * - CPreMeasure::vnExp10
      * - CPreMeasure::vstrShort
      * - CPreMeasure::vstrLong
-     * 
+     *
      */
-    virtual void _Init() override;
+    CPreMeasure();
 
+    /**
+     * @brief Destructor
+     */
+    ~CPreMeasure();
+    
     ///////////////////////////////////////////////////
     // public printing functions
     ///////////////////////////////////////////////////
@@ -181,7 +175,7 @@ protected:
      *        factors stored in CVectorHandle::vdFactor
      * 
      */
-    vector<int> vnExp10;
+    vector<int>* vnExp10;
     
 };
 

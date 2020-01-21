@@ -58,7 +58,7 @@ protected:
      * @brief initialises long and short label by enum index eOperation
      * 
      */
-    virtual void _Init() override;
+    virtual void _Init();
 
 };
 

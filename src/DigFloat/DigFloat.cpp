@@ -22,6 +22,7 @@
  * SOFTWARE.
  */
 
+
 #include "DigFloat.h"
 
 CDigFloat::CDigFloat()

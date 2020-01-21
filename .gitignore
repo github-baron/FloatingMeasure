@@ -2,3 +2,9 @@
 .pdb
 .ilk
 .out
+x64
+/build/lib/FloatingMeasure.dll
+*.ilk
+*.pdb
+/build/lib/FloatingMeasure.lib
+*.user

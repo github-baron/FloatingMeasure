@@ -76,16 +76,28 @@ public:
 
     /**
      * @brief default constructor: <br>
-     * calls CBaseMeasure::_Init()
+     *  initialize all member vectors 
+     * - CBaseMeasure::vstrShort 
+     * - CBaseMeasure::vstrLong
+     * - CBaseMeasure::vnSIIndex
+     * - CBaseMeasure::vdOffset
+     * - CBaseMeasure::vdFactor
      * 
      */
-    CBaseMeasure(){_Init();};
+    CBaseMeasure();
 
     /**
-     * @brief destructor clears all member vectors
+     * @brief destructor:
+     * clears all member vectors 
+     * - CBaseMeasure::vstrShort 
+     * - CBaseMeasure::vstrLong
+     * - CBaseMeasure::vnSIIndex
+     * - CBaseMeasure::vdOffset
+     * - CBaseMeasure::vdFactor
+     *  clears all member vectors
      * 
      */
-    ~CBaseMeasure(){};
+    ~CBaseMeasure();
     
     /**
      * @brief returns the offset for the converstion to the SI measure for the given #eBaseMeasure
@@ -108,28 +120,7 @@ public:
     {
         return (eBaseMeasure) GetElementFromVectorByIndex(vnSIIndex, (int)BaseMeasureEnum);        
     }
-    /**
-     * @brief initialize all member vectors 
-     * - CBaseMeasure::vstrShort 
-     * - CBaseMeasure::vstrLong
-     * - CBaseMeasure::vnSIIndex
-     * - CBaseMeasure::vdOffset
-     * - CBaseMeasure::vdFactor
-     * 
-     */
-    virtual void _Init() override;
-    
-    /**
-     * @brief clears all member vectors 
-     * - CBaseMeasure::vstrShort 
-     * - CBaseMeasure::vstrLong
-     * - CBaseMeasure::vnSIIndex
-     * - CBaseMeasure::vdOffset
-     * - CBaseMeasure::vdFactor
-     * 
-     */
-    virtual void _DeInit() override;
-    
+
     /**
      * @brief output for debugging purpose for given index
      * 
@@ -140,7 +131,7 @@ public:
 
         
     /**
-     * @brief returns the enum (index) of the base measure by searching the vstrShort..
+     * @brief returns the enum (index) of the base measure by searching the vstrShort->.
      * 
      * @param strShortLabel: short label of the base measure (e.g. "V" )
      * @return eBaseMeasure: the base-measure index (e.g. eBaseMeasure::bmVolt)
@@ -165,13 +156,13 @@ public:
      *        in case it is the SI unit itself
      * 
      */
-    vector<int>    vnSIIndex;    
+    vector<int>* vnSIIndex;    
     
     /**
      * @brief keeps the offset for the conversion to the SI Unit
      * 
      */
-    vector<double> vdOffset;
+    vector<double>* vdOffset;
 };
 
 

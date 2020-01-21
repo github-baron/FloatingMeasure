@@ -156,13 +156,13 @@ public:
      * 
      * @return const string&
      */
-    const string& Short(void) {return strShort;}
+    const string& Short(void) {return *strShort;}
     /**
      * @brief getter of CSimpleMeasure::strLong
      * 
      * @return const string&
      */
-    const string& Long(void) {return strLong;}
+    const string& Long(void) {return *strLong;}
     /**
      * @brief getter of CSimpleMeasure::BaseIndex
      * 
@@ -236,7 +236,7 @@ protected:
      * and the base-measure short label (see BASE::Short)
      * 
      */
-    string strShort;
+    string* strShort;
     
     /**
      * @brief long label of this CSimpleMeasure: <br>
@@ -244,7 +244,7 @@ protected:
      * and the base-measure long label (see BASE::Long)
      * 
      */
-    string strLong;
+    string* strLong;
     
     
 };

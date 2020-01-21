@@ -24,112 +24,119 @@
 
 #include "Measure/PreMeasure.h"
 
-void CPreMeasure::_Init()
+CPreMeasure::CPreMeasure()
 {
-    _DeInit();
+    // allocate vnExp10
+    vnExp10 = new vector<int>;
     
-    vdFactor.resize(pmLast+1);
-    vnExp10.resize(pmLast+1);
-    vstrShort.resize(pmLast+1);
-    vstrLong.resize(pmLast+1);
-    vnExp10.resize(pmLast+1);
+    vdFactor->resize(pmLast+1);
+    vnExp10->resize(pmLast+1);
+    vstrShort->resize(pmLast+1);
+    vstrLong->resize(pmLast+1);
     
     
-    vdFactor[pmFemto]=(1e-15);
-    vnExp10[pmFemto]=(-15);   
-    vstrShort[pmFemto]=("f");    
-    vstrLong[pmFemto]=("femto");
+    (*vdFactor)[pmFemto]=(1e-15);
+    (*vnExp10)[pmFemto]=(-15);   
+    (*vstrShort)[pmFemto]=("f");    
+    (*vstrLong)[pmFemto]=("femto");
     
-    vdFactor[pmPiko]=(1e-12); 
-    vnExp10[pmPiko]=(-12);    
-    vstrShort[pmPiko]=("p");    
-    vstrLong[pmPiko]=("piko");
+    (*vdFactor)[pmPiko]=(1e-12); 
+    (*vnExp10)[pmPiko]=(-12);    
+    (*vstrShort)[pmPiko]=("p");    
+    (*vstrLong)[pmPiko]=("piko");
     
-    vdFactor[pmNano]=(1e-9);
-    vnExp10[pmNano]=(-9);
-    vstrShort[pmNano]=("n");    
-    vstrLong[pmNano]=("nano");
+    (*vdFactor)[pmNano]=(1e-9);
+    (*vnExp10)[pmNano]=(-9);
+    (*vstrShort)[pmNano]=("n");    
+    (*vstrLong)[pmNano]=("nano");
     
-    vdFactor[pmMicro]=(1e-6);    
-    vnExp10[pmMicro]=(-6);    
-    vstrShort[pmMicro]=(mu);    
-    vstrLong[pmMicro]=("micro");
+    (*vdFactor)[pmMicro]=(1e-6);    
+    (*vnExp10)[pmMicro]=(-6);    
+    (*vstrShort)[pmMicro]=(mu);    
+    (*vstrLong)[pmMicro]=("micro");
     
-    vdFactor[pmMilli]=(1e-3);    
-    vnExp10[pmMilli]=(-3);    
-    vstrShort[pmMilli]=("m");    
-    vstrLong[pmMilli]=("milli");
+    (*vdFactor)[pmMilli]=(1e-3);    
+    (*vnExp10)[pmMilli]=(-3);    
+    (*vstrShort)[pmMilli]=("m");    
+    (*vstrLong)[pmMilli]=("milli");
     
-    vdFactor[pmCenti]=(1e-2);    
-    vnExp10[pmCenti]=(-2);    
-    vstrShort[pmCenti]=("c");    
-    vstrLong[pmCenti]=("centi");
+    (*vdFactor)[pmCenti]=(1e-2);    
+    (*vnExp10)[pmCenti]=(-2);    
+    (*vstrShort)[pmCenti]=("c");    
+    (*vstrLong)[pmCenti]=("centi");
     
-    vdFactor[pmDeci]=(1e-1);    
-    vnExp10[pmDeci]=(-1);    
-    vstrShort[pmDeci]=("d");    
-    vstrLong[pmDeci]=("deci");
+    (*vdFactor)[pmDeci]=(1e-1);    
+    (*vnExp10)[pmDeci]=(-1);    
+    (*vstrShort)[pmDeci]=("d");    
+    (*vstrLong)[pmDeci]=("deci");
     
-    vdFactor[pmIdent]=(1e+0);    
-    vnExp10[pmIdent]=(+0);    
-    vstrShort[pmIdent]=("");    
-    vstrLong[pmIdent]=("");
+    (*vdFactor)[pmIdent]=(1e+0);    
+    (*vnExp10)[pmIdent]=(+0);    
+    (*vstrShort)[pmIdent]=("");    
+    (*vstrLong)[pmIdent]=("");
     
-    vdFactor[pmDeca]=(1e+1);    
-    vnExp10[pmDeca]=(+1);    
-    vstrShort[pmDeca]=("da");    
-    vstrLong[pmDeca]=("deca");
+    (*vdFactor)[pmDeca]=(1e+1);    
+    (*vnExp10)[pmDeca]=(+1);    
+    (*vstrShort)[pmDeca]=("da");    
+    (*vstrLong)[pmDeca]=("deca");
     
-    vdFactor[pmHecto]=(1e+2);    
-    vnExp10[pmHecto]=(+2);    
-    vstrShort[pmHecto]=("H");    
-    vstrLong[pmHecto]=("hecto");
+    (*vdFactor)[pmHecto]=(1e+2);    
+    (*vnExp10)[pmHecto]=(+2);    
+    (*vstrShort)[pmHecto]=("H");    
+    (*vstrLong)[pmHecto]=("hecto");
     
-    vdFactor[pmKilo]=(1e+3);    
-    vnExp10[pmKilo]=(+3);    
-    vstrShort[pmKilo]=("k");    
-    vstrLong[pmKilo]=("kilo");
+    (*vdFactor)[pmKilo]=(1e+3);    
+    (*vnExp10)[pmKilo]=(+3);    
+    (*vstrShort)[pmKilo]=("k");    
+    (*vstrLong)[pmKilo]=("kilo");
     
-    vdFactor[pmMega]=(1e+6);    
-    vnExp10[pmMega]=(+6);    
-    vstrShort[pmMega]=("M");    
-    vstrLong[pmMega]=("mega");
+    (*vdFactor)[pmMega]=(1e+6);    
+    (*vnExp10)[pmMega]=(+6);    
+    (*vstrShort)[pmMega]=("M");    
+    (*vstrLong)[pmMega]=("mega");
     
-    vdFactor[pmGiga]=(1e+9);    
-    vnExp10[pmGiga]=(+9);    
-    vstrShort[pmGiga]=("G");    
-    vstrLong[pmGiga]=("giga");
+    (*vdFactor)[pmGiga]=(1e+9);    
+    (*vnExp10)[pmGiga]=(+9);    
+    (*vstrShort)[pmGiga]=("G");    
+    (*vstrLong)[pmGiga]=("giga");
     
-    vdFactor[pmTera]=(1e+12);    
-    vnExp10[pmTera]=(+12);    
-    vstrShort[pmTera]=("T");    
-    vstrLong[pmTera]=("tera");
+    (*vdFactor)[pmTera]=(1e+12);    
+    (*vnExp10)[pmTera]=(+12);    
+    (*vstrShort)[pmTera]=("T");    
+    (*vstrLong)[pmTera]=("tera");
     
-    vdFactor[pmPeta]=(1e+15);    
-    vnExp10[pmPeta]=(+15);    
-    vstrShort[pmPeta]=("P");    
-    vstrLong[pmPeta]=("Peta");
+    (*vdFactor)[pmPeta]=(1e+15);    
+    (*vnExp10)[pmPeta]=(+15);    
+    (*vstrShort)[pmPeta]=("P");    
+    (*vstrLong)[pmPeta]=("Peta");
     
-    vdFactor[pmExa]=(1e+18);    
-    vnExp10[pmExa]=(+18);    
-    vstrShort[pmExa]=("E");    
-    vstrLong[pmExa]=("Exa");
+    (*vdFactor)[pmExa]=(1e+18);    
+    (*vnExp10)[pmExa]=(+18);    
+    (*vstrShort)[pmExa]=("E");    
+    (*vstrLong)[pmExa]=("Exa");
     
-    vdFactor[pmZetta]=(1e+21);    
-    vnExp10[pmZetta]=(+21);    
-    vstrShort[pmZetta]=("Z");    
-    vstrLong[pmZetta]=("Zetta");
+    (*vdFactor)[pmZetta]=(1e+21);    
+    (*vnExp10)[pmZetta]=(+21);    
+    (*vstrShort)[pmZetta]=("Z");    
+    (*vstrLong)[pmZetta]=("Zetta");
     
-    vdFactor[pmYotta]=(1e+24);    
-    vnExp10[pmYotta]=(+24);    
-    vstrShort[pmYotta]=("Y");    
-    vstrLong[pmYotta]=("Yotta");
+    (*vdFactor)[pmYotta]=(1e+24);    
+    (*vnExp10)[pmYotta]=(+24);    
+    (*vstrShort)[pmYotta]=("Y");    
+    (*vstrLong)[pmYotta]=("Yotta");
     
-    vdFactor[pmUnknown]=(nan("1"));    
-    vnExp10[pmUnknown]=(INVALID_EXPONENT);    
-    vstrShort[pmUnknown]=(UNKNOWN_SHORT);    
-    vstrLong[pmUnknown]=(UNKNOWN_LONG); 
+    (*vdFactor)[pmUnknown]=(nan("1"));    
+    (*vnExp10)[pmUnknown]=(INVALID_EXPONENT);    
+    (*vstrShort)[pmUnknown]=(UNKNOWN_SHORT);    
+    (*vstrLong)[pmUnknown]=(UNKNOWN_LONG); 
     
+}
+
+CPreMeasure::~CPreMeasure()
+{
+    vnExp10->clear();
+    SecureDeleteObjectPointer(vnExp10);
+
 }
 
 ePreMeasure CPreMeasure::GetIDByFactor(const double dPreMeasureFactor)
@@ -146,7 +153,7 @@ ePreMeasure CPreMeasure::GetIDByFactor(const double dPreMeasureFactor)
     // if we come here iterate over all other PreMeasure factors:
     // stop in case the remaining factor is between 0.1 and 10
     ePreMeasure pmOpt = pmUnknown;
-    for(int idx = 0; idx < vdFactor.size(); idx++)
+    for(int idx = 0; idx < vdFactor->size(); idx++)
     {   
         // set the limits depending of the consecutive and previous measure:
         // default is a factor 1000 distance:
@@ -172,13 +179,14 @@ ePreMeasure CPreMeasure::GetIDByFactor(const double dPreMeasureFactor)
     
     return pmOpt;
 }
+
 ePreMeasure CPreMeasure::GetIDByExp10(const int nExp10)
 { 
   
     // at this point: find the closest
     ePreMeasure optPM = pmFirst;
     int nAbsDiff = abs(nExp10-Exp10(optPM));
-    for(int idx = 0; idx < vnExp10.size(); idx++)
+    for(int idx = 0; idx < vnExp10->size(); idx++)
         if( nAbsDiff > (abs(nExp10-Exp10(idx))) )
         {
             nAbsDiff = abs(nExp10 - Exp10(idx));
@@ -189,13 +197,13 @@ ePreMeasure CPreMeasure::GetIDByExp10(const int nExp10)
     
 }
 
-
 string CPreMeasure::DebugOut(const int nIndex)
 {
     return "Factor = " + to_string(Factor(nIndex)) + "\n" +
            "Short = " + Short(nIndex) + "\n"   +
            "Long = " + Long(nIndex);
 }
+
 string CPreMeasure::DebugOut(const ePreMeasure PreMeasureEnum)
 {
     return DebugOut((int)PreMeasureEnum);
