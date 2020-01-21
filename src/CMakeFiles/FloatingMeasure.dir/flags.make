@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_FLAGS = -fPIC  
 
-CXX_DEFINES = -DFloatingMeasure_EXPORTS -DGIT_BRANCH=b7058f9eeeadefdeb716d3349a72146191123c5e
+CXX_DEFINES = -DFloatingMeasure_EXPORTS -DGIT_BRANCH=e50dda68c692ec3648e5c9b3839541c39ae25a0d
 
 CXX_INCLUDES = -I/home/michae/projects/FloatingMeasure/src 
 
