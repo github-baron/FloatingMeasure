@@ -46,8 +46,9 @@ using namespace __gnu_cxx;
 ///////////////////////////////////////////////////
 // macro definitions
 ///////////////////////////////////////////////////
-#undef DLLEXPORT_CMD   
-#ifdef _WIN32
+#ifdef __linux 
+#define DLLEXPORT_CMD   
+#elif _WIN32
 #define DLLEXPORT_CMD __declspec(dllexport) 
 #endif
 
