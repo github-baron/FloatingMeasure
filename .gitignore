@@ -30,3 +30,5 @@ x64
 /build/VS/bin/TestRunner.lib
 /build/VS/bin/TestRunner.iobj
 /build/VS/bin/TestRunner.exe
+/FloatingMeasure/CMakeFiles/FloatingMeasure.dir
+/FloatingMeasure/CMakeFiles

@@ -151,14 +151,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\src;C:\Users\Michae\CMakeBuilds\1845e5d2-61fb-2730-a89b-d6e571dd8254\install\x64-Release\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)FloatingMeasure\;C:\Users\Michae\CMakeBuilds\1845e5d2-61fb-2730-a89b-d6e571dd8254\install\x64-Release\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>..\build\lib\;C:\Users\Michae\CMakeBuilds\1845e5d2-61fb-2730-a89b-d6e571dd8254\install\x64-Release\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)\build\VS\lib\;C:\Users\Michae\CMakeBuilds\1845e5d2-61fb-2730-a89b-d6e571dd8254\install\x64-Release\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>cppunit.lib;FloatingMeasure.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>

@@ -159,11 +159,11 @@
     </Link>
     <PostBuildEvent>
       <Command>rmdir $(SolutionDir)build\VS\include /S/Q
- xcopy $(SolutionDir)src\DigFloat\*.h $(SolutionDir)build\VS\include\DigFloat\ /s /e /f /h /k /y
- xcopy $(SolutionDir)src\Measure\*.h $(SolutionDir)build\VS\include\Measure\ /s /e /f /h /k /y
- xcopy $(SolutionDir)src\FloatingMeasure\*.h $(SolutionDir)build\VS\include\FloatingMeasure\ /s /e /f /h /k /y
- xcopy $(SolutionDir)src\Utils\*.h $(SolutionDir)build\VS\include\Utils\ /s /e /f /h /k /y
-rem for /d %a in (DigFloat Utils FloatingMeasure Measure) do xcopy $(SolutionDir)src\%a\*.h $(SolutionDir)build\VS\include\%a\ /s /e /f /h /k /y</Command>
+ xcopy $(SolutionDir)FloatingMeasure\DigFloat\*.h $(SolutionDir)build\VS\include\DigFloat\ /s /e /f /h /k /y
+ xcopy $(SolutionDir)FloatingMeasure\Measure\*.h $(SolutionDir)build\VS\include\Measure\ /s /e /f /h /k /y
+ xcopy $(SolutionDir)FloatingMeasure\FloatingMeasure\*.h $(SolutionDir)build\VS\include\FloatingMeasure\ /s /e /f /h /k /y
+ xcopy $(SolutionDir)FloatingMeasure\Utils\*.h $(SolutionDir)build\VS\include\Utils\ /s /e /f /h /k /y
+rem for /d %a in (DigFloat Utils FloatingMeasure Measure) do xcopy $(SolutionDir)FloatingMeasure\%a\*.h $(SolutionDir)build\VS\include\%a\ /s /e /f /h /k /y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
