@@ -27,3 +27,6 @@ x64
 /build/VS/include/FloatingMeasure
 /build/VS/include/DigFloat/DigFloat.h
 /build/VS/include/DigFloat
+/build/VS/bin/TestRunner.lib
+/build/VS/bin/TestRunner.iobj
+/build/VS/bin/TestRunner.exe
