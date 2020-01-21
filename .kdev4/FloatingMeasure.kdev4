@@ -16,35 +16,35 @@ useSystemIncludes=true
 CurrentConfiguration=BuildConfig0
 
 [CustomBuildSystem][BuildConfig0]
-BuildDir=file:///home/michae/projects/FloatingMeasure/\s
-Title=FloatingMeasure
+BuildDir=file:///home/michae/projects/FloatingMeasure
+Title=
 
 [CustomBuildSystem][BuildConfig0][ToolBuild]
 Arguments=
 Enabled=true
 Environment=
-Executable=file:make\s
+Executable=file:make
 Type=0
 
 [CustomBuildSystem][BuildConfig0][ToolClean]
-Arguments=
+Arguments=clean
 Enabled=true
 Environment=
-Executable=
+Executable=file:make
 Type=3
 
 [CustomBuildSystem][BuildConfig0][ToolConfigure]
-Arguments=
+Arguments=./
 Enabled=true
 Environment=
-Executable=file:///usr/bin/cmake\s
+Executable=file:cmake
 Type=1
 
 [CustomBuildSystem][BuildConfig0][ToolInstall]
-Arguments=
-Enabled=false
+Arguments=install
+Enabled=true
 Environment=
-Executable=
+Executable=file:make
 Type=2
 
 [CustomBuildSystem][BuildConfig0][ToolPrune]
@@ -87,45 +87,6 @@ Executable=
 Type=2
 
 [CustomBuildSystem][BuildConfig1][ToolPrune]
-Arguments=
-Enabled=false
-Environment=
-Executable=
-Type=4
-
-[CustomBuildSystem][BuildConfig2]
-BuildDir=
-Title=
-
-[CustomBuildSystem][BuildConfig2][ToolBuild]
-Arguments=
-Enabled=false
-Environment=
-Executable=
-Type=0
-
-[CustomBuildSystem][BuildConfig2][ToolClean]
-Arguments=
-Enabled=false
-Environment=
-Executable=
-Type=3
-
-[CustomBuildSystem][BuildConfig2][ToolConfigure]
-Arguments=
-Enabled=false
-Environment=
-Executable=
-Type=1
-
-[CustomBuildSystem][BuildConfig2][ToolInstall]
-Arguments=
-Enabled=false
-Environment=
-Executable=
-Type=2
-
-[CustomBuildSystem][BuildConfig2][ToolPrune]
 Arguments=
 Enabled=false
 Environment=
