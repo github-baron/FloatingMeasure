@@ -35,13 +35,13 @@ else()
 	set(GIT_BRANCH "Unknown")
 endif()
 add_definitions(-DGIT_BRANCH=${GIT_BRANCH})
-#set build dir for your executable
-set(LIBRARY_OUTPUT_PATH ${CMAKE_BUILD_DIR}/CMake/lib)
 message( STATUS "LIBRARY_OUTPUT_PATH: " ${LIBRARY_OUTPUT_PATH} )
 
 
+#set build dir for your executable
+#set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/CMake/lib)
 
-file(MAKE_DIRECTORY ${LIBRARY_OUTPUT_PATH})
+#file(MAKE_DIRECTORY ${LIBRARY_OUTPUT_PATH})
 
 #target_link_libraries( measurenum somename )
 
@@ -50,4 +50,16 @@ file(MAKE_DIRECTORY ${LIBRARY_OUTPUT_PATH})
 
 # Install the executable and libraries (don't forget to uncomment the lib line if you want)
 #install(TARGETS measurenum DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
+#install(TARGETS FloatingMeasure DESTINATION ${CMAKE_INSTALL_PREFIX}/lib
+
+# installation directory
+set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR}/build/CMake/)
 install(TARGETS FloatingMeasure DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
+install(DIRECTORY ${PROJECT_SOURCE_DIR}/FloatingMeasure/Utils DESTINATION ${CMAKE_INSTALL_PREFIX}/include
+        FILES_MATCHING PATTERN "*.h")
+install(DIRECTORY ${PROJECT_SOURCE_DIR}/FloatingMeasure/FloatingMeasure DESTINATION ${CMAKE_INSTALL_PREFIX}/include
+        FILES_MATCHING PATTERN "*.h")
+install(DIRECTORY ${PROJECT_SOURCE_DIR}/FloatingMeasure/Measure DESTINATION ${CMAKE_INSTALL_PREFIX}/include
+        FILES_MATCHING PATTERN "*.h")
+install(DIRECTORY ${PROJECT_SOURCE_DIR}/FloatingMeasure/DigFloat DESTINATION ${CMAKE_INSTALL_PREFIX}/include
+        FILES_MATCHING PATTERN "*.h")

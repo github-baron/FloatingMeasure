@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.10)
 
 #set the project name
-project(Measure_test)
+project(FloatingMeasure_Test)
 
 #add the executable
 #http://www.cmake.org/pipermail/cmake/2006-October/011446.html
 #Modified to use pkg config and use standard var names
-add_executable(TestRunner TestRunner.cpp)
+add_executable(FloatingMeasure_Test FloatingMeasure_Test.cpp)
 
 
 #Find the CppUnit includes and library
@@ -57,7 +57,10 @@ IF(CPPUNIT_FOUND)
     set(CPPUNIT_VERSION ${PC_CPPUNIT_VERSION} CACHE INTERNAL "CppUnit Version" FORCE)
 ENDIF()
 
+# link cppunit and FloatingMeasure lib
+target_link_libraries(FloatingMeasure_Test ${CPPUNIT_LIBRARIES} FloatingMeasure)
 
-
-target_link_libraries(TestRunner ${CPPUNIT_LIBRARIES} FloatingMeasure)
-
+#install into cmake / bin
+# installation directory
+set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR}/../build/CMake/)
+install(TARGETS FloatingMeasure_Test RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)

@@ -8,10 +8,8 @@ set(CMAKE_BUILD_DIR ${PROJECT_SOURCE_DIR}/build)
 
 # add subdirs 
 add_subdirectory(FloatingMeasure/)
-add_subdirectory(Test/)
+add_subdirectory(FloatingMeasure_Test/)
 
 # compiler flags
 set(CMAKE_CXX_FLAGS "-std=c++14 -pedantic")
 
-# installation directory
-set(CMAKE_INSTALL_PREFIX )
