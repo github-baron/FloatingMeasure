@@ -7,7 +7,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_BUILD_DIR ${PROJECT_SOURCE_DIR}/build)
 
 # add subdirs 
-add_subdirectory(src/)
+add_subdirectory(FloatingMeasure/)
 add_subdirectory(Test/)
 
 # compiler flags

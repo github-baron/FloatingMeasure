@@ -36,7 +36,7 @@ else()
 endif()
 add_definitions(-DGIT_BRANCH=${GIT_BRANCH})
 #set build dir for your executable
-set(LIBRARY_OUTPUT_PATH ${CMAKE_BUILD_DIR}/lib)
+set(LIBRARY_OUTPUT_PATH ${CMAKE_BUILD_DIR}/CMake/lib)
 message( STATUS "LIBRARY_OUTPUT_PATH: " ${LIBRARY_OUTPUT_PATH} )
 
 
