@@ -29,7 +29,7 @@ FIND_PATH(CPPUNIT_INCLUDE_DIRS
     C:\\Users\\Michae\\CMakeBuilds\\1845e5d2-61fb-2730-a89b-d6e571dd8254\\install\\x64-Release\\include
 )
 message("found cppunit includes " ${CPPUNIT_INCLUDE_DIRS}) 
-include_directories(../src/ ${CPPUNIT_INCLUDE_DIRS})
+include_directories(../FloatingMeasure/ ${CPPUNIT_INCLUDE_DIRS})
 
 FIND_LIBRARY(CPPUNIT_LIBRARIES
     NAMES cppunit 
@@ -60,3 +60,4 @@ ENDIF()
 
 
 target_link_libraries(TestRunner ${CPPUNIT_LIBRARIES} FloatingMeasure)
+
