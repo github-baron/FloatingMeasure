@@ -13,3 +13,4 @@ _OBJ
 /build/VS/bin/TestRunner.iobj
 /FloatingMeasure/CMakeFiles/FloatingMeasure.dir
 /FloatingMeasure/CMakeFiles
+*.iobj

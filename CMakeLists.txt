@@ -12,3 +12,6 @@ add_subdirectory(Test/)
 
 # compiler flags
 set(CMAKE_CXX_FLAGS "-std=c++14 -pedantic")
+
+# installation directory
+set(CMAKE_INSTALL_PREFIX )
