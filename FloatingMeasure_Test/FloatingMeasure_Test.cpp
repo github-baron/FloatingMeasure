@@ -136,10 +136,26 @@ public:
         cfTest1 = 3.6*m;
         cfTest2 = 1*s;
         cfTest3 = cfTest1 / cfTest2;
-        CPPUNIT_ASSERT_MESSAGE( cfTest1.DebugOut(), cfTest3 == 3.6*m/s);
+        CPPUNIT_ASSERT_MESSAGE( cfTest3.DebugOut(), cfTest3 == 3.6*m/s);
+        cfTest3.Precision(0.1*m/s);
+        cfTest3.PrecisionActive(true);
+        CPPUNIT_ASSERT_MESSAGE( cfTest3.PrintShort(), cfTest3.PrintShort() == "3.6*m/s");
         
-        cfTest3.ScaleTo(m/h);
-//         CPPUNIT_ASSERT_MESSAGE( cfTest1.DebugOut(), cfTest3 == 3.6*m/h*3600.);
+        cfTest3.Precision(0.00001*m/s);
+        cfTest3.ScaleTo(km/s);
+        CPPUNIT_ASSERT_MESSAGE( cfTest3.DebugOut() + "\n" + cfTest3.PrintShort(), cfTest3 == 3.6*km/s/1000.);
+        cfTest3.ScaleTo(km/ms);
+        CPPUNIT_ASSERT_MESSAGE( cfTest3.DebugOut() + "\n" + cfTest3.PrintShort(), cfTest3 == 3.6*km/ms/1000./1000.);
+        
+        // debugging scalToe
+        cfTest2 = 10*s;
+        CPPUNIT_ASSERT_MESSAGE( cfTest2.DebugOut() + "\n" + cfTest2.PrintShort(), cfTest2 == 10*s);
+        cfTest2.ScaleTo(h);
+        CPPUNIT_ASSERT_MESSAGE( cfTest2.DebugOut() + "\n" + cfTest2.PrintShort(), cfTest2 == 10*s/3600.);
+        
+        
+        cfTest3.ScaleTo(km/h);
+        CPPUNIT_ASSERT_MESSAGE( cfTest3.DebugOut() + "\n" + cfTest3.PrintShort(), cfTest3 == 3.6*km/h/1000./1000.*3600.);
         
         
     }

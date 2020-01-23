@@ -110,7 +110,7 @@ CBaseMeasure::CBaseMeasure()
     (*vstrLong)[bmHour]=("hour");
     (*vnSIIndex)[bmHour]=(bmSecond);
     (*vdOffset)[bmHour]=(0.);
-    (*vdFactor)[bmHour]=(3600);
+    (*vdFactor)[bmHour]=(3600.);
     
     (*vstrShort)[bmDay]=("d");
     (*vstrLong)[bmDay]=("day");
