@@ -1,0 +1,13 @@
+/home/michae/projects/FloatingMeasure/build/CMake/lib/libFloatingMeasure.so
+/home/michae/projects/FloatingMeasure/build/CMake//include/Utils/Utils.h
+/home/michae/projects/FloatingMeasure/build/CMake//include/FloatingMeasure/FloatingMeasure.h
+/home/michae/projects/FloatingMeasure/build/CMake//include/Measure/PreMeasure.h
+/home/michae/projects/FloatingMeasure/build/CMake//include/Measure/VectorHandle.h
+/home/michae/projects/FloatingMeasure/build/CMake//include/Measure/MeasureOperator.h
+/home/michae/projects/FloatingMeasure/build/CMake//include/Measure/BaseMeasure.h
+/home/michae/projects/FloatingMeasure/build/CMake//include/Measure/ComplexMeasure.h
+/home/michae/projects/FloatingMeasure/build/CMake//include/Measure/ComplexMeasureMacros.h
+/home/michae/projects/FloatingMeasure/build/CMake//include/Measure/SimpleMeasure.h
+/home/michae/projects/FloatingMeasure/build/CMake//include/DigFloat/DigFloat.h
+/home/michae/projects/FloatingMeasure/FloatingMeasure_Test/../build/CMake/bin/FloatingMeasure_Test
+/home/michae/projects/FloatingMeasure/FloatingMeasure_Examples/../build/CMake/bin/FMEx_Velocity

@@ -126,14 +126,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/michae/projects/FloatingMeasure && $(CMAKE_COMMAND) -E cmake_progress_start /home/michae/projects/FloatingMeasure/CMakeFiles /home/michae/projects/FloatingMeasure/src/CMakeFiles/progress.marks
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	cd /home/michae/projects/FloatingMeasure && $(CMAKE_COMMAND) -E cmake_progress_start /home/michae/projects/FloatingMeasure/CMakeFiles /home/michae/projects/FloatingMeasure/FloatingMeasure/CMakeFiles/progress.marks
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f CMakeFiles/Makefile2 FloatingMeasure/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/michae/projects/FloatingMeasure/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f CMakeFiles/Makefile2 FloatingMeasure/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,12 +143,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f CMakeFiles/Makefile2 FloatingMeasure/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f CMakeFiles/Makefile2 FloatingMeasure/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
@@ -157,18 +157,18 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/CMakeFiles/FloatingMeasure.dir/rule:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/FloatingMeasure.dir/rule
-.PHONY : src/CMakeFiles/FloatingMeasure.dir/rule
+FloatingMeasure/CMakeFiles/FloatingMeasure.dir/rule:
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f CMakeFiles/Makefile2 FloatingMeasure/CMakeFiles/FloatingMeasure.dir/rule
+.PHONY : FloatingMeasure/CMakeFiles/FloatingMeasure.dir/rule
 
 # Convenience name for target.
-FloatingMeasure: src/CMakeFiles/FloatingMeasure.dir/rule
+FloatingMeasure: FloatingMeasure/CMakeFiles/FloatingMeasure.dir/rule
 
 .PHONY : FloatingMeasure
 
 # fast build rule for target.
 FloatingMeasure/fast:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/build
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build
 .PHONY : FloatingMeasure/fast
 
 DigFloat/DigFloat.o: DigFloat/DigFloat.cpp.o
@@ -177,7 +177,7 @@ DigFloat/DigFloat.o: DigFloat/DigFloat.cpp.o
 
 # target to build an object file
 DigFloat/DigFloat.cpp.o:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/DigFloat/DigFloat.cpp.o
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/DigFloat/DigFloat.cpp.o
 .PHONY : DigFloat/DigFloat.cpp.o
 
 DigFloat/DigFloat.i: DigFloat/DigFloat.cpp.i
@@ -186,7 +186,7 @@ DigFloat/DigFloat.i: DigFloat/DigFloat.cpp.i
 
 # target to preprocess a source file
 DigFloat/DigFloat.cpp.i:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/DigFloat/DigFloat.cpp.i
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/DigFloat/DigFloat.cpp.i
 .PHONY : DigFloat/DigFloat.cpp.i
 
 DigFloat/DigFloat.s: DigFloat/DigFloat.cpp.s
@@ -195,7 +195,7 @@ DigFloat/DigFloat.s: DigFloat/DigFloat.cpp.s
 
 # target to generate assembly for a file
 DigFloat/DigFloat.cpp.s:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/DigFloat/DigFloat.cpp.s
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/DigFloat/DigFloat.cpp.s
 .PHONY : DigFloat/DigFloat.cpp.s
 
 FloatingMeasure/FloatingMeasure.o: FloatingMeasure/FloatingMeasure.cpp.o
@@ -204,7 +204,7 @@ FloatingMeasure/FloatingMeasure.o: FloatingMeasure/FloatingMeasure.cpp.o
 
 # target to build an object file
 FloatingMeasure/FloatingMeasure.cpp.o:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/FloatingMeasure/FloatingMeasure.cpp.o
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/FloatingMeasure/FloatingMeasure.cpp.o
 .PHONY : FloatingMeasure/FloatingMeasure.cpp.o
 
 FloatingMeasure/FloatingMeasure.i: FloatingMeasure/FloatingMeasure.cpp.i
@@ -213,7 +213,7 @@ FloatingMeasure/FloatingMeasure.i: FloatingMeasure/FloatingMeasure.cpp.i
 
 # target to preprocess a source file
 FloatingMeasure/FloatingMeasure.cpp.i:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/FloatingMeasure/FloatingMeasure.cpp.i
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/FloatingMeasure/FloatingMeasure.cpp.i
 .PHONY : FloatingMeasure/FloatingMeasure.cpp.i
 
 FloatingMeasure/FloatingMeasure.s: FloatingMeasure/FloatingMeasure.cpp.s
@@ -222,7 +222,7 @@ FloatingMeasure/FloatingMeasure.s: FloatingMeasure/FloatingMeasure.cpp.s
 
 # target to generate assembly for a file
 FloatingMeasure/FloatingMeasure.cpp.s:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/FloatingMeasure/FloatingMeasure.cpp.s
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/FloatingMeasure/FloatingMeasure.cpp.s
 .PHONY : FloatingMeasure/FloatingMeasure.cpp.s
 
 Measure/BaseMeasure.o: Measure/BaseMeasure.cpp.o
@@ -231,7 +231,7 @@ Measure/BaseMeasure.o: Measure/BaseMeasure.cpp.o
 
 # target to build an object file
 Measure/BaseMeasure.cpp.o:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/Measure/BaseMeasure.cpp.o
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/Measure/BaseMeasure.cpp.o
 .PHONY : Measure/BaseMeasure.cpp.o
 
 Measure/BaseMeasure.i: Measure/BaseMeasure.cpp.i
@@ -240,7 +240,7 @@ Measure/BaseMeasure.i: Measure/BaseMeasure.cpp.i
 
 # target to preprocess a source file
 Measure/BaseMeasure.cpp.i:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/Measure/BaseMeasure.cpp.i
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/Measure/BaseMeasure.cpp.i
 .PHONY : Measure/BaseMeasure.cpp.i
 
 Measure/BaseMeasure.s: Measure/BaseMeasure.cpp.s
@@ -249,7 +249,7 @@ Measure/BaseMeasure.s: Measure/BaseMeasure.cpp.s
 
 # target to generate assembly for a file
 Measure/BaseMeasure.cpp.s:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/Measure/BaseMeasure.cpp.s
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/Measure/BaseMeasure.cpp.s
 .PHONY : Measure/BaseMeasure.cpp.s
 
 Measure/ComplexMeasure.o: Measure/ComplexMeasure.cpp.o
@@ -258,7 +258,7 @@ Measure/ComplexMeasure.o: Measure/ComplexMeasure.cpp.o
 
 # target to build an object file
 Measure/ComplexMeasure.cpp.o:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/Measure/ComplexMeasure.cpp.o
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/Measure/ComplexMeasure.cpp.o
 .PHONY : Measure/ComplexMeasure.cpp.o
 
 Measure/ComplexMeasure.i: Measure/ComplexMeasure.cpp.i
@@ -267,7 +267,7 @@ Measure/ComplexMeasure.i: Measure/ComplexMeasure.cpp.i
 
 # target to preprocess a source file
 Measure/ComplexMeasure.cpp.i:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/Measure/ComplexMeasure.cpp.i
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/Measure/ComplexMeasure.cpp.i
 .PHONY : Measure/ComplexMeasure.cpp.i
 
 Measure/ComplexMeasure.s: Measure/ComplexMeasure.cpp.s
@@ -276,7 +276,7 @@ Measure/ComplexMeasure.s: Measure/ComplexMeasure.cpp.s
 
 # target to generate assembly for a file
 Measure/ComplexMeasure.cpp.s:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/Measure/ComplexMeasure.cpp.s
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/Measure/ComplexMeasure.cpp.s
 .PHONY : Measure/ComplexMeasure.cpp.s
 
 Measure/MeasureOperator.o: Measure/MeasureOperator.cpp.o
@@ -285,7 +285,7 @@ Measure/MeasureOperator.o: Measure/MeasureOperator.cpp.o
 
 # target to build an object file
 Measure/MeasureOperator.cpp.o:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/Measure/MeasureOperator.cpp.o
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/Measure/MeasureOperator.cpp.o
 .PHONY : Measure/MeasureOperator.cpp.o
 
 Measure/MeasureOperator.i: Measure/MeasureOperator.cpp.i
@@ -294,7 +294,7 @@ Measure/MeasureOperator.i: Measure/MeasureOperator.cpp.i
 
 # target to preprocess a source file
 Measure/MeasureOperator.cpp.i:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/Measure/MeasureOperator.cpp.i
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/Measure/MeasureOperator.cpp.i
 .PHONY : Measure/MeasureOperator.cpp.i
 
 Measure/MeasureOperator.s: Measure/MeasureOperator.cpp.s
@@ -303,7 +303,7 @@ Measure/MeasureOperator.s: Measure/MeasureOperator.cpp.s
 
 # target to generate assembly for a file
 Measure/MeasureOperator.cpp.s:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/Measure/MeasureOperator.cpp.s
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/Measure/MeasureOperator.cpp.s
 .PHONY : Measure/MeasureOperator.cpp.s
 
 Measure/PreMeasure.o: Measure/PreMeasure.cpp.o
@@ -312,7 +312,7 @@ Measure/PreMeasure.o: Measure/PreMeasure.cpp.o
 
 # target to build an object file
 Measure/PreMeasure.cpp.o:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/Measure/PreMeasure.cpp.o
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/Measure/PreMeasure.cpp.o
 .PHONY : Measure/PreMeasure.cpp.o
 
 Measure/PreMeasure.i: Measure/PreMeasure.cpp.i
@@ -321,7 +321,7 @@ Measure/PreMeasure.i: Measure/PreMeasure.cpp.i
 
 # target to preprocess a source file
 Measure/PreMeasure.cpp.i:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/Measure/PreMeasure.cpp.i
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/Measure/PreMeasure.cpp.i
 .PHONY : Measure/PreMeasure.cpp.i
 
 Measure/PreMeasure.s: Measure/PreMeasure.cpp.s
@@ -330,7 +330,7 @@ Measure/PreMeasure.s: Measure/PreMeasure.cpp.s
 
 # target to generate assembly for a file
 Measure/PreMeasure.cpp.s:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/Measure/PreMeasure.cpp.s
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/Measure/PreMeasure.cpp.s
 .PHONY : Measure/PreMeasure.cpp.s
 
 Measure/SimpleMeasure.o: Measure/SimpleMeasure.cpp.o
@@ -339,7 +339,7 @@ Measure/SimpleMeasure.o: Measure/SimpleMeasure.cpp.o
 
 # target to build an object file
 Measure/SimpleMeasure.cpp.o:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/Measure/SimpleMeasure.cpp.o
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/Measure/SimpleMeasure.cpp.o
 .PHONY : Measure/SimpleMeasure.cpp.o
 
 Measure/SimpleMeasure.i: Measure/SimpleMeasure.cpp.i
@@ -348,7 +348,7 @@ Measure/SimpleMeasure.i: Measure/SimpleMeasure.cpp.i
 
 # target to preprocess a source file
 Measure/SimpleMeasure.cpp.i:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/Measure/SimpleMeasure.cpp.i
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/Measure/SimpleMeasure.cpp.i
 .PHONY : Measure/SimpleMeasure.cpp.i
 
 Measure/SimpleMeasure.s: Measure/SimpleMeasure.cpp.s
@@ -357,7 +357,7 @@ Measure/SimpleMeasure.s: Measure/SimpleMeasure.cpp.s
 
 # target to generate assembly for a file
 Measure/SimpleMeasure.cpp.s:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/Measure/SimpleMeasure.cpp.s
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/Measure/SimpleMeasure.cpp.s
 .PHONY : Measure/SimpleMeasure.cpp.s
 
 Measure/VectorHandle.o: Measure/VectorHandle.cpp.o
@@ -366,7 +366,7 @@ Measure/VectorHandle.o: Measure/VectorHandle.cpp.o
 
 # target to build an object file
 Measure/VectorHandle.cpp.o:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/Measure/VectorHandle.cpp.o
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/Measure/VectorHandle.cpp.o
 .PHONY : Measure/VectorHandle.cpp.o
 
 Measure/VectorHandle.i: Measure/VectorHandle.cpp.i
@@ -375,7 +375,7 @@ Measure/VectorHandle.i: Measure/VectorHandle.cpp.i
 
 # target to preprocess a source file
 Measure/VectorHandle.cpp.i:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/Measure/VectorHandle.cpp.i
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/Measure/VectorHandle.cpp.i
 .PHONY : Measure/VectorHandle.cpp.i
 
 Measure/VectorHandle.s: Measure/VectorHandle.cpp.s
@@ -384,7 +384,7 @@ Measure/VectorHandle.s: Measure/VectorHandle.cpp.s
 
 # target to generate assembly for a file
 Measure/VectorHandle.cpp.s:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/Measure/VectorHandle.cpp.s
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/Measure/VectorHandle.cpp.s
 .PHONY : Measure/VectorHandle.cpp.s
 
 Utils/Utils.o: Utils/Utils.cpp.o
@@ -393,7 +393,7 @@ Utils/Utils.o: Utils/Utils.cpp.o
 
 # target to build an object file
 Utils/Utils.cpp.o:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/Utils/Utils.cpp.o
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/Utils/Utils.cpp.o
 .PHONY : Utils/Utils.cpp.o
 
 Utils/Utils.i: Utils/Utils.cpp.i
@@ -402,7 +402,7 @@ Utils/Utils.i: Utils/Utils.cpp.i
 
 # target to preprocess a source file
 Utils/Utils.cpp.i:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/Utils/Utils.cpp.i
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/Utils/Utils.cpp.i
 .PHONY : Utils/Utils.cpp.i
 
 Utils/Utils.s: Utils/Utils.cpp.s
@@ -411,7 +411,7 @@ Utils/Utils.s: Utils/Utils.cpp.s
 
 # target to generate assembly for a file
 Utils/Utils.cpp.s:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f src/CMakeFiles/FloatingMeasure.dir/build.make src/CMakeFiles/FloatingMeasure.dir/Utils/Utils.cpp.s
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure/CMakeFiles/FloatingMeasure.dir/build.make FloatingMeasure/CMakeFiles/FloatingMeasure.dir/Utils/Utils.cpp.s
 .PHONY : Utils/Utils.cpp.s
 
 # Help Target

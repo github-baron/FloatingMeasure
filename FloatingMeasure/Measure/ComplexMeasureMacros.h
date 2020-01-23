@@ -84,7 +84,7 @@
 #define  Es   CComplexMeasure(pmExa,  bmSecond)  ///\def  Es macro definition for exasecond
 #define  Zs   CComplexMeasure(pmZetta,bmSecond)  ///\def  Zs macro definition for zettasecond
 #define  Ys   CComplexMeasure(pmYotta,bmSecond)  ///\def  Ys macro definition for yottasecond
-#define   m   CComplexMeasure(pmIdent,bmMinute)  ///\def   m macro definition for minute
+#define min   CComplexMeasure(pmIdent,bmMinute)  ///\def   m macro definition for minute
 #define   h   CComplexMeasure(pmIdent,bmHour)    ///\def   h macro definition for hour 
 #define   d   CComplexMeasure(pmIdent,bmDay)     ///\def   d macro definition for day 
 
@@ -182,6 +182,25 @@
 #define  EHz   CComplexMeasure(pmExa,  bmHertz)           ///\def   EHz   macro definition for exahertz 
 #define  ZHz   CComplexMeasure(pmZetta,bmHertz)           ///\def   ZHz   macro definition for zettahertz 
 #define  YHz   CComplexMeasure(pmYotta,bmHertz)           ///\def   YHz   macro definition for yottahertz 
+
+#define  fm   CComplexMeasure(pmFemto,bmMeter)   ///\def   fm   macro definition for femtometer
+#define  pm   CComplexMeasure(pmPiko, bmMeter)   ///\def   pm   macro definition for  pikometer
+#define  nm   CComplexMeasure(pmNano, bmMeter)   ///\def   nm   macro definition for  nanometer
+#define  um   CComplexMeasure(pmMicro,bmMeter)   ///\def   um   macro definition for micrometer
+#define  mm   CComplexMeasure(pmMilli,bmMeter)   ///\def   mm   macro definition for millimeter
+#define  cm   CComplexMeasure(pmCenti,bmMeter)   ///\def   cm   macro definition for centimeter
+#define  dm   CComplexMeasure(pmDeci, bmMeter)   ///\def   dm   macro definition for  decimeter
+#define   m   CComplexMeasure(pmIdent,bmMeter)   ///\def    m   macro definition for      meter
+#define dam   CComplexMeasure(pmDeca, bmMeter)   ///\def  dam   macro definition for  decameter
+#define  Hm   CComplexMeasure(pmHecto,bmMeter)   ///\def   Hm   macro definition for hectometer 
+#define  km   CComplexMeasure(pmKilo, bmMeter)   ///\def   km   macro definition for  kilometer
+#define  Mm   CComplexMeasure(pmMega, bmMeter)   ///\def   Mm   macro definition for  megameter
+#define  Gm   CComplexMeasure(pmGiga, bmMeter)   ///\def   Gm   macro definition for  gigameter
+#define  Tm   CComplexMeasure(pmTera, bmMeter)   ///\def   Tm   macro definition for  terameter
+#define  Pm   CComplexMeasure(pmPeta, bmMeter)   ///\def   Pm   macro definition for  petameter
+#define  Em   CComplexMeasure(pmExa,  bmMeter)   ///\def   Em   macro definition for   exameter
+#define  Zm   CComplexMeasure(pmZetta,bmMeter)   ///\def   Zm   macro definition for zettameter
+#define  Ym   CComplexMeasure(pmYotta,bmMeter)   ///\def   Ym   macro definition for yottameter
 
 // #define  f   CComplexMeasure(pmFemto,)   ///\def   f   macro definition for femto
 // #define  p   CComplexMeasure(pmPiko, )   ///\def   p   macro definition for  piko

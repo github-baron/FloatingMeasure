@@ -274,7 +274,7 @@ string CDigFloat::RawPrint(const int UserPrecision,bool bWithError /*= true*/) c
     ostringstream oss;
     oss << fixed << setprecision(UserPrecision) << Value() ;
     if ( bWithError)
-        oss << pm << Error();
+        oss << plmi << Error();
     return oss.str();
 }
 string CDigFloat::DebugOut()

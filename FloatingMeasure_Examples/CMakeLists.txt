@@ -4,6 +4,9 @@ cmake_minimum_required(VERSION 3.10)
 project(FMEx_Velocity)
 add_executable(FMEx_Velocity FMEx_Velocity.cpp)
 
+include_directories(../FloatingMeasure/ )
+
+
 target_include_directories(FMEx_Velocity PRIVATE ${CMAKE_INSTALL_PREFIX}/include)
 link_directories(FMEx_Velocity PRIVATE ${CMAKE_INSTALL_PREFIX}/lib)
 

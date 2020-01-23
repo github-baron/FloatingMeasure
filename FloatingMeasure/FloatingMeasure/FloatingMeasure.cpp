@@ -175,6 +175,32 @@ CFloatingMeasure CFloatingMeasure::operator/(const CFloatingMeasure& other)
     return Result;
 }
 
+CFloatingMeasure& CFloatingMeasure::operator*=(const double& other)
+{
+    dfFloating*=other;
+    return *this;
+}
+
+CFloatingMeasure& CFloatingMeasure::operator/=(const double& other)
+{
+    dfFloating/=other;
+    return *this;
+}
+
+CFloatingMeasure CFloatingMeasure::operator*(const double& other)
+{
+    CFloatingMeasure result(*this);
+    result*=other;
+    return result;
+}
+
+CFloatingMeasure CFloatingMeasure::operator/(const double& other)
+{
+    CFloatingMeasure result(*this);
+    result/=other;
+    return result;
+}
+
 void CFloatingMeasure::Normalize()
 {
     cmMeasure.Normalize();

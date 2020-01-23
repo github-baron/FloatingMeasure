@@ -124,6 +124,23 @@ public:
         cfTest1 = 10*uV*us*kV*ZA/CComplexMeasure(pmUnknown,bmAmpere)*uA/kV;
         CPPUNIT_ASSERT_MESSAGE( cfTest1.DebugOut(), !cfTest1.Valid());
         
+        // check operators with inversion
+        cfTest1 = mV*10;
+        CPPUNIT_ASSERT_MESSAGE( cfTest1.DebugOut(), cfTest1 == 10*mV);
+        
+        cfTest1 = 10*uA/mV*10;
+        CPPUNIT_ASSERT_MESSAGE( cfTest1.DebugOut(), cfTest1 == 100*uA/mV);
+        
+        
+        // velocity check
+        cfTest1 = 3.6*m;
+        cfTest2 = 1*s;
+        cfTest3 = cfTest1 / cfTest2;
+        CPPUNIT_ASSERT_MESSAGE( cfTest1.DebugOut(), cfTest3 == 3.6*m/s);
+        
+        cfTest3.ScaleTo(m/h);
+//         CPPUNIT_ASSERT_MESSAGE( cfTest1.DebugOut(), cfTest3 == 3.6*m/h*3600.);
+        
         
     }
     void DigFloatTest()
