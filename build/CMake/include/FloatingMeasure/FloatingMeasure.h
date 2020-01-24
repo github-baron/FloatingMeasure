@@ -151,8 +151,6 @@ public:
      */
     CFloatingMeasure& operator/=(const CFloatingMeasure& other);
     
-    
-    
     /**
      * @brief operator +
      * 
@@ -185,6 +183,37 @@ public:
      */
     CFloatingMeasure operator/(const CFloatingMeasure& other);
     
+    /**
+     * @brief operator*=
+     * 
+     * @param other p_other:double
+     * @return CFloatingMeasure&
+     */
+    CFloatingMeasure& operator*=(const double& other);
+    
+    /**
+     * @brief operator/=
+     * 
+     * @param other p_other:double
+     * @return CFloatingMeasure&
+     */
+    CFloatingMeasure& operator/=(const double& other);
+    
+    /**
+     * @brief operator*
+     * 
+     * @param other p_other:double
+     * @return CFloatingMeasure&
+     */
+    CFloatingMeasure operator*(const double& other);
+    
+    /**
+     * @brief operator/
+     * 
+     * @param other p_other:double
+     * @return CFloatingMeasure&
+     */
+    CFloatingMeasure operator/(const double& other);
     
     
     /////////////////////////////////////////////////////
@@ -344,6 +373,15 @@ protected:
 CFloatingMeasure operator*(const CDigFloat& Floating ,const CComplexMeasure& Measure) { return CFloatingMeasure(Floating, Measure);}
 
 /**
+ * @brief operator* : enables CFloatingMeasure = mV*10;
+ * 
+ * @param Measure: CComplexMeasure
+ * @param Floating: CDigFloat 
+ * @return CFloatingMeasure
+ */
+CFloatingMeasure operator*(const CComplexMeasure& Measure,const CDigFloat& Floating) { return CFloatingMeasure(Floating, Measure);}
+
+/**
  * @brief operator* : enables CFloatingMeasure = 10*mV*uA;
  * 
  * @param FloatingMeasure: CFloatingMeasure (e.g. 10*mV)
@@ -353,6 +391,15 @@ CFloatingMeasure operator*(const CDigFloat& Floating ,const CComplexMeasure& Mea
 CFloatingMeasure operator*(const CFloatingMeasure& FloatingMeasure ,const CComplexMeasure& Measure) { return CFloatingMeasure(FloatingMeasure.Floating(), FloatingMeasure.Measure()*Measure);}
 
 /**
+ * @brief operator* : enables CFloatingMeasure = mV*uA*10;
+ * 
+ * @param Measure: CComplexMeasure (e.g. mV*uA)
+ * @param FloatingMeasure: CFloatingMeasure (e.g. 10)
+ * @return CFloatingMeasure
+ */
+CFloatingMeasure operator*(const CComplexMeasure& Measure, const CFloatingMeasure& FloatingMeasure ) { return CFloatingMeasure(FloatingMeasure.Floating(), FloatingMeasure.Measure()*Measure);}
+
+/**
  * @brief operator/ : enables CFloatingMeasure = 10/mV;
  * 
  * @param Floating: CDigFloat 
@@ -360,6 +407,15 @@ CFloatingMeasure operator*(const CFloatingMeasure& FloatingMeasure ,const CCompl
  * @return CFloatingMeasure
  */
 CFloatingMeasure operator/(const CDigFloat& Floating ,const CComplexMeasure& Measure) { return CFloatingMeasure(Floating, CComplexMeasure(pmIdent, bmNumber) / Measure);}
+
+/**
+ * @brief operator/ : enables CFloatingMeasure = mV/10;
+ * 
+ * @param Measure: CComplexMeasure
+ * @param Floating: CDigFloat 
+ * @return CFloatingMeasure
+ */
+CFloatingMeasure operator/(const CComplexMeasure& Measure,const CDigFloat& Floating ) { return CFloatingMeasure(Floating, CComplexMeasure(pmIdent, bmNumber) / Measure);}
 
 /**
  * @brief operator/ : enables CFloatingMeasure = 10*mV/uA;
