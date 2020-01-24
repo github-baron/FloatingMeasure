@@ -592,6 +592,7 @@ void CComplexMeasure::_ResolveMeasureLeft()
     // nexp10 =0 --> 
     // premeausre of pMeasureLeft is resolved in dfCMFactor
     nCMExp10 += PRE->Exp10( pMeasureLeft->PreID());
+    dfCMFactor *= BASE->Factor( pMeasureLeft->BaseID());
         
     // now set measure left to neutral element without measure: 1
     pMeasureLeft->SetByID( pmIdent, bmNumber);

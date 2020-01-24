@@ -141,22 +141,20 @@ public:
         cfTest3.PrecisionActive(true);
         CPPUNIT_ASSERT_MESSAGE( cfTest3.PrintShort(), cfTest3.PrintShort() == "3.6*m/s");
         
-        cfTest3.Precision(0.00001*m/s);
-        cfTest3.ScaleTo(km/s);
-        CPPUNIT_ASSERT_MESSAGE( cfTest3.DebugOut() + "\n" + cfTest3.PrintShort(), cfTest3 == 3.6*km/s/1000.);
-        cfTest3.ScaleTo(km/ms);
-        CPPUNIT_ASSERT_MESSAGE( cfTest3.DebugOut() + "\n" + cfTest3.PrintShort(), cfTest3 == 3.6*km/ms/1000./1000.);
+        cfTest3.Precision(0.00001*km/h);
+        cfTest3.ScaleTo(km/h);
+        CPPUNIT_ASSERT_MESSAGE( cfTest3.DebugOut() + "\n" + cfTest3.PrintShort(), cfTest3 == 3.6*km/h/1000.*3600.);
         
-        // debugging scalToe
-        cfTest2 = 10*s;
-        CPPUNIT_ASSERT_MESSAGE( cfTest2.DebugOut() + "\n" + cfTest2.PrintShort(), cfTest2 == 10*s);
-        cfTest2.ScaleTo(h);
-        CPPUNIT_ASSERT_MESSAGE( cfTest2.DebugOut() + "\n" + cfTest2.PrintShort(), cfTest2 == 10*s/3600.);
+  /*      debugging scalTo
+        cfTest2 = 10/s;
+        CPPUNIT_ASSERT_MESSAGE( cfTest2.DebugOut() + "\n" + cfTest2.PrintShort(), cfTest2 == 10/s);
+        cfTest2.ScaleTo(1/h);
+        CPPUNIT_ASSERT_MESSAGE( cfTest2.DebugOut() + "\n" + cfTest2.PrintShort(), cfTest2 == 10/h*3600.);
         
         
         cfTest3.ScaleTo(km/h);
         CPPUNIT_ASSERT_MESSAGE( cfTest3.DebugOut() + "\n" + cfTest3.PrintShort(), cfTest3 == 3.6*km/h/1000./1000.*3600.);
-        
+  */      
         
     }
     void DigFloatTest()
@@ -544,6 +542,45 @@ public:
         ComplMeas1.ScaleTo(kV);
         CPPUNIT_ASSERT_MESSAGE( ComplMeas1.DebugOut(), ComplMeas1.PrintAllShort() == "kV");
         CPPUNIT_ASSERT_MESSAGE( ComplMeas1.DebugOut(), ComplMeas1.CMExp10() == -6);
+        
+        
+               // rescaling: do this->operator/( other )--> Simplify:
+        // should result in a dimensionless number with the corresponding factors
+        ComplMeas1 = uA/mV;
+        ComplMeas1 /= uA/kV;
+        CPPUNIT_ASSERT_MESSAGE( ComplMeas1.DebugOut(), ComplMeas1.PrintAllShort() == mu+"A/mV/" + mu + "A*kV");
+        
+        ComplMeas1.Simplify();
+        CPPUNIT_ASSERT_MESSAGE( ComplMeas1.DebugOut(), ComplMeas1.PrintAllShort() == "1");
+        CPPUNIT_ASSERT_MESSAGE( ComplMeas1.DebugOut(), ComplMeas1.CMFactor() == 1);
+        CPPUNIT_ASSERT_MESSAGE( ComplMeas1.DebugOut(), ComplMeas1.CMExp10() == 6);
+        
+        ComplMeas1 = uA/mV;
+        ComplMeas1.ScaleTo(uA/kV);
+        CPPUNIT_ASSERT_MESSAGE( ComplMeas1.DebugOut(), ComplMeas1.PrintAllShort() == mu+"A/kV");
+        CPPUNIT_ASSERT_MESSAGE( ComplMeas1.DebugOut(), ComplMeas1.CMExp10() == 6);
+        
+        ComplMeas1.SetByID(pmIdent,bmNumber);
+        ComplMeas1 = cmIdent/s;
+        CPPUNIT_ASSERT_MESSAGE( ComplMeas1.DebugOut(), ComplMeas1.PrintAllShort() == "1/s");
+        
+        ComplMeas1 /= cmIdent/h;        
+        CPPUNIT_ASSERT_MESSAGE( ComplMeas1.PrintAllShort(), ComplMeas1.PrintAllShort() == "1/s/1*h");
+        ComplMeas1.Simplify();
+        CPPUNIT_ASSERT_MESSAGE( ComplMeas1.PrintAllShort(), ComplMeas1.PrintAllShort() == "1");
+        CPPUNIT_ASSERT_MESSAGE( ComplMeas1.DebugOut(), ComplMeas1.CMFactor() == 3600.);
+        CPPUNIT_ASSERT_MESSAGE( ComplMeas1.DebugOut(), ComplMeas1.CMExp10() == 0);
+        
+        
+        
+        
+        
+        
+        ComplMeas1 = cmIdent/s;
+        ComplMeas1.ScaleTo(cmIdent/h);
+        CPPUNIT_ASSERT_MESSAGE( ComplMeas1.DebugOut(), ComplMeas1.PrintAllShort() == "1/h");
+        CPPUNIT_ASSERT_MESSAGE( ComplMeas1.DebugOut(), ComplMeas1.CMFactor() == 3600.);
+        CPPUNIT_ASSERT_MESSAGE( ComplMeas1.DebugOut(), ComplMeas1.CMExp10() == 0);
         
         // ::Valid
         ComplMeas1 = mV*A*us*CComplexMeasure(pmUnknown,bmAmpere)*m/us;

@@ -26,6 +26,9 @@
 #define CCOMPLEXMEASUREMACROS_H
 
 // macros for easy to use ComplexMeasures 
+#define  cmIdent CComplexMeasure(pmIdent,bmNumber)  ///\def  fV macro definition for dimensionless number = "1"
+
+
 #define    fV CComplexMeasure(pmFemto,bmVolt)   ///\def  fV macro definition for femtovolt
 #define    pV CComplexMeasure(pmPiko, bmVolt)   ///\def  pV macro definition for pikovolt
 #define    nV CComplexMeasure(pmNano, bmVolt)   ///\def  nV macro definition for nanovolt
