@@ -207,6 +207,11 @@ void CFloatingMeasure::Normalize()
     dfFloating *= cmMeasure.ReleaseExp10AndFactor();
 }
 
+void CFloatingMeasure::Simplify()
+{
+    cmMeasure.Simplify();
+    dfFloating *= cmMeasure.ReleaseExp10AndFactor();
+}
 
 void CFloatingMeasure::ScaleTo(const CFloatingMeasure& other)
 {

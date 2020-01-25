@@ -27,20 +27,36 @@
 #include <iostream>
 
 using namespace std;
-int main(int argc, void* argv[])
+int main(int argc, char* argv[])
 {
+    // declare distance and time variable as CFloatingMeasure 
     CFloatingMeasure distance = 10 * m;
     CFloatingMeasure time = 1.5*s;
 
+    
     cout << "the distance of " << distance.PrintShort() << endl 
          <<  "is travelled within a time of " << time.PrintShort() << endl;
-
+    
+    // simple calculation of velocity
     CFloatingMeasure v = distance / time;
     cout << "this results in a velocity of " << v.PrintShort() << endl;
 
     // scale to km / h
     v.ScaleTo(km / h);
     cout << "or recalculated into km/h: " << v.PrintShort() << endl;
-
+    
+    // set the velocity of a snail
+    CFloatingMeasure SnailVelocity = 10*cm/h;
+    cout << "this is the speed of the snail: " << SnailVelocity.PrintShort() << endl;
+ 
+    
+    // let's find out how much faster are we 
+    CFloatingMeasure SnailFactor = v / SnailVelocity;
+    cout << "we are much faster than our snail " << SnailFactor.PrintShort() << endl;
+ 
+    // simplify our snail SnailFactor
+    SnailFactor.Simplify();
+    cout << "that's more readable: that is our SnailFactor without measures" << SnailFactor.PrintShort() << endl;
+ 
 
 }

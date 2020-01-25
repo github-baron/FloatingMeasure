@@ -226,6 +226,12 @@ public:
     void Normalize();
     
     /**
+     * @brief convert to SI unit and remove premeasures != pmIdent
+     * 
+     */
+    void Simplify();
+    
+    /**
      * @brief check measures for compatibility
      * 
      * @param other p_other:CFloatingMeasure
