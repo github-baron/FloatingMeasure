@@ -2,43 +2,57 @@
 
 FloatingMeasure is a class API for calculations of floating point numbers with measures. 
 
-The measures can be any complex combination of the given <a href="./FloatingMeasure/Measure/SimpleMeasure.h"> SimpleMeasures </a> and the mathematical operation "multiplication" and "division".
+The measures can be any complex combination of <a href="./FloatingMeasure/Measure/SimpleMeasure.h"> simple measures </a> and the mathematical operation "multiplication" and "division".
 
-The <a href="./FloatingMeasure/Measure/SimpleMeasure.h"> SimpleMeasures </a> consists of a <a href="./FloatingMeasure/Measure/PreMeasure.h"> PreMeasure </a> and a <a href="./FloatingMeasure/Measure/BaseMeasure.h"> BaseMeasure </a>. Thus, this API is easily extendable by any kind of pre measure or base measure.
+A <a href="./FloatingMeasure/Measure/SimpleMeasure.h"> simple measure </a> consists of a <a href="./FloatingMeasure/Measure/PreMeasure.h"> pre measure </a> and a <a href="./FloatingMeasure/Measure/BaseMeasure.h"> base measure </a>. Thus, this API is easily extendable by any kind of pre measure or base measure.
 
-The "floating" part of this API considers errors due to the numerical floating point representation. As a consequence i.e. the <a href="FloatingMeasure/FloatingMeasure.cpp"> comparison operator </a> allows equality for a range of values given by the numerical error.  
+The "floating" part of this API considers errors due to the numerical floating point representation. As a consequence e.g. the <a href="FloatingMeasure/FloatingMeasure.cpp"> comparison operator </a> allows equality for a range of values given by the numerical error instead of comparing to exact one value (which often fails .... unwanted).  
 
-Even the history (i.e. the different mathematical operations) of these errors is protocolled.
+Even the history (i.e. the sequence of mathematical operations) of these errors is protocolled.
 
 
 ## Code Example
 
-Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
+<a href="./FloatingMeasure_Examples/FMEx_Velocity.cpp"> FMEx_Velocity.cpp</a> :</br>
+An example for calculation of a velocity "v" of Usain Bolt, a snail, and the corresponding "snail factor".
 
-Simple example is the calculation of a velocity "v" from a distance of "s=100*m" and the the time "t=9.27*s". This API offers the calculation of "v" by writing code like "v=s/t".
-<a href="./FloatingMeasure_Examples/FMEx_Velocity.cpp"> FMEx_Velocity.cpp</a>
+<a href="./FloatingMeasure_Examples/FMEx_CheckMeasValue.cpp"> FMEx_CheckMeasValue.cpp</a> :</br>
+An example for checking a measurement value against a given tolerance: with and without considering a given precision.
+
 
 ## Motivation
 
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
+The FloatingMeasure API can be used in any metrological project. It helps avoiding those classical errors like "off by a factor of thousand" or any other potency of ten: the Recalculation from one measure to another is made easy.
+
+Additionally, it supports configurable precision which is oftenly needed for "reasonable precise" numbers of a given metrological setup: see <a href="./FloatingMeasure_Examples/FMEx_CheckMeasValue.cpp"> FMEx_CheckMeasValue.cpp</a> for illustration.
 
 ## Installation
 
-Provide code examples and explanations of how to get the project.
+The project can be compiled under Linux (CMake) and Windows (CMake / Visual Studio 2017). The corresponding build result can be found in the project directory "build/CMake" (for CMake) and "build/VS" (for Visual Studio).  Distribute the corresponding "include" and "lib" directories to your favorite installation directory.
 
 ## API Reference
 
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
+Refere to the doxygen generated documentation <a href="Doc/html/index.html"> here. </a>
 
 ## Tests
 
-Describe and show how to run the tests with code examples.
+Testing is done via cppunit which can be found on <a href="https://github.com/Ultimaker/CppUnit"> github </a> for usage under Windows (install and distribute with CMake). Under Linux (at least for Debian) it can be installed via apt.
+
+For building with CMake the a href="FloatingMeasure_Test/CMakeLists.txt"> CMakeLists.txt </a> file must be adapted for that. There must be a more elegant way ...
+
+See how the testing is implemented <a href="FloatingMeasure_Test/FloatingMeasure_Test.cpp"> FloatingMeasure_Test.cpp </a>.
 
 ## Contributors
 
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
+Contributers are very welcome. Please, share your ideas of how want to use this API and adpat it to your needs.
+
+## Future Development
+
+- idea of "aliases" like : "1*V*A = 1*W" or "1*kg*m*m/s/s = 1*J"... just an idea
+- any extension of per and base measures
+
 
 ## License
 
-A short snippet describing the license (MIT, Apache, etc.)
+See my <a href="LICENSE"> LICENSE </a> (MIT).
 
