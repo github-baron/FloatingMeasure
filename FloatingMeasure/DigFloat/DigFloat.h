@@ -32,6 +32,12 @@
 #include<Utils/Utils.h>
 
 ///////////////////////////////////////////////////
+// macros
+///////////////////////////////////////////////////
+#define DF_RAW_PRINT_PRECISION         40
+#define DF_DEFAULT_PRINT_PRECISION     10
+
+///////////////////////////////////////////////////
 // forward declarations
 ///////////////////////////////////////////////////
 class CFloatingMeasure;
@@ -398,7 +404,8 @@ public:
     // public printing functions
     ///////////////////////////////////////////////////
     /**
-     * @brief prints CDigFloat::dValue and conditionally CDigFloat::dError formatted according to CDigFloat::nPrecision.
+     * @brief prints CDigFloat::dValue and conditionally CDigFloat::dError formatted according to CDigFloat::nPrecision if
+     * CDigFloat::PrecisionActive() is true. Otherwise the number of digits is formatted with DF_DEFAULT_PRINT_PRECISION.
      * 
      * @param bWithError: if true, CDigFloat::dError is printed, too
      * @return string, formatted CDigFloat::dValue [\f$\pm\f$ CDigFloat::dError] according to CDigFloat::nPrecision

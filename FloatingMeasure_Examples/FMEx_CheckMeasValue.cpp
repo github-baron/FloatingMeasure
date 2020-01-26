@@ -58,33 +58,46 @@ int main(int argc, char* argv[])
          << "... Demand value = "  << Demand.PrintShort() << endl
          << "... Meas value = "  << MeasVal.PrintShort() << endl
          << "... Tolerance = "  << Tolerance.PrintShort() << endl
-         << "... deviation [mV]= "  << (abs(MeasVal-Demand)).PrintShort() << endl;
+         << "... deviation = "  << (abs(MeasVal-Demand)).PrintShort() << endl << endl;
+         
+    cout << "now compare the deviation with tolerance: " << endl
+         << (abs(MeasVal-Demand)).PrintShort() << " > " << Tolerance.PrintShort()
+         << endl << "--> out of tolerance : bummer, what a XXX device!!" << endl << endl;        
     
-    cout << ".... " <<  (abs(MeasVal-Demand)).PrintShort() << " > " << Tolerance.PrintShort() << "--> out of tolerance : bummer, what a XXX device!!" << endl;        
-    
-    cout << " Now consider the resolution :" << endl;
-    
-    cout << "That is our meas. value without considering the resolution: " << endl << MeasVal.PrintShort() << endl;
-    
-    MeasVal.Precision(Resolution);
-    
-    cout << "and now with consideration of the resolution: " << endl << MeasVal.PrintShort() << endl;
+    cout << " Now consider the resolution :" << endl;    
+    cout << "That is our measurement value without considering the resolution: " << endl << MeasVal.PrintShort() << endl;
 
-    cout << endl << " check again: " << endl << " .... " <<  (abs(MeasVal-Demand)).PrintShort() << " <= " << Tolerance.PrintShort() << "--> in tolerance : best device ever!" << endl;   
+    // set precision by resolution
+    MeasVal.Precision(Resolution);    
     
-    cout << endl << " but take care depending on the order of your calculations the result may change again " << endl << " .... " <<  (abs(Demand-MeasVal)).PrintShort() << " > " << Tolerance.PrintShort() << "--> out fof tolerance : what a XXX ... again!" << endl << endl;   
+    cout << "and now with consideration of the resolution: " << endl << MeasVal.PrintShort() << endl << " ... no difference ? ... Forgot to activate the precision ..." << endl;
+
+    // set precision by resolution
+    MeasVal.PrecisionActive(true);    
     
-    cout << "the reason is: the precision of the left calculation partner rules the precision of the whole expression." << endl << endl;
+    cout << " ... here we are: now really with consideration of the resolution: " << endl << MeasVal.PrintShort() << endl << endl; 
     
-    cout << "to be sure set the precision for all calculation partners ... and you are safe." << endl;
+    
+    cout << endl << " check again: " << endl << " .... " 
+         <<  (abs(MeasVal-Demand)).PrintShort() << " <= " << Tolerance.PrintShort() << endl 
+         << "--> in tolerance : best device ever!" << endl << endl;   
+    
+    cout << endl << " but take care depending on the order of your calculation for the deviation, the result may change again " << endl << " .... " <<  (abs(Demand-MeasVal)).PrintShort() << " > " << Tolerance.PrintShort() << endl
+    << "--> out of tolerance : what a XXX ... again!" << endl << endl;   
+    
+    cout << "the reason is:\nthe precision of the left calculation partner rules the precision of the whole expression." << endl << endl;
+    
+    cout << "to be sure set the precision for all calculation partners ... and you are safe ... do not forget to activate" << endl;
     
     Tolerance.Precision(Resolution);
+    Tolerance.PrecisionActive(true);
     Demand.Precision(Resolution);
+    Demand.PrecisionActive(true);
 
        cout << " now the precision is set for every value ...." << endl
          << "... Demand value = "  << Demand.PrintShort() << endl
          << "... Meas value = "  << MeasVal.PrintShort() << endl
          << "... Tolerance = "  << Tolerance.PrintShort() << endl
-         << "... deviation [mV]= "  << (abs(MeasVal-Demand)).PrintShort() << endl;
+         << "... deviation = "  << (abs(MeasVal-Demand)).PrintShort() << endl;
  
 }
