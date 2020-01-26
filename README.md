@@ -1,13 +1,22 @@
 ## Synopsis
 
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
+FloatingMeasure is a class API for calculations of floating point numbers with measures. 
+
+The measures can be any complex combination of the given <a href="./FloatingMeasure/Measure/SimpleMeasure.h"> SimpleMeasures </a> and the mathematical operation "multiplication" and "division".
+
+The <a href="./FloatingMeasure/Measure/SimpleMeasure.h"> SimpleMeasures </a> consists of a <a href="./FloatingMeasure/Measure/PreMeasure.h"> PreMeasure </a> and a <a href="./FloatingMeasure/Measure/BaseMeasure.h"> BaseMeasure </a>. Thus, this API is easily extendable by any kind of pre measure or base measure.
+
+The "floating" part of this API considers errors due to the numerical floating point representation. As a consequence i.e. the <a href="FloatingMeasure/FloatingMeasure.cpp"> comparison operator </a> allows equality for a range of values given by the numerical error.  
+
+Even the history (i.e. the different mathematical operations) of these errors is protocolled.
+
 
 ## Code Example
 
 Show what the library does as concisely as possible, developers should be able to figure out **how** your project solves their problem by looking at the code example. Make sure the API you are showing off is obvious, and that your code is short and concise.
 
 Simple example is the calculation of a velocity "v" from a distance of "s=100*m" and the the time "t=9.27*s". This API offers the calculation of "v" by writing code like "v=s/t".
-<a href="https://github.com/github-baron/FloatingMeasure/blob/master/FloatingMeasure_Examples/FMEx_Velocity.cpp"> FMEx_Velocity.cpp</a>
+<a href="./FloatingMeasure_Examples/FMEx_Velocity.cpp"> FMEx_Velocity.cpp</a>
 
 ## Motivation
 
