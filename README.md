@@ -28,7 +28,7 @@ Additionally, it supports configurable precision which is oftenly needed for "re
 
 ## Installation
 
-The project can be compiled under Linux (CMake) and Windows (CMake / Visual Studio 2017). The corresponding build result can be found in the project directory "build/CMake" (for CMake) and "build/VS" (for Visual Studio).  Distribute the corresponding "include" and "lib" directories to your favorite installation directory.
+The project can be compiled under Linux (CMake) and Windows (CMake / Visual Studio 2017). The corresponding build result can be found in the project directory <a href="build/CMake"> build/CMake </a> (for CMake) and <a href="build/VS"> build/VS </a> (for Visual Studio).  Distribute the corresponding "include" and "lib" directories to your favorite installation directory.
 
 ## API Reference
 
@@ -38,7 +38,7 @@ Refere to the doxygen generated documentation <a href="Doc/html/index.html"> her
 
 Testing is done via cppunit which can be found on <a href="https://github.com/Ultimaker/CppUnit"> github </a> for usage under Windows (install and distribute with CMake). Under Linux (at least for Debian) it can be installed via apt.
 
-For building with CMake the a href="FloatingMeasure_Test/CMakeLists.txt"> CMakeLists.txt </a> file must be adapted for that. There must be a more elegant way ...
+For building with CMake the <a href="FloatingMeasure_Test/CMakeLists.txt"> CMakeLists.txt </a> file must be adapted for that. There must be a more elegant way ...
 
 See how the testing is implemented <a href="FloatingMeasure_Test/FloatingMeasure_Test.cpp"> FloatingMeasure_Test.cpp </a>.
 
@@ -48,8 +48,11 @@ Contributers are very welcome. Please, share your ideas of how want to use this 
 
 ## Future Development
 
-- idea of "aliases" like : "1*V*A = 1*W" or "1*kg*m*m/s/s = 1*J"... just an idea
-- any extension of per and base measures
+- idea of "aliases" like : "1\*V\*A = 1\*W" or "1\*kg\*m\*m/s/s = 1\*J"... just an idea
+- any extension of pre and base measures (see above example: "kg" is missing)
+- handling offsets in (i.e. especially temperatures are neglected at the moment)
+    - recalculation to SI-measures 
+    - simplification of complex measures
 
 
 ## License
