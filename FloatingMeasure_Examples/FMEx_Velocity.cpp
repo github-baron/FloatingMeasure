@@ -30,15 +30,15 @@ using namespace std;
 int main(int argc, char* argv[])
 {
     // declare distance and time variable as CFloatingMeasure 
-    CFloatingMeasure distance = 10 * m;
-    CFloatingMeasure time = 1.5*s;
+    CFloatingMeasure dist = 100 * m;
+    CFloatingMeasure t = 9.27*s;
 
     
-    cout << "the distance of " << distance.PrintShort() << endl 
-         <<  "is travelled within a time of " << time.PrintShort() << endl;
+    cout << "the distance of " << dist.PrintShort() << endl 
+         <<  "is travelled within a time of " << t.PrintShort() << endl;
     
     // simple calculation of velocity
-    CFloatingMeasure v = distance / time;
+    CFloatingMeasure v = dist / t;
     cout << "this results in a velocity of " << v.PrintShort() << endl;
 
     // scale to km / h
@@ -46,17 +46,18 @@ int main(int argc, char* argv[])
     cout << "or recalculated into km/h: " << v.PrintShort() << endl;
     
     // set the velocity of a snail
-    CFloatingMeasure SnailVelocity = 10*cm/h;
+    CFloatingMeasure SnailVelocity = 10*m/h;
     cout << "this is the speed of the snail: " << SnailVelocity.PrintShort() << endl;
  
     
     // let's find out how much faster are we 
     CFloatingMeasure SnailFactor = v / SnailVelocity;
-    cout << "we are much faster than our snail " << SnailFactor.PrintShort() << endl;
+    cout << "we are much faster than our snail " << SnailFactor.PrintShort() << endl
+        << "... hard to see: the measures are confusing" << endl;
  
     // simplify our snail SnailFactor
     SnailFactor.Simplify();
-    cout << "that's more readable: that is our SnailFactor without measures" << SnailFactor.PrintShort() << endl;
+    cout << "that is our snail factor without measures " << endl << SnailFactor.PrintShort() << endl;
  
 
 }
