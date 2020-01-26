@@ -368,6 +368,17 @@ protected:
     CDigFloat dfFloating;
     CFloatingMeasure* pfmPrecision;
 };
+    /////////////////////////////////////////////////////
+    // external operators and functions for comfortable 
+    // use 
+    /////////////////////////////////////////////////////
+/**
+ * @brief abs: returns CFloatingMeasure with absolute value;
+ * 
+ * @param FM: CFloatingMeasure
+ * @return CFloatingMeasure
+ */
+CFloatingMeasure abs(const CFloatingMeasure& FM );
 
 /**
  * @brief operator* : enables CFloatingMeasure = 10*mV;

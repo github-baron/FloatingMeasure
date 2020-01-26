@@ -324,3 +324,13 @@ string CFloatingMeasure::DebugOut()
 
 }
 
+
+    /////////////////////////////////////////////////////
+    // external operators and functions for comfortable 
+    // use 
+    /////////////////////////////////////////////////////
+CFloatingMeasure abs(const CFloatingMeasure& FM)
+{ 
+    return CFloatingMeasure (abs(FM.Floating()),FM.Measure());
+    
+}

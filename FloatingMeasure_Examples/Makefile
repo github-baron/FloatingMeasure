@@ -79,6 +79,18 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -99,18 +111,6 @@ list_install_components:
 list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
 
 # Special rule for the target install
 install: preinstall
@@ -157,6 +157,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+FloatingMeasure_Examples/CMakeFiles/FMEx_CheckMeasValue.dir/rule:
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f CMakeFiles/Makefile2 FloatingMeasure_Examples/CMakeFiles/FMEx_CheckMeasValue.dir/rule
+.PHONY : FloatingMeasure_Examples/CMakeFiles/FMEx_CheckMeasValue.dir/rule
+
+# Convenience name for target.
+FMEx_CheckMeasValue: FloatingMeasure_Examples/CMakeFiles/FMEx_CheckMeasValue.dir/rule
+
+.PHONY : FMEx_CheckMeasValue
+
+# fast build rule for target.
+FMEx_CheckMeasValue/fast:
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure_Examples/CMakeFiles/FMEx_CheckMeasValue.dir/build.make FloatingMeasure_Examples/CMakeFiles/FMEx_CheckMeasValue.dir/build
+.PHONY : FMEx_CheckMeasValue/fast
+
+# Convenience name for target.
 FloatingMeasure_Examples/CMakeFiles/FMEx_Velocity.dir/rule:
 	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f CMakeFiles/Makefile2 FloatingMeasure_Examples/CMakeFiles/FMEx_Velocity.dir/rule
 .PHONY : FloatingMeasure_Examples/CMakeFiles/FMEx_Velocity.dir/rule
@@ -170,6 +185,33 @@ FMEx_Velocity: FloatingMeasure_Examples/CMakeFiles/FMEx_Velocity.dir/rule
 FMEx_Velocity/fast:
 	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure_Examples/CMakeFiles/FMEx_Velocity.dir/build.make FloatingMeasure_Examples/CMakeFiles/FMEx_Velocity.dir/build
 .PHONY : FMEx_Velocity/fast
+
+FMEx_CheckMeasValue.o: FMEx_CheckMeasValue.cpp.o
+
+.PHONY : FMEx_CheckMeasValue.o
+
+# target to build an object file
+FMEx_CheckMeasValue.cpp.o:
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure_Examples/CMakeFiles/FMEx_CheckMeasValue.dir/build.make FloatingMeasure_Examples/CMakeFiles/FMEx_CheckMeasValue.dir/FMEx_CheckMeasValue.cpp.o
+.PHONY : FMEx_CheckMeasValue.cpp.o
+
+FMEx_CheckMeasValue.i: FMEx_CheckMeasValue.cpp.i
+
+.PHONY : FMEx_CheckMeasValue.i
+
+# target to preprocess a source file
+FMEx_CheckMeasValue.cpp.i:
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure_Examples/CMakeFiles/FMEx_CheckMeasValue.dir/build.make FloatingMeasure_Examples/CMakeFiles/FMEx_CheckMeasValue.dir/FMEx_CheckMeasValue.cpp.i
+.PHONY : FMEx_CheckMeasValue.cpp.i
+
+FMEx_CheckMeasValue.s: FMEx_CheckMeasValue.cpp.s
+
+.PHONY : FMEx_CheckMeasValue.s
+
+# target to generate assembly for a file
+FMEx_CheckMeasValue.cpp.s:
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure_Examples/CMakeFiles/FMEx_CheckMeasValue.dir/build.make FloatingMeasure_Examples/CMakeFiles/FMEx_CheckMeasValue.dir/FMEx_CheckMeasValue.cpp.s
+.PHONY : FMEx_CheckMeasValue.cpp.s
 
 FMEx_Velocity.o: FMEx_Velocity.cpp.o
 
@@ -205,12 +247,16 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
+	@echo "... FMEx_CheckMeasValue"
 	@echo "... edit_cache"
+	@echo "... install/local"
+	@echo "... FMEx_Velocity"
 	@echo "... rebuild_cache"
 	@echo "... list_install_components"
-	@echo "... FMEx_Velocity"
-	@echo "... install/local"
 	@echo "... install"
+	@echo "... FMEx_CheckMeasValue.o"
+	@echo "... FMEx_CheckMeasValue.i"
+	@echo "... FMEx_CheckMeasValue.s"
 	@echo "... FMEx_Velocity.o"
 	@echo "... FMEx_Velocity.i"
 	@echo "... FMEx_Velocity.s"

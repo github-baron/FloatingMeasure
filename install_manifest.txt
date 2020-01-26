@@ -11,3 +11,4 @@
 /home/michae/projects/FloatingMeasure/build/CMake//include/DigFloat/DigFloat.h
 /home/michae/projects/FloatingMeasure/FloatingMeasure_Test/../build/CMake/bin/FloatingMeasure_Test
 /home/michae/projects/FloatingMeasure/FloatingMeasure_Examples/../build/CMake/bin/FMEx_Velocity
+/home/michae/projects/FloatingMeasure/FloatingMeasure_Examples/../build/CMake/bin/FMEx_CheckMeasValue

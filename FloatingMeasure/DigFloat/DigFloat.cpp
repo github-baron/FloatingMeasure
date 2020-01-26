@@ -290,3 +290,14 @@ string CDigFloat::DebugOut()
         
     return oss.str();
 }
+
+    /////////////////////////////////////////////////////
+    // external functions for comfortable 
+    // use 
+    /////////////////////////////////////////////////////
+CDigFloat abs(const CDigFloat& DF)
+{ 
+    CDigFloat dfResult(DF); 
+    dfResult.RawValue(abs(DF.RawValue())); 
+    return dfResult;
+}

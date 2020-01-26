@@ -183,6 +183,19 @@ FloatingMeasure_Test/fast:
 .PHONY : FloatingMeasure_Test/fast
 
 #=============================================================================
+# Target rules for targets named FMEx_CheckMeasValue
+
+# Build rule for target.
+FMEx_CheckMeasValue: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 FMEx_CheckMeasValue
+.PHONY : FMEx_CheckMeasValue
+
+# fast build rule for target.
+FMEx_CheckMeasValue/fast:
+	$(MAKE) -f FloatingMeasure_Examples/CMakeFiles/FMEx_CheckMeasValue.dir/build.make FloatingMeasure_Examples/CMakeFiles/FMEx_CheckMeasValue.dir/build
+.PHONY : FMEx_CheckMeasValue/fast
+
+#=============================================================================
 # Target rules for targets named FMEx_Velocity
 
 # Build rule for target.
@@ -209,6 +222,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... FloatingMeasure"
 	@echo "... FloatingMeasure_Test"
+	@echo "... FMEx_CheckMeasValue"
 	@echo "... FMEx_Velocity"
 .PHONY : help
 

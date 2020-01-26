@@ -327,6 +327,13 @@ public:
     const double RawValue() const { return dValue;}
     
     /**
+     * @brief setter of CDigFloat::dValue (no rounding/no error setting)
+     * 
+     * @return const double
+     */
+    void RawValue(const double& other ) { dValue = other;}
+    
+    /**
      * @brief getter of CDigFloat::dError conditionally considering CDigFloat::nPrecision: <br>
      * see CDigFloat::PrecisionActive() and CDigFloat::Precision()
      * 
@@ -477,6 +484,18 @@ protected:
      */
     bool bPrecisionActive;
 };
+    /////////////////////////////////////////////////////
+    // external functions for comfortable 
+    // use 
+    /////////////////////////////////////////////////////
+/**
+ * @brief abs: returns CDigFloat with absolute value;
+ * 
+ * @param FM: CDigFloat
+ * @return CDigFloat
+ */
+CDigFloat abs(const CDigFloat& DF );
+
 
 
 #endif // CDIGFLOAT_H
