@@ -1,0 +1,1052 @@
+\hypertarget{classCComplexMeasure}{}\section{C\+Complex\+Measure Class Reference}
+\label{classCComplexMeasure}\index{C\+Complex\+Measure@{C\+Complex\+Measure}}
+
+
+\hyperlink{classCComplexMeasure}{C\+Complex\+Measure}\+: represents a list of measures (i.\+e. \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure}) chained by operators $\ast$ and / ~\newline
+ This class handles\+:  
+
+
+
+
+{\ttfamily \#include $<$Complex\+Measure.\+h$>$}
+
+
+
+Collaboration diagram for C\+Complex\+Measure\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{d6/d10/classCComplexMeasure__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCComplexMeasure_a5501594d4a8efdf565aa4c6bc6ce0379}{C\+Complex\+Measure} ()
+\item 
+\hyperlink{classCComplexMeasure_a50de70ddcb4b2b64c238d686e2f85419}{C\+Complex\+Measure} (const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor\+: calls \hyperlink{classCComplexMeasure}{C\+Complex\+Measure}\+:\+:~\newline
+ calls \hyperlink{classCComplexMeasure_aed6efc43efe99d8cf1072ac98ec8d21c}{C\+Complex\+Measure\+::\+\_\+\+Init}, newly allocates \hyperlink{classCComplexMeasure_a4d68f86891a036df81f5b1a344c36f27}{C\+Complex\+Measure\+::p\+Measure\+Left} and \hyperlink{classCComplexMeasure_abbafc4b16676d223ed34860b8ece1b6b}{C\+Complex\+Measure\+::p\+Measure\+Right} from \char`\"{}other\char`\"{} \hyperlink{classCComplexMeasure}{C\+Complex\+Measure}. \end{DoxyCompactList}\item 
+\hyperlink{classCComplexMeasure_a0a0946c508c95e4baf22a0bd5831c1b8}{C\+Complex\+Measure} (const \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure} Pre\+Measure\+Enum, const \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} Base\+Measure\+Enum)
+\begin{DoxyCompactList}\small\item\em Constructor by \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure} index and \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} index\+:~\newline
+ only sets \+::p\+Measure\+Left and deletes \+::p\+Measure\+Right. \end{DoxyCompactList}\item 
+\hyperlink{classCComplexMeasure_a876e7030b4576f59ab66793ed3e7b50e}{C\+Complex\+Measure} (const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} $\ast$other)
+\begin{DoxyCompactList}\small\item\em Copy constructor with pointer arg. \+: ~\newline
+ calls \hyperlink{classCComplexMeasure_aed6efc43efe99d8cf1072ac98ec8d21c}{C\+Complex\+Measure\+::\+\_\+\+Init}, newly allocates \hyperlink{classCComplexMeasure_a4d68f86891a036df81f5b1a344c36f27}{C\+Complex\+Measure\+::p\+Measure\+Left} and \hyperlink{classCComplexMeasure_abbafc4b16676d223ed34860b8ece1b6b}{C\+Complex\+Measure\+::p\+Measure\+Right} from \char`\"{}other\char`\"{} \hyperlink{classCComplexMeasure}{C\+Complex\+Measure}. \end{DoxyCompactList}\item 
+\hyperlink{classCComplexMeasure_a4b6895d4eef03df92d8ea1d8ad4f2f3d}{$\sim$\+C\+Complex\+Measure} ()
+\item 
+\hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \& \hyperlink{classCComplexMeasure_a37668c1f7c157050080c0065ecbb596d}{operator=} (const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&other)
+\begin{DoxyCompactList}\small\item\em assignment operator\+: \end{DoxyCompactList}\item 
+\hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \& \hyperlink{classCComplexMeasure_a66de753c892ed0a82fa8f2eb4d98029d}{operator$\ast$=} (const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&other)
+\begin{DoxyCompactList}\small\item\em operator $\ast$=\+: calls \hyperlink{classCComplexMeasure_aee812c93b8b2fe3839e9a38df63cfd53}{C\+Complex\+Measure\+::\+\_\+\+Allocate\+Last\+Unset\+Measure\+Right} \end{DoxyCompactList}\item 
+\hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \& \hyperlink{classCComplexMeasure_a68c42a3ea08d1482f4dfdda5e34407f5}{operator/=} (const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&other)
+\begin{DoxyCompactList}\small\item\em operator /=\+: calls \hyperlink{classCComplexMeasure_aee812c93b8b2fe3839e9a38df63cfd53}{C\+Complex\+Measure\+::\+\_\+\+Allocate\+Last\+Unset\+Measure\+Right} \end{DoxyCompactList}\item 
+\hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \hyperlink{classCComplexMeasure_afb04c59abf1f8ed44fe13d56df5d322c}{operator$\ast$} (const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&other)
+\begin{DoxyCompactList}\small\item\em operator $\ast$\+: calls \hyperlink{classCComplexMeasure_a66de753c892ed0a82fa8f2eb4d98029d}{C\+Complex\+Measure\+::operator$\ast$=} with a copy of calling instance \end{DoxyCompactList}\item 
+\hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \hyperlink{classCComplexMeasure_a730c8745ab3d499a20d09f6faa47bdd2}{operator/} (const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&other)
+\begin{DoxyCompactList}\small\item\em operator /\+: calls \hyperlink{classCComplexMeasure_a68c42a3ea08d1482f4dfdda5e34407f5}{C\+Complex\+Measure\+::operator/=} with a copy of calling instance \end{DoxyCompactList}\item 
+bool \hyperlink{classCComplexMeasure_a30c168c8fbc0587835a11914f8af69e9}{operator==} (const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&other) const
+\item 
+bool \hyperlink{classCComplexMeasure_ab5e7581c34b128a8b24a7237094a4fe4}{operator!=} (const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&other) const
+\item 
+bool \hyperlink{classCComplexMeasure_aa807816cc8d410ff08e482c5e942a1a9}{Compatible} (const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&other) const
+\begin{DoxyCompactList}\small\item\em checks for a \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} being scaled (i.\+e. f$\ast$ this) to this \end{DoxyCompactList}\item 
+void \hyperlink{classCComplexMeasure_a999dd5e5bb71a6bc548f959879b4e12f}{Scale\+To} (const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&other)
+\begin{DoxyCompactList}\small\item\em scale to other compatible \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \end{DoxyCompactList}\item 
+void \hyperlink{classCComplexMeasure_a47dca89bc28bbb257f81df4d363be623}{Set\+By\+ID} (const \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure} Pre\+Measure\+Enum, const \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} Base\+Measure\+Enum)
+\begin{DoxyCompactList}\small\item\em sets the p\+Measure\+Left calling \hyperlink{classCSimpleMeasure_a6945aa333dca5623482d38cd9a7e3225}{C\+Simple\+Measure\+::\+Set\+By\+ID} \end{DoxyCompactList}\item 
+void \hyperlink{classCComplexMeasure_a87cc1f3c3f0dafd7cbe00634124c8d46}{Normalize} ()
+\begin{DoxyCompactList}\small\item\em sets all measures to SI and calculates S\+Ipremeasure and d\+S\+I\+Factor\+: calls internal function C\+Complex\+Measure\+::\+\_\+\+Normalize(nullptr,nullptr) \end{DoxyCompactList}\item 
+const \hyperlink{classCDigFloat}{C\+Dig\+Float} \& \hyperlink{classCComplexMeasure_acdcab22efa233ea1c0e607bf22028afd}{C\+M\+Factor} ()
+\begin{DoxyCompactList}\small\item\em getter for df\+C\+M\+Factor \end{DoxyCompactList}\item 
+const int \hyperlink{classCComplexMeasure_a06355541d6d9b843b9d68156a0297f51}{C\+M\+Exp10} ()
+\begin{DoxyCompactList}\small\item\em getter for n\+C\+M\+Exp10 \end{DoxyCompactList}\item 
+void \hyperlink{classCComplexMeasure_addb4e69033f2c32fb3bf4a3aef5e1470}{Simplify} ()
+\begin{DoxyCompactList}\small\item\em simplifies complex measure (e.\+g. uV / mV $\ast$ A = A (exp10 += -\/3)) the factors of the premeasures are collected in the C\+Complex\+Measure\+::n\+Exp10 member of this class \end{DoxyCompactList}\item 
+bool \hyperlink{classCComplexMeasure_a1b777eef864d0c7a959dbeee321e881d}{Valid} ()
+\begin{DoxyCompactList}\small\item\em check for valid measures\+: if one invalid measure is found --$>$ everything is invalid \end{DoxyCompactList}\item 
+string \hyperlink{classCComplexMeasure_ab6a38e7259d7c27e735ff12fd711c5d5}{O\+P\+Short} ()
+\begin{DoxyCompactList}\small\item\em prints the short label of the \hyperlink{classCComplexMeasure_ae22369976a7e5570add11a4172dcf062}{C\+Complex\+Measure\+::op\+Enum} \end{DoxyCompactList}\item 
+string \hyperlink{classCComplexMeasure_aefe6745e32e203d0dd2b7a4e13504142}{Print\+All\+Short} ()
+\begin{DoxyCompactList}\small\item\em prints the premeasure and the base measure short labels \end{DoxyCompactList}\item 
+string \hyperlink{classCComplexMeasure_a83c00029eaad1c0c59fd1210108981dc}{Debug\+Out} ()
+\begin{DoxyCompactList}\small\item\em prints all members\+: can be applied for debugging purpose \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCComplexMeasure_aed6efc43efe99d8cf1072ac98ec8d21c}{\+\_\+\+Init} (bool b\+Allocate\+Measure\+Left=true)
+\item 
+void \hyperlink{classCComplexMeasure_a6f071c1bd1340fea78a2aa90d1b6496f}{\+\_\+\+Invert\+OP} ()
+\item 
+void \hyperlink{classCComplexMeasure_aee812c93b8b2fe3839e9a38df63cfd53}{\+\_\+\+Allocate\+Last\+Unset\+Measure\+Right} (\hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&cm\+Operand\+Left, const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&cm\+Operand\+Right, const \hyperlink{MeasureOperator_8h_a1431c79e3ad4b4c5bcc9f31f188538f2}{e\+Operation} Operation\+Enum)
+\begin{DoxyCompactList}\small\item\em helping function allocating the last p\+Measure\+Right, joining with given operation \end{DoxyCompactList}\item 
+void \hyperlink{classCComplexMeasure_abd62182294ebd217cdd9af40d0af7e38}{\+\_\+\+Normalize} (\hyperlink{MeasureOperator_8h_a1431c79e3ad4b4c5bcc9f31f188538f2}{e\+Operation} $\ast$\&p\+Previous\+OP, int $\ast$\&pd\+Temp\+Pre\+Measure\+Exp10\+Collector, \hyperlink{classCDigFloat}{C\+Dig\+Float} $\ast$\&pd\+Temp\+C\+M\+Factor\+Collector, \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} $\ast$\&p\+First\+Complex\+Measure)
+\begin{DoxyCompactList}\small\item\em internally called function\+: called by \hyperlink{classCComplexMeasure_a87cc1f3c3f0dafd7cbe00634124c8d46}{C\+Complex\+Measure\+::\+Normalize} which sets all measures to SI and calculates S\+Ipremeasure and d\+S\+I\+Factor \end{DoxyCompactList}\item 
+void \hyperlink{classCComplexMeasure_ad96c02d0791585e8bc138212e44bb743}{\+\_\+\+C\+Ollect\+C\+M\+Exp10\+C\+M\+Factor\+Wrapper} ()
+\begin{DoxyCompactList}\small\item\em this function must always called when two C\+Complex\+Measures are joined (e.\+g. from function \+\_\+\+Allocate\+Last\+Unset\+Measure\+Right) \end{DoxyCompactList}\item 
+void \hyperlink{classCComplexMeasure_aa87ac8d42bbb244fc77dae299ae35ca7}{\+\_\+\+C\+Ollect\+C\+M\+Exp10\+C\+M\+Factor} (\hyperlink{MeasureOperator_8h_a1431c79e3ad4b4c5bcc9f31f188538f2}{e\+Operation} $\ast$\&p\+Previous\+OP, int $\ast$\&pd\+Temp\+Pre\+Measure\+Exp10\+Collector, \hyperlink{classCDigFloat}{C\+Dig\+Float} $\ast$\&pd\+Temp\+C\+M\+Factor\+Collector, \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} $\ast$\&p\+First\+Complex\+Measure)
+\begin{DoxyCompactList}\small\item\em internal function called by every function which extents \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} with \char`\"{}other\char`\"{} \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} collects the C\+M\+Exp10 and C\+M\+Factor from \char`\"{}other\char`\"{} and unites it into the primary C\+M\+Factor and C\+M\+Exp10 \end{DoxyCompactList}\item 
+void \hyperlink{classCComplexMeasure_ad2602b97f17c475a91454bf6bd1be1a4}{\+\_\+\+Collect\+Left\+Sort\+By\+Op} (map$<$ \hyperlink{MeasureOperator_8h_a1431c79e3ad4b4c5bcc9f31f188538f2}{e\+Operation}, \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} $\ast$$>$ \&m\+Op\+Meas)
+\begin{DoxyCompactList}\small\item\em collects p\+Measure\+Left with operands into m\+Op\+Meas --$>$ used for \hyperlink{classCComplexMeasure_addb4e69033f2c32fb3bf4a3aef5e1470}{C\+Complex\+Measure\+::\+Simplify} \end{DoxyCompactList}\item 
+void \hyperlink{classCComplexMeasure_ac9bdfda3d2175532ba7e1f425e6b23b1}{\+\_\+\+Search\+And\+Shorten\+Same\+S\+I\+Index} (\hyperlink{classCComplexMeasure}{C\+Complex\+Measure} $\ast$p\+Shorten\+Partner, \hyperlink{MeasureOperator_8h_a1431c79e3ad4b4c5bcc9f31f188538f2}{e\+Operation} \&e\+O\+Pof\+Shorten\+Partner, \hyperlink{MeasureOperator_8h_a1431c79e3ad4b4c5bcc9f31f188538f2}{e\+Operation} \&e\+O\+Pof\+Consecutive\+Shorten\+Partner)
+\begin{DoxyCompactList}\small\item\em searches \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure} of consecutive p\+Measure\+Right, which p\+Measure\+Left have thesame SI index as p\+Measure\+Left of p\+Shorten\+Partner\+: stops if the first item is found, \hyperlink{classCComplexMeasure_a8f642a3a0044d4dc0492774bca8666e9}{C\+Complex\+Measure\+::\+\_\+\+Resolve\+Measure\+Left} for p\+Shorten\+Partner and the found item is called. This function is called as one step \hyperlink{classCComplexMeasure_addb4e69033f2c32fb3bf4a3aef5e1470}{C\+Complex\+Measure\+::\+Simplify} \end{DoxyCompactList}\item 
+void \hyperlink{classCComplexMeasure_a8f642a3a0044d4dc0492774bca8666e9}{\+\_\+\+Resolve\+Measure\+Left} ()
+\begin{DoxyCompactList}\small\item\em collects premeasure factor in n\+Exp10 and sets p\+Measure\+Left to (pm\+Ident, bm\+Number) \end{DoxyCompactList}\item 
+void \hyperlink{classCComplexMeasure_a9eb89170847ab2ef592eace6453cf300}{\+\_\+\+Remove\+Neutral\+Numbers} (\hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&Previous\+Complex\+Measure)
+\item 
+void \hyperlink{classCComplexMeasure_ae66b48f40cc04866424ca5b7114d4adb}{\+\_\+\+Simplify} (\hyperlink{MeasureOperator_8h_a1431c79e3ad4b4c5bcc9f31f188538f2}{e\+Operation} \&Previous\+OP)
+\item 
+void \hyperlink{classCComplexMeasure_ae3605c75d2c571b06108b4b19af6618b}{\+\_\+\+Valid} (bool \&b\+Valid)
+\begin{DoxyCompactList}\small\item\em recursive call of checking the p\+Measure\+Left measures being valid \end{DoxyCompactList}\item 
+const double \hyperlink{classCComplexMeasure_a2c4086ab6b664259b820f554f647cdbd}{Release\+Exp10\+And\+Factor} ()
+\begin{DoxyCompactList}\small\item\em returns the product of df\+C\+M\+Factor and pow(10,\+Exp10()) and resets factor to 1 and n\+Exp10 to 0 \end{DoxyCompactList}\item 
+void \hyperlink{classCComplexMeasure_aaa6f3cf75ee0dd2a880adaaf43e81168}{C\+M\+Exp10} (const int Other\+Exp10)
+\begin{DoxyCompactList}\small\item\em protected setter of n\+C\+M\+Exp10 ... for internal use only \end{DoxyCompactList}\item 
+void \hyperlink{classCComplexMeasure_abc97b2ed29224bb00a912a94933192a2}{C\+M\+Factor} (const double Factor)
+\begin{DoxyCompactList}\small\item\em protected setter of df\+C\+M\+Factor ... for internal use only \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{MeasureOperator_8h_a1431c79e3ad4b4c5bcc9f31f188538f2}{e\+Operation} \hyperlink{classCComplexMeasure_ae22369976a7e5570add11a4172dcf062}{op\+Enum}
+\begin{DoxyCompactList}\small\item\em index of the corresponding operator of p\+Measure\+Left and p\+Measure\+Right \end{DoxyCompactList}\item 
+\hyperlink{classCComplexMeasure}{C\+Complex\+Measure} $\ast$ \hyperlink{classCComplexMeasure_abbafc4b16676d223ed34860b8ece1b6b}{p\+Measure\+Right}
+\begin{DoxyCompactList}\small\item\em right operand as complex measure (pointing to next p\+Measure\+Left, operator, and p\+Measure\+Right for a daisy chained list of complex measures \end{DoxyCompactList}\item 
+\hyperlink{classCSimpleMeasure}{C\+Simple\+Measure} $\ast$ \hyperlink{classCComplexMeasure_a4d68f86891a036df81f5b1a344c36f27}{p\+Measure\+Left}
+\begin{DoxyCompactList}\small\item\em left operand is a Simple\+Measure representant \end{DoxyCompactList}\item 
+int \hyperlink{classCComplexMeasure_a52cfbd26747c0497cfe97c56f2ff38ea}{n\+C\+M\+Exp10}
+\begin{DoxyCompactList}\small\item\em the epx10 which will be set e.\+g. for normalization or simplification collecting all Exp10 of Pre\+Measure\+Enum(see \hyperlink{classCComplexMeasure_addb4e69033f2c32fb3bf4a3aef5e1470}{C\+Complex\+Measure\+::\+Simplify()} and \hyperlink{classCComplexMeasure_a87cc1f3c3f0dafd7cbe00634124c8d46}{C\+Complex\+Measure\+::\+Normalize()}.) \end{DoxyCompactList}\item 
+\hyperlink{classCDigFloat}{C\+Dig\+Float} \hyperlink{classCComplexMeasure_a21eecd9fd837fb73da2e6994b6c3fefe}{df\+C\+M\+Factor}
+\begin{DoxyCompactList}\small\item\em the factor value which will be set e.\+g. for normalization or simplification collecting all SI factors(see \hyperlink{classCComplexMeasure_addb4e69033f2c32fb3bf4a3aef5e1470}{C\+Complex\+Measure\+::\+Simplify()} and \hyperlink{classCComplexMeasure_a87cc1f3c3f0dafd7cbe00634124c8d46}{C\+Complex\+Measure\+::\+Normalize()}.) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classCComplexMeasure_a7e23751869edf87edc0feeb80eda78d9}{C\+Floating\+Measure}
+\item 
+class \hyperlink{classCComplexMeasure_ac06bbec937fbb103ef6191c80bfa5880}{C\+Simple\+Measure}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classCComplexMeasure}{C\+Complex\+Measure}\+: represents a list of measures (i.\+e. \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure}) chained by operators $\ast$ and / ~\newline
+ This class handles\+: 
+
+
+\begin{DoxyItemize}
+\item operators and constructors for construction of complex measures (e.\+g. mV / kA )
+\item simplification (e.\+g. V $\ast$ A / V --$>$ A)
+\item normalization (e.\+g. mV $\rightarrow$ V)
+\item comparison (e.\+g. mV / mA is equal to kV / kA)
+\item compatibility check ( e.\+g. mV /kA is compatible with kA / mV)~\newline
+
+\end{DoxyItemize}
+
+R\+E\+M\+A\+RK\+: physical laws like the Ohm law is N\+OT (yet) meant to (and may be never will) ~\newline
+ be considered within this class (i.\+e. ohm = volt / ampere ) 
+
+Definition at line 49 of file Complex\+Measure.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCComplexMeasure_a5501594d4a8efdf565aa4c6bc6ce0379}\label{classCComplexMeasure_a5501594d4a8efdf565aa4c6bc6ce0379}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{C\+Complex\+Measure()}{CComplexMeasure()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily C\+Complex\+Measure\+::\+C\+Complex\+Measure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor\+: calls \hyperlink{classCComplexMeasure_aed6efc43efe99d8cf1072ac98ec8d21c}{C\+Complex\+Measure\+::\+\_\+\+Init()} 
+
+Definition at line 27 of file Complex\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Init().
+
+\mbox{\Hypertarget{classCComplexMeasure_a50de70ddcb4b2b64c238d686e2f85419}\label{classCComplexMeasure_a50de70ddcb4b2b64c238d686e2f85419}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{C\+Complex\+Measure()}{CComplexMeasure()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily C\+Complex\+Measure\+::\+C\+Complex\+Measure (\begin{DoxyParamCaption}\item[{const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor\+: calls \hyperlink{classCComplexMeasure}{C\+Complex\+Measure}\+:\+:~\newline
+ calls \hyperlink{classCComplexMeasure_aed6efc43efe99d8cf1072ac98ec8d21c}{C\+Complex\+Measure\+::\+\_\+\+Init}, newly allocates \hyperlink{classCComplexMeasure_a4d68f86891a036df81f5b1a344c36f27}{C\+Complex\+Measure\+::p\+Measure\+Left} and \hyperlink{classCComplexMeasure_abbafc4b16676d223ed34860b8ece1b6b}{C\+Complex\+Measure\+::p\+Measure\+Right} from \char`\"{}other\char`\"{} \hyperlink{classCComplexMeasure}{C\+Complex\+Measure}. 
+
+Copy constructor\+: ~\newline
+ calls \hyperlink{classCComplexMeasure_aed6efc43efe99d8cf1072ac98ec8d21c}{C\+Complex\+Measure\+::\+\_\+\+Init}, newly allocates \hyperlink{classCComplexMeasure_a4d68f86891a036df81f5b1a344c36f27}{C\+Complex\+Measure\+::p\+Measure\+Left} and \hyperlink{classCComplexMeasure_abbafc4b16676d223ed34860b8ece1b6b}{C\+Complex\+Measure\+::p\+Measure\+Right} from \char`\"{}other\char`\"{} \hyperlink{classCComplexMeasure}{C\+Complex\+Measure}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} to \\
+\hline
+{\em other} & \hyperlink{classCComplexMeasure}{C\+Complex\+Measure}\& to copy from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 32 of file Complex\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Init(), C\+Complex\+Measure(), C\+Simple\+Measure, df\+C\+M\+Factor, n\+C\+M\+Exp10, op\+Enum, p\+Measure\+Left, and p\+Measure\+Right.
+
+\mbox{\Hypertarget{classCComplexMeasure_a0a0946c508c95e4baf22a0bd5831c1b8}\label{classCComplexMeasure_a0a0946c508c95e4baf22a0bd5831c1b8}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{C\+Complex\+Measure()}{CComplexMeasure()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily C\+Complex\+Measure\+::\+C\+Complex\+Measure (\begin{DoxyParamCaption}\item[{const \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure}}]{Pre\+Measure\+Enum,  }\item[{const \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure}}]{Base\+Measure\+Enum }\end{DoxyParamCaption})}
+
+
+
+Constructor by \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure} index and \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} index\+:~\newline
+ only sets \+::p\+Measure\+Left and deletes \+::p\+Measure\+Right. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Pre\+Measure\+Enum} & pre-\/measure index \\
+\hline
+{\em Base\+Measure\+Enum} & base-\/measure index \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 66 of file Complex\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Init(), p\+Measure\+Left, and C\+Simple\+Measure\+::\+Set\+By\+I\+D().
+
+\mbox{\Hypertarget{classCComplexMeasure_a876e7030b4576f59ab66793ed3e7b50e}\label{classCComplexMeasure_a876e7030b4576f59ab66793ed3e7b50e}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{C\+Complex\+Measure()}{CComplexMeasure()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily C\+Complex\+Measure\+::\+C\+Complex\+Measure (\begin{DoxyParamCaption}\item[{const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} $\ast$}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor with pointer arg. \+: ~\newline
+ calls \hyperlink{classCComplexMeasure_aed6efc43efe99d8cf1072ac98ec8d21c}{C\+Complex\+Measure\+::\+\_\+\+Init}, newly allocates \hyperlink{classCComplexMeasure_a4d68f86891a036df81f5b1a344c36f27}{C\+Complex\+Measure\+::p\+Measure\+Left} and \hyperlink{classCComplexMeasure_abbafc4b16676d223ed34860b8ece1b6b}{C\+Complex\+Measure\+::p\+Measure\+Right} from \char`\"{}other\char`\"{} \hyperlink{classCComplexMeasure}{C\+Complex\+Measure}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & p\+\_\+other\+:... \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 50 of file Complex\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Init(), C\+Complex\+Measure(), C\+Simple\+Measure, df\+C\+M\+Factor, n\+C\+M\+Exp10, op\+Enum, p\+Measure\+Left, and p\+Measure\+Right.
+
+\mbox{\Hypertarget{classCComplexMeasure_a4b6895d4eef03df92d8ea1d8ad4f2f3d}\label{classCComplexMeasure_a4b6895d4eef03df92d8ea1d8ad4f2f3d}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!````~C\+Complex\+Measure@{$\sim$\+C\+Complex\+Measure}}
+\index{````~C\+Complex\+Measure@{$\sim$\+C\+Complex\+Measure}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Complex\+Measure()}{~CComplexMeasure()}}
+{\footnotesize\ttfamily C\+Complex\+Measure\+::$\sim$\+C\+Complex\+Measure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor 
+
+Definition at line 72 of file Complex\+Measure.\+cpp.
+
+
+
+References op\+Enum, op\+Unknown, p\+Measure\+Left, p\+Measure\+Right, $\sim$\+C\+Complex\+Measure(), and C\+Simple\+Measure\+::$\sim$\+C\+Simple\+Measure().
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCComplexMeasure_aee812c93b8b2fe3839e9a38df63cfd53}\label{classCComplexMeasure_aee812c93b8b2fe3839e9a38df63cfd53}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!\+\_\+\+Allocate\+Last\+Unset\+Measure\+Right@{\+\_\+\+Allocate\+Last\+Unset\+Measure\+Right}}
+\index{\+\_\+\+Allocate\+Last\+Unset\+Measure\+Right@{\+\_\+\+Allocate\+Last\+Unset\+Measure\+Right}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{\+\_\+\+Allocate\+Last\+Unset\+Measure\+Right()}{\_AllocateLastUnsetMeasureRight()}}
+{\footnotesize\ttfamily void C\+Complex\+Measure\+::\+\_\+\+Allocate\+Last\+Unset\+Measure\+Right (\begin{DoxyParamCaption}\item[{\hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&}]{cm\+Operand\+Left,  }\item[{const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&}]{cm\+Operand\+Right,  }\item[{const \hyperlink{MeasureOperator_8h_a1431c79e3ad4b4c5bcc9f31f188538f2}{e\+Operation}}]{Operation\+Enum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+helping function allocating the last p\+Measure\+Right, joining with given operation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cm\+Operand\+Left} & \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} left operand \\
+\hline
+{\em cm\+Operand\+Right} & \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} right operand \\
+\hline
+{\em Operation\+Enum} & e\+Operation operation \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 186 of file Complex\+Measure.\+cpp.
+
+
+
+References \+\_\+\+C\+Ollect\+C\+M\+Exp10\+C\+M\+Factor\+Wrapper(), \+\_\+\+Invert\+O\+P(), C\+Complex\+Measure(), op\+Divide, op\+Enum, and p\+Measure\+Right.
+
+\mbox{\Hypertarget{classCComplexMeasure_aa87ac8d42bbb244fc77dae299ae35ca7}\label{classCComplexMeasure_aa87ac8d42bbb244fc77dae299ae35ca7}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!\+\_\+\+C\+Ollect\+C\+M\+Exp10\+C\+M\+Factor@{\+\_\+\+C\+Ollect\+C\+M\+Exp10\+C\+M\+Factor}}
+\index{\+\_\+\+C\+Ollect\+C\+M\+Exp10\+C\+M\+Factor@{\+\_\+\+C\+Ollect\+C\+M\+Exp10\+C\+M\+Factor}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{\+\_\+\+C\+Ollect\+C\+M\+Exp10\+C\+M\+Factor()}{\_COllectCMExp10CMFactor()}}
+{\footnotesize\ttfamily void C\+Complex\+Measure\+::\+\_\+\+C\+Ollect\+C\+M\+Exp10\+C\+M\+Factor (\begin{DoxyParamCaption}\item[{\hyperlink{MeasureOperator_8h_a1431c79e3ad4b4c5bcc9f31f188538f2}{e\+Operation} $\ast$\&}]{p\+Previous\+OP,  }\item[{int $\ast$\&}]{pd\+Temp\+Pre\+Measure\+Exp10\+Collector,  }\item[{\hyperlink{classCDigFloat}{C\+Dig\+Float} $\ast$\&}]{pd\+Temp\+C\+M\+Factor\+Collector,  }\item[{\hyperlink{classCComplexMeasure}{C\+Complex\+Measure} $\ast$\&}]{p\+First\+Complex\+Measure }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+internal function called by every function which extents \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} with \char`\"{}other\char`\"{} \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} collects the C\+M\+Exp10 and C\+M\+Factor from \char`\"{}other\char`\"{} and unites it into the primary C\+M\+Factor and C\+M\+Exp10 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Previous\+OP} & e\+Operation operation of previous \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \\
+\hline
+{\em pd\+Temp\+Pre\+Measure\+Exp10\+Collector} & int pointer collecting all exp10 \\
+\hline
+{\em pd\+Temp\+C\+M\+Factor\+Collector} & \hyperlink{classCDigFloat}{C\+Dig\+Float} pointer collecting all \hyperlink{classCComplexMeasure_acdcab22efa233ea1c0e607bf22028afd}{C\+Complex\+Measure\+::\+C\+M\+Factor} \\
+\hline
+{\em p\+First\+Complex\+Measure} & \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} first complex measure where collected exp10 and C\+M\+Factor are stored \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 386 of file Complex\+Measure.\+cpp.
+
+
+
+References \+\_\+\+C\+Ollect\+C\+M\+Exp10\+C\+M\+Factor(), C\+M\+Exp10(), C\+M\+Factor(), df\+C\+M\+Factor, op\+Divide, op\+Enum, op\+Mult, p\+Measure\+Right, Secure\+Delete\+Object\+Pointer(), and Secure\+Delete\+Vector\+Pointer().
+
+\mbox{\Hypertarget{classCComplexMeasure_ad96c02d0791585e8bc138212e44bb743}\label{classCComplexMeasure_ad96c02d0791585e8bc138212e44bb743}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!\+\_\+\+C\+Ollect\+C\+M\+Exp10\+C\+M\+Factor\+Wrapper@{\+\_\+\+C\+Ollect\+C\+M\+Exp10\+C\+M\+Factor\+Wrapper}}
+\index{\+\_\+\+C\+Ollect\+C\+M\+Exp10\+C\+M\+Factor\+Wrapper@{\+\_\+\+C\+Ollect\+C\+M\+Exp10\+C\+M\+Factor\+Wrapper}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{\+\_\+\+C\+Ollect\+C\+M\+Exp10\+C\+M\+Factor\+Wrapper()}{\_COllectCMExp10CMFactorWrapper()}}
+{\footnotesize\ttfamily void C\+Complex\+Measure\+::\+\_\+\+C\+Ollect\+C\+M\+Exp10\+C\+M\+Factor\+Wrapper (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+this function must always called when two C\+Complex\+Measures are joined (e.\+g. from function \+\_\+\+Allocate\+Last\+Unset\+Measure\+Right) 
+
+
+
+Definition at line 373 of file Complex\+Measure.\+cpp.
+
+
+
+References \+\_\+\+C\+Ollect\+C\+M\+Exp10\+C\+M\+Factor().
+
+\mbox{\Hypertarget{classCComplexMeasure_ad2602b97f17c475a91454bf6bd1be1a4}\label{classCComplexMeasure_ad2602b97f17c475a91454bf6bd1be1a4}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!\+\_\+\+Collect\+Left\+Sort\+By\+Op@{\+\_\+\+Collect\+Left\+Sort\+By\+Op}}
+\index{\+\_\+\+Collect\+Left\+Sort\+By\+Op@{\+\_\+\+Collect\+Left\+Sort\+By\+Op}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{\+\_\+\+Collect\+Left\+Sort\+By\+Op()}{\_CollectLeftSortByOp()}}
+{\footnotesize\ttfamily void C\+Complex\+Measure\+::\+\_\+\+Collect\+Left\+Sort\+By\+Op (\begin{DoxyParamCaption}\item[{map$<$ \hyperlink{MeasureOperator_8h_a1431c79e3ad4b4c5bcc9f31f188538f2}{e\+Operation}, \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} $\ast$$>$ \&}]{m\+Op\+Meas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+collects p\+Measure\+Left with operands into m\+Op\+Meas --$>$ used for \hyperlink{classCComplexMeasure_addb4e69033f2c32fb3bf4a3aef5e1470}{C\+Complex\+Measure\+::\+Simplify} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m\+Op\+Meas} & p\+\_\+m\+Op\+Meas\+:... \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 602 of file Complex\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Collect\+Left\+Sort\+By\+Op(), op\+Enum, and p\+Measure\+Right.
+
+\mbox{\Hypertarget{classCComplexMeasure_aed6efc43efe99d8cf1072ac98ec8d21c}\label{classCComplexMeasure_aed6efc43efe99d8cf1072ac98ec8d21c}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!\+\_\+\+Init@{\+\_\+\+Init}}
+\index{\+\_\+\+Init@{\+\_\+\+Init}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{\+\_\+\+Init()}{\_Init()}}
+{\footnotesize\ttfamily void C\+Complex\+Measure\+::\+\_\+\+Init (\begin{DoxyParamCaption}\item[{bool}]{b\+Allocate\+Measure\+Left = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 174 of file Complex\+Measure.\+cpp.
+
+
+
+References C\+Simple\+Measure, df\+C\+M\+Factor, n\+C\+M\+Exp10, op\+Enum, op\+Unknown, p\+Measure\+Left, and p\+Measure\+Right.
+
+\mbox{\Hypertarget{classCComplexMeasure_a6f071c1bd1340fea78a2aa90d1b6496f}\label{classCComplexMeasure_a6f071c1bd1340fea78a2aa90d1b6496f}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!\+\_\+\+Invert\+OP@{\+\_\+\+Invert\+OP}}
+\index{\+\_\+\+Invert\+OP@{\+\_\+\+Invert\+OP}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{\+\_\+\+Invert\+O\+P()}{\_InvertOP()}}
+{\footnotesize\ttfamily void C\+Complex\+Measure\+::\+\_\+\+Invert\+OP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 208 of file Complex\+Measure.\+cpp.
+
+
+
+References Invert(), op\+Enum, and p\+Measure\+Right.
+
+\mbox{\Hypertarget{classCComplexMeasure_abd62182294ebd217cdd9af40d0af7e38}\label{classCComplexMeasure_abd62182294ebd217cdd9af40d0af7e38}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!\+\_\+\+Normalize@{\+\_\+\+Normalize}}
+\index{\+\_\+\+Normalize@{\+\_\+\+Normalize}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{\+\_\+\+Normalize()}{\_Normalize()}}
+{\footnotesize\ttfamily void C\+Complex\+Measure\+::\+\_\+\+Normalize (\begin{DoxyParamCaption}\item[{\hyperlink{MeasureOperator_8h_a1431c79e3ad4b4c5bcc9f31f188538f2}{e\+Operation} $\ast$\&}]{p\+Previous\+OP,  }\item[{int $\ast$\&}]{pd\+Temp\+Pre\+Measure\+Exp10\+Collector,  }\item[{\hyperlink{classCDigFloat}{C\+Dig\+Float} $\ast$\&}]{pd\+Temp\+C\+M\+Factor\+Collector,  }\item[{\hyperlink{classCComplexMeasure}{C\+Complex\+Measure} $\ast$\&}]{p\+First\+Complex\+Measure }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+internally called function\+: called by \hyperlink{classCComplexMeasure_a87cc1f3c3f0dafd7cbe00634124c8d46}{C\+Complex\+Measure\+::\+Normalize} which sets all measures to SI and calculates S\+Ipremeasure and d\+S\+I\+Factor 
+
+setting to SI measure can only be done for factors only. Any measure which must be calculated with a non-\/zero offset to its SI measure is left as is. But all premeasures will be collected in e\+S\+I\+Pre\+Measure and set to identity.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Previous\+OP} & e\+Operation operation of previous \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \\
+\hline
+{\em pd\+Temp\+Pre\+Measure\+Exp10\+Collector} & int pointer collecting all exp10 \\
+\hline
+{\em pd\+Temp\+C\+M\+Factor\+Collector} & \hyperlink{classCDigFloat}{C\+Dig\+Float} pointer collecting all \hyperlink{classCComplexMeasure_acdcab22efa233ea1c0e607bf22028afd}{C\+Complex\+Measure\+::\+C\+M\+Factor} \\
+\hline
+{\em p\+First\+Complex\+Measure} & \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} first complex measure where collected exp10 and C\+M\+Factor are stored \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 250 of file Complex\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Normalize(), B\+A\+SE, C\+Simple\+Measure\+::\+Base\+I\+D(), C\+M\+Exp10(), C\+M\+Factor(), df\+C\+M\+Factor, n\+C\+M\+Exp10, op\+Divide, op\+Enum, op\+Mult, p\+Measure\+Left, p\+Measure\+Right, pm\+Ident, P\+RE, C\+Simple\+Measure\+::\+Pre\+I\+D(), Secure\+Delete\+Object\+Pointer(), Secure\+Delete\+Vector\+Pointer(), and C\+Simple\+Measure\+::\+Set\+By\+I\+D().
+
+\mbox{\Hypertarget{classCComplexMeasure_a9eb89170847ab2ef592eace6453cf300}\label{classCComplexMeasure_a9eb89170847ab2ef592eace6453cf300}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!\+\_\+\+Remove\+Neutral\+Numbers@{\+\_\+\+Remove\+Neutral\+Numbers}}
+\index{\+\_\+\+Remove\+Neutral\+Numbers@{\+\_\+\+Remove\+Neutral\+Numbers}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{\+\_\+\+Remove\+Neutral\+Numbers()}{\_RemoveNeutralNumbers()}}
+{\footnotesize\ttfamily void C\+Complex\+Measure\+::\+\_\+\+Remove\+Neutral\+Numbers (\begin{DoxyParamCaption}\item[{\hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&}]{Previous\+Complex\+Measure }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 536 of file Complex\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Remove\+Neutral\+Numbers(), C\+Simple\+Measure\+::\+Base\+I\+D(), bm\+Number, op\+Enum, op\+Unknown, p\+Measure\+Left, p\+Measure\+Right, pm\+Ident, C\+Simple\+Measure\+::\+Pre\+I\+D(), and Secure\+Delete\+Object\+Pointer().
+
+\mbox{\Hypertarget{classCComplexMeasure_a8f642a3a0044d4dc0492774bca8666e9}\label{classCComplexMeasure_a8f642a3a0044d4dc0492774bca8666e9}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!\+\_\+\+Resolve\+Measure\+Left@{\+\_\+\+Resolve\+Measure\+Left}}
+\index{\+\_\+\+Resolve\+Measure\+Left@{\+\_\+\+Resolve\+Measure\+Left}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{\+\_\+\+Resolve\+Measure\+Left()}{\_ResolveMeasureLeft()}}
+{\footnotesize\ttfamily void C\+Complex\+Measure\+::\+\_\+\+Resolve\+Measure\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+collects premeasure factor in n\+Exp10 and sets p\+Measure\+Left to (pm\+Ident, bm\+Number) 
+
+
+
+Definition at line 590 of file Complex\+Measure.\+cpp.
+
+
+
+References B\+A\+SE, C\+Simple\+Measure\+::\+Base\+I\+D(), bm\+Number, df\+C\+M\+Factor, n\+C\+M\+Exp10, p\+Measure\+Left, pm\+Ident, P\+RE, C\+Simple\+Measure\+::\+Pre\+I\+D(), and C\+Simple\+Measure\+::\+Set\+By\+I\+D().
+
+\mbox{\Hypertarget{classCComplexMeasure_ac9bdfda3d2175532ba7e1f425e6b23b1}\label{classCComplexMeasure_ac9bdfda3d2175532ba7e1f425e6b23b1}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!\+\_\+\+Search\+And\+Shorten\+Same\+S\+I\+Index@{\+\_\+\+Search\+And\+Shorten\+Same\+S\+I\+Index}}
+\index{\+\_\+\+Search\+And\+Shorten\+Same\+S\+I\+Index@{\+\_\+\+Search\+And\+Shorten\+Same\+S\+I\+Index}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{\+\_\+\+Search\+And\+Shorten\+Same\+S\+I\+Index()}{\_SearchAndShortenSameSIIndex()}}
+{\footnotesize\ttfamily void C\+Complex\+Measure\+::\+\_\+\+Search\+And\+Shorten\+Same\+S\+I\+Index (\begin{DoxyParamCaption}\item[{\hyperlink{classCComplexMeasure}{C\+Complex\+Measure} $\ast$}]{p\+Shorten\+Partner,  }\item[{\hyperlink{MeasureOperator_8h_a1431c79e3ad4b4c5bcc9f31f188538f2}{e\+Operation} \&}]{e\+O\+Pof\+Shorten\+Partner,  }\item[{\hyperlink{MeasureOperator_8h_a1431c79e3ad4b4c5bcc9f31f188538f2}{e\+Operation} \&}]{e\+O\+Pof\+Consecutive\+Shorten\+Partner }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+searches \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure} of consecutive p\+Measure\+Right, which p\+Measure\+Left have thesame SI index as p\+Measure\+Left of p\+Shorten\+Partner\+: stops if the first item is found, \hyperlink{classCComplexMeasure_a8f642a3a0044d4dc0492774bca8666e9}{C\+Complex\+Measure\+::\+\_\+\+Resolve\+Measure\+Left} for p\+Shorten\+Partner and the found item is called. This function is called as one step \hyperlink{classCComplexMeasure_addb4e69033f2c32fb3bf4a3aef5e1470}{C\+Complex\+Measure\+::\+Simplify} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Shorten\+Partner} & the shorten partner which lets its p\+Measure\+Right call this function \\
+\hline
+{\em e\+O\+Pof\+Shorten\+Partner} & the operator which preceedes the p\+Measure\+Right of the shorten partner \\
+\hline
+{\em e\+O\+Pof\+Consecutive\+Shorten\+Partner} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 561 of file Complex\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Resolve\+Measure\+Left(), \+\_\+\+Search\+And\+Shorten\+Same\+S\+I\+Index(), B\+A\+SE, C\+Simple\+Measure\+::\+Base\+I\+D(), bm\+Number, op\+Enum, p\+Measure\+Left, p\+Measure\+Right, and C\+Simple\+Measure\+::\+S\+I\+Offset().
+
+\mbox{\Hypertarget{classCComplexMeasure_ae66b48f40cc04866424ca5b7114d4adb}\label{classCComplexMeasure_ae66b48f40cc04866424ca5b7114d4adb}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!\+\_\+\+Simplify@{\+\_\+\+Simplify}}
+\index{\+\_\+\+Simplify@{\+\_\+\+Simplify}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{\+\_\+\+Simplify()}{\_Simplify()}}
+{\footnotesize\ttfamily void C\+Complex\+Measure\+::\+\_\+\+Simplify (\begin{DoxyParamCaption}\item[{\hyperlink{MeasureOperator_8h_a1431c79e3ad4b4c5bcc9f31f188538f2}{e\+Operation} \&}]{Previous\+OP }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 516 of file Complex\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Search\+And\+Shorten\+Same\+S\+I\+Index(), \+\_\+\+Simplify(), op\+Enum, and p\+Measure\+Right.
+
+\mbox{\Hypertarget{classCComplexMeasure_ae3605c75d2c571b06108b4b19af6618b}\label{classCComplexMeasure_ae3605c75d2c571b06108b4b19af6618b}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!\+\_\+\+Valid@{\+\_\+\+Valid}}
+\index{\+\_\+\+Valid@{\+\_\+\+Valid}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{\+\_\+\+Valid()}{\_Valid()}}
+{\footnotesize\ttfamily void C\+Complex\+Measure\+::\+\_\+\+Valid (\begin{DoxyParamCaption}\item[{bool \&}]{b\+Valid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+recursive call of checking the p\+Measure\+Left measures being valid 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b\+Valid} & bool which will be set to p\+Measure\+Left\+::\+Valid \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 648 of file Complex\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Valid(), p\+Measure\+Left, p\+Measure\+Right, and C\+Simple\+Measure\+::\+Valid().
+
+\mbox{\Hypertarget{classCComplexMeasure_a06355541d6d9b843b9d68156a0297f51}\label{classCComplexMeasure_a06355541d6d9b843b9d68156a0297f51}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!C\+M\+Exp10@{C\+M\+Exp10}}
+\index{C\+M\+Exp10@{C\+M\+Exp10}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{C\+M\+Exp10()}{CMExp10()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const int C\+Complex\+Measure\+::\+C\+M\+Exp10 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+getter for n\+C\+M\+Exp10 
+
+\begin{DoxyReturn}{Returns}
+e\+Pre\+Measure\& 
+\end{DoxyReturn}
+
+
+Definition at line 181 of file Complex\+Measure.\+h.
+
+
+
+References C\+Simple\+Measure\+::\+Valid().
+
+\mbox{\Hypertarget{classCComplexMeasure_aaa6f3cf75ee0dd2a880adaaf43e81168}\label{classCComplexMeasure_aaa6f3cf75ee0dd2a880adaaf43e81168}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!C\+M\+Exp10@{C\+M\+Exp10}}
+\index{C\+M\+Exp10@{C\+M\+Exp10}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{C\+M\+Exp10()}{CMExp10()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void C\+Complex\+Measure\+::\+C\+M\+Exp10 (\begin{DoxyParamCaption}\item[{const int}]{Other\+Exp10 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+protected setter of n\+C\+M\+Exp10 ... for internal use only 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Other\+Exp10} & \+:e\+Pre\+Measure \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 313 of file Complex\+Measure.\+h.
+
+\mbox{\Hypertarget{classCComplexMeasure_acdcab22efa233ea1c0e607bf22028afd}\label{classCComplexMeasure_acdcab22efa233ea1c0e607bf22028afd}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!C\+M\+Factor@{C\+M\+Factor}}
+\index{C\+M\+Factor@{C\+M\+Factor}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{C\+M\+Factor()}{CMFactor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \hyperlink{classCDigFloat}{C\+Dig\+Float}\& C\+Complex\+Measure\+::\+C\+M\+Factor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+getter for df\+C\+M\+Factor 
+
+\begin{DoxyReturn}{Returns}
+double\& 
+\end{DoxyReturn}
+
+
+Definition at line 175 of file Complex\+Measure.\+h.
+
+\mbox{\Hypertarget{classCComplexMeasure_abc97b2ed29224bb00a912a94933192a2}\label{classCComplexMeasure_abc97b2ed29224bb00a912a94933192a2}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!C\+M\+Factor@{C\+M\+Factor}}
+\index{C\+M\+Factor@{C\+M\+Factor}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{C\+M\+Factor()}{CMFactor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void C\+Complex\+Measure\+::\+C\+M\+Factor (\begin{DoxyParamCaption}\item[{const double}]{Factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+protected setter of df\+C\+M\+Factor ... for internal use only 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Factor} & p\+\_\+\+Factor\+:double \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 320 of file Complex\+Measure.\+h.
+
+\mbox{\Hypertarget{classCComplexMeasure_aa807816cc8d410ff08e482c5e942a1a9}\label{classCComplexMeasure_aa807816cc8d410ff08e482c5e942a1a9}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!Compatible@{Compatible}}
+\index{Compatible@{Compatible}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{Compatible()}{Compatible()}}
+{\footnotesize\ttfamily bool C\+Complex\+Measure\+::\+Compatible (\begin{DoxyParamCaption}\item[{const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+checks for a \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} being scaled (i.\+e. f$\ast$ this) to this 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & p\+\_\+other\+:\hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 151 of file Complex\+Measure.\+cpp.
+
+
+
+References C\+Simple\+Measure\+::\+Base\+I\+D(), bm\+Number, Normalize(), p\+Measure\+Left, p\+Measure\+Right, and Simplify().
+
+\mbox{\Hypertarget{classCComplexMeasure_a83c00029eaad1c0c59fd1210108981dc}\label{classCComplexMeasure_a83c00029eaad1c0c59fd1210108981dc}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!Debug\+Out@{Debug\+Out}}
+\index{Debug\+Out@{Debug\+Out}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{Debug\+Out()}{DebugOut()}}
+{\footnotesize\ttfamily string C\+Complex\+Measure\+::\+Debug\+Out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+prints all members\+: can be applied for debugging purpose 
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 672 of file Complex\+Measure.\+cpp.
+
+
+
+References Bool2\+String(), C\+M\+Exp10(), C\+M\+Factor(), Debug\+Out(), O\+P\+Short(), p\+Measure\+Left, p\+Measure\+Right, C\+Dig\+Float\+::\+Print(), C\+Simple\+Measure\+::\+Short(), and Valid().
+
+\mbox{\Hypertarget{classCComplexMeasure_a87cc1f3c3f0dafd7cbe00634124c8d46}\label{classCComplexMeasure_a87cc1f3c3f0dafd7cbe00634124c8d46}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{Normalize()}{Normalize()}}
+{\footnotesize\ttfamily void C\+Complex\+Measure\+::\+Normalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+sets all measures to SI and calculates S\+Ipremeasure and d\+S\+I\+Factor\+: calls internal function C\+Complex\+Measure\+::\+\_\+\+Normalize(nullptr,nullptr) 
+
+
+
+Definition at line 235 of file Complex\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Normalize().
+
+\mbox{\Hypertarget{classCComplexMeasure_ab5e7581c34b128a8b24a7237094a4fe4}\label{classCComplexMeasure_ab5e7581c34b128a8b24a7237094a4fe4}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool C\+Complex\+Measure\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 147 of file Complex\+Measure.\+cpp.
+
+\mbox{\Hypertarget{classCComplexMeasure_afb04c59abf1f8ed44fe13d56df5d322c}\label{classCComplexMeasure_afb04c59abf1f8ed44fe13d56df5d322c}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} C\+Complex\+Measure\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+operator $\ast$\+: calls \hyperlink{classCComplexMeasure_a66de753c892ed0a82fa8f2eb4d98029d}{C\+Complex\+Measure\+::operator$\ast$=} with a copy of calling instance 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} to copy into \hyperlink{classCComplexMeasure_abbafc4b16676d223ed34860b8ece1b6b}{C\+Complex\+Measure\+::p\+Measure\+Right} connecting with \hyperlink{MeasureOperator_8h_a1431c79e3ad4b4c5bcc9f31f188538f2ad474827f099ae98a2f2c92e1ef548eb2}{op\+Mult} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCComplexMeasure}{C\+Complex\+Measure} 
+\end{DoxyReturn}
+
+
+Definition at line 100 of file Complex\+Measure.\+cpp.
+
+\mbox{\Hypertarget{classCComplexMeasure_a66de753c892ed0a82fa8f2eb4d98029d}\label{classCComplexMeasure_a66de753c892ed0a82fa8f2eb4d98029d}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}}
+{\footnotesize\ttfamily \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \& C\+Complex\+Measure\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+operator $\ast$=\+: calls \hyperlink{classCComplexMeasure_aee812c93b8b2fe3839e9a38df63cfd53}{C\+Complex\+Measure\+::\+\_\+\+Allocate\+Last\+Unset\+Measure\+Right} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} to copy into \hyperlink{classCComplexMeasure_abbafc4b16676d223ed34860b8ece1b6b}{C\+Complex\+Measure\+::p\+Measure\+Right} connecting with \hyperlink{MeasureOperator_8h_a1431c79e3ad4b4c5bcc9f31f188538f2ad474827f099ae98a2f2c92e1ef548eb2}{op\+Mult} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCComplexMeasure}{C\+Complex\+Measure}\& 
+\end{DoxyReturn}
+
+
+Definition at line 86 of file Complex\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Allocate\+Last\+Unset\+Measure\+Right(), and op\+Mult.
+
+\mbox{\Hypertarget{classCComplexMeasure_a730c8745ab3d499a20d09f6faa47bdd2}\label{classCComplexMeasure_a730c8745ab3d499a20d09f6faa47bdd2}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!operator/@{operator/}}
+\index{operator/@{operator/}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} C\+Complex\+Measure\+::operator/ (\begin{DoxyParamCaption}\item[{const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+operator /\+: calls \hyperlink{classCComplexMeasure_a68c42a3ea08d1482f4dfdda5e34407f5}{C\+Complex\+Measure\+::operator/=} with a copy of calling instance 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} to copy into \hyperlink{classCComplexMeasure_abbafc4b16676d223ed34860b8ece1b6b}{C\+Complex\+Measure\+::p\+Measure\+Right} connecting with \hyperlink{MeasureOperator_8h_a1431c79e3ad4b4c5bcc9f31f188538f2a160251a34f9a9a8ee362dc477d5ba790}{op\+Divide} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCComplexMeasure}{C\+Complex\+Measure} 
+\end{DoxyReturn}
+
+
+Definition at line 106 of file Complex\+Measure.\+cpp.
+
+\mbox{\Hypertarget{classCComplexMeasure_a68c42a3ea08d1482f4dfdda5e34407f5}\label{classCComplexMeasure_a68c42a3ea08d1482f4dfdda5e34407f5}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{operator/=()}{operator/=()}}
+{\footnotesize\ttfamily \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \& C\+Complex\+Measure\+::operator/= (\begin{DoxyParamCaption}\item[{const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+operator /=\+: calls \hyperlink{classCComplexMeasure_aee812c93b8b2fe3839e9a38df63cfd53}{C\+Complex\+Measure\+::\+\_\+\+Allocate\+Last\+Unset\+Measure\+Right} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} to copy into \hyperlink{classCComplexMeasure_abbafc4b16676d223ed34860b8ece1b6b}{C\+Complex\+Measure\+::p\+Measure\+Right} connecting with \hyperlink{MeasureOperator_8h_a1431c79e3ad4b4c5bcc9f31f188538f2a160251a34f9a9a8ee362dc477d5ba790}{op\+Divide} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCComplexMeasure}{C\+Complex\+Measure}\& 
+\end{DoxyReturn}
+
+
+Definition at line 94 of file Complex\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Allocate\+Last\+Unset\+Measure\+Right(), and op\+Divide.
+
+\mbox{\Hypertarget{classCComplexMeasure_a37668c1f7c157050080c0065ecbb596d}\label{classCComplexMeasure_a37668c1f7c157050080c0065ecbb596d}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!operator=@{operator=}}
+\index{operator=@{operator=}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \& C\+Complex\+Measure\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+assignment operator\+: 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} to copy from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCComplexMeasure}{C\+Complex\+Measure}\& 
+\end{DoxyReturn}
+
+
+Definition at line 113 of file Complex\+Measure.\+cpp.
+
+
+
+References C\+Complex\+Measure(), df\+C\+M\+Factor, n\+C\+M\+Exp10, op\+Enum, p\+Measure\+Left, p\+Measure\+Right, and Secure\+Delete\+Object\+Pointer().
+
+\mbox{\Hypertarget{classCComplexMeasure_a30c168c8fbc0587835a11914f8af69e9}\label{classCComplexMeasure_a30c168c8fbc0587835a11914f8af69e9}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!operator==@{operator==}}
+\index{operator==@{operator==}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool C\+Complex\+Measure\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Definition at line 130 of file Complex\+Measure.\+cpp.
+
+
+
+References C\+Simple\+Measure\+::\+Base\+I\+D(), bm\+Number, C\+M\+Exp10(), C\+M\+Factor(), Normalize(), p\+Measure\+Left, p\+Measure\+Right, and Simplify().
+
+\mbox{\Hypertarget{classCComplexMeasure_ab6a38e7259d7c27e735ff12fd711c5d5}\label{classCComplexMeasure_ab6a38e7259d7c27e735ff12fd711c5d5}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!O\+P\+Short@{O\+P\+Short}}
+\index{O\+P\+Short@{O\+P\+Short}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{O\+P\+Short()}{OPShort()}}
+{\footnotesize\ttfamily string C\+Complex\+Measure\+::\+O\+P\+Short (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+prints the short label of the \hyperlink{classCComplexMeasure_ae22369976a7e5570add11a4172dcf062}{C\+Complex\+Measure\+::op\+Enum} 
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 202 of file Complex\+Measure.\+h.
+
+
+
+References C\+Simple\+Measure\+::\+\_\+\+Init(), C\+Simple\+Measure\+::\+Debug\+Out(), and C\+Singleton$<$ Singleton\+Object $>$\+::instance().
+
+\mbox{\Hypertarget{classCComplexMeasure_aefe6745e32e203d0dd2b7a4e13504142}\label{classCComplexMeasure_aefe6745e32e203d0dd2b7a4e13504142}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!Print\+All\+Short@{Print\+All\+Short}}
+\index{Print\+All\+Short@{Print\+All\+Short}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{Print\+All\+Short()}{PrintAllShort()}}
+{\footnotesize\ttfamily string C\+Complex\+Measure\+::\+Print\+All\+Short (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+prints the premeasure and the base measure short labels 
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 223 of file Complex\+Measure.\+cpp.
+
+
+
+References O\+P\+Short(), p\+Measure\+Left, p\+Measure\+Right, Print\+All\+Short(), and C\+Simple\+Measure\+::\+Short().
+
+\mbox{\Hypertarget{classCComplexMeasure_a2c4086ab6b664259b820f554f647cdbd}\label{classCComplexMeasure_a2c4086ab6b664259b820f554f647cdbd}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!Release\+Exp10\+And\+Factor@{Release\+Exp10\+And\+Factor}}
+\index{Release\+Exp10\+And\+Factor@{Release\+Exp10\+And\+Factor}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{Release\+Exp10\+And\+Factor()}{ReleaseExp10AndFactor()}}
+{\footnotesize\ttfamily const double C\+Complex\+Measure\+::\+Release\+Exp10\+And\+Factor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+returns the product of df\+C\+M\+Factor and pow(10,\+Exp10()) and resets factor to 1 and n\+Exp10 to 0 
+
+\begin{DoxyReturn}{Returns}
+const double 
+\end{DoxyReturn}
+
+
+Definition at line 660 of file Complex\+Measure.\+cpp.
+
+
+
+References C\+M\+Exp10(), C\+M\+Factor(), and C\+Dig\+Float\+::\+Raw\+Value().
+
+\mbox{\Hypertarget{classCComplexMeasure_a999dd5e5bb71a6bc548f959879b4e12f}\label{classCComplexMeasure_a999dd5e5bb71a6bc548f959879b4e12f}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!Scale\+To@{Scale\+To}}
+\index{Scale\+To@{Scale\+To}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{Scale\+To()}{ScaleTo()}}
+{\footnotesize\ttfamily void C\+Complex\+Measure\+::\+Scale\+To (\begin{DoxyParamCaption}\item[{const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+scale to other compatible \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & p\+\_\+other\+:\hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 614 of file Complex\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Init(), C\+M\+Exp10(), C\+M\+Factor(), Compatible(), df\+C\+M\+Factor, n\+C\+M\+Exp10, and Simplify().
+
+\mbox{\Hypertarget{classCComplexMeasure_a47dca89bc28bbb257f81df4d363be623}\label{classCComplexMeasure_a47dca89bc28bbb257f81df4d363be623}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!Set\+By\+ID@{Set\+By\+ID}}
+\index{Set\+By\+ID@{Set\+By\+ID}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{Set\+By\+I\+D()}{SetByID()}}
+{\footnotesize\ttfamily void C\+Complex\+Measure\+::\+Set\+By\+ID (\begin{DoxyParamCaption}\item[{const \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure}}]{Pre\+Measure\+Enum,  }\item[{const \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure}}]{Base\+Measure\+Enum }\end{DoxyParamCaption})}
+
+
+
+sets the p\+Measure\+Left calling \hyperlink{classCSimpleMeasure_a6945aa333dca5623482d38cd9a7e3225}{C\+Simple\+Measure\+::\+Set\+By\+ID} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Pre\+Measure\+Enum} & p\+\_\+\+Pre\+Measure\+Enum\+: index of premeasure... \\
+\hline
+{\em Base\+Measure\+Enum} & p\+\_\+\+Base\+Measure\+Enum\+: index of base measure \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 165 of file Complex\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Init(), p\+Measure\+Left, p\+Measure\+Right, Secure\+Delete\+Object\+Pointer(), and C\+Simple\+Measure\+::\+Set\+By\+I\+D().
+
+\mbox{\Hypertarget{classCComplexMeasure_addb4e69033f2c32fb3bf4a3aef5e1470}\label{classCComplexMeasure_addb4e69033f2c32fb3bf4a3aef5e1470}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!Simplify@{Simplify}}
+\index{Simplify@{Simplify}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{Simplify()}{Simplify()}}
+{\footnotesize\ttfamily void C\+Complex\+Measure\+::\+Simplify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+simplifies complex measure (e.\+g. uV / mV $\ast$ A = A (exp10 += -\/3)) the factors of the premeasures are collected in the C\+Complex\+Measure\+::n\+Exp10 member of this class 
+
+
+
+Definition at line 480 of file Complex\+Measure.\+cpp.
+
+
+
+References \+\_\+\+C\+Ollect\+C\+M\+Exp10\+C\+M\+Factor\+Wrapper(), \+\_\+\+Remove\+Neutral\+Numbers(), \+\_\+\+Simplify(), C\+Simple\+Measure\+::\+Base\+I\+D(), bm\+Number, op\+Enum, op\+Mult, op\+Unknown, p\+Measure\+Left, p\+Measure\+Right, and Secure\+Delete\+Object\+Pointer().
+
+\mbox{\Hypertarget{classCComplexMeasure_a1b777eef864d0c7a959dbeee321e881d}\label{classCComplexMeasure_a1b777eef864d0c7a959dbeee321e881d}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!Valid@{Valid}}
+\index{Valid@{Valid}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{Valid()}{Valid()}}
+{\footnotesize\ttfamily bool C\+Complex\+Measure\+::\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+check for valid measures\+: if one invalid measure is found --$>$ everything is invalid 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 636 of file Complex\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Valid(), p\+Measure\+Left, p\+Measure\+Right, and C\+Simple\+Measure\+::\+Valid().
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classCComplexMeasure_a7e23751869edf87edc0feeb80eda78d9}\label{classCComplexMeasure_a7e23751869edf87edc0feeb80eda78d9}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{C\+Floating\+Measure}{CFloatingMeasure}}
+{\footnotesize\ttfamily friend class \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 52 of file Complex\+Measure.\+h.
+
+\mbox{\Hypertarget{classCComplexMeasure_ac06bbec937fbb103ef6191c80bfa5880}\label{classCComplexMeasure_ac06bbec937fbb103ef6191c80bfa5880}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{C\+Simple\+Measure}{CSimpleMeasure}}
+{\footnotesize\ttfamily friend class \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 53 of file Complex\+Measure.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classCComplexMeasure_a21eecd9fd837fb73da2e6994b6c3fefe}\label{classCComplexMeasure_a21eecd9fd837fb73da2e6994b6c3fefe}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!df\+C\+M\+Factor@{df\+C\+M\+Factor}}
+\index{df\+C\+M\+Factor@{df\+C\+M\+Factor}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{df\+C\+M\+Factor}{dfCMFactor}}
+{\footnotesize\ttfamily \hyperlink{classCDigFloat}{C\+Dig\+Float} C\+Complex\+Measure\+::df\+C\+M\+Factor\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+the factor value which will be set e.\+g. for normalization or simplification collecting all SI factors(see \hyperlink{classCComplexMeasure_addb4e69033f2c32fb3bf4a3aef5e1470}{C\+Complex\+Measure\+::\+Simplify()} and \hyperlink{classCComplexMeasure_a87cc1f3c3f0dafd7cbe00634124c8d46}{C\+Complex\+Measure\+::\+Normalize()}.) 
+
+
+
+Definition at line 355 of file Complex\+Measure.\+h.
+
+\mbox{\Hypertarget{classCComplexMeasure_a52cfbd26747c0497cfe97c56f2ff38ea}\label{classCComplexMeasure_a52cfbd26747c0497cfe97c56f2ff38ea}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!n\+C\+M\+Exp10@{n\+C\+M\+Exp10}}
+\index{n\+C\+M\+Exp10@{n\+C\+M\+Exp10}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{n\+C\+M\+Exp10}{nCMExp10}}
+{\footnotesize\ttfamily int C\+Complex\+Measure\+::n\+C\+M\+Exp10\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+the epx10 which will be set e.\+g. for normalization or simplification collecting all Exp10 of Pre\+Measure\+Enum(see \hyperlink{classCComplexMeasure_addb4e69033f2c32fb3bf4a3aef5e1470}{C\+Complex\+Measure\+::\+Simplify()} and \hyperlink{classCComplexMeasure_a87cc1f3c3f0dafd7cbe00634124c8d46}{C\+Complex\+Measure\+::\+Normalize()}.) 
+
+
+
+Definition at line 349 of file Complex\+Measure.\+h.
+
+\mbox{\Hypertarget{classCComplexMeasure_ae22369976a7e5570add11a4172dcf062}\label{classCComplexMeasure_ae22369976a7e5570add11a4172dcf062}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!op\+Enum@{op\+Enum}}
+\index{op\+Enum@{op\+Enum}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{op\+Enum}{opEnum}}
+{\footnotesize\ttfamily \hyperlink{MeasureOperator_8h_a1431c79e3ad4b4c5bcc9f31f188538f2}{e\+Operation} C\+Complex\+Measure\+::op\+Enum\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+index of the corresponding operator of p\+Measure\+Left and p\+Measure\+Right 
+
+
+
+Definition at line 332 of file Complex\+Measure.\+h.
+
+\mbox{\Hypertarget{classCComplexMeasure_a4d68f86891a036df81f5b1a344c36f27}\label{classCComplexMeasure_a4d68f86891a036df81f5b1a344c36f27}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!p\+Measure\+Left@{p\+Measure\+Left}}
+\index{p\+Measure\+Left@{p\+Measure\+Left}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{p\+Measure\+Left}{pMeasureLeft}}
+{\footnotesize\ttfamily \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure}$\ast$ C\+Complex\+Measure\+::p\+Measure\+Left\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+left operand is a Simple\+Measure representant 
+
+
+
+Definition at line 343 of file Complex\+Measure.\+h.
+
+\mbox{\Hypertarget{classCComplexMeasure_abbafc4b16676d223ed34860b8ece1b6b}\label{classCComplexMeasure_abbafc4b16676d223ed34860b8ece1b6b}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!p\+Measure\+Right@{p\+Measure\+Right}}
+\index{p\+Measure\+Right@{p\+Measure\+Right}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{p\+Measure\+Right}{pMeasureRight}}
+{\footnotesize\ttfamily \hyperlink{classCComplexMeasure}{C\+Complex\+Measure}$\ast$ C\+Complex\+Measure\+::p\+Measure\+Right\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+right operand as complex measure (pointing to next p\+Measure\+Left, operator, and p\+Measure\+Right for a daisy chained list of complex measures 
+
+
+
+Definition at line 338 of file Complex\+Measure.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Floating\+Measure/\+Measure/\hyperlink{ComplexMeasure_8h}{Complex\+Measure.\+h}\item 
+Floating\+Measure/\+Measure/\hyperlink{ComplexMeasure_8cpp}{Complex\+Measure.\+cpp}\end{DoxyCompactItemize}

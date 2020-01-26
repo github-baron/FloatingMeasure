@@ -1,0 +1,688 @@
+\hypertarget{classCSimpleMeasure}{}\section{C\+Simple\+Measure Class Reference}
+\label{classCSimpleMeasure}\index{C\+Simple\+Measure@{C\+Simple\+Measure}}
+
+
+\hyperlink{classCSimpleMeasure}{C\+Simple\+Measure}\+: represents a pre measure combined with a base measure like \char`\"{}m\+V\char`\"{}.~\newline
+ This class offers\+:  
+
+
+
+
+{\ttfamily \#include $<$Simple\+Measure.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCSimpleMeasure_ad59772618a763def710ef6e3a8fbcb9f}{C\+Simple\+Measure} ()
+\begin{DoxyCompactList}\small\item\em Default constructor\+: calls \hyperlink{classCSimpleMeasure_ada8744ac5a824143904a2ecaef2b0b70}{C\+Simple\+Measure\+::\+\_\+\+Init()} \end{DoxyCompactList}\item 
+\hyperlink{classCSimpleMeasure_a5dfc63fe4e75fb128991440c8b33b845}{C\+Simple\+Measure} (const \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure} \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor\+: calls \hyperlink{classCSimpleMeasure_ada8744ac5a824143904a2ecaef2b0b70}{C\+Simple\+Measure\+::\+\_\+\+Init()} and \hyperlink{classCSimpleMeasure_a6945aa333dca5623482d38cd9a7e3225}{C\+Simple\+Measure\+::\+Set\+By\+ID}. \end{DoxyCompactList}\item 
+\hyperlink{classCSimpleMeasure_a0be2c11e276b999b8de941a5f94b0369}{C\+Simple\+Measure} (const \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure} $\ast$other)
+\begin{DoxyCompactList}\small\item\em Copy constructor\+: calls \hyperlink{classCSimpleMeasure_ada8744ac5a824143904a2ecaef2b0b70}{C\+Simple\+Measure\+::\+\_\+\+Init()} and \hyperlink{classCSimpleMeasure_a6945aa333dca5623482d38cd9a7e3225}{C\+Simple\+Measure\+::\+Set\+By\+ID}. \end{DoxyCompactList}\item 
+\hyperlink{classCSimpleMeasure_a6a691614fc884c34c9f6ad36c670587b}{$\sim$\+C\+Simple\+Measure} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hyperlink{classCSimpleMeasure}{C\+Simple\+Measure} \& \hyperlink{classCSimpleMeasure_a8466a492481648fa96a734566f0d6ba5}{operator=} (const \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure} \&other)
+\begin{DoxyCompactList}\small\item\em Assignment operator\+: calls \hyperlink{classCSimpleMeasure_ada8744ac5a824143904a2ecaef2b0b70}{C\+Simple\+Measure\+::\+\_\+\+Init()} and \hyperlink{classCSimpleMeasure_a6945aa333dca5623482d38cd9a7e3225}{C\+Simple\+Measure\+::\+Set\+By\+ID}. \end{DoxyCompactList}\item 
+bool const \hyperlink{classCSimpleMeasure_aafe9d3871eadf4004a62a8561b883b1e}{operator==} (const \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure} \&other) const
+\begin{DoxyCompactList}\small\item\em operator ==\+:~\newline
+ compares \end{DoxyCompactList}\item 
+bool \hyperlink{classCSimpleMeasure_a157b4e0af2843d8fb5c369b92cfd7c1f}{operator!=} (const \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure} \&other) const
+\begin{DoxyCompactList}\small\item\em operator !=\+: ~\newline
+ calls inverted \hyperlink{classCSimpleMeasure_aafe9d3871eadf4004a62a8561b883b1e}{C\+Simple\+Measure\+::operator==} \end{DoxyCompactList}\item 
+void \hyperlink{classCSimpleMeasure_a6945aa333dca5623482d38cd9a7e3225}{Set\+By\+ID} (const \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure} Pre\+Measure\+Enum, const \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} Base\+Measure\+Enum)
+\begin{DoxyCompactList}\small\item\em sets the \hyperlink{classCSimpleMeasure_aa23ed9eec21adb9a97c90a424e7ee18a}{C\+Simple\+Measure\+::\+Pre\+Index} and \hyperlink{classCSimpleMeasure_a191dbfa4cc374946bf8a82111f827d92}{C\+Simple\+Measure\+::\+Base\+Index} ~\newline
+ and adapts the depending members \end{DoxyCompactList}\item 
+void \hyperlink{classCSimpleMeasure_a36d8822c057c58669d23af68f24a75c5}{Set\+By\+Short} (const string \&str\+Pre\+Label\+Short, const string \&str\+Base\+Label\+Short)
+\begin{DoxyCompactList}\small\item\em calls \hyperlink{classCSimpleMeasure_a6945aa333dca5623482d38cd9a7e3225}{C\+Simple\+Measure\+::\+Set\+By\+ID} with the indices defined by the corresponding short labels \end{DoxyCompactList}\item 
+void \hyperlink{classCSimpleMeasure_acebe5fcf7a5aa3464d9274f14c9f312b}{Set\+By\+Long} (const string \&str\+Pre\+Label\+Long, const string \&str\+Base\+Label\+Long)
+\begin{DoxyCompactList}\small\item\em calls \hyperlink{classCSimpleMeasure_a6945aa333dca5623482d38cd9a7e3225}{C\+Simple\+Measure\+::\+Set\+By\+ID} with the indices defined by the corresponding long labels \end{DoxyCompactList}\item 
+bool \hyperlink{classCSimpleMeasure_ac4c8b1c22393c6d9a6381f3d8dfdf3e4}{Valid} ()
+\begin{DoxyCompactList}\small\item\em checks if \hyperlink{classCSimpleMeasure_aa23ed9eec21adb9a97c90a424e7ee18a}{C\+Simple\+Measure\+::\+Pre\+Index} and \hyperlink{classCSimpleMeasure_a191dbfa4cc374946bf8a82111f827d92}{C\+Simple\+Measure\+::\+Base\+Index} are valid indices ~\newline
+ defined in \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure} and \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} \end{DoxyCompactList}\item 
+const string \hyperlink{classCSimpleMeasure_a1031ddc7887dce1a739f38abe03601da}{Debug\+Out} ()
+\begin{DoxyCompactList}\small\item\em prints all members as string for debugging. \end{DoxyCompactList}\item 
+const double \hyperlink{classCSimpleMeasure_ad9c08324e46ef4eee5695e7ea1d00018}{S\+I\+Factor} (void)
+\begin{DoxyCompactList}\small\item\em getter of \hyperlink{classCSimpleMeasure_a08be520f9d3a0e50cc63693f2fc607f2}{C\+Simple\+Measure\+::d\+S\+I\+Factor} \end{DoxyCompactList}\item 
+const double \hyperlink{classCSimpleMeasure_a6e04ea2506105c069ae28650c5d69733}{S\+I\+Offset} (void)
+\begin{DoxyCompactList}\small\item\em getter of \hyperlink{classCSimpleMeasure_a27c1637c744a79856ee81869e2aa8890}{C\+Simple\+Measure\+::d\+S\+I\+Offset} \end{DoxyCompactList}\item 
+const string \& \hyperlink{classCSimpleMeasure_ab1e479ebf0d3a428ecd9f6b1daf3fe0c}{Short} (void)
+\begin{DoxyCompactList}\small\item\em getter of \hyperlink{classCSimpleMeasure_a39260e6516c163955c34dce6795292ad}{C\+Simple\+Measure\+::str\+Short} \end{DoxyCompactList}\item 
+const string \& \hyperlink{classCSimpleMeasure_a62d318d474f4feb9b25e113f47dd45c6}{Long} (void)
+\begin{DoxyCompactList}\small\item\em getter of \hyperlink{classCSimpleMeasure_a5761fb46fb35ce577066ef1e7ec1ab2e}{C\+Simple\+Measure\+::str\+Long} \end{DoxyCompactList}\item 
+const \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} \hyperlink{classCSimpleMeasure_a8b523b4264aed1ccae15fd39cc7e31f4}{Base\+ID} () const
+\begin{DoxyCompactList}\small\item\em getter of \hyperlink{classCSimpleMeasure_a191dbfa4cc374946bf8a82111f827d92}{C\+Simple\+Measure\+::\+Base\+Index} \end{DoxyCompactList}\item 
+const \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure} \hyperlink{classCSimpleMeasure_ae2704585c95b6a165e982186afef5556}{Pre\+ID} () const
+\begin{DoxyCompactList}\small\item\em getter of \hyperlink{classCSimpleMeasure_aa23ed9eec21adb9a97c90a424e7ee18a}{C\+Simple\+Measure\+::\+Pre\+Index} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCSimpleMeasure_ada8744ac5a824143904a2ecaef2b0b70}{\+\_\+\+Init} ()
+\begin{DoxyCompactList}\small\item\em sets \hyperlink{classCSimpleMeasure_a191dbfa4cc374946bf8a82111f827d92}{C\+Simple\+Measure\+::\+Base\+Index} to e\+Base\+Measure\+::bm\+Unknown and \hyperlink{classCSimpleMeasure_aa23ed9eec21adb9a97c90a424e7ee18a}{C\+Simple\+Measure\+::\+Pre\+Index} to C\+Pre\+Measure\+::pm\+Unknown \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} \hyperlink{classCSimpleMeasure_a191dbfa4cc374946bf8a82111f827d92}{Base\+Index}
+\begin{DoxyCompactList}\small\item\em index of type \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure}\+:~\newline
+ used to get elements from the vectors of \hyperlink{BaseMeasure_8h_a79bcfb6bde984f42d1124b068a509af7}{B\+A\+SE}\+: \end{DoxyCompactList}\item 
+\hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure} \hyperlink{classCSimpleMeasure_aa23ed9eec21adb9a97c90a424e7ee18a}{Pre\+Index}
+\begin{DoxyCompactList}\small\item\em index of type \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure}\+:~\newline
+ used to get elements from the vectors of \hyperlink{PreMeasure_8h_a349316092037fdd0773335fab4e15ee8}{P\+RE}\+: \end{DoxyCompactList}\item 
+double \hyperlink{classCSimpleMeasure_a08be520f9d3a0e50cc63693f2fc607f2}{d\+S\+I\+Factor}
+\begin{DoxyCompactList}\small\item\em factor which must be applied this \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure} to achieve SI measure (e.\+g. mV \+: S\+I\+Factor = 1000).~\newline
+ This factor must be applied in combination with \hyperlink{classCSimpleMeasure_a27c1637c744a79856ee81869e2aa8890}{C\+Simple\+Measure\+::d\+S\+I\+Offset}\+:~\newline
+ S\+I\+Measure = S\+I\+Factor $\ast$ Measure + S\+I\+Offset \end{DoxyCompactList}\item 
+double \hyperlink{classCSimpleMeasure_a27c1637c744a79856ee81869e2aa8890}{d\+S\+I\+Offset}
+\begin{DoxyCompactList}\small\item\em offset (SI measure) which must added to this \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure} to achieve the corresponding SI measure~\newline
+ E.\+g. °C\+: S\+I\+Offset = +273.15°K~\newline
+ This offset must be applied in combination with \hyperlink{classCSimpleMeasure_a08be520f9d3a0e50cc63693f2fc607f2}{C\+Simple\+Measure\+::d\+S\+I\+Factor}\+:~\newline
+ S\+I\+Measure = S\+I\+Factor $\ast$ Measure + S\+I\+Offset \end{DoxyCompactList}\item 
+string $\ast$ \hyperlink{classCSimpleMeasure_a39260e6516c163955c34dce6795292ad}{str\+Short}
+\begin{DoxyCompactList}\small\item\em short label of this \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure}\+: ~\newline
+ combination of the pre-\/measure short label (see P\+R\+E\+::\+Short)~\newline
+ and the base-\/measure short label (see B\+A\+S\+E\+::\+Short) \end{DoxyCompactList}\item 
+string $\ast$ \hyperlink{classCSimpleMeasure_a5761fb46fb35ce577066ef1e7ec1ab2e}{str\+Long}
+\begin{DoxyCompactList}\small\item\em long label of this \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure}\+: ~\newline
+ combination of the pre-\/measure long label (see P\+R\+E\+::\+Long)~\newline
+ and the base-\/measure long label (see B\+A\+S\+E\+::\+Long) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classCSimpleMeasure_a39437e1df05e59fd328fbf69e55b45fa}{C\+Pre\+Measure}
+\item 
+class \hyperlink{classCSimpleMeasure_a49ff8edb85c7d35ec3940a509b2c748f}{C\+Base\+Measure}
+\item 
+class \hyperlink{classCSimpleMeasure_acbeb06f43abf4b8c9a86136c2b7bfe5f}{C\+Singleton$<$ C\+Pre\+Measure $>$}
+\item 
+class \hyperlink{classCSimpleMeasure_ac514d5155adc5a8f0ed981fdb4815491}{C\+Singleton$<$ C\+Base\+Measure $>$}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classCSimpleMeasure}{C\+Simple\+Measure}\+: represents a pre measure combined with a base measure like \char`\"{}m\+V\char`\"{}.~\newline
+ This class offers\+: 
+
+
+\begin{DoxyItemize}
+\item handling of combined short / long labels of \hyperlink{classCPreMeasure}{C\+Pre\+Measure} and \hyperlink{classCBaseMeasure}{C\+Base\+Measure}
+\item construction by short / long labels of \hyperlink{classCPreMeasure}{C\+Pre\+Measure} and \hyperlink{classCBaseMeasure}{C\+Base\+Measure}
+\item recalculation offset and factor to SI measure of the \hyperlink{classCPreMeasure}{C\+Pre\+Measure} and \hyperlink{classCBaseMeasure}{C\+Base\+Measure} 
+\end{DoxyItemize}
+
+Definition at line 39 of file Simple\+Measure.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCSimpleMeasure_ad59772618a763def710ef6e3a8fbcb9f}\label{classCSimpleMeasure_ad59772618a763def710ef6e3a8fbcb9f}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{C\+Simple\+Measure()}{CSimpleMeasure()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily C\+Simple\+Measure\+::\+C\+Simple\+Measure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor\+: calls \hyperlink{classCSimpleMeasure_ada8744ac5a824143904a2ecaef2b0b70}{C\+Simple\+Measure\+::\+\_\+\+Init()} 
+
+
+
+Definition at line 27 of file Simple\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Init().
+
+\mbox{\Hypertarget{classCSimpleMeasure_a5dfc63fe4e75fb128991440c8b33b845}\label{classCSimpleMeasure_a5dfc63fe4e75fb128991440c8b33b845}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{C\+Simple\+Measure()}{CSimpleMeasure()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily C\+Simple\+Measure\+::\+C\+Simple\+Measure (\begin{DoxyParamCaption}\item[{const \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor\+: calls \hyperlink{classCSimpleMeasure_ada8744ac5a824143904a2ecaef2b0b70}{C\+Simple\+Measure\+::\+\_\+\+Init()} and \hyperlink{classCSimpleMeasure_a6945aa333dca5623482d38cd9a7e3225}{C\+Simple\+Measure\+::\+Set\+By\+ID}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & instance to copy from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 32 of file Simple\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Init(), Base\+I\+D(), Pre\+I\+D(), and Set\+By\+I\+D().
+
+\mbox{\Hypertarget{classCSimpleMeasure_a0be2c11e276b999b8de941a5f94b0369}\label{classCSimpleMeasure_a0be2c11e276b999b8de941a5f94b0369}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{C\+Simple\+Measure()}{CSimpleMeasure()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily C\+Simple\+Measure\+::\+C\+Simple\+Measure (\begin{DoxyParamCaption}\item[{const \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure} $\ast$}]{other }\end{DoxyParamCaption})}
+
+
+
+Copy constructor\+: calls \hyperlink{classCSimpleMeasure_ada8744ac5a824143904a2ecaef2b0b70}{C\+Simple\+Measure\+::\+\_\+\+Init()} and \hyperlink{classCSimpleMeasure_a6945aa333dca5623482d38cd9a7e3225}{C\+Simple\+Measure\+::\+Set\+By\+ID}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & instance to copy from \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 37 of file Simple\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Init(), Base\+I\+D(), Pre\+I\+D(), and Set\+By\+I\+D().
+
+\mbox{\Hypertarget{classCSimpleMeasure_a6a691614fc884c34c9f6ad36c670587b}\label{classCSimpleMeasure_a6a691614fc884c34c9f6ad36c670587b}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!````~C\+Simple\+Measure@{$\sim$\+C\+Simple\+Measure}}
+\index{````~C\+Simple\+Measure@{$\sim$\+C\+Simple\+Measure}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Simple\+Measure()}{~CSimpleMeasure()}}
+{\footnotesize\ttfamily C\+Simple\+Measure\+::$\sim$\+C\+Simple\+Measure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+Definition at line 42 of file Simple\+Measure.\+cpp.
+
+
+
+References Secure\+Delete\+Object\+Pointer(), str\+Long, and str\+Short.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCSimpleMeasure_ada8744ac5a824143904a2ecaef2b0b70}\label{classCSimpleMeasure_ada8744ac5a824143904a2ecaef2b0b70}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!\+\_\+\+Init@{\+\_\+\+Init}}
+\index{\+\_\+\+Init@{\+\_\+\+Init}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{\+\_\+\+Init()}{\_Init()}}
+{\footnotesize\ttfamily void C\+Simple\+Measure\+::\+\_\+\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+sets \hyperlink{classCSimpleMeasure_a191dbfa4cc374946bf8a82111f827d92}{C\+Simple\+Measure\+::\+Base\+Index} to e\+Base\+Measure\+::bm\+Unknown and \hyperlink{classCSimpleMeasure_aa23ed9eec21adb9a97c90a424e7ee18a}{C\+Simple\+Measure\+::\+Pre\+Index} to C\+Pre\+Measure\+::pm\+Unknown 
+
+
+
+Definition at line 99 of file Simple\+Measure.\+cpp.
+
+
+
+References Base\+Index, bm\+Unknown, pm\+Unknown, Pre\+Index, str\+Long, and str\+Short.
+
+\mbox{\Hypertarget{classCSimpleMeasure_a8b523b4264aed1ccae15fd39cc7e31f4}\label{classCSimpleMeasure_a8b523b4264aed1ccae15fd39cc7e31f4}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!Base\+ID@{Base\+ID}}
+\index{Base\+ID@{Base\+ID}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{Base\+I\+D()}{BaseID()}}
+{\footnotesize\ttfamily const \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} C\+Simple\+Measure\+::\+Base\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+getter of \hyperlink{classCSimpleMeasure_a191dbfa4cc374946bf8a82111f827d92}{C\+Simple\+Measure\+::\+Base\+Index} 
+
+\begin{DoxyReturn}{Returns}
+e\+Base\+Measure\& 
+\end{DoxyReturn}
+
+
+Definition at line 171 of file Simple\+Measure.\+h.
+
+\mbox{\Hypertarget{classCSimpleMeasure_a1031ddc7887dce1a739f38abe03601da}\label{classCSimpleMeasure_a1031ddc7887dce1a739f38abe03601da}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!Debug\+Out@{Debug\+Out}}
+\index{Debug\+Out@{Debug\+Out}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{Debug\+Out()}{DebugOut()}}
+{\footnotesize\ttfamily const string C\+Simple\+Measure\+::\+Debug\+Out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+prints all members as string for debugging. 
+
+\begin{DoxyReturn}{Returns}
+const string 
+\end{DoxyReturn}
+
+
+Definition at line 87 of file Simple\+Measure.\+cpp.
+
+
+
+References B\+A\+SE, Base\+I\+D(), Long(), P\+RE, Pre\+I\+D(), Short(), S\+I\+Factor(), and S\+I\+Offset().
+
+\mbox{\Hypertarget{classCSimpleMeasure_a62d318d474f4feb9b25e113f47dd45c6}\label{classCSimpleMeasure_a62d318d474f4feb9b25e113f47dd45c6}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!Long@{Long}}
+\index{Long@{Long}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{Long()}{Long()}}
+{\footnotesize\ttfamily const string\& C\+Simple\+Measure\+::\+Long (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+getter of \hyperlink{classCSimpleMeasure_a5761fb46fb35ce577066ef1e7ec1ab2e}{C\+Simple\+Measure\+::str\+Long} 
+
+\begin{DoxyReturn}{Returns}
+const string\& 
+\end{DoxyReturn}
+
+
+Definition at line 165 of file Simple\+Measure.\+h.
+
+\mbox{\Hypertarget{classCSimpleMeasure_a157b4e0af2843d8fb5c369b92cfd7c1f}\label{classCSimpleMeasure_a157b4e0af2843d8fb5c369b92cfd7c1f}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool C\+Simple\+Measure\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+operator !=\+: ~\newline
+ calls inverted \hyperlink{classCSimpleMeasure_aafe9d3871eadf4004a62a8561b883b1e}{C\+Simple\+Measure\+::operator==} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure} to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const bool 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file Simple\+Measure.\+cpp.
+
+\mbox{\Hypertarget{classCSimpleMeasure_a8466a492481648fa96a734566f0d6ba5}\label{classCSimpleMeasure_a8466a492481648fa96a734566f0d6ba5}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!operator=@{operator=}}
+\index{operator=@{operator=}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure} \& C\+Simple\+Measure\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Assignment operator\+: calls \hyperlink{classCSimpleMeasure_ada8744ac5a824143904a2ecaef2b0b70}{C\+Simple\+Measure\+::\+\_\+\+Init()} and \hyperlink{classCSimpleMeasure_a6945aa333dca5623482d38cd9a7e3225}{C\+Simple\+Measure\+::\+Set\+By\+ID}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & instance to assign from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+reference to this 
+\end{DoxyReturn}
+
+
+Definition at line 48 of file Simple\+Measure.\+cpp.
+
+
+
+References Base\+I\+D(), Pre\+I\+D(), and Set\+By\+I\+D().
+
+\mbox{\Hypertarget{classCSimpleMeasure_aafe9d3871eadf4004a62a8561b883b1e}\label{classCSimpleMeasure_aafe9d3871eadf4004a62a8561b883b1e}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!operator==@{operator==}}
+\index{operator==@{operator==}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool const C\+Simple\+Measure\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+operator ==\+:~\newline
+ compares 
+
+
+\begin{DoxyItemize}
+\item \hyperlink{classCSimpleMeasure_aa23ed9eec21adb9a97c90a424e7ee18a}{C\+Simple\+Measure\+::\+Pre\+Index}
+\item \hyperlink{classCSimpleMeasure_a191dbfa4cc374946bf8a82111f827d92}{C\+Simple\+Measure\+::\+Base\+Index}
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure} to compare \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const bool 
+\end{DoxyReturn}
+
+
+Definition at line 56 of file Simple\+Measure.\+cpp.
+
+
+
+References Base\+I\+D(), and Pre\+I\+D().
+
+\mbox{\Hypertarget{classCSimpleMeasure_ae2704585c95b6a165e982186afef5556}\label{classCSimpleMeasure_ae2704585c95b6a165e982186afef5556}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!Pre\+ID@{Pre\+ID}}
+\index{Pre\+ID@{Pre\+ID}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{Pre\+I\+D()}{PreID()}}
+{\footnotesize\ttfamily const \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure} C\+Simple\+Measure\+::\+Pre\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+getter of \hyperlink{classCSimpleMeasure_aa23ed9eec21adb9a97c90a424e7ee18a}{C\+Simple\+Measure\+::\+Pre\+Index} 
+
+\begin{DoxyReturn}{Returns}
+e\+Pre\+Measure\& 
+\end{DoxyReturn}
+
+
+Definition at line 177 of file Simple\+Measure.\+h.
+
+\mbox{\Hypertarget{classCSimpleMeasure_a6945aa333dca5623482d38cd9a7e3225}\label{classCSimpleMeasure_a6945aa333dca5623482d38cd9a7e3225}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!Set\+By\+ID@{Set\+By\+ID}}
+\index{Set\+By\+ID@{Set\+By\+ID}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{Set\+By\+I\+D()}{SetByID()}}
+{\footnotesize\ttfamily void C\+Simple\+Measure\+::\+Set\+By\+ID (\begin{DoxyParamCaption}\item[{const \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure}}]{Pre\+Measure\+Enum,  }\item[{const \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure}}]{Base\+Measure\+Enum }\end{DoxyParamCaption})}
+
+
+
+sets the \hyperlink{classCSimpleMeasure_aa23ed9eec21adb9a97c90a424e7ee18a}{C\+Simple\+Measure\+::\+Pre\+Index} and \hyperlink{classCSimpleMeasure_a191dbfa4cc374946bf8a82111f827d92}{C\+Simple\+Measure\+::\+Base\+Index} ~\newline
+ and adapts the depending members 
+
+
+\begin{DoxyItemize}
+\item \hyperlink{classCSimpleMeasure_a08be520f9d3a0e50cc63693f2fc607f2}{C\+Simple\+Measure\+::d\+S\+I\+Factor}
+\item \hyperlink{classCSimpleMeasure_a27c1637c744a79856ee81869e2aa8890}{C\+Simple\+Measure\+::d\+S\+I\+Offset}
+\item \hyperlink{classCSimpleMeasure_a39260e6516c163955c34dce6795292ad}{C\+Simple\+Measure\+::str\+Short}
+\item \hyperlink{classCSimpleMeasure_a5761fb46fb35ce577066ef1e7ec1ab2e}{C\+Simple\+Measure\+::str\+Long}
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em Pre\+Measure\+Enum} & index of \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure} \\
+\hline
+{\em Base\+Measure\+Enum} & index of \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 68 of file Simple\+Measure.\+cpp.
+
+
+
+References B\+A\+SE, Base\+I\+D(), Base\+Index, d\+S\+I\+Factor, d\+S\+I\+Offset, P\+RE, Pre\+I\+D(), Pre\+Index, str\+Long, and str\+Short.
+
+\mbox{\Hypertarget{classCSimpleMeasure_acebe5fcf7a5aa3464d9274f14c9f312b}\label{classCSimpleMeasure_acebe5fcf7a5aa3464d9274f14c9f312b}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!Set\+By\+Long@{Set\+By\+Long}}
+\index{Set\+By\+Long@{Set\+By\+Long}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{Set\+By\+Long()}{SetByLong()}}
+{\footnotesize\ttfamily void C\+Simple\+Measure\+::\+Set\+By\+Long (\begin{DoxyParamCaption}\item[{const string \&}]{str\+Pre\+Label\+Long,  }\item[{const string \&}]{str\+Base\+Label\+Long }\end{DoxyParamCaption})}
+
+
+
+calls \hyperlink{classCSimpleMeasure_a6945aa333dca5623482d38cd9a7e3225}{C\+Simple\+Measure\+::\+Set\+By\+ID} with the indices defined by the corresponding long labels 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str\+Pre\+Label\+Long} & long label searched in \hyperlink{classCVectorHandle_a71bec0e385b9ca8e5ffa174b559da9f8}{C\+Pre\+Measure\+::vstr\+Long} in \hyperlink{PreMeasure_8h_a349316092037fdd0773335fab4e15ee8}{P\+RE} \\
+\hline
+{\em str\+Base\+Label\+Long} & long label searched in \hyperlink{classCVectorHandle_a71bec0e385b9ca8e5ffa174b559da9f8}{C\+Pre\+Measure\+::vstr\+Long} in \hyperlink{BaseMeasure_8h_a79bcfb6bde984f42d1124b068a509af7}{B\+A\+SE} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 82 of file Simple\+Measure.\+cpp.
+
+
+
+References B\+A\+SE, P\+RE, and Set\+By\+I\+D().
+
+\mbox{\Hypertarget{classCSimpleMeasure_a36d8822c057c58669d23af68f24a75c5}\label{classCSimpleMeasure_a36d8822c057c58669d23af68f24a75c5}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!Set\+By\+Short@{Set\+By\+Short}}
+\index{Set\+By\+Short@{Set\+By\+Short}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{Set\+By\+Short()}{SetByShort()}}
+{\footnotesize\ttfamily void C\+Simple\+Measure\+::\+Set\+By\+Short (\begin{DoxyParamCaption}\item[{const string \&}]{str\+Pre\+Label\+Short,  }\item[{const string \&}]{str\+Base\+Label\+Short }\end{DoxyParamCaption})}
+
+
+
+calls \hyperlink{classCSimpleMeasure_a6945aa333dca5623482d38cd9a7e3225}{C\+Simple\+Measure\+::\+Set\+By\+ID} with the indices defined by the corresponding short labels 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str\+Pre\+Label\+Short} & short label searched in \hyperlink{classCVectorHandle_afb50c8a33d4cf70bf92c644dca409ea2}{C\+Pre\+Measure\+::vstr\+Short} in \hyperlink{PreMeasure_8h_a349316092037fdd0773335fab4e15ee8}{P\+RE} \\
+\hline
+{\em str\+Base\+Label\+Short} & short label searchedin \hyperlink{classCVectorHandle_afb50c8a33d4cf70bf92c644dca409ea2}{C\+Base\+Measure\+::vstr\+Short} in \hyperlink{BaseMeasure_8h_a79bcfb6bde984f42d1124b068a509af7}{B\+A\+SE} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 78 of file Simple\+Measure.\+cpp.
+
+
+
+References B\+A\+SE, P\+RE, and Set\+By\+I\+D().
+
+\mbox{\Hypertarget{classCSimpleMeasure_ab1e479ebf0d3a428ecd9f6b1daf3fe0c}\label{classCSimpleMeasure_ab1e479ebf0d3a428ecd9f6b1daf3fe0c}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!Short@{Short}}
+\index{Short@{Short}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{Short()}{Short()}}
+{\footnotesize\ttfamily const string\& C\+Simple\+Measure\+::\+Short (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+getter of \hyperlink{classCSimpleMeasure_a39260e6516c163955c34dce6795292ad}{C\+Simple\+Measure\+::str\+Short} 
+
+\begin{DoxyReturn}{Returns}
+const string\& 
+\end{DoxyReturn}
+
+
+Definition at line 159 of file Simple\+Measure.\+h.
+
+\mbox{\Hypertarget{classCSimpleMeasure_ad9c08324e46ef4eee5695e7ea1d00018}\label{classCSimpleMeasure_ad9c08324e46ef4eee5695e7ea1d00018}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!S\+I\+Factor@{S\+I\+Factor}}
+\index{S\+I\+Factor@{S\+I\+Factor}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{S\+I\+Factor()}{SIFactor()}}
+{\footnotesize\ttfamily const double C\+Simple\+Measure\+::\+S\+I\+Factor (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+getter of \hyperlink{classCSimpleMeasure_a08be520f9d3a0e50cc63693f2fc607f2}{C\+Simple\+Measure\+::d\+S\+I\+Factor} 
+
+\begin{DoxyReturn}{Returns}
+const double 
+\end{DoxyReturn}
+
+
+Definition at line 147 of file Simple\+Measure.\+h.
+
+\mbox{\Hypertarget{classCSimpleMeasure_a6e04ea2506105c069ae28650c5d69733}\label{classCSimpleMeasure_a6e04ea2506105c069ae28650c5d69733}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!S\+I\+Offset@{S\+I\+Offset}}
+\index{S\+I\+Offset@{S\+I\+Offset}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{S\+I\+Offset()}{SIOffset()}}
+{\footnotesize\ttfamily const double C\+Simple\+Measure\+::\+S\+I\+Offset (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+getter of \hyperlink{classCSimpleMeasure_a27c1637c744a79856ee81869e2aa8890}{C\+Simple\+Measure\+::d\+S\+I\+Offset} 
+
+\begin{DoxyReturn}{Returns}
+const double 
+\end{DoxyReturn}
+
+
+Definition at line 153 of file Simple\+Measure.\+h.
+
+\mbox{\Hypertarget{classCSimpleMeasure_ac4c8b1c22393c6d9a6381f3d8dfdf3e4}\label{classCSimpleMeasure_ac4c8b1c22393c6d9a6381f3d8dfdf3e4}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!Valid@{Valid}}
+\index{Valid@{Valid}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{Valid()}{Valid()}}
+{\footnotesize\ttfamily bool C\+Simple\+Measure\+::\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+checks if \hyperlink{classCSimpleMeasure_aa23ed9eec21adb9a97c90a424e7ee18a}{C\+Simple\+Measure\+::\+Pre\+Index} and \hyperlink{classCSimpleMeasure_a191dbfa4cc374946bf8a82111f827d92}{C\+Simple\+Measure\+::\+Base\+Index} are valid indices ~\newline
+ defined in \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure} and \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} 
+
+\begin{DoxyReturn}{Returns}
+bool, true in case the indices are valid 
+\end{DoxyReturn}
+
+
+Definition at line 131 of file Simple\+Measure.\+h.
+
+
+
+References bm\+First, and pm\+First.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classCSimpleMeasure_a49ff8edb85c7d35ec3940a509b2c748f}\label{classCSimpleMeasure_a49ff8edb85c7d35ec3940a509b2c748f}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!C\+Base\+Measure@{C\+Base\+Measure}}
+\index{C\+Base\+Measure@{C\+Base\+Measure}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{C\+Base\+Measure}{CBaseMeasure}}
+{\footnotesize\ttfamily friend class \hyperlink{classCBaseMeasure}{C\+Base\+Measure}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 42 of file Simple\+Measure.\+h.
+
+\mbox{\Hypertarget{classCSimpleMeasure_a39437e1df05e59fd328fbf69e55b45fa}\label{classCSimpleMeasure_a39437e1df05e59fd328fbf69e55b45fa}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!C\+Pre\+Measure@{C\+Pre\+Measure}}
+\index{C\+Pre\+Measure@{C\+Pre\+Measure}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{C\+Pre\+Measure}{CPreMeasure}}
+{\footnotesize\ttfamily friend class \hyperlink{classCPreMeasure}{C\+Pre\+Measure}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 41 of file Simple\+Measure.\+h.
+
+\mbox{\Hypertarget{classCSimpleMeasure_ac514d5155adc5a8f0ed981fdb4815491}\label{classCSimpleMeasure_ac514d5155adc5a8f0ed981fdb4815491}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!C\+Singleton$<$ C\+Base\+Measure $>$@{C\+Singleton$<$ C\+Base\+Measure $>$}}
+\index{C\+Singleton$<$ C\+Base\+Measure $>$@{C\+Singleton$<$ C\+Base\+Measure $>$}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{C\+Singleton$<$ C\+Base\+Measure $>$}{CSingleton< CBaseMeasure >}}
+{\footnotesize\ttfamily friend class \hyperlink{classCSingleton}{C\+Singleton}$<$ \hyperlink{classCBaseMeasure}{C\+Base\+Measure} $>$\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 44 of file Simple\+Measure.\+h.
+
+\mbox{\Hypertarget{classCSimpleMeasure_acbeb06f43abf4b8c9a86136c2b7bfe5f}\label{classCSimpleMeasure_acbeb06f43abf4b8c9a86136c2b7bfe5f}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!C\+Singleton$<$ C\+Pre\+Measure $>$@{C\+Singleton$<$ C\+Pre\+Measure $>$}}
+\index{C\+Singleton$<$ C\+Pre\+Measure $>$@{C\+Singleton$<$ C\+Pre\+Measure $>$}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{C\+Singleton$<$ C\+Pre\+Measure $>$}{CSingleton< CPreMeasure >}}
+{\footnotesize\ttfamily friend class \hyperlink{classCSingleton}{C\+Singleton}$<$ \hyperlink{classCPreMeasure}{C\+Pre\+Measure} $>$\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 43 of file Simple\+Measure.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classCSimpleMeasure_a191dbfa4cc374946bf8a82111f827d92}\label{classCSimpleMeasure_a191dbfa4cc374946bf8a82111f827d92}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!Base\+Index@{Base\+Index}}
+\index{Base\+Index@{Base\+Index}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{Base\+Index}{BaseIndex}}
+{\footnotesize\ttfamily \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} C\+Simple\+Measure\+::\+Base\+Index\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+index of type \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure}\+:~\newline
+ used to get elements from the vectors of \hyperlink{BaseMeasure_8h_a79bcfb6bde984f42d1124b068a509af7}{B\+A\+SE}\+: 
+
+
+\begin{DoxyItemize}
+\item \hyperlink{classCBaseMeasure_a7220e3dfd4fbdd319a5c3c6af844259e}{C\+Base\+Measure\+::vd\+Offset}
+\item \hyperlink{classCVectorHandle_af8f8b2e0da8363e695872ca85f33364e}{C\+Base\+Measure\+::vd\+Factor}
+\item \hyperlink{classCVectorHandle_afb50c8a33d4cf70bf92c644dca409ea2}{C\+Base\+Measure\+::vstr\+Short}
+\item \hyperlink{classCVectorHandle_a71bec0e385b9ca8e5ffa174b559da9f8}{C\+Base\+Measure\+::vstr\+Long} 
+\end{DoxyItemize}
+
+Definition at line 203 of file Simple\+Measure.\+h.
+
+\mbox{\Hypertarget{classCSimpleMeasure_a08be520f9d3a0e50cc63693f2fc607f2}\label{classCSimpleMeasure_a08be520f9d3a0e50cc63693f2fc607f2}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!d\+S\+I\+Factor@{d\+S\+I\+Factor}}
+\index{d\+S\+I\+Factor@{d\+S\+I\+Factor}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{d\+S\+I\+Factor}{dSIFactor}}
+{\footnotesize\ttfamily double C\+Simple\+Measure\+::d\+S\+I\+Factor\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+factor which must be applied this \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure} to achieve SI measure (e.\+g. mV \+: S\+I\+Factor = 1000).~\newline
+ This factor must be applied in combination with \hyperlink{classCSimpleMeasure_a27c1637c744a79856ee81869e2aa8890}{C\+Simple\+Measure\+::d\+S\+I\+Offset}\+:~\newline
+ S\+I\+Measure = S\+I\+Factor $\ast$ Measure + S\+I\+Offset 
+
+
+
+Definition at line 222 of file Simple\+Measure.\+h.
+
+\mbox{\Hypertarget{classCSimpleMeasure_a27c1637c744a79856ee81869e2aa8890}\label{classCSimpleMeasure_a27c1637c744a79856ee81869e2aa8890}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!d\+S\+I\+Offset@{d\+S\+I\+Offset}}
+\index{d\+S\+I\+Offset@{d\+S\+I\+Offset}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{d\+S\+I\+Offset}{dSIOffset}}
+{\footnotesize\ttfamily double C\+Simple\+Measure\+::d\+S\+I\+Offset\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+offset (SI measure) which must added to this \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure} to achieve the corresponding SI measure~\newline
+ E.\+g. °C\+: S\+I\+Offset = +273.15°K~\newline
+ This offset must be applied in combination with \hyperlink{classCSimpleMeasure_a08be520f9d3a0e50cc63693f2fc607f2}{C\+Simple\+Measure\+::d\+S\+I\+Factor}\+:~\newline
+ S\+I\+Measure = S\+I\+Factor $\ast$ Measure + S\+I\+Offset 
+
+
+
+Definition at line 231 of file Simple\+Measure.\+h.
+
+\mbox{\Hypertarget{classCSimpleMeasure_aa23ed9eec21adb9a97c90a424e7ee18a}\label{classCSimpleMeasure_aa23ed9eec21adb9a97c90a424e7ee18a}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!Pre\+Index@{Pre\+Index}}
+\index{Pre\+Index@{Pre\+Index}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{Pre\+Index}{PreIndex}}
+{\footnotesize\ttfamily \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure} C\+Simple\+Measure\+::\+Pre\+Index\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+index of type \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure}\+:~\newline
+ used to get elements from the vectors of \hyperlink{PreMeasure_8h_a349316092037fdd0773335fab4e15ee8}{P\+RE}\+: 
+
+
+\begin{DoxyItemize}
+\item C\+Pre\+Measure\+::vd\+Offset
+\item \hyperlink{classCVectorHandle_af8f8b2e0da8363e695872ca85f33364e}{C\+Pre\+Measure\+::vd\+Factor}
+\item \hyperlink{classCVectorHandle_afb50c8a33d4cf70bf92c644dca409ea2}{C\+Pre\+Measure\+::vstr\+Short}
+\item \hyperlink{classCVectorHandle_a71bec0e385b9ca8e5ffa174b559da9f8}{C\+Pre\+Measure\+::vstr\+Long} 
+\end{DoxyItemize}
+
+Definition at line 214 of file Simple\+Measure.\+h.
+
+\mbox{\Hypertarget{classCSimpleMeasure_a5761fb46fb35ce577066ef1e7ec1ab2e}\label{classCSimpleMeasure_a5761fb46fb35ce577066ef1e7ec1ab2e}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!str\+Long@{str\+Long}}
+\index{str\+Long@{str\+Long}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{str\+Long}{strLong}}
+{\footnotesize\ttfamily string$\ast$ C\+Simple\+Measure\+::str\+Long\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+long label of this \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure}\+: ~\newline
+ combination of the pre-\/measure long label (see P\+R\+E\+::\+Long)~\newline
+ and the base-\/measure long label (see B\+A\+S\+E\+::\+Long) 
+
+
+
+Definition at line 247 of file Simple\+Measure.\+h.
+
+\mbox{\Hypertarget{classCSimpleMeasure_a39260e6516c163955c34dce6795292ad}\label{classCSimpleMeasure_a39260e6516c163955c34dce6795292ad}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!str\+Short@{str\+Short}}
+\index{str\+Short@{str\+Short}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{str\+Short}{strShort}}
+{\footnotesize\ttfamily string$\ast$ C\+Simple\+Measure\+::str\+Short\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+short label of this \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure}\+: ~\newline
+ combination of the pre-\/measure short label (see P\+R\+E\+::\+Short)~\newline
+ and the base-\/measure short label (see B\+A\+S\+E\+::\+Short) 
+
+
+
+Definition at line 239 of file Simple\+Measure.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Floating\+Measure/\+Measure/\hyperlink{SimpleMeasure_8h}{Simple\+Measure.\+h}\item 
+Floating\+Measure/\+Measure/\hyperlink{SimpleMeasure_8cpp}{Simple\+Measure.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$d0/dea/classCVectorHandle.html" title="This class keeps three vectors (two string : Short and Long and one double : Factor). These vectors are common to classes CPreMeasure and CBaseMeasure and are therefore packed into this class for vector handling. " alt="" coords="5,56,124,83"/>
+<area shape="rect" id="node2" href="$d8/d59/classCBaseMeasure.html" title="CBaseMeasure: represents the base&#45;measure part of a measure. &#160;For example milli degree celsius consis..." alt="" coords="185,5,303,32"/>
+<area shape="rect" id="node3" href="$d8/df1/classCMeasureOperator.html" title="CMeasureOperator: this class is actually unused ... " alt="" coords="172,56,316,83"/>
+<area shape="rect" id="node4" href="$db/d03/classCPreMeasure.html" title="CPreMeasure represents the pre&#45;measure part of a measure. &#160;&#160;For example milli volt consists of the ba..." alt="" coords="189,107,299,133"/>
+</map>

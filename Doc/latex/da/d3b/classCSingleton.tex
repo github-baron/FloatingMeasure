@@ -1,0 +1,122 @@
+\hypertarget{classCSingleton}{}\section{C\+Singleton$<$ Singleton\+Object $>$ Class Template Reference}
+\label{classCSingleton}\index{C\+Singleton$<$ Singleton\+Object $>$@{C\+Singleton$<$ Singleton\+Object $>$}}
+
+
+a Singleton class for a generic Singleton\+Object  
+
+
+
+
+{\ttfamily \#include $<$Utils.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classCSingleton_ad790e6c170b3e2da7fbb10873eeb882e}{$\sim$\+C\+Singleton} ()
+\begin{DoxyCompactList}\small\item\em virtual destructor \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Singleton\+Object $\ast$ \hyperlink{classCSingleton_a58f5ac3aaaea8079a373350594726bdf}{instance} ()
+\begin{DoxyCompactList}\small\item\em allocates instance for member \hyperlink{classCSingleton_a690e0816be5d469e60d074cf8c5d139c}{C\+Singleton$<$ Singleton\+Object $>$\+::\+\_\+instance} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCSingleton_aa03a7284f8092927696c3a94ef87cf31}{C\+Singleton} ()
+\begin{DoxyCompactList}\small\item\em protected default constructor\+: ~\newline
+ avoids allocation like \char`\"{}\+Singleton\+Object My\+Singleton\char`\"{} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static Singleton\+Object $\ast$ \hyperlink{classCSingleton_a690e0816be5d469e60d074cf8c5d139c}{\+\_\+instance} = nullptr
+\begin{DoxyCompactList}\small\item\em private \char`\"{}reflexive\char`\"{} pointer of Singleton\+Object\+:~\newline
+ will be instantiated by \hyperlink{classCSingleton_a58f5ac3aaaea8079a373350594726bdf}{C\+Singleton\+::instance()} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename Singleton\+Object$>$\newline
+class C\+Singleton$<$ Singleton\+Object $>$}
+
+a Singleton class for a generic Singleton\+Object 
+
+Definition at line 135 of file Utils.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCSingleton_ad790e6c170b3e2da7fbb10873eeb882e}\label{classCSingleton_ad790e6c170b3e2da7fbb10873eeb882e}} 
+\index{C\+Singleton@{C\+Singleton}!````~C\+Singleton@{$\sim$\+C\+Singleton}}
+\index{````~C\+Singleton@{$\sim$\+C\+Singleton}!C\+Singleton@{C\+Singleton}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Singleton()}{~CSingleton()}}
+{\footnotesize\ttfamily template$<$typename Singleton\+Object $>$ \\
+virtual \hyperlink{classCSingleton}{C\+Singleton}$<$ Singleton\+Object $>$\+::$\sim$\hyperlink{classCSingleton}{C\+Singleton} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+virtual destructor 
+
+
+
+Definition at line 154 of file Utils.\+h.
+
+\mbox{\Hypertarget{classCSingleton_aa03a7284f8092927696c3a94ef87cf31}\label{classCSingleton_aa03a7284f8092927696c3a94ef87cf31}} 
+\index{C\+Singleton@{C\+Singleton}!C\+Singleton@{C\+Singleton}}
+\index{C\+Singleton@{C\+Singleton}!C\+Singleton@{C\+Singleton}}
+\subsubsection{\texorpdfstring{C\+Singleton()}{CSingleton()}}
+{\footnotesize\ttfamily template$<$typename Singleton\+Object $>$ \\
+\hyperlink{classCSingleton}{C\+Singleton}$<$ Singleton\+Object $>$\+::\hyperlink{classCSingleton}{C\+Singleton} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+protected default constructor\+: ~\newline
+ avoids allocation like \char`\"{}\+Singleton\+Object My\+Singleton\char`\"{} 
+
+
+
+Definition at line 164 of file Utils.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCSingleton_a58f5ac3aaaea8079a373350594726bdf}\label{classCSingleton_a58f5ac3aaaea8079a373350594726bdf}} 
+\index{C\+Singleton@{C\+Singleton}!instance@{instance}}
+\index{instance@{instance}!C\+Singleton@{C\+Singleton}}
+\subsubsection{\texorpdfstring{instance()}{instance()}}
+{\footnotesize\ttfamily template$<$typename Singleton\+Object $>$ \\
+static Singleton\+Object$\ast$ \hyperlink{classCSingleton}{C\+Singleton}$<$ Singleton\+Object $>$\+::instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+allocates instance for member \hyperlink{classCSingleton_a690e0816be5d469e60d074cf8c5d139c}{C\+Singleton$<$ Singleton\+Object $>$\+::\+\_\+instance} 
+
+\begin{DoxyReturn}{Returns}
+Singleton\+Object$\ast$ 
+\end{DoxyReturn}
+
+
+Definition at line 143 of file Utils.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classCSingleton_a690e0816be5d469e60d074cf8c5d139c}\label{classCSingleton_a690e0816be5d469e60d074cf8c5d139c}} 
+\index{C\+Singleton@{C\+Singleton}!\+\_\+instance@{\+\_\+instance}}
+\index{\+\_\+instance@{\+\_\+instance}!C\+Singleton@{C\+Singleton}}
+\subsubsection{\texorpdfstring{\+\_\+instance}{\_instance}}
+{\footnotesize\ttfamily template$<$typename Singleton\+Object $>$ \\
+Singleton\+Object $\ast$ \hyperlink{classCSingleton}{C\+Singleton}$<$ Singleton\+Object $>$\+::\+\_\+instance = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+private \char`\"{}reflexive\char`\"{} pointer of Singleton\+Object\+:~\newline
+ will be instantiated by \hyperlink{classCSingleton_a58f5ac3aaaea8079a373350594726bdf}{C\+Singleton\+::instance()} 
+
+global definition and initialization of \hyperlink{classCSingleton_a690e0816be5d469e60d074cf8c5d139c}{C\+Singleton\+::\+\_\+instance} 
+
+Definition at line 173 of file Utils.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Floating\+Measure/\+Utils/\hyperlink{Utils_8h}{Utils.\+h}\end{DoxyCompactItemize}

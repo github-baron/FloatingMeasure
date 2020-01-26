@@ -1,0 +1,3 @@
+<map id="CBaseMeasure" name="CBaseMeasure">
+<area shape="rect" id="node2" href="$d0/dea/classCVectorHandle.html" title="This class keeps three vectors (two string : Short and Long and one double : Factor). These vectors are common to classes CPreMeasure and CBaseMeasure and are therefore packed into this class for vector handling. " alt="" coords="5,5,124,32"/>
+</map>

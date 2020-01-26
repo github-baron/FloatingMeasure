@@ -1,0 +1,330 @@
+\hypertarget{classCPreMeasure}{}\section{C\+Pre\+Measure Class Reference}
+\label{classCPreMeasure}\index{C\+Pre\+Measure@{C\+Pre\+Measure}}
+
+
+\hyperlink{classCPreMeasure}{C\+Pre\+Measure} represents the pre-\/measure part of a measure. ~\newline
+ For example milli volt consists of the base-\/measure part \char`\"{}\+Volt\char`\"{} (see \hyperlink{classCBaseMeasure}{C\+Base\+Measure}) and the pre-\/measure part \char`\"{}milli\char`\"{}. ~\newline
+ This class handles vectors of\+:  
+
+
+
+
+{\ttfamily \#include $<$Pre\+Measure.\+h$>$}
+
+
+
+Inheritance diagram for C\+Pre\+Measure\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{d9/da8/classCPreMeasure__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for C\+Pre\+Measure\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{d4/d1d/classCPreMeasure__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCPreMeasure_acf40211e2818677f65b85f2db360c001}{C\+Pre\+Measure} ()
+\begin{DoxyCompactList}\small\item\em default constructor\+: initialize all member vectors of \hyperlink{classCPreMeasure}{C\+Pre\+Measure}\+: \end{DoxyCompactList}\item 
+\hyperlink{classCPreMeasure_ab927f07495fc7757c1488010f4440bc0}{$\sim$\+C\+Pre\+Measure} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+string \hyperlink{classCPreMeasure_aa097540f3c74a3c616dee8ed1e120489}{Debug\+Out} (const int n\+Index)
+\begin{DoxyCompactList}\small\item\em returns all representations in a string \end{DoxyCompactList}\item 
+string \hyperlink{classCPreMeasure_a15f09957565ea1a5b4ca5975c1bbd76a}{Debug\+Out} (const \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure} Pre\+Measure\+Enum)
+\begin{DoxyCompactList}\small\item\em returns all representations in a string \end{DoxyCompactList}\item 
+int \hyperlink{classCPreMeasure_a1f6c35d76304a9eeb8105a53df63df0f}{Exp10} (const int n\+Exp10\+Idx)
+\begin{DoxyCompactList}\small\item\em returns the exp10 (see \hyperlink{classCPreMeasure_a2c50eadae55427f0d77a013b3fab0fdb}{C\+Pre\+Measure\+::vn\+Exp10}) for a given pre-\/measure \end{DoxyCompactList}\item 
+\hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure} \hyperlink{classCPreMeasure_a6d9ee00647db5c9cb13e229c375096f8}{Get\+I\+D\+By\+Short\+Label} (const string \&str\+Short\+Label)
+\begin{DoxyCompactList}\small\item\em returns the enum (index) of the pre-\/measure by searching the vstr\+Short \end{DoxyCompactList}\item 
+\hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure} \hyperlink{classCPreMeasure_a5c47dca5a6bc34def68e6a2c7b4c5caa}{Get\+I\+D\+By\+Long\+Label} (const string \&str\+Long\+Label)
+\begin{DoxyCompactList}\small\item\em returns the enum (index) of the pre-\/measure by searching the vstr\+Long \end{DoxyCompactList}\item 
+\hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure} \hyperlink{classCPreMeasure_a90984e3bfb9676fca033289504d10219}{Get\+I\+D\+By\+Factor} (const double d\+Pre\+Measure\+Factor)
+\begin{DoxyCompactList}\small\item\em returns the enum (index) of the pre-\/measure by searching the vd\+Factor \end{DoxyCompactList}\item 
+\hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure} \hyperlink{classCPreMeasure_a4f198103711ef15bac65a5011f32923e}{Get\+I\+D\+By\+Exp10} (const int n\+Exp10)
+\begin{DoxyCompactList}\small\item\em returns the enum (index) of the pre-\/measure by searching the vn\+Exp10 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ int $>$ $\ast$ \hyperlink{classCPreMeasure_a2c50eadae55427f0d77a013b3fab0fdb}{vn\+Exp10}
+\begin{DoxyCompactList}\small\item\em the exponents to the base of 10 (exp10 from now on) of the corresponding factors stored in \hyperlink{classCVectorHandle_af8f8b2e0da8363e695872ca85f33364e}{C\+Vector\+Handle\+::vd\+Factor} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classCPreMeasure}{C\+Pre\+Measure} represents the pre-\/measure part of a measure. ~\newline
+ For example milli volt consists of the base-\/measure part \char`\"{}\+Volt\char`\"{} (see \hyperlink{classCBaseMeasure}{C\+Base\+Measure}) and the pre-\/measure part \char`\"{}milli\char`\"{}. ~\newline
+ This class handles vectors of\+: 
+
+
+\begin{DoxyItemize}
+\item pre-\/measure factor (e.\+g. for \char`\"{}milli\char`\"{} with index \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620aff93812e5c2f401cb10fe430a1d341f4}{pm\+Milli} the factor is 0.\+001)
+\item the exponent to the base of 10 of the pre-\/measure factor (e.\+g. for \char`\"{}milli\char`\"{} the exp10 is -\/3)
+\item the short label (e.\+g. for \char`\"{}milli\char`\"{} the short label is \char`\"{}m\char`\"{})
+\item the long label (e.\+g. for \char`\"{}milli\char`\"{} the long label is \char`\"{}milli\char`\"{})~\newline
+ These vectors are accessed by the indices defined by the enum \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure}.~\newline
+ The indices can be vice versa accessed by
+\item pre-\/measure factor
+\item exp10
+\item short label
+\item long label 
+\end{DoxyItemize}
+
+Definition at line 75 of file Pre\+Measure.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCPreMeasure_acf40211e2818677f65b85f2db360c001}\label{classCPreMeasure_acf40211e2818677f65b85f2db360c001}} 
+\index{C\+Pre\+Measure@{C\+Pre\+Measure}!C\+Pre\+Measure@{C\+Pre\+Measure}}
+\index{C\+Pre\+Measure@{C\+Pre\+Measure}!C\+Pre\+Measure@{C\+Pre\+Measure}}
+\subsubsection{\texorpdfstring{C\+Pre\+Measure()}{CPreMeasure()}}
+{\footnotesize\ttfamily C\+Pre\+Measure\+::\+C\+Pre\+Measure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+default constructor\+: initialize all member vectors of \hyperlink{classCPreMeasure}{C\+Pre\+Measure}\+: 
+
+
+\begin{DoxyItemize}
+\item \hyperlink{classCVectorHandle_af8f8b2e0da8363e695872ca85f33364e}{C\+Pre\+Measure\+::vd\+Factor}
+\item \hyperlink{classCPreMeasure_a2c50eadae55427f0d77a013b3fab0fdb}{C\+Pre\+Measure\+::vn\+Exp10}
+\item \hyperlink{classCVectorHandle_afb50c8a33d4cf70bf92c644dca409ea2}{C\+Pre\+Measure\+::vstr\+Short}
+\item \hyperlink{classCVectorHandle_a71bec0e385b9ca8e5ffa174b559da9f8}{C\+Pre\+Measure\+::vstr\+Long} 
+\end{DoxyItemize}
+
+Definition at line 27 of file Pre\+Measure.\+cpp.
+
+
+
+References I\+N\+V\+A\+L\+I\+D\+\_\+\+E\+X\+P\+O\+N\+E\+NT, mu, pm\+Centi, pm\+Deca, pm\+Deci, pm\+Exa, pm\+Femto, pm\+Giga, pm\+Hecto, pm\+Ident, pm\+Kilo, pm\+Last, pm\+Mega, pm\+Micro, pm\+Milli, pm\+Nano, pm\+Peta, pm\+Piko, pm\+Tera, pm\+Unknown, pm\+Yotta, pm\+Zetta, U\+N\+K\+N\+O\+W\+N\+\_\+\+L\+O\+NG, U\+N\+K\+N\+O\+W\+N\+\_\+\+S\+H\+O\+RT, C\+Vector\+Handle\+::vd\+Factor, vn\+Exp10, C\+Vector\+Handle\+::vstr\+Long, and C\+Vector\+Handle\+::vstr\+Short.
+
+\mbox{\Hypertarget{classCPreMeasure_ab927f07495fc7757c1488010f4440bc0}\label{classCPreMeasure_ab927f07495fc7757c1488010f4440bc0}} 
+\index{C\+Pre\+Measure@{C\+Pre\+Measure}!````~C\+Pre\+Measure@{$\sim$\+C\+Pre\+Measure}}
+\index{````~C\+Pre\+Measure@{$\sim$\+C\+Pre\+Measure}!C\+Pre\+Measure@{C\+Pre\+Measure}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Pre\+Measure()}{~CPreMeasure()}}
+{\footnotesize\ttfamily C\+Pre\+Measure\+::$\sim$\+C\+Pre\+Measure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. 
+
+
+
+Definition at line 135 of file Pre\+Measure.\+cpp.
+
+
+
+References Secure\+Delete\+Object\+Pointer(), and vn\+Exp10.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCPreMeasure_aa097540f3c74a3c616dee8ed1e120489}\label{classCPreMeasure_aa097540f3c74a3c616dee8ed1e120489}} 
+\index{C\+Pre\+Measure@{C\+Pre\+Measure}!Debug\+Out@{Debug\+Out}}
+\index{Debug\+Out@{Debug\+Out}!C\+Pre\+Measure@{C\+Pre\+Measure}}
+\subsubsection{\texorpdfstring{Debug\+Out()}{DebugOut()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily string C\+Pre\+Measure\+::\+Debug\+Out (\begin{DoxyParamCaption}\item[{const int}]{n\+Index }\end{DoxyParamCaption})}
+
+
+
+returns all representations in a string 
+
+\begin{DoxyReturn}{Returns}
+string\+: output string 
+\end{DoxyReturn}
+
+
+Definition at line 200 of file Pre\+Measure.\+cpp.
+
+
+
+References C\+Vector\+Handle\+::\+Factor(), C\+Vector\+Handle\+::\+Long(), and C\+Vector\+Handle\+::\+Short().
+
+\mbox{\Hypertarget{classCPreMeasure_a15f09957565ea1a5b4ca5975c1bbd76a}\label{classCPreMeasure_a15f09957565ea1a5b4ca5975c1bbd76a}} 
+\index{C\+Pre\+Measure@{C\+Pre\+Measure}!Debug\+Out@{Debug\+Out}}
+\index{Debug\+Out@{Debug\+Out}!C\+Pre\+Measure@{C\+Pre\+Measure}}
+\subsubsection{\texorpdfstring{Debug\+Out()}{DebugOut()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily string C\+Pre\+Measure\+::\+Debug\+Out (\begin{DoxyParamCaption}\item[{const \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure}}]{Pre\+Measure\+Enum }\end{DoxyParamCaption})}
+
+
+
+returns all representations in a string 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Pre\+Measure\+Enum} & p\+\_\+\+Pre\+Measure\+Enum\+:... \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 207 of file Pre\+Measure.\+cpp.
+
+
+
+References Debug\+Out().
+
+\mbox{\Hypertarget{classCPreMeasure_a1f6c35d76304a9eeb8105a53df63df0f}\label{classCPreMeasure_a1f6c35d76304a9eeb8105a53df63df0f}} 
+\index{C\+Pre\+Measure@{C\+Pre\+Measure}!Exp10@{Exp10}}
+\index{Exp10@{Exp10}!C\+Pre\+Measure@{C\+Pre\+Measure}}
+\subsubsection{\texorpdfstring{Exp10()}{Exp10()}}
+{\footnotesize\ttfamily int C\+Pre\+Measure\+::\+Exp10 (\begin{DoxyParamCaption}\item[{const int}]{n\+Exp10\+Idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+returns the exp10 (see \hyperlink{classCPreMeasure_a2c50eadae55427f0d77a013b3fab0fdb}{C\+Pre\+Measure\+::vn\+Exp10}) for a given pre-\/measure 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Exp10\+Idx} & p\+\_\+n\+Exp10\+Idx\+: is e.\+g. e\+Pre\+Measure\+::pm\+Milli (returns -\/3 in this case) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 125 of file Pre\+Measure.\+h.
+
+
+
+References Get\+Element\+From\+Vector\+By\+Index().
+
+\mbox{\Hypertarget{classCPreMeasure_a4f198103711ef15bac65a5011f32923e}\label{classCPreMeasure_a4f198103711ef15bac65a5011f32923e}} 
+\index{C\+Pre\+Measure@{C\+Pre\+Measure}!Get\+I\+D\+By\+Exp10@{Get\+I\+D\+By\+Exp10}}
+\index{Get\+I\+D\+By\+Exp10@{Get\+I\+D\+By\+Exp10}!C\+Pre\+Measure@{C\+Pre\+Measure}}
+\subsubsection{\texorpdfstring{Get\+I\+D\+By\+Exp10()}{GetIDByExp10()}}
+{\footnotesize\ttfamily \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure} C\+Pre\+Measure\+::\+Get\+I\+D\+By\+Exp10 (\begin{DoxyParamCaption}\item[{const int}]{n\+Exp10 }\end{DoxyParamCaption})}
+
+
+
+returns the enum (index) of the pre-\/measure by searching the vn\+Exp10 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Exp10} & \$\{p\+\_\+n\+Exp10\+:...\} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+e\+Pre\+Measure 
+\end{DoxyReturn}
+
+
+Definition at line 183 of file Pre\+Measure.\+cpp.
+
+
+
+References abs(), Exp10(), pm\+First, and vn\+Exp10.
+
+\mbox{\Hypertarget{classCPreMeasure_a90984e3bfb9676fca033289504d10219}\label{classCPreMeasure_a90984e3bfb9676fca033289504d10219}} 
+\index{C\+Pre\+Measure@{C\+Pre\+Measure}!Get\+I\+D\+By\+Factor@{Get\+I\+D\+By\+Factor}}
+\index{Get\+I\+D\+By\+Factor@{Get\+I\+D\+By\+Factor}!C\+Pre\+Measure@{C\+Pre\+Measure}}
+\subsubsection{\texorpdfstring{Get\+I\+D\+By\+Factor()}{GetIDByFactor()}}
+{\footnotesize\ttfamily \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure} C\+Pre\+Measure\+::\+Get\+I\+D\+By\+Factor (\begin{DoxyParamCaption}\item[{const double}]{d\+Pre\+Measure\+Factor }\end{DoxyParamCaption})}
+
+
+
+returns the enum (index) of the pre-\/measure by searching the vd\+Factor 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d\+Pre\+Measure\+Factor} & p\+\_\+d\+Pre\+Measure\+Factor\+: user given factor (e.\+g. 0.\+001 returns e\+Pre\+Measure\+::pm\+Milli) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+e\+Pre\+Measure 
+\end{DoxyReturn}
+
+
+Definition at line 142 of file Pre\+Measure.\+cpp.
+
+
+
+References C\+Vector\+Handle\+::\+Factor(), pm\+First, pm\+Last, pm\+Unknown, and C\+Vector\+Handle\+::vd\+Factor.
+
+\mbox{\Hypertarget{classCPreMeasure_a5c47dca5a6bc34def68e6a2c7b4c5caa}\label{classCPreMeasure_a5c47dca5a6bc34def68e6a2c7b4c5caa}} 
+\index{C\+Pre\+Measure@{C\+Pre\+Measure}!Get\+I\+D\+By\+Long\+Label@{Get\+I\+D\+By\+Long\+Label}}
+\index{Get\+I\+D\+By\+Long\+Label@{Get\+I\+D\+By\+Long\+Label}!C\+Pre\+Measure@{C\+Pre\+Measure}}
+\subsubsection{\texorpdfstring{Get\+I\+D\+By\+Long\+Label()}{GetIDByLongLabel()}}
+{\footnotesize\ttfamily \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure} C\+Pre\+Measure\+::\+Get\+I\+D\+By\+Long\+Label (\begin{DoxyParamCaption}\item[{const string \&}]{str\+Long\+Label }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+returns the enum (index) of the pre-\/measure by searching the vstr\+Long 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str\+Long\+Label} & long label of the enum (e.\+g. \char`\"{}milli\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+e\+Pre\+Measure\+: the pre-\/measure index (e.\+g. e\+Pre\+Measure\+::pm\+Milli) 
+\end{DoxyReturn}
+
+
+Definition at line 150 of file Pre\+Measure.\+h.
+
+
+
+References C\+Vector\+Handle\+::\+Get\+Index\+By\+Long\+Label().
+
+\mbox{\Hypertarget{classCPreMeasure_a6d9ee00647db5c9cb13e229c375096f8}\label{classCPreMeasure_a6d9ee00647db5c9cb13e229c375096f8}} 
+\index{C\+Pre\+Measure@{C\+Pre\+Measure}!Get\+I\+D\+By\+Short\+Label@{Get\+I\+D\+By\+Short\+Label}}
+\index{Get\+I\+D\+By\+Short\+Label@{Get\+I\+D\+By\+Short\+Label}!C\+Pre\+Measure@{C\+Pre\+Measure}}
+\subsubsection{\texorpdfstring{Get\+I\+D\+By\+Short\+Label()}{GetIDByShortLabel()}}
+{\footnotesize\ttfamily \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure} C\+Pre\+Measure\+::\+Get\+I\+D\+By\+Short\+Label (\begin{DoxyParamCaption}\item[{const string \&}]{str\+Short\+Label }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+returns the enum (index) of the pre-\/measure by searching the vstr\+Short 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str\+Short\+Label} & short label of the enum (e.\+g. \char`\"{}m\char`\"{} returns e\+Pre\+Measure\+::pm\+Milli) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+e\+Pre\+Measure 
+\end{DoxyReturn}
+
+
+Definition at line 139 of file Pre\+Measure.\+h.
+
+
+
+References C\+Vector\+Handle\+::\+Get\+Index\+By\+Short\+Label().
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classCPreMeasure_a2c50eadae55427f0d77a013b3fab0fdb}\label{classCPreMeasure_a2c50eadae55427f0d77a013b3fab0fdb}} 
+\index{C\+Pre\+Measure@{C\+Pre\+Measure}!vn\+Exp10@{vn\+Exp10}}
+\index{vn\+Exp10@{vn\+Exp10}!C\+Pre\+Measure@{C\+Pre\+Measure}}
+\subsubsection{\texorpdfstring{vn\+Exp10}{vnExp10}}
+{\footnotesize\ttfamily vector$<$int$>$$\ast$ C\+Pre\+Measure\+::vn\+Exp10\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+the exponents to the base of 10 (exp10 from now on) of the corresponding factors stored in \hyperlink{classCVectorHandle_af8f8b2e0da8363e695872ca85f33364e}{C\+Vector\+Handle\+::vd\+Factor} 
+
+
+
+Definition at line 178 of file Pre\+Measure.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Floating\+Measure/\+Measure/\hyperlink{PreMeasure_8h}{Pre\+Measure.\+h}\item 
+Floating\+Measure/\+Measure/\hyperlink{PreMeasure_8cpp}{Pre\+Measure.\+cpp}\end{DoxyCompactItemize}

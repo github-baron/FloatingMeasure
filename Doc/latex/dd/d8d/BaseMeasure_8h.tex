@@ -1,0 +1,205 @@
+\hypertarget{BaseMeasure_8h}{}\section{Floating\+Measure/\+Measure/\+Base\+Measure.h File Reference}
+\label{BaseMeasure_8h}\index{Floating\+Measure/\+Measure/\+Base\+Measure.\+h@{Floating\+Measure/\+Measure/\+Base\+Measure.\+h}}
+{\ttfamily \#include \char`\"{}Vector\+Handle.\+h\char`\"{}}\newline
+Include dependency graph for Base\+Measure.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d8/d1f/BaseMeasure_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/ddc/BaseMeasure_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classCBaseMeasure}{C\+Base\+Measure}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classCBaseMeasure}{C\+Base\+Measure}\+: represents the base-\/measure part of a measure.~\newline
+ For example milli degree celsius consists of the base-\/measure part \char`\"{}degree celsius\char`\"{} (see \hyperlink{classCBaseMeasure}{C\+Base\+Measure}) and the pre-\/measure part \char`\"{}milli\char`\"{} (see \hyperlink{classCPreMeasure}{C\+Pre\+Measure}). ~\newline
+ This class handles vectors of\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{BaseMeasure_8h_a79bcfb6bde984f42d1124b068a509af7}{B\+A\+SE}~\hyperlink{classCSingleton_a58f5ac3aaaea8079a373350594726bdf}{C\+Base\+Measure\+Singleton\+::instance}()
+\begin{DoxyCompactList}\small\item\em shortcut to the singleton representation of \hyperlink{classCBaseMeasure}{C\+Base\+Measure} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classCSingleton}{C\+Singleton}$<$ \hyperlink{classCBaseMeasure}{C\+Base\+Measure} $>$ \hyperlink{BaseMeasure_8h_a0cf675413cb12be588422a57b33cce1f}{C\+Base\+Measure\+Singleton}
+\begin{DoxyCompactList}\small\item\em use \hyperlink{classCBaseMeasure}{C\+Base\+Measure} as a singleton \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} \{ \newline
+\hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a5c8528d80e9751805f662690f7764240}{bm\+Number} = 0, 
+\hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a5c5770bd8b4f62e351d3f08e1c074dec}{bm\+First} = bm\+Number, 
+\hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a662f2aa09627247b53e6f3c5cd10815e}{bm\+Volt}, 
+\hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11aa0bfa4e97216cd5d37576ed9c7124f37}{bm\+Ampere}, 
+\newline
+\hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a7d519faa41d1d34d9c378cfc61254074}{bm\+Deg\+Kelvin}, 
+\hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a42cee40c384c9bbda9aa488151b590b4}{bm\+Deg\+Celsius}, 
+\hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11add58e3d33a5d9459dbe3bf9d3f90777c}{bm\+Deg\+Fahrenheit}, 
+\hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a3c2b76106d8f5cd21cefc918b3487282}{bm\+Ohm}, 
+\newline
+\hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a5d8b1592b21e5fe3505a9ae4222ef85d}{bm\+Farad}, 
+\hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11af98f442616dcb74a8a3af3a05c65906a}{bm\+Hertz}, 
+\hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a154cadadef2b87dabd57e216a5e01f08}{bm\+Second}, 
+\hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11abb3a886332014c0b0b5f872651a325a3}{bm\+Minute}, 
+\newline
+\hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11afb903ec248fbb053df2e597d3962475d}{bm\+Hour}, 
+\hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a3b3d24fe3421db3173c33e175130c71c}{bm\+Day}, 
+\hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a648bcf7faf2a79b8e7a13e785a84295c}{bm\+Meter}, 
+\hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11aa336b6ad4081714bf4f1ba1aff14e192}{bm\+Inch}, 
+\newline
+\hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a5d3576c8ce233e10ee14736257ec240d}{bm\+Foot}, 
+\hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a4515cdd3e54e74cbe6a74b2fbc9731fe}{bm\+Yard}, 
+\hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11af69da55a5568ae3c6b417879e4eb22c4}{bm\+Mile}, 
+\hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a51111031ebb3a92041aa8821dc0bf076}{bm\+Last}, 
+\newline
+\hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11ac30190fee6f86e2f76b96886533f74d8}{bm\+Unknown} = bm\+Last
+ \}\begin{DoxyCompactList}\small\item\em enum for indexing the vectors of \hyperlink{classCBaseMeasure}{C\+Base\+Measure} \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{BaseMeasure_8h_a79bcfb6bde984f42d1124b068a509af7}\label{BaseMeasure_8h_a79bcfb6bde984f42d1124b068a509af7}} 
+\index{Base\+Measure.\+h@{Base\+Measure.\+h}!B\+A\+SE@{B\+A\+SE}}
+\index{B\+A\+SE@{B\+A\+SE}!Base\+Measure.\+h@{Base\+Measure.\+h}}
+\subsubsection{\texorpdfstring{B\+A\+SE}{BASE}}
+{\footnotesize\ttfamily \#define B\+A\+SE~\hyperlink{classCSingleton_a58f5ac3aaaea8079a373350594726bdf}{C\+Base\+Measure\+Singleton\+::instance}()}
+
+
+
+shortcut to the singleton representation of \hyperlink{classCBaseMeasure}{C\+Base\+Measure} 
+
+
+
+Definition at line 178 of file Base\+Measure.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{BaseMeasure_8h_a0cf675413cb12be588422a57b33cce1f}\label{BaseMeasure_8h_a0cf675413cb12be588422a57b33cce1f}} 
+\index{Base\+Measure.\+h@{Base\+Measure.\+h}!C\+Base\+Measure\+Singleton@{C\+Base\+Measure\+Singleton}}
+\index{C\+Base\+Measure\+Singleton@{C\+Base\+Measure\+Singleton}!Base\+Measure.\+h@{Base\+Measure.\+h}}
+\subsubsection{\texorpdfstring{C\+Base\+Measure\+Singleton}{CBaseMeasureSingleton}}
+{\footnotesize\ttfamily typedef \hyperlink{classCSingleton}{C\+Singleton}$<$\hyperlink{classCBaseMeasure}{C\+Base\+Measure}$>$ \hyperlink{BaseMeasure_8h_a0cf675413cb12be588422a57b33cce1f}{C\+Base\+Measure\+Singleton}}
+
+
+
+use \hyperlink{classCBaseMeasure}{C\+Base\+Measure} as a singleton 
+
+
+
+Definition at line 173 of file Base\+Measure.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}\label{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}} 
+\index{Base\+Measure.\+h@{Base\+Measure.\+h}!e\+Base\+Measure@{e\+Base\+Measure}}
+\index{e\+Base\+Measure@{e\+Base\+Measure}!Base\+Measure.\+h@{Base\+Measure.\+h}}
+\subsubsection{\texorpdfstring{e\+Base\+Measure}{eBaseMeasure}}
+{\footnotesize\ttfamily enum \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure}}
+
+
+
+enum for indexing the vectors of \hyperlink{classCBaseMeasure}{C\+Base\+Measure} 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bm\+Number@{bm\+Number}!Base\+Measure.\+h@{Base\+Measure.\+h}}\index{Base\+Measure.\+h@{Base\+Measure.\+h}!bm\+Number@{bm\+Number}}}\mbox{\Hypertarget{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a5c8528d80e9751805f662690f7764240}\label{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a5c8528d80e9751805f662690f7764240}} 
+bm\+Number&0 \+: simple measure-\/less number 1, short\+: \char`\"{}1\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bm\+First@{bm\+First}!Base\+Measure.\+h@{Base\+Measure.\+h}}\index{Base\+Measure.\+h@{Base\+Measure.\+h}!bm\+First@{bm\+First}}}\mbox{\Hypertarget{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a5c5770bd8b4f62e351d3f08e1c074dec}\label{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a5c5770bd8b4f62e351d3f08e1c074dec}} 
+bm\+First&0 \+: simple measure-\/less number is the starting element \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bm\+Volt@{bm\+Volt}!Base\+Measure.\+h@{Base\+Measure.\+h}}\index{Base\+Measure.\+h@{Base\+Measure.\+h}!bm\+Volt@{bm\+Volt}}}\mbox{\Hypertarget{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a662f2aa09627247b53e6f3c5cd10815e}\label{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a662f2aa09627247b53e6f3c5cd10815e}} 
+bm\+Volt&1 \+: factor\+: 1, offset\+: 0, S\+Iindex\+:1, short\+: \char`\"{}\+V\char`\"{}, long\+: \char`\"{}volt\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bm\+Ampere@{bm\+Ampere}!Base\+Measure.\+h@{Base\+Measure.\+h}}\index{Base\+Measure.\+h@{Base\+Measure.\+h}!bm\+Ampere@{bm\+Ampere}}}\mbox{\Hypertarget{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11aa0bfa4e97216cd5d37576ed9c7124f37}\label{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11aa0bfa4e97216cd5d37576ed9c7124f37}} 
+bm\+Ampere&2 \+: factor\+: 1, offset\+: 0, S\+Iindex\+:2, short\+: \char`\"{}\+A\char`\"{}, long\+: \char`\"{}ampere\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bm\+Deg\+Kelvin@{bm\+Deg\+Kelvin}!Base\+Measure.\+h@{Base\+Measure.\+h}}\index{Base\+Measure.\+h@{Base\+Measure.\+h}!bm\+Deg\+Kelvin@{bm\+Deg\+Kelvin}}}\mbox{\Hypertarget{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a7d519faa41d1d34d9c378cfc61254074}\label{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a7d519faa41d1d34d9c378cfc61254074}} 
+bm\+Deg\+Kelvin&3 \+: factor\+: 1, offset\+: 0, S\+Iindex\+:3, short\+: \char`\"{}°\+K\char`\"{}, long\+: \char`\"{}degree kelvin\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bm\+Deg\+Celsius@{bm\+Deg\+Celsius}!Base\+Measure.\+h@{Base\+Measure.\+h}}\index{Base\+Measure.\+h@{Base\+Measure.\+h}!bm\+Deg\+Celsius@{bm\+Deg\+Celsius}}}\mbox{\Hypertarget{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a42cee40c384c9bbda9aa488151b590b4}\label{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a42cee40c384c9bbda9aa488151b590b4}} 
+bm\+Deg\+Celsius&4 \+: factor\+: 1, offset\+: -\/273,15, S\+Iindex\+:3, short\+: \char`\"{}°\+C\char`\"{}, long\+: \char`\"{}degree celsius\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bm\+Deg\+Fahrenheit@{bm\+Deg\+Fahrenheit}!Base\+Measure.\+h@{Base\+Measure.\+h}}\index{Base\+Measure.\+h@{Base\+Measure.\+h}!bm\+Deg\+Fahrenheit@{bm\+Deg\+Fahrenheit}}}\mbox{\Hypertarget{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11add58e3d33a5d9459dbe3bf9d3f90777c}\label{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11add58e3d33a5d9459dbe3bf9d3f90777c}} 
+bm\+Deg\+Fahrenheit&5 \+: factor\+: 5/9, offset\+: 32-\/5./9.$\ast$273.15, S\+Iindex\+:3, short\+: \char`\"{}°\+F\char`\"{}, long\+: \char`\"{}degree fahrenheit\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bm\+Ohm@{bm\+Ohm}!Base\+Measure.\+h@{Base\+Measure.\+h}}\index{Base\+Measure.\+h@{Base\+Measure.\+h}!bm\+Ohm@{bm\+Ohm}}}\mbox{\Hypertarget{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a3c2b76106d8f5cd21cefc918b3487282}\label{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a3c2b76106d8f5cd21cefc918b3487282}} 
+bm\+Ohm&6 \+: factor\+: 1, offset\+: 0, S\+Iindex\+:6, short\+: "{$\Omega$}", long\+: \char`\"{}ohm\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bm\+Farad@{bm\+Farad}!Base\+Measure.\+h@{Base\+Measure.\+h}}\index{Base\+Measure.\+h@{Base\+Measure.\+h}!bm\+Farad@{bm\+Farad}}}\mbox{\Hypertarget{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a5d8b1592b21e5fe3505a9ae4222ef85d}\label{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a5d8b1592b21e5fe3505a9ae4222ef85d}} 
+bm\+Farad&7 \+: factor\+: 1, offset\+: 0, S\+Iindex\+:7, short\+: \char`\"{}\+F\char`\"{}, long\+: \char`\"{}farad\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bm\+Hertz@{bm\+Hertz}!Base\+Measure.\+h@{Base\+Measure.\+h}}\index{Base\+Measure.\+h@{Base\+Measure.\+h}!bm\+Hertz@{bm\+Hertz}}}\mbox{\Hypertarget{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11af98f442616dcb74a8a3af3a05c65906a}\label{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11af98f442616dcb74a8a3af3a05c65906a}} 
+bm\+Hertz&8 \+: factor\+: 1, offset\+: 0, S\+Iindex\+:8, short\+: \char`\"{}\+Hz\char`\"{}, long\+: \char`\"{}hertz\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bm\+Second@{bm\+Second}!Base\+Measure.\+h@{Base\+Measure.\+h}}\index{Base\+Measure.\+h@{Base\+Measure.\+h}!bm\+Second@{bm\+Second}}}\mbox{\Hypertarget{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a154cadadef2b87dabd57e216a5e01f08}\label{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a154cadadef2b87dabd57e216a5e01f08}} 
+bm\+Second&9 \+: factor\+: 1, offset\+: 0, S\+Iindex\+:9, short\+: \char`\"{}s\char`\"{}, long\+: \char`\"{}second\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bm\+Minute@{bm\+Minute}!Base\+Measure.\+h@{Base\+Measure.\+h}}\index{Base\+Measure.\+h@{Base\+Measure.\+h}!bm\+Minute@{bm\+Minute}}}\mbox{\Hypertarget{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11abb3a886332014c0b0b5f872651a325a3}\label{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11abb3a886332014c0b0b5f872651a325a3}} 
+bm\+Minute&10 \+: factor\+: 60,offset\+: 0, S\+Iindex\+:9, short\+: \char`\"{}min\char`\"{}, long\+: \char`\"{}minute\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bm\+Hour@{bm\+Hour}!Base\+Measure.\+h@{Base\+Measure.\+h}}\index{Base\+Measure.\+h@{Base\+Measure.\+h}!bm\+Hour@{bm\+Hour}}}\mbox{\Hypertarget{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11afb903ec248fbb053df2e597d3962475d}\label{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11afb903ec248fbb053df2e597d3962475d}} 
+bm\+Hour&11 \+: factor\+: 3600,offset\+: 0, S\+Iindex\+:9, short\+: \char`\"{}h\char`\"{}, long\+: \char`\"{}hour\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bm\+Day@{bm\+Day}!Base\+Measure.\+h@{Base\+Measure.\+h}}\index{Base\+Measure.\+h@{Base\+Measure.\+h}!bm\+Day@{bm\+Day}}}\mbox{\Hypertarget{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a3b3d24fe3421db3173c33e175130c71c}\label{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a3b3d24fe3421db3173c33e175130c71c}} 
+bm\+Day&12 \+: factor\+: 3600$\ast$24,offset\+: 0, S\+Iindex\+:9, short\+: \char`\"{}d\char`\"{}, long\+: \char`\"{}day\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bm\+Meter@{bm\+Meter}!Base\+Measure.\+h@{Base\+Measure.\+h}}\index{Base\+Measure.\+h@{Base\+Measure.\+h}!bm\+Meter@{bm\+Meter}}}\mbox{\Hypertarget{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a648bcf7faf2a79b8e7a13e785a84295c}\label{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a648bcf7faf2a79b8e7a13e785a84295c}} 
+bm\+Meter&12 \+: factor\+: 1, offset\+: 0, S\+Iindex\+:13, short\+: \char`\"{}m\char`\"{}, long\+: \char`\"{}meter\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bm\+Inch@{bm\+Inch}!Base\+Measure.\+h@{Base\+Measure.\+h}}\index{Base\+Measure.\+h@{Base\+Measure.\+h}!bm\+Inch@{bm\+Inch}}}\mbox{\Hypertarget{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11aa336b6ad4081714bf4f1ba1aff14e192}\label{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11aa336b6ad4081714bf4f1ba1aff14e192}} 
+bm\+Inch&13 \+: factor\+: 0.\+0254, offset\+: 0, S\+Iindex\+:13, short\+: \char`\"{}in\char`\"{}, long\+: \char`\"{}inch\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bm\+Foot@{bm\+Foot}!Base\+Measure.\+h@{Base\+Measure.\+h}}\index{Base\+Measure.\+h@{Base\+Measure.\+h}!bm\+Foot@{bm\+Foot}}}\mbox{\Hypertarget{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a5d3576c8ce233e10ee14736257ec240d}\label{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a5d3576c8ce233e10ee14736257ec240d}} 
+bm\+Foot&14 \+: factor\+: 0.\+3048, offset\+: 0, S\+Iindex\+:13, short\+: \char`\"{}ft\char`\"{}, long\+: \char`\"{}foot\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bm\+Yard@{bm\+Yard}!Base\+Measure.\+h@{Base\+Measure.\+h}}\index{Base\+Measure.\+h@{Base\+Measure.\+h}!bm\+Yard@{bm\+Yard}}}\mbox{\Hypertarget{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a4515cdd3e54e74cbe6a74b2fbc9731fe}\label{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a4515cdd3e54e74cbe6a74b2fbc9731fe}} 
+bm\+Yard&15 \+: factor\+: 0.\+9144, offset\+: 0, S\+Iindex\+:13, short\+: \char`\"{}yd\char`\"{}, long\+: \char`\"{}yard\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bm\+Mile@{bm\+Mile}!Base\+Measure.\+h@{Base\+Measure.\+h}}\index{Base\+Measure.\+h@{Base\+Measure.\+h}!bm\+Mile@{bm\+Mile}}}\mbox{\Hypertarget{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11af69da55a5568ae3c6b417879e4eb22c4}\label{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11af69da55a5568ae3c6b417879e4eb22c4}} 
+bm\+Mile&16 \+: factor\+: 1609.\+344, offset\+: 0, S\+Iindex\+:13, short\+: \char`\"{}mi\char`\"{}, long\+: \char`\"{}mile\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bm\+Last@{bm\+Last}!Base\+Measure.\+h@{Base\+Measure.\+h}}\index{Base\+Measure.\+h@{Base\+Measure.\+h}!bm\+Last@{bm\+Last}}}\mbox{\Hypertarget{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a51111031ebb3a92041aa8821dc0bf076}\label{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a51111031ebb3a92041aa8821dc0bf076}} 
+bm\+Last&17 \+: last invalid item \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{bm\+Unknown@{bm\+Unknown}!Base\+Measure.\+h@{Base\+Measure.\+h}}\index{Base\+Measure.\+h@{Base\+Measure.\+h}!bm\+Unknown@{bm\+Unknown}}}\mbox{\Hypertarget{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11ac30190fee6f86e2f76b96886533f74d8}\label{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11ac30190fee6f86e2f76b96886533f74d8}} 
+bm\+Unknown&18 \+: unknown item identical with last invalid item \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 36 of file Base\+Measure.\+h.
+

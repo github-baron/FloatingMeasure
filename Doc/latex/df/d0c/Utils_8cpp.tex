@@ -1,0 +1,101 @@
+\hypertarget{Utils_8cpp}{}\section{Floating\+Measure/\+Utils/\+Utils.cpp File Reference}
+\label{Utils_8cpp}\index{Floating\+Measure/\+Utils/\+Utils.\+cpp@{Floating\+Measure/\+Utils/\+Utils.\+cpp}}
+{\ttfamily \#include $<$Utils/\+Utils.\+h$>$}\newline
+Include dependency graph for Utils.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{de/d88/Utils_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \hyperlink{Utils_8cpp_ae9dfc174daaf6261f167ccc069efea93}{Double\+Machine\+Epsilon} (double d\+Value)
+\begin{DoxyCompactList}\small\item\em calculates the numerical error for a given double \end{DoxyCompactList}\item 
+double \hyperlink{Utils_8cpp_a7dd752b594724a3517f92d86ba0cd39e}{Round2\+Precision} (const double d\+Value, const int n\+Precision)
+\begin{DoxyCompactList}\small\item\em cuts double according to precision \end{DoxyCompactList}\item 
+string \hyperlink{Utils_8cpp_a78c380ff595f4574b2bb6fa68f15e410}{Bool2\+String} (const bool b\+Bool)
+\begin{DoxyCompactList}\small\item\em returns \char`\"{}true\char`\"{} or \char`\"{}false\char`\"{} as string \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{Utils_8cpp_a78c380ff595f4574b2bb6fa68f15e410}\label{Utils_8cpp_a78c380ff595f4574b2bb6fa68f15e410}} 
+\index{Utils.\+cpp@{Utils.\+cpp}!Bool2\+String@{Bool2\+String}}
+\index{Bool2\+String@{Bool2\+String}!Utils.\+cpp@{Utils.\+cpp}}
+\subsubsection{\texorpdfstring{Bool2\+String()}{Bool2String()}}
+{\footnotesize\ttfamily string Bool2\+String (\begin{DoxyParamCaption}\item[{const bool}]{b\+Bool }\end{DoxyParamCaption})}
+
+
+
+returns \char`\"{}true\char`\"{} or \char`\"{}false\char`\"{} as string 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b\+Bool} & bool to convert to string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file Utils.\+cpp.
+
+\mbox{\Hypertarget{Utils_8cpp_ae9dfc174daaf6261f167ccc069efea93}\label{Utils_8cpp_ae9dfc174daaf6261f167ccc069efea93}} 
+\index{Utils.\+cpp@{Utils.\+cpp}!Double\+Machine\+Epsilon@{Double\+Machine\+Epsilon}}
+\index{Double\+Machine\+Epsilon@{Double\+Machine\+Epsilon}!Utils.\+cpp@{Utils.\+cpp}}
+\subsubsection{\texorpdfstring{Double\+Machine\+Epsilon()}{DoubleMachineEpsilon()}}
+{\footnotesize\ttfamily double Double\+Machine\+Epsilon (\begin{DoxyParamCaption}\item[{double}]{d\+Value }\end{DoxyParamCaption})}
+
+
+
+calculates the numerical error for a given double 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d\+Value} & double which error is calculated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Definition at line 27 of file Utils.\+cpp.
+
+
+
+References dbl\+\_\+64\+::d64, dbl\+\_\+64\+::i64, and s.
+
+\mbox{\Hypertarget{Utils_8cpp_a7dd752b594724a3517f92d86ba0cd39e}\label{Utils_8cpp_a7dd752b594724a3517f92d86ba0cd39e}} 
+\index{Utils.\+cpp@{Utils.\+cpp}!Round2\+Precision@{Round2\+Precision}}
+\index{Round2\+Precision@{Round2\+Precision}!Utils.\+cpp@{Utils.\+cpp}}
+\subsubsection{\texorpdfstring{Round2\+Precision()}{Round2Precision()}}
+{\footnotesize\ttfamily double Round2\+Precision (\begin{DoxyParamCaption}\item[{const double}]{d\+Value,  }\item[{const int}]{n\+Precision }\end{DoxyParamCaption})}
+
+
+
+cuts double according to precision 
+
+
+\begin{DoxyItemize}
+\item example positive precision\+: value= 100.\+00234, precision = 3 --$>$ 100.\+002
+\item example negative precision\+: value 1023404.\+234, precision = -\/2 --$>$ 1023400
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em d\+Value} & value to be cut \\
+\hline
+{\em n\+Precision} & the wanted precision \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Definition at line 35 of file Utils.\+cpp.
+

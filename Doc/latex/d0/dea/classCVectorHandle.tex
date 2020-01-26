@@ -1,0 +1,295 @@
+\hypertarget{classCVectorHandle}{}\section{C\+Vector\+Handle Class Reference}
+\label{classCVectorHandle}\index{C\+Vector\+Handle@{C\+Vector\+Handle}}
+
+
+This class keeps three vectors (two string \+: Short and Long and one double \+: Factor). These vectors are common to classes \hyperlink{classCPreMeasure}{C\+Pre\+Measure} and \hyperlink{classCBaseMeasure}{C\+Base\+Measure} and are therefore packed into this class for vector handling.  
+
+
+
+
+{\ttfamily \#include $<$Vector\+Handle.\+h$>$}
+
+
+
+Inheritance diagram for C\+Vector\+Handle\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d40/classCVectorHandle__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCVectorHandle_ac6b74f660515541066f809b1339b2fdd}{C\+Vector\+Handle} ()
+\begin{DoxyCompactList}\small\item\em does nothing \end{DoxyCompactList}\item 
+\hyperlink{classCVectorHandle_a74e5aee7e24867695dafa409ab39a379}{$\sim$\+C\+Vector\+Handle} ()
+\begin{DoxyCompactList}\small\item\em destructor\+: calls C\+Vector\+Handle\+::\+\_\+\+De\+Init() \end{DoxyCompactList}\item 
+int \hyperlink{classCVectorHandle_ab1c2a8cb7d2f87077c6be60a86e2ae16}{Get\+Index\+By\+Short\+Label} (const string \&str\+Short\+Label)
+\begin{DoxyCompactList}\small\item\em returns the index of the pre-\/unit if the user given string matches one of the elemens in C\+Pre\+Unit\+::m\+\_\+vstr\+Pre\+Unit\+Short \end{DoxyCompactList}\item 
+int \hyperlink{classCVectorHandle_a36419c6f77002dde25bfa9e43357bd5c}{Get\+Index\+By\+Long\+Label} (const string \&str\+Long\+Label)
+\begin{DoxyCompactList}\small\item\em returns the index of the pre-\/unit if the user given string matches one of the elemens in C\+Pre\+Unit\+::m\+\_\+vstr\+Pre\+Unit\+Long \end{DoxyCompactList}\item 
+const string \& \hyperlink{classCVectorHandle_a392678513c7224a67022720797ac7b1b}{Long} (const unsigned int ui\+Index)
+\begin{DoxyCompactList}\small\item\em gets element from \hyperlink{classCVectorHandle_afb50c8a33d4cf70bf92c644dca409ea2}{C\+Vector\+Handle\+::vstr\+Short} by index \end{DoxyCompactList}\item 
+const string \& \hyperlink{classCVectorHandle_ac26fa8d3b66a5cc88dea0b411f5e20de}{Short} (const unsigned int ui\+Index)
+\begin{DoxyCompactList}\small\item\em gets element from \hyperlink{classCVectorHandle_a71bec0e385b9ca8e5ffa174b559da9f8}{C\+Vector\+Handle\+::vstr\+Long} by index \end{DoxyCompactList}\item 
+const double \hyperlink{classCVectorHandle_ae07ef54ee4ecb2da32176e58cf852e7c}{Factor} (const unsigned int ui\+Index)
+\begin{DoxyCompactList}\small\item\em gets element from \hyperlink{classCVectorHandle_af8f8b2e0da8363e695872ca85f33364e}{C\+Vector\+Handle\+::vd\+Factor} by index \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ double $>$ $\ast$ \hyperlink{classCVectorHandle_af8f8b2e0da8363e695872ca85f33364e}{vd\+Factor}
+\begin{DoxyCompactList}\small\item\em vector keeping all the factors\+:~\newline
+ e.\+g. \end{DoxyCompactList}\item 
+vector$<$ string $>$ $\ast$ \hyperlink{classCVectorHandle_a71bec0e385b9ca8e5ffa174b559da9f8}{vstr\+Long}
+\begin{DoxyCompactList}\small\item\em vector keeping the long label~\newline
+ e.\+g. \end{DoxyCompactList}\item 
+vector$<$ string $>$ $\ast$ \hyperlink{classCVectorHandle_afb50c8a33d4cf70bf92c644dca409ea2}{vstr\+Short}
+\begin{DoxyCompactList}\small\item\em vector keeping the short label\+:~\newline
+ e.\+g. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class keeps three vectors (two string \+: Short and Long and one double \+: Factor). These vectors are common to classes \hyperlink{classCPreMeasure}{C\+Pre\+Measure} and \hyperlink{classCBaseMeasure}{C\+Base\+Measure} and are therefore packed into this class for vector handling. 
+
+Definition at line 37 of file Vector\+Handle.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCVectorHandle_ac6b74f660515541066f809b1339b2fdd}\label{classCVectorHandle_ac6b74f660515541066f809b1339b2fdd}} 
+\index{C\+Vector\+Handle@{C\+Vector\+Handle}!C\+Vector\+Handle@{C\+Vector\+Handle}}
+\index{C\+Vector\+Handle@{C\+Vector\+Handle}!C\+Vector\+Handle@{C\+Vector\+Handle}}
+\subsubsection{\texorpdfstring{C\+Vector\+Handle()}{CVectorHandle()}}
+{\footnotesize\ttfamily C\+Vector\+Handle\+::\+C\+Vector\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+does nothing 
+
+
+
+Definition at line 28 of file Vector\+Handle.\+cpp.
+
+
+
+References vd\+Factor, vstr\+Long, and vstr\+Short.
+
+\mbox{\Hypertarget{classCVectorHandle_a74e5aee7e24867695dafa409ab39a379}\label{classCVectorHandle_a74e5aee7e24867695dafa409ab39a379}} 
+\index{C\+Vector\+Handle@{C\+Vector\+Handle}!````~C\+Vector\+Handle@{$\sim$\+C\+Vector\+Handle}}
+\index{````~C\+Vector\+Handle@{$\sim$\+C\+Vector\+Handle}!C\+Vector\+Handle@{C\+Vector\+Handle}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Vector\+Handle()}{~CVectorHandle()}}
+{\footnotesize\ttfamily C\+Vector\+Handle\+::$\sim$\+C\+Vector\+Handle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+destructor\+: calls C\+Vector\+Handle\+::\+\_\+\+De\+Init() 
+
+
+
+Definition at line 36 of file Vector\+Handle.\+cpp.
+
+
+
+References Secure\+Delete\+Object\+Pointer(), vd\+Factor, vstr\+Long, and vstr\+Short.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCVectorHandle_ae07ef54ee4ecb2da32176e58cf852e7c}\label{classCVectorHandle_ae07ef54ee4ecb2da32176e58cf852e7c}} 
+\index{C\+Vector\+Handle@{C\+Vector\+Handle}!Factor@{Factor}}
+\index{Factor@{Factor}!C\+Vector\+Handle@{C\+Vector\+Handle}}
+\subsubsection{\texorpdfstring{Factor()}{Factor()}}
+{\footnotesize\ttfamily const double C\+Vector\+Handle\+::\+Factor (\begin{DoxyParamCaption}\item[{const unsigned int}]{ui\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+gets element from \hyperlink{classCVectorHandle_af8f8b2e0da8363e695872ca85f33364e}{C\+Vector\+Handle\+::vd\+Factor} by index 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui\+Index} & index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double\+: factor 
+\end{DoxyReturn}
+
+
+Definition at line 112 of file Vector\+Handle.\+h.
+
+
+
+References Get\+Element\+From\+Vector\+By\+Index().
+
+\mbox{\Hypertarget{classCVectorHandle_a36419c6f77002dde25bfa9e43357bd5c}\label{classCVectorHandle_a36419c6f77002dde25bfa9e43357bd5c}} 
+\index{C\+Vector\+Handle@{C\+Vector\+Handle}!Get\+Index\+By\+Long\+Label@{Get\+Index\+By\+Long\+Label}}
+\index{Get\+Index\+By\+Long\+Label@{Get\+Index\+By\+Long\+Label}!C\+Vector\+Handle@{C\+Vector\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Index\+By\+Long\+Label()}{GetIndexByLongLabel()}}
+{\footnotesize\ttfamily int C\+Vector\+Handle\+::\+Get\+Index\+By\+Long\+Label (\begin{DoxyParamCaption}\item[{const string \&}]{str\+Long\+Label }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+returns the index of the pre-\/unit if the user given string matches one of the elemens in C\+Pre\+Unit\+::m\+\_\+vstr\+Pre\+Unit\+Long 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str\+Long\+Label} & p\+\_\+str\+Pre\+Unit\+Long\+Label\+: user given long label of the demanded unit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const unsigned int\& 
+\end{DoxyReturn}
+
+
+Definition at line 76 of file Vector\+Handle.\+h.
+
+
+
+References Find\+Element\+In\+Vector\+Get\+Index().
+
+\mbox{\Hypertarget{classCVectorHandle_ab1c2a8cb7d2f87077c6be60a86e2ae16}\label{classCVectorHandle_ab1c2a8cb7d2f87077c6be60a86e2ae16}} 
+\index{C\+Vector\+Handle@{C\+Vector\+Handle}!Get\+Index\+By\+Short\+Label@{Get\+Index\+By\+Short\+Label}}
+\index{Get\+Index\+By\+Short\+Label@{Get\+Index\+By\+Short\+Label}!C\+Vector\+Handle@{C\+Vector\+Handle}}
+\subsubsection{\texorpdfstring{Get\+Index\+By\+Short\+Label()}{GetIndexByShortLabel()}}
+{\footnotesize\ttfamily int C\+Vector\+Handle\+::\+Get\+Index\+By\+Short\+Label (\begin{DoxyParamCaption}\item[{const string \&}]{str\+Short\+Label }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+returns the index of the pre-\/unit if the user given string matches one of the elemens in C\+Pre\+Unit\+::m\+\_\+vstr\+Pre\+Unit\+Short 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str\+Short\+Label} & p\+\_\+str\+Pre\+Unit\+Short\+Label\+:user given short label of the demanded unit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const unsigned int\& 
+\end{DoxyReturn}
+
+
+Definition at line 65 of file Vector\+Handle.\+h.
+
+
+
+References Find\+Element\+In\+Vector\+Get\+Index().
+
+\mbox{\Hypertarget{classCVectorHandle_a392678513c7224a67022720797ac7b1b}\label{classCVectorHandle_a392678513c7224a67022720797ac7b1b}} 
+\index{C\+Vector\+Handle@{C\+Vector\+Handle}!Long@{Long}}
+\index{Long@{Long}!C\+Vector\+Handle@{C\+Vector\+Handle}}
+\subsubsection{\texorpdfstring{Long()}{Long()}}
+{\footnotesize\ttfamily const string\& C\+Vector\+Handle\+::\+Long (\begin{DoxyParamCaption}\item[{const unsigned int}]{ui\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+gets element from \hyperlink{classCVectorHandle_afb50c8a33d4cf70bf92c644dca409ea2}{C\+Vector\+Handle\+::vstr\+Short} by index 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui\+Index} & index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string\+: long label 
+\end{DoxyReturn}
+
+
+Definition at line 90 of file Vector\+Handle.\+h.
+
+
+
+References Get\+Element\+From\+Vector\+By\+Index().
+
+\mbox{\Hypertarget{classCVectorHandle_ac26fa8d3b66a5cc88dea0b411f5e20de}\label{classCVectorHandle_ac26fa8d3b66a5cc88dea0b411f5e20de}} 
+\index{C\+Vector\+Handle@{C\+Vector\+Handle}!Short@{Short}}
+\index{Short@{Short}!C\+Vector\+Handle@{C\+Vector\+Handle}}
+\subsubsection{\texorpdfstring{Short()}{Short()}}
+{\footnotesize\ttfamily const string\& C\+Vector\+Handle\+::\+Short (\begin{DoxyParamCaption}\item[{const unsigned int}]{ui\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+gets element from \hyperlink{classCVectorHandle_a71bec0e385b9ca8e5ffa174b559da9f8}{C\+Vector\+Handle\+::vstr\+Long} by index 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ui\+Index} & index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string\+: short label 
+\end{DoxyReturn}
+
+
+Definition at line 101 of file Vector\+Handle.\+h.
+
+
+
+References Get\+Element\+From\+Vector\+By\+Index().
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classCVectorHandle_af8f8b2e0da8363e695872ca85f33364e}\label{classCVectorHandle_af8f8b2e0da8363e695872ca85f33364e}} 
+\index{C\+Vector\+Handle@{C\+Vector\+Handle}!vd\+Factor@{vd\+Factor}}
+\index{vd\+Factor@{vd\+Factor}!C\+Vector\+Handle@{C\+Vector\+Handle}}
+\subsubsection{\texorpdfstring{vd\+Factor}{vdFactor}}
+{\footnotesize\ttfamily vector$<$double$>$$\ast$ C\+Vector\+Handle\+::vd\+Factor\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+vector keeping all the factors\+:~\newline
+ e.\+g. 
+
+
+\begin{DoxyItemize}
+\item \hyperlink{classCPreMeasure}{C\+Pre\+Measure}\+: milli --$>$ 0.\+001
+\item \hyperlink{classCBaseMeasure}{C\+Base\+Measure}\+: °F --$>$ 5/9 (SI recalculation factor for °K) 
+\end{DoxyItemize}
+
+Definition at line 132 of file Vector\+Handle.\+h.
+
+\mbox{\Hypertarget{classCVectorHandle_a71bec0e385b9ca8e5ffa174b559da9f8}\label{classCVectorHandle_a71bec0e385b9ca8e5ffa174b559da9f8}} 
+\index{C\+Vector\+Handle@{C\+Vector\+Handle}!vstr\+Long@{vstr\+Long}}
+\index{vstr\+Long@{vstr\+Long}!C\+Vector\+Handle@{C\+Vector\+Handle}}
+\subsubsection{\texorpdfstring{vstr\+Long}{vstrLong}}
+{\footnotesize\ttfamily vector$<$string$>$$\ast$ C\+Vector\+Handle\+::vstr\+Long\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+vector keeping the long label~\newline
+ e.\+g. 
+
+
+\begin{DoxyItemize}
+\item \hyperlink{classCPreMeasure}{C\+Pre\+Measure}\+: milli --$>$ \char`\"{}milli\char`\"{}
+\item \hyperlink{classCBaseMeasure}{C\+Base\+Measure}\+: volt --$>$ \char`\"{}volt\char`\"{} 
+\end{DoxyItemize}
+
+Definition at line 141 of file Vector\+Handle.\+h.
+
+\mbox{\Hypertarget{classCVectorHandle_afb50c8a33d4cf70bf92c644dca409ea2}\label{classCVectorHandle_afb50c8a33d4cf70bf92c644dca409ea2}} 
+\index{C\+Vector\+Handle@{C\+Vector\+Handle}!vstr\+Short@{vstr\+Short}}
+\index{vstr\+Short@{vstr\+Short}!C\+Vector\+Handle@{C\+Vector\+Handle}}
+\subsubsection{\texorpdfstring{vstr\+Short}{vstrShort}}
+{\footnotesize\ttfamily vector$<$string$>$$\ast$ C\+Vector\+Handle\+::vstr\+Short\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+vector keeping the short label\+:~\newline
+ e.\+g. 
+
+
+\begin{DoxyItemize}
+\item \hyperlink{classCPreMeasure}{C\+Pre\+Measure}\+: milli --$>$ \char`\"{}m\char`\"{}
+\item \hyperlink{classCBaseMeasure}{C\+Base\+Measure}\+: volt --$>$ \char`\"{}\+V\char`\"{} 
+\end{DoxyItemize}
+
+Definition at line 150 of file Vector\+Handle.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Floating\+Measure/\+Measure/\hyperlink{VectorHandle_8h}{Vector\+Handle.\+h}\item 
+Floating\+Measure/\+Measure/\hyperlink{VectorHandle_8cpp}{Vector\+Handle.\+cpp}\end{DoxyCompactItemize}

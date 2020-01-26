@@ -1,0 +1,25 @@
+var Utils_8h =
+[
+    [ "dbl_64", "d3/d2e/uniondbl__64.html", "d3/d2e/uniondbl__64" ],
+    [ "CSingleton", "da/d3b/classCSingleton.html", "da/d3b/classCSingleton" ],
+    [ "GREEK_CAPITAL_OMEGA", "d9/ded/Utils_8h.html#a1c7affac54bdfdadac8fd7eb9b062745", null ],
+    [ "GREEK_SMALL_MU", "d9/ded/Utils_8h.html#ad65eebfa453cc397aa31c2f1402e7d52", null ],
+    [ "INVALID_EXPONENT", "d9/ded/Utils_8h.html#a5796288828c990621e30b2669757d916", null ],
+    [ "mu", "d9/ded/Utils_8h.html#a16e1e5ba474fcf3e45ade32acf66c144", null ],
+    [ "myNAN", "d9/ded/Utils_8h.html#aa453fe957e6d617b474b45213bf80820", null ],
+    [ "Omega", "d9/ded/Utils_8h.html#a400617b5daf9faf9da16780bda2904fd", null ],
+    [ "plmi", "d9/ded/Utils_8h.html#a57f004e69be4e541c9ef272d1684b9f6", null ],
+    [ "UNKNOWN_INDEX", "d9/ded/Utils_8h.html#a5a6daae34eeda6d6461f165a02acc3c7", null ],
+    [ "UNKNOWN_LONG", "d9/ded/Utils_8h.html#a5c6964ba7806e840a8a24e21191727a3", null ],
+    [ "UNKNOWN_SHORT", "d9/ded/Utils_8h.html#a8b8d3b6ed23a610665d7e00cb4397680", null ],
+    [ "UNKNOWN_VALUE", "d9/ded/Utils_8h.html#a0488bc30cccd5b3304bf0936b5af486b", null ],
+    [ "Bool2String", "d9/ded/Utils_8h.html#ab78ffa949645ca0f0d0e2d3e9520ef29", null ],
+    [ "DoubleMachineEpsilon", "d9/ded/Utils_8h.html#adb19ed17b4e8ed0a8525c35fdc8872c3", null ],
+    [ "FindElementInVectorGetIndex", "d9/ded/Utils_8h.html#aef4e401709c029dcd6fb5ee8a858bdf6", null ],
+    [ "FindElementInVectorGetIndex", "d9/ded/Utils_8h.html#a10f8b0557cff0575f9b545ad76234fcd", null ],
+    [ "GetElementFromVectorByIndex", "d9/ded/Utils_8h.html#a7042c83d0f87835f7fdb87b8d3e1de40", null ],
+    [ "GetElementFromVectorByIndex", "d9/ded/Utils_8h.html#a5dcd880b1990847494e1cfd17b0a0dad", null ],
+    [ "Round2Precision", "d9/ded/Utils_8h.html#a343a017d0c1a53ec463a5fa243cf50d0", null ],
+    [ "SecureDeleteObjectPointer", "d9/ded/Utils_8h.html#ab3514a1d7de1960b4685ce4eeefce78e", null ],
+    [ "SecureDeleteVectorPointer", "d9/ded/Utils_8h.html#aa550c859c03fa28b9b63b7070e53505d", null ]
+];

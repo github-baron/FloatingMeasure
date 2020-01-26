@@ -1,0 +1,5 @@
+<map id="CFloatingMeasure" name="CFloatingMeasure">
+<area shape="rect" id="node2" href="$d0/d43/classCComplexMeasure.html" title="CComplexMeasure: represents a list of measures (i.e. CSimpleMeasure) chained by operators * and / &#160;&#160;T..." alt="" coords="5,95,148,121"/>
+<area shape="rect" id="node3" href="$d4/dec/classCSimpleMeasure.html" title="CSimpleMeasure: represents a pre measure combined with a base measure like &quot;mV&quot;. &#160;This class offers: ..." alt="" coords="12,5,141,32"/>
+<area shape="rect" id="node4" href="$d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p..." alt="" coords="219,5,303,32"/>
+</map>

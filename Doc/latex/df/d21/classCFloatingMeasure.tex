@@ -1,0 +1,1125 @@
+\hypertarget{classCFloatingMeasure}{}\section{C\+Floating\+Measure Class Reference}
+\label{classCFloatingMeasure}\index{C\+Floating\+Measure@{C\+Floating\+Measure}}
+
+
+Floating\+Measure\+: represents a floating number with a complex measure (e.\+g. 10$\ast$m/s). This class offers\+:  
+
+
+
+
+{\ttfamily \#include $<$Floating\+Measure.\+h$>$}
+
+
+
+Collaboration diagram for C\+Floating\+Measure\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d5/d9a/classCFloatingMeasure__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCFloatingMeasure_aa30b4d0ea6b6bbc022717c875419fb44}{C\+Floating\+Measure} ()
+\item 
+\hyperlink{classCFloatingMeasure_ac5f28ce988a77d1bc8b34b361827788c}{C\+Floating\+Measure} (const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&other)
+\item 
+\hyperlink{classCFloatingMeasure_a8ce55143653895584c3f578103308714}{C\+Floating\+Measure} (const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&Other\+Floating, const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&Other\+Measure)
+\begin{DoxyCompactList}\small\item\em Constructor from \hyperlink{classCDigFloat}{C\+Dig\+Float} and \hyperlink{classCComplexMeasure}{C\+Complex\+Measure}. \end{DoxyCompactList}\item 
+\hyperlink{classCFloatingMeasure_a43c9d00b7a9e66da291926f58459c7c8}{$\sim$\+C\+Floating\+Measure} ()
+\item 
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \& \hyperlink{classCFloatingMeasure_a958ef3d71c3dd7355bebef272df5b9e0}{operator=} (const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&other)
+\item 
+bool \hyperlink{classCFloatingMeasure_ab4233b1232751f99e9e1f91f2ee55cc9}{operator==} (const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&other) const
+\begin{DoxyCompactList}\small\item\em comparison operator \end{DoxyCompactList}\item 
+bool \hyperlink{classCFloatingMeasure_afbedc9a56acac7c6738357ce2347aad3}{operator!=} (const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&other) const
+\begin{DoxyCompactList}\small\item\em operator!= \end{DoxyCompactList}\item 
+bool \hyperlink{classCFloatingMeasure_a35d506664a6a72856d56cbf18ea9d2a4}{operator$<$} (const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&other) const
+\begin{DoxyCompactList}\small\item\em operator$<$ \end{DoxyCompactList}\item 
+bool \hyperlink{classCFloatingMeasure_ad8b94201f5df969de576f89a249c947e}{operator$<$=} (const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&other) const
+\begin{DoxyCompactList}\small\item\em operator$<$= \end{DoxyCompactList}\item 
+bool \hyperlink{classCFloatingMeasure_aa6575f6f658ee524da9e5f123189cef1}{operator$>$=} (const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&other) const
+\begin{DoxyCompactList}\small\item\em operator$>$= \end{DoxyCompactList}\item 
+bool \hyperlink{classCFloatingMeasure_a59cd04759c33941c7c20db3c81dcde14}{operator$>$} (const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&other) const
+\begin{DoxyCompactList}\small\item\em operator$>$ \end{DoxyCompactList}\item 
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \& \hyperlink{classCFloatingMeasure_a40f0ec4cb155856efed8db28c7c8fa3e}{operator+=} (const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&other)
+\begin{DoxyCompactList}\small\item\em operator += \end{DoxyCompactList}\item 
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \& \hyperlink{classCFloatingMeasure_a3661f71ed47a6659f7e27adff3c5c369}{operator-\/=} (const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&other)
+\begin{DoxyCompactList}\small\item\em operator-\/= \end{DoxyCompactList}\item 
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \& \hyperlink{classCFloatingMeasure_a2df7738d5c017a02c1f11c40809cac96}{operator$\ast$=} (const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&other)
+\begin{DoxyCompactList}\small\item\em operator$\ast$= \end{DoxyCompactList}\item 
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \& \hyperlink{classCFloatingMeasure_a1bc972be1fa5abd0619849710eef398c}{operator/=} (const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&other)
+\begin{DoxyCompactList}\small\item\em operator/= \end{DoxyCompactList}\item 
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \hyperlink{classCFloatingMeasure_a26560fcb587eafe8966541159eec57de}{operator+} (const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&other)
+\begin{DoxyCompactList}\small\item\em operator + \end{DoxyCompactList}\item 
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \hyperlink{classCFloatingMeasure_ad29973f56a38dda22fc9d66a16b13860}{operator-\/} (const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&other)
+\begin{DoxyCompactList}\small\item\em operator-\/ \end{DoxyCompactList}\item 
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \hyperlink{classCFloatingMeasure_a993623835ced24f74075861b2aab736e}{operator$\ast$} (const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&other)
+\begin{DoxyCompactList}\small\item\em operator$\ast$ \end{DoxyCompactList}\item 
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \hyperlink{classCFloatingMeasure_acb68f4d17606dc2312f4efabe877ab80}{operator/} (const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&other)
+\begin{DoxyCompactList}\small\item\em operator/ \end{DoxyCompactList}\item 
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \& \hyperlink{classCFloatingMeasure_a051879dde322060eb7695667dd38ab13}{operator$\ast$=} (const double \&other)
+\begin{DoxyCompactList}\small\item\em operator$\ast$= \end{DoxyCompactList}\item 
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \& \hyperlink{classCFloatingMeasure_a2ba332fa822922d51866e4361db1677b}{operator/=} (const double \&other)
+\begin{DoxyCompactList}\small\item\em operator/= \end{DoxyCompactList}\item 
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \hyperlink{classCFloatingMeasure_a31cedd2120675c56064e12556432f550}{operator$\ast$} (const double \&other)
+\begin{DoxyCompactList}\small\item\em operator$\ast$ \end{DoxyCompactList}\item 
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \hyperlink{classCFloatingMeasure_ac39b5a05cce42097d4439627aaaaf94c}{operator/} (const double \&other)
+\begin{DoxyCompactList}\small\item\em operator/ \end{DoxyCompactList}\item 
+void \hyperlink{classCFloatingMeasure_af4e2cc6a78b8e0cda11df432902bde8a}{Normalize} ()
+\begin{DoxyCompactList}\small\item\em convert to SI unit and remove premeasures != pm\+Ident \end{DoxyCompactList}\item 
+void \hyperlink{classCFloatingMeasure_a47731afb871889ee7da5f84b40e3a27f}{Simplify} ()
+\begin{DoxyCompactList}\small\item\em convert to SI unit and remove premeasures != pm\+Ident \end{DoxyCompactList}\item 
+bool \hyperlink{classCFloatingMeasure_ae69672971857cf047c5bc7ab4b631b6c}{Compatible} (const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&other)
+\begin{DoxyCompactList}\small\item\em check measures for compatibility \end{DoxyCompactList}\item 
+bool \hyperlink{classCFloatingMeasure_a5cf69c287abe4e2f65242e97093f7595}{Compatible} (const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&other)
+\begin{DoxyCompactList}\small\item\em check measures for compatibility \end{DoxyCompactList}\item 
+void \hyperlink{classCFloatingMeasure_aa0a16f8516d047576b588389504c0996}{Scale\+To} (const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&other)
+\begin{DoxyCompactList}\small\item\em scales to \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} of other \end{DoxyCompactList}\item 
+void \hyperlink{classCFloatingMeasure_a841b94d2883274e67999688fad40d538}{Scale\+To} (const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&other)
+\begin{DoxyCompactList}\small\item\em scales to \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} other \end{DoxyCompactList}\item 
+void \hyperlink{classCFloatingMeasure_abaedeff78fb7009c788df5a016bc46d5}{Precision} (const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&User\+Precision)
+\begin{DoxyCompactList}\small\item\em setting precision of floating number by floating number\+: calls C\+Dig\+Float\+::\+Precision(n\+Digits) from \hyperlink{classCFloatingMeasure_aa0cec9966c6c08db75c493e44396cfc2}{C\+Floating\+Measure\+::df\+Floating}. \end{DoxyCompactList}\item 
+void \hyperlink{classCFloatingMeasure_a4fe4d60589da6d4c7f09cb09fbea730b}{Precision\+Active} (const bool b\+Precision\+Active)
+\begin{DoxyCompactList}\small\item\em switch precision defined by df\+Floating\+::n\+Precision on / off \end{DoxyCompactList}\item 
+const bool \hyperlink{classCFloatingMeasure_a90d47ac476295db3c208cb484cd75764}{Precison\+Active} () const
+\begin{DoxyCompactList}\small\item\em get Precision\+Active from df\+Floating \end{DoxyCompactList}\item 
+bool \hyperlink{classCFloatingMeasure_a0ff3ae036cd2ee44d6b2eadc609b1d1a}{Valid} ()
+\begin{DoxyCompactList}\small\item\em checks if the cm\+Measure and df\+Floating are valid values \end{DoxyCompactList}\item 
+string \hyperlink{classCFloatingMeasure_a6d92f39204f23e81732cb77131517b6f}{Debug\+Out} ()
+\begin{DoxyCompactList}\small\item\em debugging output for every member \end{DoxyCompactList}\item 
+string \hyperlink{classCFloatingMeasure_af4caaa697967a257bc6e13117843ff58}{Print\+Short} ()
+\begin{DoxyCompactList}\small\item\em printing short output\+: e.\+g. \char`\"{}10$\ast$mv/\+V\char`\"{} \end{DoxyCompactList}\item 
+\hyperlink{classCDigFloat}{C\+Dig\+Float} \hyperlink{classCFloatingMeasure_ab41354d28783d125159bd6e9372c6d9f}{Floating} () const
+\begin{DoxyCompactList}\small\item\em gettter for df\+Floating \end{DoxyCompactList}\item 
+\hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \hyperlink{classCFloatingMeasure_a8ac3af95a2619670a51d744c85b44463}{Measure} () const
+\begin{DoxyCompactList}\small\item\em getter for cm\+Measure \end{DoxyCompactList}\item 
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \hyperlink{classCFloatingMeasure_ac8975daf37b98b3e996893e0de43c4eb}{Precision} () const
+\begin{DoxyCompactList}\small\item\em get the precision as \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classCFloatingMeasure_a1e8a7467d6435c4cf349198804617623}{\+\_\+\+Init} ()
+\begin{DoxyCompactList}\small\item\em initialization with invalid values\+: floating = my\+NaN, cm\+Measure = unknownn \end{DoxyCompactList}\item 
+void \hyperlink{classCFloatingMeasure_a8e16f55f29d0d4c4148307a1f5953fe3}{\+\_\+\+Precision} (const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} $\ast$p\+Other\+Precision)
+\item 
+void \hyperlink{classCFloatingMeasure_af35c54ac06b1c8ddca86390360559548}{Measure} (const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&other)
+\begin{DoxyCompactList}\small\item\em setter for cm\+Measure \end{DoxyCompactList}\item 
+void \hyperlink{classCFloatingMeasure_aa33fe952e9c01f5f76cef5e6f0d03864}{Floating} (const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&other)
+\begin{DoxyCompactList}\small\item\em setter for df\+Floating \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \hyperlink{classCFloatingMeasure_a3a23946016d1b7f41a1ecf05f4d5d5c6}{cm\+Measure}
+\item 
+\hyperlink{classCDigFloat}{C\+Dig\+Float} \hyperlink{classCFloatingMeasure_aa0cec9966c6c08db75c493e44396cfc2}{df\+Floating}
+\item 
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} $\ast$ \hyperlink{classCFloatingMeasure_a6bc7bd6e563e69cbf29692cd97153115}{pfm\+Precision}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classCFloatingMeasure_a2af9f0d4f7a8de5099b8d23df211b616}{C\+Complex\+Measure}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Floating\+Measure\+: represents a floating number with a complex measure (e.\+g. 10$\ast$m/s). This class offers\+: 
+
+
+\begin{DoxyItemize}
+\item operators (+,-\/,$\ast$,/,$<$=, $>$=, ==, !=, $<$, $>$)
+\item simplification (e.\+g. 1$\ast$ms$\ast$10$\ast$m/s --$>$ 0.\+01m
+\item normalization (i.\+e. SI units. e.\+g. 36$\ast$km/h --$>$ 10$\ast$m/s)
+\item handling of the precision of the floating part for output and calculations 
+\end{DoxyItemize}
+
+Definition at line 39 of file Floating\+Measure.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCFloatingMeasure_aa30b4d0ea6b6bbc022717c875419fb44}\label{classCFloatingMeasure_aa30b4d0ea6b6bbc022717c875419fb44}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{C\+Floating\+Measure()}{CFloatingMeasure()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily C\+Floating\+Measure\+::\+C\+Floating\+Measure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor 
+
+Definition at line 27 of file Floating\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Init().
+
+\mbox{\Hypertarget{classCFloatingMeasure_ac5f28ce988a77d1bc8b34b361827788c}\label{classCFloatingMeasure_ac5f28ce988a77d1bc8b34b361827788c}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{C\+Floating\+Measure()}{CFloatingMeasure()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily C\+Floating\+Measure\+::\+C\+Floating\+Measure (\begin{DoxyParamCaption}\item[{const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&}]{other }\end{DoxyParamCaption})}
+
+Copy constructor
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 32 of file Floating\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Init(), \+\_\+\+Precision(), Floating(), Measure(), and pfm\+Precision.
+
+\mbox{\Hypertarget{classCFloatingMeasure_a8ce55143653895584c3f578103308714}\label{classCFloatingMeasure_a8ce55143653895584c3f578103308714}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{C\+Floating\+Measure()}{CFloatingMeasure()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily C\+Floating\+Measure\+::\+C\+Floating\+Measure (\begin{DoxyParamCaption}\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{Other\+Floating,  }\item[{const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&}]{Other\+Measure }\end{DoxyParamCaption})}
+
+
+
+Constructor from \hyperlink{classCDigFloat}{C\+Dig\+Float} and \hyperlink{classCComplexMeasure}{C\+Complex\+Measure}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Other\+Floating} & \+:\hyperlink{classCDigFloat}{C\+Dig\+Float} \\
+\hline
+{\em Other\+Measure} & \+:\hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 40 of file Floating\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Init(), Floating(), and Measure().
+
+\mbox{\Hypertarget{classCFloatingMeasure_a43c9d00b7a9e66da291926f58459c7c8}\label{classCFloatingMeasure_a43c9d00b7a9e66da291926f58459c7c8}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!````~C\+Floating\+Measure@{$\sim$\+C\+Floating\+Measure}}
+\index{````~C\+Floating\+Measure@{$\sim$\+C\+Floating\+Measure}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Floating\+Measure()}{~CFloatingMeasure()}}
+{\footnotesize\ttfamily C\+Floating\+Measure\+::$\sim$\+C\+Floating\+Measure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor 
+
+Definition at line 46 of file Floating\+Measure.\+cpp.
+
+
+
+References pfm\+Precision, and Secure\+Delete\+Object\+Pointer().
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCFloatingMeasure_a1e8a7467d6435c4cf349198804617623}\label{classCFloatingMeasure_a1e8a7467d6435c4cf349198804617623}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!\+\_\+\+Init@{\+\_\+\+Init}}
+\index{\+\_\+\+Init@{\+\_\+\+Init}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{\+\_\+\+Init()}{\_Init()}}
+{\footnotesize\ttfamily void C\+Floating\+Measure\+::\+\_\+\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+initialization with invalid values\+: floating = my\+NaN, cm\+Measure = unknownn 
+
+
+
+Definition at line 289 of file Floating\+Measure.\+cpp.
+
+
+
+References C\+Complex\+Measure\+::\+\_\+\+Init(), C\+Dig\+Float\+::\+\_\+\+Init(), cm\+Measure, df\+Floating, and pfm\+Precision.
+
+\mbox{\Hypertarget{classCFloatingMeasure_a8e16f55f29d0d4c4148307a1f5953fe3}\label{classCFloatingMeasure_a8e16f55f29d0d4c4148307a1f5953fe3}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!\+\_\+\+Precision@{\+\_\+\+Precision}}
+\index{\+\_\+\+Precision@{\+\_\+\+Precision}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{\+\_\+\+Precision()}{\_Precision()}}
+{\footnotesize\ttfamily void C\+Floating\+Measure\+::\+\_\+\+Precision (\begin{DoxyParamCaption}\item[{const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} $\ast$}]{p\+Other\+Precision }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 295 of file Floating\+Measure.\+cpp.
+
+
+
+References pfm\+Precision, Precision(), and Secure\+Delete\+Object\+Pointer().
+
+\mbox{\Hypertarget{classCFloatingMeasure_ae69672971857cf047c5bc7ab4b631b6c}\label{classCFloatingMeasure_ae69672971857cf047c5bc7ab4b631b6c}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!Compatible@{Compatible}}
+\index{Compatible@{Compatible}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{Compatible()}{Compatible()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool C\+Floating\+Measure\+::\+Compatible (\begin{DoxyParamCaption}\item[{const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+check measures for compatibility 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & p\+\_\+other\+:\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure}\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 241 of file Floating\+Measure.\+h.
+
+
+
+References Measure().
+
+\mbox{\Hypertarget{classCFloatingMeasure_a5cf69c287abe4e2f65242e97093f7595}\label{classCFloatingMeasure_a5cf69c287abe4e2f65242e97093f7595}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!Compatible@{Compatible}}
+\index{Compatible@{Compatible}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{Compatible()}{Compatible()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool C\+Floating\+Measure\+::\+Compatible (\begin{DoxyParamCaption}\item[{const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+check measures for compatibility 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & p\+\_\+other\+:\hyperlink{classCComplexMeasure}{C\+Complex\+Measure}\&\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 250 of file Floating\+Measure.\+h.
+
+
+
+References C\+Complex\+Measure\+::\+Scale\+To().
+
+\mbox{\Hypertarget{classCFloatingMeasure_a6d92f39204f23e81732cb77131517b6f}\label{classCFloatingMeasure_a6d92f39204f23e81732cb77131517b6f}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!Debug\+Out@{Debug\+Out}}
+\index{Debug\+Out@{Debug\+Out}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{Debug\+Out()}{DebugOut()}}
+{\footnotesize\ttfamily string C\+Floating\+Measure\+::\+Debug\+Out (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+debugging output for every member 
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 311 of file Floating\+Measure.\+cpp.
+
+
+
+References Bool2\+String(), cm\+Measure, C\+Complex\+Measure\+::\+Debug\+Out(), C\+Dig\+Float\+::\+Debug\+Out(), df\+Floating, pfm\+Precision, Print\+Short(), and Valid().
+
+\mbox{\Hypertarget{classCFloatingMeasure_ab41354d28783d125159bd6e9372c6d9f}\label{classCFloatingMeasure_ab41354d28783d125159bd6e9372c6d9f}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!Floating@{Floating}}
+\index{Floating@{Floating}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{Floating()}{Floating()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classCDigFloat}{C\+Dig\+Float} C\+Floating\+Measure\+::\+Floating (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+gettter for df\+Floating 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCDigFloat}{C\+Dig\+Float} 
+\end{DoxyReturn}
+
+
+Definition at line 320 of file Floating\+Measure.\+h.
+
+\mbox{\Hypertarget{classCFloatingMeasure_aa33fe952e9c01f5f76cef5e6f0d03864}\label{classCFloatingMeasure_aa33fe952e9c01f5f76cef5e6f0d03864}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!Floating@{Floating}}
+\index{Floating@{Floating}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{Floating()}{Floating()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void C\+Floating\+Measure\+::\+Floating (\begin{DoxyParamCaption}\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+
+
+setter for df\+Floating 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & p\+\_\+other\+:\hyperlink{classCDigFloat}{C\+Dig\+Float} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 361 of file Floating\+Measure.\+h.
+
+\mbox{\Hypertarget{classCFloatingMeasure_a8ac3af95a2619670a51d744c85b44463}\label{classCFloatingMeasure_a8ac3af95a2619670a51d744c85b44463}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!Measure@{Measure}}
+\index{Measure@{Measure}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{Measure()}{Measure()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} C\+Floating\+Measure\+::\+Measure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+getter for cm\+Measure 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCComplexMeasure}{C\+Complex\+Measure} 
+\end{DoxyReturn}
+
+
+Definition at line 326 of file Floating\+Measure.\+h.
+
+
+
+References C\+Complex\+Measure\+::\+\_\+\+Init().
+
+\mbox{\Hypertarget{classCFloatingMeasure_af35c54ac06b1c8ddca86390360559548}\label{classCFloatingMeasure_af35c54ac06b1c8ddca86390360559548}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!Measure@{Measure}}
+\index{Measure@{Measure}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{Measure()}{Measure()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void C\+Floating\+Measure\+::\+Measure (\begin{DoxyParamCaption}\item[{const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+setter for cm\+Measure 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & p\+\_\+other\+:\hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 245 of file Floating\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Precision(), cm\+Measure, and pfm\+Precision.
+
+\mbox{\Hypertarget{classCFloatingMeasure_af4e2cc6a78b8e0cda11df432902bde8a}\label{classCFloatingMeasure_af4e2cc6a78b8e0cda11df432902bde8a}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!Normalize@{Normalize}}
+\index{Normalize@{Normalize}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{Normalize()}{Normalize()}}
+{\footnotesize\ttfamily void C\+Floating\+Measure\+::\+Normalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+convert to SI unit and remove premeasures != pm\+Ident 
+
+
+
+Definition at line 204 of file Floating\+Measure.\+cpp.
+
+
+
+References cm\+Measure, df\+Floating, C\+Complex\+Measure\+::\+Normalize(), and C\+Complex\+Measure\+::\+Release\+Exp10\+And\+Factor().
+
+\mbox{\Hypertarget{classCFloatingMeasure_afbedc9a56acac7c6738357ce2347aad3}\label{classCFloatingMeasure_afbedc9a56acac7c6738357ce2347aad3}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool C\+Floating\+Measure\+::operator!= (\begin{DoxyParamCaption}\item[{const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+operator!= 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & p\+\_\+other\+:\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 71 of file Floating\+Measure.\+cpp.
+
+\mbox{\Hypertarget{classCFloatingMeasure_a993623835ced24f74075861b2aab736e}\label{classCFloatingMeasure_a993623835ced24f74075861b2aab736e}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} C\+Floating\+Measure\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+operator$\ast$ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & p\+\_\+other\+:\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure}\& 
+\end{DoxyReturn}
+
+
+Definition at line 164 of file Floating\+Measure.\+cpp.
+
+\mbox{\Hypertarget{classCFloatingMeasure_a31cedd2120675c56064e12556432f550}\label{classCFloatingMeasure_a31cedd2120675c56064e12556432f550}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} C\+Floating\+Measure\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const double \&}]{other }\end{DoxyParamCaption})}
+
+
+
+operator$\ast$ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & p\+\_\+other\+:double \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure}\& 
+\end{DoxyReturn}
+
+
+Definition at line 190 of file Floating\+Measure.\+cpp.
+
+\mbox{\Hypertarget{classCFloatingMeasure_a2df7738d5c017a02c1f11c40809cac96}\label{classCFloatingMeasure_a2df7738d5c017a02c1f11c40809cac96}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \& C\+Floating\+Measure\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+operator$\ast$= 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & p\+\_\+other\+:\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure}\& 
+\end{DoxyReturn}
+
+
+Definition at line 136 of file Floating\+Measure.\+cpp.
+
+
+
+References cm\+Measure, df\+Floating, Floating(), Measure(), and C\+Complex\+Measure\+::\+Release\+Exp10\+And\+Factor().
+
+\mbox{\Hypertarget{classCFloatingMeasure_a051879dde322060eb7695667dd38ab13}\label{classCFloatingMeasure_a051879dde322060eb7695667dd38ab13}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \& C\+Floating\+Measure\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{const double \&}]{other }\end{DoxyParamCaption})}
+
+
+
+operator$\ast$= 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & p\+\_\+other\+:double \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure}\& 
+\end{DoxyReturn}
+
+
+Definition at line 178 of file Floating\+Measure.\+cpp.
+
+
+
+References df\+Floating.
+
+\mbox{\Hypertarget{classCFloatingMeasure_a26560fcb587eafe8966541159eec57de}\label{classCFloatingMeasure_a26560fcb587eafe8966541159eec57de}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!operator+@{operator+}}
+\index{operator+@{operator+}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} C\+Floating\+Measure\+::operator+ (\begin{DoxyParamCaption}\item[{const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+operator + 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & p\+\_\+other\+:\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure}\& 
+\end{DoxyReturn}
+
+
+Definition at line 150 of file Floating\+Measure.\+cpp.
+
+\mbox{\Hypertarget{classCFloatingMeasure_a40f0ec4cb155856efed8db28c7c8fa3e}\label{classCFloatingMeasure_a40f0ec4cb155856efed8db28c7c8fa3e}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \& C\+Floating\+Measure\+::operator+= (\begin{DoxyParamCaption}\item[{const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+operator += 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & p\+\_\+other\+:\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure}\& 
+\end{DoxyReturn}
+
+
+Definition at line 103 of file Floating\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Init(), Compatible(), df\+Floating, Floating(), and Scale\+To().
+
+\mbox{\Hypertarget{classCFloatingMeasure_ad29973f56a38dda22fc9d66a16b13860}\label{classCFloatingMeasure_ad29973f56a38dda22fc9d66a16b13860}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} C\+Floating\+Measure\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+operator-\/ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & p\+\_\+other\+:\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure}\& 
+\end{DoxyReturn}
+
+
+Definition at line 157 of file Floating\+Measure.\+cpp.
+
+\mbox{\Hypertarget{classCFloatingMeasure_a3661f71ed47a6659f7e27adff3c5c369}\label{classCFloatingMeasure_a3661f71ed47a6659f7e27adff3c5c369}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{operator-\/=()}{operator-=()}}
+{\footnotesize\ttfamily \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \& C\+Floating\+Measure\+::operator-\/= (\begin{DoxyParamCaption}\item[{const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+operator-\/= 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & p\+\_\+other\+:\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure}\& 
+\end{DoxyReturn}
+
+
+Definition at line 119 of file Floating\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Init(), Compatible(), df\+Floating, Floating(), and Scale\+To().
+
+\mbox{\Hypertarget{classCFloatingMeasure_acb68f4d17606dc2312f4efabe877ab80}\label{classCFloatingMeasure_acb68f4d17606dc2312f4efabe877ab80}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!operator/@{operator/}}
+\index{operator/@{operator/}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} C\+Floating\+Measure\+::operator/ (\begin{DoxyParamCaption}\item[{const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+operator/ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & p\+\_\+other\+:\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure}\& 
+\end{DoxyReturn}
+
+
+Definition at line 171 of file Floating\+Measure.\+cpp.
+
+\mbox{\Hypertarget{classCFloatingMeasure_ac39b5a05cce42097d4439627aaaaf94c}\label{classCFloatingMeasure_ac39b5a05cce42097d4439627aaaaf94c}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!operator/@{operator/}}
+\index{operator/@{operator/}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} C\+Floating\+Measure\+::operator/ (\begin{DoxyParamCaption}\item[{const double \&}]{other }\end{DoxyParamCaption})}
+
+
+
+operator/ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & p\+\_\+other\+:double \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure}\& 
+\end{DoxyReturn}
+
+
+Definition at line 197 of file Floating\+Measure.\+cpp.
+
+\mbox{\Hypertarget{classCFloatingMeasure_a1bc972be1fa5abd0619849710eef398c}\label{classCFloatingMeasure_a1bc972be1fa5abd0619849710eef398c}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{operator/=()}{operator/=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \& C\+Floating\+Measure\+::operator/= (\begin{DoxyParamCaption}\item[{const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+operator/= 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & p\+\_\+other\+:\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure}\& 
+\end{DoxyReturn}
+
+
+Definition at line 143 of file Floating\+Measure.\+cpp.
+
+
+
+References cm\+Measure, df\+Floating, Floating(), Measure(), and C\+Complex\+Measure\+::\+Release\+Exp10\+And\+Factor().
+
+\mbox{\Hypertarget{classCFloatingMeasure_a2ba332fa822922d51866e4361db1677b}\label{classCFloatingMeasure_a2ba332fa822922d51866e4361db1677b}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{operator/=()}{operator/=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \& C\+Floating\+Measure\+::operator/= (\begin{DoxyParamCaption}\item[{const double \&}]{other }\end{DoxyParamCaption})}
+
+
+
+operator/= 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & p\+\_\+other\+:double \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure}\& 
+\end{DoxyReturn}
+
+
+Definition at line 184 of file Floating\+Measure.\+cpp.
+
+
+
+References df\+Floating.
+
+\mbox{\Hypertarget{classCFloatingMeasure_a35d506664a6a72856d56cbf18ea9d2a4}\label{classCFloatingMeasure_a35d506664a6a72856d56cbf18ea9d2a4}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool C\+Floating\+Measure\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+operator$<$ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & p\+\_\+other\+:\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 75 of file Floating\+Measure.\+cpp.
+
+
+
+References Floating(), and Scale\+To().
+
+\mbox{\Hypertarget{classCFloatingMeasure_ad8b94201f5df969de576f89a249c947e}\label{classCFloatingMeasure_ad8b94201f5df969de576f89a249c947e}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{operator$<$=()}{operator<=()}}
+{\footnotesize\ttfamily bool C\+Floating\+Measure\+::operator$<$= (\begin{DoxyParamCaption}\item[{const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+operator$<$= 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & p\+\_\+other\+:\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 82 of file Floating\+Measure.\+cpp.
+
+
+
+References Floating(), and Scale\+To().
+
+\mbox{\Hypertarget{classCFloatingMeasure_a958ef3d71c3dd7355bebef272df5b9e0}\label{classCFloatingMeasure_a958ef3d71c3dd7355bebef272df5b9e0}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!operator=@{operator=}}
+\index{operator=@{operator=}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \& C\+Floating\+Measure\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&}]{other }\end{DoxyParamCaption})}
+
+Assignment operator
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} 
+\end{DoxyReturn}
+
+
+Definition at line 51 of file Floating\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Precision(), Floating(), Measure(), and pfm\+Precision.
+
+\mbox{\Hypertarget{classCFloatingMeasure_ab4233b1232751f99e9e1f91f2ee55cc9}\label{classCFloatingMeasure_ab4233b1232751f99e9e1f91f2ee55cc9}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!operator==@{operator==}}
+\index{operator==@{operator==}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool C\+Floating\+Measure\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+comparison operator 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & p\+\_\+other\+:\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 60 of file Floating\+Measure.\+cpp.
+
+
+
+References Floating(), Measure(), and Scale\+To().
+
+\mbox{\Hypertarget{classCFloatingMeasure_a59cd04759c33941c7c20db3c81dcde14}\label{classCFloatingMeasure_a59cd04759c33941c7c20db3c81dcde14}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool C\+Floating\+Measure\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+operator$>$ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & p\+\_\+other\+:\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 96 of file Floating\+Measure.\+cpp.
+
+
+
+References Floating(), and Scale\+To().
+
+\mbox{\Hypertarget{classCFloatingMeasure_aa6575f6f658ee524da9e5f123189cef1}\label{classCFloatingMeasure_aa6575f6f658ee524da9e5f123189cef1}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
+{\footnotesize\ttfamily bool C\+Floating\+Measure\+::operator$>$= (\begin{DoxyParamCaption}\item[{const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+operator$>$= 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & p\+\_\+other\+:\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 89 of file Floating\+Measure.\+cpp.
+
+
+
+References Floating(), and Scale\+To().
+
+\mbox{\Hypertarget{classCFloatingMeasure_abaedeff78fb7009c788df5a016bc46d5}\label{classCFloatingMeasure_abaedeff78fb7009c788df5a016bc46d5}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!Precision@{Precision}}
+\index{Precision@{Precision}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{Precision()}{Precision()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void C\+Floating\+Measure\+::\+Precision (\begin{DoxyParamCaption}\item[{const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&}]{User\+Precision }\end{DoxyParamCaption})}
+
+
+
+setting precision of floating number by floating number\+: calls C\+Dig\+Float\+::\+Precision(n\+Digits) from \hyperlink{classCFloatingMeasure_aa0cec9966c6c08db75c493e44396cfc2}{C\+Floating\+Measure\+::df\+Floating}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em User\+Precision} & \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} which determines no. of digits=(-\/log(User\+Precision) +1) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 254 of file Floating\+Measure.\+cpp.
+
+
+
+References C\+Floating\+Measure(), df\+Floating, Floating(), Measure(), pfm\+Precision, C\+Dig\+Float\+::\+Precision(), C\+Dig\+Float\+::\+Raw\+Value(), Scale\+To(), and Valid().
+
+\mbox{\Hypertarget{classCFloatingMeasure_ac8975daf37b98b3e996893e0de43c4eb}\label{classCFloatingMeasure_ac8975daf37b98b3e996893e0de43c4eb}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!Precision@{Precision}}
+\index{Precision@{Precision}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{Precision()}{Precision()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} C\+Floating\+Measure\+::\+Precision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+get the precision as \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} 
+\end{DoxyReturn}
+
+
+Definition at line 281 of file Floating\+Measure.\+cpp.
+
+
+
+References pfm\+Precision.
+
+\mbox{\Hypertarget{classCFloatingMeasure_a4fe4d60589da6d4c7f09cb09fbea730b}\label{classCFloatingMeasure_a4fe4d60589da6d4c7f09cb09fbea730b}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!Precision\+Active@{Precision\+Active}}
+\index{Precision\+Active@{Precision\+Active}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{Precision\+Active()}{PrecisionActive()}}
+{\footnotesize\ttfamily void C\+Floating\+Measure\+::\+Precision\+Active (\begin{DoxyParamCaption}\item[{const bool}]{b\+Precision\+Active }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+switch precision defined by df\+Floating\+::n\+Precision on / off 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b\+Precision\+Active} & p\+\_\+b\+Precision\+Active\+:bool \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 282 of file Floating\+Measure.\+h.
+
+\mbox{\Hypertarget{classCFloatingMeasure_a90d47ac476295db3c208cb484cd75764}\label{classCFloatingMeasure_a90d47ac476295db3c208cb484cd75764}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!Precison\+Active@{Precison\+Active}}
+\index{Precison\+Active@{Precison\+Active}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{Precison\+Active()}{PrecisonActive()}}
+{\footnotesize\ttfamily const bool C\+Floating\+Measure\+::\+Precison\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+get Precision\+Active from df\+Floating 
+
+\begin{DoxyReturn}{Returns}
+const bool 
+\end{DoxyReturn}
+
+
+Definition at line 288 of file Floating\+Measure.\+h.
+
+\mbox{\Hypertarget{classCFloatingMeasure_af4caaa697967a257bc6e13117843ff58}\label{classCFloatingMeasure_af4caaa697967a257bc6e13117843ff58}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!Print\+Short@{Print\+Short}}
+\index{Print\+Short@{Print\+Short}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{Print\+Short()}{PrintShort()}}
+{\footnotesize\ttfamily string C\+Floating\+Measure\+::\+Print\+Short (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+printing short output\+: e.\+g. \char`\"{}10$\ast$mv/\+V\char`\"{} 
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 305 of file Floating\+Measure.\+cpp.
+
+
+
+References cm\+Measure, df\+Floating, C\+Dig\+Float\+::\+Print(), and C\+Complex\+Measure\+::\+Print\+All\+Short().
+
+\mbox{\Hypertarget{classCFloatingMeasure_aa0a16f8516d047576b588389504c0996}\label{classCFloatingMeasure_aa0a16f8516d047576b588389504c0996}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!Scale\+To@{Scale\+To}}
+\index{Scale\+To@{Scale\+To}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{Scale\+To()}{ScaleTo()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void C\+Floating\+Measure\+::\+Scale\+To (\begin{DoxyParamCaption}\item[{const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+scales to \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} of other 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & p\+\_\+other\+:\hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 216 of file Floating\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Init(), cm\+Measure, Compatible(), df\+Floating, Measure(), C\+Complex\+Measure\+::\+Release\+Exp10\+And\+Factor(), and C\+Complex\+Measure\+::\+Scale\+To().
+
+\mbox{\Hypertarget{classCFloatingMeasure_a841b94d2883274e67999688fad40d538}\label{classCFloatingMeasure_a841b94d2883274e67999688fad40d538}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!Scale\+To@{Scale\+To}}
+\index{Scale\+To@{Scale\+To}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{Scale\+To()}{ScaleTo()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void C\+Floating\+Measure\+::\+Scale\+To (\begin{DoxyParamCaption}\item[{const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+scales to \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} other 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & p\+\_\+other\+:\hyperlink{classCComplexMeasure}{C\+Complex\+Measure}\& \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 230 of file Floating\+Measure.\+cpp.
+
+
+
+References \+\_\+\+Init(), cm\+Measure, Compatible(), df\+Floating, C\+Complex\+Measure\+::\+Release\+Exp10\+And\+Factor(), and C\+Complex\+Measure\+::\+Scale\+To().
+
+\mbox{\Hypertarget{classCFloatingMeasure_a47731afb871889ee7da5f84b40e3a27f}\label{classCFloatingMeasure_a47731afb871889ee7da5f84b40e3a27f}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!Simplify@{Simplify}}
+\index{Simplify@{Simplify}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{Simplify()}{Simplify()}}
+{\footnotesize\ttfamily void C\+Floating\+Measure\+::\+Simplify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+convert to SI unit and remove premeasures != pm\+Ident 
+
+
+
+Definition at line 210 of file Floating\+Measure.\+cpp.
+
+
+
+References cm\+Measure, df\+Floating, C\+Complex\+Measure\+::\+Release\+Exp10\+And\+Factor(), and C\+Complex\+Measure\+::\+Simplify().
+
+\mbox{\Hypertarget{classCFloatingMeasure_a0ff3ae036cd2ee44d6b2eadc609b1d1a}\label{classCFloatingMeasure_a0ff3ae036cd2ee44d6b2eadc609b1d1a}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!Valid@{Valid}}
+\index{Valid@{Valid}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{Valid()}{Valid()}}
+{\footnotesize\ttfamily bool C\+Floating\+Measure\+::\+Valid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+checks if the cm\+Measure and df\+Floating are valid values 
+
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 294 of file Floating\+Measure.\+h.
+
+
+
+References C\+Complex\+Measure\+::\+Debug\+Out().
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classCFloatingMeasure_a2af9f0d4f7a8de5099b8d23df211b616}\label{classCFloatingMeasure_a2af9f0d4f7a8de5099b8d23df211b616}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{C\+Complex\+Measure}{CComplexMeasure}}
+{\footnotesize\ttfamily friend class \hyperlink{classCComplexMeasure}{C\+Complex\+Measure}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 41 of file Floating\+Measure.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classCFloatingMeasure_a3a23946016d1b7f41a1ecf05f4d5d5c6}\label{classCFloatingMeasure_a3a23946016d1b7f41a1ecf05f4d5d5c6}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!cm\+Measure@{cm\+Measure}}
+\index{cm\+Measure@{cm\+Measure}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{cm\+Measure}{cmMeasure}}
+{\footnotesize\ttfamily \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} C\+Floating\+Measure\+::cm\+Measure\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 367 of file Floating\+Measure.\+h.
+
+\mbox{\Hypertarget{classCFloatingMeasure_aa0cec9966c6c08db75c493e44396cfc2}\label{classCFloatingMeasure_aa0cec9966c6c08db75c493e44396cfc2}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!df\+Floating@{df\+Floating}}
+\index{df\+Floating@{df\+Floating}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{df\+Floating}{dfFloating}}
+{\footnotesize\ttfamily \hyperlink{classCDigFloat}{C\+Dig\+Float} C\+Floating\+Measure\+::df\+Floating\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 368 of file Floating\+Measure.\+h.
+
+\mbox{\Hypertarget{classCFloatingMeasure_a6bc7bd6e563e69cbf29692cd97153115}\label{classCFloatingMeasure_a6bc7bd6e563e69cbf29692cd97153115}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!pfm\+Precision@{pfm\+Precision}}
+\index{pfm\+Precision@{pfm\+Precision}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{pfm\+Precision}{pfmPrecision}}
+{\footnotesize\ttfamily \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure}$\ast$ C\+Floating\+Measure\+::pfm\+Precision\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 369 of file Floating\+Measure.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Floating\+Measure/\+Floating\+Measure/\hyperlink{FloatingMeasure_8h}{Floating\+Measure.\+h}\item 
+Floating\+Measure/\+Floating\+Measure/\hyperlink{FloatingMeasure_8cpp}{Floating\+Measure.\+cpp}\end{DoxyCompactItemize}

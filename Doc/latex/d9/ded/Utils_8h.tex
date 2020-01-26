@@ -1,0 +1,458 @@
+\hypertarget{Utils_8h}{}\section{Floating\+Measure/\+Utils/\+Utils.h File Reference}
+\label{Utils_8h}\index{Floating\+Measure/\+Utils/\+Utils.\+h@{Floating\+Measure/\+Utils/\+Utils.\+h}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$ostream$>$}\newline
+Include dependency graph for Utils.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{db/d5d/Utils_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d2/dc8/Utils_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{uniondbl__64}{dbl\+\_\+64}
+\begin{DoxyCompactList}\small\item\em union for calculation of numerical error of a 64 bit double \end{DoxyCompactList}\item 
+class \hyperlink{classCSingleton}{C\+Singleton$<$ Singleton\+Object $>$}
+\begin{DoxyCompactList}\small\item\em a Singleton class for a generic Singleton\+Object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{Utils_8h_aa453fe957e6d617b474b45213bf80820}{my\+N\+AN}~nan(\char`\"{}1\char`\"{})
+\item 
+\#define \hyperlink{Utils_8h_ad65eebfa453cc397aa31c2f1402e7d52}{G\+R\+E\+E\+K\+\_\+\+S\+M\+A\+L\+L\+\_\+\+MU}~\char`\"{}\textbackslash{}u00b5\char`\"{}
+\item 
+\#define \hyperlink{Utils_8h_a1c7affac54bdfdadac8fd7eb9b062745}{G\+R\+E\+E\+K\+\_\+\+C\+A\+P\+I\+T\+A\+L\+\_\+\+O\+M\+E\+GA}~\char`\"{}\textbackslash{}u03a9\char`\"{}
+\item 
+\#define \hyperlink{Utils_8h_a8b8d3b6ed23a610665d7e00cb4397680}{U\+N\+K\+N\+O\+W\+N\+\_\+\+S\+H\+O\+RT}~\char`\"{}n.\+a.\char`\"{}
+\item 
+\#define \hyperlink{Utils_8h_a5c6964ba7806e840a8a24e21191727a3}{U\+N\+K\+N\+O\+W\+N\+\_\+\+L\+O\+NG}~\char`\"{}unknown\char`\"{}
+\item 
+\#define \hyperlink{Utils_8h_a5a6daae34eeda6d6461f165a02acc3c7}{U\+N\+K\+N\+O\+W\+N\+\_\+\+I\+N\+D\+EX}~-\/1
+\item 
+\#define \hyperlink{Utils_8h_a0488bc30cccd5b3304bf0936b5af486b}{U\+N\+K\+N\+O\+W\+N\+\_\+\+V\+A\+L\+UE}~\hyperlink{Utils_8h_aa453fe957e6d617b474b45213bf80820}{my\+N\+AN}
+\item 
+\#define \hyperlink{Utils_8h_a5796288828c990621e30b2669757d916}{I\+N\+V\+A\+L\+I\+D\+\_\+\+E\+X\+P\+O\+N\+E\+NT}~-\/666
+\item 
+\#define \hyperlink{Utils_8h_a16e1e5ba474fcf3e45ade32acf66c144}{mu}~string(\hyperlink{Utils_8h_ad65eebfa453cc397aa31c2f1402e7d52}{G\+R\+E\+E\+K\+\_\+\+S\+M\+A\+L\+L\+\_\+\+MU})
+\item 
+\#define \hyperlink{Utils_8h_a400617b5daf9faf9da16780bda2904fd}{Omega}~string(\hyperlink{Utils_8h_a1c7affac54bdfdadac8fd7eb9b062745}{G\+R\+E\+E\+K\+\_\+\+C\+A\+P\+I\+T\+A\+L\+\_\+\+O\+M\+E\+GA})
+\item 
+\#define \hyperlink{Utils_8h_a57f004e69be4e541c9ef272d1684b9f6}{plmi}~string(\char`\"{}\textbackslash{}u00\+B1\char`\"{})
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double D\+L\+L\+E\+X\+P\+O\+R\+T\+\_\+\+C\+MD \hyperlink{Utils_8h_adb19ed17b4e8ed0a8525c35fdc8872c3}{Double\+Machine\+Epsilon} (double d\+Value)
+\begin{DoxyCompactList}\small\item\em calculates the numerical error for a given double \end{DoxyCompactList}\item 
+double D\+L\+L\+E\+X\+P\+O\+R\+T\+\_\+\+C\+MD \hyperlink{Utils_8h_a343a017d0c1a53ec463a5fa243cf50d0}{Round2\+Precision} (const double d\+Value, const int n\+Precision)
+\begin{DoxyCompactList}\small\item\em cuts double according to precision \end{DoxyCompactList}\item 
+string D\+L\+L\+E\+X\+P\+O\+R\+T\+\_\+\+C\+MD \hyperlink{Utils_8h_ab78ffa949645ca0f0d0e2d3e9520ef29}{Bool2\+String} (const bool b\+Bool)
+\begin{DoxyCompactList}\small\item\em returns \char`\"{}true\char`\"{} or \char`\"{}false\char`\"{} as string \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\int \hyperlink{Utils_8h_aef4e401709c029dcd6fb5ee8a858bdf6}{Find\+Element\+In\+Vector\+Get\+Index} (const T \&Value, const vector$<$ T $>$ \&Vec, int n\+Default\+Index)
+\begin{DoxyCompactList}\small\item\em returns the index of an element within a vector \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\int \hyperlink{Utils_8h_a10f8b0557cff0575f9b545ad76234fcd}{Find\+Element\+In\+Vector\+Get\+Index} (const T \&Value, const vector$<$ T $>$ $\ast$p\+Vec, int n\+Default\+Index)
+\begin{DoxyCompactList}\small\item\em returns the index of an element within a vector \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\const T \& \hyperlink{Utils_8h_a7042c83d0f87835f7fdb87b8d3e1de40}{Get\+Element\+From\+Vector\+By\+Index} (const vector$<$ T $>$ \&Vec, const unsigned int ui\+Index)
+\begin{DoxyCompactList}\small\item\em returns the index of an element within a vector \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\const T \& \hyperlink{Utils_8h_a5dcd880b1990847494e1cfd17b0a0dad}{Get\+Element\+From\+Vector\+By\+Index} (const vector$<$ T $>$ $\ast$p\+Vec, const unsigned int ui\+Index)
+\begin{DoxyCompactList}\small\item\em returns the index of an element within a vector \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{Utils_8h_ab3514a1d7de1960b4685ce4eeefce78e}{Secure\+Delete\+Object\+Pointer} (T $\ast$\&pt)
+\begin{DoxyCompactList}\small\item\em safely deletes pointers to objects of type T\+:~\newline
+ \char`\"{}safely\char`\"{} holds only if unused pointers are initialized with nullptr \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{Utils_8h_aa550c859c03fa28b9b63b7070e53505d}{Secure\+Delete\+Vector\+Pointer} (T $\ast$\&pt)
+\begin{DoxyCompactList}\small\item\em safely deletes vectors / arrays of type T \char`\"{}safely\char`\"{} holds only if unused pointers are initialized with nullptr \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{Utils_8h_a1c7affac54bdfdadac8fd7eb9b062745}\label{Utils_8h_a1c7affac54bdfdadac8fd7eb9b062745}} 
+\index{Utils.\+h@{Utils.\+h}!G\+R\+E\+E\+K\+\_\+\+C\+A\+P\+I\+T\+A\+L\+\_\+\+O\+M\+E\+GA@{G\+R\+E\+E\+K\+\_\+\+C\+A\+P\+I\+T\+A\+L\+\_\+\+O\+M\+E\+GA}}
+\index{G\+R\+E\+E\+K\+\_\+\+C\+A\+P\+I\+T\+A\+L\+\_\+\+O\+M\+E\+GA@{G\+R\+E\+E\+K\+\_\+\+C\+A\+P\+I\+T\+A\+L\+\_\+\+O\+M\+E\+GA}!Utils.\+h@{Utils.\+h}}
+\subsubsection{\texorpdfstring{G\+R\+E\+E\+K\+\_\+\+C\+A\+P\+I\+T\+A\+L\+\_\+\+O\+M\+E\+GA}{GREEK\_CAPITAL\_OMEGA}}
+{\footnotesize\ttfamily \#define G\+R\+E\+E\+K\+\_\+\+C\+A\+P\+I\+T\+A\+L\+\_\+\+O\+M\+E\+GA~\char`\"{}\textbackslash{}u03a9\char`\"{}}
+
+
+
+Definition at line 58 of file Utils.\+h.
+
+\mbox{\Hypertarget{Utils_8h_ad65eebfa453cc397aa31c2f1402e7d52}\label{Utils_8h_ad65eebfa453cc397aa31c2f1402e7d52}} 
+\index{Utils.\+h@{Utils.\+h}!G\+R\+E\+E\+K\+\_\+\+S\+M\+A\+L\+L\+\_\+\+MU@{G\+R\+E\+E\+K\+\_\+\+S\+M\+A\+L\+L\+\_\+\+MU}}
+\index{G\+R\+E\+E\+K\+\_\+\+S\+M\+A\+L\+L\+\_\+\+MU@{G\+R\+E\+E\+K\+\_\+\+S\+M\+A\+L\+L\+\_\+\+MU}!Utils.\+h@{Utils.\+h}}
+\subsubsection{\texorpdfstring{G\+R\+E\+E\+K\+\_\+\+S\+M\+A\+L\+L\+\_\+\+MU}{GREEK\_SMALL\_MU}}
+{\footnotesize\ttfamily \#define G\+R\+E\+E\+K\+\_\+\+S\+M\+A\+L\+L\+\_\+\+MU~\char`\"{}\textbackslash{}u00b5\char`\"{}}
+
+
+
+Definition at line 57 of file Utils.\+h.
+
+\mbox{\Hypertarget{Utils_8h_a5796288828c990621e30b2669757d916}\label{Utils_8h_a5796288828c990621e30b2669757d916}} 
+\index{Utils.\+h@{Utils.\+h}!I\+N\+V\+A\+L\+I\+D\+\_\+\+E\+X\+P\+O\+N\+E\+NT@{I\+N\+V\+A\+L\+I\+D\+\_\+\+E\+X\+P\+O\+N\+E\+NT}}
+\index{I\+N\+V\+A\+L\+I\+D\+\_\+\+E\+X\+P\+O\+N\+E\+NT@{I\+N\+V\+A\+L\+I\+D\+\_\+\+E\+X\+P\+O\+N\+E\+NT}!Utils.\+h@{Utils.\+h}}
+\subsubsection{\texorpdfstring{I\+N\+V\+A\+L\+I\+D\+\_\+\+E\+X\+P\+O\+N\+E\+NT}{INVALID\_EXPONENT}}
+{\footnotesize\ttfamily \#define I\+N\+V\+A\+L\+I\+D\+\_\+\+E\+X\+P\+O\+N\+E\+NT~-\/666}
+
+
+
+Definition at line 63 of file Utils.\+h.
+
+\mbox{\Hypertarget{Utils_8h_a16e1e5ba474fcf3e45ade32acf66c144}\label{Utils_8h_a16e1e5ba474fcf3e45ade32acf66c144}} 
+\index{Utils.\+h@{Utils.\+h}!mu@{mu}}
+\index{mu@{mu}!Utils.\+h@{Utils.\+h}}
+\subsubsection{\texorpdfstring{mu}{mu}}
+{\footnotesize\ttfamily \#define mu~string(\hyperlink{Utils_8h_ad65eebfa453cc397aa31c2f1402e7d52}{G\+R\+E\+E\+K\+\_\+\+S\+M\+A\+L\+L\+\_\+\+MU})}
+
+
+
+Definition at line 71 of file Utils.\+h.
+
+\mbox{\Hypertarget{Utils_8h_aa453fe957e6d617b474b45213bf80820}\label{Utils_8h_aa453fe957e6d617b474b45213bf80820}} 
+\index{Utils.\+h@{Utils.\+h}!my\+N\+AN@{my\+N\+AN}}
+\index{my\+N\+AN@{my\+N\+AN}!Utils.\+h@{Utils.\+h}}
+\subsubsection{\texorpdfstring{my\+N\+AN}{myNAN}}
+{\footnotesize\ttfamily \#define my\+N\+AN~nan(\char`\"{}1\char`\"{})}
+
+
+
+Definition at line 56 of file Utils.\+h.
+
+\mbox{\Hypertarget{Utils_8h_a400617b5daf9faf9da16780bda2904fd}\label{Utils_8h_a400617b5daf9faf9da16780bda2904fd}} 
+\index{Utils.\+h@{Utils.\+h}!Omega@{Omega}}
+\index{Omega@{Omega}!Utils.\+h@{Utils.\+h}}
+\subsubsection{\texorpdfstring{Omega}{Omega}}
+{\footnotesize\ttfamily \#define Omega~string(\hyperlink{Utils_8h_a1c7affac54bdfdadac8fd7eb9b062745}{G\+R\+E\+E\+K\+\_\+\+C\+A\+P\+I\+T\+A\+L\+\_\+\+O\+M\+E\+GA})}
+
+
+
+Definition at line 72 of file Utils.\+h.
+
+\mbox{\Hypertarget{Utils_8h_a57f004e69be4e541c9ef272d1684b9f6}\label{Utils_8h_a57f004e69be4e541c9ef272d1684b9f6}} 
+\index{Utils.\+h@{Utils.\+h}!plmi@{plmi}}
+\index{plmi@{plmi}!Utils.\+h@{Utils.\+h}}
+\subsubsection{\texorpdfstring{plmi}{plmi}}
+{\footnotesize\ttfamily \#define plmi~string(\char`\"{}\textbackslash{}u00\+B1\char`\"{})}
+
+
+
+Definition at line 73 of file Utils.\+h.
+
+\mbox{\Hypertarget{Utils_8h_a5a6daae34eeda6d6461f165a02acc3c7}\label{Utils_8h_a5a6daae34eeda6d6461f165a02acc3c7}} 
+\index{Utils.\+h@{Utils.\+h}!U\+N\+K\+N\+O\+W\+N\+\_\+\+I\+N\+D\+EX@{U\+N\+K\+N\+O\+W\+N\+\_\+\+I\+N\+D\+EX}}
+\index{U\+N\+K\+N\+O\+W\+N\+\_\+\+I\+N\+D\+EX@{U\+N\+K\+N\+O\+W\+N\+\_\+\+I\+N\+D\+EX}!Utils.\+h@{Utils.\+h}}
+\subsubsection{\texorpdfstring{U\+N\+K\+N\+O\+W\+N\+\_\+\+I\+N\+D\+EX}{UNKNOWN\_INDEX}}
+{\footnotesize\ttfamily \#define U\+N\+K\+N\+O\+W\+N\+\_\+\+I\+N\+D\+EX~-\/1}
+
+
+
+Definition at line 61 of file Utils.\+h.
+
+\mbox{\Hypertarget{Utils_8h_a5c6964ba7806e840a8a24e21191727a3}\label{Utils_8h_a5c6964ba7806e840a8a24e21191727a3}} 
+\index{Utils.\+h@{Utils.\+h}!U\+N\+K\+N\+O\+W\+N\+\_\+\+L\+O\+NG@{U\+N\+K\+N\+O\+W\+N\+\_\+\+L\+O\+NG}}
+\index{U\+N\+K\+N\+O\+W\+N\+\_\+\+L\+O\+NG@{U\+N\+K\+N\+O\+W\+N\+\_\+\+L\+O\+NG}!Utils.\+h@{Utils.\+h}}
+\subsubsection{\texorpdfstring{U\+N\+K\+N\+O\+W\+N\+\_\+\+L\+O\+NG}{UNKNOWN\_LONG}}
+{\footnotesize\ttfamily \#define U\+N\+K\+N\+O\+W\+N\+\_\+\+L\+O\+NG~\char`\"{}unknown\char`\"{}}
+
+
+
+Definition at line 60 of file Utils.\+h.
+
+\mbox{\Hypertarget{Utils_8h_a8b8d3b6ed23a610665d7e00cb4397680}\label{Utils_8h_a8b8d3b6ed23a610665d7e00cb4397680}} 
+\index{Utils.\+h@{Utils.\+h}!U\+N\+K\+N\+O\+W\+N\+\_\+\+S\+H\+O\+RT@{U\+N\+K\+N\+O\+W\+N\+\_\+\+S\+H\+O\+RT}}
+\index{U\+N\+K\+N\+O\+W\+N\+\_\+\+S\+H\+O\+RT@{U\+N\+K\+N\+O\+W\+N\+\_\+\+S\+H\+O\+RT}!Utils.\+h@{Utils.\+h}}
+\subsubsection{\texorpdfstring{U\+N\+K\+N\+O\+W\+N\+\_\+\+S\+H\+O\+RT}{UNKNOWN\_SHORT}}
+{\footnotesize\ttfamily \#define U\+N\+K\+N\+O\+W\+N\+\_\+\+S\+H\+O\+RT~\char`\"{}n.\+a.\char`\"{}}
+
+
+
+Definition at line 59 of file Utils.\+h.
+
+\mbox{\Hypertarget{Utils_8h_a0488bc30cccd5b3304bf0936b5af486b}\label{Utils_8h_a0488bc30cccd5b3304bf0936b5af486b}} 
+\index{Utils.\+h@{Utils.\+h}!U\+N\+K\+N\+O\+W\+N\+\_\+\+V\+A\+L\+UE@{U\+N\+K\+N\+O\+W\+N\+\_\+\+V\+A\+L\+UE}}
+\index{U\+N\+K\+N\+O\+W\+N\+\_\+\+V\+A\+L\+UE@{U\+N\+K\+N\+O\+W\+N\+\_\+\+V\+A\+L\+UE}!Utils.\+h@{Utils.\+h}}
+\subsubsection{\texorpdfstring{U\+N\+K\+N\+O\+W\+N\+\_\+\+V\+A\+L\+UE}{UNKNOWN\_VALUE}}
+{\footnotesize\ttfamily \#define U\+N\+K\+N\+O\+W\+N\+\_\+\+V\+A\+L\+UE~\hyperlink{Utils_8h_aa453fe957e6d617b474b45213bf80820}{my\+N\+AN}}
+
+
+
+Definition at line 62 of file Utils.\+h.
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{Utils_8h_ab78ffa949645ca0f0d0e2d3e9520ef29}\label{Utils_8h_ab78ffa949645ca0f0d0e2d3e9520ef29}} 
+\index{Utils.\+h@{Utils.\+h}!Bool2\+String@{Bool2\+String}}
+\index{Bool2\+String@{Bool2\+String}!Utils.\+h@{Utils.\+h}}
+\subsubsection{\texorpdfstring{Bool2\+String()}{Bool2String()}}
+{\footnotesize\ttfamily string D\+L\+L\+E\+X\+P\+O\+R\+T\+\_\+\+C\+MD Bool2\+String (\begin{DoxyParamCaption}\item[{const bool}]{b\+Bool }\end{DoxyParamCaption})}
+
+
+
+returns \char`\"{}true\char`\"{} or \char`\"{}false\char`\"{} as string 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b\+Bool} & bool to convert to string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 41 of file Utils.\+cpp.
+
+\mbox{\Hypertarget{Utils_8h_adb19ed17b4e8ed0a8525c35fdc8872c3}\label{Utils_8h_adb19ed17b4e8ed0a8525c35fdc8872c3}} 
+\index{Utils.\+h@{Utils.\+h}!Double\+Machine\+Epsilon@{Double\+Machine\+Epsilon}}
+\index{Double\+Machine\+Epsilon@{Double\+Machine\+Epsilon}!Utils.\+h@{Utils.\+h}}
+\subsubsection{\texorpdfstring{Double\+Machine\+Epsilon()}{DoubleMachineEpsilon()}}
+{\footnotesize\ttfamily double D\+L\+L\+E\+X\+P\+O\+R\+T\+\_\+\+C\+MD Double\+Machine\+Epsilon (\begin{DoxyParamCaption}\item[{double}]{d\+Value }\end{DoxyParamCaption})}
+
+
+
+calculates the numerical error for a given double 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d\+Value} & double which error is calculated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Definition at line 27 of file Utils.\+cpp.
+
+
+
+References dbl\+\_\+64\+::d64, dbl\+\_\+64\+::i64, and s.
+
+\mbox{\Hypertarget{Utils_8h_aef4e401709c029dcd6fb5ee8a858bdf6}\label{Utils_8h_aef4e401709c029dcd6fb5ee8a858bdf6}} 
+\index{Utils.\+h@{Utils.\+h}!Find\+Element\+In\+Vector\+Get\+Index@{Find\+Element\+In\+Vector\+Get\+Index}}
+\index{Find\+Element\+In\+Vector\+Get\+Index@{Find\+Element\+In\+Vector\+Get\+Index}!Utils.\+h@{Utils.\+h}}
+\subsubsection{\texorpdfstring{Find\+Element\+In\+Vector\+Get\+Index()}{FindElementInVectorGetIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int Find\+Element\+In\+Vector\+Get\+Index (\begin{DoxyParamCaption}\item[{const T \&}]{Value,  }\item[{const vector$<$ T $>$ \&}]{Vec,  }\item[{int}]{n\+Default\+Index }\end{DoxyParamCaption})}
+
+
+
+returns the index of an element within a vector 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & template type \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em Value} & value to find in the vector \\
+\hline
+{\em Vec} & the vector where the element will be searched \\
+\hline
+{\em n\+Default\+Index} & the index returned in case the element is not found in the vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 196 of file Utils.\+h.
+
+\mbox{\Hypertarget{Utils_8h_a10f8b0557cff0575f9b545ad76234fcd}\label{Utils_8h_a10f8b0557cff0575f9b545ad76234fcd}} 
+\index{Utils.\+h@{Utils.\+h}!Find\+Element\+In\+Vector\+Get\+Index@{Find\+Element\+In\+Vector\+Get\+Index}}
+\index{Find\+Element\+In\+Vector\+Get\+Index@{Find\+Element\+In\+Vector\+Get\+Index}!Utils.\+h@{Utils.\+h}}
+\subsubsection{\texorpdfstring{Find\+Element\+In\+Vector\+Get\+Index()}{FindElementInVectorGetIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int Find\+Element\+In\+Vector\+Get\+Index (\begin{DoxyParamCaption}\item[{const T \&}]{Value,  }\item[{const vector$<$ T $>$ $\ast$}]{p\+Vec,  }\item[{int}]{n\+Default\+Index }\end{DoxyParamCaption})}
+
+
+
+returns the index of an element within a vector 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & template type \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em Value} & value to find in the vector \\
+\hline
+{\em p\+Vec} & the pointer of the vector where the element will be searched \\
+\hline
+{\em n\+Default\+Index} & the index returned in case the element is not found in the vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 221 of file Utils.\+h.
+
+
+
+References Find\+Element\+In\+Vector\+Get\+Index().
+
+\mbox{\Hypertarget{Utils_8h_a7042c83d0f87835f7fdb87b8d3e1de40}\label{Utils_8h_a7042c83d0f87835f7fdb87b8d3e1de40}} 
+\index{Utils.\+h@{Utils.\+h}!Get\+Element\+From\+Vector\+By\+Index@{Get\+Element\+From\+Vector\+By\+Index}}
+\index{Get\+Element\+From\+Vector\+By\+Index@{Get\+Element\+From\+Vector\+By\+Index}!Utils.\+h@{Utils.\+h}}
+\subsubsection{\texorpdfstring{Get\+Element\+From\+Vector\+By\+Index()}{GetElementFromVectorByIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T\& Get\+Element\+From\+Vector\+By\+Index (\begin{DoxyParamCaption}\item[{const vector$<$ T $>$ \&}]{Vec,  }\item[{const unsigned int}]{ui\+Index }\end{DoxyParamCaption})}
+
+
+
+returns the index of an element within a vector 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & template type \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em Vec} & the vector where the element will be searched \\
+\hline
+{\em ui\+Index} & the index of the value returned, in case it exceeds the vector size, the last element of the vector is returned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 236 of file Utils.\+h.
+
+\mbox{\Hypertarget{Utils_8h_a5dcd880b1990847494e1cfd17b0a0dad}\label{Utils_8h_a5dcd880b1990847494e1cfd17b0a0dad}} 
+\index{Utils.\+h@{Utils.\+h}!Get\+Element\+From\+Vector\+By\+Index@{Get\+Element\+From\+Vector\+By\+Index}}
+\index{Get\+Element\+From\+Vector\+By\+Index@{Get\+Element\+From\+Vector\+By\+Index}!Utils.\+h@{Utils.\+h}}
+\subsubsection{\texorpdfstring{Get\+Element\+From\+Vector\+By\+Index()}{GetElementFromVectorByIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T\& Get\+Element\+From\+Vector\+By\+Index (\begin{DoxyParamCaption}\item[{const vector$<$ T $>$ $\ast$}]{p\+Vec,  }\item[{const unsigned int}]{ui\+Index }\end{DoxyParamCaption})}
+
+
+
+returns the index of an element within a vector 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & template type \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em p\+Vec} & the pointer of the vector where the element will be searched \\
+\hline
+{\em ui\+Index} & the index of the value returned, in case it exceeds the vector size, the last element of the vector is returned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+
+
+Definition at line 252 of file Utils.\+h.
+
+
+
+References Get\+Element\+From\+Vector\+By\+Index().
+
+\mbox{\Hypertarget{Utils_8h_a343a017d0c1a53ec463a5fa243cf50d0}\label{Utils_8h_a343a017d0c1a53ec463a5fa243cf50d0}} 
+\index{Utils.\+h@{Utils.\+h}!Round2\+Precision@{Round2\+Precision}}
+\index{Round2\+Precision@{Round2\+Precision}!Utils.\+h@{Utils.\+h}}
+\subsubsection{\texorpdfstring{Round2\+Precision()}{Round2Precision()}}
+{\footnotesize\ttfamily double D\+L\+L\+E\+X\+P\+O\+R\+T\+\_\+\+C\+MD Round2\+Precision (\begin{DoxyParamCaption}\item[{const double}]{d\+Value,  }\item[{const int}]{n\+Precision }\end{DoxyParamCaption})}
+
+
+
+cuts double according to precision 
+
+
+\begin{DoxyItemize}
+\item example positive precision\+: value= 100.\+00234, precision = 3 --$>$ 100.\+002
+\item example negative precision\+: value 1023404.\+234, precision = -\/2 --$>$ 1023400
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em d\+Value} & value to be cut \\
+\hline
+{\em n\+Precision} & the wanted precision \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+
+
+Definition at line 35 of file Utils.\+cpp.
+
+\mbox{\Hypertarget{Utils_8h_ab3514a1d7de1960b4685ce4eeefce78e}\label{Utils_8h_ab3514a1d7de1960b4685ce4eeefce78e}} 
+\index{Utils.\+h@{Utils.\+h}!Secure\+Delete\+Object\+Pointer@{Secure\+Delete\+Object\+Pointer}}
+\index{Secure\+Delete\+Object\+Pointer@{Secure\+Delete\+Object\+Pointer}!Utils.\+h@{Utils.\+h}}
+\subsubsection{\texorpdfstring{Secure\+Delete\+Object\+Pointer()}{SecureDeleteObjectPointer()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Secure\+Delete\+Object\+Pointer (\begin{DoxyParamCaption}\item[{T $\ast$\&}]{pt }\end{DoxyParamCaption})}
+
+
+
+safely deletes pointers to objects of type T\+:~\newline
+ \char`\"{}safely\char`\"{} holds only if unused pointers are initialized with nullptr 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T\+:object} & Type \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em pt} & pointer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 265 of file Utils.\+h.
+
+\mbox{\Hypertarget{Utils_8h_aa550c859c03fa28b9b63b7070e53505d}\label{Utils_8h_aa550c859c03fa28b9b63b7070e53505d}} 
+\index{Utils.\+h@{Utils.\+h}!Secure\+Delete\+Vector\+Pointer@{Secure\+Delete\+Vector\+Pointer}}
+\index{Secure\+Delete\+Vector\+Pointer@{Secure\+Delete\+Vector\+Pointer}!Utils.\+h@{Utils.\+h}}
+\subsubsection{\texorpdfstring{Secure\+Delete\+Vector\+Pointer()}{SecureDeleteVectorPointer()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void Secure\+Delete\+Vector\+Pointer (\begin{DoxyParamCaption}\item[{T $\ast$\&}]{pt }\end{DoxyParamCaption})}
+
+
+
+safely deletes vectors / arrays of type T \char`\"{}safely\char`\"{} holds only if unused pointers are initialized with nullptr 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & object type \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em pt} & pointer of vector / array \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 280 of file Utils.\+h.
+

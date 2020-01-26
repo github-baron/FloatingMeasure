@@ -1,0 +1,205 @@
+\hypertarget{PreMeasure_8h}{}\section{Floating\+Measure/\+Measure/\+Pre\+Measure.h File Reference}
+\label{PreMeasure_8h}\index{Floating\+Measure/\+Measure/\+Pre\+Measure.\+h@{Floating\+Measure/\+Measure/\+Pre\+Measure.\+h}}
+{\ttfamily \#include \char`\"{}Vector\+Handle.\+h\char`\"{}}\newline
+Include dependency graph for Pre\+Measure.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{d7/d67/PreMeasure_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dd/d40/PreMeasure_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classCPreMeasure}{C\+Pre\+Measure}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classCPreMeasure}{C\+Pre\+Measure} represents the pre-\/measure part of a measure. ~\newline
+ For example milli volt consists of the base-\/measure part \char`\"{}\+Volt\char`\"{} (see \hyperlink{classCBaseMeasure}{C\+Base\+Measure}) and the pre-\/measure part \char`\"{}milli\char`\"{}. ~\newline
+ This class handles vectors of\+: \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{PreMeasure_8h_a349316092037fdd0773335fab4e15ee8}{P\+RE}~\hyperlink{classCSingleton_a58f5ac3aaaea8079a373350594726bdf}{C\+Pre\+Measure\+Singleton\+::instance}()
+\begin{DoxyCompactList}\small\item\em Short cut to the singleton instance of \hyperlink{classCPreMeasure}{C\+Pre\+Measure}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classCSingleton}{C\+Singleton}$<$ \hyperlink{classCPreMeasure}{C\+Pre\+Measure} $>$ \hyperlink{PreMeasure_8h_af3953554ad21c10a9769a189bc1352af}{C\+Pre\+Measure\+Singleton}
+\begin{DoxyCompactList}\small\item\em a singleton instance of the class \hyperlink{classCPreMeasure}{C\+Pre\+Measure}\+: use this for efficient memory handling \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure} \{ \newline
+\hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620afaa8a9cf6a5dc121c52ccd6f50c3ffed}{pm\+Femto} = 0, 
+\hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a9a2f91f1e3f54c88046c10dcbfa08a3d}{pm\+First} = pm\+Femto, 
+\hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a98d02efe76075e56d8ec6ecce1fd7e67}{pm\+Piko}, 
+\hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a97a6d10912fda5efedb5209ff94e11b2}{pm\+Nano}, 
+\newline
+\hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a186f37857e13cbb45bcbbb97c2c15561}{pm\+Micro}, 
+\hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620aff93812e5c2f401cb10fe430a1d341f4}{pm\+Milli}, 
+\hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620af7eea43f9cd732ef8e43005aeb46f0f3}{pm\+Centi}, 
+\hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a1266f4c6263ccd31d9f853fb3993e7b2}{pm\+Deci}, 
+\newline
+\hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a32bf0cb12587b174b949f8568c9ec0c3}{pm\+Ident}, 
+\hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a11d938995c9d37cb2b34f454cb5b3f2c}{pm\+Deca}, 
+\hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620ade3242e2b12643a93f3849785691d86c}{pm\+Hecto}, 
+\hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620acdf63dcd9d24a1d774d2fe923621ca69}{pm\+Kilo}, 
+\newline
+\hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620ac669ac8a067bd6491c426c00af19f085}{pm\+Mega}, 
+\hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a0d6643b3b85f89178a09db0897ef502c}{pm\+Giga}, 
+\hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a70676cd51c6e17853f7cad277f473afd}{pm\+Tera}, 
+\hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620add0b3a1d027f070cedc49b5193daebba}{pm\+Peta}, 
+\newline
+\hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620abe0b5d6c4697d04c36b1425a519fc128}{pm\+Exa}, 
+\hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a00b29f37d368d66abc95fee7ecf9a034}{pm\+Zetta}, 
+\hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a5481dc587dbf4b25ddec4d4aed8e2ccb}{pm\+Yotta}, 
+\hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620ad74e7f79c20123c3ef2128f62deb6857}{pm\+Last}, 
+\newline
+\hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a45907e80ae387e2b4a105be6f3276313}{pm\+Unknown} = pm\+Last
+ \}\begin{DoxyCompactList}\small\item\em enum for indexing the vectors of \hyperlink{classCPreMeasure}{C\+Pre\+Measure} \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{PreMeasure_8h_a349316092037fdd0773335fab4e15ee8}\label{PreMeasure_8h_a349316092037fdd0773335fab4e15ee8}} 
+\index{Pre\+Measure.\+h@{Pre\+Measure.\+h}!P\+RE@{P\+RE}}
+\index{P\+RE@{P\+RE}!Pre\+Measure.\+h@{Pre\+Measure.\+h}}
+\subsubsection{\texorpdfstring{P\+RE}{PRE}}
+{\footnotesize\ttfamily \#define P\+RE~\hyperlink{classCSingleton_a58f5ac3aaaea8079a373350594726bdf}{C\+Pre\+Measure\+Singleton\+::instance}()}
+
+
+
+Short cut to the singleton instance of \hyperlink{classCPreMeasure}{C\+Pre\+Measure}. 
+
+
+
+Definition at line 194 of file Pre\+Measure.\+h.
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{PreMeasure_8h_af3953554ad21c10a9769a189bc1352af}\label{PreMeasure_8h_af3953554ad21c10a9769a189bc1352af}} 
+\index{Pre\+Measure.\+h@{Pre\+Measure.\+h}!C\+Pre\+Measure\+Singleton@{C\+Pre\+Measure\+Singleton}}
+\index{C\+Pre\+Measure\+Singleton@{C\+Pre\+Measure\+Singleton}!Pre\+Measure.\+h@{Pre\+Measure.\+h}}
+\subsubsection{\texorpdfstring{C\+Pre\+Measure\+Singleton}{CPreMeasureSingleton}}
+{\footnotesize\ttfamily typedef \hyperlink{classCSingleton}{C\+Singleton}$<$\hyperlink{classCPreMeasure}{C\+Pre\+Measure}$>$ \hyperlink{PreMeasure_8h_af3953554ad21c10a9769a189bc1352af}{C\+Pre\+Measure\+Singleton}}
+
+
+
+a singleton instance of the class \hyperlink{classCPreMeasure}{C\+Pre\+Measure}\+: use this for efficient memory handling 
+
+
+
+Definition at line 187 of file Pre\+Measure.\+h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}\label{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}} 
+\index{Pre\+Measure.\+h@{Pre\+Measure.\+h}!e\+Pre\+Measure@{e\+Pre\+Measure}}
+\index{e\+Pre\+Measure@{e\+Pre\+Measure}!Pre\+Measure.\+h@{Pre\+Measure.\+h}}
+\subsubsection{\texorpdfstring{e\+Pre\+Measure}{ePreMeasure}}
+{\footnotesize\ttfamily enum \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure}}
+
+
+
+enum for indexing the vectors of \hyperlink{classCPreMeasure}{C\+Pre\+Measure} 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pm\+Femto@{pm\+Femto}!Pre\+Measure.\+h@{Pre\+Measure.\+h}}\index{Pre\+Measure.\+h@{Pre\+Measure.\+h}!pm\+Femto@{pm\+Femto}}}\mbox{\Hypertarget{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620afaa8a9cf6a5dc121c52ccd6f50c3ffed}\label{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620afaa8a9cf6a5dc121c52ccd6f50c3ffed}} 
+pm\+Femto&0 factor = 10 \textsuperscript{ ⁻15 }, exp10\+: -\/15, short\+: \char`\"{}f\char`\"{}, long\+: \char`\"{}femto\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pm\+First@{pm\+First}!Pre\+Measure.\+h@{Pre\+Measure.\+h}}\index{Pre\+Measure.\+h@{Pre\+Measure.\+h}!pm\+First@{pm\+First}}}\mbox{\Hypertarget{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a9a2f91f1e3f54c88046c10dcbfa08a3d}\label{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a9a2f91f1e3f54c88046c10dcbfa08a3d}} 
+pm\+First&0 starting index \char`\"{}femto\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pm\+Piko@{pm\+Piko}!Pre\+Measure.\+h@{Pre\+Measure.\+h}}\index{Pre\+Measure.\+h@{Pre\+Measure.\+h}!pm\+Piko@{pm\+Piko}}}\mbox{\Hypertarget{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a98d02efe76075e56d8ec6ecce1fd7e67}\label{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a98d02efe76075e56d8ec6ecce1fd7e67}} 
+pm\+Piko&1 \+: factor = 10 \textsuperscript{⁻12}, exp10\+: -\/12, short\+: \char`\"{}p\char`\"{}, long\+: \char`\"{}piko\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pm\+Nano@{pm\+Nano}!Pre\+Measure.\+h@{Pre\+Measure.\+h}}\index{Pre\+Measure.\+h@{Pre\+Measure.\+h}!pm\+Nano@{pm\+Nano}}}\mbox{\Hypertarget{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a97a6d10912fda5efedb5209ff94e11b2}\label{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a97a6d10912fda5efedb5209ff94e11b2}} 
+pm\+Nano&2 \+: factor = 10 \textsuperscript{⁻9 }, exp10\+: -\/9, short\+: \char`\"{}n\char`\"{}, long\+: \char`\"{}nano\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pm\+Micro@{pm\+Micro}!Pre\+Measure.\+h@{Pre\+Measure.\+h}}\index{Pre\+Measure.\+h@{Pre\+Measure.\+h}!pm\+Micro@{pm\+Micro}}}\mbox{\Hypertarget{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a186f37857e13cbb45bcbbb97c2c15561}\label{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a186f37857e13cbb45bcbbb97c2c15561}} 
+pm\+Micro&3 \+: factor = 10 \textsuperscript{⁻6 }, exp10\+: ⁻6, short\+: "{$\mu$}", long\+: \char`\"{}micro\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pm\+Milli@{pm\+Milli}!Pre\+Measure.\+h@{Pre\+Measure.\+h}}\index{Pre\+Measure.\+h@{Pre\+Measure.\+h}!pm\+Milli@{pm\+Milli}}}\mbox{\Hypertarget{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620aff93812e5c2f401cb10fe430a1d341f4}\label{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620aff93812e5c2f401cb10fe430a1d341f4}} 
+pm\+Milli&4 \+: factor = 10 \textsuperscript{⁻3 }, exp10\+: ⁻3, short\+: \char`\"{}m\char`\"{}, long\+: \char`\"{}milli\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pm\+Centi@{pm\+Centi}!Pre\+Measure.\+h@{Pre\+Measure.\+h}}\index{Pre\+Measure.\+h@{Pre\+Measure.\+h}!pm\+Centi@{pm\+Centi}}}\mbox{\Hypertarget{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620af7eea43f9cd732ef8e43005aeb46f0f3}\label{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620af7eea43f9cd732ef8e43005aeb46f0f3}} 
+pm\+Centi&5 \+: factor = 10 \textsuperscript{⁻2 }, exp10\+: ⁻2, short\+: \char`\"{}c\char`\"{}, long\+: \char`\"{}centi\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pm\+Deci@{pm\+Deci}!Pre\+Measure.\+h@{Pre\+Measure.\+h}}\index{Pre\+Measure.\+h@{Pre\+Measure.\+h}!pm\+Deci@{pm\+Deci}}}\mbox{\Hypertarget{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a1266f4c6263ccd31d9f853fb3993e7b2}\label{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a1266f4c6263ccd31d9f853fb3993e7b2}} 
+pm\+Deci&6 \+: factor = 10 \textsuperscript{⁻1 }, exp10\+: ⁻1, short\+: \char`\"{}d\char`\"{}, long\+: \char`\"{}deci\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pm\+Ident@{pm\+Ident}!Pre\+Measure.\+h@{Pre\+Measure.\+h}}\index{Pre\+Measure.\+h@{Pre\+Measure.\+h}!pm\+Ident@{pm\+Ident}}}\mbox{\Hypertarget{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a32bf0cb12587b174b949f8568c9ec0c3}\label{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a32bf0cb12587b174b949f8568c9ec0c3}} 
+pm\+Ident&7 \+: factor = 10 \textsuperscript{ 0 }, exp10\+: 0, short\+: \char`\"{}\char`\"{}, long\+: \char`\"{}\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pm\+Deca@{pm\+Deca}!Pre\+Measure.\+h@{Pre\+Measure.\+h}}\index{Pre\+Measure.\+h@{Pre\+Measure.\+h}!pm\+Deca@{pm\+Deca}}}\mbox{\Hypertarget{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a11d938995c9d37cb2b34f454cb5b3f2c}\label{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a11d938995c9d37cb2b34f454cb5b3f2c}} 
+pm\+Deca&8 \+: factor = 10 \textsuperscript{+1 }, exp10\+: +1, short\+: \char`\"{}da\char`\"{}, long\+: \char`\"{}deca\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pm\+Hecto@{pm\+Hecto}!Pre\+Measure.\+h@{Pre\+Measure.\+h}}\index{Pre\+Measure.\+h@{Pre\+Measure.\+h}!pm\+Hecto@{pm\+Hecto}}}\mbox{\Hypertarget{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620ade3242e2b12643a93f3849785691d86c}\label{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620ade3242e2b12643a93f3849785691d86c}} 
+pm\+Hecto&9 \+: factor = 10 \textsuperscript{+2 }, exp10\+: +2, short\+: \char`\"{}h\char`\"{}, long\+: \char`\"{}hecto\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pm\+Kilo@{pm\+Kilo}!Pre\+Measure.\+h@{Pre\+Measure.\+h}}\index{Pre\+Measure.\+h@{Pre\+Measure.\+h}!pm\+Kilo@{pm\+Kilo}}}\mbox{\Hypertarget{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620acdf63dcd9d24a1d774d2fe923621ca69}\label{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620acdf63dcd9d24a1d774d2fe923621ca69}} 
+pm\+Kilo&10 \+: factor = 10 \textsuperscript{+3 }, exp10\+: +3, short\+: \char`\"{}k\char`\"{}, long\+: \char`\"{}kilo\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pm\+Mega@{pm\+Mega}!Pre\+Measure.\+h@{Pre\+Measure.\+h}}\index{Pre\+Measure.\+h@{Pre\+Measure.\+h}!pm\+Mega@{pm\+Mega}}}\mbox{\Hypertarget{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620ac669ac8a067bd6491c426c00af19f085}\label{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620ac669ac8a067bd6491c426c00af19f085}} 
+pm\+Mega&11 \+: factor = 10 \textsuperscript{+6 }, exp10\+: +6, short\+: \char`\"{}\+M\char`\"{}, long\+: \char`\"{}mega\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pm\+Giga@{pm\+Giga}!Pre\+Measure.\+h@{Pre\+Measure.\+h}}\index{Pre\+Measure.\+h@{Pre\+Measure.\+h}!pm\+Giga@{pm\+Giga}}}\mbox{\Hypertarget{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a0d6643b3b85f89178a09db0897ef502c}\label{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a0d6643b3b85f89178a09db0897ef502c}} 
+pm\+Giga&12 \+: factor = 10 \textsuperscript{+9 }, exp10\+: +9, short\+: \char`\"{}\+G\char`\"{}, long\+: \char`\"{}giga\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pm\+Tera@{pm\+Tera}!Pre\+Measure.\+h@{Pre\+Measure.\+h}}\index{Pre\+Measure.\+h@{Pre\+Measure.\+h}!pm\+Tera@{pm\+Tera}}}\mbox{\Hypertarget{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a70676cd51c6e17853f7cad277f473afd}\label{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a70676cd51c6e17853f7cad277f473afd}} 
+pm\+Tera&13 \+: factor = 10 \textsuperscript{+12}, exp10\+: +12, short\+: \char`\"{}\+T\char`\"{}, long\+: \char`\"{}tera\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pm\+Peta@{pm\+Peta}!Pre\+Measure.\+h@{Pre\+Measure.\+h}}\index{Pre\+Measure.\+h@{Pre\+Measure.\+h}!pm\+Peta@{pm\+Peta}}}\mbox{\Hypertarget{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620add0b3a1d027f070cedc49b5193daebba}\label{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620add0b3a1d027f070cedc49b5193daebba}} 
+pm\+Peta&14 \+: factor = 10 \textsuperscript{+15}, exp10\+: +15, short\+: \char`\"{}\+P\char`\"{}, long\+: \char`\"{}peta\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pm\+Exa@{pm\+Exa}!Pre\+Measure.\+h@{Pre\+Measure.\+h}}\index{Pre\+Measure.\+h@{Pre\+Measure.\+h}!pm\+Exa@{pm\+Exa}}}\mbox{\Hypertarget{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620abe0b5d6c4697d04c36b1425a519fc128}\label{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620abe0b5d6c4697d04c36b1425a519fc128}} 
+pm\+Exa&15 \+: factor = 10 \textsuperscript{+18}, exp10\+: +18, short\+: \char`\"{}\+E\char`\"{}, long\+: \char`\"{}exa\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pm\+Zetta@{pm\+Zetta}!Pre\+Measure.\+h@{Pre\+Measure.\+h}}\index{Pre\+Measure.\+h@{Pre\+Measure.\+h}!pm\+Zetta@{pm\+Zetta}}}\mbox{\Hypertarget{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a00b29f37d368d66abc95fee7ecf9a034}\label{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a00b29f37d368d66abc95fee7ecf9a034}} 
+pm\+Zetta&16 \+: factor = 10 \textsuperscript{+21}, exp10\+: +21, short\+: \char`\"{}\+Z\char`\"{}, long\+: \char`\"{}zetta\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pm\+Yotta@{pm\+Yotta}!Pre\+Measure.\+h@{Pre\+Measure.\+h}}\index{Pre\+Measure.\+h@{Pre\+Measure.\+h}!pm\+Yotta@{pm\+Yotta}}}\mbox{\Hypertarget{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a5481dc587dbf4b25ddec4d4aed8e2ccb}\label{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a5481dc587dbf4b25ddec4d4aed8e2ccb}} 
+pm\+Yotta&17 \+: factor = 10 \textsuperscript{+24}, exp10\+: +24, short\+: \char`\"{}\+Y\char`\"{}, long\+: \char`\"{}yotta\char`\"{} \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pm\+Last@{pm\+Last}!Pre\+Measure.\+h@{Pre\+Measure.\+h}}\index{Pre\+Measure.\+h@{Pre\+Measure.\+h}!pm\+Last@{pm\+Last}}}\mbox{\Hypertarget{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620ad74e7f79c20123c3ef2128f62deb6857}\label{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620ad74e7f79c20123c3ef2128f62deb6857}} 
+pm\+Last&18 \+: invalid last index \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{pm\+Unknown@{pm\+Unknown}!Pre\+Measure.\+h@{Pre\+Measure.\+h}}\index{Pre\+Measure.\+h@{Pre\+Measure.\+h}!pm\+Unknown@{pm\+Unknown}}}\mbox{\Hypertarget{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a45907e80ae387e2b4a105be6f3276313}\label{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620a45907e80ae387e2b4a105be6f3276313}} 
+pm\+Unknown&18 \+: identical with last index \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line 34 of file Pre\+Measure.\+h.
+

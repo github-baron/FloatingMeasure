@@ -1,0 +1,305 @@
+\hypertarget{classCBaseMeasure}{}\section{C\+Base\+Measure Class Reference}
+\label{classCBaseMeasure}\index{C\+Base\+Measure@{C\+Base\+Measure}}
+
+
+\hyperlink{classCBaseMeasure}{C\+Base\+Measure}\+: represents the base-\/measure part of a measure.~\newline
+ For example milli degree celsius consists of the base-\/measure part \char`\"{}degree celsius\char`\"{} (see \hyperlink{classCBaseMeasure}{C\+Base\+Measure}) and the pre-\/measure part \char`\"{}milli\char`\"{} (see \hyperlink{classCPreMeasure}{C\+Pre\+Measure}). ~\newline
+ This class handles vectors of\+:  
+
+
+
+
+{\ttfamily \#include $<$Base\+Measure.\+h$>$}
+
+
+
+Inheritance diagram for C\+Base\+Measure\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{d6/d40/classCBaseMeasure__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for C\+Base\+Measure\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{de/d06/classCBaseMeasure__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCBaseMeasure_a6a369b1e556d95a938b0e75647b5a602}{C\+Base\+Measure} ()
+\begin{DoxyCompactList}\small\item\em default constructor\+: ~\newline
+ initialize all member vectors \end{DoxyCompactList}\item 
+\hyperlink{classCBaseMeasure_aca2735196a7e6e6524d73327d95d4a19}{$\sim$\+C\+Base\+Measure} ()
+\begin{DoxyCompactList}\small\item\em destructor\+: clears all member vectors \end{DoxyCompactList}\item 
+const double \hyperlink{classCBaseMeasure_abae752b654d90bcf0fa795cc9d4fb0ac}{Offset} (unsigned int Base\+Measure\+Enum)
+\begin{DoxyCompactList}\small\item\em returns the offset for the converstion to the SI measure for the given \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} \end{DoxyCompactList}\item 
+\hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} \hyperlink{classCBaseMeasure_a4a2040454722a288e24babbacef30d01}{S\+I\+ID} (const \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} Base\+Measure\+Enum)
+\begin{DoxyCompactList}\small\item\em returns the \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} of the SI measure for the given \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} \end{DoxyCompactList}\item 
+const string \hyperlink{classCBaseMeasure_acb998b7f15d9aa3530b2cb0b910177fd}{Debug\+Out} (const \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} Base\+Measure\+Enum)
+\begin{DoxyCompactList}\small\item\em output for debugging purpose for given index \end{DoxyCompactList}\item 
+\hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} \hyperlink{classCBaseMeasure_a8476cf22a5fdcde4df0efc05cde70b45}{Get\+I\+D\+By\+Short\+Label} (const string \&str\+Short\+Label)
+\begin{DoxyCompactList}\small\item\em returns the enum (index) of the base measure by searching the vstr\+Short-\/$>$. \end{DoxyCompactList}\item 
+\hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} \hyperlink{classCBaseMeasure_a5c55d072ffe8e9b5fbe7713039987084}{Get\+I\+D\+By\+Long\+Label} (const string \&str\+Long\+Label)
+\begin{DoxyCompactList}\small\item\em returns the enum (index) of the base measure by searching the vstr\+Long \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ int $>$ $\ast$ \hyperlink{classCBaseMeasure_aaaddf8a6ce321b282885953439472390}{vn\+S\+I\+Index}
+\begin{DoxyCompactList}\small\item\em keeps the index of the corresponding SI unit\+: is its own unit in case it is the SI unit itself \end{DoxyCompactList}\item 
+vector$<$ double $>$ $\ast$ \hyperlink{classCBaseMeasure_a7220e3dfd4fbdd319a5c3c6af844259e}{vd\+Offset}
+\begin{DoxyCompactList}\small\item\em keeps the offset for the conversion to the SI Unit \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+\hyperlink{classCBaseMeasure}{C\+Base\+Measure}\+: represents the base-\/measure part of a measure.~\newline
+ For example milli degree celsius consists of the base-\/measure part \char`\"{}degree celsius\char`\"{} (see \hyperlink{classCBaseMeasure}{C\+Base\+Measure}) and the pre-\/measure part \char`\"{}milli\char`\"{} (see \hyperlink{classCPreMeasure}{C\+Pre\+Measure}). ~\newline
+ This class handles vectors of\+: 
+
+
+\begin{DoxyItemize}
+\item SI index (e.\+g. for \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a42cee40c384c9bbda9aa488151b590b4}{bm\+Deg\+Celsius} the SI index is \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a7d519faa41d1d34d9c378cfc61254074}{bm\+Deg\+Kelvin})
+\item base-\/measure factor (e.\+g. for °F with index \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11add58e3d33a5d9459dbe3bf9d3f90777c}{bm\+Deg\+Fahrenheit} the factor for the conversion to the SI measure °K with index \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a7d519faa41d1d34d9c378cfc61254074}{bm\+Deg\+Kelvin} is 5/9)
+\item base-\/measure offset (e.\+g. for °C with index \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a42cee40c384c9bbda9aa488151b590b4}{bm\+Deg\+Celsius} the offset for the conversion to the SI measure °K with index \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a7d519faa41d1d34d9c378cfc61254074}{bm\+Deg\+Kelvin} is 273.\+15°K)
+\item the short label (e.\+g. for Volt with the index \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a662f2aa09627247b53e6f3c5cd10815e}{bm\+Volt} the short label is \char`\"{}\+V\char`\"{})
+\item the long label (e.\+g. for Volt with the index \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11a662f2aa09627247b53e6f3c5cd10815e}{bm\+Volt} the short label is \char`\"{}volt\char`\"{})~\newline
+ These vectors are accessed by the indices defined by the enum \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure}.~\newline
+ 
+\end{DoxyItemize}
+
+Definition at line 72 of file Base\+Measure.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCBaseMeasure_a6a369b1e556d95a938b0e75647b5a602}\label{classCBaseMeasure_a6a369b1e556d95a938b0e75647b5a602}} 
+\index{C\+Base\+Measure@{C\+Base\+Measure}!C\+Base\+Measure@{C\+Base\+Measure}}
+\index{C\+Base\+Measure@{C\+Base\+Measure}!C\+Base\+Measure@{C\+Base\+Measure}}
+\subsubsection{\texorpdfstring{C\+Base\+Measure()}{CBaseMeasure()}}
+{\footnotesize\ttfamily C\+Base\+Measure\+::\+C\+Base\+Measure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+default constructor\+: ~\newline
+ initialize all member vectors 
+
+initializes all relevant vectors describing a unit
+
+
+\begin{DoxyItemize}
+\item \hyperlink{classCVectorHandle_afb50c8a33d4cf70bf92c644dca409ea2}{C\+Base\+Measure\+::vstr\+Short}
+\item \hyperlink{classCVectorHandle_a71bec0e385b9ca8e5ffa174b559da9f8}{C\+Base\+Measure\+::vstr\+Long}
+\item \hyperlink{classCBaseMeasure_aaaddf8a6ce321b282885953439472390}{C\+Base\+Measure\+::vn\+S\+I\+Index}
+\item \hyperlink{classCBaseMeasure_a7220e3dfd4fbdd319a5c3c6af844259e}{C\+Base\+Measure\+::vd\+Offset}
+\item \hyperlink{classCVectorHandle_af8f8b2e0da8363e695872ca85f33364e}{C\+Base\+Measure\+::vd\+Factor} 
+\end{DoxyItemize}
+
+Definition at line 31 of file Base\+Measure.\+cpp.
+
+
+
+References bm\+Ampere, bm\+Day, bm\+Deg\+Celsius, bm\+Deg\+Fahrenheit, bm\+Deg\+Kelvin, bm\+Farad, bm\+Foot, bm\+Hertz, bm\+Hour, bm\+Inch, bm\+Last, bm\+Meter, bm\+Mile, bm\+Minute, bm\+Number, bm\+Ohm, bm\+Second, bm\+Unknown, bm\+Volt, bm\+Yard, Omega, U\+N\+K\+N\+O\+W\+N\+\_\+\+I\+N\+D\+EX, U\+N\+K\+N\+O\+W\+N\+\_\+\+L\+O\+NG, U\+N\+K\+N\+O\+W\+N\+\_\+\+S\+H\+O\+RT, U\+N\+K\+N\+O\+W\+N\+\_\+\+V\+A\+L\+UE, C\+Vector\+Handle\+::vd\+Factor, vd\+Offset, vn\+S\+I\+Index, C\+Vector\+Handle\+::vstr\+Long, and C\+Vector\+Handle\+::vstr\+Short.
+
+\mbox{\Hypertarget{classCBaseMeasure_aca2735196a7e6e6524d73327d95d4a19}\label{classCBaseMeasure_aca2735196a7e6e6524d73327d95d4a19}} 
+\index{C\+Base\+Measure@{C\+Base\+Measure}!````~C\+Base\+Measure@{$\sim$\+C\+Base\+Measure}}
+\index{````~C\+Base\+Measure@{$\sim$\+C\+Base\+Measure}!C\+Base\+Measure@{C\+Base\+Measure}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Base\+Measure()}{~CBaseMeasure()}}
+{\footnotesize\ttfamily C\+Base\+Measure\+::$\sim$\+C\+Base\+Measure (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+destructor\+: clears all member vectors 
+
+
+\begin{DoxyItemize}
+\item \hyperlink{classCVectorHandle_afb50c8a33d4cf70bf92c644dca409ea2}{C\+Base\+Measure\+::vstr\+Short}
+\item \hyperlink{classCVectorHandle_a71bec0e385b9ca8e5ffa174b559da9f8}{C\+Base\+Measure\+::vstr\+Long}
+\item \hyperlink{classCBaseMeasure_aaaddf8a6ce321b282885953439472390}{C\+Base\+Measure\+::vn\+S\+I\+Index}
+\item \hyperlink{classCBaseMeasure_a7220e3dfd4fbdd319a5c3c6af844259e}{C\+Base\+Measure\+::vd\+Offset}
+\item \hyperlink{classCVectorHandle_af8f8b2e0da8363e695872ca85f33364e}{C\+Base\+Measure\+::vd\+Factor} clears all member vectors 
+\end{DoxyItemize}
+
+Definition at line 159 of file Base\+Measure.\+cpp.
+
+
+
+References vd\+Offset, and vn\+S\+I\+Index.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classCBaseMeasure_acb998b7f15d9aa3530b2cb0b910177fd}\label{classCBaseMeasure_acb998b7f15d9aa3530b2cb0b910177fd}} 
+\index{C\+Base\+Measure@{C\+Base\+Measure}!Debug\+Out@{Debug\+Out}}
+\index{Debug\+Out@{Debug\+Out}!C\+Base\+Measure@{C\+Base\+Measure}}
+\subsubsection{\texorpdfstring{Debug\+Out()}{DebugOut()}}
+{\footnotesize\ttfamily const string C\+Base\+Measure\+::\+Debug\+Out (\begin{DoxyParamCaption}\item[{const \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure}}]{Base\+Measure\+Enum }\end{DoxyParamCaption})}
+
+
+
+output for debugging purpose for given index 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Base\+Measure\+Enum} & index of base measure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const string 
+\end{DoxyReturn}
+
+
+Definition at line 165 of file Base\+Measure.\+cpp.
+
+
+
+References C\+Vector\+Handle\+::\+Factor(), C\+Vector\+Handle\+::\+Long(), Offset(), C\+Vector\+Handle\+::\+Short(), and S\+I\+I\+D().
+
+\mbox{\Hypertarget{classCBaseMeasure_a5c55d072ffe8e9b5fbe7713039987084}\label{classCBaseMeasure_a5c55d072ffe8e9b5fbe7713039987084}} 
+\index{C\+Base\+Measure@{C\+Base\+Measure}!Get\+I\+D\+By\+Long\+Label@{Get\+I\+D\+By\+Long\+Label}}
+\index{Get\+I\+D\+By\+Long\+Label@{Get\+I\+D\+By\+Long\+Label}!C\+Base\+Measure@{C\+Base\+Measure}}
+\subsubsection{\texorpdfstring{Get\+I\+D\+By\+Long\+Label()}{GetIDByLongLabel()}}
+{\footnotesize\ttfamily \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} C\+Base\+Measure\+::\+Get\+I\+D\+By\+Long\+Label (\begin{DoxyParamCaption}\item[{const string \&}]{str\+Long\+Label }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+returns the enum (index) of the base measure by searching the vstr\+Long 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str\+Long\+Label} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+e\+Base\+Measure 
+\end{DoxyReturn}
+
+
+Definition at line 150 of file Base\+Measure.\+h.
+
+
+
+References C\+Vector\+Handle\+::\+Get\+Index\+By\+Long\+Label().
+
+\mbox{\Hypertarget{classCBaseMeasure_a8476cf22a5fdcde4df0efc05cde70b45}\label{classCBaseMeasure_a8476cf22a5fdcde4df0efc05cde70b45}} 
+\index{C\+Base\+Measure@{C\+Base\+Measure}!Get\+I\+D\+By\+Short\+Label@{Get\+I\+D\+By\+Short\+Label}}
+\index{Get\+I\+D\+By\+Short\+Label@{Get\+I\+D\+By\+Short\+Label}!C\+Base\+Measure@{C\+Base\+Measure}}
+\subsubsection{\texorpdfstring{Get\+I\+D\+By\+Short\+Label()}{GetIDByShortLabel()}}
+{\footnotesize\ttfamily \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} C\+Base\+Measure\+::\+Get\+I\+D\+By\+Short\+Label (\begin{DoxyParamCaption}\item[{const string \&}]{str\+Short\+Label }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+returns the enum (index) of the base measure by searching the vstr\+Short-\/$>$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str\+Short\+Label} & short label of the base measure (e.\+g. \char`\"{}\+V\char`\"{} ) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+e\+Base\+Measure\+: the base-\/measure index (e.\+g. e\+Base\+Measure\+::bm\+Volt) 
+\end{DoxyReturn}
+
+
+Definition at line 139 of file Base\+Measure.\+h.
+
+
+
+References C\+Vector\+Handle\+::\+Get\+Index\+By\+Short\+Label().
+
+\mbox{\Hypertarget{classCBaseMeasure_abae752b654d90bcf0fa795cc9d4fb0ac}\label{classCBaseMeasure_abae752b654d90bcf0fa795cc9d4fb0ac}} 
+\index{C\+Base\+Measure@{C\+Base\+Measure}!Offset@{Offset}}
+\index{Offset@{Offset}!C\+Base\+Measure@{C\+Base\+Measure}}
+\subsubsection{\texorpdfstring{Offset()}{Offset()}}
+{\footnotesize\ttfamily const double C\+Base\+Measure\+::\+Offset (\begin{DoxyParamCaption}\item[{unsigned int}]{Base\+Measure\+Enum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+returns the offset for the converstion to the SI measure for the given \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Base\+Measure\+Enum} & index of the \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const double 
+\end{DoxyReturn}
+
+
+Definition at line 108 of file Base\+Measure.\+h.
+
+
+
+References Get\+Element\+From\+Vector\+By\+Index().
+
+\mbox{\Hypertarget{classCBaseMeasure_a4a2040454722a288e24babbacef30d01}\label{classCBaseMeasure_a4a2040454722a288e24babbacef30d01}} 
+\index{C\+Base\+Measure@{C\+Base\+Measure}!S\+I\+ID@{S\+I\+ID}}
+\index{S\+I\+ID@{S\+I\+ID}!C\+Base\+Measure@{C\+Base\+Measure}}
+\subsubsection{\texorpdfstring{S\+I\+I\+D()}{SIID()}}
+{\footnotesize\ttfamily \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} C\+Base\+Measure\+::\+S\+I\+ID (\begin{DoxyParamCaption}\item[{const \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure}}]{Base\+Measure\+Enum }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+returns the \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} of the SI measure for the given \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Base\+Measure\+Enum} & p\+\_\+\+Base\+Measure\+Enum\+:... \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+e\+Base\+Measure 
+\end{DoxyReturn}
+
+
+Definition at line 119 of file Base\+Measure.\+h.
+
+
+
+References Get\+Element\+From\+Vector\+By\+Index().
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classCBaseMeasure_a7220e3dfd4fbdd319a5c3c6af844259e}\label{classCBaseMeasure_a7220e3dfd4fbdd319a5c3c6af844259e}} 
+\index{C\+Base\+Measure@{C\+Base\+Measure}!vd\+Offset@{vd\+Offset}}
+\index{vd\+Offset@{vd\+Offset}!C\+Base\+Measure@{C\+Base\+Measure}}
+\subsubsection{\texorpdfstring{vd\+Offset}{vdOffset}}
+{\footnotesize\ttfamily vector$<$double$>$$\ast$ C\+Base\+Measure\+::vd\+Offset}
+
+
+
+keeps the offset for the conversion to the SI Unit 
+
+
+
+Definition at line 165 of file Base\+Measure.\+h.
+
+\mbox{\Hypertarget{classCBaseMeasure_aaaddf8a6ce321b282885953439472390}\label{classCBaseMeasure_aaaddf8a6ce321b282885953439472390}} 
+\index{C\+Base\+Measure@{C\+Base\+Measure}!vn\+S\+I\+Index@{vn\+S\+I\+Index}}
+\index{vn\+S\+I\+Index@{vn\+S\+I\+Index}!C\+Base\+Measure@{C\+Base\+Measure}}
+\subsubsection{\texorpdfstring{vn\+S\+I\+Index}{vnSIIndex}}
+{\footnotesize\ttfamily vector$<$int$>$$\ast$ C\+Base\+Measure\+::vn\+S\+I\+Index}
+
+
+
+keeps the index of the corresponding SI unit\+: is its own unit in case it is the SI unit itself 
+
+
+
+Definition at line 159 of file Base\+Measure.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Floating\+Measure/\+Measure/\hyperlink{BaseMeasure_8h}{Base\+Measure.\+h}\item 
+Floating\+Measure/\+Measure/\hyperlink{BaseMeasure_8cpp}{Base\+Measure.\+cpp}\end{DoxyCompactItemize}
