@@ -34,7 +34,11 @@
  *        handling.
  * 
  */
-class DLLEXPORT_CMD CVectorHandle
+class 
+#ifdef _WIN32
+DLLEXPORT_CMD
+#endif
+ CVectorHandle
 {
     
 public:    

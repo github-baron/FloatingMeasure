@@ -69,7 +69,11 @@ enum eBaseMeasure
  * - the long label (e.g. for  Volt with the index #bmVolt the short label is "volt")<br>
  * These vectors are accessed by the indices defined by the enum #eBaseMeasure.<br>
  */
-class DLLEXPORT_CMD CBaseMeasure : public CVectorHandle
+class 
+#ifdef _WIN32
+DLLEXPORT_CMD
+#endif
+ CBaseMeasure : public CVectorHandle
 {
     
 public:

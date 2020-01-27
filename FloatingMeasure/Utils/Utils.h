@@ -46,9 +46,7 @@ using namespace __gnu_cxx;
 ///////////////////////////////////////////////////
 // macro definitions
 ///////////////////////////////////////////////////
-#ifdef __linux 
-#define DLLEXPORT_CMD   
-#elif _WIN32
+#ifdef _WIN32
 #define DLLEXPORT_CMD __declspec(dllexport) 
 #endif
 
@@ -102,7 +100,11 @@ union dbl_64{
  * @param dValue: double which error is calculated
  * @return double
  */
-double DLLEXPORT_CMD DoubleMachineEpsilon (double dValue) ;
+double 
+#ifdef _WIN32
+DLLEXPORT_CMD
+#endif
+ DoubleMachineEpsilon (double dValue) ;
 
 /**
  * @brief cuts double according to precision 
@@ -113,14 +115,22 @@ double DLLEXPORT_CMD DoubleMachineEpsilon (double dValue) ;
  * @param nPrecision: the wanted precision
  * @return double
  */
-double DLLEXPORT_CMD Round2Precision(const double dValue, const int nPrecision);
+double 
+#ifdef _WIN32
+DLLEXPORT_CMD
+#endif
+ Round2Precision(const double dValue, const int nPrecision);
 /**
  * @brief returns "true" or "false" as string
  * 
  * @param bBool: bool to convert to string
  * @return string
  */
-string DLLEXPORT_CMD Bool2String(const bool bBool);
+string 
+#ifdef _WIN32
+DLLEXPORT_CMD
+#endif
+ Bool2String(const bool bBool);
 
 
 ///////////////////////////////////////////////////
@@ -132,7 +142,11 @@ string DLLEXPORT_CMD Bool2String(const bool bBool);
   * 
   */
  template <typename SingletonObject>
- class DLLEXPORT_CMD CSingleton
+ class 
+#ifdef _WIN32
+DLLEXPORT_CMD
+#endif
+ CSingleton
  {
  public:
      /**

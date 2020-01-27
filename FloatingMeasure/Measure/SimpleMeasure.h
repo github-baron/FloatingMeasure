@@ -36,7 +36,11 @@
  * - recalculation offset and factor to SI measure of the CPreMeasure and CBaseMeasure
  * 
  */
-class DLLEXPORT_CMD CSimpleMeasure
+class 
+#ifdef _WIN32
+DLLEXPORT_CMD
+#endif
+ CSimpleMeasure
 {
 friend class CPreMeasure;
 friend class CBaseMeasure;

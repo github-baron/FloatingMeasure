@@ -51,7 +51,11 @@ class CFloatingMeasure;
  * - setting of user defined precision for comparing and printing.
  * 
  */
-class DLLEXPORT_CMD CDigFloat
+class 
+#ifdef _WIN32
+DLLEXPORT_CMD
+#endif
+CDigFloat
 {
     friend class CFloatingMeasure;
 public:
