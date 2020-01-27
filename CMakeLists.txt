@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 3.0.0)
 
+project(FloatingMeasure
+        VERSION 1.0.0.0
+        LANGUAGES CXX)
+
 # Find includes in corresponding build directories
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
