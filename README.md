@@ -50,7 +50,7 @@ Contributers are very welcome. Please, share your ideas of how want to use this 
 
 - idea of "aliases" like : "1\*V\*A = 1\*W" or "1\*kg\*m\*m/s/s = 1\*J"... just an idea
 - any extension of pre and base measures (see above example: "kg" is missing)
-- handling offsets in (i.e. especially temperatures are neglected at the moment)
+- handling offsets (i.e. especially temperatures are not supported at the moment)
     - recalculation to SI-measures 
     - simplification of complex measures
 
