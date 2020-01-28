@@ -235,7 +235,7 @@ string CComplexMeasure::PrintAllShort()
 void CComplexMeasure::Normalize()
 {
     // initialize the arguments for _Normalize with nullptr:
-    // --> indicates the first call (honestly: setting pOP = nullptr would be enough)
+    // --> indicates the first call
     eOperation* pPreviousOP = nullptr;
     int* pdTempPreMeasureExp10Collector =nullptr;
     CDigFloat* pdfTempCMFactorCollector =nullptr;
@@ -249,9 +249,11 @@ void CComplexMeasure::Normalize()
 
 void CComplexMeasure::_Normalize(eOperation* &pPreviousOP, int* &pdTempPreMeasureExp10Collector , CDigFloat* &pdTempCMFactorCollector, CComplexMeasure* &pFirstComplexMeasure)
 {   
-    // set the collector pointers if not set : 
-    // this happens when the CComplexMeasure::_Normalize is called the first time
-    if( pPreviousOP == nullptr){
+    // set the flag for being called the first time
+    bool bCalledTheFirstTime = (pPreviousOP == nullptr);
+    
+    // set the collector pointers if not set : this happens when this function is called the first time
+    if( bCalledTheFirstTime ){
         
         // init all factor collectors with 1
         pdTempPreMeasureExp10Collector = new int[1];
@@ -285,6 +287,10 @@ void CComplexMeasure::_Normalize(eOperation* &pPreviousOP, int* &pdTempPreMeasur
             CMFactor(1);
         
             // base units with offset will be neglected --> this is trouble in complex measures
+            // REM: only in case this function is called the first and will not be called
+            //      again (i.e. pMeasureRight == nullptr) we can handle offsets 
+            //      (e.g. for recalculation of °C --> °K) : handling will be done below
+            //      "if( pMeasureRight == nullptr)
             if( BASE->Offset( pMeasureLeft->BaseID() ) == 0 )
             {
                 // get the base SIfactor 
@@ -298,6 +304,7 @@ void CComplexMeasure::_Normalize(eOperation* &pPreviousOP, int* &pdTempPreMeasur
                 // reset only the PreMeasurefactor of pMeasureLeft to identity
                 pMeasureLeft->SetByID(pmIdent, pMeasureLeft->BaseID());
             }
+            
             
             break;
             
@@ -336,14 +343,13 @@ void CComplexMeasure::_Normalize(eOperation* &pPreviousOP, int* &pdTempPreMeasur
             
             break;
         
-    }   // endswitch(actOP)
+    }   // endswitch(pPreviousOP[0])
     
  
     // if pMeasureRight is a nullptr --> recursion stops here:
     // finally calculate dfCMFactor and nCMExp10
     if( pMeasureRight == nullptr )
     {
-        
         // setting the factor completely new
         pFirstComplexMeasure->dfCMFactor = *pdTempCMFactorCollector;
         
@@ -563,16 +569,16 @@ void CComplexMeasure::_SearchAndShortenSameSIIndex(CComplexMeasure* pShortenPart
     
     // in case SI Index of simple measure is not the same 
     // or 
-    // one of the partnes is already cancelled (i.e. BaseMeasureEnum == bmNumber)
+    // one of the partners is already cancelled (i.e. BaseMeasureEnum == bmNumber)
     // or
-    // the offsets for recalculation to SI are not the same (mathematical desaster in general which I will not solve here)
+    // the offsets for recalculation to SI are not zero (mathematical desaster in general which I will not solve here)
     // or
     // the operators are the same
     // --> go on
     if( BASE->SIID( pShortenPartner->pMeasureLeft->BaseID() ) != BASE->SIID( pMeasureLeft->BaseID()) ||
         BASE->SIID( pShortenPartner->pMeasureLeft->BaseID() ) == bmNumber ||
         BASE->SIID( pMeasureLeft->BaseID()) == bmNumber ||
-        pShortenPartner->pMeasureLeft->SIOffset() != pMeasureLeft->SIOffset() ||
+        pShortenPartner->pMeasureLeft->SIOffset() != 0 ||  pMeasureLeft->SIOffset() != 0||
         eOPofShortenPartner == eOPofConsecutiveShortenPartner)
     {
         // recursive calll ... only if there is a successor

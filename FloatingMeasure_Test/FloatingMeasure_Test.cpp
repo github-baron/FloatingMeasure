@@ -60,7 +60,35 @@ public:
     void FloatingMeasureTest()
     {
         CFloatingMeasure cfTest1;
+        // scale to temperature
+        cfTest1 = 10*mC;
+        CPPUNIT_ASSERT_MESSAGE( cfTest1.DebugOut(), cfTest1.Floating() == 10);
+        CPPUNIT_ASSERT_MESSAGE( cfTest1.DebugOut(), cfTest1.Measure() == mC );
+
+        cfTest1.Normalize();
+        CPPUNIT_ASSERT_MESSAGE( cfTest1.DebugOut(), cfTest1.Floating() == 273.15+0.01);
+        CPPUNIT_ASSERT_MESSAGE( cfTest1.DebugOut(), cfTest1.Measure() == K );
+         
+        
+        cfTest1.ScaleTo(mC);
+        CPPUNIT_ASSERT_MESSAGE( cfTest1.DebugOut(), cfTest1.Floating() == 10);
+        CPPUNIT_ASSERT_MESSAGE( cfTest1.DebugOut(), cfTest1.Measure() == mC );
+        
+        
+        
+        
+   
         cfTest1 = 10*mV;
+        // scale to
+        cfTest1.ScaleTo(1*kV);
+        CPPUNIT_ASSERT_MESSAGE( cfTest1.DebugOut(), cfTest1.Floating() == 0.00001 );
+        CPPUNIT_ASSERT_MESSAGE( cfTest1.DebugOut(), cfTest1.Measure() == kV );
+        
+        cfTest1.Normalize();
+        CPPUNIT_ASSERT_MESSAGE( cfTest1.DebugOut(), cfTest1.Floating() == 0.01 );
+        CPPUNIT_ASSERT_MESSAGE( cfTest1.DebugOut(), cfTest1.Measure() == V );
+         
+        cfTest1.ScaleTo(mV);
         cfTest1.Precision(0.000001*kV);
         cfTest1.PrecisionActive(true);
         CPPUNIT_ASSERT_MESSAGE( cfTest1.PrintShort() + "\n" +
@@ -72,6 +100,7 @@ public:
         CPPUNIT_ASSERT_MESSAGE( cfTest1.DebugOut(), cfTest1.Floating() == 0.00001 );
         CPPUNIT_ASSERT_MESSAGE( cfTest1.DebugOut(), cfTest1.Measure() == kV );
         
+      
         // operator +=
         CFloatingMeasure cfTest2;
         cfTest2 = 220*V;
@@ -737,7 +766,7 @@ public:
         
         Measure1.SetByShort("m","°F");
         CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.SIFactor() == 5./9.*0.001);
-        CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.SIOffset() == (32-5./9.*273.15) * 0.001);
+        CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.SIOffset() == (32-5./9.*273.15));
         CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.Short() == "m°F");
         
         Measure1.SetByShort("","°C");
@@ -747,7 +776,7 @@ public:
         
         Measure1.SetByShort("k","°C");
         CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.SIFactor() == 1000.);
-        CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.SIOffset() == (273.15)*1000);
+        CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.SIOffset() == (273.15));
         CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.Short() == "k°C");
         
         // ----------------- temperature ------------------

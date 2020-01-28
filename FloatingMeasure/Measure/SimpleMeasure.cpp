@@ -71,7 +71,7 @@ void CSimpleMeasure::SetByID(const ePreMeasure PreMeasureEnum, const eBaseMeasur
     PreIndex = PreMeasureEnum;
     
     dSIFactor = PRE->Factor(PreID()) * BASE->Factor(BaseID());
-    dSIOffset = PRE->Factor(PreID()) *BASE->Offset(BaseID());
+    dSIOffset = BASE->Offset(BaseID());
     *strLong   = PRE->Long(PreID()) + BASE->Long(BaseID()) ;
     *strShort  = PRE->Short(PreID()) + BASE->Short(BaseID()) ;
 }

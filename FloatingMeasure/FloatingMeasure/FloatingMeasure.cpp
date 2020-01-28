@@ -202,7 +202,23 @@ CFloatingMeasure CFloatingMeasure::operator/(const double& other)
 }
 
 void CFloatingMeasure::Normalize()
-{
+{   
+    // first handle simple case: only one CSimpleMeasure. I.e. when
+    // 1. pMeasureRight == nullptr 
+    if(  Measure().pMeasureRight == nullptr )
+    {
+        // multiply by "own premeasure" * "SIFactor"
+        dfFloating *= Measure().pMeasureLeft->SIFactor();
+        // add SI offset
+        dfFloating += Measure().pMeasureLeft->SIOffset();
+        
+        // set measure to SI
+        cmMeasure.pMeasureLeft->SetByID(pmIdent,BASE->SIID(cmMeasure.pMeasureLeft->BaseID()));
+        
+        // leave now ... we will not do any complex stuff
+        return; 
+    }
+
     cmMeasure.Normalize();
     dfFloating *= cmMeasure.ReleaseExp10AndFactor();
 }
@@ -211,6 +227,54 @@ void CFloatingMeasure::Simplify()
 {
     cmMeasure.Simplify();
     dfFloating *= cmMeasure.ReleaseExp10AndFactor();
+}
+
+void CFloatingMeasure::ScaleTo(const CComplexMeasure& other)
+{
+    // first handle simple case: only one CSimpleMeasure. I.e. when
+    // 1. pMeasureRight == nullptr for other and this 
+    // 2. pMeasureLeft is compatible with other.pMeasureLeft
+    if(  Measure().pMeasureRight == nullptr && 
+         other.pMeasureRight == nullptr &&
+         Measure().pMeasureLeft->Compatible(other.pMeasureLeft) 
+    )
+    {
+        // receipe: example m°C --> k°F
+        // 1. Normalization: e.g. m°C --> 0.001°K
+        // 2. to target base measure (no pre measure): 0.001°K --> XXX °F
+        // 3. to target base measure with pre measure; XXX °F / 1000 --> XXX / 1000 * k°F
+
+        // 1, Normalization:
+        // this to SI : resolves own pre measure factor
+        Normalize();
+        
+        // 2. to target base measure (no pre measure)
+        // invert SI conversion of other: / other.SIFactor and - other.SIOffset
+        dfFloating /=  BASE->Factor(other.pMeasureLeft->BaseID()); 
+        dfFloating -= other.pMeasureLeft->SIOffset();
+
+        // 3. to target base measure with pre measure
+        // now divide by premeasure of other (e.g. m°C --> k°F:
+         dfFloating /= PRE->Factor(other.pMeasureLeft->PreID());
+        
+        // hand over the new measure
+        cmMeasure = other;
+        
+        // leave now ... no further calculations needed
+        return;
+    }
+    
+    if(!Compatible(other))
+    {   
+        // invalidate content
+        _Init();
+    }
+    else
+    {
+        cmMeasure.ScaleTo(other);
+        dfFloating *= cmMeasure.ReleaseExp10AndFactor();
+    }
+
 }
 
 void CFloatingMeasure::ScaleTo(const CFloatingMeasure& other)
@@ -227,21 +291,6 @@ void CFloatingMeasure::ScaleTo(const CFloatingMeasure& other)
     }
     
 }
-void CFloatingMeasure::ScaleTo(const CComplexMeasure& other)
-{
-    if(!Compatible(other))
-    {   
-        // invalidate content
-        _Init();
-    }
-    else
-    {
-        cmMeasure.ScaleTo(other);
-        dfFloating *= cmMeasure.ReleaseExp10AndFactor();
-    }
-
-}
-
 void CFloatingMeasure::Measure(const CComplexMeasure& other)
  { 
      // set the measure

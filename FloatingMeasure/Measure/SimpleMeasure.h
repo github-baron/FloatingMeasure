@@ -38,7 +38,7 @@
  */
 class 
 #ifdef _WIN32
-DLLEXPORT_CMD
+FloatingMeasureDLL_API
 #endif
  CSimpleMeasure
 {
@@ -139,6 +139,15 @@ public:
      * @return const string
      */
     const string DebugOut();
+    
+    /**
+     * @brief check compatiblity with other CSimpleMeasure:<br>
+     * compatibility is given if the CSimpleMeasure::eBaseMeasure have the same SI measure.
+     * 
+     * @param other: CSimpleMeasure to check for compatibility
+     * @return bool
+     */
+    bool Compatible( const CSimpleMeasure& other ) { return BASE->SIID( BaseID() ) == BASE->SIID(other.BaseID());}
 
     ////////////////////////////////////
     // public getter 
