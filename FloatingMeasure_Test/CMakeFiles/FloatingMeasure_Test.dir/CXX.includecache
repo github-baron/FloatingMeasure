@@ -8,6 +8,14 @@
 
 /home/michae/projects/FloatingMeasure/FloatingMeasure_Test/BaseMeasure_Test.cpp
 
+/home/michae/projects/FloatingMeasure/FloatingMeasure_Test/ComplexMeasure_Test.cpp
+Measure/ComplexMeasure.h
+/home/michae/projects/FloatingMeasure/FloatingMeasure_Test/Measure/ComplexMeasure.h
+Measure/ComplexMeasureMacros.h
+/home/michae/projects/FloatingMeasure/FloatingMeasure_Test/Measure/ComplexMeasureMacros.h
+cppunit/TestAssert.h
+-
+
 /home/michae/projects/FloatingMeasure/FloatingMeasure_Test/FloatingMeasure_Test.cpp
 cppunit/CompilerOutputter.h
 -
@@ -39,8 +47,18 @@ FloatingMeasure/FloatingMeasure.h
 -
 Measure/ComplexMeasureMacros.h
 -
+PreMeasure_Test.cpp
+/home/michae/projects/FloatingMeasure/FloatingMeasure_Test/PreMeasure_Test.cpp
 BaseMeasure_Test.cpp
 /home/michae/projects/FloatingMeasure/FloatingMeasure_Test/BaseMeasure_Test.cpp
+SimpleMeasure_Test.cpp
+/home/michae/projects/FloatingMeasure/FloatingMeasure_Test/SimpleMeasure_Test.cpp
+ComplexMeasure_Test.cpp
+/home/michae/projects/FloatingMeasure/FloatingMeasure_Test/ComplexMeasure_Test.cpp
+
+/home/michae/projects/FloatingMeasure/FloatingMeasure_Test/PreMeasure_Test.cpp
+
+/home/michae/projects/FloatingMeasure/FloatingMeasure_Test/SimpleMeasure_Test.cpp
 
 FloatingMeasure_Test/../FloatingMeasure/DigFloat/DigFloat.h
 Utils/Utils.h

@@ -3,7 +3,10 @@
 
 FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_Test.cpp.o
  /home/michae/projects/FloatingMeasure/FloatingMeasure_Test/BaseMeasure_Test.cpp
+ /home/michae/projects/FloatingMeasure/FloatingMeasure_Test/ComplexMeasure_Test.cpp
  /home/michae/projects/FloatingMeasure/FloatingMeasure_Test/FloatingMeasure_Test.cpp
+ /home/michae/projects/FloatingMeasure/FloatingMeasure_Test/PreMeasure_Test.cpp
+ /home/michae/projects/FloatingMeasure/FloatingMeasure_Test/SimpleMeasure_Test.cpp
  FloatingMeasure_Test/../FloatingMeasure/DigFloat/DigFloat.h
  FloatingMeasure_Test/../FloatingMeasure/FloatingMeasure/FloatingMeasure.h
  FloatingMeasure_Test/../FloatingMeasure/Measure/BaseMeasure.h

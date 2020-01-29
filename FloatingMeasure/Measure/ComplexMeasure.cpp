@@ -129,18 +129,31 @@ CComplexMeasure& CComplexMeasure::operator=(const CComplexMeasure& other)
 
 bool CComplexMeasure::operator==(const CComplexMeasure& other) const
 {
+    
+    CComplexMeasure CheckThis(*this);
+    CComplexMeasure CheckOther(other);
+    CheckThis.Normalize();
+    CheckOther.Normalize();
+    
+    // first handle the simple case: pMeasureRight == nullptr
+    // compare the simple measures only: pMeasureLeft == other.pMeasureLeft
+    if( CheckThis.pMeasureRight == nullptr && CheckOther.pMeasureRight == nullptr)
+    {
+        return CheckThis.pMeasureLeft == CheckOther.pMeasureLeft;
+    }
+
+    // for the more complex case:
     // equality is achieved if meaure1 / measure2 = 1
-    // make all calculations with the precision of this
-    CComplexMeasure Check(*this);
-    Check /= other;
+    // make all calculations with the precision of *this
+    CheckThis /= other;
     
     // do a simplification
-    Check.Simplify();
-    Check.Normalize();
-    return Check.CMFactor() == 1 &&
-           Check.CMExp10() == 0 &&
-           Check.pMeasureRight == nullptr &&
-           Check.pMeasureLeft->BaseID() == bmNumber;
+    CheckThis.Simplify();
+    CheckThis.Normalize();
+    return CheckThis.CMFactor() == 1 &&
+           CheckThis.CMExp10() == 0 &&
+           CheckThis.pMeasureRight == nullptr &&
+           CheckThis.pMeasureLeft->BaseID() == bmNumber;
     
 }
 
@@ -681,7 +694,7 @@ string CComplexMeasure::DebugOut()
     
     oss << "CComplexMeasure valid: " << Bool2String(Valid()) << endl
         << "this: " << this << endl <<
-           "pMeasureLeft:"  << pMeasureLeft->Short() << endl <<
+           "pMeasureLeft:"  << pMeasureLeft->DebugOut() << endl <<
            "opEnum:"    << OPShort() << endl << 
            "CMFactor: " << CMFactor().Print() << endl <<
            "nCMExp10: " << CMExp10() << endl <<
