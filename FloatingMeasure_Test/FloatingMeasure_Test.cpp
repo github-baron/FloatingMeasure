@@ -43,6 +43,9 @@
 #include <FloatingMeasure/FloatingMeasure.h>
 #include <Measure/ComplexMeasureMacros.h>
 
+// include all test classes
+#include "BaseMeasure_Test.cpp"
+
 class Measure_test : public CppUnit::TestFixture{
 private:    
     CSimpleMeasure Measure1, Measure2;
@@ -274,45 +277,45 @@ public:
             
         }
     }
-    void BaseMeasureTest()
-    {
-        // helping variable 
-        eBaseMeasure ActBM, SIBM ;
-        
-        
-        // reference to SI for all
-        for(int i = 0; i< bmLast; i++)
-        {
-            ActBM = (eBaseMeasure )(i);
-            SIBM = BASE->SIID(ActBM);
-                CPPUNIT_ASSERT_MESSAGE( BASE->DebugOut(SIBM) + "\n" +
-                                        BASE->DebugOut(BASE->SIID(ActBM )),
-                                        BASE->DebugOut(SIBM ) ==BASE->DebugOut(BASE->SIID(ActBM )) );
-        
-        
-            // check for unique namings short and long
-            for( int j = i+1; j < bmLast; j++)
-            {
-                eBaseMeasure OtherActBM = (eBaseMeasure )(j);
-                // check for unique short labels
-                CPPUNIT_ASSERT_MESSAGE( BASE->DebugOut(ActBM) + "\n" + BASE->DebugOut(OtherActBM), BASE->Short(ActBM) != BASE->Short(OtherActBM) );
-                
-                // check for unique long labels
-                CPPUNIT_ASSERT_MESSAGE( BASE->DebugOut(ActBM) + "\n" + BASE->DebugOut(OtherActBM), BASE->Long(ActBM) != BASE->Long(OtherActBM) );
-        
-                //check of unique SI recalculation
-                if( BASE->SIID(ActBM) == BASE->SIID(OtherActBM) )
-                    CPPUNIT_ASSERT_MESSAGE( BASE->DebugOut(ActBM) + "\n" + BASE->DebugOut(OtherActBM), BASE->Factor(ActBM) != BASE->Factor(OtherActBM) || 
-                                                                                                       BASE->Offset(ActBM) != BASE->Offset(OtherActBM));
-        
-                
-            }
-                
-        }
-        
-        
-    }
-    
+//     void BaseMeasureTest()
+//     {
+//         helping variable 
+//         eBaseMeasure ActBM, SIBM ;
+//         
+//         
+//         reference to SI for all
+//         for(int i = 0; i< bmLast; i++)
+//         {
+//             ActBM = (eBaseMeasure )(i);
+//             SIBM = BASE->SIID(ActBM);
+//                 CPPUNIT_ASSERT_MESSAGE( BASE->DebugOut(SIBM) + "\n" +
+//                                         BASE->DebugOut(BASE->SIID(ActBM )),
+//                                         BASE->DebugOut(SIBM ) ==BASE->DebugOut(BASE->SIID(ActBM )) );
+//         
+//         
+//             check for unique namings short and long
+//             for( int j = i+1; j < bmLast; j++)
+//             {
+//                 eBaseMeasure OtherActBM = (eBaseMeasure )(j);
+//                 check for unique short labels
+//                 CPPUNIT_ASSERT_MESSAGE( BASE->DebugOut(ActBM) + "\n" + BASE->DebugOut(OtherActBM), BASE->Short(ActBM) != BASE->Short(OtherActBM) );
+//                 
+//                 check for unique long labels
+//                 CPPUNIT_ASSERT_MESSAGE( BASE->DebugOut(ActBM) + "\n" + BASE->DebugOut(OtherActBM), BASE->Long(ActBM) != BASE->Long(OtherActBM) );
+//         
+//                 check of unique SI recalculation
+//                 if( BASE->SIID(ActBM) == BASE->SIID(OtherActBM) )
+//                     CPPUNIT_ASSERT_MESSAGE( BASE->DebugOut(ActBM) + "\n" + BASE->DebugOut(OtherActBM), BASE->Factor(ActBM) != BASE->Factor(OtherActBM) || 
+//                                                                                                        BASE->Offset(ActBM) != BASE->Offset(OtherActBM));
+//         
+//                 
+//             }
+//                 
+//         }
+//         
+//         
+//     }
+//     
     void ComplexMeasureTest()
     {
         // helping variables
@@ -962,6 +965,9 @@ int main( int argc, char* argv[] )
 
     std::string testPath = (argc > 1) ? string(argv[1]) : std::string("");
     
+    // declare all tests
+    CBaseMeasure_Test BaseMeasureTest;
+    
     // declar the Measure test variable
     Measure_test measTest;
 
@@ -978,10 +984,40 @@ int main( int argc, char* argv[] )
     #else
     CPPUNIT_NS::BriefTestProgressListener progress;
     #endif
-    controller.addListener( &progress );      
+    controller.addListener( &progress );   
 
+    
     // Add the top suite to the test runner 
     CPPUNIT_NS::TestRunner runner;
+    
+       
+
+    // add all tests of CBaseMeasure_Test
+    runner.addTest( new CppUnit::TestCaller<CBaseMeasure_Test> ( 
+                    "BaseMeasure: consistent SI references",
+                    &CBaseMeasure_Test::SIReference,
+                    &BaseMeasureTest
+                    )
+                  );
+    runner.addTest( new CppUnit::TestCaller<CBaseMeasure_Test> ( 
+                    "BaseMeasure: unique short labels",
+                    &CBaseMeasure_Test::UniqueShortLabel,
+                    &BaseMeasureTest
+                    )
+                  );
+    runner.addTest( new CppUnit::TestCaller<CBaseMeasure_Test> ( 
+                    "BaseMeasure: unique long labels",
+                    &CBaseMeasure_Test::UniqueLongLabel,
+                    &BaseMeasureTest
+                    )
+                  );
+    runner.addTest( new CppUnit::TestCaller<CBaseMeasure_Test> ( 
+                    "BaseMeasure: unique SI factors",
+                    &CBaseMeasure_Test::UniqueSIFactor,
+                    &BaseMeasureTest
+                    )
+                  );
+    
     runner.addTest( new CppUnit::TestCaller<Measure_test> ( 
                         "FloatingMeasure-Test",
                         &Measure_test::FloatingMeasureTest,
@@ -994,12 +1030,12 @@ int main( int argc, char* argv[] )
                         &measTest
                         )
             );
-    runner.addTest( new CppUnit::TestCaller<Measure_test> ( 
-                        "BaseMeasure-Test",
-                        &Measure_test::BaseMeasureTest,
-                        &measTest
-                        )
-            );
+//     runner.addTest( new CppUnit::TestCaller<Measure_test> ( 
+//                         "BaseMeasure-Test",
+//                         &Measure_test::BaseMeasureTest,
+//                         &measTest
+//                         )
+//             );
     runner.addTest( new CppUnit::TestCaller<Measure_test> ( 
                         "PreMeasure-Test",
                         &Measure_test::PreMeasureTest,

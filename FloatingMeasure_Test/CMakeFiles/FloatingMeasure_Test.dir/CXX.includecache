@@ -6,6 +6,8 @@
 
 #IncludeRegexTransform: 
 
+/home/michae/projects/FloatingMeasure/FloatingMeasure_Test/BaseMeasure_Test.cpp
+
 /home/michae/projects/FloatingMeasure/FloatingMeasure_Test/FloatingMeasure_Test.cpp
 cppunit/CompilerOutputter.h
 -
@@ -37,6 +39,8 @@ FloatingMeasure/FloatingMeasure.h
 -
 Measure/ComplexMeasureMacros.h
 -
+BaseMeasure_Test.cpp
+/home/michae/projects/FloatingMeasure/FloatingMeasure_Test/BaseMeasure_Test.cpp
 
 FloatingMeasure_Test/../FloatingMeasure/DigFloat/DigFloat.h
 Utils/Utils.h
