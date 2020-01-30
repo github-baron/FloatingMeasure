@@ -24,6 +24,7 @@
 
 #include "SimpleMeasure.h"
 
+
 CSimpleMeasure::CSimpleMeasure()
 {
     _Init();
@@ -55,7 +56,7 @@ CSimpleMeasure& CSimpleMeasure::operator=(const CSimpleMeasure& other)
 
 bool const CSimpleMeasure::operator==(const CSimpleMeasure& other) const
 {
-
+    
     return BaseID()== other.BaseID() &&
            PreID() == other.PreID();
 }

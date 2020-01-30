@@ -6,13 +6,23 @@
 
 #IncludeRegexTransform: 
 
+/home/michae/projects/FloatingMeasure/FloatingMeasure/Measure/ComplexMeasure.h
+SimpleMeasure.h
+/home/michae/projects/FloatingMeasure/FloatingMeasure/Measure/SimpleMeasure.h
+MeasureOperator.h
+/home/michae/projects/FloatingMeasure/FloatingMeasure/Measure/MeasureOperator.h
+DigFloat/DigFloat.h
+-
+
+/home/michae/projects/FloatingMeasure/FloatingMeasure/Measure/ComplexMeasureMacros.h
+
 /home/michae/projects/FloatingMeasure/FloatingMeasure_Test/BaseMeasure_Test.cpp
 
 /home/michae/projects/FloatingMeasure/FloatingMeasure_Test/ComplexMeasure_Test.cpp
-Measure/ComplexMeasure.h
-/home/michae/projects/FloatingMeasure/FloatingMeasure_Test/Measure/ComplexMeasure.h
-Measure/ComplexMeasureMacros.h
-/home/michae/projects/FloatingMeasure/FloatingMeasure_Test/Measure/ComplexMeasureMacros.h
+../FloatingMeasure/Measure/ComplexMeasure.h
+/home/michae/projects/FloatingMeasure/FloatingMeasure/Measure/ComplexMeasure.h
+../FloatingMeasure/Measure/ComplexMeasureMacros.h
+/home/michae/projects/FloatingMeasure/FloatingMeasure/Measure/ComplexMeasureMacros.h
 cppunit/TestAssert.h
 -
 

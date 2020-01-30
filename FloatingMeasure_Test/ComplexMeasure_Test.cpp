@@ -21,8 +21,8 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-#include "Measure/ComplexMeasure.h"
-#include "Measure/ComplexMeasureMacros.h"
+#include "../FloatingMeasure/Measure/ComplexMeasure.h"
+#include "../FloatingMeasure/Measure/ComplexMeasureMacros.h"
 #include <cppunit/TestAssert.h>
 
 class CComplexMeasure_Test : public CppUnit::TestFixture  {
@@ -96,24 +96,27 @@ public:
     }
     void OperatorAssignAndEqualVoltage()
     {
-        ComplMeas1=  fV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== fV );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "fV" );
-        ComplMeas1=  pV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== pV );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "pV" );
-        ComplMeas1=  nV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== nV );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "nV" );
-        ComplMeas1=  uV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== uV );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==mu+"V" );
-        ComplMeas1=  mV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== mV );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "mV" );
-        ComplMeas1=  cV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== cV );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "cV" );
-        ComplMeas1=  dV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== dV );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "dV" );
-        ComplMeas1=   V ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1==  V );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==   "V" );
-        ComplMeas1= daV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1==daV );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()== "daV" );
-        ComplMeas1=  HV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== HV );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "HV" );
-        ComplMeas1=  kV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== kV );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "kV" );
-        ComplMeas1=  MV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== MV );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "MV" );
-        ComplMeas1=  GV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== GV );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "GV" );
-        ComplMeas1=  TV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== TV );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "TV" );
-        ComplMeas1=  PV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== PV );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "PV" );
-        ComplMeas1=  EV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== EV );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "EV" );
-        ComplMeas1=  ZV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== ZV );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "ZV" );
-        ComplMeas1=  YV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== YV );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "YV" );
+        // debug 
+        CPPUNIT_ASSERT_MESSAGE((fV).DebugOut(),fV == fV);
+        
+        ComplMeas1=  fV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "fV" );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== fV );
+        ComplMeas1=  pV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "pV" );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== pV );
+        ComplMeas1=  nV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "nV" );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== nV );
+        ComplMeas1=  uV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==mu+"V" );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== uV );
+        ComplMeas1=  mV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "mV" );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== mV );
+        ComplMeas1=  cV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "cV" );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== cV );
+        ComplMeas1=  dV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "dV" );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== dV );
+        ComplMeas1=   V ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==   "V" );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1==  V );
+        ComplMeas1= daV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()== "daV" );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1==daV );
+        ComplMeas1=  HV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "HV" );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== HV );
+        ComplMeas1=  kV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "kV" );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== kV );
+        ComplMeas1=  MV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "MV" );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== MV );
+        ComplMeas1=  GV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "GV" );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== GV );
+        ComplMeas1=  TV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "TV" );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== TV );
+        ComplMeas1=  PV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "PV" );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== PV );
+        ComplMeas1=  EV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "EV" );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== EV );
+        ComplMeas1=  ZV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "ZV" );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== ZV );
+        ComplMeas1=  YV ;CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1.PrintAllShort()==  "YV" );CPPUNIT_ASSERT_MESSAGE(ComplMeas1.DebugOut(),ComplMeas1== YV );
     }
     
     void OperatorAssignAndEqualCurrent()

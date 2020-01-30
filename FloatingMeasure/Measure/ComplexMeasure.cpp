@@ -139,13 +139,15 @@ bool CComplexMeasure::operator==(const CComplexMeasure& other) const
     // compare the simple measures only: pMeasureLeft == other.pMeasureLeft
     if( CheckThis.pMeasureRight == nullptr && CheckOther.pMeasureRight == nullptr)
     {
-        return CheckThis.pMeasureLeft == CheckOther.pMeasureLeft;
+        
+            return CheckThis.pMeasureLeft->operator==(*(CheckOther.pMeasureLeft)) &&
+                   CheckThis.ReleaseExp10AndFactor() == CheckOther.ReleaseExp10AndFactor(); 
     }
-
+    
     // for the more complex case:
     // equality is achieved if meaure1 / measure2 = 1
     // make all calculations with the precision of *this
-    CheckThis /= other;
+    CheckThis /= CheckOther;
     
     // do a simplification
     CheckThis.Simplify();
