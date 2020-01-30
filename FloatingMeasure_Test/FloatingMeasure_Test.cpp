@@ -439,8 +439,56 @@ int main( int argc, char* argv[] )
                     )
                   );
     runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                    "SimpleMeasure: operator =",
-                    &CSimpleMeasure_Test::OperatorEqual,
+                    "SimpleMeasure: SetByShort, operator = , and operator== voltage",
+                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualVoltage,
+                    &SimpleMeasureTest
+                    )
+                  );
+    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+                    "SimpleMeasure: SetByShort, operator = , and operator== current",
+                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualCurrent,
+                    &SimpleMeasureTest
+                    )
+                  );
+    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+                    "SimpleMeasure: SetByShort, operator = , and operator== frequency",
+                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualFrequency,
+                    &SimpleMeasureTest
+                    )
+                  );
+    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+                    "SimpleMeasure: SetByShort, operator = , and operator== resistor",
+                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualResistor, 
+                    &SimpleMeasureTest
+                    )
+                  );
+    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+                    "SimpleMeasure: SetByShort, operator = , and operator== seconds",
+                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualSeconds,
+                    &SimpleMeasureTest
+                    )
+                  );
+    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+                    "SimpleMeasure: SetByShort, operator = , and operator== meter",
+                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualMeter,
+                    &SimpleMeasureTest
+                    )
+                  );
+    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+                    "SimpleMeasure: SetByShort, operator = , and operator== °K",
+                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualDegKelvin,
+                    &SimpleMeasureTest
+                    )
+                  );
+    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+                    "SimpleMeasure: SetByShort, operator = , and operator== °F",
+                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualDegFahrenheit,
+                    &SimpleMeasureTest
+                    )
+                  );
+    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+                    "SimpleMeasure: SetByShort, operator = , and operator== °C",
+                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualDegCelsius,
                     &SimpleMeasureTest
                     )
                   );

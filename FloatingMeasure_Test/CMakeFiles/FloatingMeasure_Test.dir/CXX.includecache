@@ -59,6 +59,10 @@ ComplexMeasure_Test.cpp
 /home/michae/projects/FloatingMeasure/FloatingMeasure_Test/PreMeasure_Test.cpp
 
 /home/michae/projects/FloatingMeasure/FloatingMeasure_Test/SimpleMeasure_Test.cpp
+Utils/Utils.h
+/home/michae/projects/FloatingMeasure/FloatingMeasure_Test/Utils/Utils.h
+Measure/SimpleMeasure.h
+/home/michae/projects/FloatingMeasure/FloatingMeasure_Test/Measure/SimpleMeasure.h
 
 FloatingMeasure_Test/../FloatingMeasure/DigFloat/DigFloat.h
 Utils/Utils.h
