@@ -586,14 +586,14 @@ void CComplexMeasure::_SearchAndShortenSameSIIndex(CComplexMeasure* pShortenPart
     // or 
     // one of the partners is already cancelled (i.e. BaseMeasureEnum == bmNumber)
     // or
-    // the offsets for recalculation to SI are not zero (mathematical desaster in general which I will not solve here)
+    // the offsets for recalculation to SI are not identical (mathematical desaster in general which I will not solve here)
     // or
     // the operators are the same
     // --> go on
     if( BASE->SIID( pShortenPartner->pMeasureLeft->BaseID() ) != BASE->SIID( pMeasureLeft->BaseID()) ||
         BASE->SIID( pShortenPartner->pMeasureLeft->BaseID() ) == bmNumber ||
         BASE->SIID( pMeasureLeft->BaseID()) == bmNumber ||
-        pShortenPartner->pMeasureLeft->SIOffset() != 0 ||  pMeasureLeft->SIOffset() != 0||
+        pShortenPartner->pMeasureLeft->SIOffset() != pMeasureLeft->SIOffset() ||
         eOPofShortenPartner == eOPofConsecutiveShortenPartner)
     {
         // recursive calll ... only if there is a successor

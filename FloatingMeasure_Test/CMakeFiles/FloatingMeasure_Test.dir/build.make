@@ -57,27 +57,27 @@ include FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/progress.make
 # Include the compile flags for this target's objects.
 include FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/flags.make
 
-FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_Test.cpp.o: FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/flags.make
-FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_Test.cpp.o: FloatingMeasure_Test/FloatingMeasure_Test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/michae/projects/FloatingMeasure/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_Test.cpp.o"
-	cd /home/michae/projects/FloatingMeasure/FloatingMeasure_Test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_Test.cpp.o -c /home/michae/projects/FloatingMeasure/FloatingMeasure_Test/FloatingMeasure_Test.cpp
+FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_TestRunner.cpp.o: FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/flags.make
+FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_TestRunner.cpp.o: FloatingMeasure_Test/FloatingMeasure_TestRunner.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/michae/projects/FloatingMeasure/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_TestRunner.cpp.o"
+	cd /home/michae/projects/FloatingMeasure/FloatingMeasure_Test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_TestRunner.cpp.o -c /home/michae/projects/FloatingMeasure/FloatingMeasure_Test/FloatingMeasure_TestRunner.cpp
 
-FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_Test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_Test.cpp.i"
-	cd /home/michae/projects/FloatingMeasure/FloatingMeasure_Test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/michae/projects/FloatingMeasure/FloatingMeasure_Test/FloatingMeasure_Test.cpp > CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_Test.cpp.i
+FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_TestRunner.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_TestRunner.cpp.i"
+	cd /home/michae/projects/FloatingMeasure/FloatingMeasure_Test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/michae/projects/FloatingMeasure/FloatingMeasure_Test/FloatingMeasure_TestRunner.cpp > CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_TestRunner.cpp.i
 
-FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_Test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_Test.cpp.s"
-	cd /home/michae/projects/FloatingMeasure/FloatingMeasure_Test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/michae/projects/FloatingMeasure/FloatingMeasure_Test/FloatingMeasure_Test.cpp -o CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_Test.cpp.s
+FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_TestRunner.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_TestRunner.cpp.s"
+	cd /home/michae/projects/FloatingMeasure/FloatingMeasure_Test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/michae/projects/FloatingMeasure/FloatingMeasure_Test/FloatingMeasure_TestRunner.cpp -o CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_TestRunner.cpp.s
 
 # Object files for target FloatingMeasure_Test
 FloatingMeasure_Test_OBJECTS = \
-"CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_Test.cpp.o"
+"CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_TestRunner.cpp.o"
 
 # External object files for target FloatingMeasure_Test
 FloatingMeasure_Test_EXTERNAL_OBJECTS =
 
-FloatingMeasure_Test/FloatingMeasure_Test: FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_Test.cpp.o
+FloatingMeasure_Test/FloatingMeasure_Test: FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_TestRunner.cpp.o
 FloatingMeasure_Test/FloatingMeasure_Test: FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/build.make
 FloatingMeasure_Test/FloatingMeasure_Test: /usr/lib/x86_64-linux-gnu/libcppunit.so
 FloatingMeasure_Test/FloatingMeasure_Test: FloatingMeasure/libFloatingMeasure.so

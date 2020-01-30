@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/michae/projects/FloatingMeasure/FloatingMeasure_Test/FloatingMeasure_Test.cpp" "/home/michae/projects/FloatingMeasure/FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_Test.cpp.o"
+  "/home/michae/projects/FloatingMeasure/FloatingMeasure_Test/FloatingMeasure_TestRunner.cpp" "/home/michae/projects/FloatingMeasure/FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_TestRunner.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

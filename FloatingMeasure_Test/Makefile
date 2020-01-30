@@ -171,32 +171,32 @@ FloatingMeasure_Test/fast:
 	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/build.make FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/build
 .PHONY : FloatingMeasure_Test/fast
 
-FloatingMeasure_Test.o: FloatingMeasure_Test.cpp.o
+FloatingMeasure_TestRunner.o: FloatingMeasure_TestRunner.cpp.o
 
-.PHONY : FloatingMeasure_Test.o
+.PHONY : FloatingMeasure_TestRunner.o
 
 # target to build an object file
-FloatingMeasure_Test.cpp.o:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/build.make FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_Test.cpp.o
-.PHONY : FloatingMeasure_Test.cpp.o
+FloatingMeasure_TestRunner.cpp.o:
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/build.make FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_TestRunner.cpp.o
+.PHONY : FloatingMeasure_TestRunner.cpp.o
 
-FloatingMeasure_Test.i: FloatingMeasure_Test.cpp.i
+FloatingMeasure_TestRunner.i: FloatingMeasure_TestRunner.cpp.i
 
-.PHONY : FloatingMeasure_Test.i
+.PHONY : FloatingMeasure_TestRunner.i
 
 # target to preprocess a source file
-FloatingMeasure_Test.cpp.i:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/build.make FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_Test.cpp.i
-.PHONY : FloatingMeasure_Test.cpp.i
+FloatingMeasure_TestRunner.cpp.i:
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/build.make FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_TestRunner.cpp.i
+.PHONY : FloatingMeasure_TestRunner.cpp.i
 
-FloatingMeasure_Test.s: FloatingMeasure_Test.cpp.s
+FloatingMeasure_TestRunner.s: FloatingMeasure_TestRunner.cpp.s
 
-.PHONY : FloatingMeasure_Test.s
+.PHONY : FloatingMeasure_TestRunner.s
 
 # target to generate assembly for a file
-FloatingMeasure_Test.cpp.s:
-	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/build.make FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_Test.cpp.s
-.PHONY : FloatingMeasure_Test.cpp.s
+FloatingMeasure_TestRunner.cpp.s:
+	cd /home/michae/projects/FloatingMeasure && $(MAKE) -f FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/build.make FloatingMeasure_Test/CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_TestRunner.cpp.s
+.PHONY : FloatingMeasure_TestRunner.cpp.s
 
 # Help Target
 help:
@@ -211,9 +211,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... install/local"
 	@echo "... install"
-	@echo "... FloatingMeasure_Test.o"
-	@echo "... FloatingMeasure_Test.i"
-	@echo "... FloatingMeasure_Test.s"
+	@echo "... FloatingMeasure_TestRunner.o"
+	@echo "... FloatingMeasure_TestRunner.i"
+	@echo "... FloatingMeasure_TestRunner.s"
 .PHONY : help
 
 

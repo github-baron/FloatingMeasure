@@ -22,6 +22,10 @@
  * SOFTWARE.
  */
 
+#include "../FloatingMeasure/Utils/Utils.h"
+#include "../FloatingMeasure/Measure/PreMeasure.h"
+#include "../FloatingMeasure/Measure/BaseMeasure.h"
+
 class CPreMeasure_Test : public CppUnit::TestFixture  {
 
 private:

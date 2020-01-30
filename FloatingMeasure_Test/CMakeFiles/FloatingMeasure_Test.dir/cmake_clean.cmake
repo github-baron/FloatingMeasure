@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_Test.cpp.o"
+  "CMakeFiles/FloatingMeasure_Test.dir/FloatingMeasure_TestRunner.cpp.o"
   "FloatingMeasure_Test.pdb"
   "FloatingMeasure_Test"
 )

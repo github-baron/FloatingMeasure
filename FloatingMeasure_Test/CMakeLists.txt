@@ -6,7 +6,7 @@ project(FloatingMeasure_Test)
 #add the executable
 #http://www.cmake.org/pipermail/cmake/2006-October/011446.html
 #Modified to use pkg config and use standard var names
-add_executable(FloatingMeasure_Test FloatingMeasure_Test.cpp)
+add_executable(FloatingMeasure_Test FloatingMeasure_TestRunner.cpp)
 
 
 #Find the CppUnit includes and library
