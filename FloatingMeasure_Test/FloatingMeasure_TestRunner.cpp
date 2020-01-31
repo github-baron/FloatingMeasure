@@ -276,8 +276,19 @@ int main( int argc, char* argv[] )
                         &CComplexMeasure_Test::OperatorAssignAndEqualDegKelvin,
                         &ComplexMeasureTest
                         )
-                  );  
-    
+                  );    
+    runner.addTest( new CppUnit::TestCaller<CComplexMeasure_Test> ( 
+                        "ComplexMeasure: complex expression operator ==",
+                        &CComplexMeasure_Test::OperatorAssignAndEqualComplexExpression,
+                        &ComplexMeasureTest
+                        )
+                  );      
+    runner.addTest( new CppUnit::TestCaller<CComplexMeasure_Test> ( 
+                        "ComplexMeasure: simplify",
+                        &CComplexMeasure_Test::Simplify,
+                        &ComplexMeasureTest
+                        )
+                  );    
     runner.addTest( new CppUnit::TestCaller<CComplexMeasure_Test> ( 
                         "ComplexMeasure: old test ... still to be structured",
                         &CComplexMeasure_Test::ComplexMeasureTest,
@@ -331,6 +342,36 @@ int main( int argc, char* argv[] )
     runner.addTest( new CppUnit::TestCaller<CFloatingMeasure_Test> ( 
                         "FloatingMeasure: scale to for temperature",
                         &CFloatingMeasure_Test::ScaleToTemperature,
+                        &FloatingMeasureTest
+                        )
+                  );
+    runner.addTest( new CppUnit::TestCaller<CFloatingMeasure_Test> ( 
+                        "FloatingMeasure: normalize temperature",
+                        &CFloatingMeasure_Test::NormalizeTemperature,
+                        &FloatingMeasureTest
+                        )
+                  );
+    runner.addTest( new CppUnit::TestCaller<CFloatingMeasure_Test> ( 
+                        "FloatingMeasure: Simplify",
+                        &CFloatingMeasure_Test::Simplify,
+                        &FloatingMeasureTest
+                        )
+                  );
+    runner.addTest( new CppUnit::TestCaller<CFloatingMeasure_Test> ( 
+                        "FloatingMeasure: Valid",
+                        &CFloatingMeasure_Test::Valid,
+                        &FloatingMeasureTest
+                        )
+                  );
+    runner.addTest( new CppUnit::TestCaller<CFloatingMeasure_Test> ( 
+                        "FloatingMeasure: ScaleTo",
+                        &CFloatingMeasure_Test::ScaleTo,
+                        &FloatingMeasureTest
+                        )
+                  );
+    runner.addTest( new CppUnit::TestCaller<CFloatingMeasure_Test> ( 
+                        "FloatingMeasure: Precision",
+                        &CFloatingMeasure_Test::Precision,
                         &FloatingMeasureTest
                         )
                   );

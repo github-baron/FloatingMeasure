@@ -209,7 +209,7 @@ public:
      * 
      * @return string
      */
-    string PrintAllShort();
+    string Short();
     
     /**
      * @brief prints all members: can be applied for debugging purpose

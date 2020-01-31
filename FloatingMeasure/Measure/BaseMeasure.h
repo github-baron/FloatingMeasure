@@ -156,14 +156,15 @@ public:
         return (eBaseMeasure) CVectorHandle::GetIndexByLongLabel(strLongLabel);
     }    
     /**
-     * @brief keeps the index of the corresponding SI unit: is its own unit 
-     *        in case it is the SI unit itself
+     * @brief keeps the index of the corresponding SI measure: is its own measure
+     *        in case it is the SI measure itself
      * 
      */
     vector<int>* vnSIIndex;    
     
     /**
-     * @brief keeps the offset for the conversion to the SI Unit
+     * @brief keeps the offset for the conversion to the SI measure:
+     * V_{SI} = CBaseMeasure::vdFactor[eBaseMeasure] * "Value in eBaseMeasure" + CBaseMeasure::vdOffset[eBaseMeasure] 
      * 
      */
     vector<double>* vdOffset;

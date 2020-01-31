@@ -392,12 +392,12 @@ public:
         
         Measure1.SetByShort("","°F");
         CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.SIFactor() == 5./9.);
-        CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.SIOffset() == 32-5./9.*273.15);
+        CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.SIOffset() == 273.15-5./9.*32);
         CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.Short() == "°F");
         
         Measure1.SetByShort("m","°F");
         CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.SIFactor() == 5./9.*0.001);
-        CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.SIOffset() == (32-5./9.*273.15));
+        CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.SIOffset() == 273.15-5./9.*32);
         CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.Short() == "m°F");
         
         Measure1.SetByShort("","°C");

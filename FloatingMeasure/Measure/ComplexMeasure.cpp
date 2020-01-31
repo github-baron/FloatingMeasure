@@ -235,14 +235,14 @@ void CComplexMeasure::_InvertOP()
         }
   
 }
-string CComplexMeasure::PrintAllShort()
+string CComplexMeasure::Short()
 {
     string strAllShort;
     strAllShort = pMeasureLeft->Short();
     
     // use recursive call to get the whole string
     if( pMeasureRight != nullptr )
-        strAllShort+=  OPShort() + pMeasureRight->PrintAllShort();
+        strAllShort+=  OPShort() + pMeasureRight->Short();
     
     return strAllShort;
         
@@ -568,8 +568,11 @@ void CComplexMeasure::_RemoveNeutralNumbers(CComplexMeasure &PreviousComplexMeas
         PreviousComplexMeasure.pMeasureRight = pMeasureRight;
         
         // in case the successor is null --> opEnum = opUnknown
+        // otherwise replace the previous operator by the actual one
         if(pMeasureRight == nullptr)
-            PreviousComplexMeasure.opEnum = opUnknown;         
+            PreviousComplexMeasure.opEnum = opUnknown; 
+        else                
+            PreviousComplexMeasure.opEnum = opEnum; 
         
         // delete pMeasureLeft, reset pMeasureRight
         pMeasureRight = nullptr;
@@ -696,7 +699,7 @@ string CComplexMeasure::DebugOut()
     
     oss << "CComplexMeasure valid: " << Bool2String(Valid()) << endl
         << "this: " << this << endl <<
-           "pMeasureLeft:"  << pMeasureLeft->DebugOut() << endl <<
+           "pMeasureLeft:"  << pMeasureLeft->Short() << endl <<
            "opEnum:"    << OPShort() << endl << 
            "CMFactor: " << CMFactor().Print() << endl <<
            "nCMExp10: " << CMExp10() << endl <<

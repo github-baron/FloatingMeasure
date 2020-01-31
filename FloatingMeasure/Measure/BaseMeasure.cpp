@@ -73,7 +73,7 @@ CBaseMeasure::CBaseMeasure()
     (*vstrShort)[bmDegFahrenheit]=("°F");
     (*vstrLong)[bmDegFahrenheit]=(bmDegKelvin);
     (*vnSIIndex)[bmDegFahrenheit]=(bmDegKelvin);
-    (*vdOffset)[bmDegFahrenheit]=(32-5./9.*273.15);
+    (*vdOffset)[bmDegFahrenheit]=(273.15-5./9.*32);
     (*vdFactor)[bmDegFahrenheit]=(5./9.);
     
     (*vstrShort)[bmOhm]=(Omega);

@@ -250,8 +250,8 @@ void CFloatingMeasure::ScaleTo(const CComplexMeasure& other)
         
         // 2. to target base measure (no pre measure)
         // invert SI conversion of other: / other.SIFactor and - other.SIOffset
-        dfFloating /=  BASE->Factor(other.pMeasureLeft->BaseID()); 
         dfFloating -= other.pMeasureLeft->SIOffset();
+        dfFloating /=  BASE->Factor(other.pMeasureLeft->BaseID()); 
 
         // 3. to target base measure with pre measure
         // now divide by premeasure of other (e.g. m°C --> k°F:
@@ -354,7 +354,7 @@ void CFloatingMeasure::_Precision(const CFloatingMeasure* pOtherPrecision)
 string CFloatingMeasure::PrintShort()
 {
     ostringstream oss;
-    oss << dfFloating.Print(false) << "*" << cmMeasure.PrintAllShort();
+    oss << dfFloating.Print(false) << "*" << cmMeasure.Short();
     return oss.str();
 }
 string CFloatingMeasure::DebugOut()
