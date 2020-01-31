@@ -32,6 +32,12 @@
 #include<Utils/Utils.h>
 
 ///////////////////////////////////////////////////
+// macros
+///////////////////////////////////////////////////
+#define DF_RAW_PRINT_PRECISION         40
+#define DF_DEFAULT_PRINT_PRECISION     10
+
+///////////////////////////////////////////////////
 // forward declarations
 ///////////////////////////////////////////////////
 class CFloatingMeasure;
@@ -45,7 +51,11 @@ class CFloatingMeasure;
  * - setting of user defined precision for comparing and printing.
  * 
  */
-class DLLEXPORT_CMD CDigFloat
+class 
+#ifdef _WIN32
+FloatingMeasureDLL_API
+#endif
+CDigFloat
 {
     friend class CFloatingMeasure;
 public:
@@ -327,6 +337,13 @@ public:
     const double RawValue() const { return dValue;}
     
     /**
+     * @brief setter of CDigFloat::dValue (no rounding/no error setting)
+     * 
+     * @return const double
+     */
+    void RawValue(const double& other ) { dValue = other;}
+    
+    /**
      * @brief getter of CDigFloat::dError conditionally considering CDigFloat::nPrecision: <br>
      * see CDigFloat::PrecisionActive() and CDigFloat::Precision()
      * 
@@ -391,7 +408,8 @@ public:
     // public printing functions
     ///////////////////////////////////////////////////
     /**
-     * @brief prints CDigFloat::dValue and conditionally CDigFloat::dError formatted according to CDigFloat::nPrecision.
+     * @brief prints CDigFloat::dValue and conditionally CDigFloat::dError formatted according to CDigFloat::nPrecision if
+     * CDigFloat::PrecisionActive() is true. Otherwise the number of digits is formatted with DF_DEFAULT_PRINT_PRECISION.
      * 
      * @param bWithError: if true, CDigFloat::dError is printed, too
      * @return string, formatted CDigFloat::dValue [\f$\pm\f$ CDigFloat::dError] according to CDigFloat::nPrecision
@@ -477,6 +495,18 @@ protected:
      */
     bool bPrecisionActive;
 };
+    /////////////////////////////////////////////////////
+    // external functions for comfortable 
+    // use 
+    /////////////////////////////////////////////////////
+/**
+ * @brief abs: returns CDigFloat with absolute value;
+ * 
+ * @param FM: CDigFloat
+ * @return CDigFloat
+ */
+CDigFloat abs(const CDigFloat& DF );
+
 
 
 #endif // CDIGFLOAT_H

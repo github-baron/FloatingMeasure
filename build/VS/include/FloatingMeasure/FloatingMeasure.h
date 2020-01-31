@@ -36,7 +36,11 @@
  * - handling of the precision of the floating part for output and calculations
  * 
  */
-class DLLEXPORT_CMD CFloatingMeasure
+class 
+#ifdef _WIN32
+FloatingMeasureDLL_API
+#endif
+ CFloatingMeasure
 {
     friend class CComplexMeasure;
 public:
@@ -151,8 +155,6 @@ public:
      */
     CFloatingMeasure& operator/=(const CFloatingMeasure& other);
     
-    
-    
     /**
      * @brief operator +
      * 
@@ -185,6 +187,37 @@ public:
      */
     CFloatingMeasure operator/(const CFloatingMeasure& other);
     
+    /**
+     * @brief operator*=
+     * 
+     * @param other p_other:double
+     * @return CFloatingMeasure&
+     */
+    CFloatingMeasure& operator*=(const double& other);
+    
+    /**
+     * @brief operator/=
+     * 
+     * @param other p_other:double
+     * @return CFloatingMeasure&
+     */
+    CFloatingMeasure& operator/=(const double& other);
+    
+    /**
+     * @brief operator*
+     * 
+     * @param other p_other:double
+     * @return CFloatingMeasure&
+     */
+    CFloatingMeasure operator*(const double& other);
+    
+    /**
+     * @brief operator/
+     * 
+     * @param other p_other:double
+     * @return CFloatingMeasure&
+     */
+    CFloatingMeasure operator/(const double& other);
     
     
     /////////////////////////////////////////////////////
@@ -195,6 +228,12 @@ public:
      * 
      */
     void Normalize();
+    
+    /**
+     * @brief convert to SI unit and remove premeasures != pmIdent
+     * 
+     */
+    void Simplify();
     
     /**
      * @brief check measures for compatibility
@@ -333,6 +372,17 @@ protected:
     CDigFloat dfFloating;
     CFloatingMeasure* pfmPrecision;
 };
+    /////////////////////////////////////////////////////
+    // external operators and functions for comfortable 
+    // use 
+    /////////////////////////////////////////////////////
+/**
+ * @brief abs: returns CFloatingMeasure with absolute value;
+ * 
+ * @param FM: CFloatingMeasure
+ * @return CFloatingMeasure
+ */
+CFloatingMeasure abs(const CFloatingMeasure& FM );
 
 /**
  * @brief operator* : enables CFloatingMeasure = 10*mV;
@@ -344,6 +394,15 @@ protected:
 CFloatingMeasure operator*(const CDigFloat& Floating ,const CComplexMeasure& Measure) { return CFloatingMeasure(Floating, Measure);}
 
 /**
+ * @brief operator* : enables CFloatingMeasure = mV*10;
+ * 
+ * @param Measure: CComplexMeasure
+ * @param Floating: CDigFloat 
+ * @return CFloatingMeasure
+ */
+CFloatingMeasure operator*(const CComplexMeasure& Measure,const CDigFloat& Floating) { return CFloatingMeasure(Floating, Measure);}
+
+/**
  * @brief operator* : enables CFloatingMeasure = 10*mV*uA;
  * 
  * @param FloatingMeasure: CFloatingMeasure (e.g. 10*mV)
@@ -353,6 +412,15 @@ CFloatingMeasure operator*(const CDigFloat& Floating ,const CComplexMeasure& Mea
 CFloatingMeasure operator*(const CFloatingMeasure& FloatingMeasure ,const CComplexMeasure& Measure) { return CFloatingMeasure(FloatingMeasure.Floating(), FloatingMeasure.Measure()*Measure);}
 
 /**
+ * @brief operator* : enables CFloatingMeasure = mV*uA*10;
+ * 
+ * @param Measure: CComplexMeasure (e.g. mV*uA)
+ * @param FloatingMeasure: CFloatingMeasure (e.g. 10)
+ * @return CFloatingMeasure
+ */
+CFloatingMeasure operator*(const CComplexMeasure& Measure, const CFloatingMeasure& FloatingMeasure ) { return CFloatingMeasure(FloatingMeasure.Floating(), FloatingMeasure.Measure()*Measure);}
+
+/**
  * @brief operator/ : enables CFloatingMeasure = 10/mV;
  * 
  * @param Floating: CDigFloat 
@@ -360,6 +428,15 @@ CFloatingMeasure operator*(const CFloatingMeasure& FloatingMeasure ,const CCompl
  * @return CFloatingMeasure
  */
 CFloatingMeasure operator/(const CDigFloat& Floating ,const CComplexMeasure& Measure) { return CFloatingMeasure(Floating, CComplexMeasure(pmIdent, bmNumber) / Measure);}
+
+/**
+ * @brief operator/ : enables CFloatingMeasure = mV/10;
+ * 
+ * @param Measure: CComplexMeasure
+ * @param Floating: CDigFloat 
+ * @return CFloatingMeasure
+ */
+CFloatingMeasure operator/(const CComplexMeasure& Measure,const CDigFloat& Floating ) { return CFloatingMeasure(Floating, CComplexMeasure(pmIdent, bmNumber) / Measure);}
 
 /**
  * @brief operator/ : enables CFloatingMeasure = 10*mV/uA;
