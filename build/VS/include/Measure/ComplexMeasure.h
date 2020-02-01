@@ -46,7 +46,11 @@ class CFloatingMeasure;
  * be considered within this class (i.e. ohm = volt / ampere )
  * 
  */
-class DLLEXPORT_CMD CComplexMeasure
+class 
+#ifdef _WIN32
+FloatingMeasureDLL_API
+#endif
+CComplexMeasure
 {
     // friends
     friend class CFloatingMeasure;
@@ -205,7 +209,7 @@ public:
      * 
      * @return string
      */
-    string PrintAllShort();
+    string Short();
     
     /**
      * @brief prints all members: can be applied for debugging purpose

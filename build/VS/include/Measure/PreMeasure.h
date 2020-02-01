@@ -72,7 +72,11 @@ enum ePreMeasure
  * - short label
  * - long label
  */
-class DLLEXPORT_CMD CPreMeasure : public CVectorHandle
+class 
+#ifdef _WIN32
+FloatingMeasureDLL_API
+#endif
+ CPreMeasure : public CVectorHandle
 {
     
 public:

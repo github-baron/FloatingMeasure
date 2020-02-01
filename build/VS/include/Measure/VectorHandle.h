@@ -34,7 +34,11 @@
  *        handling.
  * 
  */
-class DLLEXPORT_CMD CVectorHandle
+class 
+#ifdef _WIN32
+FloatingMeasureDLL_API
+#endif
+ CVectorHandle
 {
     
 public:    

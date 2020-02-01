@@ -36,7 +36,11 @@
  * - recalculation offset and factor to SI measure of the CPreMeasure and CBaseMeasure
  * 
  */
-class DLLEXPORT_CMD CSimpleMeasure
+class 
+#ifdef _WIN32
+FloatingMeasureDLL_API
+#endif
+ CSimpleMeasure
 {
 friend class CPreMeasure;
 friend class CBaseMeasure;
@@ -135,6 +139,15 @@ public:
      * @return const string
      */
     const string DebugOut();
+    
+    /**
+     * @brief check compatiblity with other CSimpleMeasure:<br>
+     * compatibility is given if the CSimpleMeasure::eBaseMeasure have the same SI measure.
+     * 
+     * @param other: CSimpleMeasure to check for compatibility
+     * @return bool
+     */
+    bool Compatible( const CSimpleMeasure& other ) { return BASE->SIID( BaseID() ) == BASE->SIID(other.BaseID());}
 
     ////////////////////////////////////
     // public getter 
