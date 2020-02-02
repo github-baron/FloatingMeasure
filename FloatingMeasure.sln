@@ -10,6 +10,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FloatingMeasure_Test", "Flo
 		{10C374C2-2A41-43DF-923A-8BA9A50137D3} = {10C374C2-2A41-43DF-923A-8BA9A50137D3}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FloatingMeasure_Examples", "FloatingMeasure_Examples\FloatingMeasure_Examples.vcxproj", "{C0F75207-0CBD-4D8A-A075-A237C4279F1C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{10C374C2-2A41-43DF-923A-8BA9A50137D3} = {10C374C2-2A41-43DF-923A-8BA9A50137D3}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -34,6 +39,14 @@ Global
 		{27E2114C-277F-435E-BE05-B36A74A55AB1}.Release|x64.Build.0 = Release|x64
 		{27E2114C-277F-435E-BE05-B36A74A55AB1}.Release|x86.ActiveCfg = Release|Win32
 		{27E2114C-277F-435E-BE05-B36A74A55AB1}.Release|x86.Build.0 = Release|Win32
+		{C0F75207-0CBD-4D8A-A075-A237C4279F1C}.Debug|x64.ActiveCfg = Debug|x64
+		{C0F75207-0CBD-4D8A-A075-A237C4279F1C}.Debug|x64.Build.0 = Debug|x64
+		{C0F75207-0CBD-4D8A-A075-A237C4279F1C}.Debug|x86.ActiveCfg = Debug|Win32
+		{C0F75207-0CBD-4D8A-A075-A237C4279F1C}.Debug|x86.Build.0 = Debug|Win32
+		{C0F75207-0CBD-4D8A-A075-A237C4279F1C}.Release|x64.ActiveCfg = Release|x64
+		{C0F75207-0CBD-4D8A-A075-A237C4279F1C}.Release|x64.Build.0 = Release|x64
+		{C0F75207-0CBD-4D8A-A075-A237C4279F1C}.Release|x86.ActiveCfg = Release|Win32
+		{C0F75207-0CBD-4D8A-A075-A237C4279F1C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

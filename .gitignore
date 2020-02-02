@@ -11,6 +11,9 @@ _OBJ
 *.ipdb
 /build/VS/lib/FloatingMeasure.iobj
 /build/VS/bin/TestRunner.iobj
-/FloatingMeasure/CMakeFiles/FloatingMeasure.dir
 /FloatingMeasure/CMakeFiles
+/FloatingMeasure_Examples/CMakeFiles
+/FloatingMeasure_Test/CMakeFiles
+/CMakeFiles
+Makefile
 *.iobj

@@ -81,9 +81,9 @@ int main( int argc, char* argv[] )
     // Add the top suite to the test runner 
     CPPUNIT_NS::TestRunner runner;
 
-    ///////////////////////////////////////////////
-    // add all tests of CBaseMeasure_Test
-    ///////////////////////////////////////////////
+    /////////////////////////////////////////////////
+    //// add all tests of CBaseMeasure_Test
+    /////////////////////////////////////////////////
     runner.addTest( new CppUnit::TestCaller<CBaseMeasure_Test> ( 
                     "BaseMeasure: consistent SI references",
                     &CBaseMeasure_Test::SIReference,

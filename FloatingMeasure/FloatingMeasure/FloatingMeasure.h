@@ -378,11 +378,15 @@ protected:
     /////////////////////////////////////////////////////
 /**
  * @brief abs: returns CFloatingMeasure with absolute value;
- * 
+ *
  * @param FM: CFloatingMeasure
  * @return CFloatingMeasure
  */
-CFloatingMeasure abs(const CFloatingMeasure& FM );
+CFloatingMeasure
+#ifdef _WIN32
+FloatingMeasureDLL_API
+#endif
+abs(const CFloatingMeasure& FM);
 
 /**
  * @brief operator* : enables CFloatingMeasure = 10*mV;
@@ -391,7 +395,11 @@ CFloatingMeasure abs(const CFloatingMeasure& FM );
  * @param Measure: CComplexMeasure
  * @return CFloatingMeasure
  */
-CFloatingMeasure operator*(const CDigFloat& Floating ,const CComplexMeasure& Measure) { return CFloatingMeasure(Floating, Measure);}
+CFloatingMeasure
+#ifdef _WIN32
+FloatingMeasureDLL_API
+#endif
+operator*(const CDigFloat& Floating ,const CComplexMeasure& Measure) { return CFloatingMeasure(Floating, Measure);}
 
 /**
  * @brief operator* : enables CFloatingMeasure = mV*10;
@@ -400,7 +408,11 @@ CFloatingMeasure operator*(const CDigFloat& Floating ,const CComplexMeasure& Mea
  * @param Floating: CDigFloat 
  * @return CFloatingMeasure
  */
-CFloatingMeasure operator*(const CComplexMeasure& Measure,const CDigFloat& Floating) { return CFloatingMeasure(Floating, Measure);}
+CFloatingMeasure
+#ifdef _WIN32
+FloatingMeasureDLL_API
+#endif
+operator*(const CComplexMeasure& Measure,const CDigFloat& Floating) { return CFloatingMeasure(Floating, Measure);}
 
 /**
  * @brief operator* : enables CFloatingMeasure = 10*mV*uA;
@@ -409,7 +421,11 @@ CFloatingMeasure operator*(const CComplexMeasure& Measure,const CDigFloat& Float
  * @param Measure: CComplexMeasure (e.g. uA)
  * @return CFloatingMeasure
  */
-CFloatingMeasure operator*(const CFloatingMeasure& FloatingMeasure ,const CComplexMeasure& Measure) { return CFloatingMeasure(FloatingMeasure.Floating(), FloatingMeasure.Measure()*Measure);}
+CFloatingMeasure
+#ifdef _WIN32
+FloatingMeasureDLL_API
+#endif
+operator*(const CFloatingMeasure& FloatingMeasure ,const CComplexMeasure& Measure) { return CFloatingMeasure(FloatingMeasure.Floating(), FloatingMeasure.Measure()*Measure);}
 
 /**
  * @brief operator* : enables CFloatingMeasure = mV*uA*10;
@@ -418,7 +434,11 @@ CFloatingMeasure operator*(const CFloatingMeasure& FloatingMeasure ,const CCompl
  * @param FloatingMeasure: CFloatingMeasure (e.g. 10)
  * @return CFloatingMeasure
  */
-CFloatingMeasure operator*(const CComplexMeasure& Measure, const CFloatingMeasure& FloatingMeasure ) { return CFloatingMeasure(FloatingMeasure.Floating(), FloatingMeasure.Measure()*Measure);}
+CFloatingMeasure
+#ifdef _WIN32
+FloatingMeasureDLL_API
+#endif
+operator*(const CComplexMeasure& Measure, const CFloatingMeasure& FloatingMeasure ) { return CFloatingMeasure(FloatingMeasure.Floating(), FloatingMeasure.Measure()*Measure);}
 
 /**
  * @brief operator/ : enables CFloatingMeasure = 10/mV;
@@ -427,7 +447,11 @@ CFloatingMeasure operator*(const CComplexMeasure& Measure, const CFloatingMeasur
  * @param Measure: CComplexMeasure
  * @return CFloatingMeasure
  */
-CFloatingMeasure operator/(const CDigFloat& Floating ,const CComplexMeasure& Measure) { return CFloatingMeasure(Floating, CComplexMeasure(pmIdent, bmNumber) / Measure);}
+CFloatingMeasure
+#ifdef _WIN32
+FloatingMeasureDLL_API
+#endif
+operator/(const CDigFloat& Floating ,const CComplexMeasure& Measure) { return CFloatingMeasure(Floating, CComplexMeasure(pmIdent, bmNumber) / Measure);}
 
 /**
  * @brief operator/ : enables CFloatingMeasure = mV/10;
@@ -436,7 +460,11 @@ CFloatingMeasure operator/(const CDigFloat& Floating ,const CComplexMeasure& Mea
  * @param Floating: CDigFloat 
  * @return CFloatingMeasure
  */
-CFloatingMeasure operator/(const CComplexMeasure& Measure,const CDigFloat& Floating ) { return CFloatingMeasure(Floating, CComplexMeasure(pmIdent, bmNumber) / Measure);}
+CFloatingMeasure
+#ifdef _WIN32
+FloatingMeasureDLL_API
+#endif
+operator/(const CComplexMeasure& Measure,const CDigFloat& Floating ) { return CFloatingMeasure(Floating, CComplexMeasure(pmIdent, bmNumber) / Measure);}
 
 /**
  * @brief operator/ : enables CFloatingMeasure = 10*mV/uA;
@@ -445,6 +473,10 @@ CFloatingMeasure operator/(const CComplexMeasure& Measure,const CDigFloat& Float
  * @param Measure: CComplexMeasure (e.g. uA)
  * @return CFloatingMeasure
  */
-CFloatingMeasure operator/(const CFloatingMeasure& FloatingMeasure ,const CComplexMeasure& Measure) { return CFloatingMeasure(FloatingMeasure.Floating(), FloatingMeasure.Measure()/Measure);}
+CFloatingMeasure
+#ifdef _WIN32
+FloatingMeasureDLL_API
+#endif
+operator/(const CFloatingMeasure& FloatingMeasure ,const CComplexMeasure& Measure) { return CFloatingMeasure(FloatingMeasure.Floating(), FloatingMeasure.Measure()/Measure);}
 
 #endif // CFLOATINGMEASURE_H

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.0.0)
 
 project(FloatingMeasure
-        VERSION 1.0.0.0
+        VERSION 1.0.0.1
         LANGUAGES CXX)
 
 # Find includes in corresponding build directories

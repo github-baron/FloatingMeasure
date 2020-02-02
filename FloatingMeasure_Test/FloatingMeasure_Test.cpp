@@ -43,7 +43,7 @@ public:
     void OperatorEqual()
     {
         cfTest1 = 10*mC/kK;
-        CPPUNIT_ASSERT_MESSAGE( cfTest1.DebugOut(), cfTest1.Floating() == 10);
+        CPPUNIT_ASSERT_MESSAGE( cfTest1.DebugOut(), cfTest1.Floating() == 101);
         CPPUNIT_ASSERT_MESSAGE( cfTest1.Measure().DebugOut(), cfTest1.Measure() == mC/kK);
         
         

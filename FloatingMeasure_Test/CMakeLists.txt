@@ -26,7 +26,6 @@ FIND_PATH(CPPUNIT_INCLUDE_DIRS
     PATHS
     /usr/local/include
     /usr/include/
-    C:\\Users\\Michae\\CMakeBuilds\\1845e5d2-61fb-2730-a89b-d6e571dd8254\\install\\x64-Release\\include
 )
 message("found cppunit includes " ${CPPUNIT_INCLUDE_DIRS}) 
 include_directories(../FloatingMeasure/ ${CPPUNIT_INCLUDE_DIRS})
@@ -34,14 +33,14 @@ include_directories(../FloatingMeasure/ ${CPPUNIT_INCLUDE_DIRS})
 FIND_LIBRARY(CPPUNIT_LIBRARIES
     NAMES cppunit 
     HINTS ${PC_CPPUNIT_LIBDIR}
-    ${CMAKE_INSTALL_PREFIX}/lib
-    ${CMAKE_INSTALL_PREFIX}/lib64
-    PATHS
-    ${CPPUNIT_INCLUDE_DIRS}/../lib
+#    ${CMAKE_INSTALL_PREFIX}/lib
+#    ${CMAKE_INSTALL_PREFIX}/lib64
+#    PATHS
+#    ${CPPUNIT_INCLUDE_DIRS}/../lib
     /usr/local/lib
     /usr/lib
     /usr/lib/x86_64-linux-gnu/
-    C:\\Users\\Michae\\CMakeBuilds\\1845e5d2-61fb-2730-a89b-d6e571dd8254\\install\\x64-Release\\lib
+    ../Ultimaker/CppUnit/lib
 )
 
 message("found cppunit libraries " ${CPPUNIT_LIBRARIES}) 

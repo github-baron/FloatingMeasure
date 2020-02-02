@@ -22,7 +22,7 @@ FIND_LIBRARY(FM_LIBRARIES
     /usr/local/lib
     /usr/lib
     /usr/lib/x86_64-linux-gnu/
-    C:\\Users\\Michae\\CMakeBuilds\\1845e5d2-61fb-2730-a89b-d6e571dd8254\\install\\x64-Release\\lib
+    ${PROJECT_SOURCE_DIR}../FloatingMeasure/
 )
 
 

@@ -298,6 +298,6 @@ string CDigFloat::DebugOut()
 CDigFloat abs(const CDigFloat& DF)
 { 
     CDigFloat dfResult(DF); 
-    dfResult.RawValue(abs(DF.RawValue())); 
+    dfResult.RawValue(fabs(DF.RawValue())); 
     return dfResult;
 }

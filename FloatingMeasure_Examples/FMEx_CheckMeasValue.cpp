@@ -79,7 +79,7 @@ int main(int argc, char* argv[])
     
     
     cout << endl << " check again: " << endl << " .... " 
-         <<  (abs(MeasVal-Demand)).PrintShort() << " <= " << Tolerance.PrintShort() << endl 
+         <<  (abs( MeasVal-Demand)).PrintShort() << " <= " << Tolerance.PrintShort() << endl 
          << "--> in tolerance : best device ever!" << endl << endl;   
     
     cout << endl << " but take care depending on the order of your calculation for the deviation, the result may change again " << endl << " .... " <<  (abs(Demand-MeasVal)).PrintShort() << " > " << Tolerance.PrintShort() << endl
