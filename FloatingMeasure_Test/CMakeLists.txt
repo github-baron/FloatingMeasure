@@ -26,12 +26,14 @@ FIND_PATH(CPPUNIT_INCLUDE_DIRS
     PATHS
     /usr/local/include
     /usr/include/
+    C:\\Users\\Michae\\Source\\Repos\\Ultimaker\\CppUnit\\src\\cppunit\\include
+
 )
 message("found cppunit includes " ${CPPUNIT_INCLUDE_DIRS}) 
 include_directories(../FloatingMeasure/ ${CPPUNIT_INCLUDE_DIRS})
 
 FIND_LIBRARY(CPPUNIT_LIBRARIES
-    NAMES cppunit 
+    NAMES cppunitd 
     HINTS ${PC_CPPUNIT_LIBDIR}
 #    ${CMAKE_INSTALL_PREFIX}/lib
 #    ${CMAKE_INSTALL_PREFIX}/lib64
@@ -40,7 +42,7 @@ FIND_LIBRARY(CPPUNIT_LIBRARIES
     /usr/local/lib
     /usr/lib
     /usr/lib/x86_64-linux-gnu/
-    ../Ultimaker/CppUnit/lib
+    C:\\Users\\Michae\\Source\\Repos\\Ultimaker\\CppUnit\\src\\cppunit\\lib
 )
 
 message("found cppunit libraries " ${CPPUNIT_LIBRARIES}) 
