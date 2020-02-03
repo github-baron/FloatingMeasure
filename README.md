@@ -28,7 +28,7 @@ Additionally, it supports configurable precision which is oftenly needed for "re
 
 ## Installation
 
-The project can be compiled under Linux (CMake) and Windows (CMake / Visual Studio 2017). The corresponding build result can be found in the project directory <a href="build/CMake"> build/CMake </a> (for CMake) and <a href="build/VS"> build/VS </a> (for Visual Studio).  Distribute the corresponding "include" and "lib" directories to your favorite installation directory.
+The project can be compiled under Linux (CMake) and Windows (Visual Studio 2017). The corresponding build result can be found in the project directory <a href="build/CMake"> build/CMake </a> (for CMake) and <a href="build/VS"> build/VS </a> (for Visual Studio).  Distribute the corresponding "include" and "lib" directories to your favorite installation directory.
 
 ## API Reference
 
