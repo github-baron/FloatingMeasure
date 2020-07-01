@@ -17,3 +17,11 @@ _OBJ
 /CMakeFiles
 Makefile
 *.iobj
+/FloatingMeasureWrapper/Debug
+/FloatingMeasureWrapperTest/obj
+/FloatingMeasureWrapperTest/bin/Debug
+/FloatingMeasure_Examples/Debug
+/FloatingMeasure_Test/Debug
+/Debug
+/FloatingMeasure/Debug
+/packages
