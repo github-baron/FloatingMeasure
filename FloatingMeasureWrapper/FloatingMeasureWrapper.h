@@ -30,8 +30,9 @@ using namespace System;
 #include "UtilsManaged.h"
 #include "ManagedObject.h"
 
+using namespace ComplexMeasureCLI;
 
-namespace FloatingMeasureManaged
+namespace FloatingMeasureCLI
 {
     public ref class FloatingMeasureWrapper : public ManagedObject<CFloatingMeasure>
     {
@@ -48,7 +49,7 @@ namespace FloatingMeasureManaged
          *
          * @param other FloatingMeasureWrapper
          */
-        FloatingMeasureWrapper(CFloatingMeasure* other) : ManagedObject<CFloatingMeasure>(other)
+        FloatingMeasureWrapper(FloatingMeasureWrapper^ other) : ManagedObject<CFloatingMeasure>(other->GetInstance())
         {
 
         }
@@ -87,18 +88,20 @@ namespace FloatingMeasureManaged
         {
             return GetInstance()->operator>(*other.GetInstance());
         }
-        CFloatingMeasure* operator+(FloatingMeasureWrapper other)
-        {
-            CFloatingMeasure* result = new CFloatingMeasure(*GetInstance() + *other.GetInstance());
-            return result;
-        }
-        //FloatingMeasureWrapper operator-(FloatingMeasureWrapper other);
-        //FloatingMeasureWrapper operator*(FloatingMeasureWrapper other);
-        //FloatingMeasureWrapper operator/(FloatingMeasureWrapper other);
-        //FloatingMeasureWrapper& operator*=(const double& other);
-        //FloatingMeasureWrapper& operator/=(const double& other);
-        //FloatingMeasureWrapper operator*(const double& other);
-        //FloatingMeasureWrapper operator/(const double& other);
 
     };
+    static FloatingMeasureWrapper^ operator+(FloatingMeasureWrapper^ one, FloatingMeasureWrapper^ other)
+    {
+        FloatingMeasureWrapper^ fmwResult = gcnew FloatingMeasureWrapper(other);
+        fmwResult->GetInstance()->operator+=(*(other->GetInstance()));
+        return fmwResult;
+    }
+    //FloatingMeasureWrapper operator-(FloatingMeasureWrapper other);
+    //FloatingMeasureWrapper operator*(FloatingMeasureWrapper other);
+    //FloatingMeasureWrapper operator/(FloatingMeasureWrapper other);
+    //FloatingMeasureWrapper& operator*=(const double& other);
+    //FloatingMeasureWrapper& operator/=(const double& other);
+    //FloatingMeasureWrapper operator*(const double& other);
+    //FloatingMeasureWrapper operator/(const double& other);
+
 }

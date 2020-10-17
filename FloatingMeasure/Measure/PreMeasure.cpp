@@ -153,7 +153,7 @@ ePreMeasure CPreMeasure::GetIDByFactor(const double dPreMeasureFactor)
     // if we come here iterate over all other PreMeasure factors:
     // stop in case the remaining factor is between 0.1 and 10
     ePreMeasure pmOpt = pmUnknown;
-    for(int idx = 0; idx < vdFactor->size(); idx++)
+    for(unsigned int idx = 0; idx < vdFactor->size(); idx++)
     {   
         // set the limits depending of the consecutive and previous measure:
         // default is a factor 1000 distance:
@@ -186,7 +186,7 @@ ePreMeasure CPreMeasure::GetIDByExp10(const int nExp10)
     // at this point: find the closest
     ePreMeasure optPM = pmFirst;
     int nAbsDiff = abs(nExp10-Exp10(optPM));
-    for(int idx = 0; idx < vnExp10->size(); idx++)
+    for(unsigned int idx = 0; idx < vnExp10->size(); idx++)
         if( nAbsDiff > (abs(nExp10-Exp10(idx))) )
         {
             nAbsDiff = abs(nExp10 - Exp10(idx));

@@ -1,6 +1,6 @@
 ﻿#pragma once
 using namespace System;
-namespace FloatingMeasureManaged
+namespace SimpleMeasureCLI
 {
     public enum class ePreMeasureManaged : int
     {

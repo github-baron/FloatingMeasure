@@ -29,9 +29,11 @@
 //#include <msclr\marshal_cppstd.h>
 
 using namespace System;
+using namespace ManagedObjectCLI;
+using namespace SimpleMeasureCLI;
 
 
-namespace FloatingMeasureManaged 
+namespace ComplexMeasureCLI
 {
 
     public ref class ComplexMeasureWrapper : public ManagedObject<CComplexMeasure>
@@ -44,12 +46,74 @@ namespace FloatingMeasureManaged
         ComplexMeasureWrapper() : ManagedObject<CComplexMeasure>(new CComplexMeasure())
         {
         }
+
         /**
-         * Default constructor: calls CComplexMeasure::_Init()
+         * @brief Copy constructor with  pointer arg. :  <br>
+         *
+         * @param other p_other:...
          */
-        ComplexMeasureWrapper(const ePreMeasureManaged PreMeasureEnum, const eBaseMeasureManaged BaseMeasureEnum) : 
+        ComplexMeasureWrapper(ComplexMeasureWrapper^ other) :
+            ManagedObject<CComplexMeasure>(new CComplexMeasure(other->GetInstance()))
+        {
+        }
+
+        /**
+         * @brief Copy constructor with  pointer arg. :  <br>
+         *
+         * @param other p_other:...
+         */
+        ComplexMeasureWrapper(ComplexMeasureWrapper% other) :
+            ManagedObject<CComplexMeasure>(new CComplexMeasure(other.GetInstance()))
+        {
+        }
+        /**
+         * @brief operator ==:
+         */
+        static bool operator==(ComplexMeasureWrapper^ one, ComplexMeasureWrapper^ other)
+        {
+            return one->GetInstance()->operator==(other->GetInstance());
+        }
+        /**
+         * @brief operator !=:
+         */
+        static bool operator!=(ComplexMeasureWrapper^ one, ComplexMeasureWrapper^ other)
+        {
+            return one->GetInstance()->operator!=(other->GetInstance());
+        }
+
+        /**
+         * @brief Constructor by #ePreMeasure index and #eBaseMeasure index:<br>
+         * only sets ::pMeasureLeft and deletes ::pMeasureRight
+         *
+         * @param PreMeasureEnum: pre-measure index
+         * @param BaseMeasureEnum: base-measure index
+         */
+        ComplexMeasureWrapper(const ePreMeasureManaged PreMeasureEnum, const eBaseMeasureManaged BaseMeasureEnum) :
             ManagedObject<CComplexMeasure>(new CComplexMeasure((ePreMeasure)PreMeasureEnum, (eBaseMeasure) BaseMeasureEnum))
         {
+        }
+        /**
+        * @brief operator *: implements implicitely *= ,too
+        */
+        static ComplexMeasureWrapper^ operator*(ComplexMeasureWrapper^ one, ComplexMeasureWrapper^ other)
+        {
+
+            ComplexMeasureWrapper^ cmwResult = gcnew ComplexMeasureWrapper(one);
+            cmwResult->GetInstance()->operator*=(other->GetInstance());
+            return cmwResult;
+
+        }
+
+        /**
+         * @brief operator /: implements implicitely /= ,too
+         */
+        static ComplexMeasureWrapper^ operator/(ComplexMeasureWrapper^ one, ComplexMeasureWrapper^ other)
+        {
+
+            ComplexMeasureWrapper^ cmwResult = gcnew ComplexMeasureWrapper(one);
+            cmwResult->GetInstance()->operator/=(other->GetInstance());
+            return cmwResult;
+
         }
         /**
          * @brief sets the pMeasureLeft calling CSimpleMeasure::SetByID
@@ -61,14 +125,29 @@ namespace FloatingMeasureManaged
         {
             GetInstance()->SetByID((ePreMeasure)PreMeasureEnum, (eBaseMeasure)BaseMeasureEnum);
         }
+        /**
+         * @brief check for valid measures: if one invalid measure is found --> everything is invalid
+         *
+         * @return bool
+         */
+        bool Valid()
+        {
+            return GetInstance()->Valid();
+        }
 
-
-
+        /**
+         * @brief prints the premeasure and the base measure short labels
+         *
+         * @return string
+         */
         String^ Short()
         {
             return gcnew String( GetInstance()->Short().c_str());
         }
 
-    };  
+
+
+    };
+
 
 }

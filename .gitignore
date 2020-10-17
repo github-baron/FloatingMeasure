@@ -25,3 +25,12 @@ Makefile
 /Debug
 /FloatingMeasure/Debug
 /packages
+/ComplexMeasureMacros/bin/Debug
+/ComplexMeasureMacros/obj
+/FloatingMeasure/Release
+/FloatingMeasureWrapper/Release
+/FloatingMeasureWrapper/app.aps
+/FloatingMeasure_Examples/Release
+/FloatingMeasure_Test/Release
+/Release/x86
+/utFloatingMeasureWrapper.playlist

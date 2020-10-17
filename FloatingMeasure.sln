@@ -19,8 +19,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatingMeasureWrapperTest", "FloatingMeasureWrapperTest\FloatingMeasureWrapperTest.csproj", "{DE873C36-11FD-4991-AFDA-E5F6EF55E41E}"
 	ProjectSection(ProjectDependencies) = postProject
 		{A9EFC867-76D3-4CB0-9B39-06A739CDE898} = {A9EFC867-76D3-4CB0-9B39-06A739CDE898}
-		{10C374C2-2A41-43DF-923A-8BA9A50137D3} = {10C374C2-2A41-43DF-923A-8BA9A50137D3}
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComplexMeasureMacros", "ComplexMeasureMacros\ComplexMeasureMacros.csproj", "{F1ABF887-7E61-4914-8085-1F87642CD20D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -97,6 +98,18 @@ Global
 		{DE873C36-11FD-4991-AFDA-E5F6EF55E41E}.Release|x64.Build.0 = Release|Any CPU
 		{DE873C36-11FD-4991-AFDA-E5F6EF55E41E}.Release|x86.ActiveCfg = Release|Any CPU
 		{DE873C36-11FD-4991-AFDA-E5F6EF55E41E}.Release|x86.Build.0 = Release|Any CPU
+		{F1ABF887-7E61-4914-8085-1F87642CD20D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1ABF887-7E61-4914-8085-1F87642CD20D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1ABF887-7E61-4914-8085-1F87642CD20D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F1ABF887-7E61-4914-8085-1F87642CD20D}.Debug|x64.Build.0 = Debug|Any CPU
+		{F1ABF887-7E61-4914-8085-1F87642CD20D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F1ABF887-7E61-4914-8085-1F87642CD20D}.Debug|x86.Build.0 = Debug|Any CPU
+		{F1ABF887-7E61-4914-8085-1F87642CD20D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1ABF887-7E61-4914-8085-1F87642CD20D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1ABF887-7E61-4914-8085-1F87642CD20D}.Release|x64.ActiveCfg = Release|Any CPU
+		{F1ABF887-7E61-4914-8085-1F87642CD20D}.Release|x64.Build.0 = Release|Any CPU
+		{F1ABF887-7E61-4914-8085-1F87642CD20D}.Release|x86.ActiveCfg = Release|Any CPU
+		{F1ABF887-7E61-4914-8085-1F87642CD20D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

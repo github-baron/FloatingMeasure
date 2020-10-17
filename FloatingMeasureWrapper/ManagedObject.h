@@ -1,9 +1,11 @@
 #pragma once
 using namespace System;
-namespace FloatingMeasureManaged {
+namespace ManagedObjectCLI
+{
 
     template<class T>
     public ref class ManagedObject
+    //public interface class ManagedObject
     {
     protected:
         T* m_Instance;

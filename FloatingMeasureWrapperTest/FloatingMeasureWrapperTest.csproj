@@ -63,9 +63,9 @@
     <OutputPath>bin\x86\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <DebugType>full</DebugType>
-    <PlatformTarget>x64</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>MixedRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <OutputPath>bin\x86\Release\</OutputPath>
@@ -84,12 +84,9 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'allX86|x86'">
     <OutputPath>bin\x86\allX86\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FloatingMeasureWrapperd, Version=1.0.7487.41148, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\build\VS\lib\FloatingMeasureWrapperd.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\MSTest.TestFramework.1.3.2\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
     </Reference>
@@ -100,11 +97,21 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="ComplexMeasureWrapperTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ComplexMeasureMacros\ComplexMeasureMacros.csproj">
+      <Project>{f1abf887-7e61-4914-8085-1f87642cd20d}</Project>
+      <Name>ComplexMeasureMacros</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FloatingMeasureWrapper\FloatingMeasureWrapper.vcxproj">
+      <Project>{a9efc867-76d3-4cb0-9b39-06a739cde898}</Project>
+      <Name>FloatingMeasureWrapper</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -117,8 +124,15 @@
   </Target>
   <Import Project="..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.targets" Condition="Exists('..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.targets')" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy $(SolutionDir)build\VS\lib\*dll $(TargetDir) /Y
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>xcopy $(SolutionDir)build\VS\lib\*dll $(TargetDir) /Y
 xcopy $(SolutionDir)build\VS\lib\*lib $(TargetDir) /Y
-xcopy $(SolutionDir)build\VS\lib\*pdb $(TargetDir) /Y</PostBuildEvent>
+xcopy $(SolutionDir)build\VS\lib\*pdb $(TargetDir) /Y
+xcopy $(SolutionDir)$(Configuration)\$(PROCESSOR_ARCHITECTURE)\*dll $(TargetDir) /Y
+xcopy $(SolutionDir)$(Configuration)\$(PROCESSOR_ARCHITECTURE)\*lib $(TargetDir) /Y
+xcopy $(SolutionDir)$(Configuration)\$(PROCESSOR_ARCHITECTURE)\*pdb $(TargetDir) /Y</PreBuildEvent>
   </PropertyGroup>
 </Project>
