@@ -82,7 +82,7 @@ public:
     /**
      * @brief comparison operator
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return bool
      */
     bool operator==(const CFloatingMeasure& other) const;
@@ -90,7 +90,7 @@ public:
     /**
      * @brief operator!=
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return bool
      */
     bool operator!=(const CFloatingMeasure& other) const;
@@ -98,35 +98,35 @@ public:
     /**
      * @brief operator<
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return bool
      */
     bool operator<(const CFloatingMeasure& other) const;
     /**
      * @brief operator<=
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return bool
      */
     bool operator<=(const CFloatingMeasure& other) const;
     /**
      * @brief operator>=
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return bool
      */
     bool operator>=(const CFloatingMeasure& other) const;
     /**
      * @brief operator>
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return bool
      */
     bool operator>(const CFloatingMeasure& other) const;
     /**
      * @brief operator +=
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return CFloatingMeasure&
      */
     CFloatingMeasure& operator+=(const CFloatingMeasure& other);
@@ -134,7 +134,7 @@ public:
     /**
      * @brief operator-=
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return CFloatingMeasure&
      */
     CFloatingMeasure& operator-=(const CFloatingMeasure& other);
@@ -142,7 +142,7 @@ public:
     /**
      * @brief operator*=
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return CFloatingMeasure&
      */
     CFloatingMeasure& operator*=(const CFloatingMeasure& other);
@@ -150,7 +150,7 @@ public:
     /**
      * @brief operator/=
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return CFloatingMeasure&
      */
     CFloatingMeasure& operator/=(const CFloatingMeasure& other);
@@ -158,7 +158,7 @@ public:
     /**
      * @brief operator +
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return CFloatingMeasure&
      */
     CFloatingMeasure operator+(const CFloatingMeasure& other);
@@ -166,7 +166,7 @@ public:
     /**
      * @brief operator-
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return CFloatingMeasure&
      */
     CFloatingMeasure operator-(const CFloatingMeasure& other);
@@ -174,7 +174,7 @@ public:
     /**
      * @brief operator*
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return CFloatingMeasure&
      */
     CFloatingMeasure operator*(const CFloatingMeasure& other);
@@ -182,23 +182,31 @@ public:
     /**
      * @brief operator/
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return CFloatingMeasure&
      */
     CFloatingMeasure operator/(const CFloatingMeasure& other);
-    
+
     /**
      * @brief operator*=
-     * 
-     * @param other p_other:double
+     *
+     * @param other:double
      * @return CFloatingMeasure&
      */
     CFloatingMeasure& operator*=(const double& other);
+
+    /**
+     * @brief operator*=
+     *
+     * @param other: type CComplexMeasure
+     * @return CFloatingMeasure&
+     */
+    CFloatingMeasure& operator*=(const CComplexMeasure& other);
     
     /**
      * @brief operator/=
      * 
-     * @param other p_other:double
+     * @param other: double
      * @return CFloatingMeasure&
      */
     CFloatingMeasure& operator/=(const double& other);
@@ -206,7 +214,7 @@ public:
     /**
      * @brief operator*
      * 
-     * @param other p_other:double
+     * @param other:double
      * @return CFloatingMeasure&
      */
     CFloatingMeasure operator*(const double& other);
@@ -214,7 +222,7 @@ public:
     /**
      * @brief operator/
      * 
-     * @param other p_other:double
+     * @param other:double
      * @return CFloatingMeasure&
      */
     CFloatingMeasure operator/(const double& other);
@@ -238,7 +246,7 @@ public:
     /**
      * @brief check measures for compatibility
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * 
      * @return bool
      */
@@ -247,7 +255,7 @@ public:
     /**
      * @brief check measures for compatibility
      * 
-     * @param other p_other:CComplexMeasure&
+     * @param other:CComplexMeasure&
      * 
      * @return bool
      */
@@ -256,14 +264,14 @@ public:
     /**
      * @brief scales to CComplexMeasure of other
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      */
     void ScaleTo(const CFloatingMeasure& other); 
     
     /**
      * @brief scales to CComplexMeasure other
      * 
-     * @param other p_other:CComplexMeasure&
+     * @param other:CComplexMeasure&
      */
     void ScaleTo(const CComplexMeasure& other); 
     
@@ -354,13 +362,13 @@ protected:
     /**
      * @brief setter for cmMeasure
      * 
-     * @param other p_other:CComplexMeasure
+     * @param other:CComplexMeasure
      */
     void Measure(const CComplexMeasure& other);
     /**
      * @brief setter for dfFloating
      * 
-     * @param other p_other:CDigFloat
+     * @param other:CDigFloat
      */
     void Floating(const CDigFloat& other ) {dfFloating = other;}
     

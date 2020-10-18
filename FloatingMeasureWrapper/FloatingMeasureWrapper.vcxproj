@@ -246,6 +246,7 @@ xcopy $(OutDir)*.pdb $(SolutionDir)build\VS\bin\ /Y</Command>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="ComplexMeasureWrapper.h" />
+    <ClInclude Include="DigFloatWrapper.h" />
     <ClInclude Include="FloatingMeasureWrapper.h" />
     <ClInclude Include="UtilsManaged.h" />
     <ClInclude Include="ManagedObject.h" />
@@ -255,6 +256,7 @@ xcopy $(OutDir)*.pdb $(SolutionDir)build\VS\bin\ /Y</Command>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="ComplexMeasureWrapper.cpp" />
+    <ClCompile Include="DigFloatWrapper.cpp" />
     <ClCompile Include="FloatingMeasureWrapper.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

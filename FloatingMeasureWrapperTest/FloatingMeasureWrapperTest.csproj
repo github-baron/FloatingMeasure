@@ -99,6 +99,7 @@
   <ItemGroup>
     <Compile Include="ComplexMeasureWrapperTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FloatingMeasureWrapperTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

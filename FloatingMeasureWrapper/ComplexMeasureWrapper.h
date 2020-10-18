@@ -58,7 +58,7 @@ namespace ComplexMeasureCLI
         }
 
         /**
-         * @brief Copy constructor with  pointer arg. :  <br>
+         * @brief Copy constructor with  reference arg. :  <br>
          *
          * @param other p_other:...
          */

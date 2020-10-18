@@ -177,7 +177,13 @@ CFloatingMeasure CFloatingMeasure::operator/(const CFloatingMeasure& other)
 
 CFloatingMeasure& CFloatingMeasure::operator*=(const double& other)
 {
-    dfFloating*=other;
+    dfFloating *= other;
+    return *this;
+}
+
+CFloatingMeasure& CFloatingMeasure::operator*=(const CComplexMeasure& other)
+{
+    cmMeasure*= other;
     return *this;
 }
 

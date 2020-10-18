@@ -34,3 +34,4 @@ Makefile
 /FloatingMeasure_Test/Release
 /Release/x86
 /utFloatingMeasureWrapper.playlist
+/FloatingMeasureWrapperTest/bin/Release
