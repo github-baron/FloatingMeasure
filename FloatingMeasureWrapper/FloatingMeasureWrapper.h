@@ -93,6 +93,17 @@ namespace FloatingMeasureCLI
         // operators
         /////////////////////////////////////////////////////
         /**
+         * copy instead of operator =
+         *
+         * @param one: FloatingMeasureWrapper^
+         * @param other: FloatingMeasureWrapper^
+         */
+        void Copy (FloatingMeasureWrapper^ one)
+        {
+            GetInstance()->operator=(*one->GetInstance());
+
+        }
+        /**
          * operator *
          *
          * @param one: FloatingMeasureWrapper^
@@ -100,9 +111,10 @@ namespace FloatingMeasureCLI
          */
         static FloatingMeasureWrapper^ operator*(FloatingMeasureWrapper^ one, FloatingMeasureWrapper^ other)
         {
-            FloatingMeasureWrapper^ fmResult = gcnew FloatingMeasureWrapper(one);
-            fmResult->GetInstance()->operator*=(*other->GetInstance());
-            return fmResult;
+            FloatingMeasureWrapper^ fmwResult = gcnew FloatingMeasureWrapper();
+            fmwResult->Copy(one);
+            fmwResult->GetInstance()->operator*=(*other->GetInstance());
+            return fmwResult;
         }
         /**
          * operator *
@@ -112,9 +124,10 @@ namespace FloatingMeasureCLI
          */
         static FloatingMeasureWrapper^ operator*(FloatingMeasureWrapper^ one, double value)
         {
-            FloatingMeasureWrapper^ fmResult = gcnew FloatingMeasureWrapper(one);
-            fmResult->GetInstance()->operator*=(value);
-            return fmResult;
+            FloatingMeasureWrapper^ fmwResult = gcnew FloatingMeasureWrapper();
+            fmwResult->Copy(one);
+            fmwResult->GetInstance()->operator*=(value);
+            return fmwResult;
         }
         /**
          * operator *
@@ -124,9 +137,7 @@ namespace FloatingMeasureCLI
          */
         static FloatingMeasureWrapper^ operator*(FloatingMeasureWrapper^ one, ComplexMeasureWrapper^ measure)
         {
-            FloatingMeasureWrapper^ fmResult = gcnew FloatingMeasureWrapper(one);
-            fmResult->GetInstance()->Measure().operator*=(measure->GetInstance());
-            return fmResult;
+            return one*(gcnew FloatingMeasureWrapper(1,measure));
         }
         /**
          * operator /
@@ -136,9 +147,10 @@ namespace FloatingMeasureCLI
          */
         static FloatingMeasureWrapper^ operator/(FloatingMeasureWrapper^ one, FloatingMeasureWrapper^ other)
         {
-            FloatingMeasureWrapper^ fmResult = gcnew FloatingMeasureWrapper(one);
-            fmResult->GetInstance()->operator/=(*other->GetInstance());
-            return fmResult;
+            FloatingMeasureWrapper^ fmwResult = gcnew FloatingMeasureWrapper();
+            fmwResult->Copy(one);
+            fmwResult->GetInstance()->operator/=(*other->GetInstance());
+            return fmwResult;
         }
         /**
          * operator /
@@ -148,9 +160,10 @@ namespace FloatingMeasureCLI
          */
         static FloatingMeasureWrapper^ operator/(FloatingMeasureWrapper^ one, ComplexMeasureWrapper^ measure)
         {
-            FloatingMeasureWrapper^ fmResult = gcnew FloatingMeasureWrapper(one);
-            fmResult->GetInstance()->Measure().operator/=(*measure->GetInstance());
-            return fmResult;
+            FloatingMeasureWrapper^ fmwResult = gcnew FloatingMeasureWrapper();
+            fmwResult->Copy(one);
+            fmwResult->GetInstance()->Measure().operator/=(*measure->GetInstance());
+            return fmwResult;
         }
         /**
          * operator /
@@ -160,9 +173,10 @@ namespace FloatingMeasureCLI
          */
         static FloatingMeasureWrapper^ operator/(FloatingMeasureWrapper^ one, double value)
         {
-            FloatingMeasureWrapper^ fmResult = gcnew FloatingMeasureWrapper(one);
-            fmResult->GetInstance()->operator/=(value);
-            return fmResult;
+            FloatingMeasureWrapper^ fmwResult = gcnew FloatingMeasureWrapper();
+            fmwResult->Copy(one);
+            fmwResult->GetInstance()->operator/=(value);
+            return fmwResult;
         }
         /**
          * operator +
@@ -172,7 +186,8 @@ namespace FloatingMeasureCLI
          */
         static FloatingMeasureWrapper^ operator+(FloatingMeasureWrapper^ one, FloatingMeasureWrapper^ other)
         {
-            FloatingMeasureWrapper^ fmwResult = gcnew FloatingMeasureWrapper(other);
+            FloatingMeasureWrapper^ fmwResult = gcnew FloatingMeasureWrapper();
+            fmwResult->Copy(one);
             fmwResult->GetInstance()->operator+=(*other->GetInstance());
             return fmwResult;
         }
@@ -184,7 +199,8 @@ namespace FloatingMeasureCLI
          */
         static FloatingMeasureWrapper^ operator-(FloatingMeasureWrapper^ one, FloatingMeasureWrapper^ other)
         {
-            FloatingMeasureWrapper^ fmwResult = gcnew FloatingMeasureWrapper(other);
+            FloatingMeasureWrapper^ fmwResult = gcnew FloatingMeasureWrapper();
+            fmwResult->Copy(one);
             fmwResult->GetInstance()->operator-=(*other->GetInstance());
             return fmwResult;
         }
@@ -193,54 +209,54 @@ namespace FloatingMeasureCLI
          *
          * @param other: FloatingMeasureWrapper^
          */
-        bool operator==(FloatingMeasureWrapper other)
+        static bool operator==(FloatingMeasureWrapper^ one, FloatingMeasureWrapper^ other)
         {
-            return GetInstance()->operator==(*other.GetInstance());
+            return one->GetInstance()->operator==(*(other->GetInstance()));
         }
         /**
          * operator !=
          *
          * @param other: FloatingMeasureWrapper^
          */
-        bool operator!=(FloatingMeasureWrapper other)
+        static bool operator!=(FloatingMeasureWrapper^ one, FloatingMeasureWrapper^ other)
         {
-            return GetInstance()->operator!=(*other.GetInstance());
+            return one->GetInstance()->operator!=(*(other->GetInstance()));
         }
         /**
          * operator <
          *
          * @param other: FloatingMeasureWrapper^
          */
-        bool operator<(FloatingMeasureWrapper other)
+        static bool operator<(FloatingMeasureWrapper^ one, FloatingMeasureWrapper^ other)
         {
-            return GetInstance()->operator<(*other.GetInstance());
+            return one->GetInstance()->operator<(*(other->GetInstance()));
         }
         /**
          * operator <=
          *
          * @param other: FloatingMeasureWrapper^
          */
-        bool operator<=(FloatingMeasureWrapper other)
+        static bool operator<=(FloatingMeasureWrapper^ one, FloatingMeasureWrapper^ other)
         {
-            return GetInstance()->operator<=(*other.GetInstance());
+            return one->GetInstance()->operator<=(*(other->GetInstance()));
         }
         /**
          * operator >=
          *
          * @param other: FloatingMeasureWrapper^
          */
-        bool operator>=(FloatingMeasureWrapper other)
+        static bool operator>=(FloatingMeasureWrapper^ one, FloatingMeasureWrapper^ other)
         {
-            return GetInstance()->operator>=(*other.GetInstance());
+            return one->GetInstance()->operator>=(*(other->GetInstance()));
         }
         /**
          * operator >
          *
          * @param other: FloatingMeasureWrapper^
          */
-        bool operator>(FloatingMeasureWrapper other)
+        static bool operator>(FloatingMeasureWrapper^ one, FloatingMeasureWrapper^ other)
         {
-            return GetInstance()->operator>(*other.GetInstance());
+            return one->GetInstance()->operator>(*(other->GetInstance()));
         }
         //////////////////////////////////////
         // other functions
