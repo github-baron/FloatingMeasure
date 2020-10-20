@@ -66,6 +66,16 @@ namespace ComplexMeasureCLI
             ManagedObject<CComplexMeasure>(new CComplexMeasure(other.GetInstance()))
         {
         }
+
+        /**
+         * @brief Copy other complexmeasure:  <br>
+         *
+         * @param other: complex measure
+         */
+        void Copy(ComplexMeasureWrapper^ other) 
+        {
+            GetInstance()->operator=(other->GetInstance());
+        }
         /**
          * @brief operator ==:
          */
@@ -98,7 +108,8 @@ namespace ComplexMeasureCLI
         static ComplexMeasureWrapper^ operator*(ComplexMeasureWrapper^ one, ComplexMeasureWrapper^ other)
         {
 
-            ComplexMeasureWrapper^ cmwResult = gcnew ComplexMeasureWrapper(one);
+            ComplexMeasureWrapper^ cmwResult = gcnew ComplexMeasureWrapper();
+            cmwResult->Copy(one);
             cmwResult->GetInstance()->operator*=(other->GetInstance());
             return cmwResult;
 
@@ -110,7 +121,8 @@ namespace ComplexMeasureCLI
         static ComplexMeasureWrapper^ operator/(ComplexMeasureWrapper^ one, ComplexMeasureWrapper^ other)
         {
 
-            ComplexMeasureWrapper^ cmwResult = gcnew ComplexMeasureWrapper(one);
+            ComplexMeasureWrapper^ cmwResult = gcnew ComplexMeasureWrapper();
+            cmwResult->Copy(one);
             cmwResult->GetInstance()->operator/=(other->GetInstance());
             return cmwResult;
 

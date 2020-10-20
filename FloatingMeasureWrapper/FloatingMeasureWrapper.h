@@ -101,7 +101,6 @@ namespace FloatingMeasureCLI
         void Copy (FloatingMeasureWrapper^ one)
         {
             GetInstance()->operator=(*one->GetInstance());
-
         }
         /**
          * operator *
@@ -160,10 +159,7 @@ namespace FloatingMeasureCLI
          */
         static FloatingMeasureWrapper^ operator/(FloatingMeasureWrapper^ one, ComplexMeasureWrapper^ measure)
         {
-            FloatingMeasureWrapper^ fmwResult = gcnew FloatingMeasureWrapper();
-            fmwResult->Copy(one);
-            fmwResult->GetInstance()->Measure().operator/=(*measure->GetInstance());
-            return fmwResult;
+            return one / (gcnew FloatingMeasureWrapper(1, measure));
         }
         /**
          * operator /
@@ -259,8 +255,74 @@ namespace FloatingMeasureCLI
             return one->GetInstance()->operator>(*(other->GetInstance()));
         }
         //////////////////////////////////////
-        // other functions
+        // getter of measure and value
         //////////////////////////////////////
+        /**
+         * @brief returns measure
+         *
+         */
+        ComplexMeasureWrapper^ Measure()
+        {
+            ComplexMeasureWrapper^ cmwResult = gcnew ComplexMeasureWrapper();
+            cmwResult->GetInstance()->operator=(GetInstance()->Measure());
+            return cmwResult;
+        }
+        /**
+         * @brief returns raw double value  of digital float class
+         *
+         */
+        double RawValue()
+        {
+            double dResult = GetInstance()->Floating().RawValue();
+            return dResult;
+        }
+        /**
+         * @brief returns (rounded) double value  of digital float class
+         *
+         */
+        double Value()
+        {
+            double dResult = GetInstance()->Floating().Value();
+            return dResult;
+        }
+        //////////////////////////////////////
+        // measure functions: 
+        // scaling, normalizing, ...
+        //////////////////////////////////////
+        /**
+         * @brief simplifies complex measures (e.g. 10 * km / mm = 10 * 1000 / 1000 = 10)
+         *
+         */
+        void Simplify()
+        {
+            GetInstance()->Simplify();
+        }
+        /**
+         * @brief scales to complex measure of argument
+         *
+         * @param
+         */
+        void ScaleTo(FloatingMeasureWrapper^ fmw2Scale2)
+        {
+            GetInstance()->ScaleTo(*fmw2Scale2->GetInstance());
+        }
+        /**
+         * @brief scales to complex measure of argument
+         *
+         * @param
+         */
+        void ScaleTo(ComplexMeasureWrapper^ cmw2Scale2)
+        {
+            GetInstance()->ScaleTo(*cmw2Scale2->GetInstance());
+        }
+        /**
+         * @brief normalize to SI (if possible, i.e. no offset for recalc to SI necessary)
+         *
+         */
+        void Normalize()
+        {
+            GetInstance()->Normalize();
+        }
         /**
          * @brief prints the value, operator, and the premeasure and the base measure short labels
          *

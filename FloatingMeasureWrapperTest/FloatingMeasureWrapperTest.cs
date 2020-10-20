@@ -47,8 +47,17 @@ namespace FloatingMeasureWrapperTest
             fmw2 = new FloatingMeasureWrapper(30, km);
             fmw1 *= fmw2;
             Assert.IsTrue(fmw1 == new FloatingMeasureWrapper(20 * 30, km * fV * cV));
+            Assert.IsTrue(fmw2 == new FloatingMeasureWrapper(30, km));
 
-            // check fmw2 did not change
+            // multiplication by floating measure and value
+            fmw1 *= fmw2 * 10;
+            Assert.IsTrue(fmw1 == new FloatingMeasureWrapper(20 * 30 * 30 * 10, km * km * fV * cV));
+            Assert.IsTrue(fmw2 == new FloatingMeasureWrapper(30, km));
+
+            // multiplication by floating measure and complex mixture of measure and values 
+            fmw1 = fmw2 * km / h *2 / 3 * fV;
+            Assert.AreEqual(fmw1.PrintShort(), (new FloatingMeasureWrapper(30 *2 / 3, km * km / h * fV)).PrintShort());
+            Assert.IsTrue(fmw1 == new FloatingMeasureWrapper(30 * 2 / 3, km * km / h * fV));
             Assert.IsTrue(fmw2 == new FloatingMeasureWrapper(30, km));
 
         }
@@ -94,6 +103,12 @@ namespace FloatingMeasureWrapperTest
         public void Simplify()
         {
             FloatingMeasureWrapper fmw1 = new FloatingMeasureWrapper(10, fV/GV);
+            fmw1.Normalize();
+            Assert.IsTrue(fmw1 == new FloatingMeasureWrapper(10 * 1e-15 / 1e+9, V / V));
+
+
+            fmw1.Simplify();
+            Assert.IsTrue(fmw1 == new FloatingMeasureWrapper(10 * 1e-15 / 1e+9, cmIdent));
             
             
         }
