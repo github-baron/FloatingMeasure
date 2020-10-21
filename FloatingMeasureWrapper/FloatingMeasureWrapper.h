@@ -255,7 +255,7 @@ namespace FloatingMeasureCLI
             return one->GetInstance()->operator>(*(other->GetInstance()));
         }
         //////////////////////////////////////
-        // getter of measure and value
+        // getter of measure and value / raw value
         //////////////////////////////////////
         /**
          * @brief returns measure
@@ -290,6 +290,24 @@ namespace FloatingMeasureCLI
         // scaling, normalizing, ...
         //////////////////////////////////////
         /**
+         * @brief check compatibility
+         *
+         * @param Check4Compatibility: ComplexMeasureWrapper^
+         */
+        bool Compatible(ComplexMeasureWrapper^ Check4Compatibility)
+        {
+            return GetInstance()->Compatible(Check4Compatibility->GetInstance());
+        }
+        /**
+         * @brief check compatibility
+         *
+         * @param Check4Compatibility: FloatingMeasureWrapper^
+         */
+        bool Compatible(FloatingMeasureWrapper^ Check4Compatibility)
+        {
+            return GetInstance()->Compatible(*Check4Compatibility->GetInstance());
+        }
+        /**
          * @brief simplifies complex measures (e.g. 10 * km / mm = 10 * 1000 / 1000 = 10)
          *
          */
@@ -323,15 +341,10 @@ namespace FloatingMeasureCLI
         {
             GetInstance()->Normalize();
         }
-        /**
-         * @brief prints the value, operator, and the premeasure and the base measure short labels
-         *
-         * @return string
-         */
-        String^ PrintShort()
-        {
-            return gcnew String(GetInstance()->PrintShort().c_str());
-        }
+        //////////////////////////////////////
+        // value functions: 
+        // Precision , precision activation, ..
+        //////////////////////////////////////
         /**
          * @brief sets the precision of the floating measure
          *
@@ -349,7 +362,7 @@ namespace FloatingMeasureCLI
         FloatingMeasureWrapper^ Precision()
         {
             FloatingMeasureWrapper^ fmwResult = gcnew FloatingMeasureWrapper();
-            fmwResult->GetInstance()->operator=( GetInstance()->Precision() );
+            fmwResult->GetInstance()->operator=(GetInstance()->Precision());
             return fmwResult;
         }
         /**
@@ -369,6 +382,19 @@ namespace FloatingMeasureCLI
         bool PrecisionActive()
         {
             return GetInstance()->Floating().PrecisionActive();
+        }
+        /**
+         * @brief prints the value, operator, and the premeasure and the base measure short labels
+         *
+         * @return string
+         */
+         //////////////////////////////////////
+         // output functions: 
+         // printing , 
+         //////////////////////////////////////
+        String^ PrintShort()
+        {
+            return gcnew String(GetInstance()->PrintShort().c_str());
         }
     };
 

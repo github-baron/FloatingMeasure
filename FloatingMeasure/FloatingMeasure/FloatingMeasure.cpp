@@ -326,9 +326,20 @@ void CFloatingMeasure::Precision(const CFloatingMeasure& UserPrecision)
         // calculate the resolution in digits
         int nDigits = Floating().Precision();
         double dValueToDeriveDigitsFrom = fabs(pfmPrecision->Floating().RawValue());
+        double dEpsilon = 0.000000001;
         if( dValueToDeriveDigitsFrom > 0 )
-            nDigits = (int)(-log(dValueToDeriveDigitsFrom)/log(10.)+0.99999);
-        
+        {
+            // provide next higher resolution for first relevant digit of dValueToDeriveDigitsFrom being within 1 - 4.99999:
+            // nDigit = 1 for [0.05, 0.5[
+            // nDigit = 0 for [0.5, 5[
+            // nDigit = -1 for [5, 50[
+            if( dValueToDeriveDigitsFrom < 5)
+                // log10(dValueToDeriveDigitsFrom) <= 0
+                nDigits = (int)(-(log(dValueToDeriveDigitsFrom) - log(0.5)) /log(10.)+1-dEpsilon);
+            else
+                nDigits = (int)(-(log(dValueToDeriveDigitsFrom) - log(0.5)) / log(10.)-dEpsilon);
+        }
+
         // set to new precision
         dfFloating.Precision(nDigits);
     }
