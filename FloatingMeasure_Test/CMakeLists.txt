@@ -33,7 +33,7 @@ message("found cppunit includes " ${CPPUNIT_INCLUDE_DIRS})
 include_directories(../FloatingMeasure/ ${CPPUNIT_INCLUDE_DIRS})
 
 FIND_LIBRARY(CPPUNIT_LIBRARIES
-    NAMES cppunitd 
+    NAMES cppunit
     HINTS ${PC_CPPUNIT_LIBDIR}
 #    ${CMAKE_INSTALL_PREFIX}/lib
 #    ${CMAKE_INSTALL_PREFIX}/lib64

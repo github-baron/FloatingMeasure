@@ -114,6 +114,15 @@ CDigFloat& CDigFloat::operator*=(const CDigFloat& other)
 {
     
     // at first calculate the complete error and store it
+    // I) (a1 + e1) * (a2 + e2)
+    // where
+    // a1: this->Value(), e1: this->Error()
+    // a2: other.Value(), e2: other.Error()
+    // the error part is (I) - a1*a2
+    // --> etotal = a1*e2 + a2*e1 + e1*e2
+    // as e1 is always +- something: every single term can be positive
+    // for the calculation of the maximum --> always take the absolute value of each term
+    // --> max(etotal) = abs(a1*e2) + abs(a2*e1) + abs(e1*e2)
     dError = fabs(RawValue())*other.RawError() + fabs(other.RawValue())* RawError() + RawError() * other.RawError();
 
     // now we are ready to calculate the value
@@ -136,18 +145,14 @@ CDigFloat & CDigFloat::operator/=(const CDigFloat& other)
     // where
     // a1: this->Value(), e1: this->Error()
     // a2: other.Value(), e2: other.Error()
-    // reform I) / a2
-    // --> II) (a1/a2 + e1/a2) / (1 + e2/a2)
-    // assumption: 1 + e2/a2 ~ 1 --> 1/(1+e2/a2) ~ (1-e2/a2) (polynomial approximation according to Taylor)
-    // --> III) (a1/a2 + e1/a2)*(1 - e2/a2)
-    // --> IV) a1/a2 + e1/a2*(1 - e2/a2 - e2/a2)
-    // setting I) = a1/a2 + etotal
-    // yields:
-    // etotal = e1/a2*(1 - 2*e2/a2)
-    // we want to estimate the worst case: i.e. 2*e2/a2 > 0
-    // --> etotal = e1/a2*(1+abs(2*e2/a2)) = e1/a2 * ( 1 + 2*e2 / abs(a2))
-    dError = RawError()/other.RawValue()*(1+2*other.RawError()/fabs(other.RawValue()));
-    
+    // subtract a1/a2 from I)
+    // --> etotal = (a2*e1 - a1*e2) / (a2 * (a2 + e2) )
+    // as e1 is always +- something: every single term can be positive
+    // for the calculation of the maximum --> always take the absolute value of each term
+    // --> etotal = ( abs(a2*e1) + abs(a1*e2) ) / (abs(a2)*abs(a2-e2))
+    dError = (fabs( RawError()*other.RawValue()) + fabs(  RawValue()*other.RawError() )) / 
+                  ( fabs(other.RawValue()) * (fabs( other.RawValue()) - fabs(other.RawError()) ) );
+     
     // thats what we origianally wanted to calculate
     dValue /= other.RawValue();
     
@@ -272,9 +277,11 @@ string CDigFloat::RawPrint(const int UserPrecision,bool bWithError /*= true*/) c
 {
     
     ostringstream oss;
-    oss << fixed << setprecision(UserPrecision) << Value() ;
+    
+    // ostringstream cant handle negative precision
+    oss << fixed << setprecision((UserPrecision > 0 ) ? UserPrecision : 0 ) << Round2Precision(dValue, Precision());
     if ( bWithError)
-        oss << plmi << Error();
+        oss << plmi << RawError();
     return oss.str();
 }
 string CDigFloat::DebugOut()
@@ -286,7 +293,7 @@ string CDigFloat::DebugOut()
         << "precision active: " << (PrecisionActive() ? "true" : "false")  << endl 
         << "resolution = " << dPrecisionResolution << endl
         << "rounded value: " << setprecision(DF_RAW_PRINT_PRECISION) << Round2Precision(dValue,Precision()) << endl 
-        << "rounded error: " << setprecision(DF_RAW_PRINT_PRECISION) << Round2Precision(dError,Precision()) << endl ;
+        << "rounded error: " << setprecision(DF_RAW_PRINT_PRECISION) << Round2Precision(dError,Precision()) << endl;
         
     return oss.str();
 }
@@ -299,5 +306,89 @@ CDigFloat abs(const CDigFloat& DF)
 { 
     CDigFloat dfResult(DF); 
     dfResult.RawValue(fabs(DF.RawValue())); 
+    return dfResult;
+}
+
+CDigFloat log(const CDigFloat& DF, const CDigFloat& dfBase /*= 0*/)
+{ 
+    
+    CDigFloat dfResult;
+    
+    // invalid result for:
+    // DF < 0 --> log is not defined for negative argument
+    // dfBase < 0 --> log is not defined for negative bases
+    // dfBase == 1 --> there is only the infinite solution in case for DF == 1, otherwise there is no solution
+    //                 both cases cannot be provided as a single value
+    if( DF < 0 || dfBase < 0 ||  dfBase == 1)
+        return dfResult;
+    
+    // in case DF == 1 --> return zero
+    if( DF == 1 ) 
+    {
+        dfResult = 0;
+        return dfResult;
+    }
+        
+    
+    // initalize result by argument
+    dfResult = DF;
+    
+    // default divisor for log base is 1 --> i.e. natural logarithm
+    CDigFloat dfLogBaseDivisor(dfBase == 0 ? 1 : logl(dfBase.RawValue()));
+    
+    // calculate the error for calculating the natural logarithm:
+    // difference of the natural logarithm of:
+    // min = value - error 
+    // max = value + error
+    double dError;
+    // do it for base divisor: take the maximum error from:
+    // a) log calculation
+    // b) simply setting the base divisor to the value log(base)
+    if(dfBase.ValueMinLimit() > 0){
+        dError = logl(dfBase.ValueMaxLimit())-logl(dfBase.ValueMinLimit());
+        if(dfLogBaseDivisor.Error() < dError)
+            dfLogBaseDivisor.dError = dError;
+    }
+    
+    // Debug
+//     CDigFloat dfDummyBase(dfBase);
+//     cout << endl << "log arg: " << dfResult.DebugOut() << endl << "exp. :" << dfDummyBase.DebugOut()<< endl;
+//     
+//     cout << "dfLogBaseDivisor: " << dfLogBaseDivisor.DebugOut() ;
+    
+    // do the same for nat log of argument
+    // in case the min is < 0 --> Error = myNan
+    dfResult = logl(DF.RawValue());
+    dError = myNAN;
+    if(DF.ValueMinLimit() > 0){
+        dError = logl(DF.ValueMaxLimit())-logl(DF.ValueMinLimit());
+        if(dfResult.Error() < dError)
+            dfResult.dError = dError;
+    }
+    
+//     cout << "dfResult: " << dfResult.DebugOut() ;
+    // now turn to base: applying divisor
+    dfResult /= dfLogBaseDivisor;
+    
+    // do not forget to set error to nan in case it could not be calculated
+    if( isnan(dError) )
+        dfResult.dError = myNAN;
+    
+    return dfResult;
+}
+
+
+CDigFloat pow(const CDigFloat& dfBase, const CDigFloat& dfExp)
+{ 
+    CDigFloat dfResult;
+    dfResult.RawValue( pow(dfBase.RawValue(), dfExp.RawValue()));
+    
+    // calculate brute force the maximal error:
+    dfResult.dError = max(max (pow( dfBase.ValueMaxLimit(),dfExp.ValueMaxLimit()), pow(dfBase.ValueMaxLimit(), dfExp.ValueMinLimit())),
+                          max (pow( dfBase.ValueMinLimit(),dfExp.ValueMaxLimit()), pow(dfBase.ValueMinLimit(), dfExp.ValueMinLimit()))) -
+                      min(min (pow( dfBase.ValueMaxLimit(),dfExp.ValueMaxLimit()), pow(dfBase.ValueMaxLimit(), dfExp.ValueMinLimit())),
+                          min (pow( dfBase.ValueMinLimit(),dfExp.ValueMaxLimit()), pow(dfBase.ValueMinLimit(), dfExp.ValueMinLimit())));
+                    
+     
     return dfResult;
 }

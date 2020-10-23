@@ -165,6 +165,9 @@ public:
         cfTest2.PrecisionActive(true);
         CPPUNIT_ASSERT_MESSAGE( cfTest2.DebugOut(), cfTest2.Floating() == 312.34319978000 );
         CPPUNIT_ASSERT_MESSAGE( cfTest2.DebugOut(), cfTest2.Measure() == GV );
+        
+        // now check the limits:
+        // 5 dV --> 10 dV digits
     }
     void Valid()
     {

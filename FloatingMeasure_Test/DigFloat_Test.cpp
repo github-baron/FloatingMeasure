@@ -39,6 +39,12 @@ public:
     void tearDown() 
     {
     }
+   void Construction()
+    {
+        CDigFloat dfFac1(1);
+        CPPUNIT_ASSERT_MESSAGE( dfFac1.DebugOut(), dfFac1.RawValue() == 1 && dfFac1.RawError() == DoubleMachineEpsilon(1) );
+        
+    }
    void Precision()
     {
         
@@ -86,8 +92,12 @@ public:
     {
         // operator = double
         dfFac2 = 0.1;
+        CPPUNIT_ASSERT_MESSAGE( dfFac2.Print() , dfFac2 == 0.1);
+        CPPUNIT_ASSERT_MESSAGE( dfFac2.Print() , dfFac2.RawError() == DoubleMachineEpsilon(0.1));
+        
         CDigFloat dfFac3(10);
         CPPUNIT_ASSERT_MESSAGE( dfFac3.Print() , dfFac3 == 10);
+        CPPUNIT_ASSERT_MESSAGE( dfFac3.Print() , dfFac3.RawError() == DoubleMachineEpsilon(10));
         
         // ::Value(double)
         dfFac1.Value(101);
@@ -131,10 +141,23 @@ public:
         {   
             CPPUNIT_ASSERT_MESSAGE( "exp = " + to_string(iexp) + "\n" + dfFac1.Print() + "\n" + dfFac2.Print()+ "\n" + (dfFac1/dfFac2).Print(),
                                         (dfFac1/dfFac2) == 10 &&
-                                  (dfFac3 ).Error() < 0.004);
+                                  (dfFac1/dfFac2 ).Error() < 0.004);
             dfFac1 *=10;
             dfFac2 *=10;
             
+        }
+        
+        // check function log
+        // this is pretty constant and finishes at 307 times 
+        for(int iexp = 1; iexp < 100; iexp++)
+        {   
+            double dBase = 1.1;
+            dfFac1 = powl(dBase,iexp);
+
+            dfFac1 = log(dfFac1, dBase);
+            CPPUNIT_ASSERT_MESSAGE( "exponent = " + to_string(iexp) + "\ndeviation:" + CDigFloat(fabs(dfFac1.RawValue() - (double)iexp)).DebugOut() + "\nfrom raw value : " + to_string(dfFac1.RawValue()) + "\nand\nexponent: " + to_string((double)iexp )+ "\nlog result: " + dfFac1.DebugOut() , fabs(dfFac1.RawValue() - (double)iexp) <= dfFac1.RawError());
+            CPPUNIT_ASSERT_MESSAGE( "exponent = " + to_string(iexp) + "\nrelation Value / error:" + CDigFloat(fabs(dfFac1.RawError()/dfFac1.RawValue())).DebugOut() + "\nlog result: " + dfFac1.DebugOut(), fabs(dfFac1.RawError()/dfFac1.RawValue()) <= 0.00001);
+        
         }
     }
      

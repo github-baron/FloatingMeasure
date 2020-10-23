@@ -300,6 +300,12 @@ int main( int argc, char* argv[] )
     // add all tests of CDigFloat_Test
     ///////////////////////////////////////////////
     runner.addTest( new CppUnit::TestCaller<CDigFloat_Test> ( 
+                        "DigFloat: construction",
+                        &CDigFloat_Test::Construction,
+                        &DigFloatTest
+                        )
+                  );
+    runner.addTest( new CppUnit::TestCaller<CDigFloat_Test> ( 
                         "DigFloat: precision",
                         &CDigFloat_Test::Precision,
                         &DigFloatTest

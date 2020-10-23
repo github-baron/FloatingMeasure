@@ -31,6 +31,9 @@
 ///////////////////////////////////////////////////
 #include<Utils/Utils.h>
 
+// DEBUG 
+#include <iostream>
+
 ///////////////////////////////////////////////////
 // macros
 ///////////////////////////////////////////////////
@@ -57,7 +60,13 @@ FloatingMeasureDLL_API
 #endif
 CDigFloat
 {
+    ////////////////////////////////////////////////////
+    // friends
+    ///////////////////////////////////////////////////
     friend class CFloatingMeasure;
+    friend CDigFloat log(const CDigFloat& DF, const CDigFloat& dfBase );
+    friend CDigFloat pow(const CDigFloat& dfBase, const CDigFloat& dfExp);
+    
 public:
     
     ///////////////////////////////////////////////////
@@ -344,6 +353,18 @@ public:
     void RawValue(const double& other ) { dValue = other;}
     
     /**
+     * @brief getter for CDigFloat::dValue - CDigFloat::dError -  (protected: for internal use only)
+     * 
+     */
+    double ValueMinLimit() const {return dValue - dError;}
+
+    /**
+     * @brief getter for CDigFloat::dValue + CDigFloat::dError -  (protected: for internal use only)
+     * 
+     */
+    double ValueMaxLimit() const {return dValue + dError;}
+    
+    /**
      * @brief getter of CDigFloat::dError conditionally considering CDigFloat::nPrecision: <br>
      * see CDigFloat::PrecisionActive() and CDigFloat::Precision()
      * 
@@ -506,6 +527,14 @@ protected:
  * @return CDigFloat
  */
 CDigFloat abs(const CDigFloat& DF );
+/**
+ * @brief log: returns CDigFloat logarithm to user given base (default: natural logarithm with base euler number);
+ * 
+ * @param DF: CDigFloat
+ * @param dfBase: CDigFloat as base (optional)
+ * @return CDigFloat
+ */
+CDigFloat log(const CDigFloat& DF, const CDigFloat& dfBase = 0);
 
 
 
