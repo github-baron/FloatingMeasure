@@ -328,8 +328,13 @@ void CFloatingMeasure::Precision(const CFloatingMeasure& UserPrecision)
         // nDigit = 1 for resolution in [0.1, 1[
         // nDigit = 0 for resolution in [1, 10[
         // nDigit = -1 for resolution in [10, 100[
-        CDigFloat dfDigits = log(pfmPrecision->Floating(),10)*1. -1.;
-        int nDigits = (int)(dfDigits.Value()-dfDigits.RawError());
+        CDigFloat dfDigits = log(pfmPrecision->Floating(),10)*(-1.)+1.;
+        
+        // subtract 2* the error to be sure to fall below the next integer before casting to integer
+        // REM: if you subtract only once it might happen that the subtracted result will not be different from the original double.
+        //      This is due to numerical errors when using floating numbers. Subtracting twice the error will make
+        //      sure to hop over the gap.
+        int nDigits = (int)(dfDigits.RawValue()-2*dfDigits.RawError());
         
         // set to new precision
         dfFloating.Precision(nDigits);

@@ -152,6 +152,10 @@ public:
         CPPUNIT_ASSERT_MESSAGE( cfTest1.DebugOut(), cfTest1.Floating() == 0.220010 );
         CPPUNIT_ASSERT_MESSAGE( cfTest1.DebugOut(), cfTest1.Measure() == kV );
         
+        // check  for different precision : [0.1,1[ --> nDigits = 1        
+        cfTest1.Precision(0.99*mV);
+        CPPUNIT_ASSERT_MESSAGE( cfTest1.PrintShort(), cfTest1.PrintShort() == "0.2200100*kV" );
+        
         cfTest2 = 312.3432*GV;
         // 312.3432         GV - 
         //   0.000000220010 GV = 
@@ -167,7 +171,13 @@ public:
         CPPUNIT_ASSERT_MESSAGE( cfTest2.DebugOut(), cfTest2.Measure() == GV );
         
         // now check the limits:
-        // 5 dV --> 10 dV digits
+        // 0.9999 dV --> 0.1 dV digits
+        // 10 dV --> 10 dV digits
+        cfTest2.Precision(0.999999999*dV);
+        CPPUNIT_ASSERT_MESSAGE( cfTest2.DebugOut(), cfTest2.Floating() == 312.34319977999 );
+        cfTest2.Precision(1*dV);
+        CPPUNIT_ASSERT_MESSAGE( cfTest2.DebugOut(), cfTest2.Floating() == 312.34319978000 );
+        
     }
     void Valid()
     {

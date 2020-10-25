@@ -27,6 +27,9 @@
 
 #include<Measure/ComplexMeasure.h>
 
+// DEBUG
+#include <iostream>
+
 /**
  * @brief FloatingMeasure: represents a floating number with a complex measure (e.g. 10*m/s).
  * This class offers:

@@ -31,9 +31,6 @@
 ///////////////////////////////////////////////////
 #include<Utils/Utils.h>
 
-// DEBUG 
-#include <iostream>
-
 ///////////////////////////////////////////////////
 // macros
 ///////////////////////////////////////////////////
@@ -390,7 +387,7 @@ public:
      * 
      * @param UserPrecision: int, defining the resolution of CDigFloat::dValue
      */
-    void Precision(const int UserPrecision) { nPrecision = UserPrecision; dPrecisionResolution = pow(10,-UserPrecision);}
+    void Precision(const int UserPrecision) { nPrecision = UserPrecision; dPrecisionResolution = pow(10,-UserPrecision); PrecisionActive(true);}
     
     /**
      * @brief getter for bPrecisionActive

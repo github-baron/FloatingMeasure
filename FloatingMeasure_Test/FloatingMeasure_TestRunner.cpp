@@ -324,6 +324,18 @@ int main( int argc, char* argv[] )
                         )
                   );
     runner.addTest( new CppUnit::TestCaller<CDigFloat_Test> ( 
+                        "DigFloat: log function",
+                        &CDigFloat_Test::FunctionLog,
+                        &DigFloatTest
+                        )
+                  );
+    runner.addTest( new CppUnit::TestCaller<CDigFloat_Test> ( 
+                        "DigFloat: pow function",
+                        &CDigFloat_Test::FunctionPow,
+                        &DigFloatTest
+                        )
+                  );
+    runner.addTest( new CppUnit::TestCaller<CDigFloat_Test> ( 
                         "DigFloat: error propagation",
                         &CDigFloat_Test::ErrorPropagation,
                         &DigFloatTest

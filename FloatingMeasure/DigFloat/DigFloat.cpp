@@ -350,12 +350,6 @@ CDigFloat log(const CDigFloat& DF, const CDigFloat& dfBase /*= 0*/)
             dfLogBaseDivisor.dError = dError;
     }
     
-    // Debug
-//     CDigFloat dfDummyBase(dfBase);
-//     cout << endl << "log arg: " << dfResult.DebugOut() << endl << "exp. :" << dfDummyBase.DebugOut()<< endl;
-//     
-//     cout << "dfLogBaseDivisor: " << dfLogBaseDivisor.DebugOut() ;
-    
     // do the same for nat log of argument
     // in case the min is < 0 --> Error = myNan
     dfResult = logl(DF.RawValue());
@@ -366,7 +360,6 @@ CDigFloat log(const CDigFloat& DF, const CDigFloat& dfBase /*= 0*/)
             dfResult.dError = dError;
     }
     
-//     cout << "dfResult: " << dfResult.DebugOut() ;
     // now turn to base: applying divisor
     dfResult /= dfLogBaseDivisor;
     
