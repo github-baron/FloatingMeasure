@@ -357,7 +357,8 @@ protected:
      * 
      */
     void _Init();
-    void _Precision(const CFloatingMeasure* pOtherPrecision );
+    void _Precision(const CFloatingMeasure* pOtherPrecision);
+    void _ScalePrecision(const CComplexMeasure& other);
     /////////////////////////////////////////////////////
     // protected getter / setter
     /////////////////////////////////////////////////////

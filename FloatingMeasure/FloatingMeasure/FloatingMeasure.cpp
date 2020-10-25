@@ -265,22 +265,26 @@ void CFloatingMeasure::ScaleTo(const CComplexMeasure& other)
         
         // hand over the new measure
         cmMeasure = other;
-        
-        // leave now ... no further calculations needed
-        return;
-    }
-    
-    if(!Compatible(other))
-    {   
-        // invalidate content
-        _Init();
-    }
+    } 
     else
     {
-        cmMeasure.ScaleTo(other);
-        dfFloating *= cmMeasure.ReleaseExp10AndFactor();
+        // handle complex case:
+        // check compatibility
+        if (!Compatible(other))
+        {
+            // invalidate content
+            _Init();
+        }
+        else
+        {
+            cmMeasure.ScaleTo(other);
+            dfFloating *= cmMeasure.ReleaseExp10AndFactor();
+        }
     }
-
+    // scale precision .. if necessary: 
+    // REM: this is a recursive call
+    if (pfmPrecision != nullptr)
+        _ScalePrecision(other);
 }
 
 void CFloatingMeasure::ScaleTo(const CFloatingMeasure& other)
@@ -292,8 +296,9 @@ void CFloatingMeasure::ScaleTo(const CFloatingMeasure& other)
     }
     else
     {
-        cmMeasure.ScaleTo(other.Measure());
-        dfFloating *= cmMeasure.ReleaseExp10AndFactor();
+        // call other ScaleTo with CComplexMeasure& argument
+        ScaleTo(other.Measure());
+        
     }
     
 }
@@ -309,14 +314,20 @@ void CFloatingMeasure::Measure(const CComplexMeasure& other)
 void CFloatingMeasure::Precision(const CFloatingMeasure& UserPrecision)
 {
     // allocate if necessary
-    if( pfmPrecision == nullptr )
+    if (pfmPrecision == nullptr)
         pfmPrecision = new CFloatingMeasure();
-    
+
     // set to precision
     pfmPrecision->operator=(UserPrecision);
-    
+
     // ScaleTo actual measure
-    pfmPrecision->ScaleTo(Measure());
+    _ScalePrecision(Measure());
+
+}
+
+void CFloatingMeasure::_ScalePrecision(const CComplexMeasure& other)
+{
+    pfmPrecision->ScaleTo(other);
     
     // do the following only if the precision has a compatible measure
     // otherwise CFloatingMeasure::ScaleTo will reset *pfmPrecision to invalid values
@@ -328,8 +339,14 @@ void CFloatingMeasure::Precision(const CFloatingMeasure& UserPrecision)
         // nDigit = 1 for resolution in [0.1, 1[
         // nDigit = 0 for resolution in [1, 10[
         // nDigit = -1 for resolution in [10, 100[
-        CDigFloat dfDigits = log(pfmPrecision->Floating(),10)*(-1.)+1.;
+        CDigFloat dfDigits = log(pfmPrecision->Floating(), 10)*(-1.);
         
+        // for positive number or zero digits (i.e. precision < 10) add a digit
+        // for negative number of digits subtracting twice the error should be sufficient
+        // to achieve the desired number of digits
+        if (pfmPrecision->Floating() < 10)
+            dfDigits += 1.;
+
         // subtract 2* the error to be sure to fall below the next integer before casting to integer
         // REM: if you subtract only once it might happen that the subtracted result will not be different from the original double.
         //      This is due to numerical errors when using floating numbers. Subtracting twice the error will make
@@ -365,7 +382,6 @@ void CFloatingMeasure::_Precision(const CFloatingMeasure* pOtherPrecision)
     else
         Precision(*pOtherPrecision);
 }
-
 
 string CFloatingMeasure::PrintShort()
 {
