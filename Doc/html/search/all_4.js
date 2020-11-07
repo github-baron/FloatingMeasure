@@ -27,7 +27,7 @@ var searchData=
   ['dk',['dK',['../da/d3d/ComplexMeasureMacros_8h.html#ae6b8fc2ef5ed4c495f57337d59674298',1,'ComplexMeasureMacros.h']]],
   ['dm',['dm',['../da/d3d/ComplexMeasureMacros_8h.html#a79ff00c9948d4542f3a68764cbe7070d',1,'ComplexMeasureMacros.h']]],
   ['dohm',['dOhm',['../da/d3d/ComplexMeasureMacros_8h.html#a2c2809b5a7581f6136c0bc7fc5f1e762',1,'ComplexMeasureMacros.h']]],
-  ['doublemachineepsilon',['DoubleMachineEpsilon',['../df/d0c/Utils_8cpp.html#ae9dfc174daaf6261f167ccc069efea93',1,'DoubleMachineEpsilon(double dValue):&#160;Utils.cpp'],['../d9/ded/Utils_8h.html#adb19ed17b4e8ed0a8525c35fdc8872c3',1,'DoubleMachineEpsilon(double dValue):&#160;Utils.cpp']]],
+  ['doublemachineepsilon',['DoubleMachineEpsilon',['../df/d0c/Utils_8cpp.html#ae9dfc174daaf6261f167ccc069efea93',1,'DoubleMachineEpsilon(double dValue):&#160;Utils.cpp'],['../d9/ded/Utils_8h.html#ae9dfc174daaf6261f167ccc069efea93',1,'DoubleMachineEpsilon(double dValue):&#160;Utils.cpp']]],
   ['dprecisionresolution',['dPrecisionResolution',['../d3/d72/classCDigFloat.html#a7f9809fa0b25da57f5c8c18a02b7d1a7',1,'CDigFloat']]],
   ['ds',['ds',['../da/d3d/ComplexMeasureMacros_8h.html#a8a8ce01678edf9f4ecc1ea5382a1834d',1,'ComplexMeasureMacros.h']]],
   ['dsifactor',['dSIFactor',['../d4/dec/classCSimpleMeasure.html#a08be520f9d3a0e50cc63693f2fc607f2',1,'CSimpleMeasure']]],

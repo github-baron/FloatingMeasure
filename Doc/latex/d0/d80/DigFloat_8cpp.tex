@@ -1,8 +1,7 @@
 \hypertarget{DigFloat_8cpp}{}\section{Floating\+Measure/\+Dig\+Float/\+Dig\+Float.cpp File Reference}
 \label{DigFloat_8cpp}\index{Floating\+Measure/\+Dig\+Float/\+Dig\+Float.\+cpp@{Floating\+Measure/\+Dig\+Float/\+Dig\+Float.\+cpp}}
 {\ttfamily \#include \char`\"{}Dig\+Float.\+h\char`\"{}}\newline
-Include dependency graph for Dig\+Float.\+cpp\+:
-\nopagebreak
+Include dependency graph for Dig\+Float.\+cpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -13,7 +12,11 @@ Include dependency graph for Dig\+Float.\+cpp\+:
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classCDigFloat}{C\+Dig\+Float} \hyperlink{DigFloat_8cpp_a269b310d675c311c6e0894bf326593ae}{abs} (const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&DF)
-\begin{DoxyCompactList}\small\item\em abs\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} with absolute value; \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em abs\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} with absolute value; \end{DoxyCompactList}\item 
+\hyperlink{classCDigFloat}{C\+Dig\+Float} \hyperlink{DigFloat_8cpp_a25031604af1e6356848a9ac84c209903}{log} (const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&DF, const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&df\+Base)
+\begin{DoxyCompactList}\small\item\em log\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} logarithm to user given base (default\+: natural logarithm with base euler number); \end{DoxyCompactList}\item 
+\hyperlink{classCDigFloat}{C\+Dig\+Float} \hyperlink{DigFloat_8cpp_ac5877d13039d236858e1cb04351f0a86}{pow} (const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&df\+Base, const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&df\+Exp)
+\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
@@ -37,9 +40,51 @@ abs\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} with absolute value;
 \end{DoxyReturn}
 
 
-Definition at line 298 of file Dig\+Float.\+cpp.
+Definition at line 305 of file Dig\+Float.\+cpp.
 
 
 
-References abs(), and C\+Dig\+Float\+::\+Raw\+Value().
+References C\+Dig\+Float\+::\+Raw\+Value().
+
+\mbox{\Hypertarget{DigFloat_8cpp_a25031604af1e6356848a9ac84c209903}\label{DigFloat_8cpp_a25031604af1e6356848a9ac84c209903}} 
+\index{Dig\+Float.\+cpp@{Dig\+Float.\+cpp}!log@{log}}
+\index{log@{log}!Dig\+Float.\+cpp@{Dig\+Float.\+cpp}}
+\subsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily \hyperlink{classCDigFloat}{C\+Dig\+Float} log (\begin{DoxyParamCaption}\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{DF,  }\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{df\+Base = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+log\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} logarithm to user given base (default\+: natural logarithm with base euler number); 
+
+
+\begin{DoxyParams}{Parameters}
+{\em DF} & \hyperlink{classCDigFloat}{C\+Dig\+Float} \\
+\hline
+{\em df\+Base} & \hyperlink{classCDigFloat}{C\+Dig\+Float} as base (optional) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCDigFloat}{C\+Dig\+Float} 
+\end{DoxyReturn}
+
+
+Definition at line 312 of file Dig\+Float.\+cpp.
+
+
+
+References C\+Dig\+Float\+::d\+Error, C\+Dig\+Float\+::\+Error(), my\+N\+AN, C\+Dig\+Float\+::\+Raw\+Value(), C\+Dig\+Float\+::\+Value\+Max\+Limit(), and C\+Dig\+Float\+::\+Value\+Min\+Limit().
+
+\mbox{\Hypertarget{DigFloat_8cpp_ac5877d13039d236858e1cb04351f0a86}\label{DigFloat_8cpp_ac5877d13039d236858e1cb04351f0a86}} 
+\index{Dig\+Float.\+cpp@{Dig\+Float.\+cpp}!pow@{pow}}
+\index{pow@{pow}!Dig\+Float.\+cpp@{Dig\+Float.\+cpp}}
+\subsubsection{\texorpdfstring{pow()}{pow()}}
+{\footnotesize\ttfamily \hyperlink{classCDigFloat}{C\+Dig\+Float} pow (\begin{DoxyParamCaption}\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{df\+Base,  }\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{df\+Exp }\end{DoxyParamCaption})}
+
+
+
+Definition at line 374 of file Dig\+Float.\+cpp.
+
+
+
+References C\+Dig\+Float\+::d\+Error, min, C\+Dig\+Float\+::pow, C\+Dig\+Float\+::\+Raw\+Value(), C\+Dig\+Float\+::\+Value\+Max\+Limit(), and C\+Dig\+Float\+::\+Value\+Min\+Limit().
 

@@ -41,6 +41,9 @@ bool \hyperlink{classCSimpleMeasure_ac4c8b1c22393c6d9a6381f3d8dfdf3e4}{Valid} ()
  defined in \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre\+Measure} and \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Base\+Measure} \end{DoxyCompactList}\item 
 const string \hyperlink{classCSimpleMeasure_a1031ddc7887dce1a739f38abe03601da}{Debug\+Out} ()
 \begin{DoxyCompactList}\small\item\em prints all members as string for debugging. \end{DoxyCompactList}\item 
+bool \hyperlink{classCSimpleMeasure_a0879e6127b863b5dfe4943e6b91695d2}{Compatible} (const \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure} \&other)
+\begin{DoxyCompactList}\small\item\em check compatiblity with other \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure}\+:~\newline
+ compatibility is given if the C\+Simple\+Measure\+::e\+Base\+Measure have the same SI measure. \end{DoxyCompactList}\item 
 const double \hyperlink{classCSimpleMeasure_ad9c08324e46ef4eee5695e7ea1d00018}{S\+I\+Factor} (void)
 \begin{DoxyCompactList}\small\item\em getter of \hyperlink{classCSimpleMeasure_a08be520f9d3a0e50cc63693f2fc607f2}{C\+Simple\+Measure\+::d\+S\+I\+Factor} \end{DoxyCompactList}\item 
 const double \hyperlink{classCSimpleMeasure_a6e04ea2506105c069ae28650c5d69733}{S\+I\+Offset} (void)
@@ -125,7 +128,7 @@ Default constructor\+: calls \hyperlink{classCSimpleMeasure_ada8744ac5a824143904
 
 
 
-Definition at line 27 of file Simple\+Measure.\+cpp.
+Definition at line 28 of file Simple\+Measure.\+cpp.
 
 
 
@@ -148,7 +151,7 @@ Copy constructor\+: calls \hyperlink{classCSimpleMeasure_ada8744ac5a824143904a2e
 \end{DoxyParams}
 
 
-Definition at line 32 of file Simple\+Measure.\+cpp.
+Definition at line 33 of file Simple\+Measure.\+cpp.
 
 
 
@@ -171,7 +174,7 @@ Copy constructor\+: calls \hyperlink{classCSimpleMeasure_ada8744ac5a824143904a2e
 \end{DoxyParams}
 
 
-Definition at line 37 of file Simple\+Measure.\+cpp.
+Definition at line 38 of file Simple\+Measure.\+cpp.
 
 
 
@@ -189,7 +192,7 @@ Destructor.
 
 
 
-Definition at line 42 of file Simple\+Measure.\+cpp.
+Definition at line 43 of file Simple\+Measure.\+cpp.
 
 
 
@@ -210,7 +213,7 @@ sets \hyperlink{classCSimpleMeasure_a191dbfa4cc374946bf8a82111f827d92}{C\+Simple
 
 
 
-Definition at line 99 of file Simple\+Measure.\+cpp.
+Definition at line 100 of file Simple\+Measure.\+cpp.
 
 
 
@@ -231,7 +234,34 @@ e\+Base\+Measure\&
 \end{DoxyReturn}
 
 
-Definition at line 171 of file Simple\+Measure.\+h.
+Definition at line 184 of file Simple\+Measure.\+h.
+
+\mbox{\Hypertarget{classCSimpleMeasure_a0879e6127b863b5dfe4943e6b91695d2}\label{classCSimpleMeasure_a0879e6127b863b5dfe4943e6b91695d2}} 
+\index{C\+Simple\+Measure@{C\+Simple\+Measure}!Compatible@{Compatible}}
+\index{Compatible@{Compatible}!C\+Simple\+Measure@{C\+Simple\+Measure}}
+\subsubsection{\texorpdfstring{Compatible()}{Compatible()}}
+{\footnotesize\ttfamily bool C\+Simple\+Measure\+::\+Compatible (\begin{DoxyParamCaption}\item[{const \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+check compatiblity with other \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure}\+:~\newline
+ compatibility is given if the C\+Simple\+Measure\+::e\+Base\+Measure have the same SI measure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure} to check for compatibility \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+Definition at line 150 of file Simple\+Measure.\+h.
+
+
+
+References B\+A\+SE, and Base\+I\+D().
 
 \mbox{\Hypertarget{classCSimpleMeasure_a1031ddc7887dce1a739f38abe03601da}\label{classCSimpleMeasure_a1031ddc7887dce1a739f38abe03601da}} 
 \index{C\+Simple\+Measure@{C\+Simple\+Measure}!Debug\+Out@{Debug\+Out}}
@@ -248,7 +278,7 @@ const string
 \end{DoxyReturn}
 
 
-Definition at line 87 of file Simple\+Measure.\+cpp.
+Definition at line 88 of file Simple\+Measure.\+cpp.
 
 
 
@@ -269,7 +299,7 @@ const string\&
 \end{DoxyReturn}
 
 
-Definition at line 165 of file Simple\+Measure.\+h.
+Definition at line 178 of file Simple\+Measure.\+h.
 
 \mbox{\Hypertarget{classCSimpleMeasure_a157b4e0af2843d8fb5c369b92cfd7c1f}\label{classCSimpleMeasure_a157b4e0af2843d8fb5c369b92cfd7c1f}} 
 \index{C\+Simple\+Measure@{C\+Simple\+Measure}!operator"!=@{operator"!=}}
@@ -292,7 +322,7 @@ const bool
 \end{DoxyReturn}
 
 
-Definition at line 63 of file Simple\+Measure.\+cpp.
+Definition at line 64 of file Simple\+Measure.\+cpp.
 
 \mbox{\Hypertarget{classCSimpleMeasure_a8466a492481648fa96a734566f0d6ba5}\label{classCSimpleMeasure_a8466a492481648fa96a734566f0d6ba5}} 
 \index{C\+Simple\+Measure@{C\+Simple\+Measure}!operator=@{operator=}}
@@ -314,7 +344,7 @@ reference to this
 \end{DoxyReturn}
 
 
-Definition at line 48 of file Simple\+Measure.\+cpp.
+Definition at line 49 of file Simple\+Measure.\+cpp.
 
 
 
@@ -347,7 +377,7 @@ const bool
 \end{DoxyReturn}
 
 
-Definition at line 56 of file Simple\+Measure.\+cpp.
+Definition at line 57 of file Simple\+Measure.\+cpp.
 
 
 
@@ -368,7 +398,7 @@ e\+Pre\+Measure\&
 \end{DoxyReturn}
 
 
-Definition at line 177 of file Simple\+Measure.\+h.
+Definition at line 190 of file Simple\+Measure.\+h.
 
 \mbox{\Hypertarget{classCSimpleMeasure_a6945aa333dca5623482d38cd9a7e3225}\label{classCSimpleMeasure_a6945aa333dca5623482d38cd9a7e3225}} 
 \index{C\+Simple\+Measure@{C\+Simple\+Measure}!Set\+By\+ID@{Set\+By\+ID}}
@@ -398,7 +428,7 @@ sets the \hyperlink{classCSimpleMeasure_aa23ed9eec21adb9a97c90a424e7ee18a}{C\+Si
 \end{DoxyParams}
 
 
-Definition at line 68 of file Simple\+Measure.\+cpp.
+Definition at line 69 of file Simple\+Measure.\+cpp.
 
 
 
@@ -423,7 +453,7 @@ calls \hyperlink{classCSimpleMeasure_a6945aa333dca5623482d38cd9a7e3225}{C\+Simpl
 \end{DoxyParams}
 
 
-Definition at line 82 of file Simple\+Measure.\+cpp.
+Definition at line 83 of file Simple\+Measure.\+cpp.
 
 
 
@@ -448,7 +478,7 @@ calls \hyperlink{classCSimpleMeasure_a6945aa333dca5623482d38cd9a7e3225}{C\+Simpl
 \end{DoxyParams}
 
 
-Definition at line 78 of file Simple\+Measure.\+cpp.
+Definition at line 79 of file Simple\+Measure.\+cpp.
 
 
 
@@ -469,7 +499,7 @@ const string\&
 \end{DoxyReturn}
 
 
-Definition at line 159 of file Simple\+Measure.\+h.
+Definition at line 172 of file Simple\+Measure.\+h.
 
 \mbox{\Hypertarget{classCSimpleMeasure_ad9c08324e46ef4eee5695e7ea1d00018}\label{classCSimpleMeasure_ad9c08324e46ef4eee5695e7ea1d00018}} 
 \index{C\+Simple\+Measure@{C\+Simple\+Measure}!S\+I\+Factor@{S\+I\+Factor}}
@@ -486,7 +516,7 @@ const double
 \end{DoxyReturn}
 
 
-Definition at line 147 of file Simple\+Measure.\+h.
+Definition at line 160 of file Simple\+Measure.\+h.
 
 \mbox{\Hypertarget{classCSimpleMeasure_a6e04ea2506105c069ae28650c5d69733}\label{classCSimpleMeasure_a6e04ea2506105c069ae28650c5d69733}} 
 \index{C\+Simple\+Measure@{C\+Simple\+Measure}!S\+I\+Offset@{S\+I\+Offset}}
@@ -503,7 +533,7 @@ const double
 \end{DoxyReturn}
 
 
-Definition at line 153 of file Simple\+Measure.\+h.
+Definition at line 166 of file Simple\+Measure.\+h.
 
 \mbox{\Hypertarget{classCSimpleMeasure_ac4c8b1c22393c6d9a6381f3d8dfdf3e4}\label{classCSimpleMeasure_ac4c8b1c22393c6d9a6381f3d8dfdf3e4}} 
 \index{C\+Simple\+Measure@{C\+Simple\+Measure}!Valid@{Valid}}
@@ -521,7 +551,7 @@ bool, true in case the indices are valid
 \end{DoxyReturn}
 
 
-Definition at line 131 of file Simple\+Measure.\+h.
+Definition at line 135 of file Simple\+Measure.\+h.
 
 
 
@@ -538,7 +568,7 @@ References bm\+First, and pm\+First.
 
 
 
-Definition at line 42 of file Simple\+Measure.\+h.
+Definition at line 46 of file Simple\+Measure.\+h.
 
 \mbox{\Hypertarget{classCSimpleMeasure_a39437e1df05e59fd328fbf69e55b45fa}\label{classCSimpleMeasure_a39437e1df05e59fd328fbf69e55b45fa}} 
 \index{C\+Simple\+Measure@{C\+Simple\+Measure}!C\+Pre\+Measure@{C\+Pre\+Measure}}
@@ -548,7 +578,7 @@ Definition at line 42 of file Simple\+Measure.\+h.
 
 
 
-Definition at line 41 of file Simple\+Measure.\+h.
+Definition at line 45 of file Simple\+Measure.\+h.
 
 \mbox{\Hypertarget{classCSimpleMeasure_ac514d5155adc5a8f0ed981fdb4815491}\label{classCSimpleMeasure_ac514d5155adc5a8f0ed981fdb4815491}} 
 \index{C\+Simple\+Measure@{C\+Simple\+Measure}!C\+Singleton$<$ C\+Base\+Measure $>$@{C\+Singleton$<$ C\+Base\+Measure $>$}}
@@ -558,7 +588,7 @@ Definition at line 41 of file Simple\+Measure.\+h.
 
 
 
-Definition at line 44 of file Simple\+Measure.\+h.
+Definition at line 48 of file Simple\+Measure.\+h.
 
 \mbox{\Hypertarget{classCSimpleMeasure_acbeb06f43abf4b8c9a86136c2b7bfe5f}\label{classCSimpleMeasure_acbeb06f43abf4b8c9a86136c2b7bfe5f}} 
 \index{C\+Simple\+Measure@{C\+Simple\+Measure}!C\+Singleton$<$ C\+Pre\+Measure $>$@{C\+Singleton$<$ C\+Pre\+Measure $>$}}
@@ -568,7 +598,7 @@ Definition at line 44 of file Simple\+Measure.\+h.
 
 
 
-Definition at line 43 of file Simple\+Measure.\+h.
+Definition at line 47 of file Simple\+Measure.\+h.
 
 
 
@@ -592,7 +622,7 @@ index of type \hyperlink{BaseMeasure_8h_ac90e5164ccf1f0d648fba7e94b229a11}{e\+Ba
 \item \hyperlink{classCVectorHandle_a71bec0e385b9ca8e5ffa174b559da9f8}{C\+Base\+Measure\+::vstr\+Long} 
 \end{DoxyItemize}
 
-Definition at line 203 of file Simple\+Measure.\+h.
+Definition at line 216 of file Simple\+Measure.\+h.
 
 \mbox{\Hypertarget{classCSimpleMeasure_a08be520f9d3a0e50cc63693f2fc607f2}\label{classCSimpleMeasure_a08be520f9d3a0e50cc63693f2fc607f2}} 
 \index{C\+Simple\+Measure@{C\+Simple\+Measure}!d\+S\+I\+Factor@{d\+S\+I\+Factor}}
@@ -608,7 +638,7 @@ factor which must be applied this \hyperlink{classCSimpleMeasure}{C\+Simple\+Mea
 
 
 
-Definition at line 222 of file Simple\+Measure.\+h.
+Definition at line 235 of file Simple\+Measure.\+h.
 
 \mbox{\Hypertarget{classCSimpleMeasure_a27c1637c744a79856ee81869e2aa8890}\label{classCSimpleMeasure_a27c1637c744a79856ee81869e2aa8890}} 
 \index{C\+Simple\+Measure@{C\+Simple\+Measure}!d\+S\+I\+Offset@{d\+S\+I\+Offset}}
@@ -625,7 +655,7 @@ offset (SI measure) which must added to this \hyperlink{classCSimpleMeasure}{C\+
 
 
 
-Definition at line 231 of file Simple\+Measure.\+h.
+Definition at line 244 of file Simple\+Measure.\+h.
 
 \mbox{\Hypertarget{classCSimpleMeasure_aa23ed9eec21adb9a97c90a424e7ee18a}\label{classCSimpleMeasure_aa23ed9eec21adb9a97c90a424e7ee18a}} 
 \index{C\+Simple\+Measure@{C\+Simple\+Measure}!Pre\+Index@{Pre\+Index}}
@@ -646,7 +676,7 @@ index of type \hyperlink{PreMeasure_8h_a6c81167b8d4c2badde42f81cb7214620}{e\+Pre
 \item \hyperlink{classCVectorHandle_a71bec0e385b9ca8e5ffa174b559da9f8}{C\+Pre\+Measure\+::vstr\+Long} 
 \end{DoxyItemize}
 
-Definition at line 214 of file Simple\+Measure.\+h.
+Definition at line 227 of file Simple\+Measure.\+h.
 
 \mbox{\Hypertarget{classCSimpleMeasure_a5761fb46fb35ce577066ef1e7ec1ab2e}\label{classCSimpleMeasure_a5761fb46fb35ce577066ef1e7ec1ab2e}} 
 \index{C\+Simple\+Measure@{C\+Simple\+Measure}!str\+Long@{str\+Long}}
@@ -662,7 +692,7 @@ long label of this \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure}\+: ~\newl
 
 
 
-Definition at line 247 of file Simple\+Measure.\+h.
+Definition at line 260 of file Simple\+Measure.\+h.
 
 \mbox{\Hypertarget{classCSimpleMeasure_a39260e6516c163955c34dce6795292ad}\label{classCSimpleMeasure_a39260e6516c163955c34dce6795292ad}} 
 \index{C\+Simple\+Measure@{C\+Simple\+Measure}!str\+Short@{str\+Short}}
@@ -678,7 +708,7 @@ short label of this \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure}\+: ~\new
 
 
 
-Definition at line 239 of file Simple\+Measure.\+h.
+Definition at line 252 of file Simple\+Measure.\+h.
 
 
 

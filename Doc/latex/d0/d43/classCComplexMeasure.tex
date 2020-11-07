@@ -12,8 +12,7 @@
 
 
 
-Collaboration diagram for C\+Complex\+Measure\+:
-\nopagebreak
+Collaboration diagram for C\+Complex\+Measure\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -68,7 +67,7 @@ bool \hyperlink{classCComplexMeasure_a1b777eef864d0c7a959dbeee321e881d}{Valid} (
 \begin{DoxyCompactList}\small\item\em check for valid measures\+: if one invalid measure is found --$>$ everything is invalid \end{DoxyCompactList}\item 
 string \hyperlink{classCComplexMeasure_ab6a38e7259d7c27e735ff12fd711c5d5}{O\+P\+Short} ()
 \begin{DoxyCompactList}\small\item\em prints the short label of the \hyperlink{classCComplexMeasure_ae22369976a7e5570add11a4172dcf062}{C\+Complex\+Measure\+::op\+Enum} \end{DoxyCompactList}\item 
-string \hyperlink{classCComplexMeasure_aefe6745e32e203d0dd2b7a4e13504142}{Print\+All\+Short} ()
+string \hyperlink{classCComplexMeasure_a771c7c8e73b3c67803ee2c77d8a40187}{Short} ()
 \begin{DoxyCompactList}\small\item\em prints the premeasure and the base measure short labels \end{DoxyCompactList}\item 
 string \hyperlink{classCComplexMeasure_a83c00029eaad1c0c59fd1210108981dc}{Debug\+Out} ()
 \begin{DoxyCompactList}\small\item\em prints all members\+: can be applied for debugging purpose \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -280,7 +279,7 @@ helping function allocating the last p\+Measure\+Right, joining with given opera
 \end{DoxyParams}
 
 
-Definition at line 186 of file Complex\+Measure.\+cpp.
+Definition at line 201 of file Complex\+Measure.\+cpp.
 
 
 
@@ -309,7 +308,7 @@ internal function called by every function which extents \hyperlink{classCComple
 \end{DoxyParams}
 
 
-Definition at line 386 of file Complex\+Measure.\+cpp.
+Definition at line 407 of file Complex\+Measure.\+cpp.
 
 
 
@@ -327,7 +326,7 @@ this function must always called when two C\+Complex\+Measures are joined (e.\+g
 
 
 
-Definition at line 373 of file Complex\+Measure.\+cpp.
+Definition at line 394 of file Complex\+Measure.\+cpp.
 
 
 
@@ -350,7 +349,7 @@ collects p\+Measure\+Left with operands into m\+Op\+Meas --$>$ used for \hyperli
 \end{DoxyParams}
 
 
-Definition at line 602 of file Complex\+Measure.\+cpp.
+Definition at line 632 of file Complex\+Measure.\+cpp.
 
 
 
@@ -364,7 +363,7 @@ References \+\_\+\+Collect\+Left\+Sort\+By\+Op(), op\+Enum, and p\+Measure\+Righ
 
 
 
-Definition at line 174 of file Complex\+Measure.\+cpp.
+Definition at line 189 of file Complex\+Measure.\+cpp.
 
 
 
@@ -378,7 +377,7 @@ References C\+Simple\+Measure, df\+C\+M\+Factor, n\+C\+M\+Exp10, op\+Enum, op\+U
 
 
 
-Definition at line 208 of file Complex\+Measure.\+cpp.
+Definition at line 223 of file Complex\+Measure.\+cpp.
 
 
 
@@ -409,7 +408,7 @@ setting to SI measure can only be done for factors only. Any measure which must 
 \end{DoxyParams}
 
 
-Definition at line 250 of file Complex\+Measure.\+cpp.
+Definition at line 265 of file Complex\+Measure.\+cpp.
 
 
 
@@ -423,7 +422,7 @@ References \+\_\+\+Normalize(), B\+A\+SE, C\+Simple\+Measure\+::\+Base\+I\+D(), 
 
 
 
-Definition at line 536 of file Complex\+Measure.\+cpp.
+Definition at line 557 of file Complex\+Measure.\+cpp.
 
 
 
@@ -441,7 +440,7 @@ collects premeasure factor in n\+Exp10 and sets p\+Measure\+Left to (pm\+Ident, 
 
 
 
-Definition at line 590 of file Complex\+Measure.\+cpp.
+Definition at line 620 of file Complex\+Measure.\+cpp.
 
 
 
@@ -468,11 +467,11 @@ searches \hyperlink{classCSimpleMeasure}{C\+Simple\+Measure} of consecutive p\+M
 \end{DoxyParams}
 
 
-Definition at line 561 of file Complex\+Measure.\+cpp.
+Definition at line 585 of file Complex\+Measure.\+cpp.
 
 
 
-References \+\_\+\+Resolve\+Measure\+Left(), \+\_\+\+Search\+And\+Shorten\+Same\+S\+I\+Index(), B\+A\+SE, C\+Simple\+Measure\+::\+Base\+I\+D(), bm\+Number, op\+Enum, p\+Measure\+Left, p\+Measure\+Right, and C\+Simple\+Measure\+::\+S\+I\+Offset().
+References \+\_\+\+Resolve\+Measure\+Left(), \+\_\+\+Search\+And\+Shorten\+Same\+S\+I\+Index(), B\+A\+SE, C\+Simple\+Measure\+::\+Base\+I\+D(), bm\+Number, op\+Enum, p\+Measure\+Left, and p\+Measure\+Right.
 
 \mbox{\Hypertarget{classCComplexMeasure_ae66b48f40cc04866424ca5b7114d4adb}\label{classCComplexMeasure_ae66b48f40cc04866424ca5b7114d4adb}} 
 \index{C\+Complex\+Measure@{C\+Complex\+Measure}!\+\_\+\+Simplify@{\+\_\+\+Simplify}}
@@ -482,7 +481,7 @@ References \+\_\+\+Resolve\+Measure\+Left(), \+\_\+\+Search\+And\+Shorten\+Same\
 
 
 
-Definition at line 516 of file Complex\+Measure.\+cpp.
+Definition at line 537 of file Complex\+Measure.\+cpp.
 
 
 
@@ -505,7 +504,7 @@ recursive call of checking the p\+Measure\+Left measures being valid
 \end{DoxyParams}
 
 
-Definition at line 648 of file Complex\+Measure.\+cpp.
+Definition at line 678 of file Complex\+Measure.\+cpp.
 
 
 
@@ -526,7 +525,7 @@ e\+Pre\+Measure\&
 \end{DoxyReturn}
 
 
-Definition at line 181 of file Complex\+Measure.\+h.
+Definition at line 185 of file Complex\+Measure.\+h.
 
 
 
@@ -549,7 +548,7 @@ protected setter of n\+C\+M\+Exp10 ... for internal use only
 \end{DoxyParams}
 
 
-Definition at line 313 of file Complex\+Measure.\+h.
+Definition at line 317 of file Complex\+Measure.\+h.
 
 \mbox{\Hypertarget{classCComplexMeasure_acdcab22efa233ea1c0e607bf22028afd}\label{classCComplexMeasure_acdcab22efa233ea1c0e607bf22028afd}} 
 \index{C\+Complex\+Measure@{C\+Complex\+Measure}!C\+M\+Factor@{C\+M\+Factor}}
@@ -566,7 +565,7 @@ double\&
 \end{DoxyReturn}
 
 
-Definition at line 175 of file Complex\+Measure.\+h.
+Definition at line 179 of file Complex\+Measure.\+h.
 
 \mbox{\Hypertarget{classCComplexMeasure_abc97b2ed29224bb00a912a94933192a2}\label{classCComplexMeasure_abc97b2ed29224bb00a912a94933192a2}} 
 \index{C\+Complex\+Measure@{C\+Complex\+Measure}!C\+M\+Factor@{C\+M\+Factor}}
@@ -585,7 +584,7 @@ protected setter of df\+C\+M\+Factor ... for internal use only
 \end{DoxyParams}
 
 
-Definition at line 320 of file Complex\+Measure.\+h.
+Definition at line 324 of file Complex\+Measure.\+h.
 
 \mbox{\Hypertarget{classCComplexMeasure_aa807816cc8d410ff08e482c5e942a1a9}\label{classCComplexMeasure_aa807816cc8d410ff08e482c5e942a1a9}} 
 \index{C\+Complex\+Measure@{C\+Complex\+Measure}!Compatible@{Compatible}}
@@ -607,7 +606,7 @@ bool
 \end{DoxyReturn}
 
 
-Definition at line 151 of file Complex\+Measure.\+cpp.
+Definition at line 166 of file Complex\+Measure.\+cpp.
 
 
 
@@ -628,7 +627,7 @@ string
 \end{DoxyReturn}
 
 
-Definition at line 672 of file Complex\+Measure.\+cpp.
+Definition at line 702 of file Complex\+Measure.\+cpp.
 
 
 
@@ -646,7 +645,7 @@ sets all measures to SI and calculates S\+Ipremeasure and d\+S\+I\+Factor\+: cal
 
 
 
-Definition at line 235 of file Complex\+Measure.\+cpp.
+Definition at line 250 of file Complex\+Measure.\+cpp.
 
 
 
@@ -660,7 +659,7 @@ References \+\_\+\+Normalize().
 
 
 
-Definition at line 147 of file Complex\+Measure.\+cpp.
+Definition at line 162 of file Complex\+Measure.\+cpp.
 
 \mbox{\Hypertarget{classCComplexMeasure_afb04c59abf1f8ed44fe13d56df5d322c}\label{classCComplexMeasure_afb04c59abf1f8ed44fe13d56df5d322c}} 
 \index{C\+Complex\+Measure@{C\+Complex\+Measure}!operator$\ast$@{operator$\ast$}}
@@ -796,7 +795,7 @@ Definition at line 130 of file Complex\+Measure.\+cpp.
 
 
 
-References C\+Simple\+Measure\+::\+Base\+I\+D(), bm\+Number, C\+M\+Exp10(), C\+M\+Factor(), Normalize(), p\+Measure\+Left, p\+Measure\+Right, and Simplify().
+References C\+Simple\+Measure\+::\+Base\+I\+D(), bm\+Number, C\+M\+Exp10(), C\+M\+Factor(), Normalize(), p\+Measure\+Left, p\+Measure\+Right, Release\+Exp10\+And\+Factor(), and Simplify().
 
 \mbox{\Hypertarget{classCComplexMeasure_ab6a38e7259d7c27e735ff12fd711c5d5}\label{classCComplexMeasure_ab6a38e7259d7c27e735ff12fd711c5d5}} 
 \index{C\+Complex\+Measure@{C\+Complex\+Measure}!O\+P\+Short@{O\+P\+Short}}
@@ -813,32 +812,11 @@ string
 \end{DoxyReturn}
 
 
-Definition at line 202 of file Complex\+Measure.\+h.
+Definition at line 206 of file Complex\+Measure.\+h.
 
 
 
-References C\+Simple\+Measure\+::\+\_\+\+Init(), C\+Simple\+Measure\+::\+Debug\+Out(), and C\+Singleton$<$ Singleton\+Object $>$\+::instance().
-
-\mbox{\Hypertarget{classCComplexMeasure_aefe6745e32e203d0dd2b7a4e13504142}\label{classCComplexMeasure_aefe6745e32e203d0dd2b7a4e13504142}} 
-\index{C\+Complex\+Measure@{C\+Complex\+Measure}!Print\+All\+Short@{Print\+All\+Short}}
-\index{Print\+All\+Short@{Print\+All\+Short}!C\+Complex\+Measure@{C\+Complex\+Measure}}
-\subsubsection{\texorpdfstring{Print\+All\+Short()}{PrintAllShort()}}
-{\footnotesize\ttfamily string C\+Complex\+Measure\+::\+Print\+All\+Short (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-prints the premeasure and the base measure short labels 
-
-\begin{DoxyReturn}{Returns}
-string 
-\end{DoxyReturn}
-
-
-Definition at line 223 of file Complex\+Measure.\+cpp.
-
-
-
-References O\+P\+Short(), p\+Measure\+Left, p\+Measure\+Right, Print\+All\+Short(), and C\+Simple\+Measure\+::\+Short().
+References C\+Simple\+Measure\+::\+\_\+\+Init(), C\+Simple\+Measure\+::\+Debug\+Out(), C\+Singleton$<$ Singleton\+Object $>$\+::instance(), and C\+Simple\+Measure\+::\+Short().
 
 \mbox{\Hypertarget{classCComplexMeasure_a2c4086ab6b664259b820f554f647cdbd}\label{classCComplexMeasure_a2c4086ab6b664259b820f554f647cdbd}} 
 \index{C\+Complex\+Measure@{C\+Complex\+Measure}!Release\+Exp10\+And\+Factor@{Release\+Exp10\+And\+Factor}}
@@ -855,11 +833,11 @@ const double
 \end{DoxyReturn}
 
 
-Definition at line 660 of file Complex\+Measure.\+cpp.
+Definition at line 690 of file Complex\+Measure.\+cpp.
 
 
 
-References C\+M\+Exp10(), C\+M\+Factor(), and C\+Dig\+Float\+::\+Raw\+Value().
+References C\+M\+Exp10(), C\+M\+Factor(), pow(), and C\+Dig\+Float\+::\+Raw\+Value().
 
 \mbox{\Hypertarget{classCComplexMeasure_a999dd5e5bb71a6bc548f959879b4e12f}\label{classCComplexMeasure_a999dd5e5bb71a6bc548f959879b4e12f}} 
 \index{C\+Complex\+Measure@{C\+Complex\+Measure}!Scale\+To@{Scale\+To}}
@@ -878,7 +856,7 @@ scale to other compatible \hyperlink{classCComplexMeasure}{C\+Complex\+Measure}
 \end{DoxyParams}
 
 
-Definition at line 614 of file Complex\+Measure.\+cpp.
+Definition at line 644 of file Complex\+Measure.\+cpp.
 
 
 
@@ -903,11 +881,32 @@ sets the p\+Measure\+Left calling \hyperlink{classCSimpleMeasure_a6945aa333dca56
 \end{DoxyParams}
 
 
-Definition at line 165 of file Complex\+Measure.\+cpp.
+Definition at line 180 of file Complex\+Measure.\+cpp.
 
 
 
 References \+\_\+\+Init(), p\+Measure\+Left, p\+Measure\+Right, Secure\+Delete\+Object\+Pointer(), and C\+Simple\+Measure\+::\+Set\+By\+I\+D().
+
+\mbox{\Hypertarget{classCComplexMeasure_a771c7c8e73b3c67803ee2c77d8a40187}\label{classCComplexMeasure_a771c7c8e73b3c67803ee2c77d8a40187}} 
+\index{C\+Complex\+Measure@{C\+Complex\+Measure}!Short@{Short}}
+\index{Short@{Short}!C\+Complex\+Measure@{C\+Complex\+Measure}}
+\subsubsection{\texorpdfstring{Short()}{Short()}}
+{\footnotesize\ttfamily string C\+Complex\+Measure\+::\+Short (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+prints the premeasure and the base measure short labels 
+
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line 238 of file Complex\+Measure.\+cpp.
+
+
+
+References O\+P\+Short(), p\+Measure\+Left, p\+Measure\+Right, C\+Simple\+Measure\+::\+Short(), and Short().
 
 \mbox{\Hypertarget{classCComplexMeasure_addb4e69033f2c32fb3bf4a3aef5e1470}\label{classCComplexMeasure_addb4e69033f2c32fb3bf4a3aef5e1470}} 
 \index{C\+Complex\+Measure@{C\+Complex\+Measure}!Simplify@{Simplify}}
@@ -921,7 +920,7 @@ simplifies complex measure (e.\+g. uV / mV $\ast$ A = A (exp10 += -\/3)) the fac
 
 
 
-Definition at line 480 of file Complex\+Measure.\+cpp.
+Definition at line 501 of file Complex\+Measure.\+cpp.
 
 
 
@@ -942,7 +941,7 @@ bool
 \end{DoxyReturn}
 
 
-Definition at line 636 of file Complex\+Measure.\+cpp.
+Definition at line 666 of file Complex\+Measure.\+cpp.
 
 
 
@@ -959,7 +958,7 @@ References \+\_\+\+Valid(), p\+Measure\+Left, p\+Measure\+Right, and C\+Simple\+
 
 
 
-Definition at line 52 of file Complex\+Measure.\+h.
+Definition at line 56 of file Complex\+Measure.\+h.
 
 \mbox{\Hypertarget{classCComplexMeasure_ac06bbec937fbb103ef6191c80bfa5880}\label{classCComplexMeasure_ac06bbec937fbb103ef6191c80bfa5880}} 
 \index{C\+Complex\+Measure@{C\+Complex\+Measure}!C\+Simple\+Measure@{C\+Simple\+Measure}}
@@ -969,7 +968,7 @@ Definition at line 52 of file Complex\+Measure.\+h.
 
 
 
-Definition at line 53 of file Complex\+Measure.\+h.
+Definition at line 57 of file Complex\+Measure.\+h.
 
 
 
@@ -986,7 +985,7 @@ the factor value which will be set e.\+g. for normalization or simplification co
 
 
 
-Definition at line 355 of file Complex\+Measure.\+h.
+Definition at line 359 of file Complex\+Measure.\+h.
 
 \mbox{\Hypertarget{classCComplexMeasure_a52cfbd26747c0497cfe97c56f2ff38ea}\label{classCComplexMeasure_a52cfbd26747c0497cfe97c56f2ff38ea}} 
 \index{C\+Complex\+Measure@{C\+Complex\+Measure}!n\+C\+M\+Exp10@{n\+C\+M\+Exp10}}
@@ -1000,7 +999,7 @@ the epx10 which will be set e.\+g. for normalization or simplification collectin
 
 
 
-Definition at line 349 of file Complex\+Measure.\+h.
+Definition at line 353 of file Complex\+Measure.\+h.
 
 \mbox{\Hypertarget{classCComplexMeasure_ae22369976a7e5570add11a4172dcf062}\label{classCComplexMeasure_ae22369976a7e5570add11a4172dcf062}} 
 \index{C\+Complex\+Measure@{C\+Complex\+Measure}!op\+Enum@{op\+Enum}}
@@ -1014,7 +1013,7 @@ index of the corresponding operator of p\+Measure\+Left and p\+Measure\+Right
 
 
 
-Definition at line 332 of file Complex\+Measure.\+h.
+Definition at line 336 of file Complex\+Measure.\+h.
 
 \mbox{\Hypertarget{classCComplexMeasure_a4d68f86891a036df81f5b1a344c36f27}\label{classCComplexMeasure_a4d68f86891a036df81f5b1a344c36f27}} 
 \index{C\+Complex\+Measure@{C\+Complex\+Measure}!p\+Measure\+Left@{p\+Measure\+Left}}
@@ -1028,7 +1027,7 @@ left operand is a Simple\+Measure representant
 
 
 
-Definition at line 343 of file Complex\+Measure.\+h.
+Definition at line 347 of file Complex\+Measure.\+h.
 
 \mbox{\Hypertarget{classCComplexMeasure_abbafc4b16676d223ed34860b8ece1b6b}\label{classCComplexMeasure_abbafc4b16676d223ed34860b8ece1b6b}} 
 \index{C\+Complex\+Measure@{C\+Complex\+Measure}!p\+Measure\+Right@{p\+Measure\+Right}}
@@ -1042,7 +1041,7 @@ right operand as complex measure (pointing to next p\+Measure\+Left, operator, a
 
 
 
-Definition at line 338 of file Complex\+Measure.\+h.
+Definition at line 342 of file Complex\+Measure.\+h.
 
 
 

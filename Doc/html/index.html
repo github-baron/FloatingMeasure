@@ -30,6 +30,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">FloatingMeasure
    </div>
+   <div id="projectbrief">class API for phyiscal calculations</div>
   </td>
  </tr>
  </tbody>
@@ -83,7 +84,37 @@ $(document).ready(function(){initNavTree('index.html','');});
 <div class="title">FloatingMeasure Documentation</div>  </div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<div class="textblock"><p>FloatingMeasure is a class API for physical calculations. It offers:</p><ul>
+<li>definition of a set of phyisical measures<ul>
+<li>simple handling by separating the definition of a measure into its base-measure (<a class="el" href="dd/d8d/BaseMeasure_8h.html#ac90e5164ccf1f0d648fba7e94b229a11" title="enum for indexing the vectors of CBaseMeasure ">eBaseMeasure</a>) and its pre-measure (<a class="el" href="d8/d8a/PreMeasure_8h.html#a6c81167b8d4c2badde42f81cb7214620" title="enum for indexing the vectors of CPreMeasure ">ePreMeasure</a>):<br />
+ new base / pre- measures can easily be added and all the modifications defined by the pre- / base- measures come for free</li>
+</ul>
+</li>
+<li>support of complex measures (see <a class="el" href="d0/d43/classCComplexMeasure.html" title="CComplexMeasure: represents a list of measures (i.e. CSimpleMeasure) chained by operators * and /   T...">CComplexMeasure</a>):<br />
+<ul>
+<li>construction by concatenation of any defined measures by means of multiplication (operator "*") and division (operator "/").</li>
+<li>simplification</li>
+<li>scaling to any compatible complex measure</li>
+</ul>
+</li>
+<li>handling of numerical errors due to the incomplete digital representation of floating numbers (<a class="el" href="d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a>):<ul>
+<li>comparison operators considering the numerical error</li>
+<li>all kinds of mathematical operations</li>
+<li>mathematical functions pow / log</li>
+<li>calculating the numerical error propagation for mathematical operations / functions</li>
+<li>handling of user given resolution</li>
+</ul>
+</li>
+<li>support for the combination of floating numbers and complex measures (<a class="el" href="df/d21/classCFloatingMeasure.html" title="FloatingMeasure: represents a floating number with a complex measure (e.g. 10*m/s). This class offers: ">CFloatingMeasure</a>) for physical calculations<ul>
+<li>all kinds of mathematical operations</li>
+<li>handling of user given resolution</li>
+<li>simplification of complex measures</li>
+<li>scaling to compatible (complex) measures</li>
+<li>printing </li>
+</ul>
+</li>
+</ul>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

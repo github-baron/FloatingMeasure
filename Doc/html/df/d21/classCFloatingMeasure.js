@@ -19,6 +19,7 @@ var classCFloatingMeasure =
     [ "operator*", "df/d21/classCFloatingMeasure.html#a31cedd2120675c56064e12556432f550", null ],
     [ "operator*=", "df/d21/classCFloatingMeasure.html#a2df7738d5c017a02c1f11c40809cac96", null ],
     [ "operator*=", "df/d21/classCFloatingMeasure.html#a051879dde322060eb7695667dd38ab13", null ],
+    [ "operator*=", "df/d21/classCFloatingMeasure.html#a076fc9e5cb2f4cf11932e520e0e1f20c", null ],
     [ "operator+", "df/d21/classCFloatingMeasure.html#a26560fcb587eafe8966541159eec57de", null ],
     [ "operator+=", "df/d21/classCFloatingMeasure.html#a40f0ec4cb155856efed8db28c7c8fa3e", null ],
     [ "operator-", "df/d21/classCFloatingMeasure.html#ad29973f56a38dda22fc9d66a16b13860", null ],

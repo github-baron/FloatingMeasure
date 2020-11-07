@@ -30,6 +30,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">FloatingMeasure
    </div>
+   <div id="projectbrief">class API for phyiscal calculations</div>
   </td>
  </tr>
  </tbody>
@@ -103,6 +104,11 @@ Functions</h2></td></tr>
 <tr class="memitem:a269b310d675c311c6e0894bf326593ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d80/DigFloat_8cpp.html#a269b310d675c311c6e0894bf326593ae">abs</a> (const <a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a> &amp;DF)</td></tr>
 <tr class="memdesc:a269b310d675c311c6e0894bf326593ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">abs: returns <a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> with absolute value;  <a href="#a269b310d675c311c6e0894bf326593ae">More...</a><br /></td></tr>
 <tr class="separator:a269b310d675c311c6e0894bf326593ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25031604af1e6356848a9ac84c209903"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d80/DigFloat_8cpp.html#a25031604af1e6356848a9ac84c209903">log</a> (const <a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a> &amp;DF, const <a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a> &amp;dfBase)</td></tr>
+<tr class="memdesc:a25031604af1e6356848a9ac84c209903"><td class="mdescLeft">&#160;</td><td class="mdescRight">log: returns <a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> logarithm to user given base (default: natural logarithm with base euler number);  <a href="#a25031604af1e6356848a9ac84c209903">More...</a><br /></td></tr>
+<tr class="separator:a25031604af1e6356848a9ac84c209903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5877d13039d236858e1cb04351f0a86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d80/DigFloat_8cpp.html#ac5877d13039d236858e1cb04351f0a86">pow</a> (const <a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a> &amp;dfBase, const <a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a> &amp;dfExp)</td></tr>
+<tr class="separator:ac5877d13039d236858e1cb04351f0a86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a269b310d675c311c6e0894bf326593ae"></a>
@@ -130,9 +136,83 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00298">298</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00305">305</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00298">abs()</a>, and <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00333">CDigFloat::RawValue()</a>.</p>
+<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00343">CDigFloat::RawValue()</a>.</p>
+
+</div>
+</div>
+<a id="a25031604af1e6356848a9ac84c209903"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25031604af1e6356848a9ac84c209903">&#9670;&nbsp;</a></span>log()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a> log </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a> &amp;&#160;</td>
+          <td class="paramname"><em>DF</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a> &amp;&#160;</td>
+          <td class="paramname"><em>dfBase</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>log: returns <a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> logarithm to user given base (default: natural logarithm with base euler number); </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DF</td><td><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> </td></tr>
+    <tr><td class="paramname">dfBase</td><td><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> as base (optional) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00312">312</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00481">CDigFloat::dError</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00370">CDigFloat::Error()</a>, <a class="el" href="../../d9/ded/Utils_8h_source.html#l00060">myNAN</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00343">CDigFloat::RawValue()</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00362">CDigFloat::ValueMaxLimit()</a>, and <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00356">CDigFloat::ValueMinLimit()</a>.</p>
+
+</div>
+</div>
+<a id="ac5877d13039d236858e1cb04351f0a86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5877d13039d236858e1cb04351f0a86">&#9670;&nbsp;</a></span>pow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a> pow </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a> &amp;&#160;</td>
+          <td class="paramname"><em>dfBase</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a> &amp;&#160;</td>
+          <td class="paramname"><em>dfExp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00374">374</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00481">CDigFloat::dError</a>, <a class="el" href="../../da/d3d/ComplexMeasureMacros_8h_source.html#l00090">min</a>, <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00374">CDigFloat::pow</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00343">CDigFloat::RawValue()</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00362">CDigFloat::ValueMaxLimit()</a>, and <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00356">CDigFloat::ValueMinLimit()</a>.</p>
 
 </div>
 </div>

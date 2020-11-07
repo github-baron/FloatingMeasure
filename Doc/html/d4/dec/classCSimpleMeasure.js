@@ -6,6 +6,7 @@ var classCSimpleMeasure =
     [ "~CSimpleMeasure", "d4/dec/classCSimpleMeasure.html#a6a691614fc884c34c9f6ad36c670587b", null ],
     [ "_Init", "d4/dec/classCSimpleMeasure.html#ada8744ac5a824143904a2ecaef2b0b70", null ],
     [ "BaseID", "d4/dec/classCSimpleMeasure.html#a8b523b4264aed1ccae15fd39cc7e31f4", null ],
+    [ "Compatible", "d4/dec/classCSimpleMeasure.html#a0879e6127b863b5dfe4943e6b91695d2", null ],
     [ "DebugOut", "d4/dec/classCSimpleMeasure.html#a1031ddc7887dce1a739f38abe03601da", null ],
     [ "Long", "d4/dec/classCSimpleMeasure.html#a62d318d474f4feb9b25e113f47dd45c6", null ],
     [ "operator!=", "d4/dec/classCSimpleMeasure.html#a157b4e0af2843d8fb5c369b92cfd7c1f", null ],

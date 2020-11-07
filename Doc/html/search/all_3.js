@@ -19,7 +19,7 @@ var searchData=
   ['cmident',['cmIdent',['../da/d3d/ComplexMeasureMacros_8h.html#abc4625cc1df33feffc4026bc77ac0ff2',1,'ComplexMeasureMacros.h']]],
   ['cmmeasure',['cmMeasure',['../df/d21/classCFloatingMeasure.html#a3a23946016d1b7f41a1ecf05f4d5d5c6',1,'CFloatingMeasure']]],
   ['cohm',['cOhm',['../da/d3d/ComplexMeasureMacros_8h.html#ae5b4d6f5f717c09696e9aa0418560b75',1,'ComplexMeasureMacros.h']]],
-  ['compatible',['Compatible',['../df/d21/classCFloatingMeasure.html#ae69672971857cf047c5bc7ab4b631b6c',1,'CFloatingMeasure::Compatible(const CFloatingMeasure &amp;other)'],['../df/d21/classCFloatingMeasure.html#a5cf69c287abe4e2f65242e97093f7595',1,'CFloatingMeasure::Compatible(const CComplexMeasure &amp;other)'],['../d0/d43/classCComplexMeasure.html#aa807816cc8d410ff08e482c5e942a1a9',1,'CComplexMeasure::Compatible()']]],
+  ['compatible',['Compatible',['../df/d21/classCFloatingMeasure.html#ae69672971857cf047c5bc7ab4b631b6c',1,'CFloatingMeasure::Compatible(const CFloatingMeasure &amp;other)'],['../df/d21/classCFloatingMeasure.html#a5cf69c287abe4e2f65242e97093f7595',1,'CFloatingMeasure::Compatible(const CComplexMeasure &amp;other)'],['../d0/d43/classCComplexMeasure.html#aa807816cc8d410ff08e482c5e942a1a9',1,'CComplexMeasure::Compatible()'],['../d4/dec/classCSimpleMeasure.html#a0879e6127b863b5dfe4943e6b91695d2',1,'CSimpleMeasure::Compatible()']]],
   ['complexmeasure_2ecpp',['ComplexMeasure.cpp',['../d6/da5/ComplexMeasure_8cpp.html',1,'']]],
   ['complexmeasure_2eh',['ComplexMeasure.h',['../df/d43/ComplexMeasure_8h.html',1,'']]],
   ['complexmeasuremacros_2eh',['ComplexMeasureMacros.h',['../da/d3d/ComplexMeasureMacros_8h.html',1,'']]],

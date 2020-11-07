@@ -13,13 +13,13 @@ var Utils_8h =
     [ "UNKNOWN_LONG", "d9/ded/Utils_8h.html#a5c6964ba7806e840a8a24e21191727a3", null ],
     [ "UNKNOWN_SHORT", "d9/ded/Utils_8h.html#a8b8d3b6ed23a610665d7e00cb4397680", null ],
     [ "UNKNOWN_VALUE", "d9/ded/Utils_8h.html#a0488bc30cccd5b3304bf0936b5af486b", null ],
-    [ "Bool2String", "d9/ded/Utils_8h.html#ab78ffa949645ca0f0d0e2d3e9520ef29", null ],
-    [ "DoubleMachineEpsilon", "d9/ded/Utils_8h.html#adb19ed17b4e8ed0a8525c35fdc8872c3", null ],
+    [ "Bool2String", "d9/ded/Utils_8h.html#a78c380ff595f4574b2bb6fa68f15e410", null ],
+    [ "DoubleMachineEpsilon", "d9/ded/Utils_8h.html#ae9dfc174daaf6261f167ccc069efea93", null ],
     [ "FindElementInVectorGetIndex", "d9/ded/Utils_8h.html#aef4e401709c029dcd6fb5ee8a858bdf6", null ],
     [ "FindElementInVectorGetIndex", "d9/ded/Utils_8h.html#a10f8b0557cff0575f9b545ad76234fcd", null ],
     [ "GetElementFromVectorByIndex", "d9/ded/Utils_8h.html#a7042c83d0f87835f7fdb87b8d3e1de40", null ],
     [ "GetElementFromVectorByIndex", "d9/ded/Utils_8h.html#a5dcd880b1990847494e1cfd17b0a0dad", null ],
-    [ "Round2Precision", "d9/ded/Utils_8h.html#a343a017d0c1a53ec463a5fa243cf50d0", null ],
+    [ "Round2Precision", "d9/ded/Utils_8h.html#a7dd752b594724a3517f92d86ba0cd39e", null ],
     [ "SecureDeleteObjectPointer", "d9/ded/Utils_8h.html#ab3514a1d7de1960b4685ce4eeefce78e", null ],
     [ "SecureDeleteVectorPointer", "d9/ded/Utils_8h.html#aa550c859c03fa28b9b63b7070e53505d", null ]
 ];

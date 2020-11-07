@@ -30,6 +30,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">FloatingMeasure
    </div>
+   <div id="projectbrief">class API for phyiscal calculations</div>
   </td>
  </tr>
  </tbody>
@@ -138,6 +139,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1031ddc7887dce1a739f38abe03601da"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classCSimpleMeasure.html#a1031ddc7887dce1a739f38abe03601da">DebugOut</a> ()</td></tr>
 <tr class="memdesc:a1031ddc7887dce1a739f38abe03601da"><td class="mdescLeft">&#160;</td><td class="mdescRight">prints all members as string for debugging.  <a href="#a1031ddc7887dce1a739f38abe03601da">More...</a><br /></td></tr>
 <tr class="separator:a1031ddc7887dce1a739f38abe03601da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0879e6127b863b5dfe4943e6b91695d2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classCSimpleMeasure.html#a0879e6127b863b5dfe4943e6b91695d2">Compatible</a> (const <a class="el" href="../../d4/dec/classCSimpleMeasure.html">CSimpleMeasure</a> &amp;other)</td></tr>
+<tr class="memdesc:a0879e6127b863b5dfe4943e6b91695d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">check compatiblity with other <a class="el" href="../../d4/dec/classCSimpleMeasure.html" title="CSimpleMeasure: represents a pre measure combined with a base measure like &quot;mV&quot;.  This class offers: ...">CSimpleMeasure</a>:<br />
+ compatibility is given if the CSimpleMeasure::eBaseMeasure have the same SI measure.  <a href="#a0879e6127b863b5dfe4943e6b91695d2">More...</a><br /></td></tr>
+<tr class="separator:a0879e6127b863b5dfe4943e6b91695d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9c08324e46ef4eee5695e7ea1d00018"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dec/classCSimpleMeasure.html#ad9c08324e46ef4eee5695e7ea1d00018">SIFactor</a> (void)</td></tr>
 <tr class="memdesc:ad9c08324e46ef4eee5695e7ea1d00018"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter of <a class="el" href="../../d4/dec/classCSimpleMeasure.html#a08be520f9d3a0e50cc63693f2fc607f2" title="factor which must be applied this CSimpleMeasure to achieve SI measure (e.g. mV : SIFactor = 1000)...">CSimpleMeasure::dSIFactor</a>  <a href="#ad9c08324e46ef4eee5695e7ea1d00018">More...</a><br /></td></tr>
 <tr class="separator:ad9c08324e46ef4eee5695e7ea1d00018"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -234,9 +239,9 @@ Friends</h2></td></tr>
 
 <p>Default constructor: calls <a class="el" href="../../d4/dec/classCSimpleMeasure.html#ada8744ac5a824143904a2ecaef2b0b70" title="sets CSimpleMeasure::BaseIndex to eBaseMeasure::bmUnknown and CSimpleMeasure::PreIndex to CPreMeasure...">CSimpleMeasure::_Init()</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00027">27</a> of file <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html">SimpleMeasure.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00028">28</a> of file <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html">SimpleMeasure.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00099">_Init()</a>.</p>
+<p class="reference">References <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00100">_Init()</a>.</p>
 
 </div>
 </div>
@@ -264,9 +269,9 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00032">32</a> of file <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html">SimpleMeasure.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00033">33</a> of file <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html">SimpleMeasure.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00099">_Init()</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00171">BaseID()</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00177">PreID()</a>, and <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00068">SetByID()</a>.</p>
+<p class="reference">References <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00100">_Init()</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00184">BaseID()</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00190">PreID()</a>, and <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00069">SetByID()</a>.</p>
 
 </div>
 </div>
@@ -294,9 +299,9 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00037">37</a> of file <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html">SimpleMeasure.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00038">38</a> of file <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html">SimpleMeasure.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00099">_Init()</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00171">BaseID()</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00177">PreID()</a>, and <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00068">SetByID()</a>.</p>
+<p class="reference">References <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00100">_Init()</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00184">BaseID()</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00190">PreID()</a>, and <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00069">SetByID()</a>.</p>
 
 </div>
 </div>
@@ -317,9 +322,9 @@ Friends</h2></td></tr>
 
 <p>Destructor. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00042">42</a> of file <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html">SimpleMeasure.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00043">43</a> of file <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html">SimpleMeasure.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d9/ded/Utils_8h_source.html#l00265">SecureDeleteObjectPointer()</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00247">strLong</a>, and <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00239">strShort</a>.</p>
+<p class="reference">References <a class="el" href="../../d9/ded/Utils_8h_source.html#l00285">SecureDeleteObjectPointer()</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00260">strLong</a>, and <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00252">strShort</a>.</p>
 
 </div>
 </div>
@@ -349,9 +354,9 @@ Friends</h2></td></tr>
 
 <p>sets <a class="el" href="../../d4/dec/classCSimpleMeasure.html#a191dbfa4cc374946bf8a82111f827d92" title="index of type eBaseMeasure:  used to get elements from the vectors of BASE: ">CSimpleMeasure::BaseIndex</a> to eBaseMeasure::bmUnknown and <a class="el" href="../../d4/dec/classCSimpleMeasure.html#aa23ed9eec21adb9a97c90a424e7ee18a" title="index of type ePreMeasure:  used to get elements from the vectors of PRE: ">CSimpleMeasure::PreIndex</a> to CPreMeasure::pmUnknown </p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00099">99</a> of file <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html">SimpleMeasure.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00100">100</a> of file <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html">SimpleMeasure.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00203">BaseIndex</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00058">bmUnknown</a>, <a class="el" href="../../d8/d8a/PreMeasure_8h_source.html#l00056">pmUnknown</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00214">PreIndex</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00247">strLong</a>, and <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00239">strShort</a>.</p>
+<p class="reference">References <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00216">BaseIndex</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00058">bmUnknown</a>, <a class="el" href="../../d8/d8a/PreMeasure_8h_source.html#l00056">pmUnknown</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00227">PreIndex</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00260">strLong</a>, and <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00252">strShort</a>.</p>
 
 </div>
 </div>
@@ -381,7 +386,47 @@ Friends</h2></td></tr>
 <p>getter of <a class="el" href="../../d4/dec/classCSimpleMeasure.html#a191dbfa4cc374946bf8a82111f827d92" title="index of type eBaseMeasure:  used to get elements from the vectors of BASE: ">CSimpleMeasure::BaseIndex</a> </p>
 <dl class="section return"><dt>Returns</dt><dd>eBaseMeasure&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00171">171</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00184">184</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
+
+</div>
+</div>
+<a id="a0879e6127b863b5dfe4943e6b91695d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0879e6127b863b5dfe4943e6b91695d2">&#9670;&nbsp;</a></span>Compatible()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CSimpleMeasure::Compatible </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d4/dec/classCSimpleMeasure.html">CSimpleMeasure</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>check compatiblity with other <a class="el" href="../../d4/dec/classCSimpleMeasure.html" title="CSimpleMeasure: represents a pre measure combined with a base measure like &quot;mV&quot;.  This class offers: ...">CSimpleMeasure</a>:<br />
+ compatibility is given if the CSimpleMeasure::eBaseMeasure have the same SI measure. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td><a class="el" href="../../d4/dec/classCSimpleMeasure.html" title="CSimpleMeasure: represents a pre measure combined with a base measure like &quot;mV&quot;.  This class offers: ...">CSimpleMeasure</a> to check for compatibility </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00150">150</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
+
+<p class="reference">References <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00183">BASE</a>, and <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00184">BaseID()</a>.</p>
 
 </div>
 </div>
@@ -403,9 +448,9 @@ Friends</h2></td></tr>
 <p>prints all members as string for debugging. </p>
 <dl class="section return"><dt>Returns</dt><dd>const string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00087">87</a> of file <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html">SimpleMeasure.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00088">88</a> of file <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html">SimpleMeasure.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00178">BASE</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00171">BaseID()</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00165">Long()</a>, <a class="el" href="../../d8/d8a/PreMeasure_8h_source.html#l00194">PRE</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00177">PreID()</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00159">Short()</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00147">SIFactor()</a>, and <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00153">SIOffset()</a>.</p>
+<p class="reference">References <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00183">BASE</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00184">BaseID()</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00178">Long()</a>, <a class="el" href="../../d8/d8a/PreMeasure_8h_source.html#l00198">PRE</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00190">PreID()</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00172">Short()</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00160">SIFactor()</a>, and <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00166">SIOffset()</a>.</p>
 
 </div>
 </div>
@@ -436,7 +481,7 @@ Friends</h2></td></tr>
 <p>getter of <a class="el" href="../../d4/dec/classCSimpleMeasure.html#a5761fb46fb35ce577066ef1e7ec1ab2e" title="long label of this CSimpleMeasure:   combination of the pre-measure long label (see PRE::Long)  and t...">CSimpleMeasure::strLong</a> </p>
 <dl class="section return"><dt>Returns</dt><dd>const string&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00165">165</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00178">178</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
 
 </div>
 </div>
@@ -466,7 +511,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>const bool </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00063">63</a> of file <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html">SimpleMeasure.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00064">64</a> of file <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html">SimpleMeasure.cpp</a>.</p>
 
 </div>
 </div>
@@ -495,9 +540,9 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>reference to this </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00048">48</a> of file <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html">SimpleMeasure.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00049">49</a> of file <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html">SimpleMeasure.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00171">BaseID()</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00177">PreID()</a>, and <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00068">SetByID()</a>.</p>
+<p class="reference">References <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00184">BaseID()</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00190">PreID()</a>, and <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00069">SetByID()</a>.</p>
 
 </div>
 </div>
@@ -531,9 +576,9 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>const bool </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00056">56</a> of file <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html">SimpleMeasure.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00057">57</a> of file <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html">SimpleMeasure.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00171">BaseID()</a>, and <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00177">PreID()</a>.</p>
+<p class="reference">References <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00184">BaseID()</a>, and <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00190">PreID()</a>.</p>
 
 </div>
 </div>
@@ -563,7 +608,7 @@ Friends</h2></td></tr>
 <p>getter of <a class="el" href="../../d4/dec/classCSimpleMeasure.html#aa23ed9eec21adb9a97c90a424e7ee18a" title="index of type ePreMeasure:  used to get elements from the vectors of PRE: ">CSimpleMeasure::PreIndex</a> </p>
 <dl class="section return"><dt>Returns</dt><dd>ePreMeasure&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00177">177</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00190">190</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
 
 </div>
 </div>
@@ -609,9 +654,9 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00068">68</a> of file <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html">SimpleMeasure.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00069">69</a> of file <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html">SimpleMeasure.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00178">BASE</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00171">BaseID()</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00203">BaseIndex</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00222">dSIFactor</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00231">dSIOffset</a>, <a class="el" href="../../d8/d8a/PreMeasure_8h_source.html#l00194">PRE</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00177">PreID()</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00214">PreIndex</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00247">strLong</a>, and <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00239">strShort</a>.</p>
+<p class="reference">References <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00183">BASE</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00184">BaseID()</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00216">BaseIndex</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00235">dSIFactor</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00244">dSIOffset</a>, <a class="el" href="../../d8/d8a/PreMeasure_8h_source.html#l00198">PRE</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00190">PreID()</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00227">PreIndex</a>, <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00260">strLong</a>, and <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00252">strShort</a>.</p>
 
 </div>
 </div>
@@ -650,9 +695,9 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00082">82</a> of file <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html">SimpleMeasure.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00083">83</a> of file <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html">SimpleMeasure.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00178">BASE</a>, <a class="el" href="../../d8/d8a/PreMeasure_8h_source.html#l00194">PRE</a>, and <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00068">SetByID()</a>.</p>
+<p class="reference">References <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00183">BASE</a>, <a class="el" href="../../d8/d8a/PreMeasure_8h_source.html#l00198">PRE</a>, and <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00069">SetByID()</a>.</p>
 
 </div>
 </div>
@@ -691,9 +736,9 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00078">78</a> of file <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html">SimpleMeasure.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00079">79</a> of file <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html">SimpleMeasure.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00178">BASE</a>, <a class="el" href="../../d8/d8a/PreMeasure_8h_source.html#l00194">PRE</a>, and <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00068">SetByID()</a>.</p>
+<p class="reference">References <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00183">BASE</a>, <a class="el" href="../../d8/d8a/PreMeasure_8h_source.html#l00198">PRE</a>, and <a class="el" href="../../db/de6/SimpleMeasure_8cpp_source.html#l00069">SetByID()</a>.</p>
 
 </div>
 </div>
@@ -724,7 +769,7 @@ Friends</h2></td></tr>
 <p>getter of <a class="el" href="../../d4/dec/classCSimpleMeasure.html#a39260e6516c163955c34dce6795292ad" title="short label of this CSimpleMeasure:   combination of the pre-measure short label (see PRE::Short)  an...">CSimpleMeasure::strShort</a> </p>
 <dl class="section return"><dt>Returns</dt><dd>const string&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00159">159</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00172">172</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
 
 </div>
 </div>
@@ -755,7 +800,7 @@ Friends</h2></td></tr>
 <p>getter of <a class="el" href="../../d4/dec/classCSimpleMeasure.html#a08be520f9d3a0e50cc63693f2fc607f2" title="factor which must be applied this CSimpleMeasure to achieve SI measure (e.g. mV : SIFactor = 1000)...">CSimpleMeasure::dSIFactor</a> </p>
 <dl class="section return"><dt>Returns</dt><dd>const double </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00147">147</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00160">160</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
 
 </div>
 </div>
@@ -786,7 +831,7 @@ Friends</h2></td></tr>
 <p>getter of <a class="el" href="../../d4/dec/classCSimpleMeasure.html#a27c1637c744a79856ee81869e2aa8890" title="offset (SI measure) which must added to this CSimpleMeasure to achieve the corresponding SI measure  ...">CSimpleMeasure::dSIOffset</a> </p>
 <dl class="section return"><dt>Returns</dt><dd>const double </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00153">153</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00166">166</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
 
 </div>
 </div>
@@ -817,7 +862,7 @@ Friends</h2></td></tr>
  defined in <a class="el" href="../../d8/d8a/PreMeasure_8h.html#a6c81167b8d4c2badde42f81cb7214620" title="enum for indexing the vectors of CPreMeasure ">ePreMeasure</a> and <a class="el" href="../../dd/d8d/BaseMeasure_8h.html#ac90e5164ccf1f0d648fba7e94b229a11" title="enum for indexing the vectors of CBaseMeasure ">eBaseMeasure</a> </p>
 <dl class="section return"><dt>Returns</dt><dd>bool, true in case the indices are valid </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00131">131</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00135">135</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
 
 <p class="reference">References <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00039">bmFirst</a>, and <a class="el" href="../../d8/d8a/PreMeasure_8h_source.html#l00037">pmFirst</a>.</p>
 
@@ -844,7 +889,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00042">42</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00046">46</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
 
 </div>
 </div>
@@ -868,7 +913,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00041">41</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00045">45</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
 
 </div>
 </div>
@@ -892,7 +937,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00044">44</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00048">48</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
 
 </div>
 </div>
@@ -916,7 +961,7 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00043">43</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00047">47</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
 
 </div>
 </div>
@@ -944,13 +989,13 @@ Friends</h2></td></tr>
 <p>index of type <a class="el" href="../../dd/d8d/BaseMeasure_8h.html#ac90e5164ccf1f0d648fba7e94b229a11" title="enum for indexing the vectors of CBaseMeasure ">eBaseMeasure</a>:<br />
  used to get elements from the vectors of <a class="el" href="../../dd/d8d/BaseMeasure_8h.html#a79bcfb6bde984f42d1124b068a509af7" title="shortcut to the singleton representation of CBaseMeasure ">BASE</a>: </p>
 <ul>
-<li><a class="el" href="../../d8/d59/classCBaseMeasure.html#a7220e3dfd4fbdd319a5c3c6af844259e" title="keeps the offset for the conversion to the SI Unit ">CBaseMeasure::vdOffset</a></li>
+<li><a class="el" href="../../d8/d59/classCBaseMeasure.html#a7220e3dfd4fbdd319a5c3c6af844259e" title="keeps the offset for the conversion to the SI measure: V_{SI} = CBaseMeasure::vdFactor[eBaseMeasure] ...">CBaseMeasure::vdOffset</a></li>
 <li><a class="el" href="../../d0/dea/classCVectorHandle.html#af8f8b2e0da8363e695872ca85f33364e" title="vector keeping all the factors:  e.g. ">CBaseMeasure::vdFactor</a></li>
 <li><a class="el" href="../../d0/dea/classCVectorHandle.html#afb50c8a33d4cf70bf92c644dca409ea2" title="vector keeping the short label:  e.g. ">CBaseMeasure::vstrShort</a></li>
 <li><a class="el" href="../../d0/dea/classCVectorHandle.html#a71bec0e385b9ca8e5ffa174b559da9f8" title="vector keeping the long label  e.g. ">CBaseMeasure::vstrLong</a> </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00203">203</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00216">216</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
 
 </div>
 </div>
@@ -978,7 +1023,7 @@ Friends</h2></td></tr>
  This factor must be applied in combination with <a class="el" href="../../d4/dec/classCSimpleMeasure.html#a27c1637c744a79856ee81869e2aa8890" title="offset (SI measure) which must added to this CSimpleMeasure to achieve the corresponding SI measure  ...">CSimpleMeasure::dSIOffset</a>:<br />
  SIMeasure = SIFactor * Measure + SIOffset </p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00222">222</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00235">235</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
 
 </div>
 </div>
@@ -1007,7 +1052,7 @@ Friends</h2></td></tr>
  This offset must be applied in combination with <a class="el" href="../../d4/dec/classCSimpleMeasure.html#a08be520f9d3a0e50cc63693f2fc607f2" title="factor which must be applied this CSimpleMeasure to achieve SI measure (e.g. mV : SIFactor = 1000)...">CSimpleMeasure::dSIFactor</a>:<br />
  SIMeasure = SIFactor * Measure + SIOffset </p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00231">231</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00244">244</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
 
 </div>
 </div>
@@ -1040,7 +1085,7 @@ Friends</h2></td></tr>
 <li><a class="el" href="../../d0/dea/classCVectorHandle.html#a71bec0e385b9ca8e5ffa174b559da9f8" title="vector keeping the long label  e.g. ">CPreMeasure::vstrLong</a> </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00214">214</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00227">227</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
 
 </div>
 </div>
@@ -1068,7 +1113,7 @@ Friends</h2></td></tr>
  combination of the pre-measure long label (see PRE::Long)<br />
  and the base-measure long label (see BASE::Long) </p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00247">247</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00260">260</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
 
 </div>
 </div>
@@ -1096,7 +1141,7 @@ Friends</h2></td></tr>
  combination of the pre-measure short label (see PRE::Short)<br />
  and the base-measure short label (see BASE::Short) </p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00239">239</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html#l00252">252</a> of file <a class="el" href="../../de/dc5/SimpleMeasure_8h_source.html">SimpleMeasure.h</a>.</p>
 
 </div>
 </div>

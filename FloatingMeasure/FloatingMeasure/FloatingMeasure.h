@@ -31,6 +31,31 @@
 #include <iostream>
 
 /**
+ * \mainpage
+ * FloatingMeasure is a class API for physical calculations. 
+ * It offers:
+ * - definition of a set of  phyisical  measures 
+ *   - simple handling by separating the definition of a measure into its base-measure (::eBaseMeasure) and its pre-measure (::ePreMeasure):<br>
+ *   new base / pre- measures can easily be added and all the modifications defined by the pre- / base- measures come for free
+ * - support of complex measures (see ::CComplexMeasure):<br>
+ *   - construction by concatenation of any defined measures by means of multiplication (operator "*") and division (operator "/").
+ *   - simplification 
+ *   - scaling to any compatible complex measure
+ * - handling of numerical errors due to the incomplete digital representation of floating numbers (::CDigFloat):
+ *   - comparison operators considering the numerical error
+ *   - all kinds of mathematical operations
+ *   - mathematical functions pow / log 
+ *   - calculating the numerical error propagation for mathematical operations / functions
+ *   - handling of user given resolution
+ * - support  for physical calculations by utilizing ::CDigFloat and ::CComplexMeasure in a class ::CFloatingMeasure
+ *   - all kinds of mathematical operations
+ *   - handling of user given resolution
+ *   - simplification of complex measures
+ *   - scaling to compatible (complex) measures
+ *   - printing
+ */
+
+/**
  * @brief FloatingMeasure: represents a floating number with a complex measure (e.g. 10*m/s).
  * This class offers:
  * - operators (+,-,*,/,<=, >=, ==, !=, <, >)

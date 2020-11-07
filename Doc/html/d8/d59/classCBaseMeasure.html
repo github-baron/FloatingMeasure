@@ -30,6 +30,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">FloatingMeasure
    </div>
+   <div id="projectbrief">class API for phyiscal calculations</div>
   </td>
  </tr>
  </tbody>
@@ -161,10 +162,10 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aaaddf8a6ce321b282885953439472390"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d59/classCBaseMeasure.html#aaaddf8a6ce321b282885953439472390">vnSIIndex</a></td></tr>
-<tr class="memdesc:aaaddf8a6ce321b282885953439472390"><td class="mdescLeft">&#160;</td><td class="mdescRight">keeps the index of the corresponding SI unit: is its own unit in case it is the SI unit itself  <a href="#aaaddf8a6ce321b282885953439472390">More...</a><br /></td></tr>
+<tr class="memdesc:aaaddf8a6ce321b282885953439472390"><td class="mdescLeft">&#160;</td><td class="mdescRight">keeps the index of the corresponding SI measure: is its own measure in case it is the SI measure itself  <a href="#aaaddf8a6ce321b282885953439472390">More...</a><br /></td></tr>
 <tr class="separator:aaaddf8a6ce321b282885953439472390"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7220e3dfd4fbdd319a5c3c6af844259e"><td class="memItemLeft" align="right" valign="top">vector&lt; double &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d59/classCBaseMeasure.html#a7220e3dfd4fbdd319a5c3c6af844259e">vdOffset</a></td></tr>
-<tr class="memdesc:a7220e3dfd4fbdd319a5c3c6af844259e"><td class="mdescLeft">&#160;</td><td class="mdescRight">keeps the offset for the conversion to the SI Unit  <a href="#a7220e3dfd4fbdd319a5c3c6af844259e">More...</a><br /></td></tr>
+<tr class="memdesc:a7220e3dfd4fbdd319a5c3c6af844259e"><td class="mdescLeft">&#160;</td><td class="mdescRight">keeps the offset for the conversion to the SI measure: V_{SI} = <a class="el" href="../../d0/dea/classCVectorHandle.html#af8f8b2e0da8363e695872ca85f33364e" title="vector keeping all the factors:  e.g. ">CBaseMeasure::vdFactor</a>[eBaseMeasure] * "Value in eBaseMeasure" + <a class="el" href="../../d8/d59/classCBaseMeasure.html#a7220e3dfd4fbdd319a5c3c6af844259e" title="keeps the offset for the conversion to the SI measure: V_{SI} = CBaseMeasure::vdFactor[eBaseMeasure] ...">CBaseMeasure::vdOffset</a>[eBaseMeasure]  <a href="#a7220e3dfd4fbdd319a5c3c6af844259e">More...</a><br /></td></tr>
 <tr class="separator:a7220e3dfd4fbdd319a5c3c6af844259e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -220,14 +221,14 @@ Additional Inherited Members</h2></td></tr>
 <ul>
 <li><a class="el" href="../../d0/dea/classCVectorHandle.html#afb50c8a33d4cf70bf92c644dca409ea2" title="vector keeping the short label:  e.g. ">CBaseMeasure::vstrShort</a></li>
 <li><a class="el" href="../../d0/dea/classCVectorHandle.html#a71bec0e385b9ca8e5ffa174b559da9f8" title="vector keeping the long label  e.g. ">CBaseMeasure::vstrLong</a></li>
-<li><a class="el" href="../../d8/d59/classCBaseMeasure.html#aaaddf8a6ce321b282885953439472390" title="keeps the index of the corresponding SI unit: is its own unit in case it is the SI unit itself ...">CBaseMeasure::vnSIIndex</a></li>
-<li><a class="el" href="../../d8/d59/classCBaseMeasure.html#a7220e3dfd4fbdd319a5c3c6af844259e" title="keeps the offset for the conversion to the SI Unit ">CBaseMeasure::vdOffset</a></li>
+<li><a class="el" href="../../d8/d59/classCBaseMeasure.html#aaaddf8a6ce321b282885953439472390" title="keeps the index of the corresponding SI measure: is its own measure in case it is the SI measure itse...">CBaseMeasure::vnSIIndex</a></li>
+<li><a class="el" href="../../d8/d59/classCBaseMeasure.html#a7220e3dfd4fbdd319a5c3c6af844259e" title="keeps the offset for the conversion to the SI measure: V_{SI} = CBaseMeasure::vdFactor[eBaseMeasure] ...">CBaseMeasure::vdOffset</a></li>
 <li><a class="el" href="../../d0/dea/classCVectorHandle.html#af8f8b2e0da8363e695872ca85f33364e" title="vector keeping all the factors:  e.g. ">CBaseMeasure::vdFactor</a> </li>
 </ul>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d76/BaseMeasure_8cpp_source.html#l00031">31</a> of file <a class="el" href="../../d4/d76/BaseMeasure_8cpp_source.html">BaseMeasure.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00041">bmAmpere</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00051">bmDay</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00043">bmDegCelsius</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00044">bmDegFahrenheit</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00042">bmDegKelvin</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00046">bmFarad</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00054">bmFoot</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00047">bmHertz</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00050">bmHour</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00053">bmInch</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00057">bmLast</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00052">bmMeter</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00056">bmMile</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00049">bmMinute</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00038">bmNumber</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00045">bmOhm</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00048">bmSecond</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00058">bmUnknown</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00040">bmVolt</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00055">bmYard</a>, <a class="el" href="../../d9/ded/Utils_8h_source.html#l00072">Omega</a>, <a class="el" href="../../d9/ded/Utils_8h_source.html#l00061">UNKNOWN_INDEX</a>, <a class="el" href="../../d9/ded/Utils_8h_source.html#l00060">UNKNOWN_LONG</a>, <a class="el" href="../../d9/ded/Utils_8h_source.html#l00059">UNKNOWN_SHORT</a>, <a class="el" href="../../d9/ded/Utils_8h_source.html#l00062">UNKNOWN_VALUE</a>, <a class="el" href="../../d3/d95/VectorHandle_8h_source.html#l00132">CVectorHandle::vdFactor</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00165">vdOffset</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00159">vnSIIndex</a>, <a class="el" href="../../d3/d95/VectorHandle_8h_source.html#l00141">CVectorHandle::vstrLong</a>, and <a class="el" href="../../d3/d95/VectorHandle_8h_source.html#l00150">CVectorHandle::vstrShort</a>.</p>
+<p class="reference">References <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00041">bmAmpere</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00051">bmDay</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00043">bmDegCelsius</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00044">bmDegFahrenheit</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00042">bmDegKelvin</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00046">bmFarad</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00054">bmFoot</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00047">bmHertz</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00050">bmHour</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00053">bmInch</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00057">bmLast</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00052">bmMeter</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00056">bmMile</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00049">bmMinute</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00038">bmNumber</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00045">bmOhm</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00048">bmSecond</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00058">bmUnknown</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00040">bmVolt</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00055">bmYard</a>, <a class="el" href="../../d9/ded/Utils_8h_source.html#l00076">Omega</a>, <a class="el" href="../../d9/ded/Utils_8h_source.html#l00065">UNKNOWN_INDEX</a>, <a class="el" href="../../d9/ded/Utils_8h_source.html#l00064">UNKNOWN_LONG</a>, <a class="el" href="../../d9/ded/Utils_8h_source.html#l00063">UNKNOWN_SHORT</a>, <a class="el" href="../../d9/ded/Utils_8h_source.html#l00066">UNKNOWN_VALUE</a>, <a class="el" href="../../d3/d95/VectorHandle_8h_source.html#l00136">CVectorHandle::vdFactor</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00170">vdOffset</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00163">vnSIIndex</a>, <a class="el" href="../../d3/d95/VectorHandle_8h_source.html#l00145">CVectorHandle::vstrLong</a>, and <a class="el" href="../../d3/d95/VectorHandle_8h_source.html#l00154">CVectorHandle::vstrShort</a>.</p>
 
 </div>
 </div>
@@ -250,14 +251,14 @@ Additional Inherited Members</h2></td></tr>
 <ul>
 <li><a class="el" href="../../d0/dea/classCVectorHandle.html#afb50c8a33d4cf70bf92c644dca409ea2" title="vector keeping the short label:  e.g. ">CBaseMeasure::vstrShort</a></li>
 <li><a class="el" href="../../d0/dea/classCVectorHandle.html#a71bec0e385b9ca8e5ffa174b559da9f8" title="vector keeping the long label  e.g. ">CBaseMeasure::vstrLong</a></li>
-<li><a class="el" href="../../d8/d59/classCBaseMeasure.html#aaaddf8a6ce321b282885953439472390" title="keeps the index of the corresponding SI unit: is its own unit in case it is the SI unit itself ...">CBaseMeasure::vnSIIndex</a></li>
-<li><a class="el" href="../../d8/d59/classCBaseMeasure.html#a7220e3dfd4fbdd319a5c3c6af844259e" title="keeps the offset for the conversion to the SI Unit ">CBaseMeasure::vdOffset</a></li>
+<li><a class="el" href="../../d8/d59/classCBaseMeasure.html#aaaddf8a6ce321b282885953439472390" title="keeps the index of the corresponding SI measure: is its own measure in case it is the SI measure itse...">CBaseMeasure::vnSIIndex</a></li>
+<li><a class="el" href="../../d8/d59/classCBaseMeasure.html#a7220e3dfd4fbdd319a5c3c6af844259e" title="keeps the offset for the conversion to the SI measure: V_{SI} = CBaseMeasure::vdFactor[eBaseMeasure] ...">CBaseMeasure::vdOffset</a></li>
 <li><a class="el" href="../../d0/dea/classCVectorHandle.html#af8f8b2e0da8363e695872ca85f33364e" title="vector keeping all the factors:  e.g. ">CBaseMeasure::vdFactor</a> clears all member vectors </li>
 </ul>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d76/BaseMeasure_8cpp_source.html#l00159">159</a> of file <a class="el" href="../../d4/d76/BaseMeasure_8cpp_source.html">BaseMeasure.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00165">vdOffset</a>, and <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00159">vnSIIndex</a>.</p>
+<p class="reference">References <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00170">vdOffset</a>, and <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00163">vnSIIndex</a>.</p>
 
 </div>
 </div>
@@ -289,7 +290,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../d4/d76/BaseMeasure_8cpp_source.html#l00165">165</a> of file <a class="el" href="../../d4/d76/BaseMeasure_8cpp_source.html">BaseMeasure.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d3/d95/VectorHandle_8h_source.html#l00112">CVectorHandle::Factor()</a>, <a class="el" href="../../d3/d95/VectorHandle_8h_source.html#l00090">CVectorHandle::Long()</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00108">Offset()</a>, <a class="el" href="../../d3/d95/VectorHandle_8h_source.html#l00101">CVectorHandle::Short()</a>, and <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00119">SIID()</a>.</p>
+<p class="reference">References <a class="el" href="../../d3/d95/VectorHandle_8h_source.html#l00116">CVectorHandle::Factor()</a>, <a class="el" href="../../d3/d95/VectorHandle_8h_source.html#l00094">CVectorHandle::Long()</a>, <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00112">Offset()</a>, <a class="el" href="../../d3/d95/VectorHandle_8h_source.html#l00105">CVectorHandle::Short()</a>, and <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00123">SIID()</a>.</p>
 
 </div>
 </div>
@@ -326,9 +327,9 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>eBaseMeasure </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00150">150</a> of file <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html">BaseMeasure.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00154">154</a> of file <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html">BaseMeasure.h</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d3/d95/VectorHandle_8h_source.html#l00076">CVectorHandle::GetIndexByLongLabel()</a>.</p>
+<p class="reference">References <a class="el" href="../../d3/d95/VectorHandle_8h_source.html#l00080">CVectorHandle::GetIndexByLongLabel()</a>.</p>
 
 </div>
 </div>
@@ -365,9 +366,9 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>eBaseMeasure: the base-measure index (e.g. eBaseMeasure::bmVolt) </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00139">139</a> of file <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html">BaseMeasure.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00143">143</a> of file <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html">BaseMeasure.h</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d3/d95/VectorHandle_8h_source.html#l00065">CVectorHandle::GetIndexByShortLabel()</a>.</p>
+<p class="reference">References <a class="el" href="../../d3/d95/VectorHandle_8h_source.html#l00069">CVectorHandle::GetIndexByShortLabel()</a>.</p>
 
 </div>
 </div>
@@ -404,9 +405,9 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>const double </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00108">108</a> of file <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html">BaseMeasure.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00112">112</a> of file <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html">BaseMeasure.h</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d9/ded/Utils_8h_source.html#l00236">GetElementFromVectorByIndex()</a>.</p>
+<p class="reference">References <a class="el" href="../../d9/ded/Utils_8h_source.html#l00256">GetElementFromVectorByIndex()</a>.</p>
 
 </div>
 </div>
@@ -443,9 +444,9 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>eBaseMeasure </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00119">119</a> of file <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html">BaseMeasure.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00123">123</a> of file <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html">BaseMeasure.h</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d9/ded/Utils_8h_source.html#l00236">GetElementFromVectorByIndex()</a>.</p>
+<p class="reference">References <a class="el" href="../../d9/ded/Utils_8h_source.html#l00256">GetElementFromVectorByIndex()</a>.</p>
 
 </div>
 </div>
@@ -462,9 +463,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>keeps the offset for the conversion to the SI Unit </p>
+<p>keeps the offset for the conversion to the SI measure: V_{SI} = <a class="el" href="../../d0/dea/classCVectorHandle.html#af8f8b2e0da8363e695872ca85f33364e" title="vector keeping all the factors:  e.g. ">CBaseMeasure::vdFactor</a>[eBaseMeasure] * "Value in eBaseMeasure" + <a class="el" href="../../d8/d59/classCBaseMeasure.html#a7220e3dfd4fbdd319a5c3c6af844259e" title="keeps the offset for the conversion to the SI measure: V_{SI} = CBaseMeasure::vdFactor[eBaseMeasure] ...">CBaseMeasure::vdOffset</a>[eBaseMeasure] </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00165">165</a> of file <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html">BaseMeasure.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00170">170</a> of file <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html">BaseMeasure.h</a>.</p>
 
 </div>
 </div>
@@ -480,9 +481,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>keeps the index of the corresponding SI unit: is its own unit in case it is the SI unit itself </p>
+<p>keeps the index of the corresponding SI measure: is its own measure in case it is the SI measure itself </p>
 
-<p class="definition">Definition at line <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00159">159</a> of file <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html">BaseMeasure.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html#l00163">163</a> of file <a class="el" href="../../dd/d8d/BaseMeasure_8h_source.html">BaseMeasure.h</a>.</p>
 
 </div>
 </div>

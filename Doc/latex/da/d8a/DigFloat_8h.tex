@@ -1,16 +1,14 @@
 \hypertarget{DigFloat_8h}{}\section{Floating\+Measure/\+Dig\+Float/\+Dig\+Float.h File Reference}
 \label{DigFloat_8h}\index{Floating\+Measure/\+Dig\+Float/\+Dig\+Float.\+h@{Floating\+Measure/\+Dig\+Float/\+Dig\+Float.\+h}}
 {\ttfamily \#include $<$Utils/\+Utils.\+h$>$}\newline
-Include dependency graph for Dig\+Float.\+h\+:
-\nopagebreak
+Include dependency graph for Dig\+Float.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{d1/d05/DigFloat_8h__incl}
 \end{center}
 \end{figure}
-This graph shows which files directly or indirectly include this file\+:
-\nopagebreak
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -34,7 +32,9 @@ class \hyperlink{classCDigFloat}{C\+Dig\+Float}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classCDigFloat}{C\+Dig\+Float} \hyperlink{DigFloat_8h_a269b310d675c311c6e0894bf326593ae}{abs} (const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&DF)
-\begin{DoxyCompactList}\small\item\em abs\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} with absolute value; \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em abs\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} with absolute value; \end{DoxyCompactList}\item 
+\hyperlink{classCDigFloat}{C\+Dig\+Float} \hyperlink{DigFloat_8h_a4f5706e9fe28086b245b09459f92403e}{log} (const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&DF, const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&df\+Base=0)
+\begin{DoxyCompactList}\small\item\em log\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} logarithm to user given base (default\+: natural logarithm with base euler number); \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Macro Definition Documentation}
@@ -81,9 +81,37 @@ abs\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} with absolute value;
 \end{DoxyReturn}
 
 
-Definition at line 298 of file Dig\+Float.\+cpp.
+Definition at line 305 of file Dig\+Float.\+cpp.
 
 
 
-References abs(), and C\+Dig\+Float\+::\+Raw\+Value().
+References C\+Dig\+Float\+::\+Raw\+Value().
+
+\mbox{\Hypertarget{DigFloat_8h_a4f5706e9fe28086b245b09459f92403e}\label{DigFloat_8h_a4f5706e9fe28086b245b09459f92403e}} 
+\index{Dig\+Float.\+h@{Dig\+Float.\+h}!log@{log}}
+\index{log@{log}!Dig\+Float.\+h@{Dig\+Float.\+h}}
+\subsubsection{\texorpdfstring{log()}{log()}}
+{\footnotesize\ttfamily \hyperlink{classCDigFloat}{C\+Dig\+Float} log (\begin{DoxyParamCaption}\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{DF,  }\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{df\+Base = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+log\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} logarithm to user given base (default\+: natural logarithm with base euler number); 
+
+
+\begin{DoxyParams}{Parameters}
+{\em DF} & \hyperlink{classCDigFloat}{C\+Dig\+Float} \\
+\hline
+{\em df\+Base} & \hyperlink{classCDigFloat}{C\+Dig\+Float} as base (optional) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCDigFloat}{C\+Dig\+Float} 
+\end{DoxyReturn}
+
+
+Definition at line 312 of file Dig\+Float.\+cpp.
+
+
+
+References C\+Dig\+Float\+::d\+Error, C\+Dig\+Float\+::\+Error(), my\+N\+AN, C\+Dig\+Float\+::\+Raw\+Value(), C\+Dig\+Float\+::\+Value\+Max\+Limit(), and C\+Dig\+Float\+::\+Value\+Min\+Limit().
 

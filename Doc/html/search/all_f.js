@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['pa',['PA',['../da/d3d/ComplexMeasureMacros_8h.html#a74cb3af6041b109c53743b600ebbcf4c',1,'PA():&#160;ComplexMeasureMacros.h'],['../da/d3d/ComplexMeasureMacros_8h.html#a166cc8406becb925e56e7e43ab4faaef',1,'pA():&#160;ComplexMeasureMacros.h']]],
+  ['pa',['pA',['../da/d3d/ComplexMeasureMacros_8h.html#a166cc8406becb925e56e7e43ab4faaef',1,'pA():&#160;ComplexMeasureMacros.h'],['../da/d3d/ComplexMeasureMacros_8h.html#a74cb3af6041b109c53743b600ebbcf4c',1,'PA():&#160;ComplexMeasureMacros.h']]],
   ['pc',['PC',['../da/d3d/ComplexMeasureMacros_8h.html#a600721f0222b857dc8a3ae59e5077347',1,'PC():&#160;ComplexMeasureMacros.h'],['../da/d3d/ComplexMeasureMacros_8h.html#a2cfa7c8cffd6a972558ee9ab003dec31',1,'pC():&#160;ComplexMeasureMacros.h']]],
   ['pf',['pF',['../da/d3d/ComplexMeasureMacros_8h.html#a253177bee303a3fa05dd3ded2a661fb8',1,'pF():&#160;ComplexMeasureMacros.h'],['../da/d3d/ComplexMeasureMacros_8h.html#aa0e278c26c25558741febfadd7216caa',1,'PF():&#160;ComplexMeasureMacros.h']]],
   ['pfmprecision',['pfmPrecision',['../df/d21/classCFloatingMeasure.html#a6bc7bd6e563e69cbf29692cd97153115',1,'CFloatingMeasure']]],
@@ -31,7 +31,8 @@ var searchData=
   ['pmunknown',['pmUnknown',['../d8/d8a/PreMeasure_8h.html#a6c81167b8d4c2badde42f81cb7214620a45907e80ae387e2b4a105be6f3276313',1,'PreMeasure.h']]],
   ['pmyotta',['pmYotta',['../d8/d8a/PreMeasure_8h.html#a6c81167b8d4c2badde42f81cb7214620a5481dc587dbf4b25ddec4d4aed8e2ccb',1,'PreMeasure.h']]],
   ['pmzetta',['pmZetta',['../d8/d8a/PreMeasure_8h.html#a6c81167b8d4c2badde42f81cb7214620a00b29f37d368d66abc95fee7ecf9a034',1,'PreMeasure.h']]],
-  ['pohm',['pOhm',['../da/d3d/ComplexMeasureMacros_8h.html#ad6a3208f4c16ca071c17e5e20a8507ce',1,'pOhm():&#160;ComplexMeasureMacros.h'],['../da/d3d/ComplexMeasureMacros_8h.html#a581e259b2475b4a75fd4f59631e395f4',1,'POhm():&#160;ComplexMeasureMacros.h']]],
+  ['pohm',['POhm',['../da/d3d/ComplexMeasureMacros_8h.html#a581e259b2475b4a75fd4f59631e395f4',1,'POhm():&#160;ComplexMeasureMacros.h'],['../da/d3d/ComplexMeasureMacros_8h.html#ad6a3208f4c16ca071c17e5e20a8507ce',1,'pOhm():&#160;ComplexMeasureMacros.h']]],
+  ['pow',['pow',['../d3/d72/classCDigFloat.html#ac5877d13039d236858e1cb04351f0a86',1,'CDigFloat::pow()'],['../d0/d80/DigFloat_8cpp.html#ac5877d13039d236858e1cb04351f0a86',1,'pow():&#160;DigFloat.cpp']]],
   ['pre',['PRE',['../d8/d8a/PreMeasure_8h.html#a349316092037fdd0773335fab4e15ee8',1,'PreMeasure.h']]],
   ['precision',['Precision',['../d3/d72/classCDigFloat.html#a95875f6f7246debee0d00b0c41c82aee',1,'CDigFloat::Precision() const'],['../d3/d72/classCDigFloat.html#a6d12203e256d0fba602b3cfec37f96a6',1,'CDigFloat::Precision(const int UserPrecision)'],['../df/d21/classCFloatingMeasure.html#abaedeff78fb7009c788df5a016bc46d5',1,'CFloatingMeasure::Precision(const CFloatingMeasure &amp;UserPrecision)'],['../df/d21/classCFloatingMeasure.html#ac8975daf37b98b3e996893e0de43c4eb',1,'CFloatingMeasure::Precision() const']]],
   ['precisionactive',['PrecisionActive',['../d3/d72/classCDigFloat.html#a4d6ca24beda280be719374c2a6b2c64d',1,'CDigFloat::PrecisionActive() const'],['../d3/d72/classCDigFloat.html#a680354bead4079c14a67688124bb4b85',1,'CDigFloat::PrecisionActive(const bool UserPrecisionActive)'],['../df/d21/classCFloatingMeasure.html#a4fe4d60589da6d4c7f09cb09fbea730b',1,'CFloatingMeasure::PrecisionActive()']]],
@@ -42,8 +43,7 @@ var searchData=
   ['premeasure_2ecpp',['PreMeasure.cpp',['../d4/d2a/PreMeasure_8cpp.html',1,'']]],
   ['premeasure_2eh',['PreMeasure.h',['../d8/d8a/PreMeasure_8h.html',1,'']]],
   ['print',['Print',['../d3/d72/classCDigFloat.html#a80731e0970f607114d6d1bde4d02bd39',1,'CDigFloat']]],
-  ['printallshort',['PrintAllShort',['../d0/d43/classCComplexMeasure.html#aefe6745e32e203d0dd2b7a4e13504142',1,'CComplexMeasure']]],
   ['printshort',['PrintShort',['../df/d21/classCFloatingMeasure.html#af4caaa697967a257bc6e13117843ff58',1,'CFloatingMeasure']]],
-  ['ps',['ps',['../da/d3d/ComplexMeasureMacros_8h.html#aadf956dacbac3f9d45fb3f7787bf21c1',1,'ps():&#160;ComplexMeasureMacros.h'],['../da/d3d/ComplexMeasureMacros_8h.html#a07647b74f7fef3a6d130db360133a48c',1,'Ps():&#160;ComplexMeasureMacros.h']]],
-  ['pv',['PV',['../da/d3d/ComplexMeasureMacros_8h.html#a46b90e99485a21a2150e424cc2a4afba',1,'PV():&#160;ComplexMeasureMacros.h'],['../da/d3d/ComplexMeasureMacros_8h.html#a988c8a0b5d4f35990e0cb115d985f912',1,'pV():&#160;ComplexMeasureMacros.h']]]
+  ['ps',['Ps',['../da/d3d/ComplexMeasureMacros_8h.html#a07647b74f7fef3a6d130db360133a48c',1,'Ps():&#160;ComplexMeasureMacros.h'],['../da/d3d/ComplexMeasureMacros_8h.html#aadf956dacbac3f9d45fb3f7787bf21c1',1,'ps():&#160;ComplexMeasureMacros.h']]],
+  ['pv',['pV',['../da/d3d/ComplexMeasureMacros_8h.html#a988c8a0b5d4f35990e0cb115d985f912',1,'pV():&#160;ComplexMeasureMacros.h'],['../da/d3d/ComplexMeasureMacros_8h.html#a46b90e99485a21a2150e424cc2a4afba',1,'PV():&#160;ComplexMeasureMacros.h']]]
 ];

@@ -26,6 +26,6 @@ var searchData=
   ['bmunknown',['bmUnknown',['../dd/d8d/BaseMeasure_8h.html#ac90e5164ccf1f0d648fba7e94b229a11ac30190fee6f86e2f76b96886533f74d8',1,'BaseMeasure.h']]],
   ['bmvolt',['bmVolt',['../dd/d8d/BaseMeasure_8h.html#ac90e5164ccf1f0d648fba7e94b229a11a662f2aa09627247b53e6f3c5cd10815e',1,'BaseMeasure.h']]],
   ['bmyard',['bmYard',['../dd/d8d/BaseMeasure_8h.html#ac90e5164ccf1f0d648fba7e94b229a11a4515cdd3e54e74cbe6a74b2fbc9731fe',1,'BaseMeasure.h']]],
-  ['bool2string',['Bool2String',['../df/d0c/Utils_8cpp.html#a78c380ff595f4574b2bb6fa68f15e410',1,'Bool2String(const bool bBool):&#160;Utils.cpp'],['../d9/ded/Utils_8h.html#ab78ffa949645ca0f0d0e2d3e9520ef29',1,'Bool2String(const bool bBool):&#160;Utils.cpp']]],
+  ['bool2string',['Bool2String',['../df/d0c/Utils_8cpp.html#a78c380ff595f4574b2bb6fa68f15e410',1,'Bool2String(const bool bBool):&#160;Utils.cpp'],['../d9/ded/Utils_8h.html#a78c380ff595f4574b2bb6fa68f15e410',1,'Bool2String(const bool bBool):&#160;Utils.cpp']]],
   ['bprecisionactive',['bPrecisionActive',['../d3/d72/classCDigFloat.html#aa1f6ed0312a2aa6ae5ee2abd195adefc',1,'CDigFloat']]]
 ];

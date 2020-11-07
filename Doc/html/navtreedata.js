@@ -29,8 +29,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"da/d3d/ComplexMeasureMacros_8h.html#a0123f2822a29c9e85300f1d0134654ce",
-"df/d21/classCFloatingMeasure.html#aa30b4d0ea6b6bbc022717c875419fb44"
+"da/d3b/classCSingleton.html",
+"df/d21/classCFloatingMeasure.html#a841b94d2883274e67999688fad40d538"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
