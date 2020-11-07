@@ -142,17 +142,18 @@ namespace FloatingMeasureWrapperTest
             fmw1.Precision(new FloatingMeasureWrapper(1, fV / GV));
             Assert.IsTrue(fmw1.Value() == 11);
             fmw1.Precision(new FloatingMeasureWrapper(5, fV / GV));
-            Assert.IsTrue(fmw1.Value() == 10);
+            Assert.IsTrue(fmw1.Value() == 11);
             fmw1.Precision(new FloatingMeasureWrapper(0.1, fV / GV));
             Assert.IsTrue(fmw1.Value() == 11.1);
             fmw1.Precision(new FloatingMeasureWrapper(0.5, fV / GV));
-            Assert.IsTrue(fmw1.Value() == 11);
+            Assert.IsTrue(fmw1.Value() == 11.1);
             fmw1.Precision(new FloatingMeasureWrapper(0.01, fV / GV));
             Assert.IsTrue(fmw1.Value() == 11.11);
             fmw1.Precision(new FloatingMeasureWrapper(0.05, fV / GV));
-            Assert.IsTrue(fmw1.Value() == 11.1);
+            Assert.IsTrue(fmw1.Value() == 11.11);
 
         }
+
         [TestMethod]
         public void Comparison()
         {
@@ -183,6 +184,27 @@ namespace FloatingMeasureWrapperTest
             Assert.IsFalse(fmw1 <= fmw2);
             Assert.IsFalse(fmw1 > fmw2);
             Assert.IsFalse(fmw1 < fmw2);
+
+            // unequal by value
+            fmw2 = new FloatingMeasureWrapper(9.95, fV / GV);
+            Assert.IsTrue(fmw1 != fmw2);
+            Assert.IsFalse(fmw1 == fmw2);
+            Assert.IsTrue(fmw1 >= fmw2);
+            Assert.IsFalse(fmw1 <= fmw2);
+            Assert.IsTrue(fmw1 > fmw2);
+            Assert.IsFalse(fmw1 < fmw2);
+
+            // setting precision --> equality:
+            // set precision for right partner --> ruling precision
+            fmw1.Precision(new FloatingMeasureWrapper(0.1, fV / GV));
+            Assert.IsFalse(fmw1 != fmw2);
+            Assert.IsTrue(fmw1 == fmw2);
+            Assert.IsTrue(fmw1 >= fmw2);
+            Assert.IsTrue(fmw1 <= fmw2);
+            Assert.IsFalse(fmw1 > fmw2);
+            Assert.IsFalse(fmw1 < fmw2);
+
+
         }
     }
 }

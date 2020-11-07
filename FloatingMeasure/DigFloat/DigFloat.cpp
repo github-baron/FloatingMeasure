@@ -74,8 +74,9 @@ bool CDigFloat::operator==(const CDigFloat& other) const
     // set value to other.Value() 
     otherTemp.Value(other.RawValue());
     
-    // now compare
-    return  fabs(Value() - otherTemp.Value()) <=  ( PrecisionActive() ? PrecisionResolution()/2. : dTotalError);
+    // now compare: take into account: in case of active precision there is also the same error which must be
+    // considered for comparison
+    return  fabs(Value() - otherTemp.Value()) <=  ( PrecisionActive() ? PrecisionResolution()/2. : 0) + dTotalError;
 }
 bool CDigFloat::operator==(const double other) const
 {
