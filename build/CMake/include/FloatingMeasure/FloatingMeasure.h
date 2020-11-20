@@ -27,6 +27,34 @@
 
 #include<Measure/ComplexMeasure.h>
 
+// DEBUG
+#include <iostream>
+
+/**
+ * \mainpage
+ * FloatingMeasure is a class API for physical calculations. 
+ * It offers:
+ * - definition of a set of  phyisical  measures 
+ *   - simple handling by separating the definition of a measure into its base-measure (::eBaseMeasure) and its pre-measure (::ePreMeasure):<br>
+ *   new base / pre- measures can easily be added and all the modifications defined by the pre- / base- measures come for free
+ * - support of complex measures (see ::CComplexMeasure):<br>
+ *   - construction by concatenation of any defined measures by means of multiplication (operator "*") and division (operator "/").
+ *   - simplification 
+ *   - scaling to any compatible complex measure
+ * - handling of numerical errors due to the incomplete digital representation of floating numbers (::CDigFloat):
+ *   - comparison operators considering the numerical error
+ *   - all kinds of mathematical operations
+ *   - mathematical functions pow / log 
+ *   - calculating the numerical error propagation for mathematical operations / functions
+ *   - handling of user given resolution
+ * - support  for physical calculations by utilizing ::CDigFloat and ::CComplexMeasure in a class ::CFloatingMeasure
+ *   - all kinds of mathematical operations
+ *   - handling of user given resolution
+ *   - simplification of complex measures
+ *   - scaling to compatible (complex) measures
+ *   - printing
+ */
+
 /**
  * @brief FloatingMeasure: represents a floating number with a complex measure (e.g. 10*m/s).
  * This class offers:
@@ -36,7 +64,11 @@
  * - handling of the precision of the floating part for output and calculations
  * 
  */
-class DLLEXPORT_CMD CFloatingMeasure
+class 
+#ifdef _WIN32
+FloatingMeasureDLL_API
+#endif
+ CFloatingMeasure
 {
     friend class CComplexMeasure;
 public:
@@ -78,7 +110,7 @@ public:
     /**
      * @brief comparison operator
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return bool
      */
     bool operator==(const CFloatingMeasure& other) const;
@@ -86,7 +118,7 @@ public:
     /**
      * @brief operator!=
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return bool
      */
     bool operator!=(const CFloatingMeasure& other) const;
@@ -94,35 +126,35 @@ public:
     /**
      * @brief operator<
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return bool
      */
     bool operator<(const CFloatingMeasure& other) const;
     /**
      * @brief operator<=
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return bool
      */
     bool operator<=(const CFloatingMeasure& other) const;
     /**
      * @brief operator>=
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return bool
      */
     bool operator>=(const CFloatingMeasure& other) const;
     /**
      * @brief operator>
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return bool
      */
     bool operator>(const CFloatingMeasure& other) const;
     /**
      * @brief operator +=
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return CFloatingMeasure&
      */
     CFloatingMeasure& operator+=(const CFloatingMeasure& other);
@@ -130,7 +162,7 @@ public:
     /**
      * @brief operator-=
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return CFloatingMeasure&
      */
     CFloatingMeasure& operator-=(const CFloatingMeasure& other);
@@ -138,7 +170,7 @@ public:
     /**
      * @brief operator*=
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return CFloatingMeasure&
      */
     CFloatingMeasure& operator*=(const CFloatingMeasure& other);
@@ -146,7 +178,7 @@ public:
     /**
      * @brief operator/=
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return CFloatingMeasure&
      */
     CFloatingMeasure& operator/=(const CFloatingMeasure& other);
@@ -154,7 +186,7 @@ public:
     /**
      * @brief operator +
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return CFloatingMeasure&
      */
     CFloatingMeasure operator+(const CFloatingMeasure& other);
@@ -162,7 +194,7 @@ public:
     /**
      * @brief operator-
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return CFloatingMeasure&
      */
     CFloatingMeasure operator-(const CFloatingMeasure& other);
@@ -170,7 +202,7 @@ public:
     /**
      * @brief operator*
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return CFloatingMeasure&
      */
     CFloatingMeasure operator*(const CFloatingMeasure& other);
@@ -178,23 +210,31 @@ public:
     /**
      * @brief operator/
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * @return CFloatingMeasure&
      */
     CFloatingMeasure operator/(const CFloatingMeasure& other);
-    
+
     /**
      * @brief operator*=
-     * 
-     * @param other p_other:double
+     *
+     * @param other:double
      * @return CFloatingMeasure&
      */
     CFloatingMeasure& operator*=(const double& other);
+
+    /**
+     * @brief operator*=
+     *
+     * @param other: type CComplexMeasure
+     * @return CFloatingMeasure&
+     */
+    CFloatingMeasure& operator*=(const CComplexMeasure& other);
     
     /**
      * @brief operator/=
      * 
-     * @param other p_other:double
+     * @param other: double
      * @return CFloatingMeasure&
      */
     CFloatingMeasure& operator/=(const double& other);
@@ -202,7 +242,7 @@ public:
     /**
      * @brief operator*
      * 
-     * @param other p_other:double
+     * @param other:double
      * @return CFloatingMeasure&
      */
     CFloatingMeasure operator*(const double& other);
@@ -210,7 +250,7 @@ public:
     /**
      * @brief operator/
      * 
-     * @param other p_other:double
+     * @param other:double
      * @return CFloatingMeasure&
      */
     CFloatingMeasure operator/(const double& other);
@@ -234,7 +274,7 @@ public:
     /**
      * @brief check measures for compatibility
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      * 
      * @return bool
      */
@@ -243,7 +283,7 @@ public:
     /**
      * @brief check measures for compatibility
      * 
-     * @param other p_other:CComplexMeasure&
+     * @param other:CComplexMeasure&
      * 
      * @return bool
      */
@@ -252,14 +292,14 @@ public:
     /**
      * @brief scales to CComplexMeasure of other
      * 
-     * @param other p_other:CFloatingMeasure
+     * @param other:CFloatingMeasure
      */
     void ScaleTo(const CFloatingMeasure& other); 
     
     /**
      * @brief scales to CComplexMeasure other
      * 
-     * @param other p_other:CComplexMeasure&
+     * @param other:CComplexMeasure&
      */
     void ScaleTo(const CComplexMeasure& other); 
     
@@ -342,7 +382,8 @@ protected:
      * 
      */
     void _Init();
-    void _Precision(const CFloatingMeasure* pOtherPrecision );
+    void _Precision(const CFloatingMeasure* pOtherPrecision);
+    void _ScalePrecision(const CComplexMeasure& other);
     /////////////////////////////////////////////////////
     // protected getter / setter
     /////////////////////////////////////////////////////
@@ -350,13 +391,13 @@ protected:
     /**
      * @brief setter for cmMeasure
      * 
-     * @param other p_other:CComplexMeasure
+     * @param other:CComplexMeasure
      */
     void Measure(const CComplexMeasure& other);
     /**
      * @brief setter for dfFloating
      * 
-     * @param other p_other:CDigFloat
+     * @param other:CDigFloat
      */
     void Floating(const CDigFloat& other ) {dfFloating = other;}
     
@@ -374,11 +415,15 @@ protected:
     /////////////////////////////////////////////////////
 /**
  * @brief abs: returns CFloatingMeasure with absolute value;
- * 
+ *
  * @param FM: CFloatingMeasure
  * @return CFloatingMeasure
  */
-CFloatingMeasure abs(const CFloatingMeasure& FM );
+CFloatingMeasure
+#ifdef _WIN32
+FloatingMeasureDLL_API
+#endif
+abs(const CFloatingMeasure& FM);
 
 /**
  * @brief operator* : enables CFloatingMeasure = 10*mV;
@@ -387,7 +432,11 @@ CFloatingMeasure abs(const CFloatingMeasure& FM );
  * @param Measure: CComplexMeasure
  * @return CFloatingMeasure
  */
-CFloatingMeasure operator*(const CDigFloat& Floating ,const CComplexMeasure& Measure) { return CFloatingMeasure(Floating, Measure);}
+CFloatingMeasure
+#ifdef _WIN32
+FloatingMeasureDLL_API
+#endif
+inline operator*(const CDigFloat& Floating ,const CComplexMeasure& Measure) { return CFloatingMeasure(Floating, Measure);}
 
 /**
  * @brief operator* : enables CFloatingMeasure = mV*10;
@@ -396,7 +445,11 @@ CFloatingMeasure operator*(const CDigFloat& Floating ,const CComplexMeasure& Mea
  * @param Floating: CDigFloat 
  * @return CFloatingMeasure
  */
-CFloatingMeasure operator*(const CComplexMeasure& Measure,const CDigFloat& Floating) { return CFloatingMeasure(Floating, Measure);}
+CFloatingMeasure
+#ifdef _WIN32
+FloatingMeasureDLL_API
+#endif
+inline operator*(const CComplexMeasure& Measure,const CDigFloat& Floating) { return CFloatingMeasure(Floating, Measure);}
 
 /**
  * @brief operator* : enables CFloatingMeasure = 10*mV*uA;
@@ -405,7 +458,11 @@ CFloatingMeasure operator*(const CComplexMeasure& Measure,const CDigFloat& Float
  * @param Measure: CComplexMeasure (e.g. uA)
  * @return CFloatingMeasure
  */
-CFloatingMeasure operator*(const CFloatingMeasure& FloatingMeasure ,const CComplexMeasure& Measure) { return CFloatingMeasure(FloatingMeasure.Floating(), FloatingMeasure.Measure()*Measure);}
+CFloatingMeasure
+#ifdef _WIN32
+FloatingMeasureDLL_API
+#endif
+inline operator*(const CFloatingMeasure& FloatingMeasure ,const CComplexMeasure& Measure) { return CFloatingMeasure(FloatingMeasure.Floating(), FloatingMeasure.Measure()*Measure);}
 
 /**
  * @brief operator* : enables CFloatingMeasure = mV*uA*10;
@@ -414,7 +471,11 @@ CFloatingMeasure operator*(const CFloatingMeasure& FloatingMeasure ,const CCompl
  * @param FloatingMeasure: CFloatingMeasure (e.g. 10)
  * @return CFloatingMeasure
  */
-CFloatingMeasure operator*(const CComplexMeasure& Measure, const CFloatingMeasure& FloatingMeasure ) { return CFloatingMeasure(FloatingMeasure.Floating(), FloatingMeasure.Measure()*Measure);}
+CFloatingMeasure
+#ifdef _WIN32
+FloatingMeasureDLL_API
+#endif
+inline operator*(const CComplexMeasure& Measure, const CFloatingMeasure& FloatingMeasure ) { return CFloatingMeasure(FloatingMeasure.Floating(), FloatingMeasure.Measure()*Measure);}
 
 /**
  * @brief operator/ : enables CFloatingMeasure = 10/mV;
@@ -423,7 +484,11 @@ CFloatingMeasure operator*(const CComplexMeasure& Measure, const CFloatingMeasur
  * @param Measure: CComplexMeasure
  * @return CFloatingMeasure
  */
-CFloatingMeasure operator/(const CDigFloat& Floating ,const CComplexMeasure& Measure) { return CFloatingMeasure(Floating, CComplexMeasure(pmIdent, bmNumber) / Measure);}
+CFloatingMeasure
+#ifdef _WIN32
+FloatingMeasureDLL_API
+#endif
+inline operator/(const CDigFloat& Floating ,const CComplexMeasure& Measure) { return CFloatingMeasure(Floating, CComplexMeasure(pmIdent, bmNumber) / Measure);}
 
 /**
  * @brief operator/ : enables CFloatingMeasure = mV/10;
@@ -432,7 +497,11 @@ CFloatingMeasure operator/(const CDigFloat& Floating ,const CComplexMeasure& Mea
  * @param Floating: CDigFloat 
  * @return CFloatingMeasure
  */
-CFloatingMeasure operator/(const CComplexMeasure& Measure,const CDigFloat& Floating ) { return CFloatingMeasure(Floating, CComplexMeasure(pmIdent, bmNumber) / Measure);}
+CFloatingMeasure
+#ifdef _WIN32
+FloatingMeasureDLL_API
+#endif
+inline operator/(const CComplexMeasure& Measure,const CDigFloat& Floating ) { return CFloatingMeasure(Floating, CComplexMeasure(pmIdent, bmNumber) / Measure);}
 
 /**
  * @brief operator/ : enables CFloatingMeasure = 10*mV/uA;
@@ -441,6 +510,10 @@ CFloatingMeasure operator/(const CComplexMeasure& Measure,const CDigFloat& Float
  * @param Measure: CComplexMeasure (e.g. uA)
  * @return CFloatingMeasure
  */
-CFloatingMeasure operator/(const CFloatingMeasure& FloatingMeasure ,const CComplexMeasure& Measure) { return CFloatingMeasure(FloatingMeasure.Floating(), FloatingMeasure.Measure()/Measure);}
+CFloatingMeasure
+#ifdef _WIN32
+FloatingMeasureDLL_API
+#endif
+inline operator/(const CFloatingMeasure& FloatingMeasure ,const CComplexMeasure& Measure) { return CFloatingMeasure(FloatingMeasure.Floating(), FloatingMeasure.Measure()/Measure);}
 
 #endif // CFLOATINGMEASURE_H

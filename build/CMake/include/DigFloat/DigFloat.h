@@ -51,9 +51,19 @@ class CFloatingMeasure;
  * - setting of user defined precision for comparing and printing.
  * 
  */
-class DLLEXPORT_CMD CDigFloat
+class 
+#ifdef _WIN32
+FloatingMeasureDLL_API
+#endif
+CDigFloat
 {
+    ////////////////////////////////////////////////////
+    // friends
+    ///////////////////////////////////////////////////
     friend class CFloatingMeasure;
+    friend CDigFloat log(const CDigFloat& DF, const CDigFloat& dfBase );
+    friend CDigFloat pow(const CDigFloat& dfBase, const CDigFloat& dfExp);
+    
 public:
     
     ///////////////////////////////////////////////////
@@ -340,6 +350,18 @@ public:
     void RawValue(const double& other ) { dValue = other;}
     
     /**
+     * @brief getter for CDigFloat::dValue - CDigFloat::dError -  (protected: for internal use only)
+     * 
+     */
+    double ValueMinLimit() const {return dValue - dError;}
+
+    /**
+     * @brief getter for CDigFloat::dValue + CDigFloat::dError -  (protected: for internal use only)
+     * 
+     */
+    double ValueMaxLimit() const {return dValue + dError;}
+    
+    /**
      * @brief getter of CDigFloat::dError conditionally considering CDigFloat::nPrecision: <br>
      * see CDigFloat::PrecisionActive() and CDigFloat::Precision()
      * 
@@ -365,7 +387,7 @@ public:
      * 
      * @param UserPrecision: int, defining the resolution of CDigFloat::dValue
      */
-    void Precision(const int UserPrecision) { nPrecision = UserPrecision; dPrecisionResolution = pow(10,-UserPrecision);}
+    void Precision(const int UserPrecision) { nPrecision = UserPrecision; dPrecisionResolution = pow(10,-UserPrecision); PrecisionActive(true);}
     
     /**
      * @brief getter for bPrecisionActive
@@ -502,6 +524,14 @@ protected:
  * @return CDigFloat
  */
 CDigFloat abs(const CDigFloat& DF );
+/**
+ * @brief log: returns CDigFloat logarithm to user given base (default: natural logarithm with base euler number);
+ * 
+ * @param DF: CDigFloat
+ * @param dfBase: CDigFloat as base (optional)
+ * @return CDigFloat
+ */
+CDigFloat log(const CDigFloat& DF, const CDigFloat& dfBase = 0);
 
 
 
