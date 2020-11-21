@@ -1,6 +1,6 @@
 ## Synopsis
 
-FloatingMeasure is a class API for calculations of floating point numbers with measures. For example the velocity is represented by an expression in your code like </br> 
+FloatingMeasure is a class API for physical calculations of floating point numbers with measures. For example the velocity is represented by an expression in your code like </br> 
 ```c++
 CFloatingMeasure velocity = 150*km/h;
 ```
@@ -16,7 +16,7 @@ In our example the distance_measure consists of the pre measure "k" (kilo) and t
 
 The "floating" part of this API considers errors due to the numerical floating point representation. As a consequence e.g. the <a href="FloatingMeasure/FloatingMeasure.cpp"> comparison operator </a> allows equality for a range of values given by the numerical error instead of comparing to exact one value (which often fails .... unwanted).  
 
-Even the history (i.e. the sequence of mathematical operations) of these errors is protocolled.
+Even the history (i.e. the sequence of mathematical operations) of these errors is considered and propagates depending on the mathematical operations and the operands and their error history.
 
 
 ## Code Example
