@@ -375,7 +375,7 @@ CDigFloat pow(const CDigFloat& dfBase, const CDigFloat& dfExp)
 CDigFloat sqrt(const CDigFloat& DF)
 {
     CDigFloat dfResult;
-    dfResult.RawValue(DF.RawValue());
+    dfResult.RawValue(sqrt(DF.RawValue()));
     
     // calculate the error by the half of the total error range
     dfResult.dError = (sqrt(DF.ValueMaxLimit()) - sqrt(DF.ValueMinLimit()))/2.;
