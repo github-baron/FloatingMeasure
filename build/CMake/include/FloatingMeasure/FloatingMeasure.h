@@ -91,6 +91,7 @@ public:
      * @param OtherMeasure :CComplexMeasure
      */
     CFloatingMeasure(const CDigFloat& OtherFloating, const CComplexMeasure& OtherMeasure);
+    
     /**
      * Destructor
      */

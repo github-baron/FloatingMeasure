@@ -40,6 +40,7 @@
 #include <cppunit/extensions/HelperMacros.h>
 
 // include all test classes
+#include "Utils_Test.cpp"
 #include "PreMeasure_Test.cpp"
 #include "BaseMeasure_Test.cpp"
 #include "SimpleMeasure_Test.cpp"
@@ -55,6 +56,7 @@ int main( int argc, char* argv[] )
     std::string testPath = (argc > 1) ? string(argv[1]) : std::string("");
     
     // declare all tests
+    CUtils_Test UtilsTest;
     CPreMeasure_Test PreMeasureTest;
     CBaseMeasure_Test BaseMeasureTest;
     CSimpleMeasure_Test SimpleMeasureTest;
@@ -80,6 +82,16 @@ int main( int argc, char* argv[] )
     
     // Add the top suite to the test runner 
     CPPUNIT_NS::TestRunner runner;
+
+    /////////////////////////////////////////////////
+    //// add all tests of CUtils_Test
+    /////////////////////////////////////////////////
+    runner.addTest( new CppUnit::TestCaller<CUtils_Test> ( 
+                    "Utils: DoubleMachineEpsilon",
+                    &CUtils_Test::Utils_DoubleMachineEpsilon,
+                    &UtilsTest
+                    )
+                  );
 
     /////////////////////////////////////////////////
     //// add all tests of CBaseMeasure_Test
@@ -338,6 +350,12 @@ int main( int argc, char* argv[] )
     runner.addTest( new CppUnit::TestCaller<CDigFloat_Test> ( 
                         "DigFloat: error propagation",
                         &CDigFloat_Test::ErrorPropagation,
+                        &DigFloatTest
+                        )
+                  );
+    runner.addTest( new CppUnit::TestCaller<CDigFloat_Test> ( 
+                        "DigFloat: error propagation for function sqrt",
+                        &CDigFloat_Test::ErrorPropagation_sqrt,
                         &DigFloatTest
                         )
                   );

@@ -61,6 +61,8 @@ CDigFloat
     // friends
     ///////////////////////////////////////////////////
     friend class CFloatingMeasure;
+    friend CDigFloat abs(const CDigFloat& DF );
+    friend CDigFloat sqrt(const CDigFloat& DF );
     friend CDigFloat log(const CDigFloat& DF, const CDigFloat& dfBase );
     friend CDigFloat pow(const CDigFloat& dfBase, const CDigFloat& dfExp);
     
@@ -524,6 +526,7 @@ protected:
  * @return CDigFloat
  */
 CDigFloat abs(const CDigFloat& DF );
+
 /**
  * @brief log: returns CDigFloat logarithm to user given base (default: natural logarithm with base euler number);
  * 
@@ -532,6 +535,23 @@ CDigFloat abs(const CDigFloat& DF );
  * @return CDigFloat
  */
 CDigFloat log(const CDigFloat& DF, const CDigFloat& dfBase = 0);
+
+/**
+ * @brief pow: returns CDigFloat exponential expression to user given base and exponent
+ * 
+ * @param dfBase: CDigFloat as base 
+ * @param dfExp: CDigFloat as exponent
+ * @return CDigFloat
+ */
+CDigFloat pow(const CDigFloat& dfBase, const CDigFloat& dfExp);
+
+/**
+ * @brief sqrt: returns CDigFloat as square root of user given value 
+ * 
+ * @param DF: CDigFloat
+ * @return CDigFloat
+ */
+CDigFloat sqrt(const CDigFloat& DF );
 
 
 

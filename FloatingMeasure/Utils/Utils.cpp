@@ -23,7 +23,11 @@
  */
 
 #include <Utils/Utils.h>
-
+/**
+ * @brief estimate the numerical error for a 64bit double incrementing the LSB.
+ *       The maximal relative error is about 2.3e-16. Hence, for a value of 1e+308
+ *       the error is about 1e+292.
+ */
 double DoubleMachineEpsilon(double dValue)
 { 
     dbl_64 s;

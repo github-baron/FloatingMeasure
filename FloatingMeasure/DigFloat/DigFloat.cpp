@@ -141,19 +141,9 @@ CDigFloat & CDigFloat::operator/=(const CDigFloat& other)
         return *this;
     }
     
-    // calculate the error from: 
-    // I) (a1 + e1) / (a2 + e2)
-    // where
-    // a1: this->Value(), e1: this->Error()
-    // a2: other.Value(), e2: other.Error()
-    // subtract a1/a2 from I)
-    // --> etotal = (a2*e1 - a1*e2) / (a2 * (a2 + e2) )
-    // as e1 is always +- something: every single term can be positive
-    // for the calculation of the maximum --> always take the absolute value of each term
-    // --> etotal = ( abs(a2*e1) + abs(a1*e2) ) / (abs(a2)*abs(a2-e2))
-    dError = (fabs( RawError()*other.RawValue()) + fabs(  RawValue()*other.RawError() )) / 
-                  ( fabs(other.RawValue()) * (fabs( other.RawValue()) - fabs(other.RawError()) ) );
-     
+    // calculate the error from half the error range
+    dError = fabs((ValueMaxLimit()/other.ValueMinLimit()) - (ValueMinLimit()/other.ValueMaxLimit())) / 2.;
+    
     // thats what we origianally wanted to calculate
     dValue /= other.RawValue();
     
@@ -346,27 +336,22 @@ CDigFloat log(const CDigFloat& DF, const CDigFloat& dfBase /*= 0*/)
     // a) log calculation
     // b) simply setting the base divisor to the value log(base)
     if(dfBase.ValueMinLimit() > 0){
-        dError = logl(dfBase.ValueMaxLimit())-logl(dfBase.ValueMinLimit());
+        dError = (logl(dfBase.ValueMaxLimit())-logl(dfBase.ValueMinLimit()))/2.;
         if(dfLogBaseDivisor.Error() < dError)
             dfLogBaseDivisor.dError = dError;
     }
     
     // do the same for nat log of argument
-    // in case the min is < 0 --> Error = myNan
-    dfResult = logl(DF.RawValue());
-    dError = myNAN;
-    if(DF.ValueMinLimit() > 0){
-        dError = logl(DF.ValueMaxLimit())-logl(DF.ValueMinLimit());
-        if(dfResult.Error() < dError)
-            dfResult.dError = dError;
-    }
+    dfResult.dValue = logl(DF.RawValue());
+    
+    // calculate the error by half of the error range
+    if( DF.ValueMinLimit() > 0)
+        dfResult.dError = fabs(logl(DF.ValueMaxLimit()) - logl(DF.ValueMinLimit()))/2.;
+    else
+        dfResult.dError = myNAN;
     
     // now turn to base: applying divisor
     dfResult /= dfLogBaseDivisor;
-    
-    // do not forget to set error to nan in case it could not be calculated
-    if( isnan(dError) )
-        dfResult.dError = myNAN;
     
     return dfResult;
 }
@@ -377,12 +362,24 @@ CDigFloat pow(const CDigFloat& dfBase, const CDigFloat& dfExp)
     CDigFloat dfResult;
     dfResult.RawValue( pow(dfBase.RawValue(), dfExp.RawValue()));
     
-    // calculate brute force the maximal error:
-    dfResult.dError = max(max (pow( dfBase.ValueMaxLimit(),dfExp.ValueMaxLimit()), pow(dfBase.ValueMaxLimit(), dfExp.ValueMinLimit())),
+    // calculate the error by the half of the total error range
+    dfResult.dError = (max(max (pow( dfBase.ValueMaxLimit(),dfExp.ValueMaxLimit()), pow(dfBase.ValueMaxLimit(), dfExp.ValueMinLimit())),
                           max (pow( dfBase.ValueMinLimit(),dfExp.ValueMaxLimit()), pow(dfBase.ValueMinLimit(), dfExp.ValueMinLimit()))) -
                       min(min (pow( dfBase.ValueMaxLimit(),dfExp.ValueMaxLimit()), pow(dfBase.ValueMaxLimit(), dfExp.ValueMinLimit())),
-                          min (pow( dfBase.ValueMinLimit(),dfExp.ValueMaxLimit()), pow(dfBase.ValueMinLimit(), dfExp.ValueMinLimit())));
+                          min (pow( dfBase.ValueMinLimit(),dfExp.ValueMaxLimit()), pow(dfBase.ValueMinLimit(), dfExp.ValueMinLimit())))) / 2.;
                     
      
     return dfResult;
 }
+
+CDigFloat sqrt(const CDigFloat& DF)
+{
+    CDigFloat dfResult;
+    dfResult.RawValue(DF.RawValue());
+    
+    // calculate the error by the half of the total error range
+    dfResult.dError = (sqrt(DF.ValueMaxLimit()) - sqrt(DF.ValueMinLimit()))/2.;
+    
+    return dfResult;
+}
+

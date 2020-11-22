@@ -135,6 +135,7 @@ public:
             
             dfFac1 = log(dLogArg, dBase);
             CPPUNIT_ASSERT_MESSAGE( "Logarg = " + to_string(dLogArg) + "\nbase:" + to_string(dBase) + "\ncalculated : " + dfFac1.DebugOut() + "\nexpected: " + dfExpected.Print(), fabs(dfFac1.RawValue() - dfExpected.RawValue()) <= dfFac1.RawError());
+            
             CPPUNIT_ASSERT_MESSAGE("Logarg = " + to_string(dLogArg) + "\nbase:" + to_string(dBase) + "\nrelation Value / error:" + CDigFloat(fabs(dfFac1.RawError()/ dfFac1.RawValue())).DebugOut() + "\nlog result: " + dfFac1.DebugOut(), fabs(dfFac1.RawError()/dfFac1.RawValue()) <= 0.00001);
         
         }
@@ -188,12 +189,15 @@ public:
     {
         //check operator /=
         //this is pretty constant and finishes at 615 times : min double: 1e-308 max : 1e+308
-        dfFac1 = 1e+308;
+        //dfFac1 = 1e+307;
+        int nExp = 175;
+        dfFac1 = pow(10,nExp);
         dfFac2 = dfFac1/10;
+        dfFac3 = dfFac1 / dfFac2;
         dfFac1.Precision(10);
         dfFac2.Precision(10);
         dfFac3.Precision(10);
-        for(int iexp = 0; iexp < 615; iexp++)
+        for(int iexp = 0; iexp < 2*nExp; iexp++)
         {   
             CPPUNIT_ASSERT_MESSAGE( "exp = " + to_string(iexp) + "\n" + dfFac1.DebugOut() + "\n" + dfFac2.DebugOut()+ "\n" + (dfFac1/dfFac2).DebugOut(),
                                         (dfFac1/dfFac2) ==10 &&(dfFac1/dfFac2 ).Error() < 0.00004);
@@ -205,7 +209,7 @@ public:
         
         // check operator *=
         //  615 times (double value ranges from 1e-308 to 1e+308 
-        for(int iexp = 0; iexp < 615; iexp++)
+        for(int iexp = 0; iexp < nExp; iexp++)
         {   
             CPPUNIT_ASSERT_MESSAGE( "exp = " + to_string(iexp) + "\n" + dfFac1.Print() + "\n" + dfFac2.Print()+ "\n" + (dfFac1/dfFac2).Print(),
                                         (dfFac1/dfFac2) == 10 &&
@@ -245,6 +249,38 @@ public:
   
             // check for: "error must be less than 10 ppm"
             CPPUNIT_ASSERT_MESSAGE("\nbase:" + to_string(dBase)  + "\ncalculated : " + dfFac1.DebugOut() + "\nrelation Value / error:" + CDigFloat(fabs(dfFac1.RawError()/ dfFac1.RawValue())).DebugOut() + "\nlog result: " + dfFac1.DebugOut(), fabs(dfFac1.RawError()/dfFac1.RawValue()) <= 0.00001);
+        }
+        
+    }
+    
+    void ErrorPropagation_sqrt()
+    {
+        for(int iexp = 0; iexp < 1000; iexp++)
+        {   
+            // do log calculations
+            dfFac1 = sqrt(1);
+            CDigFloat dfExpected = 1;
+            
+            // remember old error
+            CDigFloat dfOldError = dfFac1.RawError();
+            
+            // check deviation of result and expected being less than the calculated error
+            CPPUNIT_ASSERT_MESSAGE( "calculation(" + to_string(iexp) + "): " + dfFac1.DebugOut() + "\nexpected: " + dfExpected.Print(), fabs(dfFac1.RawValue() - dfExpected.RawValue()) <= dfFac1.RawError());
+            
+            // check the relation of value and error being less than 0.00001
+            CPPUNIT_ASSERT_MESSAGE("calculation(" + to_string(iexp) + "): " +"\nrelation Value / error:" + CDigFloat(fabs(dfFac1.RawError()/ dfFac1.RawValue())).DebugOut() + "\nlog result: " + dfFac1.DebugOut(), fabs(dfFac1.RawError()/dfFac1.RawValue()) <= 0.00001);
+            
+            // check for: "error must not be zero"
+            CPPUNIT_ASSERT_MESSAGE(  "calculation(" + to_string(iexp) + "): " + dfFac1.DebugOut() + "\nexpected: " + dfExpected.Print(), dfFac1.RawError() > 0);
+            
+            // check for : "deviation must be less than error"
+            CPPUNIT_ASSERT_MESSAGE("calculation(" + to_string(iexp) + "): " + dfFac1.DebugOut() + "\nexpected: " + dfExpected.Print(), fabs(dfFac1.RawValue() - dfExpected.RawValue()) <= dfFac1.RawError());
+
+            // check for : "old error must be less than actual error"
+            CPPUNIT_ASSERT_MESSAGE("calculation(" + to_string(iexp) + "): " + "\nold Error: " + dfOldError.RawPrint(30) + "\nnew error: " + dfFac1.RawPrint(30), dfOldError <= dfFac1.RawError());
+  
+            // check for: "error must be less than 10 ppm"
+            CPPUNIT_ASSERT_MESSAGE("calculation(" + to_string(iexp) + "): " + dfFac1.DebugOut() + "\nrelation Value / error:" + CDigFloat(fabs(dfFac1.RawError()/ dfFac1.RawValue())).DebugOut() + "\nlog result: " + dfFac1.DebugOut(), fabs(dfFac1.RawError()/dfFac1.RawValue()) <= 0.00001);
         }
         
     }
