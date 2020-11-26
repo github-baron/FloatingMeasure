@@ -24,6 +24,7 @@
 
 
 #include "DigFloat.h"
+#include <iostream>
 
 CDigFloat::CDigFloat()
 {
@@ -113,21 +114,15 @@ bool CDigFloat::operator!=(const CDigFloat& other) const
 }
 CDigFloat& CDigFloat::operator*=(const CDigFloat& other)
 {
-    
-    // at first calculate the complete error and store it
-    // I) (a1 + e1) * (a2 + e2)
-    // where
-    // a1: this->Value(), e1: this->Error()
-    // a2: other.Value(), e2: other.Error()
-    // the error part is (I) - a1*a2
-    // --> etotal = a1*e2 + a2*e1 + e1*e2
-    // as e1 is always +- something: every single term can be positive
-    // for the calculation of the maximum --> always take the absolute value of each term
-    // --> max(etotal) = abs(a1*e2) + abs(a2*e1) + abs(e1*e2)
-    dError = fabs(RawValue())*other.RawError() + fabs(other.RawValue())* RawError() + RawError() * other.RawError();
+    // calculate the error from half the error range
+    double dErrorCalc = fabs(ValueMaxLimit()*other.ValueMaxLimit()- ValueMinLimit()*other.ValueMinLimit())/2.;
 
-    // now we are ready to calculate the value
-    dValue*= other.RawValue();
+    // now we are ready to calculate the value and calculating the error  by setting the DoubleMachineEpsilon(value)
+    (*this) = dValue* other.RawValue();
+    
+    // now set error to calculated error in case it is larger
+    if(dErrorCalc > RawError())
+        dError = dErrorCalc;
     
     return *this;    
     
@@ -142,10 +137,14 @@ CDigFloat & CDigFloat::operator/=(const CDigFloat& other)
     }
     
     // calculate the error from half the error range
-    dError = fabs((ValueMaxLimit()/other.ValueMinLimit()) - (ValueMinLimit()/other.ValueMaxLimit())) / 2.;
+    double dErrorHalfRange = fabs((ValueMaxLimit()/other.ValueMinLimit()) - (ValueMinLimit()/other.ValueMaxLimit())) / 2.;
     
     // thats what we origianally wanted to calculate
-    dValue /= other.RawValue();
+    (*this) = dValue / other.RawValue();
+    
+    // now set the error to max. of "half range error" and "DoubleMachineEpsilon(value)"
+    if(dError < dErrorHalfRange)
+        dError = dErrorHalfRange;
     
     return *this;
 }
@@ -272,7 +271,7 @@ string CDigFloat::RawPrint(const int UserPrecision,bool bWithError /*= true*/) c
     // ostringstream cant handle negative precision
     oss << fixed << setprecision((UserPrecision > 0 ) ? UserPrecision : 0 ) << Round2Precision(dValue, Precision());
     if ( bWithError)
-        oss << plmi << RawError();
+        oss << plmi << scientific << RawError();
     return oss.str();
 }
 string CDigFloat::DebugOut()
@@ -296,7 +295,7 @@ string CDigFloat::DebugOut()
 CDigFloat abs(const CDigFloat& DF)
 { 
     CDigFloat dfResult(DF); 
-    dfResult.RawValue(fabs(DF.RawValue())); 
+    dfResult = fabs(DF.RawValue()); 
     return dfResult;
 }
 
@@ -341,14 +340,21 @@ CDigFloat log(const CDigFloat& DF, const CDigFloat& dfBase /*= 0*/)
             dfLogBaseDivisor.dError = dError;
     }
     
-    // do the same for nat log of argument
-    dfResult.dValue = logl(DF.RawValue());
+    
+    // calculate the nat. log of argument:
+    dfResult = logl(DF.RawValue());
     
     // calculate the error by half of the error range
     if( DF.ValueMinLimit() > 0)
-        dfResult.dError = fabs(logl(DF.ValueMaxLimit()) - logl(DF.ValueMinLimit()))/2.;
-    else
-        dfResult.dError = myNAN;
+    {
+        // calculate the "half error range" error
+        double dError = fabs(logl(DF.ValueMaxLimit()) - logl(DF.ValueMinLimit()))/2.;
+        
+        //  take the max error of "simple value setting" and "half error range"
+        if( dfResult.RawError() < dError)
+            dfResult.dError = dError;
+    
+    }
     
     // now turn to base: applying divisor
     dfResult /= dfLogBaseDivisor;
@@ -360,14 +366,18 @@ CDigFloat log(const CDigFloat& DF, const CDigFloat& dfBase /*= 0*/)
 CDigFloat pow(const CDigFloat& dfBase, const CDigFloat& dfExp)
 { 
     CDigFloat dfResult;
-    dfResult.RawValue( pow(dfBase.RawValue(), dfExp.RawValue()));
+    // set value and error (by simply calculating the DoubleMachineEpsilon ( value))
+    dfResult = ( pow(dfBase.RawValue(), dfExp.RawValue()));
     
     // calculate the error by the half of the total error range
-    dfResult.dError = (max(max (pow( dfBase.ValueMaxLimit(),dfExp.ValueMaxLimit()), pow(dfBase.ValueMaxLimit(), dfExp.ValueMinLimit())),
+    double dError = (max(max (pow( dfBase.ValueMaxLimit(),dfExp.ValueMaxLimit()), pow(dfBase.ValueMaxLimit(), dfExp.ValueMinLimit())),
                           max (pow( dfBase.ValueMinLimit(),dfExp.ValueMaxLimit()), pow(dfBase.ValueMinLimit(), dfExp.ValueMinLimit()))) -
                       min(min (pow( dfBase.ValueMaxLimit(),dfExp.ValueMaxLimit()), pow(dfBase.ValueMaxLimit(), dfExp.ValueMinLimit())),
                           min (pow( dfBase.ValueMinLimit(),dfExp.ValueMaxLimit()), pow(dfBase.ValueMinLimit(), dfExp.ValueMinLimit())))) / 2.;
-                    
+    
+    // now take the max error of "simple value setting" and "half error range"
+    if( dfResult.RawError() < dError)
+        dfResult.dError = dError;                    
      
     return dfResult;
 }
@@ -375,10 +385,16 @@ CDigFloat pow(const CDigFloat& dfBase, const CDigFloat& dfExp)
 CDigFloat sqrt(const CDigFloat& DF)
 {
     CDigFloat dfResult;
-    dfResult.RawValue(sqrt(DF.RawValue()));
+    
+    // set value and error (by simply calculating the DoubleMachineEpsilon ( value))
+    dfResult = sqrt(DF.RawValue());
     
     // calculate the error by the half of the total error range
-    dfResult.dError = (sqrt(DF.ValueMaxLimit()) - sqrt(DF.ValueMinLimit()))/2.;
+    double dError = (sqrt(DF.ValueMaxLimit()) - sqrt(DF.ValueMinLimit()))/2.;
+    
+    // now take the max error of "simple value setting" and "half error range"
+    if( dfResult.RawError() < dError)
+        dfResult.dError = dError;
     
     return dfResult;
 }
