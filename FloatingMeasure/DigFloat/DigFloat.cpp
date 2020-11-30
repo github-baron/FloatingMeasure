@@ -271,7 +271,7 @@ string CDigFloat::RawPrint(const int UserPrecision,bool bWithError /*= true*/) c
     // ostringstream cant handle negative precision
     oss << fixed << setprecision((UserPrecision > 0 ) ? UserPrecision : 0 ) << Round2Precision(dValue, Precision());
     if ( bWithError)
-        oss << plmi << scientific << RawError();
+        oss << plmi  << RawError();
     return oss.str();
 }
 string CDigFloat::DebugOut()
@@ -282,8 +282,8 @@ string CDigFloat::DebugOut()
         << "precision (" << Precision() << ") : " << Print() << endl
         << "precision active: " << (PrecisionActive() ? "true" : "false")  << endl 
         << "resolution = " << dPrecisionResolution << endl
-        << "rounded value: " << setprecision(DF_RAW_PRINT_PRECISION) << Round2Precision(dValue,Precision()) << endl 
-        << "rounded error: " << setprecision(DF_RAW_PRINT_PRECISION) << Round2Precision(dError,Precision()) << endl;
+        << "rounded value: " << scientific << setprecision(DF_RAW_PRINT_PRECISION) << Round2Precision(dValue,Precision()) << endl 
+        << "rounded error: " << scientific << setprecision(DF_RAW_PRINT_PRECISION) << Round2Precision(dError,Precision()) << endl;
         
     return oss.str();
 }

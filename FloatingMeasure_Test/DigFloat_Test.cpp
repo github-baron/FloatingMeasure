@@ -25,10 +25,6 @@
 #include "../FloatingMeasure/Utils/Utils.h"
 #include "../FloatingMeasure/DigFloat/DigFloat.h"
 #include <math.h>
-#include <errno.h>      /* errno, EDOM */
-#include <fenv.h>       /* feclearexcept, fetestexcept, FE_ALL_EXCEPT, FE_INVALID */
-#pragma STDC FENV_ACCESS on
-
 
 class CDigFloat_Test : public CppUnit::TestFixture  {
 
@@ -99,6 +95,11 @@ public:
         dfFac2 = 0.1;
         CPPUNIT_ASSERT_MESSAGE( dfFac2.Print() , dfFac2 == 0.1);
         CPPUNIT_ASSERT_MESSAGE( dfFac2.Print() , dfFac2.RawError() == DoubleMachineEpsilon(0.1));
+     
+        // check for -1
+        dfFac2 = -1;
+        CPPUNIT_ASSERT_MESSAGE( dfFac2.Print() , dfFac2 == -1);
+        CPPUNIT_ASSERT_MESSAGE( dfFac2.Print() , dfFac2.RawError() == DoubleMachineEpsilon(-1));
         
         CDigFloat dfFac3(10);
         CPPUNIT_ASSERT_MESSAGE( dfFac3.Print() , dfFac3 == 10);
@@ -264,31 +265,11 @@ public:
         CDigFloat dfOldError ;
         CDigFloat dfNewError;
         
-         errno = 0;
-        if (math_errhandling & MATH_ERREXCEPT) feclearexcept(FE_ALL_EXCEPT);
-
-        
-        
-        
-        dfFac1 = 1;
-        if (math_errhandling & MATH_ERRNO) {
-            CPPUNIT_ASSERT_MESSAGE( "errno set to EDOM\n", errno !=EDOM);
-        }
-         
-         if( math_errhandling & MATH_ERREXCEPT)
-         {
-         CPPUNIT_ASSERT_MESSAGE( "FE_OVERFLOW raised\n", fetestexcept(FE_OVERFLOW));
-         CPPUNIT_ASSERT_MESSAGE( "FE_UNDERFLOW raised\n", fetestexcept(FE_UNDERFLOW));
-         CPPUNIT_ASSERT_MESSAGE( "FE_INVALID raised\n", fetestexcept(FE_INVALID));
-         CPPUNIT_ASSERT_MESSAGE( "FE_INEXACT raised\n", fetestexcept(FE_INEXACT));
-         CPPUNIT_ASSERT_MESSAGE( "FE_DIVBYZERO raised\n", fetestexcept(FE_DIVBYZERO));
-         }
-  
+ 
+        dfFac1 = 1e+308;
         CDigFloat dfExpected = sqrt(dfFac1.RawValue());
         dfOldError = dfExpected.RawError() / dfExpected.RawValue();
-        // Debug
-        cout << endl;
-        for(int iexp = 0; iexp < 1000; iexp++)
+        for(int iexp = 0; iexp < 50; iexp++)
         {   
             
             // calculate the expected value by setting by double calculation
@@ -304,7 +285,45 @@ public:
             // error should grow
             dfNewError = dfFac1.RawError() / dfFac1.RawValue();
             
-            cout << iexp << ":" << "value " << dfFac1.RawPrint(30) <<  endl; 
+            // check deviation of result and expected being less than the calculated error
+            CPPUNIT_ASSERT_MESSAGE( "calculation(" + to_string(iexp) + "): " + dfFac1.DebugOut() + "\nexpected: " + dfExpected.Print(), fabs(dfFac1.RawValue() - dfExpected.RawValue()) <= dfFac1.RawError());
+            
+            // check the relation of value and error being less than 0.00001
+            CPPUNIT_ASSERT_MESSAGE("calculation(" + to_string(iexp) + "): " +"\nrelation Value / error:" + CDigFloat(fabs(dfFac1.RawError()/ dfFac1.RawValue())).DebugOut() + "\nlog result: " + dfFac1.DebugOut(), fabs(dfFac1.RawError()/dfFac1.RawValue()) <= 0.00001);
+            
+            // check for: "error must not be zero"
+            CPPUNIT_ASSERT_MESSAGE(  "calculation(" + to_string(iexp) + "): " + dfFac1.DebugOut() + "\nexpected: " + dfExpected.Print(), dfFac1.RawError() > 0);
+            
+            // check for : "deviation must be less than error"
+            CPPUNIT_ASSERT_MESSAGE("calculation(" + to_string(iexp) + "): " + dfFac1.DebugOut() + "\nexpected: " + dfExpected.Print(), fabs(dfFac1.RawValue() - dfExpected.RawValue()) <= dfFac1.RawError());
+ 
+            // check for: "error must be less than 10 ppm"
+            CPPUNIT_ASSERT_MESSAGE("calculation(" + to_string(iexp) + "): " + dfFac1.DebugOut() + "\nrelation Value / error:" + CDigFloat(fabs(dfFac1.RawError()/ dfFac1.RawValue())).DebugOut() + "\nlog result: " + dfFac1.DebugOut(), fabs(dfFac1.RawError()/dfFac1.RawValue()) <= 2.3e-16);
+                        
+            // remember old relative error
+            dfOldError = dfNewError;
+        }
+        
+        // now ascending from 1e-308
+        
+        dfFac1 = 1e-307;
+        dfExpected = sqrt(dfFac1.RawValue());
+        dfOldError = dfExpected.RawError() / dfExpected.RawValue();
+        for(int iexp = 0; iexp < 50; iexp++)
+        {   
+            
+            // calculate the expected value by setting by double calculation
+            dfExpected = sqrt(dfFac1.RawValue());
+            
+            // do sqrt calculations
+            CDigFloat dfTemp = dfFac1;
+            dfFac1 = sqrt(dfTemp);
+            
+            // set the new relative error as DigFloat : use printing function
+            // calculation of relative error is relevant because in case the value is diminished by the 
+            // function sqrt (e.g. starting value > 1) then the error is diminished, too. But the relative
+            // error should grow
+            dfNewError = dfFac1.RawError() / dfFac1.RawValue();
             
             // check deviation of result and expected being less than the calculated error
             CPPUNIT_ASSERT_MESSAGE( "calculation(" + to_string(iexp) + "): " + dfFac1.DebugOut() + "\nexpected: " + dfExpected.Print(), fabs(dfFac1.RawValue() - dfExpected.RawValue()) <= dfFac1.RawError());
@@ -317,12 +336,7 @@ public:
             
             // check for : "deviation must be less than error"
             CPPUNIT_ASSERT_MESSAGE("calculation(" + to_string(iexp) + "): " + dfFac1.DebugOut() + "\nexpected: " + dfExpected.Print(), fabs(dfFac1.RawValue() - dfExpected.RawValue()) <= dfFac1.RawError());
-
-            // check for : "old relative error must be less than actual relative error"
-            // for the first run the errors should be identical
-/*            if(iexp > 0)
-            CPPUNIT_ASSERT_MESSAGE("calculation(" + to_string(iexp) + "): " + "\nold value / old Error: " + dfTemp.RawPrint(30,false) + plmi + dfOldError.RawPrint(30,false) + "\nnew value /new error: "+ dfFac1.RawPrint(30,false) + plmi  + dfNewError.RawPrint(30,false), dfOldError.RawValue() <= dfNewError.RawValue() );
- */ 
+ 
             // check for: "error must be less than 10 ppm"
             CPPUNIT_ASSERT_MESSAGE("calculation(" + to_string(iexp) + "): " + dfFac1.DebugOut() + "\nrelation Value / error:" + CDigFloat(fabs(dfFac1.RawError()/ dfFac1.RawValue())).DebugOut() + "\nlog result: " + dfFac1.DebugOut(), fabs(dfFac1.RawError()/dfFac1.RawValue()) <= 2.3e-16);
                         

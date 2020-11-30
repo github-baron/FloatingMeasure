@@ -33,7 +33,7 @@ double DoubleMachineEpsilon(double dValue)
     dbl_64 s;
     s.d64 = dValue;
     s.i64++;
-    return s.d64 - dValue;
+    return fabs(s.d64 - dValue);
 
 }
 double Round2Precision(const double dValue,const int nPrecision)
