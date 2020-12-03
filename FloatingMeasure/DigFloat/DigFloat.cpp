@@ -75,9 +75,16 @@ bool CDigFloat::operator==(const CDigFloat& other) const
     // set value to other.Value() 
     otherTemp.Value(other.RawValue());
     
+//     cout << "CDigFloat::operator==(const CDigFloat& other) const" << endl;
+//     cout << fixed << setprecision(30) << "RawValue() = " << RawValue() << endl;
+//     cout << fixed << setprecision(30) << "otherTemp.RawValue() = " << otherTemp.RawValue() << endl;
+//     cout << fixed << setprecision(30) <<"diff = " << fabs(RawValue() - otherTemp.RawValue()) << endl;
+//     cout << fixed << setprecision(30)<< "TotalError = " << dTotalError << endl;
+//     cout << fixed << setprecision(30)<< "TotalError (incl. prec.) = " <<  ( PrecisionActive() ? PrecisionResolution()/2. : 0) + dTotalError << endl;
+    
     // now compare: take into account: in case of active precision there is also the same error which must be
     // considered for comparison
-    return  fabs(Value() - otherTemp.Value()) <=  ( PrecisionActive() ? PrecisionResolution()/2. : 0) + dTotalError;
+    return  fabs(RawValue() - otherTemp.RawValue()) <=  ( PrecisionActive() ? PrecisionResolution()/2. : 0) + dTotalError;
 }
 bool CDigFloat::operator==(const double other) const
 {
@@ -110,7 +117,7 @@ bool CDigFloat::operator>(const CDigFloat& other) const
 
 bool CDigFloat::operator!=(const CDigFloat& other) const
 {
-    return !(*this==other);
+    return !operator==(other);
 }
 CDigFloat& CDigFloat::operator*=(const CDigFloat& other)
 {
@@ -269,9 +276,9 @@ string CDigFloat::RawPrint(const int UserPrecision,bool bWithError /*= true*/) c
     ostringstream oss;
     
     // ostringstream cant handle negative precision
-    oss << fixed << setprecision((UserPrecision > 0 ) ? UserPrecision : 0 ) << Round2Precision(dValue, Precision());
+    oss << fixed << setprecision((UserPrecision > 0 ) ? UserPrecision : 0 ) << dValue;
     if ( bWithError)
-        oss << plmi  << RawError();
+        oss << scientific << plmi  << RawError();
     return oss.str();
 }
 string CDigFloat::DebugOut()
