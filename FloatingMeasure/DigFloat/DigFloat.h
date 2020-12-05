@@ -327,7 +327,16 @@ public:
      * @brief resets CDigFloat::dError to #DoubleMachineEpsilon ( CDigFloat::dValue)
      * 
      */
-    void ResetError() { Value(dValue);}
+    void ResetError() { Value(dValue);} 
+    
+    /**
+     * @brief sets CDigFloat::dError to a user defined value. Use only if you know that your calculation errors go beyond the numerical inaccuracy for 
+     * floating numbers
+     * 
+     * @param[in] UserDefinedError CDigFloat user-defined error
+     * 
+     */
+    void SetUserDefinedError(const CDigFloat& UserDefinedError ) { dError = UserDefinedError.RawValue();}
     
     /**
      * @brief getter of CDigFloat::dValue conditionally considering  CDigFloat::nPrecision:<br>
