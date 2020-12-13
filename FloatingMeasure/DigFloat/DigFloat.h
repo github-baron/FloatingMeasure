@@ -53,7 +53,7 @@ class CFloatingMeasure;
  */
 class 
 #ifdef _WIN32
-FloatingMeasureDLL_API
+_WIN_DLL_API
 #endif
 CDigFloat
 {
@@ -561,6 +561,24 @@ CDigFloat pow(const CDigFloat& dfBase, const CDigFloat& dfExp);
  * @return CDigFloat
  */
 CDigFloat sqrt(const CDigFloat& DF );
+
+/**
+ * @brief min: returns the smaller CDigFloat
+ * 
+ * @param one: CDigFloat to compare with other
+ * @param other: CDigFloat to compare with one
+ * @return CDigFloat (one or the other)
+ */
+CDigFloat min(const CDigFloat& one, const CDigFloat& other);
+
+/**
+ * @brief max: returns the greater CDigFloat
+ * 
+ * @param one: CDigFloat to compare with other
+ * @param other: CDigFloat to compare with one
+ * @return CDigFloat (one or the other)
+ */
+CDigFloat max(const CDigFloat& one, const CDigFloat& other);
 
 
 

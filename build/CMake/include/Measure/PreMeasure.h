@@ -74,7 +74,7 @@ enum ePreMeasure
  */
 class 
 #ifdef _WIN32
-FloatingMeasureDLL_API
+_WIN_DLL_API
 #endif
  CPreMeasure : public CVectorHandle
 {

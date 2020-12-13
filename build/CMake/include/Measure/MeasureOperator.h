@@ -41,7 +41,7 @@ typedef enum{
  */
 class 
 #ifdef _WIN32
-FloatingMeasureDLL_API
+_WIN_DLL_API
 #endif
  CMeasureOperator :  public CVectorHandle
 {

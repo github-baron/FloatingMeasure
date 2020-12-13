@@ -48,14 +48,8 @@ using namespace __gnu_cxx;
 // macro definitions
 ///////////////////////////////////////////////////
 #ifdef _WIN32
-#define FloatingMeasureDLL_API __declspec(dllexport) 
+#define _WIN_DLL_API __declspec(dllexport) 
 #endif
-
-// #ifdef TestingDeviceDLL_EXPORTS
-// #define TestingDeviceDLL_API __declspec(dllexport)
-// #else
-// #define TestingDeviceDLL_API __declspec(dllimport)
-// #endif
 
 
 #define myNAN               nan("1")
@@ -109,7 +103,7 @@ union dbl_64{
  */
 double 
 #ifdef _WIN32
-FloatingMeasureDLL_API
+_WIN_DLL_API
 #endif
  DoubleMachineEpsilon (double dValue) ;
 
@@ -124,7 +118,7 @@ FloatingMeasureDLL_API
  */
 double 
 #ifdef _WIN32
-FloatingMeasureDLL_API
+_WIN_DLL_API
 #endif
  Round2Precision(const double dValue, const int nPrecision);
 /**
@@ -135,7 +129,7 @@ FloatingMeasureDLL_API
  */
 string 
 #ifdef _WIN32
-FloatingMeasureDLL_API
+_WIN_DLL_API
 #endif
  Bool2String(const bool bBool);
 
@@ -151,7 +145,7 @@ FloatingMeasureDLL_API
  template <typename SingletonObject>
  class 
 #ifdef _WIN32
-FloatingMeasureDLL_API
+_WIN_DLL_API
 #endif
  CSingleton
  {

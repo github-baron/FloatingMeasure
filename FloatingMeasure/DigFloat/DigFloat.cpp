@@ -406,3 +406,20 @@ CDigFloat sqrt(const CDigFloat& DF)
     return dfResult;
 }
 
+CDigFloat max(const CDigFloat& one, const CDigFloat& other)
+{
+    if(one > other)
+        return one;
+    else
+        return other;
+}
+
+
+CDigFloat min(const CDigFloat& one, const CDigFloat& other)
+{
+    if(one < other)
+        return one;
+    else
+        return other;
+}
+

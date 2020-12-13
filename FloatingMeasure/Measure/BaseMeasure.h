@@ -71,7 +71,7 @@ enum eBaseMeasure
  */
 class 
 #ifdef _WIN32
-FloatingMeasureDLL_API
+_WIN_DLL_API
 #endif
  CBaseMeasure : public CVectorHandle
 {

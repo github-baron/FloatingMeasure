@@ -66,7 +66,7 @@
  */
 class 
 #ifdef _WIN32
-FloatingMeasureDLL_API
+_WIN_DLL_API
 #endif
  CFloatingMeasure
 {
@@ -422,7 +422,7 @@ protected:
  */
 CFloatingMeasure
 #ifdef _WIN32
-FloatingMeasureDLL_API
+_WIN_DLL_API
 #endif
 abs(const CFloatingMeasure& FM);
 
@@ -435,7 +435,7 @@ abs(const CFloatingMeasure& FM);
  */
 CFloatingMeasure
 #ifdef _WIN32
-FloatingMeasureDLL_API
+_WIN_DLL_API
 #endif
 inline operator*(const CDigFloat& Floating ,const CComplexMeasure& Measure) { return CFloatingMeasure(Floating, Measure);}
 
@@ -448,7 +448,7 @@ inline operator*(const CDigFloat& Floating ,const CComplexMeasure& Measure) { re
  */
 CFloatingMeasure
 #ifdef _WIN32
-FloatingMeasureDLL_API
+_WIN_DLL_API
 #endif
 inline operator*(const CComplexMeasure& Measure,const CDigFloat& Floating) { return CFloatingMeasure(Floating, Measure);}
 
@@ -461,7 +461,7 @@ inline operator*(const CComplexMeasure& Measure,const CDigFloat& Floating) { ret
  */
 CFloatingMeasure
 #ifdef _WIN32
-FloatingMeasureDLL_API
+_WIN_DLL_API
 #endif
 inline operator*(const CFloatingMeasure& FloatingMeasure ,const CComplexMeasure& Measure) { return CFloatingMeasure(FloatingMeasure.Floating(), FloatingMeasure.Measure()*Measure);}
 
@@ -474,7 +474,7 @@ inline operator*(const CFloatingMeasure& FloatingMeasure ,const CComplexMeasure&
  */
 CFloatingMeasure
 #ifdef _WIN32
-FloatingMeasureDLL_API
+_WIN_DLL_API
 #endif
 inline operator*(const CComplexMeasure& Measure, const CFloatingMeasure& FloatingMeasure ) { return CFloatingMeasure(FloatingMeasure.Floating(), FloatingMeasure.Measure()*Measure);}
 
@@ -487,7 +487,7 @@ inline operator*(const CComplexMeasure& Measure, const CFloatingMeasure& Floatin
  */
 CFloatingMeasure
 #ifdef _WIN32
-FloatingMeasureDLL_API
+_WIN_DLL_API
 #endif
 inline operator/(const CDigFloat& Floating ,const CComplexMeasure& Measure) { return CFloatingMeasure(Floating, CComplexMeasure(pmIdent, bmNumber) / Measure);}
 
@@ -500,7 +500,7 @@ inline operator/(const CDigFloat& Floating ,const CComplexMeasure& Measure) { re
  */
 CFloatingMeasure
 #ifdef _WIN32
-FloatingMeasureDLL_API
+_WIN_DLL_API
 #endif
 inline operator/(const CComplexMeasure& Measure,const CDigFloat& Floating ) { return CFloatingMeasure(Floating, CComplexMeasure(pmIdent, bmNumber) / Measure);}
 
@@ -513,7 +513,7 @@ inline operator/(const CComplexMeasure& Measure,const CDigFloat& Floating ) { re
  */
 CFloatingMeasure
 #ifdef _WIN32
-FloatingMeasureDLL_API
+_WIN_DLL_API
 #endif
 inline operator/(const CFloatingMeasure& FloatingMeasure ,const CComplexMeasure& Measure) { return CFloatingMeasure(FloatingMeasure.Floating(), FloatingMeasure.Measure()/Measure);}
 
