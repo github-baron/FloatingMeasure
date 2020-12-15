@@ -65,6 +65,7 @@ CDigFloat
     friend CDigFloat sqrt(const CDigFloat& DF );
     friend CDigFloat log(const CDigFloat& DF, const CDigFloat& dfBase );
     friend CDigFloat pow(const CDigFloat& dfBase, const CDigFloat& dfExp);
+    friend CDigFloat exp(const CDigFloat& dfExp);
     
 public:
     
@@ -344,14 +345,14 @@ public:
      * 
      * @return const double 
      */
-    const double Value() const {return PrecisionActive() ? Round2Precision( dValue, Precision()) : dValue;}
+    double Value() const {return PrecisionActive() ? Round2Precision( dValue, Precision()) : dValue;}
     
     /**
      * @brief getter of CDigFloat::dValue (no rounding)
      * 
      * @return const double
      */
-    const double RawValue() const { return dValue;}
+    double RawValue() const { return dValue;}
     
     /**
      * @brief setter of CDigFloat::dValue (no rounding/no error setting)
@@ -378,20 +379,20 @@ public:
      * 
      * @return const double
      */
-    const double Error() const {return PrecisionActive() ? Round2Precision( dError, Precision()) : dError;}
+    double Error() const {return PrecisionActive() ? Round2Precision( dError, Precision()) : dError;}
     
     /**
      * @brief getter of CDigFloat::dError (no rounding)
      * 
      * @return const double
      */
-    const double RawError() const { return dError;}
+    double RawError() const { return dError;}
     
     /**
      * @brief getter of CDigFloat::nPrecision
      * 
      */
-    const int Precision() const {return nPrecision;}
+    int Precision() const {return nPrecision;}
     
     /**
      * @brief sets CDigFloat::nPrecision and CDigFloat::dPrecisionResolution =10<SUP>-nPrecision</SUP> :
@@ -405,7 +406,7 @@ public:
      * 
      * @return const bool
      */
-    const bool PrecisionActive() const { return bPrecisionActive;}
+    bool PrecisionActive() const { return bPrecisionActive;}
 
     /**
      * @brief setter for bPrecisionActive: constrols rounding to digits given by nPrecision
@@ -424,7 +425,7 @@ public:
      * 
      * @return double
      */
-    const double PrecisionResolution() const {return dPrecisionResolution;}
+    double PrecisionResolution() const {return dPrecisionResolution;}
 
     /**
      * @brief check if value is valid: non-NaN
@@ -553,6 +554,14 @@ CDigFloat log(const CDigFloat& DF, const CDigFloat& dfBase = 0);
  * @return CDigFloat
  */
 CDigFloat pow(const CDigFloat& dfBase, const CDigFloat& dfExp);
+
+/**
+ * @brief exp: returns CDigFloat exponential expression to Euler number and user given exponent
+ * 
+ * @param dfExp: CDigFloat as exponent
+ * @return CDigFloat
+ */
+CDigFloat exp(const CDigFloat& dfExp);
 
 /**
  * @brief sqrt: returns CDigFloat as square root of user given value 

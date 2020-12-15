@@ -389,6 +389,24 @@ CDigFloat pow(const CDigFloat& dfBase, const CDigFloat& dfExp)
     return dfResult;
 }
 
+CDigFloat exp(const CDigFloat& dfExp)
+{
+    CDigFloat dfResult;
+    // set value and error (by simply calculating the DoubleMachineEpsilon ( value))
+    dfResult = exp(dfExp.RawValue());
+   
+    // calculate the error by the half of the total error range
+    double dError = exp(dfExp.ValueMaxLimit())-exp(dfExp.ValueMinLimit());
+                    
+    // now take the max error of "simple value setting" and "half error range"
+    if( dfResult.RawError() < dError)
+        dfResult.dError = dError;                    
+     
+    return dfResult;
+    
+}
+
+
 CDigFloat sqrt(const CDigFloat& DF)
 {
     CDigFloat dfResult;
