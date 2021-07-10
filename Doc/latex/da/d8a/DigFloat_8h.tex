@@ -34,7 +34,27 @@ class \hyperlink{classCDigFloat}{C\+Dig\+Float}
 \hyperlink{classCDigFloat}{C\+Dig\+Float} \hyperlink{DigFloat_8h_a269b310d675c311c6e0894bf326593ae}{abs} (const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&DF)
 \begin{DoxyCompactList}\small\item\em abs\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} with absolute value; \end{DoxyCompactList}\item 
 \hyperlink{classCDigFloat}{C\+Dig\+Float} \hyperlink{DigFloat_8h_a4f5706e9fe28086b245b09459f92403e}{log} (const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&DF, const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&df\+Base=0)
-\begin{DoxyCompactList}\small\item\em log\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} logarithm to user given base (default\+: natural logarithm with base euler number); \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em log\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} logarithm to user given base (default\+: natural logarithm with base euler number); \end{DoxyCompactList}\item 
+\hyperlink{classCDigFloat}{C\+Dig\+Float} \hyperlink{DigFloat_8h_ac5877d13039d236858e1cb04351f0a86}{pow} (const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&df\+Base, const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&df\+Exp)
+\begin{DoxyCompactList}\small\item\em pow\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} exponential expression to user given base and exponent \end{DoxyCompactList}\item 
+\hyperlink{classCDigFloat}{C\+Dig\+Float} \hyperlink{DigFloat_8h_a2206715f4b83afeea6339373bb3631fb}{exp} (const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&df\+Exp)
+\begin{DoxyCompactList}\small\item\em exp\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} exponential expression to Euler number and user given exponent \end{DoxyCompactList}\item 
+\hyperlink{classCDigFloat}{C\+Dig\+Float} \hyperlink{DigFloat_8h_ae66acb4f3bea83a9fad22cc58fe50905}{sqrt} (const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&DF)
+\begin{DoxyCompactList}\small\item\em sqrt\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} as square root of user given value \end{DoxyCompactList}\item 
+\hyperlink{classCDigFloat}{C\+Dig\+Float} \hyperlink{DigFloat_8h_aa52baf47e5c050a2d10794b2e460948d}{min} (const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&one, const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&other)
+\begin{DoxyCompactList}\small\item\em min\+: returns the smaller \hyperlink{classCDigFloat}{C\+Dig\+Float} \end{DoxyCompactList}\item 
+\hyperlink{classCDigFloat}{C\+Dig\+Float} \hyperlink{DigFloat_8h_a4362c8e7ae2a6d36f84b278d4a915a61}{max} (const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&one, const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&other)
+\begin{DoxyCompactList}\small\item\em max\+: returns the greater \hyperlink{classCDigFloat}{C\+Dig\+Float} \end{DoxyCompactList}\item 
+\hyperlink{classCDigFloat}{C\+Dig\+Float} \hyperlink{DigFloat_8h_a884d892dc5da6c1e8aacafbe6338d740}{operator+} (const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&One, const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&Other)
+\begin{DoxyCompactList}\small\item\em operator+ \end{DoxyCompactList}\item 
+\hyperlink{classCDigFloat}{C\+Dig\+Float} \hyperlink{DigFloat_8h_a6155f32f19e3616df05adc16049042a4}{operator-\/} (const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&One)
+\begin{DoxyCompactList}\small\item\em operator-\/ for expression \char`\"{}-\/\+X\char`\"{} instead of X$\ast$(-\/1) \end{DoxyCompactList}\item 
+\hyperlink{classCDigFloat}{C\+Dig\+Float} \hyperlink{DigFloat_8h_abf4279bd474679b4ecfc24124d246af1}{operator-\/} (const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&One, const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&Other)
+\begin{DoxyCompactList}\small\item\em operator-\/ \end{DoxyCompactList}\item 
+\hyperlink{classCDigFloat}{C\+Dig\+Float} \hyperlink{DigFloat_8h_a4f045c1be909c3a6dadee063c4f854c3}{operator$\ast$} (const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&One, const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&Other)
+\begin{DoxyCompactList}\small\item\em operator$\ast$ \end{DoxyCompactList}\item 
+\hyperlink{classCDigFloat}{C\+Dig\+Float} \hyperlink{DigFloat_8h_ae7276c529ed6a82015d5114b6c4c392f}{operator/} (const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&One, const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&Other)
+\begin{DoxyCompactList}\small\item\em operator/ \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Macro Definition Documentation}
@@ -81,11 +101,37 @@ abs\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} with absolute value;
 \end{DoxyReturn}
 
 
-Definition at line 305 of file Dig\+Float.\+cpp.
+Definition at line 302 of file Dig\+Float.\+cpp.
 
 
 
 References C\+Dig\+Float\+::\+Raw\+Value().
+
+\mbox{\Hypertarget{DigFloat_8h_a2206715f4b83afeea6339373bb3631fb}\label{DigFloat_8h_a2206715f4b83afeea6339373bb3631fb}} 
+\index{Dig\+Float.\+h@{Dig\+Float.\+h}!exp@{exp}}
+\index{exp@{exp}!Dig\+Float.\+h@{Dig\+Float.\+h}}
+\subsubsection{\texorpdfstring{exp()}{exp()}}
+{\footnotesize\ttfamily \hyperlink{classCDigFloat}{C\+Dig\+Float} exp (\begin{DoxyParamCaption}\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{df\+Exp }\end{DoxyParamCaption})}
+
+
+
+exp\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} exponential expression to Euler number and user given exponent 
+
+
+\begin{DoxyParams}{Parameters}
+{\em df\+Exp} & \hyperlink{classCDigFloat}{C\+Dig\+Float} as exponent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCDigFloat}{C\+Dig\+Float} 
+\end{DoxyReturn}
+
+
+Definition at line 392 of file Dig\+Float.\+cpp.
+
+
+
+References C\+Dig\+Float\+::d\+Error, C\+Dig\+Float\+::exp, C\+Dig\+Float\+::\+Raw\+Error(), C\+Dig\+Float\+::\+Raw\+Value(), C\+Dig\+Float\+::\+Value\+Max\+Limit(), and C\+Dig\+Float\+::\+Value\+Min\+Limit().
 
 \mbox{\Hypertarget{DigFloat_8h_a4f5706e9fe28086b245b09459f92403e}\label{DigFloat_8h_a4f5706e9fe28086b245b09459f92403e}} 
 \index{Dig\+Float.\+h@{Dig\+Float.\+h}!log@{log}}
@@ -109,9 +155,231 @@ log\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} logarithm to user given
 \end{DoxyReturn}
 
 
-Definition at line 312 of file Dig\+Float.\+cpp.
+Definition at line 309 of file Dig\+Float.\+cpp.
 
 
 
-References C\+Dig\+Float\+::d\+Error, C\+Dig\+Float\+::\+Error(), my\+N\+AN, C\+Dig\+Float\+::\+Raw\+Value(), C\+Dig\+Float\+::\+Value\+Max\+Limit(), and C\+Dig\+Float\+::\+Value\+Min\+Limit().
+References C\+Dig\+Float\+::d\+Error, C\+Dig\+Float\+::\+Error(), C\+Dig\+Float\+::\+Raw\+Error(), C\+Dig\+Float\+::\+Raw\+Value(), C\+Dig\+Float\+::\+Value\+Max\+Limit(), and C\+Dig\+Float\+::\+Value\+Min\+Limit().
+
+\mbox{\Hypertarget{DigFloat_8h_a4362c8e7ae2a6d36f84b278d4a915a61}\label{DigFloat_8h_a4362c8e7ae2a6d36f84b278d4a915a61}} 
+\index{Dig\+Float.\+h@{Dig\+Float.\+h}!max@{max}}
+\index{max@{max}!Dig\+Float.\+h@{Dig\+Float.\+h}}
+\subsubsection{\texorpdfstring{max()}{max()}}
+{\footnotesize\ttfamily \hyperlink{classCDigFloat}{C\+Dig\+Float} max (\begin{DoxyParamCaption}\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{one,  }\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+max\+: returns the greater \hyperlink{classCDigFloat}{C\+Dig\+Float} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em one} & \hyperlink{classCDigFloat}{C\+Dig\+Float} to compare with other \\
+\hline
+{\em other} & \hyperlink{classCDigFloat}{C\+Dig\+Float} to compare with one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCDigFloat}{C\+Dig\+Float} (one or the other) 
+\end{DoxyReturn}
+
+
+Definition at line 427 of file Dig\+Float.\+cpp.
+
+\mbox{\Hypertarget{DigFloat_8h_aa52baf47e5c050a2d10794b2e460948d}\label{DigFloat_8h_aa52baf47e5c050a2d10794b2e460948d}} 
+\index{Dig\+Float.\+h@{Dig\+Float.\+h}!min@{min}}
+\index{min@{min}!Dig\+Float.\+h@{Dig\+Float.\+h}}
+\subsubsection{\texorpdfstring{min()}{min()}}
+{\footnotesize\ttfamily \hyperlink{classCDigFloat}{C\+Dig\+Float} min (\begin{DoxyParamCaption}\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{one,  }\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+min\+: returns the smaller \hyperlink{classCDigFloat}{C\+Dig\+Float} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em one} & \hyperlink{classCDigFloat}{C\+Dig\+Float} to compare with other \\
+\hline
+{\em other} & \hyperlink{classCDigFloat}{C\+Dig\+Float} to compare with one \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCDigFloat}{C\+Dig\+Float} (one or the other) 
+\end{DoxyReturn}
+
+
+Definition at line 436 of file Dig\+Float.\+cpp.
+
+\mbox{\Hypertarget{DigFloat_8h_a4f045c1be909c3a6dadee063c4f854c3}\label{DigFloat_8h_a4f045c1be909c3a6dadee063c4f854c3}} 
+\index{Dig\+Float.\+h@{Dig\+Float.\+h}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Dig\+Float.\+h@{Dig\+Float.\+h}}
+\subsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \hyperlink{classCDigFloat}{C\+Dig\+Float} operator$\ast$ (\begin{DoxyParamCaption}\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{One,  }\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{Other }\end{DoxyParamCaption})}
+
+
+
+operator$\ast$ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em One} & \hyperlink{classCDigFloat}{C\+Dig\+Float} \\
+\hline
+{\em Other} & \hyperlink{classCDigFloat}{C\+Dig\+Float} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCDigFloat}{C\+Dig\+Float} 
+\end{DoxyReturn}
+
+
+Definition at line 464 of file Dig\+Float.\+cpp.
+
+\mbox{\Hypertarget{DigFloat_8h_a884d892dc5da6c1e8aacafbe6338d740}\label{DigFloat_8h_a884d892dc5da6c1e8aacafbe6338d740}} 
+\index{Dig\+Float.\+h@{Dig\+Float.\+h}!operator+@{operator+}}
+\index{operator+@{operator+}!Dig\+Float.\+h@{Dig\+Float.\+h}}
+\subsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \hyperlink{classCDigFloat}{C\+Dig\+Float} operator+ (\begin{DoxyParamCaption}\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{One,  }\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{Other }\end{DoxyParamCaption})}
+
+
+
+operator+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em One} & \hyperlink{classCDigFloat}{C\+Dig\+Float} \\
+\hline
+{\em Other} & \hyperlink{classCDigFloat}{C\+Dig\+Float} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCDigFloat}{C\+Dig\+Float} 
+\end{DoxyReturn}
+
+
+Definition at line 444 of file Dig\+Float.\+cpp.
+
+\mbox{\Hypertarget{DigFloat_8h_a6155f32f19e3616df05adc16049042a4}\label{DigFloat_8h_a6155f32f19e3616df05adc16049042a4}} 
+\index{Dig\+Float.\+h@{Dig\+Float.\+h}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Dig\+Float.\+h@{Dig\+Float.\+h}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{classCDigFloat}{C\+Dig\+Float} operator-\/ (\begin{DoxyParamCaption}\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{One }\end{DoxyParamCaption})}
+
+
+
+operator-\/ for expression \char`\"{}-\/\+X\char`\"{} instead of X$\ast$(-\/1) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em One} & \hyperlink{classCDigFloat}{C\+Dig\+Float} \\
+\hline
+{\em Other} & \hyperlink{classCDigFloat}{C\+Dig\+Float} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCDigFloat}{C\+Dig\+Float} 
+\end{DoxyReturn}
+
+
+Definition at line 451 of file Dig\+Float.\+cpp.
+
+\mbox{\Hypertarget{DigFloat_8h_abf4279bd474679b4ecfc24124d246af1}\label{DigFloat_8h_abf4279bd474679b4ecfc24124d246af1}} 
+\index{Dig\+Float.\+h@{Dig\+Float.\+h}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Dig\+Float.\+h@{Dig\+Float.\+h}}
+\subsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{classCDigFloat}{C\+Dig\+Float} operator-\/ (\begin{DoxyParamCaption}\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{One,  }\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{Other }\end{DoxyParamCaption})}
+
+
+
+operator-\/ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em One} & \hyperlink{classCDigFloat}{C\+Dig\+Float} \\
+\hline
+{\em Other} & \hyperlink{classCDigFloat}{C\+Dig\+Float} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCDigFloat}{C\+Dig\+Float} 
+\end{DoxyReturn}
+
+
+Definition at line 456 of file Dig\+Float.\+cpp.
+
+\mbox{\Hypertarget{DigFloat_8h_ae7276c529ed6a82015d5114b6c4c392f}\label{DigFloat_8h_ae7276c529ed6a82015d5114b6c4c392f}} 
+\index{Dig\+Float.\+h@{Dig\+Float.\+h}!operator/@{operator/}}
+\index{operator/@{operator/}!Dig\+Float.\+h@{Dig\+Float.\+h}}
+\subsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily \hyperlink{classCDigFloat}{C\+Dig\+Float} operator/ (\begin{DoxyParamCaption}\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{One,  }\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{Other }\end{DoxyParamCaption})}
+
+
+
+operator/ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em One} & \hyperlink{classCDigFloat}{C\+Dig\+Float} \\
+\hline
+{\em Other} & \hyperlink{classCDigFloat}{C\+Dig\+Float} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCDigFloat}{C\+Dig\+Float} 
+\end{DoxyReturn}
+
+
+Definition at line 471 of file Dig\+Float.\+cpp.
+
+\mbox{\Hypertarget{DigFloat_8h_ac5877d13039d236858e1cb04351f0a86}\label{DigFloat_8h_ac5877d13039d236858e1cb04351f0a86}} 
+\index{Dig\+Float.\+h@{Dig\+Float.\+h}!pow@{pow}}
+\index{pow@{pow}!Dig\+Float.\+h@{Dig\+Float.\+h}}
+\subsubsection{\texorpdfstring{pow()}{pow()}}
+{\footnotesize\ttfamily \hyperlink{classCDigFloat}{C\+Dig\+Float} pow (\begin{DoxyParamCaption}\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{df\+Base,  }\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{df\+Exp }\end{DoxyParamCaption})}
+
+
+
+pow\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} exponential expression to user given base and exponent 
+
+
+\begin{DoxyParams}{Parameters}
+{\em df\+Base} & \hyperlink{classCDigFloat}{C\+Dig\+Float} as base \\
+\hline
+{\em df\+Exp} & \hyperlink{classCDigFloat}{C\+Dig\+Float} as exponent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCDigFloat}{C\+Dig\+Float} 
+\end{DoxyReturn}
+
+
+Definition at line 373 of file Dig\+Float.\+cpp.
+
+
+
+References C\+Dig\+Float\+::d\+Error, max(), min(), C\+Dig\+Float\+::pow, C\+Dig\+Float\+::\+Raw\+Error(), C\+Dig\+Float\+::\+Raw\+Value(), C\+Dig\+Float\+::\+Value\+Max\+Limit(), and C\+Dig\+Float\+::\+Value\+Min\+Limit().
+
+\mbox{\Hypertarget{DigFloat_8h_ae66acb4f3bea83a9fad22cc58fe50905}\label{DigFloat_8h_ae66acb4f3bea83a9fad22cc58fe50905}} 
+\index{Dig\+Float.\+h@{Dig\+Float.\+h}!sqrt@{sqrt}}
+\index{sqrt@{sqrt}!Dig\+Float.\+h@{Dig\+Float.\+h}}
+\subsubsection{\texorpdfstring{sqrt()}{sqrt()}}
+{\footnotesize\ttfamily \hyperlink{classCDigFloat}{C\+Dig\+Float} sqrt (\begin{DoxyParamCaption}\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{DF }\end{DoxyParamCaption})}
+
+
+
+sqrt\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} as square root of user given value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em DF} & \hyperlink{classCDigFloat}{C\+Dig\+Float} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCDigFloat}{C\+Dig\+Float} 
+\end{DoxyReturn}
+
+
+Definition at line 410 of file Dig\+Float.\+cpp.
+
+
+
+References C\+Dig\+Float\+::d\+Error, C\+Dig\+Float\+::\+Raw\+Error(), C\+Dig\+Float\+::\+Raw\+Value(), C\+Dig\+Float\+::sqrt, C\+Dig\+Float\+::\+Value\+Max\+Limit(), and C\+Dig\+Float\+::\+Value\+Min\+Limit().
 

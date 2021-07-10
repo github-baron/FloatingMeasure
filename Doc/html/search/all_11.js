@@ -7,6 +7,7 @@ var searchData=
   ['setbyid',['SetByID',['../d0/d43/classCComplexMeasure.html#a47dca89bc28bbb257f81df4d363be623',1,'CComplexMeasure::SetByID()'],['../d4/dec/classCSimpleMeasure.html#a6945aa333dca5623482d38cd9a7e3225',1,'CSimpleMeasure::SetByID()']]],
   ['setbylong',['SetByLong',['../d4/dec/classCSimpleMeasure.html#acebe5fcf7a5aa3464d9274f14c9f312b',1,'CSimpleMeasure']]],
   ['setbyshort',['SetByShort',['../d4/dec/classCSimpleMeasure.html#a36d8822c057c58669d23af68f24a75c5',1,'CSimpleMeasure']]],
+  ['setuserdefinederror',['SetUserDefinedError',['../d3/d72/classCDigFloat.html#a63f2632e5a762f37aa6eda4510c57502',1,'CDigFloat']]],
   ['short',['Short',['../d0/d43/classCComplexMeasure.html#a771c7c8e73b3c67803ee2c77d8a40187',1,'CComplexMeasure::Short()'],['../d4/dec/classCSimpleMeasure.html#ab1e479ebf0d3a428ecd9f6b1daf3fe0c',1,'CSimpleMeasure::Short()'],['../d0/dea/classCVectorHandle.html#ac26fa8d3b66a5cc88dea0b411f5e20de',1,'CVectorHandle::Short()']]],
   ['sifactor',['SIFactor',['../d4/dec/classCSimpleMeasure.html#ad9c08324e46ef4eee5695e7ea1d00018',1,'CSimpleMeasure']]],
   ['siid',['SIID',['../d8/d59/classCBaseMeasure.html#a4a2040454722a288e24babbacef30d01',1,'CBaseMeasure']]],
@@ -14,6 +15,7 @@ var searchData=
   ['simplemeasure_2eh',['SimpleMeasure.h',['../de/dc5/SimpleMeasure_8h.html',1,'']]],
   ['simplify',['Simplify',['../df/d21/classCFloatingMeasure.html#a47731afb871889ee7da5f84b40e3a27f',1,'CFloatingMeasure::Simplify()'],['../d0/d43/classCComplexMeasure.html#addb4e69033f2c32fb3bf4a3aef5e1470',1,'CComplexMeasure::Simplify()']]],
   ['sioffset',['SIOffset',['../d4/dec/classCSimpleMeasure.html#a6e04ea2506105c069ae28650c5d69733',1,'CSimpleMeasure']]],
+  ['sqrt',['sqrt',['../d3/d72/classCDigFloat.html#ae66acb4f3bea83a9fad22cc58fe50905',1,'CDigFloat::sqrt()'],['../d0/d80/DigFloat_8cpp.html#ae66acb4f3bea83a9fad22cc58fe50905',1,'sqrt(const CDigFloat &amp;DF):&#160;DigFloat.cpp'],['../da/d8a/DigFloat_8h.html#ae66acb4f3bea83a9fad22cc58fe50905',1,'sqrt(const CDigFloat &amp;DF):&#160;DigFloat.cpp']]],
   ['strlong',['strLong',['../d4/dec/classCSimpleMeasure.html#a5761fb46fb35ce577066ef1e7ec1ab2e',1,'CSimpleMeasure']]],
   ['strshort',['strShort',['../d4/dec/classCSimpleMeasure.html#a39260e6516c163955c34dce6795292ad',1,'CSimpleMeasure']]]
 ];

@@ -12,7 +12,7 @@ Include dependency graph for Utils.\+cpp\+:\nopagebreak
 \begin{DoxyCompactItemize}
 \item 
 double \hyperlink{Utils_8cpp_ae9dfc174daaf6261f167ccc069efea93}{Double\+Machine\+Epsilon} (double d\+Value)
-\begin{DoxyCompactList}\small\item\em calculates the numerical error for a given double \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em estimate the numerical error for a 64bit double incrementing the L\+SB. The maximal relative error is about 2.\+3e-\/16. Hence, for a value of 1e+308 the error is about 1e+292. \end{DoxyCompactList}\item 
 double \hyperlink{Utils_8cpp_a7dd752b594724a3517f92d86ba0cd39e}{Round2\+Precision} (const double d\+Value, const int n\+Precision)
 \begin{DoxyCompactList}\small\item\em cuts double according to precision \end{DoxyCompactList}\item 
 string \hyperlink{Utils_8cpp_a78c380ff595f4574b2bb6fa68f15e410}{Bool2\+String} (const bool b\+Bool)
@@ -40,7 +40,7 @@ string
 \end{DoxyReturn}
 
 
-Definition at line 41 of file Utils.\+cpp.
+Definition at line 45 of file Utils.\+cpp.
 
 \mbox{\Hypertarget{Utils_8cpp_ae9dfc174daaf6261f167ccc069efea93}\label{Utils_8cpp_ae9dfc174daaf6261f167ccc069efea93}} 
 \index{Utils.\+cpp@{Utils.\+cpp}!Double\+Machine\+Epsilon@{Double\+Machine\+Epsilon}}
@@ -50,19 +50,11 @@ Definition at line 41 of file Utils.\+cpp.
 
 
 
+estimate the numerical error for a 64bit double incrementing the L\+SB. The maximal relative error is about 2.\+3e-\/16. Hence, for a value of 1e+308 the error is about 1e+292. 
+
 calculates the numerical error for a given double 
 
-
-\begin{DoxyParams}{Parameters}
-{\em d\+Value} & double which error is calculated \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-double 
-\end{DoxyReturn}
-
-
-Definition at line 27 of file Utils.\+cpp.
+Definition at line 31 of file Utils.\+cpp.
 
 
 
@@ -96,7 +88,7 @@ double
 \end{DoxyReturn}
 
 
-Definition at line 35 of file Utils.\+cpp.
+Definition at line 39 of file Utils.\+cpp.
 
 
 

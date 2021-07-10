@@ -31,7 +31,7 @@
 #include <iostream>
 
 /**
- * \mainpage
+ * \mainpage [FloatingMeasure Library]
  * FloatingMeasure is a class API for physical calculations. 
  * It offers:
  * - definition of a set of  phyisical  measures 

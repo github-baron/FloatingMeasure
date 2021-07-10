@@ -81,10 +81,12 @@ void \hyperlink{classCDigFloat_af74b8cd0935294b6371f551b7a1ff640}{Value} (const 
 \begin{DoxyCompactList}\small\item\em sets \hyperlink{classCDigFloat_a4bbe69e30dd4e20527362493aa9aaf96}{C\+Dig\+Float\+::d\+Value} and \hyperlink{classCDigFloat_a25eb3782d1e727ff007a48f8308e3d4d}{C\+Dig\+Float\+::d\+Error} corresponding to \hyperlink{Utils_8h_ae9dfc174daaf6261f167ccc069efea93}{Double\+Machine\+Epsilon} \end{DoxyCompactList}\item 
 void \hyperlink{classCDigFloat_a47dd744a2100dc850ede1511e616ed39}{Reset\+Error} ()
 \begin{DoxyCompactList}\small\item\em resets \hyperlink{classCDigFloat_a25eb3782d1e727ff007a48f8308e3d4d}{C\+Dig\+Float\+::d\+Error} to \hyperlink{Utils_8h_ae9dfc174daaf6261f167ccc069efea93}{Double\+Machine\+Epsilon} ( \hyperlink{classCDigFloat_a4bbe69e30dd4e20527362493aa9aaf96}{C\+Dig\+Float\+::d\+Value}) \end{DoxyCompactList}\item 
-const double \hyperlink{classCDigFloat_a308ccc3e3c96dd81977033e0a94344fd}{Value} () const
+void \hyperlink{classCDigFloat_a63f2632e5a762f37aa6eda4510c57502}{Set\+User\+Defined\+Error} (const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&User\+Defined\+Error)
+\begin{DoxyCompactList}\small\item\em sets \hyperlink{classCDigFloat_a25eb3782d1e727ff007a48f8308e3d4d}{C\+Dig\+Float\+::d\+Error} to a user defined value. Use only if you know that your calculation errors go beyond the numerical inaccuracy for floating numbers \end{DoxyCompactList}\item 
+double \hyperlink{classCDigFloat_a51f185eb4ff3b24910c996739b6d5e9c}{Value} () const
 \begin{DoxyCompactList}\small\item\em getter of \hyperlink{classCDigFloat_a4bbe69e30dd4e20527362493aa9aaf96}{C\+Dig\+Float\+::d\+Value} conditionally considering \hyperlink{classCDigFloat_ad580654be35246d14c91482581c0bc11}{C\+Dig\+Float\+::n\+Precision}\+:~\newline
- see \hyperlink{classCDigFloat_a4d6ca24beda280be719374c2a6b2c64d}{C\+Dig\+Float\+::\+Precision\+Active()} and \hyperlink{classCDigFloat_a95875f6f7246debee0d00b0c41c82aee}{C\+Dig\+Float\+::\+Precision()} \end{DoxyCompactList}\item 
-const double \hyperlink{classCDigFloat_ab6d3001a549d7496156321cbb26dde51}{Raw\+Value} () const
+ see \hyperlink{classCDigFloat_ad1f2365630c9e35e77c01093e73440c4}{C\+Dig\+Float\+::\+Precision\+Active()} and \hyperlink{classCDigFloat_ad66e2fc1bb19f491dfbc4fb7bfb20d47}{C\+Dig\+Float\+::\+Precision()} \end{DoxyCompactList}\item 
+double \hyperlink{classCDigFloat_acb435346b1f7b2e78d8f8373a416533a}{Raw\+Value} () const
 \begin{DoxyCompactList}\small\item\em getter of \hyperlink{classCDigFloat_a4bbe69e30dd4e20527362493aa9aaf96}{C\+Dig\+Float\+::d\+Value} (no rounding) \end{DoxyCompactList}\item 
 void \hyperlink{classCDigFloat_a10dd39f19bfc21ae1d545d9203ef3e95}{Raw\+Value} (const double \&other)
 \begin{DoxyCompactList}\small\item\em setter of \hyperlink{classCDigFloat_a4bbe69e30dd4e20527362493aa9aaf96}{C\+Dig\+Float\+::d\+Value} (no rounding/no error setting) \end{DoxyCompactList}\item 
@@ -92,25 +94,25 @@ double \hyperlink{classCDigFloat_a89603e1f9b9061b65376ac7b5fffddcf}{Value\+Min\+
 \begin{DoxyCompactList}\small\item\em getter for \hyperlink{classCDigFloat_a4bbe69e30dd4e20527362493aa9aaf96}{C\+Dig\+Float\+::d\+Value} -\/ \hyperlink{classCDigFloat_a25eb3782d1e727ff007a48f8308e3d4d}{C\+Dig\+Float\+::d\+Error} -\/ (protected\+: for internal use only) \end{DoxyCompactList}\item 
 double \hyperlink{classCDigFloat_a20195234feac0aaa9acbb5ad0fcfeabb}{Value\+Max\+Limit} () const
 \begin{DoxyCompactList}\small\item\em getter for \hyperlink{classCDigFloat_a4bbe69e30dd4e20527362493aa9aaf96}{C\+Dig\+Float\+::d\+Value} + \hyperlink{classCDigFloat_a25eb3782d1e727ff007a48f8308e3d4d}{C\+Dig\+Float\+::d\+Error} -\/ (protected\+: for internal use only) \end{DoxyCompactList}\item 
-const double \hyperlink{classCDigFloat_a1b067b1bde507408956fa65bef7368bb}{Error} () const
+double \hyperlink{classCDigFloat_aca8ded79bec9c18f5be1cbbbee59f066}{Error} () const
 \begin{DoxyCompactList}\small\item\em getter of \hyperlink{classCDigFloat_a25eb3782d1e727ff007a48f8308e3d4d}{C\+Dig\+Float\+::d\+Error} conditionally considering \hyperlink{classCDigFloat_ad580654be35246d14c91482581c0bc11}{C\+Dig\+Float\+::n\+Precision}\+: ~\newline
- see \hyperlink{classCDigFloat_a4d6ca24beda280be719374c2a6b2c64d}{C\+Dig\+Float\+::\+Precision\+Active()} and \hyperlink{classCDigFloat_a95875f6f7246debee0d00b0c41c82aee}{C\+Dig\+Float\+::\+Precision()} \end{DoxyCompactList}\item 
-const double \hyperlink{classCDigFloat_a9805530caa01cc722cfbe8912689daa7}{Raw\+Error} () const
+ see \hyperlink{classCDigFloat_ad1f2365630c9e35e77c01093e73440c4}{C\+Dig\+Float\+::\+Precision\+Active()} and \hyperlink{classCDigFloat_ad66e2fc1bb19f491dfbc4fb7bfb20d47}{C\+Dig\+Float\+::\+Precision()} \end{DoxyCompactList}\item 
+double \hyperlink{classCDigFloat_a996749023353bd1df0ab41a2a11e2ee7}{Raw\+Error} () const
 \begin{DoxyCompactList}\small\item\em getter of \hyperlink{classCDigFloat_a25eb3782d1e727ff007a48f8308e3d4d}{C\+Dig\+Float\+::d\+Error} (no rounding) \end{DoxyCompactList}\item 
-const int \hyperlink{classCDigFloat_a95875f6f7246debee0d00b0c41c82aee}{Precision} () const
+int \hyperlink{classCDigFloat_ad66e2fc1bb19f491dfbc4fb7bfb20d47}{Precision} () const
 \begin{DoxyCompactList}\small\item\em getter of \hyperlink{classCDigFloat_ad580654be35246d14c91482581c0bc11}{C\+Dig\+Float\+::n\+Precision} \end{DoxyCompactList}\item 
 void \hyperlink{classCDigFloat_a6d12203e256d0fba602b3cfec37f96a6}{Precision} (const int User\+Precision)
 \begin{DoxyCompactList}\small\item\em sets \hyperlink{classCDigFloat_ad580654be35246d14c91482581c0bc11}{C\+Dig\+Float\+::n\+Precision} and \hyperlink{classCDigFloat_a7f9809fa0b25da57f5c8c18a02b7d1a7}{C\+Dig\+Float\+::d\+Precision\+Resolution} =10\textsuperscript{-\/n\+Precision} \+: \end{DoxyCompactList}\item 
-const bool \hyperlink{classCDigFloat_a4d6ca24beda280be719374c2a6b2c64d}{Precision\+Active} () const
+bool \hyperlink{classCDigFloat_ad1f2365630c9e35e77c01093e73440c4}{Precision\+Active} () const
 \begin{DoxyCompactList}\small\item\em getter for b\+Precision\+Active \end{DoxyCompactList}\item 
 void \hyperlink{classCDigFloat_a680354bead4079c14a67688124bb4b85}{Precision\+Active} (const bool User\+Precision\+Active)
 \begin{DoxyCompactList}\small\item\em setter for b\+Precision\+Active\+: constrols rounding to digits given by n\+Precision affected functions \end{DoxyCompactList}\item 
-const double \hyperlink{classCDigFloat_ad39db10046bbfd27c2537581bdb7e073}{Precision\+Resolution} () const
-\begin{DoxyCompactList}\small\item\em getter for the resolution defined by the given precision (see \hyperlink{classCDigFloat_a95875f6f7246debee0d00b0c41c82aee}{C\+Dig\+Float\+::\+Precision}) \end{DoxyCompactList}\item 
+double \hyperlink{classCDigFloat_a8b229b407a4adff339f086856b52078b}{Precision\+Resolution} () const
+\begin{DoxyCompactList}\small\item\em getter for the resolution defined by the given precision (see \hyperlink{classCDigFloat_ad66e2fc1bb19f491dfbc4fb7bfb20d47}{C\+Dig\+Float\+::\+Precision}) \end{DoxyCompactList}\item 
 bool \hyperlink{classCDigFloat_aab339f7e1ffa5c88f3dbb432389752c9}{Valid} ()
 \begin{DoxyCompactList}\small\item\em check if value is valid\+: non-\/\+NaN \end{DoxyCompactList}\item 
 string \hyperlink{classCDigFloat_a80731e0970f607114d6d1bde4d02bd39}{Print} (bool b\+With\+Error=true) const
-\begin{DoxyCompactList}\small\item\em prints \hyperlink{classCDigFloat_a4bbe69e30dd4e20527362493aa9aaf96}{C\+Dig\+Float\+::d\+Value} and conditionally \hyperlink{classCDigFloat_a25eb3782d1e727ff007a48f8308e3d4d}{C\+Dig\+Float\+::d\+Error} formatted according to \hyperlink{classCDigFloat_ad580654be35246d14c91482581c0bc11}{C\+Dig\+Float\+::n\+Precision} if \hyperlink{classCDigFloat_a4d6ca24beda280be719374c2a6b2c64d}{C\+Dig\+Float\+::\+Precision\+Active()} is true. Otherwise the number of digits is formatted with D\+F\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+R\+I\+N\+T\+\_\+\+P\+R\+E\+C\+I\+S\+I\+ON. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em prints \hyperlink{classCDigFloat_a4bbe69e30dd4e20527362493aa9aaf96}{C\+Dig\+Float\+::d\+Value} and conditionally \hyperlink{classCDigFloat_a25eb3782d1e727ff007a48f8308e3d4d}{C\+Dig\+Float\+::d\+Error} formatted according to \hyperlink{classCDigFloat_ad580654be35246d14c91482581c0bc11}{C\+Dig\+Float\+::n\+Precision} if \hyperlink{classCDigFloat_ad1f2365630c9e35e77c01093e73440c4}{C\+Dig\+Float\+::\+Precision\+Active()} is true. Otherwise the number of digits is formatted with D\+F\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+R\+I\+N\+T\+\_\+\+P\+R\+E\+C\+I\+S\+I\+ON. \end{DoxyCompactList}\item 
 string \hyperlink{classCDigFloat_a7051716ffe1294bab6ed6e194a73618e}{Raw\+Print} (const int User\+Precision, bool b\+With\+Error=true) const
 \begin{DoxyCompactList}\small\item\em prints \hyperlink{classCDigFloat_a4bbe69e30dd4e20527362493aa9aaf96}{C\+Dig\+Float\+::d\+Value} and conditionally \hyperlink{classCDigFloat_a25eb3782d1e727ff007a48f8308e3d4d}{C\+Dig\+Float\+::d\+Error} formatted according to User\+Precision. \end{DoxyCompactList}\item 
 string \hyperlink{classCDigFloat_a006a43f81560e2429dce9aca7742a4e7}{Debug\+Out} ()
@@ -141,10 +143,16 @@ bool \hyperlink{classCDigFloat_aa1f6ed0312a2aa6ae5ee2abd195adefc}{b\+Precision\+
 \item 
 class \hyperlink{classCDigFloat_a7e23751869edf87edc0feeb80eda78d9}{C\+Floating\+Measure}
 \item 
+\hyperlink{classCDigFloat}{C\+Dig\+Float} \hyperlink{classCDigFloat_a269b310d675c311c6e0894bf326593ae}{abs} (const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&DF)
+\begin{DoxyCompactList}\small\item\em abs\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} with absolute value; \end{DoxyCompactList}\item 
+\hyperlink{classCDigFloat}{C\+Dig\+Float} \hyperlink{classCDigFloat_ae66acb4f3bea83a9fad22cc58fe50905}{sqrt} (const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&DF)
+\begin{DoxyCompactList}\small\item\em sqrt\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} as square root of user given value \end{DoxyCompactList}\item 
 \hyperlink{classCDigFloat}{C\+Dig\+Float} \hyperlink{classCDigFloat_a25031604af1e6356848a9ac84c209903}{log} (const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&DF, const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&df\+Base)
 \begin{DoxyCompactList}\small\item\em log\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} logarithm to user given base (default\+: natural logarithm with base euler number); \end{DoxyCompactList}\item 
 \hyperlink{classCDigFloat}{C\+Dig\+Float} \hyperlink{classCDigFloat_ac5877d13039d236858e1cb04351f0a86}{pow} (const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&df\+Base, const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&df\+Exp)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em pow\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} exponential expression to user given base and exponent \end{DoxyCompactList}\item 
+\hyperlink{classCDigFloat}{C\+Dig\+Float} \hyperlink{classCDigFloat_a2206715f4b83afeea6339373bb3631fb}{exp} (const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&df\+Exp)
+\begin{DoxyCompactList}\small\item\em exp\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} exponential expression to Euler number and user given exponent \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -154,7 +162,7 @@ class \hyperlink{classCDigFloat_a7e23751869edf87edc0feeb80eda78d9}{C\+Floating\+
 
 \begin{DoxyItemize}
 \item operations of floating points (+,-\/,/,$\ast$)
-\item propagation of numerical errors for all operations performed on an instance
+\item propagation of numerical errors (\href{https://en.wikipedia.org/wiki/Round-off_error}{\tt round-\/off errors} ) for all operations performed on an instance
 \item setting of user defined precision for comparing and printing. 
 \end{DoxyItemize}
 
@@ -175,7 +183,7 @@ Default constructor\+: calls \hyperlink{classCDigFloat_a89a0dda21c74c115ac41b432
 
 
 
-Definition at line 28 of file Dig\+Float.\+cpp.
+Definition at line 29 of file Dig\+Float.\+cpp.
 
 
 
@@ -198,7 +206,7 @@ Copy constructor\+: calls \hyperlink{classCDigFloat_a74f36566c2c79d7258b7b2dee35
 \end{DoxyParams}
 
 
-Definition at line 33 of file Dig\+Float.\+cpp.
+Definition at line 34 of file Dig\+Float.\+cpp.
 
 \mbox{\Hypertarget{classCDigFloat_a0ae24452dfb7838ec97a3998cd2b8f36}\label{classCDigFloat_a0ae24452dfb7838ec97a3998cd2b8f36}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!C\+Dig\+Float@{C\+Dig\+Float}}
@@ -217,7 +225,7 @@ Copy constructor from double\+: calls Dig\+Float\+::\+Value.
 \end{DoxyParams}
 
 
-Definition at line 38 of file Dig\+Float.\+cpp.
+Definition at line 39 of file Dig\+Float.\+cpp.
 
 
 
@@ -231,7 +239,7 @@ References \+\_\+\+Init(), and Value().
 
 Destructor 
 
-Definition at line 45 of file Dig\+Float.\+cpp.
+Definition at line 46 of file Dig\+Float.\+cpp.
 
 
 
@@ -248,7 +256,7 @@ initializes all members with invalid values
 
 
 
-Definition at line 263 of file Dig\+Float.\+cpp.
+Definition at line 260 of file Dig\+Float.\+cpp.
 
 
 
@@ -269,29 +277,29 @@ string
 \end{DoxyReturn}
 
 
-Definition at line 287 of file Dig\+Float.\+cpp.
+Definition at line 284 of file Dig\+Float.\+cpp.
 
 
 
 References Bool2\+String(), d\+Error, D\+F\+\_\+\+R\+A\+W\+\_\+\+P\+R\+I\+N\+T\+\_\+\+P\+R\+E\+C\+I\+S\+I\+ON, d\+Precision\+Resolution, d\+Value, Precision(), Precision\+Active(), Print(), Raw\+Print(), Round2\+Precision(), and Valid().
 
-\mbox{\Hypertarget{classCDigFloat_a1b067b1bde507408956fa65bef7368bb}\label{classCDigFloat_a1b067b1bde507408956fa65bef7368bb}} 
+\mbox{\Hypertarget{classCDigFloat_aca8ded79bec9c18f5be1cbbbee59f066}\label{classCDigFloat_aca8ded79bec9c18f5be1cbbbee59f066}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!Error@{Error}}
 \index{Error@{Error}!C\+Dig\+Float@{C\+Dig\+Float}}
 \subsubsection{\texorpdfstring{Error()}{Error()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily const double C\+Dig\+Float\+::\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily double C\+Dig\+Float\+::\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 getter of \hyperlink{classCDigFloat_a25eb3782d1e727ff007a48f8308e3d4d}{C\+Dig\+Float\+::d\+Error} conditionally considering \hyperlink{classCDigFloat_ad580654be35246d14c91482581c0bc11}{C\+Dig\+Float\+::n\+Precision}\+: ~\newline
- see \hyperlink{classCDigFloat_a4d6ca24beda280be719374c2a6b2c64d}{C\+Dig\+Float\+::\+Precision\+Active()} and \hyperlink{classCDigFloat_a95875f6f7246debee0d00b0c41c82aee}{C\+Dig\+Float\+::\+Precision()} 
+ see \hyperlink{classCDigFloat_ad1f2365630c9e35e77c01093e73440c4}{C\+Dig\+Float\+::\+Precision\+Active()} and \hyperlink{classCDigFloat_ad66e2fc1bb19f491dfbc4fb7bfb20d47}{C\+Dig\+Float\+::\+Precision()} 
 
 \begin{DoxyReturn}{Returns}
 const double 
 \end{DoxyReturn}
 
 
-Definition at line 370 of file Dig\+Float.\+h.
+Definition at line 382 of file Dig\+Float.\+h.
 
 
 
@@ -314,7 +322,7 @@ setter for \hyperlink{classCDigFloat_a25eb3782d1e727ff007a48f8308e3d4d}{C\+Dig\+
 \end{DoxyParams}
 
 
-Definition at line 470 of file Dig\+Float.\+h.
+Definition at line 482 of file Dig\+Float.\+h.
 
 \mbox{\Hypertarget{classCDigFloat_a15c13c035aff8184491bd9629403a33a}\label{classCDigFloat_a15c13c035aff8184491bd9629403a33a}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!operator"!=@{operator"!=}}
@@ -337,7 +345,11 @@ bool, true if \hyperlink{classCDigFloat_ad8980d984bf2bab71d15b830fd0180a5}{C\+Di
 \end{DoxyReturn}
 
 
-Definition at line 109 of file Dig\+Float.\+cpp.
+Definition at line 118 of file Dig\+Float.\+cpp.
+
+
+
+References operator==().
 
 \mbox{\Hypertarget{classCDigFloat_a79029fee4d38f893d72209e7d6eb89ed}\label{classCDigFloat_a79029fee4d38f893d72209e7d6eb89ed}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!operator$\ast$@{operator$\ast$}}
@@ -359,7 +371,7 @@ operator$\ast$\+: calls \hyperlink{classCDigFloat_a9535d47a31a3f1cfa487cc8c567a4
 \end{DoxyReturn}
 
 
-Definition at line 183 of file Dig\+Float.\+cpp.
+Definition at line 180 of file Dig\+Float.\+cpp.
 
 \mbox{\Hypertarget{classCDigFloat_aa699c4362ad8acfcd1649f93d805e105}\label{classCDigFloat_aa699c4362ad8acfcd1649f93d805e105}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!operator$\ast$@{operator$\ast$}}
@@ -381,7 +393,7 @@ operator$\ast$ with double\+: calls \hyperlink{classCDigFloat_a9535d47a31a3f1cfa
 \end{DoxyReturn}
 
 
-Definition at line 228 of file Dig\+Float.\+cpp.
+Definition at line 225 of file Dig\+Float.\+cpp.
 
 \mbox{\Hypertarget{classCDigFloat_a9535d47a31a3f1cfa487cc8c567a4a12}\label{classCDigFloat_a9535d47a31a3f1cfa487cc8c567a4a12}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!operator$\ast$=@{operator$\ast$=}}
@@ -403,11 +415,11 @@ operator$\ast$=\+: multiplies \hyperlink{classCDigFloat_a4bbe69e30dd4e2052736249
 \end{DoxyReturn}
 
 
-Definition at line 113 of file Dig\+Float.\+cpp.
+Definition at line 122 of file Dig\+Float.\+cpp.
 
 
 
-References d\+Error, d\+Value, Raw\+Error(), and Raw\+Value().
+References d\+Error, d\+Value, Raw\+Error(), Raw\+Value(), Value\+Max\+Limit(), and Value\+Min\+Limit().
 
 \mbox{\Hypertarget{classCDigFloat_a9a01529fa684f7f5eb915b2d308578ea}\label{classCDigFloat_a9a01529fa684f7f5eb915b2d308578ea}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!operator$\ast$=@{operator$\ast$=}}
@@ -429,7 +441,7 @@ operator$\ast$= with double\+: calls \hyperlink{classCDigFloat_a9535d47a31a3f1cf
 \end{DoxyReturn}
 
 
-Definition at line 208 of file Dig\+Float.\+cpp.
+Definition at line 205 of file Dig\+Float.\+cpp.
 
 
 
@@ -455,7 +467,7 @@ operator+\+: calls \hyperlink{classCDigFloat_a84b2ad9b4d1a75aae261074ed7c6fefe}{
 \end{DoxyReturn}
 
 
-Definition at line 189 of file Dig\+Float.\+cpp.
+Definition at line 186 of file Dig\+Float.\+cpp.
 
 \mbox{\Hypertarget{classCDigFloat_a7fd363bbeb039e11fcc2d1b0ca628173}\label{classCDigFloat_a7fd363bbeb039e11fcc2d1b0ca628173}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!operator+@{operator+}}
@@ -477,7 +489,7 @@ operator+ with double\+: calls \hyperlink{classCDigFloat_a84b2ad9b4d1a75aae26107
 \end{DoxyReturn}
 
 
-Definition at line 243 of file Dig\+Float.\+cpp.
+Definition at line 240 of file Dig\+Float.\+cpp.
 
 \mbox{\Hypertarget{classCDigFloat_a84b2ad9b4d1a75aae261074ed7c6fefe}\label{classCDigFloat_a84b2ad9b4d1a75aae261074ed7c6fefe}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!operator+=@{operator+=}}
@@ -499,7 +511,7 @@ operator+=\+: adding \hyperlink{classCDigFloat_a4bbe69e30dd4e20527362493aa9aaf96
 \end{DoxyReturn}
 
 
-Definition at line 161 of file Dig\+Float.\+cpp.
+Definition at line 158 of file Dig\+Float.\+cpp.
 
 
 
@@ -525,7 +537,7 @@ operator+= with double\+: calls \hyperlink{classCDigFloat_a84b2ad9b4d1a75aae2610
 \end{DoxyReturn}
 
 
-Definition at line 218 of file Dig\+Float.\+cpp.
+Definition at line 215 of file Dig\+Float.\+cpp.
 
 
 
@@ -551,7 +563,7 @@ operator-\/\+: calls \hyperlink{classCDigFloat_a74f36566c2c79d7258b7b2dee35d46b2
 \end{DoxyReturn}
 
 
-Definition at line 195 of file Dig\+Float.\+cpp.
+Definition at line 192 of file Dig\+Float.\+cpp.
 
 \mbox{\Hypertarget{classCDigFloat_ad873c5c22f0f18e89caf7309a043bfa0}\label{classCDigFloat_ad873c5c22f0f18e89caf7309a043bfa0}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!operator-\/@{operator-\/}}
@@ -573,7 +585,7 @@ operator-\/ with double\+: calls \hyperlink{classCDigFloat_a7496a4f8445815e9a346
 \end{DoxyReturn}
 
 
-Definition at line 250 of file Dig\+Float.\+cpp.
+Definition at line 247 of file Dig\+Float.\+cpp.
 
 \mbox{\Hypertarget{classCDigFloat_a7496a4f8445815e9a346076c3d90305a}\label{classCDigFloat_a7496a4f8445815e9a346076c3d90305a}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!operator-\/=@{operator-\/=}}
@@ -595,7 +607,7 @@ operator-\/=\+: subtracting \hyperlink{classCDigFloat_a4bbe69e30dd4e20527362493a
 \end{DoxyReturn}
 
 
-Definition at line 172 of file Dig\+Float.\+cpp.
+Definition at line 169 of file Dig\+Float.\+cpp.
 
 
 
@@ -621,7 +633,7 @@ operator-\/= with double\+: calls \hyperlink{classCDigFloat_a7496a4f8445815e9a34
 \end{DoxyReturn}
 
 
-Definition at line 223 of file Dig\+Float.\+cpp.
+Definition at line 220 of file Dig\+Float.\+cpp.
 
 
 
@@ -647,7 +659,7 @@ operator/\+: calls \hyperlink{classCDigFloat_a53d3939dfc89d172f1bf803a46bc3369}{
 \end{DoxyReturn}
 
 
-Definition at line 201 of file Dig\+Float.\+cpp.
+Definition at line 198 of file Dig\+Float.\+cpp.
 
 \mbox{\Hypertarget{classCDigFloat_a4e9cc3b14f2b5a6d704957fb1a8de1a2}\label{classCDigFloat_a4e9cc3b14f2b5a6d704957fb1a8de1a2}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!operator/@{operator/}}
@@ -669,7 +681,7 @@ operator/ with double\+: calls \hyperlink{classCDigFloat_a53d3939dfc89d172f1bf80
 \end{DoxyReturn}
 
 
-Definition at line 236 of file Dig\+Float.\+cpp.
+Definition at line 233 of file Dig\+Float.\+cpp.
 
 \mbox{\Hypertarget{classCDigFloat_a53d3939dfc89d172f1bf803a46bc3369}\label{classCDigFloat_a53d3939dfc89d172f1bf803a46bc3369}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!operator/=@{operator/=}}
@@ -691,11 +703,11 @@ operator/=\+: multiplies \hyperlink{classCDigFloat_a4bbe69e30dd4e20527362493aa9a
 \end{DoxyReturn}
 
 
-Definition at line 134 of file Dig\+Float.\+cpp.
+Definition at line 137 of file Dig\+Float.\+cpp.
 
 
 
-References d\+Error, d\+Value, my\+N\+AN, Raw\+Error(), and Raw\+Value().
+References d\+Error, d\+Value, my\+N\+AN, Raw\+Value(), Value\+Max\+Limit(), and Value\+Min\+Limit().
 
 \mbox{\Hypertarget{classCDigFloat_ab6531a2016f5cc631cc92719ffc06385}\label{classCDigFloat_ab6531a2016f5cc631cc92719ffc06385}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!operator/=@{operator/=}}
@@ -717,7 +729,7 @@ operator/= with double\+: calls \hyperlink{classCDigFloat_a53d3939dfc89d172f1bf8
 \end{DoxyReturn}
 
 
-Definition at line 213 of file Dig\+Float.\+cpp.
+Definition at line 210 of file Dig\+Float.\+cpp.
 
 
 
@@ -739,11 +751,11 @@ operator$<$ \+:
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-bool, true if \hyperlink{classCDigFloat_a15c13c035aff8184491bd9629403a33a}{C\+Dig\+Float\+::operator!=} is true A\+ND \hyperlink{classCDigFloat_ab6d3001a549d7496156321cbb26dde51}{C\+Dig\+Float\+::\+Raw\+Value()} is less than \hyperlink{classCDigFloat_ab6d3001a549d7496156321cbb26dde51}{C\+Dig\+Float\+::\+Raw\+Value()} of compared instance 
+bool, true if \hyperlink{classCDigFloat_a15c13c035aff8184491bd9629403a33a}{C\+Dig\+Float\+::operator!=} is true A\+ND \hyperlink{classCDigFloat_acb435346b1f7b2e78d8f8373a416533a}{C\+Dig\+Float\+::\+Raw\+Value()} is less than \hyperlink{classCDigFloat_acb435346b1f7b2e78d8f8373a416533a}{C\+Dig\+Float\+::\+Raw\+Value()} of compared instance 
 \end{DoxyReturn}
 
 
-Definition at line 85 of file Dig\+Float.\+cpp.
+Definition at line 94 of file Dig\+Float.\+cpp.
 
 
 
@@ -765,11 +777,11 @@ operator$<$=
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-bool, true if \hyperlink{classCDigFloat_ad8980d984bf2bab71d15b830fd0180a5}{C\+Dig\+Float\+::operator==} is true OR \hyperlink{classCDigFloat_ab6d3001a549d7496156321cbb26dde51}{C\+Dig\+Float\+::\+Raw\+Value()} is less than \hyperlink{classCDigFloat_ab6d3001a549d7496156321cbb26dde51}{C\+Dig\+Float\+::\+Raw\+Value()} of compared instance 
+bool, true if \hyperlink{classCDigFloat_ad8980d984bf2bab71d15b830fd0180a5}{C\+Dig\+Float\+::operator==} is true OR \hyperlink{classCDigFloat_acb435346b1f7b2e78d8f8373a416533a}{C\+Dig\+Float\+::\+Raw\+Value()} is less than \hyperlink{classCDigFloat_acb435346b1f7b2e78d8f8373a416533a}{C\+Dig\+Float\+::\+Raw\+Value()} of compared instance 
 \end{DoxyReturn}
 
 
-Definition at line 92 of file Dig\+Float.\+cpp.
+Definition at line 101 of file Dig\+Float.\+cpp.
 
 
 
@@ -804,7 +816,7 @@ Assignment operator\+:~\newline
 \end{DoxyReturn}
 
 
-Definition at line 50 of file Dig\+Float.\+cpp.
+Definition at line 51 of file Dig\+Float.\+cpp.
 
 
 
@@ -831,7 +843,7 @@ Assignment operator with double\+:~\newline
 \end{DoxyReturn}
 
 
-Definition at line 59 of file Dig\+Float.\+cpp.
+Definition at line 60 of file Dig\+Float.\+cpp.
 
 
 
@@ -852,7 +864,7 @@ operator ==\+: ~\newline
 
 \begin{DoxyItemize}
 \item true\+: the allowed deviation range is \hyperlink{classCDigFloat_a7f9809fa0b25da57f5c8c18a02b7d1a7}{C\+Dig\+Float\+::d\+Precision\+Resolution}/2 of calling instance
-\item false\+: allowed deviation range is the sum of \hyperlink{classCDigFloat_a1b067b1bde507408956fa65bef7368bb}{C\+Dig\+Float\+::\+Error} of the comparison partners
+\item false\+: allowed deviation range is the sum of \hyperlink{classCDigFloat_aca8ded79bec9c18f5be1cbbbee59f066}{C\+Dig\+Float\+::\+Error} of the comparison partners
 \end{DoxyItemize}
 
 
@@ -865,7 +877,7 @@ bool, true if absolute deviation is within the allowed deviation range
 \end{DoxyReturn}
 
 
-Definition at line 67 of file Dig\+Float.\+cpp.
+Definition at line 68 of file Dig\+Float.\+cpp.
 
 
 
@@ -892,7 +904,7 @@ bool, true if absolute deviation is within the allowed deviation range
 \end{DoxyReturn}
 
 
-Definition at line 80 of file Dig\+Float.\+cpp.
+Definition at line 89 of file Dig\+Float.\+cpp.
 
 
 
@@ -914,11 +926,11 @@ operator$>$
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-bool, true if \hyperlink{classCDigFloat_a15c13c035aff8184491bd9629403a33a}{C\+Dig\+Float\+::operator!=} is true A\+ND \hyperlink{classCDigFloat_ab6d3001a549d7496156321cbb26dde51}{C\+Dig\+Float\+::\+Raw\+Value()} is larger than \hyperlink{classCDigFloat_ab6d3001a549d7496156321cbb26dde51}{C\+Dig\+Float\+::\+Raw\+Value()} of compared instance 
+bool, true if \hyperlink{classCDigFloat_a15c13c035aff8184491bd9629403a33a}{C\+Dig\+Float\+::operator!=} is true A\+ND \hyperlink{classCDigFloat_acb435346b1f7b2e78d8f8373a416533a}{C\+Dig\+Float\+::\+Raw\+Value()} is larger than \hyperlink{classCDigFloat_acb435346b1f7b2e78d8f8373a416533a}{C\+Dig\+Float\+::\+Raw\+Value()} of compared instance 
 \end{DoxyReturn}
 
 
-Definition at line 102 of file Dig\+Float.\+cpp.
+Definition at line 111 of file Dig\+Float.\+cpp.
 
 
 
@@ -940,21 +952,21 @@ operator$>$=
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-bool, true if \hyperlink{classCDigFloat_ad8980d984bf2bab71d15b830fd0180a5}{C\+Dig\+Float\+::operator==} is true A\+ND \hyperlink{classCDigFloat_ab6d3001a549d7496156321cbb26dde51}{C\+Dig\+Float\+::\+Raw\+Value()} is larger than \hyperlink{classCDigFloat_ab6d3001a549d7496156321cbb26dde51}{C\+Dig\+Float\+::\+Raw\+Value()} of compared instance 
+bool, true if \hyperlink{classCDigFloat_ad8980d984bf2bab71d15b830fd0180a5}{C\+Dig\+Float\+::operator==} is true A\+ND \hyperlink{classCDigFloat_acb435346b1f7b2e78d8f8373a416533a}{C\+Dig\+Float\+::\+Raw\+Value()} is larger than \hyperlink{classCDigFloat_acb435346b1f7b2e78d8f8373a416533a}{C\+Dig\+Float\+::\+Raw\+Value()} of compared instance 
 \end{DoxyReturn}
 
 
-Definition at line 97 of file Dig\+Float.\+cpp.
+Definition at line 106 of file Dig\+Float.\+cpp.
 
 
 
 References Raw\+Value().
 
-\mbox{\Hypertarget{classCDigFloat_a95875f6f7246debee0d00b0c41c82aee}\label{classCDigFloat_a95875f6f7246debee0d00b0c41c82aee}} 
+\mbox{\Hypertarget{classCDigFloat_ad66e2fc1bb19f491dfbc4fb7bfb20d47}\label{classCDigFloat_ad66e2fc1bb19f491dfbc4fb7bfb20d47}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!Precision@{Precision}}
 \index{Precision@{Precision}!C\+Dig\+Float@{C\+Dig\+Float}}
 \subsubsection{\texorpdfstring{Precision()}{Precision()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily const int C\+Dig\+Float\+::\+Precision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily int C\+Dig\+Float\+::\+Precision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -962,7 +974,7 @@ getter of \hyperlink{classCDigFloat_ad580654be35246d14c91482581c0bc11}{C\+Dig\+F
 
 
 
-Definition at line 383 of file Dig\+Float.\+h.
+Definition at line 395 of file Dig\+Float.\+h.
 
 \mbox{\Hypertarget{classCDigFloat_a6d12203e256d0fba602b3cfec37f96a6}\label{classCDigFloat_a6d12203e256d0fba602b3cfec37f96a6}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!Precision@{Precision}}
@@ -981,17 +993,17 @@ sets \hyperlink{classCDigFloat_ad580654be35246d14c91482581c0bc11}{C\+Dig\+Float\
 \end{DoxyParams}
 
 
-Definition at line 390 of file Dig\+Float.\+h.
+Definition at line 402 of file Dig\+Float.\+h.
 
 
 
 References pow(), and C\+Floating\+Measure\+::\+Precision\+Active().
 
-\mbox{\Hypertarget{classCDigFloat_a4d6ca24beda280be719374c2a6b2c64d}\label{classCDigFloat_a4d6ca24beda280be719374c2a6b2c64d}} 
+\mbox{\Hypertarget{classCDigFloat_ad1f2365630c9e35e77c01093e73440c4}\label{classCDigFloat_ad1f2365630c9e35e77c01093e73440c4}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!Precision\+Active@{Precision\+Active}}
 \index{Precision\+Active@{Precision\+Active}!C\+Dig\+Float@{C\+Dig\+Float}}
 \subsubsection{\texorpdfstring{Precision\+Active()}{PrecisionActive()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily const bool C\+Dig\+Float\+::\+Precision\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily bool C\+Dig\+Float\+::\+Precision\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -1002,7 +1014,7 @@ const bool
 \end{DoxyReturn}
 
 
-Definition at line 397 of file Dig\+Float.\+h.
+Definition at line 409 of file Dig\+Float.\+h.
 
 \mbox{\Hypertarget{classCDigFloat_a680354bead4079c14a67688124bb4b85}\label{classCDigFloat_a680354bead4079c14a67688124bb4b85}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!Precision\+Active@{Precision\+Active}}
@@ -1028,24 +1040,24 @@ setter for b\+Precision\+Active\+: constrols rounding to digits given by n\+Prec
 \end{DoxyParams}
 
 
-Definition at line 409 of file Dig\+Float.\+h.
+Definition at line 421 of file Dig\+Float.\+h.
 
-\mbox{\Hypertarget{classCDigFloat_ad39db10046bbfd27c2537581bdb7e073}\label{classCDigFloat_ad39db10046bbfd27c2537581bdb7e073}} 
+\mbox{\Hypertarget{classCDigFloat_a8b229b407a4adff339f086856b52078b}\label{classCDigFloat_a8b229b407a4adff339f086856b52078b}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!Precision\+Resolution@{Precision\+Resolution}}
 \index{Precision\+Resolution@{Precision\+Resolution}!C\+Dig\+Float@{C\+Dig\+Float}}
 \subsubsection{\texorpdfstring{Precision\+Resolution()}{PrecisionResolution()}}
-{\footnotesize\ttfamily const double C\+Dig\+Float\+::\+Precision\+Resolution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily double C\+Dig\+Float\+::\+Precision\+Resolution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-getter for the resolution defined by the given precision (see \hyperlink{classCDigFloat_a95875f6f7246debee0d00b0c41c82aee}{C\+Dig\+Float\+::\+Precision}) 
+getter for the resolution defined by the given precision (see \hyperlink{classCDigFloat_ad66e2fc1bb19f491dfbc4fb7bfb20d47}{C\+Dig\+Float\+::\+Precision}) 
 
 \begin{DoxyReturn}{Returns}
 double 
 \end{DoxyReturn}
 
 
-Definition at line 416 of file Dig\+Float.\+h.
+Definition at line 428 of file Dig\+Float.\+h.
 
 \mbox{\Hypertarget{classCDigFloat_a80731e0970f607114d6d1bde4d02bd39}\label{classCDigFloat_a80731e0970f607114d6d1bde4d02bd39}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!Print@{Print}}
@@ -1055,7 +1067,7 @@ Definition at line 416 of file Dig\+Float.\+h.
 
 
 
-prints \hyperlink{classCDigFloat_a4bbe69e30dd4e20527362493aa9aaf96}{C\+Dig\+Float\+::d\+Value} and conditionally \hyperlink{classCDigFloat_a25eb3782d1e727ff007a48f8308e3d4d}{C\+Dig\+Float\+::d\+Error} formatted according to \hyperlink{classCDigFloat_ad580654be35246d14c91482581c0bc11}{C\+Dig\+Float\+::n\+Precision} if \hyperlink{classCDigFloat_a4d6ca24beda280be719374c2a6b2c64d}{C\+Dig\+Float\+::\+Precision\+Active()} is true. Otherwise the number of digits is formatted with D\+F\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+R\+I\+N\+T\+\_\+\+P\+R\+E\+C\+I\+S\+I\+ON. 
+prints \hyperlink{classCDigFloat_a4bbe69e30dd4e20527362493aa9aaf96}{C\+Dig\+Float\+::d\+Value} and conditionally \hyperlink{classCDigFloat_a25eb3782d1e727ff007a48f8308e3d4d}{C\+Dig\+Float\+::d\+Error} formatted according to \hyperlink{classCDigFloat_ad580654be35246d14c91482581c0bc11}{C\+Dig\+Float\+::n\+Precision} if \hyperlink{classCDigFloat_ad1f2365630c9e35e77c01093e73440c4}{C\+Dig\+Float\+::\+Precision\+Active()} is true. Otherwise the number of digits is formatted with D\+F\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+R\+I\+N\+T\+\_\+\+P\+R\+E\+C\+I\+S\+I\+ON. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -1067,17 +1079,17 @@ string, formatted \hyperlink{classCDigFloat_a4bbe69e30dd4e20527362493aa9aaf96}{C
 \end{DoxyReturn}
 
 
-Definition at line 271 of file Dig\+Float.\+cpp.
+Definition at line 268 of file Dig\+Float.\+cpp.
 
 
 
 References D\+F\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+P\+R\+I\+N\+T\+\_\+\+P\+R\+E\+C\+I\+S\+I\+ON, Precision(), Precision\+Active(), and Raw\+Print().
 
-\mbox{\Hypertarget{classCDigFloat_a9805530caa01cc722cfbe8912689daa7}\label{classCDigFloat_a9805530caa01cc722cfbe8912689daa7}} 
+\mbox{\Hypertarget{classCDigFloat_a996749023353bd1df0ab41a2a11e2ee7}\label{classCDigFloat_a996749023353bd1df0ab41a2a11e2ee7}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!Raw\+Error@{Raw\+Error}}
 \index{Raw\+Error@{Raw\+Error}!C\+Dig\+Float@{C\+Dig\+Float}}
 \subsubsection{\texorpdfstring{Raw\+Error()}{RawError()}}
-{\footnotesize\ttfamily const double C\+Dig\+Float\+::\+Raw\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily double C\+Dig\+Float\+::\+Raw\+Error (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -1088,7 +1100,7 @@ const double
 \end{DoxyReturn}
 
 
-Definition at line 377 of file Dig\+Float.\+h.
+Definition at line 389 of file Dig\+Float.\+h.
 
 \mbox{\Hypertarget{classCDigFloat_a7051716ffe1294bab6ed6e194a73618e}\label{classCDigFloat_a7051716ffe1294bab6ed6e194a73618e}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!Raw\+Print@{Raw\+Print}}
@@ -1112,17 +1124,17 @@ string, formatted \hyperlink{classCDigFloat_a4bbe69e30dd4e20527362493aa9aaf96}{C
 \end{DoxyReturn}
 
 
-Definition at line 276 of file Dig\+Float.\+cpp.
+Definition at line 273 of file Dig\+Float.\+cpp.
 
 
 
-References d\+Value, plmi, Precision(), Raw\+Error(), and Round2\+Precision().
+References d\+Value, plmi, and Raw\+Error().
 
-\mbox{\Hypertarget{classCDigFloat_ab6d3001a549d7496156321cbb26dde51}\label{classCDigFloat_ab6d3001a549d7496156321cbb26dde51}} 
+\mbox{\Hypertarget{classCDigFloat_acb435346b1f7b2e78d8f8373a416533a}\label{classCDigFloat_acb435346b1f7b2e78d8f8373a416533a}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!Raw\+Value@{Raw\+Value}}
 \index{Raw\+Value@{Raw\+Value}!C\+Dig\+Float@{C\+Dig\+Float}}
 \subsubsection{\texorpdfstring{Raw\+Value()}{RawValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily const double C\+Dig\+Float\+::\+Raw\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily double C\+Dig\+Float\+::\+Raw\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -1133,7 +1145,7 @@ const double
 \end{DoxyReturn}
 
 
-Definition at line 343 of file Dig\+Float.\+h.
+Definition at line 355 of file Dig\+Float.\+h.
 
 \mbox{\Hypertarget{classCDigFloat_a10dd39f19bfc21ae1d545d9203ef3e95}\label{classCDigFloat_a10dd39f19bfc21ae1d545d9203ef3e95}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!Raw\+Value@{Raw\+Value}}
@@ -1150,7 +1162,7 @@ const double
 \end{DoxyReturn}
 
 
-Definition at line 350 of file Dig\+Float.\+h.
+Definition at line 362 of file Dig\+Float.\+h.
 
 \mbox{\Hypertarget{classCDigFloat_a47dd744a2100dc850ede1511e616ed39}\label{classCDigFloat_a47dd744a2100dc850ede1511e616ed39}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!Reset\+Error@{Reset\+Error}}
@@ -1164,7 +1176,30 @@ resets \hyperlink{classCDigFloat_a25eb3782d1e727ff007a48f8308e3d4d}{C\+Dig\+Floa
 
 
 
-Definition at line 328 of file Dig\+Float.\+h.
+Definition at line 331 of file Dig\+Float.\+h.
+
+\mbox{\Hypertarget{classCDigFloat_a63f2632e5a762f37aa6eda4510c57502}\label{classCDigFloat_a63f2632e5a762f37aa6eda4510c57502}} 
+\index{C\+Dig\+Float@{C\+Dig\+Float}!Set\+User\+Defined\+Error@{Set\+User\+Defined\+Error}}
+\index{Set\+User\+Defined\+Error@{Set\+User\+Defined\+Error}!C\+Dig\+Float@{C\+Dig\+Float}}
+\subsubsection{\texorpdfstring{Set\+User\+Defined\+Error()}{SetUserDefinedError()}}
+{\footnotesize\ttfamily void C\+Dig\+Float\+::\+Set\+User\+Defined\+Error (\begin{DoxyParamCaption}\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{User\+Defined\+Error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+sets \hyperlink{classCDigFloat_a25eb3782d1e727ff007a48f8308e3d4d}{C\+Dig\+Float\+::d\+Error} to a user defined value. Use only if you know that your calculation errors go beyond the numerical inaccuracy for floating numbers 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em User\+Defined\+Error} & \hyperlink{classCDigFloat}{C\+Dig\+Float} user-\/defined error \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 340 of file Dig\+Float.\+h.
+
+
+
+References Raw\+Value().
 
 \mbox{\Hypertarget{classCDigFloat_aab339f7e1ffa5c88f3dbb432389752c9}\label{classCDigFloat_aab339f7e1ffa5c88f3dbb432389752c9}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!Valid@{Valid}}
@@ -1181,7 +1216,7 @@ bool
 \end{DoxyReturn}
 
 
-Definition at line 423 of file Dig\+Float.\+h.
+Definition at line 435 of file Dig\+Float.\+h.
 
 
 
@@ -1204,29 +1239,29 @@ sets \hyperlink{classCDigFloat_a4bbe69e30dd4e20527362493aa9aaf96}{C\+Dig\+Float\
 \end{DoxyParams}
 
 
-Definition at line 257 of file Dig\+Float.\+cpp.
+Definition at line 254 of file Dig\+Float.\+cpp.
 
 
 
 References d\+Error, Double\+Machine\+Epsilon(), and d\+Value.
 
-\mbox{\Hypertarget{classCDigFloat_a308ccc3e3c96dd81977033e0a94344fd}\label{classCDigFloat_a308ccc3e3c96dd81977033e0a94344fd}} 
+\mbox{\Hypertarget{classCDigFloat_a51f185eb4ff3b24910c996739b6d5e9c}\label{classCDigFloat_a51f185eb4ff3b24910c996739b6d5e9c}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!Value@{Value}}
 \index{Value@{Value}!C\+Dig\+Float@{C\+Dig\+Float}}
 \subsubsection{\texorpdfstring{Value()}{Value()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily const double C\+Dig\+Float\+::\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily double C\+Dig\+Float\+::\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
 getter of \hyperlink{classCDigFloat_a4bbe69e30dd4e20527362493aa9aaf96}{C\+Dig\+Float\+::d\+Value} conditionally considering \hyperlink{classCDigFloat_ad580654be35246d14c91482581c0bc11}{C\+Dig\+Float\+::n\+Precision}\+:~\newline
- see \hyperlink{classCDigFloat_a4d6ca24beda280be719374c2a6b2c64d}{C\+Dig\+Float\+::\+Precision\+Active()} and \hyperlink{classCDigFloat_a95875f6f7246debee0d00b0c41c82aee}{C\+Dig\+Float\+::\+Precision()} 
+ see \hyperlink{classCDigFloat_ad1f2365630c9e35e77c01093e73440c4}{C\+Dig\+Float\+::\+Precision\+Active()} and \hyperlink{classCDigFloat_ad66e2fc1bb19f491dfbc4fb7bfb20d47}{C\+Dig\+Float\+::\+Precision()} 
 
 \begin{DoxyReturn}{Returns}
 const double 
 \end{DoxyReturn}
 
 
-Definition at line 336 of file Dig\+Float.\+h.
+Definition at line 348 of file Dig\+Float.\+h.
 
 
 
@@ -1244,7 +1279,7 @@ getter for \hyperlink{classCDigFloat_a4bbe69e30dd4e20527362493aa9aaf96}{C\+Dig\+
 
 
 
-Definition at line 362 of file Dig\+Float.\+h.
+Definition at line 374 of file Dig\+Float.\+h.
 
 \mbox{\Hypertarget{classCDigFloat_a89603e1f9b9061b65376ac7b5fffddcf}\label{classCDigFloat_a89603e1f9b9061b65376ac7b5fffddcf}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!Value\+Min\+Limit@{Value\+Min\+Limit}}
@@ -1258,11 +1293,33 @@ getter for \hyperlink{classCDigFloat_a4bbe69e30dd4e20527362493aa9aaf96}{C\+Dig\+
 
 
 
-Definition at line 356 of file Dig\+Float.\+h.
+Definition at line 368 of file Dig\+Float.\+h.
 
 
 
 \subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classCDigFloat_a269b310d675c311c6e0894bf326593ae}\label{classCDigFloat_a269b310d675c311c6e0894bf326593ae}} 
+\index{C\+Dig\+Float@{C\+Dig\+Float}!abs@{abs}}
+\index{abs@{abs}!C\+Dig\+Float@{C\+Dig\+Float}}
+\subsubsection{\texorpdfstring{abs}{abs}}
+{\footnotesize\ttfamily \hyperlink{classCDigFloat}{C\+Dig\+Float} abs (\begin{DoxyParamCaption}\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{DF }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+abs\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} with absolute value; 
+
+
+\begin{DoxyParams}{Parameters}
+{\em FM} & \hyperlink{classCDigFloat}{C\+Dig\+Float} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCDigFloat}{C\+Dig\+Float} 
+\end{DoxyReturn}
+
+
+Definition at line 302 of file Dig\+Float.\+cpp.
+
 \mbox{\Hypertarget{classCDigFloat_a7e23751869edf87edc0feeb80eda78d9}\label{classCDigFloat_a7e23751869edf87edc0feeb80eda78d9}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!C\+Floating\+Measure@{C\+Floating\+Measure}}
 \index{C\+Floating\+Measure@{C\+Floating\+Measure}!C\+Dig\+Float@{C\+Dig\+Float}}
@@ -1272,6 +1329,28 @@ Definition at line 356 of file Dig\+Float.\+h.
 
 
 Definition at line 63 of file Dig\+Float.\+h.
+
+\mbox{\Hypertarget{classCDigFloat_a2206715f4b83afeea6339373bb3631fb}\label{classCDigFloat_a2206715f4b83afeea6339373bb3631fb}} 
+\index{C\+Dig\+Float@{C\+Dig\+Float}!exp@{exp}}
+\index{exp@{exp}!C\+Dig\+Float@{C\+Dig\+Float}}
+\subsubsection{\texorpdfstring{exp}{exp}}
+{\footnotesize\ttfamily \hyperlink{classCDigFloat}{C\+Dig\+Float} exp (\begin{DoxyParamCaption}\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{df\+Exp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+exp\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} exponential expression to Euler number and user given exponent 
+
+
+\begin{DoxyParams}{Parameters}
+{\em df\+Exp} & \hyperlink{classCDigFloat}{C\+Dig\+Float} as exponent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCDigFloat}{C\+Dig\+Float} 
+\end{DoxyReturn}
+
+
+Definition at line 392 of file Dig\+Float.\+cpp.
 
 \mbox{\Hypertarget{classCDigFloat_a25031604af1e6356848a9ac84c209903}\label{classCDigFloat_a25031604af1e6356848a9ac84c209903}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!log@{log}}
@@ -1295,7 +1374,7 @@ log\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} logarithm to user given
 \end{DoxyReturn}
 
 
-Definition at line 312 of file Dig\+Float.\+cpp.
+Definition at line 309 of file Dig\+Float.\+cpp.
 
 \mbox{\Hypertarget{classCDigFloat_ac5877d13039d236858e1cb04351f0a86}\label{classCDigFloat_ac5877d13039d236858e1cb04351f0a86}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!pow@{pow}}
@@ -1305,7 +1384,43 @@ Definition at line 312 of file Dig\+Float.\+cpp.
 
 
 
-Definition at line 374 of file Dig\+Float.\+cpp.
+pow\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} exponential expression to user given base and exponent 
+
+
+\begin{DoxyParams}{Parameters}
+{\em df\+Base} & \hyperlink{classCDigFloat}{C\+Dig\+Float} as base \\
+\hline
+{\em df\+Exp} & \hyperlink{classCDigFloat}{C\+Dig\+Float} as exponent \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCDigFloat}{C\+Dig\+Float} 
+\end{DoxyReturn}
+
+
+Definition at line 373 of file Dig\+Float.\+cpp.
+
+\mbox{\Hypertarget{classCDigFloat_ae66acb4f3bea83a9fad22cc58fe50905}\label{classCDigFloat_ae66acb4f3bea83a9fad22cc58fe50905}} 
+\index{C\+Dig\+Float@{C\+Dig\+Float}!sqrt@{sqrt}}
+\index{sqrt@{sqrt}!C\+Dig\+Float@{C\+Dig\+Float}}
+\subsubsection{\texorpdfstring{sqrt}{sqrt}}
+{\footnotesize\ttfamily \hyperlink{classCDigFloat}{C\+Dig\+Float} sqrt (\begin{DoxyParamCaption}\item[{const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&}]{DF }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+sqrt\+: returns \hyperlink{classCDigFloat}{C\+Dig\+Float} as square root of user given value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em DF} & \hyperlink{classCDigFloat}{C\+Dig\+Float} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{classCDigFloat}{C\+Dig\+Float} 
+\end{DoxyReturn}
+
+
+Definition at line 410 of file Dig\+Float.\+cpp.
 
 
 
@@ -1327,7 +1442,7 @@ switches on (=true) / off (=false) the given precision\+:~\newline
 \item \hyperlink{classCDigFloat_ad8980d984bf2bab71d15b830fd0180a5}{C\+Dig\+Float\+::operator==} 
 \end{DoxyItemize}
 
-Definition at line 514 of file Dig\+Float.\+h.
+Definition at line 526 of file Dig\+Float.\+h.
 
 \mbox{\Hypertarget{classCDigFloat_a25eb3782d1e727ff007a48f8308e3d4d}\label{classCDigFloat_a25eb3782d1e727ff007a48f8308e3d4d}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!d\+Error@{d\+Error}}
@@ -1341,7 +1456,7 @@ keeps the numerical error of \hyperlink{classCDigFloat_a4bbe69e30dd4e20527362493
 
 
 
-Definition at line 481 of file Dig\+Float.\+h.
+Definition at line 493 of file Dig\+Float.\+h.
 
 \mbox{\Hypertarget{classCDigFloat_a7f9809fa0b25da57f5c8c18a02b7d1a7}\label{classCDigFloat_a7f9809fa0b25da57f5c8c18a02b7d1a7}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!d\+Precision\+Resolution@{d\+Precision\+Resolution}}
@@ -1360,7 +1475,7 @@ the resolution which controls the output precision of \hyperlink{classCDigFloat_
 \item \hyperlink{classCDigFloat_ad8980d984bf2bab71d15b830fd0180a5}{C\+Dig\+Float\+::operator==} (if \hyperlink{classCDigFloat_aa1f6ed0312a2aa6ae5ee2abd195adefc}{C\+Dig\+Float\+::b\+Precision\+Active} == true) 
 \end{DoxyItemize}
 
-Definition at line 506 of file Dig\+Float.\+h.
+Definition at line 518 of file Dig\+Float.\+h.
 
 \mbox{\Hypertarget{classCDigFloat_a4bbe69e30dd4e20527362493aa9aaf96}\label{classCDigFloat_a4bbe69e30dd4e20527362493aa9aaf96}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!d\+Value@{d\+Value}}
@@ -1374,7 +1489,7 @@ the raw value
 
 
 
-Definition at line 486 of file Dig\+Float.\+h.
+Definition at line 498 of file Dig\+Float.\+h.
 
 \mbox{\Hypertarget{classCDigFloat_ad580654be35246d14c91482581c0bc11}\label{classCDigFloat_ad580654be35246d14c91482581c0bc11}} 
 \index{C\+Dig\+Float@{C\+Dig\+Float}!n\+Precision@{n\+Precision}}
@@ -1393,7 +1508,7 @@ number which controls the output precision of \hyperlink{classCDigFloat_a4bbe69e
 \item \hyperlink{classCDigFloat_ad8980d984bf2bab71d15b830fd0180a5}{C\+Dig\+Float\+::operator==} (if \hyperlink{classCDigFloat_aa1f6ed0312a2aa6ae5ee2abd195adefc}{C\+Dig\+Float\+::b\+Precision\+Active} == true) 
 \end{DoxyItemize}
 
-Definition at line 496 of file Dig\+Float.\+h.
+Definition at line 508 of file Dig\+Float.\+h.
 
 
 

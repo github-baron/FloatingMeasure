@@ -1,6 +1,7 @@
 var NAVTREE =
 [
   [ "FloatingMeasure", "index.html", [
+    [ "[FloatingMeasure Library]", "index.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -29,8 +30,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"da/d3b/classCSingleton.html",
-"df/d21/classCFloatingMeasure.html#a841b94d2883274e67999688fad40d538"
+"d9/ded/Utils_8h.html#a5c6964ba7806e840a8a24e21191727a3",
+"df/d0c/Utils_8cpp_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -47,7 +47,7 @@ class CFloatingMeasure;
  * @brief CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating point representation.<br>
  * This class offers:
  * - operations of floating points (+,-,/,*)
- * - propagation of numerical errors for all operations performed on an instance
+ * - propagation of numerical errors (<a href=https://en.wikipedia.org/wiki/Round-off_error>round-off errors</a> ) for all operations performed on an instance
  * - setting of user defined precision for comparing and printing.
  * 
  */
@@ -530,6 +530,13 @@ protected:
     // use 
     /////////////////////////////////////////////////////
 /**
+ * @brief abs: returns CDigFloat +1 or -1 depending on sign of raw value;
+ * 
+ * @param FM: CDigFloat
+ * @return CDigFloat
+ */
+CDigFloat sgn(const CDigFloat& DF );
+/**
  * @brief abs: returns CDigFloat with absolute value;
  * 
  * @param FM: CDigFloat
@@ -588,7 +595,70 @@ CDigFloat min(const CDigFloat& one, const CDigFloat& other);
  * @return CDigFloat (one or the other)
  */
 CDigFloat max(const CDigFloat& one, const CDigFloat& other);
+/**
+ * @brief operator+
+ * 
+ * @param One: CDigFloat 
+ * @param Other: CDigFloat
+ * @return CDigFloat
+ */
+CDigFloat
+#ifdef _WIN32
+_WIN_DLL_API
+#endif
+operator+(const CDigFloat& One ,const CDigFloat& Other);
+
+/**
+ * @brief operator-  for expression "-X" instead of X*(-1)
+ * 
+ * @param One: CDigFloat 
+ * @param Other: CDigFloat
+ * @return CDigFloat
+ */
+CDigFloat
+#ifdef _WIN32
+_WIN_DLL_API
+#endif
+operator-(const CDigFloat& One);
+
+/**
+ * @brief operator- 
+ * 
+ * @param One: CDigFloat 
+ * @param Other: CDigFloat
+ * @return CDigFloat
+ */
+CDigFloat
+#ifdef _WIN32
+_WIN_DLL_API
+#endif
+operator-(const CDigFloat& One ,const CDigFloat& Other);
 
 
+/**
+ * @brief operator* 
+ * 
+ * @param One: CDigFloat 
+ * @param Other: CDigFloat
+ * @return CDigFloat
+ */
+CDigFloat
+#ifdef _WIN32
+_WIN_DLL_API
+#endif
+operator*(const CDigFloat& One ,const CDigFloat& Other);
+
+/**
+ * @brief operator/ 
+ * 
+ * @param One: CDigFloat 
+ * @param Other: CDigFloat
+ * @return CDigFloat
+ */
+CDigFloat
+#ifdef _WIN32
+_WIN_DLL_API
+#endif
+operator/(const CDigFloat& One ,const CDigFloat& Other);
 
 #endif // CDIGFLOAT_H

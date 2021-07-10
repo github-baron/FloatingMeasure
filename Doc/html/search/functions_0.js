@@ -10,6 +10,7 @@ var searchData=
   ['_5fprecision',['_Precision',['../df/d21/classCFloatingMeasure.html#a8e16f55f29d0d4c4148307a1f5953fe3',1,'CFloatingMeasure']]],
   ['_5fremoveneutralnumbers',['_RemoveNeutralNumbers',['../d0/d43/classCComplexMeasure.html#a9eb89170847ab2ef592eace6453cf300',1,'CComplexMeasure']]],
   ['_5fresolvemeasureleft',['_ResolveMeasureLeft',['../d0/d43/classCComplexMeasure.html#a8f642a3a0044d4dc0492774bca8666e9',1,'CComplexMeasure']]],
+  ['_5fscaleprecision',['_ScalePrecision',['../df/d21/classCFloatingMeasure.html#a9eb8748502d6f118fa631749165a6d6e',1,'CFloatingMeasure']]],
   ['_5fsearchandshortensamesiindex',['_SearchAndShortenSameSIIndex',['../d0/d43/classCComplexMeasure.html#ac9bdfda3d2175532ba7e1f425e6b23b1',1,'CComplexMeasure']]],
   ['_5fsimplify',['_Simplify',['../d0/d43/classCComplexMeasure.html#ae66b48f40cc04866424ca5b7114d4adb',1,'CComplexMeasure']]],
   ['_5fvalid',['_Valid',['../d0/d43/classCComplexMeasure.html#ae3605c75d2c571b06108b4b19af6618b',1,'CComplexMeasure']]]

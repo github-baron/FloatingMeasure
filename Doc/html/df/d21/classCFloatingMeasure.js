@@ -6,6 +6,7 @@ var classCFloatingMeasure =
     [ "~CFloatingMeasure", "df/d21/classCFloatingMeasure.html#a43c9d00b7a9e66da291926f58459c7c8", null ],
     [ "_Init", "df/d21/classCFloatingMeasure.html#a1e8a7467d6435c4cf349198804617623", null ],
     [ "_Precision", "df/d21/classCFloatingMeasure.html#a8e16f55f29d0d4c4148307a1f5953fe3", null ],
+    [ "_ScalePrecision", "df/d21/classCFloatingMeasure.html#a9eb8748502d6f118fa631749165a6d6e", null ],
     [ "Compatible", "df/d21/classCFloatingMeasure.html#ae69672971857cf047c5bc7ab4b631b6c", null ],
     [ "Compatible", "df/d21/classCFloatingMeasure.html#a5cf69c287abe4e2f65242e97093f7595", null ],
     [ "DebugOut", "df/d21/classCFloatingMeasure.html#a6d92f39204f23e81732cb77131517b6f", null ],

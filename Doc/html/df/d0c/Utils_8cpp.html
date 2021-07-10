@@ -101,7 +101,7 @@ Include dependency graph for Utils.cpp:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ae9dfc174daaf6261f167ccc069efea93"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0c/Utils_8cpp.html#ae9dfc174daaf6261f167ccc069efea93">DoubleMachineEpsilon</a> (double dValue)</td></tr>
-<tr class="memdesc:ae9dfc174daaf6261f167ccc069efea93"><td class="mdescLeft">&#160;</td><td class="mdescRight">calculates the numerical error for a given double  <a href="#ae9dfc174daaf6261f167ccc069efea93">More...</a><br /></td></tr>
+<tr class="memdesc:ae9dfc174daaf6261f167ccc069efea93"><td class="mdescLeft">&#160;</td><td class="mdescRight">estimate the numerical error for a 64bit double incrementing the LSB. The maximal relative error is about 2.3e-16. Hence, for a value of 1e+308 the error is about 1e+292.  <a href="#ae9dfc174daaf6261f167ccc069efea93">More...</a><br /></td></tr>
 <tr class="separator:ae9dfc174daaf6261f167ccc069efea93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dd752b594724a3517f92d86ba0cd39e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0c/Utils_8cpp.html#a7dd752b594724a3517f92d86ba0cd39e">Round2Precision</a> (const double dValue, const int nPrecision)</td></tr>
 <tr class="memdesc:a7dd752b594724a3517f92d86ba0cd39e"><td class="mdescLeft">&#160;</td><td class="mdescRight">cuts double according to precision  <a href="#a7dd752b594724a3517f92d86ba0cd39e">More...</a><br /></td></tr>
@@ -136,7 +136,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00041">41</a> of file <a class="el" href="../../df/d0c/Utils_8cpp_source.html">Utils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00045">45</a> of file <a class="el" href="../../df/d0c/Utils_8cpp_source.html">Utils.cpp</a>.</p>
 
 </div>
 </div>
@@ -156,18 +156,12 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>estimate the numerical error for a 64bit double incrementing the LSB. The maximal relative error is about 2.3e-16. Hence, for a value of 1e+308 the error is about 1e+292. </p>
 <p>calculates the numerical error for a given double </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">dValue</td><td>double which error is calculated </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00027">27</a> of file <a class="el" href="../../df/d0c/Utils_8cpp_source.html">Utils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00031">31</a> of file <a class="el" href="../../df/d0c/Utils_8cpp_source.html">Utils.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d9/ded/Utils_8h_source.html#l00094">dbl_64::d64</a>, <a class="el" href="../../d9/ded/Utils_8h_source.html#l00089">dbl_64::i64</a>, and <a class="el" href="../../da/d3d/ComplexMeasureMacros_8h_source.html#l00079">s</a>.</p>
+<p class="reference">References <a class="el" href="../../d9/ded/Utils_8h_source.html#l00089">dbl_64::d64</a>, <a class="el" href="../../d9/ded/Utils_8h_source.html#l00084">dbl_64::i64</a>, and <a class="el" href="../../da/d3d/ComplexMeasureMacros_8h_source.html#l00079">s</a>.</p>
 
 </div>
 </div>
@@ -211,9 +205,9 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00035">35</a> of file <a class="el" href="../../df/d0c/Utils_8cpp_source.html">Utils.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00039">39</a> of file <a class="el" href="../../df/d0c/Utils_8cpp_source.html">Utils.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00374">pow()</a>.</p>
+<p class="reference">References <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00373">pow()</a>.</p>
 
 </div>
 </div>

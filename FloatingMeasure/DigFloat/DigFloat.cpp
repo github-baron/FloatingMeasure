@@ -299,6 +299,13 @@ string CDigFloat::DebugOut()
     // external functions for comfortable 
     // use 
     /////////////////////////////////////////////////////
+CDigFloat sgn(const CDigFloat& DF)
+{
+    int nSign = 1;
+    if( DF.RawValue() < 0)
+        nSign = -1;
+    return CDigFloat(nSign);
+}
 CDigFloat abs(const CDigFloat& DF)
 { 
     CDigFloat dfResult(DF); 
@@ -441,3 +448,36 @@ CDigFloat min(const CDigFloat& one, const CDigFloat& other)
         return other;
 }
 
+CDigFloat operator+(const CDigFloat& One, const CDigFloat& Other)
+{
+    CDigFloat Result = One;
+    Result += Other;
+    return Result;    
+}
+
+CDigFloat operator-(const CDigFloat& One)
+{
+    return One*-1;
+}
+
+CDigFloat operator-(const CDigFloat& One, const CDigFloat& Other)
+{
+    CDigFloat Result = One;
+    Result -= Other;
+    return Result;
+}
+
+
+CDigFloat operator*(const CDigFloat& One, const CDigFloat& Other)
+{
+    CDigFloat Result = One;
+    Result *= Other;
+    return Result;
+}
+
+CDigFloat operator/(const CDigFloat& One, const CDigFloat& Other)
+{
+    CDigFloat Result = One;
+    Result /= Other;
+    return Result;
+}

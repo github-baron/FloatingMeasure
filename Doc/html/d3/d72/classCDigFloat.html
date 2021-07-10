@@ -197,13 +197,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a47dd744a2100dc850ede1511e616ed39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#a47dd744a2100dc850ede1511e616ed39">ResetError</a> ()</td></tr>
 <tr class="memdesc:a47dd744a2100dc850ede1511e616ed39"><td class="mdescLeft">&#160;</td><td class="mdescRight">resets <a class="el" href="../../d3/d72/classCDigFloat.html#a25eb3782d1e727ff007a48f8308e3d4d" title="keeps the numerical error of CDigFloat::dValue including the propagation due to multiple operations ...">CDigFloat::dError</a> to <a class="el" href="../../d9/ded/Utils_8h.html#ae9dfc174daaf6261f167ccc069efea93" title="calculates the numerical error for a given double ">DoubleMachineEpsilon</a> ( <a class="el" href="../../d3/d72/classCDigFloat.html#a4bbe69e30dd4e20527362493aa9aaf96" title="the raw value ">CDigFloat::dValue</a>)  <a href="#a47dd744a2100dc850ede1511e616ed39">More...</a><br /></td></tr>
 <tr class="separator:a47dd744a2100dc850ede1511e616ed39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a308ccc3e3c96dd81977033e0a94344fd"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#a308ccc3e3c96dd81977033e0a94344fd">Value</a> () const</td></tr>
-<tr class="memdesc:a308ccc3e3c96dd81977033e0a94344fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter of <a class="el" href="../../d3/d72/classCDigFloat.html#a4bbe69e30dd4e20527362493aa9aaf96" title="the raw value ">CDigFloat::dValue</a> conditionally considering <a class="el" href="../../d3/d72/classCDigFloat.html#ad580654be35246d14c91482581c0bc11" title="number which controls the output precision of CDigFloat::dValue: affected functions ...">CDigFloat::nPrecision</a>:<br />
- see <a class="el" href="../../d3/d72/classCDigFloat.html#a4d6ca24beda280be719374c2a6b2c64d" title="getter for bPrecisionActive ">CDigFloat::PrecisionActive()</a> and <a class="el" href="../../d3/d72/classCDigFloat.html#a95875f6f7246debee0d00b0c41c82aee" title="getter of CDigFloat::nPrecision ">CDigFloat::Precision()</a>  <a href="#a308ccc3e3c96dd81977033e0a94344fd">More...</a><br /></td></tr>
-<tr class="separator:a308ccc3e3c96dd81977033e0a94344fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6d3001a549d7496156321cbb26dde51"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#ab6d3001a549d7496156321cbb26dde51">RawValue</a> () const</td></tr>
-<tr class="memdesc:ab6d3001a549d7496156321cbb26dde51"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter of <a class="el" href="../../d3/d72/classCDigFloat.html#a4bbe69e30dd4e20527362493aa9aaf96" title="the raw value ">CDigFloat::dValue</a> (no rounding)  <a href="#ab6d3001a549d7496156321cbb26dde51">More...</a><br /></td></tr>
-<tr class="separator:ab6d3001a549d7496156321cbb26dde51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63f2632e5a762f37aa6eda4510c57502"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#a63f2632e5a762f37aa6eda4510c57502">SetUserDefinedError</a> (const <a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a> &amp;UserDefinedError)</td></tr>
+<tr class="memdesc:a63f2632e5a762f37aa6eda4510c57502"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets <a class="el" href="../../d3/d72/classCDigFloat.html#a25eb3782d1e727ff007a48f8308e3d4d" title="keeps the numerical error of CDigFloat::dValue including the propagation due to multiple operations ...">CDigFloat::dError</a> to a user defined value. Use only if you know that your calculation errors go beyond the numerical inaccuracy for floating numbers  <a href="#a63f2632e5a762f37aa6eda4510c57502">More...</a><br /></td></tr>
+<tr class="separator:a63f2632e5a762f37aa6eda4510c57502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51f185eb4ff3b24910c996739b6d5e9c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#a51f185eb4ff3b24910c996739b6d5e9c">Value</a> () const</td></tr>
+<tr class="memdesc:a51f185eb4ff3b24910c996739b6d5e9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter of <a class="el" href="../../d3/d72/classCDigFloat.html#a4bbe69e30dd4e20527362493aa9aaf96" title="the raw value ">CDigFloat::dValue</a> conditionally considering <a class="el" href="../../d3/d72/classCDigFloat.html#ad580654be35246d14c91482581c0bc11" title="number which controls the output precision of CDigFloat::dValue: affected functions ...">CDigFloat::nPrecision</a>:<br />
+ see <a class="el" href="../../d3/d72/classCDigFloat.html#ad1f2365630c9e35e77c01093e73440c4" title="getter for bPrecisionActive ">CDigFloat::PrecisionActive()</a> and <a class="el" href="../../d3/d72/classCDigFloat.html#ad66e2fc1bb19f491dfbc4fb7bfb20d47" title="getter of CDigFloat::nPrecision ">CDigFloat::Precision()</a>  <a href="#a51f185eb4ff3b24910c996739b6d5e9c">More...</a><br /></td></tr>
+<tr class="separator:a51f185eb4ff3b24910c996739b6d5e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb435346b1f7b2e78d8f8373a416533a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#acb435346b1f7b2e78d8f8373a416533a">RawValue</a> () const</td></tr>
+<tr class="memdesc:acb435346b1f7b2e78d8f8373a416533a"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter of <a class="el" href="../../d3/d72/classCDigFloat.html#a4bbe69e30dd4e20527362493aa9aaf96" title="the raw value ">CDigFloat::dValue</a> (no rounding)  <a href="#acb435346b1f7b2e78d8f8373a416533a">More...</a><br /></td></tr>
+<tr class="separator:acb435346b1f7b2e78d8f8373a416533a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10dd39f19bfc21ae1d545d9203ef3e95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#a10dd39f19bfc21ae1d545d9203ef3e95">RawValue</a> (const double &amp;other)</td></tr>
 <tr class="memdesc:a10dd39f19bfc21ae1d545d9203ef3e95"><td class="mdescLeft">&#160;</td><td class="mdescRight">setter of <a class="el" href="../../d3/d72/classCDigFloat.html#a4bbe69e30dd4e20527362493aa9aaf96" title="the raw value ">CDigFloat::dValue</a> (no rounding/no error setting)  <a href="#a10dd39f19bfc21ae1d545d9203ef3e95">More...</a><br /></td></tr>
 <tr class="separator:a10dd39f19bfc21ae1d545d9203ef3e95"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -213,33 +216,33 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a20195234feac0aaa9acbb5ad0fcfeabb"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#a20195234feac0aaa9acbb5ad0fcfeabb">ValueMaxLimit</a> () const</td></tr>
 <tr class="memdesc:a20195234feac0aaa9acbb5ad0fcfeabb"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for <a class="el" href="../../d3/d72/classCDigFloat.html#a4bbe69e30dd4e20527362493aa9aaf96" title="the raw value ">CDigFloat::dValue</a> + <a class="el" href="../../d3/d72/classCDigFloat.html#a25eb3782d1e727ff007a48f8308e3d4d" title="keeps the numerical error of CDigFloat::dValue including the propagation due to multiple operations ...">CDigFloat::dError</a> - (protected: for internal use only)  <a href="#a20195234feac0aaa9acbb5ad0fcfeabb">More...</a><br /></td></tr>
 <tr class="separator:a20195234feac0aaa9acbb5ad0fcfeabb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b067b1bde507408956fa65bef7368bb"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#a1b067b1bde507408956fa65bef7368bb">Error</a> () const</td></tr>
-<tr class="memdesc:a1b067b1bde507408956fa65bef7368bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter of <a class="el" href="../../d3/d72/classCDigFloat.html#a25eb3782d1e727ff007a48f8308e3d4d" title="keeps the numerical error of CDigFloat::dValue including the propagation due to multiple operations ...">CDigFloat::dError</a> conditionally considering <a class="el" href="../../d3/d72/classCDigFloat.html#ad580654be35246d14c91482581c0bc11" title="number which controls the output precision of CDigFloat::dValue: affected functions ...">CDigFloat::nPrecision</a>: <br />
- see <a class="el" href="../../d3/d72/classCDigFloat.html#a4d6ca24beda280be719374c2a6b2c64d" title="getter for bPrecisionActive ">CDigFloat::PrecisionActive()</a> and <a class="el" href="../../d3/d72/classCDigFloat.html#a95875f6f7246debee0d00b0c41c82aee" title="getter of CDigFloat::nPrecision ">CDigFloat::Precision()</a>  <a href="#a1b067b1bde507408956fa65bef7368bb">More...</a><br /></td></tr>
-<tr class="separator:a1b067b1bde507408956fa65bef7368bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9805530caa01cc722cfbe8912689daa7"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#a9805530caa01cc722cfbe8912689daa7">RawError</a> () const</td></tr>
-<tr class="memdesc:a9805530caa01cc722cfbe8912689daa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter of <a class="el" href="../../d3/d72/classCDigFloat.html#a25eb3782d1e727ff007a48f8308e3d4d" title="keeps the numerical error of CDigFloat::dValue including the propagation due to multiple operations ...">CDigFloat::dError</a> (no rounding)  <a href="#a9805530caa01cc722cfbe8912689daa7">More...</a><br /></td></tr>
-<tr class="separator:a9805530caa01cc722cfbe8912689daa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95875f6f7246debee0d00b0c41c82aee"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#a95875f6f7246debee0d00b0c41c82aee">Precision</a> () const</td></tr>
-<tr class="memdesc:a95875f6f7246debee0d00b0c41c82aee"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter of <a class="el" href="../../d3/d72/classCDigFloat.html#ad580654be35246d14c91482581c0bc11" title="number which controls the output precision of CDigFloat::dValue: affected functions ...">CDigFloat::nPrecision</a>  <a href="#a95875f6f7246debee0d00b0c41c82aee">More...</a><br /></td></tr>
-<tr class="separator:a95875f6f7246debee0d00b0c41c82aee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca8ded79bec9c18f5be1cbbbee59f066"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#aca8ded79bec9c18f5be1cbbbee59f066">Error</a> () const</td></tr>
+<tr class="memdesc:aca8ded79bec9c18f5be1cbbbee59f066"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter of <a class="el" href="../../d3/d72/classCDigFloat.html#a25eb3782d1e727ff007a48f8308e3d4d" title="keeps the numerical error of CDigFloat::dValue including the propagation due to multiple operations ...">CDigFloat::dError</a> conditionally considering <a class="el" href="../../d3/d72/classCDigFloat.html#ad580654be35246d14c91482581c0bc11" title="number which controls the output precision of CDigFloat::dValue: affected functions ...">CDigFloat::nPrecision</a>: <br />
+ see <a class="el" href="../../d3/d72/classCDigFloat.html#ad1f2365630c9e35e77c01093e73440c4" title="getter for bPrecisionActive ">CDigFloat::PrecisionActive()</a> and <a class="el" href="../../d3/d72/classCDigFloat.html#ad66e2fc1bb19f491dfbc4fb7bfb20d47" title="getter of CDigFloat::nPrecision ">CDigFloat::Precision()</a>  <a href="#aca8ded79bec9c18f5be1cbbbee59f066">More...</a><br /></td></tr>
+<tr class="separator:aca8ded79bec9c18f5be1cbbbee59f066"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a996749023353bd1df0ab41a2a11e2ee7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#a996749023353bd1df0ab41a2a11e2ee7">RawError</a> () const</td></tr>
+<tr class="memdesc:a996749023353bd1df0ab41a2a11e2ee7"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter of <a class="el" href="../../d3/d72/classCDigFloat.html#a25eb3782d1e727ff007a48f8308e3d4d" title="keeps the numerical error of CDigFloat::dValue including the propagation due to multiple operations ...">CDigFloat::dError</a> (no rounding)  <a href="#a996749023353bd1df0ab41a2a11e2ee7">More...</a><br /></td></tr>
+<tr class="separator:a996749023353bd1df0ab41a2a11e2ee7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad66e2fc1bb19f491dfbc4fb7bfb20d47"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#ad66e2fc1bb19f491dfbc4fb7bfb20d47">Precision</a> () const</td></tr>
+<tr class="memdesc:ad66e2fc1bb19f491dfbc4fb7bfb20d47"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter of <a class="el" href="../../d3/d72/classCDigFloat.html#ad580654be35246d14c91482581c0bc11" title="number which controls the output precision of CDigFloat::dValue: affected functions ...">CDigFloat::nPrecision</a>  <a href="#ad66e2fc1bb19f491dfbc4fb7bfb20d47">More...</a><br /></td></tr>
+<tr class="separator:ad66e2fc1bb19f491dfbc4fb7bfb20d47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d12203e256d0fba602b3cfec37f96a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#a6d12203e256d0fba602b3cfec37f96a6">Precision</a> (const int UserPrecision)</td></tr>
 <tr class="memdesc:a6d12203e256d0fba602b3cfec37f96a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets <a class="el" href="../../d3/d72/classCDigFloat.html#ad580654be35246d14c91482581c0bc11" title="number which controls the output precision of CDigFloat::dValue: affected functions ...">CDigFloat::nPrecision</a> and <a class="el" href="../../d3/d72/classCDigFloat.html#a7f9809fa0b25da57f5c8c18a02b7d1a7" title="the resolution which controls the output precision of CDigFloat::dValue: It is calculated by 10-nPrec...">CDigFloat::dPrecisionResolution</a> =10<sup>-nPrecision</sup> :  <a href="#a6d12203e256d0fba602b3cfec37f96a6">More...</a><br /></td></tr>
 <tr class="separator:a6d12203e256d0fba602b3cfec37f96a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d6ca24beda280be719374c2a6b2c64d"><td class="memItemLeft" align="right" valign="top">const bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#a4d6ca24beda280be719374c2a6b2c64d">PrecisionActive</a> () const</td></tr>
-<tr class="memdesc:a4d6ca24beda280be719374c2a6b2c64d"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for bPrecisionActive  <a href="#a4d6ca24beda280be719374c2a6b2c64d">More...</a><br /></td></tr>
-<tr class="separator:a4d6ca24beda280be719374c2a6b2c64d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1f2365630c9e35e77c01093e73440c4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#ad1f2365630c9e35e77c01093e73440c4">PrecisionActive</a> () const</td></tr>
+<tr class="memdesc:ad1f2365630c9e35e77c01093e73440c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for bPrecisionActive  <a href="#ad1f2365630c9e35e77c01093e73440c4">More...</a><br /></td></tr>
+<tr class="separator:ad1f2365630c9e35e77c01093e73440c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a680354bead4079c14a67688124bb4b85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#a680354bead4079c14a67688124bb4b85">PrecisionActive</a> (const bool UserPrecisionActive)</td></tr>
 <tr class="memdesc:a680354bead4079c14a67688124bb4b85"><td class="mdescLeft">&#160;</td><td class="mdescRight">setter for bPrecisionActive: constrols rounding to digits given by nPrecision affected functions  <a href="#a680354bead4079c14a67688124bb4b85">More...</a><br /></td></tr>
 <tr class="separator:a680354bead4079c14a67688124bb4b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad39db10046bbfd27c2537581bdb7e073"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#ad39db10046bbfd27c2537581bdb7e073">PrecisionResolution</a> () const</td></tr>
-<tr class="memdesc:ad39db10046bbfd27c2537581bdb7e073"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for the resolution defined by the given precision (see <a class="el" href="../../d3/d72/classCDigFloat.html#a95875f6f7246debee0d00b0c41c82aee" title="getter of CDigFloat::nPrecision ">CDigFloat::Precision</a>)  <a href="#ad39db10046bbfd27c2537581bdb7e073">More...</a><br /></td></tr>
-<tr class="separator:ad39db10046bbfd27c2537581bdb7e073"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b229b407a4adff339f086856b52078b"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#a8b229b407a4adff339f086856b52078b">PrecisionResolution</a> () const</td></tr>
+<tr class="memdesc:a8b229b407a4adff339f086856b52078b"><td class="mdescLeft">&#160;</td><td class="mdescRight">getter for the resolution defined by the given precision (see <a class="el" href="../../d3/d72/classCDigFloat.html#ad66e2fc1bb19f491dfbc4fb7bfb20d47" title="getter of CDigFloat::nPrecision ">CDigFloat::Precision</a>)  <a href="#a8b229b407a4adff339f086856b52078b">More...</a><br /></td></tr>
+<tr class="separator:a8b229b407a4adff339f086856b52078b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab339f7e1ffa5c88f3dbb432389752c9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#aab339f7e1ffa5c88f3dbb432389752c9">Valid</a> ()</td></tr>
 <tr class="memdesc:aab339f7e1ffa5c88f3dbb432389752c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">check if value is valid: non-NaN  <a href="#aab339f7e1ffa5c88f3dbb432389752c9">More...</a><br /></td></tr>
 <tr class="separator:aab339f7e1ffa5c88f3dbb432389752c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80731e0970f607114d6d1bde4d02bd39"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#a80731e0970f607114d6d1bde4d02bd39">Print</a> (bool bWithError=true) const</td></tr>
-<tr class="memdesc:a80731e0970f607114d6d1bde4d02bd39"><td class="mdescLeft">&#160;</td><td class="mdescRight">prints <a class="el" href="../../d3/d72/classCDigFloat.html#a4bbe69e30dd4e20527362493aa9aaf96" title="the raw value ">CDigFloat::dValue</a> and conditionally <a class="el" href="../../d3/d72/classCDigFloat.html#a25eb3782d1e727ff007a48f8308e3d4d" title="keeps the numerical error of CDigFloat::dValue including the propagation due to multiple operations ...">CDigFloat::dError</a> formatted according to <a class="el" href="../../d3/d72/classCDigFloat.html#ad580654be35246d14c91482581c0bc11" title="number which controls the output precision of CDigFloat::dValue: affected functions ...">CDigFloat::nPrecision</a> if <a class="el" href="../../d3/d72/classCDigFloat.html#a4d6ca24beda280be719374c2a6b2c64d" title="getter for bPrecisionActive ">CDigFloat::PrecisionActive()</a> is true. Otherwise the number of digits is formatted with DF_DEFAULT_PRINT_PRECISION.  <a href="#a80731e0970f607114d6d1bde4d02bd39">More...</a><br /></td></tr>
+<tr class="memdesc:a80731e0970f607114d6d1bde4d02bd39"><td class="mdescLeft">&#160;</td><td class="mdescRight">prints <a class="el" href="../../d3/d72/classCDigFloat.html#a4bbe69e30dd4e20527362493aa9aaf96" title="the raw value ">CDigFloat::dValue</a> and conditionally <a class="el" href="../../d3/d72/classCDigFloat.html#a25eb3782d1e727ff007a48f8308e3d4d" title="keeps the numerical error of CDigFloat::dValue including the propagation due to multiple operations ...">CDigFloat::dError</a> formatted according to <a class="el" href="../../d3/d72/classCDigFloat.html#ad580654be35246d14c91482581c0bc11" title="number which controls the output precision of CDigFloat::dValue: affected functions ...">CDigFloat::nPrecision</a> if <a class="el" href="../../d3/d72/classCDigFloat.html#ad1f2365630c9e35e77c01093e73440c4" title="getter for bPrecisionActive ">CDigFloat::PrecisionActive()</a> is true. Otherwise the number of digits is formatted with DF_DEFAULT_PRINT_PRECISION.  <a href="#a80731e0970f607114d6d1bde4d02bd39">More...</a><br /></td></tr>
 <tr class="separator:a80731e0970f607114d6d1bde4d02bd39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7051716ffe1294bab6ed6e194a73618e"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#a7051716ffe1294bab6ed6e194a73618e">RawPrint</a> (const int UserPrecision, bool bWithError=true) const</td></tr>
 <tr class="memdesc:a7051716ffe1294bab6ed6e194a73618e"><td class="mdescLeft">&#160;</td><td class="mdescRight">prints <a class="el" href="../../d3/d72/classCDigFloat.html#a4bbe69e30dd4e20527362493aa9aaf96" title="the raw value ">CDigFloat::dValue</a> and conditionally <a class="el" href="../../d3/d72/classCDigFloat.html#a25eb3782d1e727ff007a48f8308e3d4d" title="keeps the numerical error of CDigFloat::dValue including the propagation due to multiple operations ...">CDigFloat::dError</a> formatted according to UserPrecision.  <a href="#a7051716ffe1294bab6ed6e194a73618e">More...</a><br /></td></tr>
@@ -280,18 +283,28 @@ Protected Attributes</h2></td></tr>
 Friends</h2></td></tr>
 <tr class="memitem:a7e23751869edf87edc0feeb80eda78d9"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#a7e23751869edf87edc0feeb80eda78d9">CFloatingMeasure</a></td></tr>
 <tr class="separator:a7e23751869edf87edc0feeb80eda78d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a269b310d675c311c6e0894bf326593ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#a269b310d675c311c6e0894bf326593ae">abs</a> (const <a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a> &amp;DF)</td></tr>
+<tr class="memdesc:a269b310d675c311c6e0894bf326593ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">abs: returns <a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> with absolute value;  <a href="#a269b310d675c311c6e0894bf326593ae">More...</a><br /></td></tr>
+<tr class="separator:a269b310d675c311c6e0894bf326593ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66acb4f3bea83a9fad22cc58fe50905"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#ae66acb4f3bea83a9fad22cc58fe50905">sqrt</a> (const <a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a> &amp;DF)</td></tr>
+<tr class="memdesc:ae66acb4f3bea83a9fad22cc58fe50905"><td class="mdescLeft">&#160;</td><td class="mdescRight">sqrt: returns <a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> as square root of user given value  <a href="#ae66acb4f3bea83a9fad22cc58fe50905">More...</a><br /></td></tr>
+<tr class="separator:ae66acb4f3bea83a9fad22cc58fe50905"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25031604af1e6356848a9ac84c209903"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#a25031604af1e6356848a9ac84c209903">log</a> (const <a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a> &amp;DF, const <a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a> &amp;dfBase)</td></tr>
 <tr class="memdesc:a25031604af1e6356848a9ac84c209903"><td class="mdescLeft">&#160;</td><td class="mdescRight">log: returns <a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> logarithm to user given base (default: natural logarithm with base euler number);  <a href="#a25031604af1e6356848a9ac84c209903">More...</a><br /></td></tr>
 <tr class="separator:a25031604af1e6356848a9ac84c209903"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5877d13039d236858e1cb04351f0a86"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#ac5877d13039d236858e1cb04351f0a86">pow</a> (const <a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a> &amp;dfBase, const <a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a> &amp;dfExp)</td></tr>
+<tr class="memdesc:ac5877d13039d236858e1cb04351f0a86"><td class="mdescLeft">&#160;</td><td class="mdescRight">pow: returns <a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> exponential expression to user given base and exponent  <a href="#ac5877d13039d236858e1cb04351f0a86">More...</a><br /></td></tr>
 <tr class="separator:ac5877d13039d236858e1cb04351f0a86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2206715f4b83afeea6339373bb3631fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d72/classCDigFloat.html#a2206715f4b83afeea6339373bb3631fb">exp</a> (const <a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a> &amp;dfExp)</td></tr>
+<tr class="memdesc:a2206715f4b83afeea6339373bb3631fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">exp: returns <a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> exponential expression to Euler number and user given exponent  <a href="#a2206715f4b83afeea6339373bb3631fb">More...</a><br /></td></tr>
+<tr class="separator:a2206715f4b83afeea6339373bb3631fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a>: a class for floating point numbers which handels numerical errors of the 64 bit floating point representation.<br />
  This class offers: </p>
 <ul>
 <li>operations of floating points (+,-,/,*)</li>
-<li>propagation of numerical errors for all operations performed on an instance</li>
+<li>propagation of numerical errors (<a href="https://en.wikipedia.org/wiki/Round-off_error">round-off errors</a> ) for all operations performed on an instance</li>
 <li>setting of user defined precision for comparing and printing. </li>
 </ul>
 
@@ -314,9 +327,9 @@ Friends</h2></td></tr>
 
 <p>Default constructor: calls <a class="el" href="../../d3/d72/classCDigFloat.html#a89a0dda21c74c115ac41b432031666a6" title="initializes all members with invalid values ">CDigFloat::_Init</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00028">28</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00029">29</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00263">_Init()</a>.</p>
+<p class="reference">References <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00260">_Init()</a>.</p>
 
 </div>
 </div>
@@ -344,7 +357,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00033">33</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00034">34</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
 </div>
 </div>
@@ -372,9 +385,9 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00038">38</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00039">39</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00263">_Init()</a>, and <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00336">Value()</a>.</p>
+<p class="reference">References <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00260">_Init()</a>, and <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00348">Value()</a>.</p>
 
 </div>
 </div>
@@ -394,7 +407,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <p>Destructor </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00045">45</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00046">46</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
 </div>
 </div>
@@ -424,9 +437,9 @@ Friends</h2></td></tr>
 
 <p>initializes all members with invalid values </p>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00263">263</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00260">260</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00481">dError</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00486">dValue</a>, <a class="el" href="../../d9/ded/Utils_8h_source.html#l00060">myNAN</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00383">Precision()</a>, and <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00397">PrecisionActive()</a>.</p>
+<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00493">dError</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00498">dValue</a>, <a class="el" href="../../d9/ded/Utils_8h_source.html#l00055">myNAN</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00395">Precision()</a>, and <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00409">PrecisionActive()</a>.</p>
 
 </div>
 </div>
@@ -448,14 +461,14 @@ Friends</h2></td></tr>
 <p>prints all members into a string for debugging purpose </p>
 <dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00287">287</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00284">284</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00041">Bool2String()</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00481">dError</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00037">DF_RAW_PRINT_PRECISION</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00506">dPrecisionResolution</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00486">dValue</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00383">Precision()</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00397">PrecisionActive()</a>, <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00271">Print()</a>, <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00276">RawPrint()</a>, <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00035">Round2Precision()</a>, and <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00423">Valid()</a>.</p>
+<p class="reference">References <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00045">Bool2String()</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00493">dError</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00037">DF_RAW_PRINT_PRECISION</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00518">dPrecisionResolution</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00498">dValue</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00395">Precision()</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00409">PrecisionActive()</a>, <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00268">Print()</a>, <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00273">RawPrint()</a>, <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00039">Round2Precision()</a>, and <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00435">Valid()</a>.</p>
 
 </div>
 </div>
-<a id="a1b067b1bde507408956fa65bef7368bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b067b1bde507408956fa65bef7368bb">&#9670;&nbsp;</a></span>Error() <span class="overload">[1/2]</span></h2>
+<a id="aca8ded79bec9c18f5be1cbbbee59f066"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca8ded79bec9c18f5be1cbbbee59f066">&#9670;&nbsp;</a></span>Error() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -464,7 +477,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const double CDigFloat::Error </td>
+          <td class="memname">double CDigFloat::Error </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -478,12 +491,12 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>getter of <a class="el" href="../../d3/d72/classCDigFloat.html#a25eb3782d1e727ff007a48f8308e3d4d" title="keeps the numerical error of CDigFloat::dValue including the propagation due to multiple operations ...">CDigFloat::dError</a> conditionally considering <a class="el" href="../../d3/d72/classCDigFloat.html#ad580654be35246d14c91482581c0bc11" title="number which controls the output precision of CDigFloat::dValue: affected functions ...">CDigFloat::nPrecision</a>: <br />
- see <a class="el" href="../../d3/d72/classCDigFloat.html#a4d6ca24beda280be719374c2a6b2c64d" title="getter for bPrecisionActive ">CDigFloat::PrecisionActive()</a> and <a class="el" href="../../d3/d72/classCDigFloat.html#a95875f6f7246debee0d00b0c41c82aee" title="getter of CDigFloat::nPrecision ">CDigFloat::Precision()</a> </p>
+ see <a class="el" href="../../d3/d72/classCDigFloat.html#ad1f2365630c9e35e77c01093e73440c4" title="getter for bPrecisionActive ">CDigFloat::PrecisionActive()</a> and <a class="el" href="../../d3/d72/classCDigFloat.html#ad66e2fc1bb19f491dfbc4fb7bfb20d47" title="getter of CDigFloat::nPrecision ">CDigFloat::Precision()</a> </p>
 <dl class="section return"><dt>Returns</dt><dd>const double </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00370">370</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00382">382</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d6/dae/FloatingMeasure_8cpp_source.html#l00346">CFloatingMeasure::Precision()</a>, <a class="el" href="../../d8/d17/FloatingMeasure_8h_source.html#l00322">CFloatingMeasure::PrecisionActive()</a>, and <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00035">Round2Precision()</a>.</p>
+<p class="reference">References <a class="el" href="../../d6/dae/FloatingMeasure_8cpp_source.html#l00363">CFloatingMeasure::Precision()</a>, <a class="el" href="../../d8/d17/FloatingMeasure_8h_source.html#l00323">CFloatingMeasure::PrecisionActive()</a>, and <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00039">Round2Precision()</a>.</p>
 
 </div>
 </div>
@@ -519,7 +532,7 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00470">470</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00482">482</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
 
 </div>
 </div>
@@ -549,7 +562,9 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool, true if <a class="el" href="../../d3/d72/classCDigFloat.html#ad8980d984bf2bab71d15b830fd0180a5" title="operator ==:   the absolute deviation of the comparison partners (deviation of CDigFloat::Value()) is...">CDigFloat::operator==</a> is false </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00109">109</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00118">118</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00068">operator==()</a>.</p>
 
 </div>
 </div>
@@ -578,7 +593,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00183">183</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00180">180</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
 </div>
 </div>
@@ -607,7 +622,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00228">228</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00225">225</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
 </div>
 </div>
@@ -636,9 +651,9 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a>&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00113">113</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00122">122</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00481">dError</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00486">dValue</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00377">RawError()</a>, and <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00343">RawValue()</a>.</p>
+<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00493">dError</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00498">dValue</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00389">RawError()</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00355">RawValue()</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00374">ValueMaxLimit()</a>, and <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00368">ValueMinLimit()</a>.</p>
 
 </div>
 </div>
@@ -667,9 +682,9 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a>&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00208">208</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00205">205</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00028">CDigFloat()</a>, and <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00113">operator*=()</a>.</p>
+<p class="reference">References <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00029">CDigFloat()</a>, and <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00122">operator*=()</a>.</p>
 
 </div>
 </div>
@@ -698,7 +713,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00189">189</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00186">186</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
 </div>
 </div>
@@ -727,7 +742,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00243">243</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00240">240</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
 </div>
 </div>
@@ -756,9 +771,9 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a>&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00161">161</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00158">158</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00481">dError</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00486">dValue</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00377">RawError()</a>, and <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00343">RawValue()</a>.</p>
+<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00493">dError</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00498">dValue</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00389">RawError()</a>, and <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00355">RawValue()</a>.</p>
 
 </div>
 </div>
@@ -787,9 +802,9 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00218">218</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00215">215</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00028">CDigFloat()</a>, and <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00161">operator+=()</a>.</p>
+<p class="reference">References <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00029">CDigFloat()</a>, and <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00158">operator+=()</a>.</p>
 
 </div>
 </div>
@@ -818,7 +833,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00195">195</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00192">192</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
 </div>
 </div>
@@ -847,7 +862,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00250">250</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00247">247</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
 </div>
 </div>
@@ -876,9 +891,9 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a>&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00172">172</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00169">169</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00481">dError</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00486">dValue</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00377">RawError()</a>, and <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00343">RawValue()</a>.</p>
+<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00493">dError</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00498">dValue</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00389">RawError()</a>, and <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00355">RawValue()</a>.</p>
 
 </div>
 </div>
@@ -907,9 +922,9 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a>&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00223">223</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00220">220</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00028">CDigFloat()</a>, and <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00172">operator-=()</a>.</p>
+<p class="reference">References <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00029">CDigFloat()</a>, and <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00169">operator-=()</a>.</p>
 
 </div>
 </div>
@@ -938,7 +953,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00201">201</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00198">198</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
 </div>
 </div>
@@ -967,7 +982,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00236">236</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00233">233</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
 </div>
 </div>
@@ -996,9 +1011,9 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a>&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00134">134</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00137">137</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00481">dError</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00486">dValue</a>, <a class="el" href="../../d9/ded/Utils_8h_source.html#l00060">myNAN</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00377">RawError()</a>, and <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00343">RawValue()</a>.</p>
+<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00493">dError</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00498">dValue</a>, <a class="el" href="../../d9/ded/Utils_8h_source.html#l00055">myNAN</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00355">RawValue()</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00374">ValueMaxLimit()</a>, and <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00368">ValueMinLimit()</a>.</p>
 
 </div>
 </div>
@@ -1027,9 +1042,9 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a>&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00213">213</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00210">210</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00028">CDigFloat()</a>, and <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00134">operator/=()</a>.</p>
+<p class="reference">References <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00029">CDigFloat()</a>, and <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00137">operator/=()</a>.</p>
 
 </div>
 </div>
@@ -1056,11 +1071,11 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>bool, true if <a class="el" href="../../d3/d72/classCDigFloat.html#a15c13c035aff8184491bd9629403a33a" title="operator !=:   inversion of CDigFloat::operator== ">CDigFloat::operator!=</a> is true AND <a class="el" href="../../d3/d72/classCDigFloat.html#ab6d3001a549d7496156321cbb26dde51" title="getter of CDigFloat::dValue (no rounding) ">CDigFloat::RawValue()</a> is less than <a class="el" href="../../d3/d72/classCDigFloat.html#ab6d3001a549d7496156321cbb26dde51" title="getter of CDigFloat::dValue (no rounding) ">CDigFloat::RawValue()</a> of compared instance </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>bool, true if <a class="el" href="../../d3/d72/classCDigFloat.html#a15c13c035aff8184491bd9629403a33a" title="operator !=:   inversion of CDigFloat::operator== ">CDigFloat::operator!=</a> is true AND <a class="el" href="../../d3/d72/classCDigFloat.html#acb435346b1f7b2e78d8f8373a416533a" title="getter of CDigFloat::dValue (no rounding) ">CDigFloat::RawValue()</a> is less than <a class="el" href="../../d3/d72/classCDigFloat.html#acb435346b1f7b2e78d8f8373a416533a" title="getter of CDigFloat::dValue (no rounding) ">CDigFloat::RawValue()</a> of compared instance </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00085">85</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00094">94</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00343">RawValue()</a>.</p>
+<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00355">RawValue()</a>.</p>
 
 </div>
 </div>
@@ -1087,11 +1102,11 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>bool, true if <a class="el" href="../../d3/d72/classCDigFloat.html#ad8980d984bf2bab71d15b830fd0180a5" title="operator ==:   the absolute deviation of the comparison partners (deviation of CDigFloat::Value()) is...">CDigFloat::operator==</a> is true OR <a class="el" href="../../d3/d72/classCDigFloat.html#ab6d3001a549d7496156321cbb26dde51" title="getter of CDigFloat::dValue (no rounding) ">CDigFloat::RawValue()</a> is less than <a class="el" href="../../d3/d72/classCDigFloat.html#ab6d3001a549d7496156321cbb26dde51" title="getter of CDigFloat::dValue (no rounding) ">CDigFloat::RawValue()</a> of compared instance </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>bool, true if <a class="el" href="../../d3/d72/classCDigFloat.html#ad8980d984bf2bab71d15b830fd0180a5" title="operator ==:   the absolute deviation of the comparison partners (deviation of CDigFloat::Value()) is...">CDigFloat::operator==</a> is true OR <a class="el" href="../../d3/d72/classCDigFloat.html#acb435346b1f7b2e78d8f8373a416533a" title="getter of CDigFloat::dValue (no rounding) ">CDigFloat::RawValue()</a> is less than <a class="el" href="../../d3/d72/classCDigFloat.html#acb435346b1f7b2e78d8f8373a416533a" title="getter of CDigFloat::dValue (no rounding) ">CDigFloat::RawValue()</a> of compared instance </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00092">92</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00101">101</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00343">RawValue()</a>.</p>
+<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00355">RawValue()</a>.</p>
 
 </div>
 </div>
@@ -1127,9 +1142,9 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a>&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00050">50</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00051">51</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00481">dError</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00486">dValue</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00383">Precision()</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00397">PrecisionActive()</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00377">RawError()</a>, and <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00343">RawValue()</a>.</p>
+<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00493">dError</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00498">dValue</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00395">Precision()</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00409">PrecisionActive()</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00389">RawError()</a>, and <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00355">RawValue()</a>.</p>
 
 </div>
 </div>
@@ -1159,9 +1174,9 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a>&amp; </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00059">59</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00060">60</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00481">dError</a>, <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00027">DoubleMachineEpsilon()</a>, and <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00486">dValue</a>.</p>
+<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00493">dError</a>, <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00031">DoubleMachineEpsilon()</a>, and <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00498">dValue</a>.</p>
 
 </div>
 </div>
@@ -1186,7 +1201,7 @@ Friends</h2></td></tr>
  This deviation range depends on <a class="el" href="../../d3/d72/classCDigFloat.html#aa1f6ed0312a2aa6ae5ee2abd195adefc" title="switches on (=true) / off (=false) the given precision:  affected functions ">CDigFloat::bPrecisionActive</a> of calling instance: </p>
 <ul>
 <li>true: the allowed deviation range is <a class="el" href="../../d3/d72/classCDigFloat.html#a7f9809fa0b25da57f5c8c18a02b7d1a7" title="the resolution which controls the output precision of CDigFloat::dValue: It is calculated by 10-nPrec...">CDigFloat::dPrecisionResolution</a>/2 of calling instance</li>
-<li>false: allowed deviation range is the sum of <a class="el" href="../../d3/d72/classCDigFloat.html#a1b067b1bde507408956fa65bef7368bb" title="getter of CDigFloat::dError conditionally considering CDigFloat::nPrecision:   see CDigFloat::Precisi...">CDigFloat::Error</a> of the comparison partners</li>
+<li>false: allowed deviation range is the sum of <a class="el" href="../../d3/d72/classCDigFloat.html#aca8ded79bec9c18f5be1cbbbee59f066" title="getter of CDigFloat::dError conditionally considering CDigFloat::nPrecision:   see CDigFloat::Precisi...">CDigFloat::Error</a> of the comparison partners</li>
 </ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1196,9 +1211,9 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool, true if absolute deviation is within the allowed deviation range </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00067">67</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00068">68</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00397">PrecisionActive()</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00416">PrecisionResolution()</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00377">RawError()</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00343">RawValue()</a>, and <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00257">Value()</a>.</p>
+<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00409">PrecisionActive()</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00428">PrecisionResolution()</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00389">RawError()</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00355">RawValue()</a>, and <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00254">Value()</a>.</p>
 
 </div>
 </div>
@@ -1228,9 +1243,9 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool, true if absolute deviation is within the allowed deviation range </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00080">80</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00089">89</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00028">CDigFloat()</a>, and <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00067">operator==()</a>.</p>
+<p class="reference">References <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00029">CDigFloat()</a>, and <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00068">operator==()</a>.</p>
 
 </div>
 </div>
@@ -1257,11 +1272,11 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>bool, true if <a class="el" href="../../d3/d72/classCDigFloat.html#a15c13c035aff8184491bd9629403a33a" title="operator !=:   inversion of CDigFloat::operator== ">CDigFloat::operator!=</a> is true AND <a class="el" href="../../d3/d72/classCDigFloat.html#ab6d3001a549d7496156321cbb26dde51" title="getter of CDigFloat::dValue (no rounding) ">CDigFloat::RawValue()</a> is larger than <a class="el" href="../../d3/d72/classCDigFloat.html#ab6d3001a549d7496156321cbb26dde51" title="getter of CDigFloat::dValue (no rounding) ">CDigFloat::RawValue()</a> of compared instance </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>bool, true if <a class="el" href="../../d3/d72/classCDigFloat.html#a15c13c035aff8184491bd9629403a33a" title="operator !=:   inversion of CDigFloat::operator== ">CDigFloat::operator!=</a> is true AND <a class="el" href="../../d3/d72/classCDigFloat.html#acb435346b1f7b2e78d8f8373a416533a" title="getter of CDigFloat::dValue (no rounding) ">CDigFloat::RawValue()</a> is larger than <a class="el" href="../../d3/d72/classCDigFloat.html#acb435346b1f7b2e78d8f8373a416533a" title="getter of CDigFloat::dValue (no rounding) ">CDigFloat::RawValue()</a> of compared instance </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00102">102</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00111">111</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00343">RawValue()</a>.</p>
+<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00355">RawValue()</a>.</p>
 
 </div>
 </div>
@@ -1288,16 +1303,16 @@ Friends</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>bool, true if <a class="el" href="../../d3/d72/classCDigFloat.html#ad8980d984bf2bab71d15b830fd0180a5" title="operator ==:   the absolute deviation of the comparison partners (deviation of CDigFloat::Value()) is...">CDigFloat::operator==</a> is true AND <a class="el" href="../../d3/d72/classCDigFloat.html#ab6d3001a549d7496156321cbb26dde51" title="getter of CDigFloat::dValue (no rounding) ">CDigFloat::RawValue()</a> is larger than <a class="el" href="../../d3/d72/classCDigFloat.html#ab6d3001a549d7496156321cbb26dde51" title="getter of CDigFloat::dValue (no rounding) ">CDigFloat::RawValue()</a> of compared instance </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>bool, true if <a class="el" href="../../d3/d72/classCDigFloat.html#ad8980d984bf2bab71d15b830fd0180a5" title="operator ==:   the absolute deviation of the comparison partners (deviation of CDigFloat::Value()) is...">CDigFloat::operator==</a> is true AND <a class="el" href="../../d3/d72/classCDigFloat.html#acb435346b1f7b2e78d8f8373a416533a" title="getter of CDigFloat::dValue (no rounding) ">CDigFloat::RawValue()</a> is larger than <a class="el" href="../../d3/d72/classCDigFloat.html#acb435346b1f7b2e78d8f8373a416533a" title="getter of CDigFloat::dValue (no rounding) ">CDigFloat::RawValue()</a> of compared instance </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00097">97</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00106">106</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00343">RawValue()</a>.</p>
+<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00355">RawValue()</a>.</p>
 
 </div>
 </div>
-<a id="a95875f6f7246debee0d00b0c41c82aee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a95875f6f7246debee0d00b0c41c82aee">&#9670;&nbsp;</a></span>Precision() <span class="overload">[1/2]</span></h2>
+<a id="ad66e2fc1bb19f491dfbc4fb7bfb20d47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad66e2fc1bb19f491dfbc4fb7bfb20d47">&#9670;&nbsp;</a></span>Precision() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1306,7 +1321,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const int CDigFloat::Precision </td>
+          <td class="memname">int CDigFloat::Precision </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1321,7 +1336,7 @@ Friends</h2></td></tr>
 
 <p>getter of <a class="el" href="../../d3/d72/classCDigFloat.html#ad580654be35246d14c91482581c0bc11" title="number which controls the output precision of CDigFloat::dValue: affected functions ...">CDigFloat::nPrecision</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00383">383</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00395">395</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
 
 </div>
 </div>
@@ -1357,14 +1372,14 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00390">390</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00402">402</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00374">pow()</a>, and <a class="el" href="../../d8/d17/FloatingMeasure_8h_source.html#l00322">CFloatingMeasure::PrecisionActive()</a>.</p>
+<p class="reference">References <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00373">pow()</a>, and <a class="el" href="../../d8/d17/FloatingMeasure_8h_source.html#l00323">CFloatingMeasure::PrecisionActive()</a>.</p>
 
 </div>
 </div>
-<a id="a4d6ca24beda280be719374c2a6b2c64d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4d6ca24beda280be719374c2a6b2c64d">&#9670;&nbsp;</a></span>PrecisionActive() <span class="overload">[1/2]</span></h2>
+<a id="ad1f2365630c9e35e77c01093e73440c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1f2365630c9e35e77c01093e73440c4">&#9670;&nbsp;</a></span>PrecisionActive() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1373,7 +1388,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const bool CDigFloat::PrecisionActive </td>
+          <td class="memname">bool CDigFloat::PrecisionActive </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1389,7 +1404,7 @@ Friends</h2></td></tr>
 <p>getter for bPrecisionActive </p>
 <dl class="section return"><dt>Returns</dt><dd>const bool </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00397">397</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00409">409</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
 
 </div>
 </div>
@@ -1430,12 +1445,12 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00409">409</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00421">421</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
 
 </div>
 </div>
-<a id="ad39db10046bbfd27c2537581bdb7e073"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad39db10046bbfd27c2537581bdb7e073">&#9670;&nbsp;</a></span>PrecisionResolution()</h2>
+<a id="a8b229b407a4adff339f086856b52078b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b229b407a4adff339f086856b52078b">&#9670;&nbsp;</a></span>PrecisionResolution()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1444,7 +1459,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const double CDigFloat::PrecisionResolution </td>
+          <td class="memname">double CDigFloat::PrecisionResolution </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1457,10 +1472,10 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>getter for the resolution defined by the given precision (see <a class="el" href="../../d3/d72/classCDigFloat.html#a95875f6f7246debee0d00b0c41c82aee" title="getter of CDigFloat::nPrecision ">CDigFloat::Precision</a>) </p>
+<p>getter for the resolution defined by the given precision (see <a class="el" href="../../d3/d72/classCDigFloat.html#ad66e2fc1bb19f491dfbc4fb7bfb20d47" title="getter of CDigFloat::nPrecision ">CDigFloat::Precision</a>) </p>
 <dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00416">416</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00428">428</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
 
 </div>
 </div>
@@ -1480,7 +1495,7 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>prints <a class="el" href="../../d3/d72/classCDigFloat.html#a4bbe69e30dd4e20527362493aa9aaf96" title="the raw value ">CDigFloat::dValue</a> and conditionally <a class="el" href="../../d3/d72/classCDigFloat.html#a25eb3782d1e727ff007a48f8308e3d4d" title="keeps the numerical error of CDigFloat::dValue including the propagation due to multiple operations ...">CDigFloat::dError</a> formatted according to <a class="el" href="../../d3/d72/classCDigFloat.html#ad580654be35246d14c91482581c0bc11" title="number which controls the output precision of CDigFloat::dValue: affected functions ...">CDigFloat::nPrecision</a> if <a class="el" href="../../d3/d72/classCDigFloat.html#a4d6ca24beda280be719374c2a6b2c64d" title="getter for bPrecisionActive ">CDigFloat::PrecisionActive()</a> is true. Otherwise the number of digits is formatted with DF_DEFAULT_PRINT_PRECISION. </p>
+<p>prints <a class="el" href="../../d3/d72/classCDigFloat.html#a4bbe69e30dd4e20527362493aa9aaf96" title="the raw value ">CDigFloat::dValue</a> and conditionally <a class="el" href="../../d3/d72/classCDigFloat.html#a25eb3782d1e727ff007a48f8308e3d4d" title="keeps the numerical error of CDigFloat::dValue including the propagation due to multiple operations ...">CDigFloat::dError</a> formatted according to <a class="el" href="../../d3/d72/classCDigFloat.html#ad580654be35246d14c91482581c0bc11" title="number which controls the output precision of CDigFloat::dValue: affected functions ...">CDigFloat::nPrecision</a> if <a class="el" href="../../d3/d72/classCDigFloat.html#ad1f2365630c9e35e77c01093e73440c4" title="getter for bPrecisionActive ">CDigFloat::PrecisionActive()</a> is true. Otherwise the number of digits is formatted with DF_DEFAULT_PRINT_PRECISION. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">bWithError</td><td>if true, <a class="el" href="../../d3/d72/classCDigFloat.html#a25eb3782d1e727ff007a48f8308e3d4d" title="keeps the numerical error of CDigFloat::dValue including the propagation due to multiple operations ...">CDigFloat::dError</a> is printed, too </td></tr>
@@ -1489,14 +1504,14 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>string, formatted <a class="el" href="../../d3/d72/classCDigFloat.html#a4bbe69e30dd4e20527362493aa9aaf96" title="the raw value ">CDigFloat::dValue</a> [ <img class="formulaInl" alt="$\pm$" src="../../form_0.png"/> <a class="el" href="../../d3/d72/classCDigFloat.html#a25eb3782d1e727ff007a48f8308e3d4d" title="keeps the numerical error of CDigFloat::dValue including the propagation due to multiple operations ...">CDigFloat::dError</a>] according to <a class="el" href="../../d3/d72/classCDigFloat.html#ad580654be35246d14c91482581c0bc11" title="number which controls the output precision of CDigFloat::dValue: affected functions ...">CDigFloat::nPrecision</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00271">271</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00268">268</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00038">DF_DEFAULT_PRINT_PRECISION</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00383">Precision()</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00397">PrecisionActive()</a>, and <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00276">RawPrint()</a>.</p>
+<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00038">DF_DEFAULT_PRINT_PRECISION</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00395">Precision()</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00409">PrecisionActive()</a>, and <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00273">RawPrint()</a>.</p>
 
 </div>
 </div>
-<a id="a9805530caa01cc722cfbe8912689daa7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9805530caa01cc722cfbe8912689daa7">&#9670;&nbsp;</a></span>RawError()</h2>
+<a id="a996749023353bd1df0ab41a2a11e2ee7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a996749023353bd1df0ab41a2a11e2ee7">&#9670;&nbsp;</a></span>RawError()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1505,7 +1520,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const double CDigFloat::RawError </td>
+          <td class="memname">double CDigFloat::RawError </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1521,7 +1536,7 @@ Friends</h2></td></tr>
 <p>getter of <a class="el" href="../../d3/d72/classCDigFloat.html#a25eb3782d1e727ff007a48f8308e3d4d" title="keeps the numerical error of CDigFloat::dValue including the propagation due to multiple operations ...">CDigFloat::dError</a> (no rounding) </p>
 <dl class="section return"><dt>Returns</dt><dd>const double </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00377">377</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00389">389</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
 
 </div>
 </div>
@@ -1561,14 +1576,14 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>string, formatted <a class="el" href="../../d3/d72/classCDigFloat.html#a4bbe69e30dd4e20527362493aa9aaf96" title="the raw value ">CDigFloat::dValue</a> [ <img class="formulaInl" alt="$\pm$" src="../../form_0.png"/> <a class="el" href="../../d3/d72/classCDigFloat.html#a25eb3782d1e727ff007a48f8308e3d4d" title="keeps the numerical error of CDigFloat::dValue including the propagation due to multiple operations ...">CDigFloat::dError</a>] according to UserPrecision </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00276">276</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00273">273</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00486">dValue</a>, <a class="el" href="../../d9/ded/Utils_8h_source.html#l00077">plmi</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00383">Precision()</a>, <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00377">RawError()</a>, and <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00035">Round2Precision()</a>.</p>
+<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00498">dValue</a>, <a class="el" href="../../d9/ded/Utils_8h_source.html#l00072">plmi</a>, and <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00389">RawError()</a>.</p>
 
 </div>
 </div>
-<a id="ab6d3001a549d7496156321cbb26dde51"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6d3001a549d7496156321cbb26dde51">&#9670;&nbsp;</a></span>RawValue() <span class="overload">[1/2]</span></h2>
+<a id="acb435346b1f7b2e78d8f8373a416533a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb435346b1f7b2e78d8f8373a416533a">&#9670;&nbsp;</a></span>RawValue() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1577,7 +1592,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const double CDigFloat::RawValue </td>
+          <td class="memname">double CDigFloat::RawValue </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1593,7 +1608,7 @@ Friends</h2></td></tr>
 <p>getter of <a class="el" href="../../d3/d72/classCDigFloat.html#a4bbe69e30dd4e20527362493aa9aaf96" title="the raw value ">CDigFloat::dValue</a> (no rounding) </p>
 <dl class="section return"><dt>Returns</dt><dd>const double </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00343">343</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00355">355</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
 
 </div>
 </div>
@@ -1624,7 +1639,7 @@ Friends</h2></td></tr>
 <p>setter of <a class="el" href="../../d3/d72/classCDigFloat.html#a4bbe69e30dd4e20527362493aa9aaf96" title="the raw value ">CDigFloat::dValue</a> (no rounding/no error setting) </p>
 <dl class="section return"><dt>Returns</dt><dd>const double </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00350">350</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00362">362</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
 
 </div>
 </div>
@@ -1653,7 +1668,45 @@ Friends</h2></td></tr>
 
 <p>resets <a class="el" href="../../d3/d72/classCDigFloat.html#a25eb3782d1e727ff007a48f8308e3d4d" title="keeps the numerical error of CDigFloat::dValue including the propagation due to multiple operations ...">CDigFloat::dError</a> to <a class="el" href="../../d9/ded/Utils_8h.html#ae9dfc174daaf6261f167ccc069efea93" title="calculates the numerical error for a given double ">DoubleMachineEpsilon</a> ( <a class="el" href="../../d3/d72/classCDigFloat.html#a4bbe69e30dd4e20527362493aa9aaf96" title="the raw value ">CDigFloat::dValue</a>) </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00328">328</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00331">331</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
+
+</div>
+</div>
+<a id="a63f2632e5a762f37aa6eda4510c57502"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63f2632e5a762f37aa6eda4510c57502">&#9670;&nbsp;</a></span>SetUserDefinedError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CDigFloat::SetUserDefinedError </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a> &amp;&#160;</td>
+          <td class="paramname"><em>UserDefinedError</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>sets <a class="el" href="../../d3/d72/classCDigFloat.html#a25eb3782d1e727ff007a48f8308e3d4d" title="keeps the numerical error of CDigFloat::dValue including the propagation due to multiple operations ...">CDigFloat::dError</a> to a user defined value. Use only if you know that your calculation errors go beyond the numerical inaccuracy for floating numbers </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">UserDefinedError</td><td><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> user-defined error </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00340">340</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
+
+<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00355">RawValue()</a>.</p>
 
 </div>
 </div>
@@ -1683,9 +1736,9 @@ Friends</h2></td></tr>
 <p>check if value is valid: non-NaN </p>
 <dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00423">423</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00435">435</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d6/dae/FloatingMeasure_8cpp_source.html#l00354">CFloatingMeasure::_Init()</a>, and <a class="el" href="../../d6/dae/FloatingMeasure_8cpp_source.html#l00376">CFloatingMeasure::DebugOut()</a>.</p>
+<p class="reference">References <a class="el" href="../../d6/dae/FloatingMeasure_8cpp_source.html#l00371">CFloatingMeasure::_Init()</a>, and <a class="el" href="../../d6/dae/FloatingMeasure_8cpp_source.html#l00392">CFloatingMeasure::DebugOut()</a>.</p>
 
 </div>
 </div>
@@ -1713,14 +1766,14 @@ Friends</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00257">257</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00254">254</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00481">dError</a>, <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00027">DoubleMachineEpsilon()</a>, and <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00486">dValue</a>.</p>
+<p class="reference">References <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00493">dError</a>, <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00031">DoubleMachineEpsilon()</a>, and <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00498">dValue</a>.</p>
 
 </div>
 </div>
-<a id="a308ccc3e3c96dd81977033e0a94344fd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a308ccc3e3c96dd81977033e0a94344fd">&#9670;&nbsp;</a></span>Value() <span class="overload">[2/2]</span></h2>
+<a id="a51f185eb4ff3b24910c996739b6d5e9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51f185eb4ff3b24910c996739b6d5e9c">&#9670;&nbsp;</a></span>Value() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1729,7 +1782,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const double CDigFloat::Value </td>
+          <td class="memname">double CDigFloat::Value </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1743,12 +1796,12 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>getter of <a class="el" href="../../d3/d72/classCDigFloat.html#a4bbe69e30dd4e20527362493aa9aaf96" title="the raw value ">CDigFloat::dValue</a> conditionally considering <a class="el" href="../../d3/d72/classCDigFloat.html#ad580654be35246d14c91482581c0bc11" title="number which controls the output precision of CDigFloat::dValue: affected functions ...">CDigFloat::nPrecision</a>:<br />
- see <a class="el" href="../../d3/d72/classCDigFloat.html#a4d6ca24beda280be719374c2a6b2c64d" title="getter for bPrecisionActive ">CDigFloat::PrecisionActive()</a> and <a class="el" href="../../d3/d72/classCDigFloat.html#a95875f6f7246debee0d00b0c41c82aee" title="getter of CDigFloat::nPrecision ">CDigFloat::Precision()</a> </p>
+ see <a class="el" href="../../d3/d72/classCDigFloat.html#ad1f2365630c9e35e77c01093e73440c4" title="getter for bPrecisionActive ">CDigFloat::PrecisionActive()</a> and <a class="el" href="../../d3/d72/classCDigFloat.html#ad66e2fc1bb19f491dfbc4fb7bfb20d47" title="getter of CDigFloat::nPrecision ">CDigFloat::Precision()</a> </p>
 <dl class="section return"><dt>Returns</dt><dd>const double </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00336">336</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00348">348</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
 
-<p class="reference">References <a class="el" href="../../d6/dae/FloatingMeasure_8cpp_source.html#l00346">CFloatingMeasure::Precision()</a>, <a class="el" href="../../d8/d17/FloatingMeasure_8h_source.html#l00322">CFloatingMeasure::PrecisionActive()</a>, and <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00035">Round2Precision()</a>.</p>
+<p class="reference">References <a class="el" href="../../d6/dae/FloatingMeasure_8cpp_source.html#l00363">CFloatingMeasure::Precision()</a>, <a class="el" href="../../d8/d17/FloatingMeasure_8h_source.html#l00323">CFloatingMeasure::PrecisionActive()</a>, and <a class="el" href="../../df/d0c/Utils_8cpp_source.html#l00039">Round2Precision()</a>.</p>
 
 </div>
 </div>
@@ -1777,7 +1830,7 @@ Friends</h2></td></tr>
 
 <p>getter for <a class="el" href="../../d3/d72/classCDigFloat.html#a4bbe69e30dd4e20527362493aa9aaf96" title="the raw value ">CDigFloat::dValue</a> + <a class="el" href="../../d3/d72/classCDigFloat.html#a25eb3782d1e727ff007a48f8308e3d4d" title="keeps the numerical error of CDigFloat::dValue including the propagation due to multiple operations ...">CDigFloat::dError</a> - (protected: for internal use only) </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00362">362</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00374">374</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
 
 </div>
 </div>
@@ -1806,11 +1859,48 @@ Friends</h2></td></tr>
 
 <p>getter for <a class="el" href="../../d3/d72/classCDigFloat.html#a4bbe69e30dd4e20527362493aa9aaf96" title="the raw value ">CDigFloat::dValue</a> - <a class="el" href="../../d3/d72/classCDigFloat.html#a25eb3782d1e727ff007a48f8308e3d4d" title="keeps the numerical error of CDigFloat::dValue including the propagation due to multiple operations ...">CDigFloat::dError</a> - (protected: for internal use only) </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00356">356</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00368">368</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a269b310d675c311c6e0894bf326593ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a269b310d675c311c6e0894bf326593ae">&#9670;&nbsp;</a></span>abs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a> abs </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a> &amp;&#160;</td>
+          <td class="paramname"><em>DF</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>abs: returns <a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> with absolute value; </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">FM</td><td><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00302">302</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+
+</div>
+</div>
 <a id="a7e23751869edf87edc0feeb80eda78d9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7e23751869edf87edc0feeb80eda78d9">&#9670;&nbsp;</a></span>CFloatingMeasure</h2>
 
@@ -1832,6 +1922,43 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00063">63</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
+
+</div>
+</div>
+<a id="a2206715f4b83afeea6339373bb3631fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2206715f4b83afeea6339373bb3631fb">&#9670;&nbsp;</a></span>exp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a> exp </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a> &amp;&#160;</td>
+          <td class="paramname"><em>dfExp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>exp: returns <a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> exponential expression to Euler number and user given exponent </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dfExp</td><td><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> as exponent </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00392">392</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
 </div>
 </div>
@@ -1879,7 +2006,7 @@ Friends</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00312">312</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00309">309</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
 </div>
 </div>
@@ -1917,7 +2044,54 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00374">374</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+<p>pow: returns <a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> exponential expression to user given base and exponent </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dfBase</td><td><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> as base </td></tr>
+    <tr><td class="paramname">dfExp</td><td><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> as exponent </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00373">373</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae66acb4f3bea83a9fad22cc58fe50905"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66acb4f3bea83a9fad22cc58fe50905">&#9670;&nbsp;</a></span>sqrt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a> sqrt </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d3/d72/classCDigFloat.html">CDigFloat</a> &amp;&#160;</td>
+          <td class="paramname"><em>DF</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>sqrt: returns <a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> as square root of user given value </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DF</td><td><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d3/d72/classCDigFloat.html" title="CDigFloat: a class for floating point numbers which handels numerical errors of the 64 bit floating p...">CDigFloat</a> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html#l00410">410</a> of file <a class="el" href="../../d0/d80/DigFloat_8cpp_source.html">DigFloat.cpp</a>.</p>
 
 </div>
 </div>
@@ -1949,7 +2123,7 @@ Friends</h2></td></tr>
 <li><a class="el" href="../../d3/d72/classCDigFloat.html#ad8980d984bf2bab71d15b830fd0180a5" title="operator ==:   the absolute deviation of the comparison partners (deviation of CDigFloat::Value()) is...">CDigFloat::operator==</a> </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00514">514</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00526">526</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
 
 </div>
 </div>
@@ -1975,7 +2149,7 @@ Friends</h2></td></tr>
 
 <p>keeps the numerical error of <a class="el" href="../../d3/d72/classCDigFloat.html#a4bbe69e30dd4e20527362493aa9aaf96" title="the raw value ">CDigFloat::dValue</a> including the propagation due to multiple operations </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00481">481</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00493">493</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
 
 </div>
 </div>
@@ -2006,7 +2180,7 @@ Friends</h2></td></tr>
 <li><a class="el" href="../../d3/d72/classCDigFloat.html#ad8980d984bf2bab71d15b830fd0180a5" title="operator ==:   the absolute deviation of the comparison partners (deviation of CDigFloat::Value()) is...">CDigFloat::operator==</a> (if <a class="el" href="../../d3/d72/classCDigFloat.html#aa1f6ed0312a2aa6ae5ee2abd195adefc" title="switches on (=true) / off (=false) the given precision:  affected functions ">CDigFloat::bPrecisionActive</a> == true) </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00506">506</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00518">518</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
 
 </div>
 </div>
@@ -2032,7 +2206,7 @@ Friends</h2></td></tr>
 
 <p>the raw value </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00486">486</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00498">498</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
 
 </div>
 </div>
@@ -2063,7 +2237,7 @@ Friends</h2></td></tr>
 <li><a class="el" href="../../d3/d72/classCDigFloat.html#ad8980d984bf2bab71d15b830fd0180a5" title="operator ==:   the absolute deviation of the comparison partners (deviation of CDigFloat::Value()) is...">CDigFloat::operator==</a> (if <a class="el" href="../../d3/d72/classCDigFloat.html#aa1f6ed0312a2aa6ae5ee2abd195adefc" title="switches on (=true) / off (=false) the given precision:  affected functions ">CDigFloat::bPrecisionActive</a> == true) </li>
 </ul>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00496">496</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d8a/DigFloat_8h_source.html#l00508">508</a> of file <a class="el" href="../../da/d8a/DigFloat_8h_source.html">DigFloat.h</a>.</p>
 
 </div>
 </div>

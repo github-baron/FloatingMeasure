@@ -106,6 +106,8 @@ void \hyperlink{classCFloatingMeasure_a1e8a7467d6435c4cf349198804617623}{\+\_\+\
 \begin{DoxyCompactList}\small\item\em initialization with invalid values\+: floating = my\+NaN, cm\+Measure = unknownn \end{DoxyCompactList}\item 
 void \hyperlink{classCFloatingMeasure_a8e16f55f29d0d4c4148307a1f5953fe3}{\+\_\+\+Precision} (const \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure} $\ast$p\+Other\+Precision)
 \item 
+void \hyperlink{classCFloatingMeasure_a9eb8748502d6f118fa631749165a6d6e}{\+\_\+\+Scale\+Precision} (const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&other)
+\item 
 void \hyperlink{classCFloatingMeasure_af35c54ac06b1c8ddca86390360559548}{Measure} (const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&other)
 \begin{DoxyCompactList}\small\item\em setter for cm\+Measure \end{DoxyCompactList}\item 
 void \hyperlink{classCFloatingMeasure_aa33fe952e9c01f5f76cef5e6f0d03864}{Floating} (const \hyperlink{classCDigFloat}{C\+Dig\+Float} \&other)
@@ -231,7 +233,7 @@ initialization with invalid values\+: floating = my\+NaN, cm\+Measure = unknownn
 
 
 
-Definition at line 354 of file Floating\+Measure.\+cpp.
+Definition at line 371 of file Floating\+Measure.\+cpp.
 
 
 
@@ -245,11 +247,25 @@ References C\+Complex\+Measure\+::\+\_\+\+Init(), C\+Dig\+Float\+::\+\_\+\+Init(
 
 
 
-Definition at line 360 of file Floating\+Measure.\+cpp.
+Definition at line 377 of file Floating\+Measure.\+cpp.
 
 
 
 References pfm\+Precision, Precision(), and Secure\+Delete\+Object\+Pointer().
+
+\mbox{\Hypertarget{classCFloatingMeasure_a9eb8748502d6f118fa631749165a6d6e}\label{classCFloatingMeasure_a9eb8748502d6f118fa631749165a6d6e}} 
+\index{C\+Floating\+Measure@{C\+Floating\+Measure}!\+\_\+\+Scale\+Precision@{\+\_\+\+Scale\+Precision}}
+\index{\+\_\+\+Scale\+Precision@{\+\_\+\+Scale\+Precision}!C\+Floating\+Measure@{C\+Floating\+Measure}}
+\subsubsection{\texorpdfstring{\+\_\+\+Scale\+Precision()}{\_ScalePrecision()}}
+{\footnotesize\ttfamily void C\+Floating\+Measure\+::\+\_\+\+Scale\+Precision (\begin{DoxyParamCaption}\item[{const \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 328 of file Floating\+Measure.\+cpp.
+
+
+
+References df\+Floating, Floating(), log(), pfm\+Precision, C\+Dig\+Float\+::\+Precision(), Precision\+Active(), C\+Dig\+Float\+::\+Raw\+Error(), C\+Dig\+Float\+::\+Raw\+Value(), Scale\+To(), and Valid().
 
 \mbox{\Hypertarget{classCFloatingMeasure_ae69672971857cf047c5bc7ab4b631b6c}\label{classCFloatingMeasure_ae69672971857cf047c5bc7ab4b631b6c}} 
 \index{C\+Floating\+Measure@{C\+Floating\+Measure}!Compatible@{Compatible}}
@@ -271,7 +287,7 @@ bool
 \end{DoxyReturn}
 
 
-Definition at line 281 of file Floating\+Measure.\+h.
+Definition at line 282 of file Floating\+Measure.\+h.
 
 
 
@@ -297,7 +313,7 @@ bool
 \end{DoxyReturn}
 
 
-Definition at line 290 of file Floating\+Measure.\+h.
+Definition at line 291 of file Floating\+Measure.\+h.
 
 
 
@@ -318,7 +334,7 @@ string
 \end{DoxyReturn}
 
 
-Definition at line 376 of file Floating\+Measure.\+cpp.
+Definition at line 392 of file Floating\+Measure.\+cpp.
 
 
 
@@ -339,7 +355,7 @@ gettter for df\+Floating
 \end{DoxyReturn}
 
 
-Definition at line 360 of file Floating\+Measure.\+h.
+Definition at line 361 of file Floating\+Measure.\+h.
 
 \mbox{\Hypertarget{classCFloatingMeasure_aa33fe952e9c01f5f76cef5e6f0d03864}\label{classCFloatingMeasure_aa33fe952e9c01f5f76cef5e6f0d03864}} 
 \index{C\+Floating\+Measure@{C\+Floating\+Measure}!Floating@{Floating}}
@@ -358,7 +374,7 @@ setter for df\+Floating
 \end{DoxyParams}
 
 
-Definition at line 401 of file Floating\+Measure.\+h.
+Definition at line 403 of file Floating\+Measure.\+h.
 
 \mbox{\Hypertarget{classCFloatingMeasure_a8ac3af95a2619670a51d744c85b44463}\label{classCFloatingMeasure_a8ac3af95a2619670a51d744c85b44463}} 
 \index{C\+Floating\+Measure@{C\+Floating\+Measure}!Measure@{Measure}}
@@ -375,7 +391,7 @@ getter for cm\+Measure
 \end{DoxyReturn}
 
 
-Definition at line 366 of file Floating\+Measure.\+h.
+Definition at line 367 of file Floating\+Measure.\+h.
 
 
 
@@ -398,7 +414,7 @@ setter for cm\+Measure
 \end{DoxyParams}
 
 
-Definition at line 300 of file Floating\+Measure.\+cpp.
+Definition at line 305 of file Floating\+Measure.\+cpp.
 
 
 
@@ -929,11 +945,11 @@ setting precision of floating number by floating number\+: calls C\+Dig\+Float\+
 \end{DoxyParams}
 
 
-Definition at line 309 of file Floating\+Measure.\+cpp.
+Definition at line 314 of file Floating\+Measure.\+cpp.
 
 
 
-References C\+Floating\+Measure(), df\+Floating, Floating(), log(), Measure(), pfm\+Precision, C\+Dig\+Float\+::\+Precision(), Precision\+Active(), C\+Dig\+Float\+::\+Raw\+Error(), C\+Dig\+Float\+::\+Raw\+Value(), Scale\+To(), and Valid().
+References \+\_\+\+Scale\+Precision(), C\+Floating\+Measure(), Measure(), and pfm\+Precision.
 
 \mbox{\Hypertarget{classCFloatingMeasure_ac8975daf37b98b3e996893e0de43c4eb}\label{classCFloatingMeasure_ac8975daf37b98b3e996893e0de43c4eb}} 
 \index{C\+Floating\+Measure@{C\+Floating\+Measure}!Precision@{Precision}}
@@ -950,7 +966,7 @@ get the precision as \hyperlink{classCFloatingMeasure}{C\+Floating\+Measure}
 \end{DoxyReturn}
 
 
-Definition at line 346 of file Floating\+Measure.\+cpp.
+Definition at line 363 of file Floating\+Measure.\+cpp.
 
 
 
@@ -973,7 +989,7 @@ switch precision defined by df\+Floating\+::n\+Precision on / off
 \end{DoxyParams}
 
 
-Definition at line 322 of file Floating\+Measure.\+h.
+Definition at line 323 of file Floating\+Measure.\+h.
 
 \mbox{\Hypertarget{classCFloatingMeasure_a90d47ac476295db3c208cb484cd75764}\label{classCFloatingMeasure_a90d47ac476295db3c208cb484cd75764}} 
 \index{C\+Floating\+Measure@{C\+Floating\+Measure}!Precison\+Active@{Precison\+Active}}
@@ -990,7 +1006,7 @@ const bool
 \end{DoxyReturn}
 
 
-Definition at line 328 of file Floating\+Measure.\+h.
+Definition at line 329 of file Floating\+Measure.\+h.
 
 \mbox{\Hypertarget{classCFloatingMeasure_af4caaa697967a257bc6e13117843ff58}\label{classCFloatingMeasure_af4caaa697967a257bc6e13117843ff58}} 
 \index{C\+Floating\+Measure@{C\+Floating\+Measure}!Print\+Short@{Print\+Short}}
@@ -1007,7 +1023,7 @@ string
 \end{DoxyReturn}
 
 
-Definition at line 370 of file Floating\+Measure.\+cpp.
+Definition at line 386 of file Floating\+Measure.\+cpp.
 
 
 
@@ -1030,11 +1046,11 @@ scales to \hyperlink{classCComplexMeasure}{C\+Complex\+Measure} of other
 \end{DoxyParams}
 
 
-Definition at line 286 of file Floating\+Measure.\+cpp.
+Definition at line 290 of file Floating\+Measure.\+cpp.
 
 
 
-References \+\_\+\+Init(), cm\+Measure, Compatible(), df\+Floating, Measure(), C\+Complex\+Measure\+::\+Release\+Exp10\+And\+Factor(), and C\+Complex\+Measure\+::\+Scale\+To().
+References \+\_\+\+Init(), Compatible(), and Measure().
 
 \mbox{\Hypertarget{classCFloatingMeasure_a841b94d2883274e67999688fad40d538}\label{classCFloatingMeasure_a841b94d2883274e67999688fad40d538}} 
 \index{C\+Floating\+Measure@{C\+Floating\+Measure}!Scale\+To@{Scale\+To}}
@@ -1057,7 +1073,7 @@ Definition at line 238 of file Floating\+Measure.\+cpp.
 
 
 
-References \+\_\+\+Init(), B\+A\+SE, C\+Simple\+Measure\+::\+Base\+I\+D(), cm\+Measure, C\+Complex\+Measure\+::\+Compatible(), Compatible(), df\+Floating, Measure(), Normalize(), C\+Complex\+Measure\+::p\+Measure\+Left, C\+Complex\+Measure\+::p\+Measure\+Right, P\+RE, C\+Simple\+Measure\+::\+Pre\+I\+D(), C\+Complex\+Measure\+::\+Release\+Exp10\+And\+Factor(), C\+Complex\+Measure\+::\+Scale\+To(), and C\+Simple\+Measure\+::\+S\+I\+Offset().
+References \+\_\+\+Init(), \+\_\+\+Scale\+Precision(), B\+A\+SE, C\+Simple\+Measure\+::\+Base\+I\+D(), cm\+Measure, C\+Complex\+Measure\+::\+Compatible(), Compatible(), df\+Floating, Measure(), Normalize(), pfm\+Precision, C\+Complex\+Measure\+::p\+Measure\+Left, C\+Complex\+Measure\+::p\+Measure\+Right, P\+RE, C\+Simple\+Measure\+::\+Pre\+I\+D(), C\+Complex\+Measure\+::\+Release\+Exp10\+And\+Factor(), C\+Complex\+Measure\+::\+Scale\+To(), and C\+Simple\+Measure\+::\+S\+I\+Offset().
 
 \mbox{\Hypertarget{classCFloatingMeasure_a47731afb871889ee7da5f84b40e3a27f}\label{classCFloatingMeasure_a47731afb871889ee7da5f84b40e3a27f}} 
 \index{C\+Floating\+Measure@{C\+Floating\+Measure}!Simplify@{Simplify}}
@@ -1092,7 +1108,7 @@ bool
 \end{DoxyReturn}
 
 
-Definition at line 334 of file Floating\+Measure.\+h.
+Definition at line 335 of file Floating\+Measure.\+h.
 
 
 
@@ -1122,7 +1138,7 @@ Definition at line 73 of file Floating\+Measure.\+h.
 
 
 
-Definition at line 407 of file Floating\+Measure.\+h.
+Definition at line 409 of file Floating\+Measure.\+h.
 
 \mbox{\Hypertarget{classCFloatingMeasure_aa0cec9966c6c08db75c493e44396cfc2}\label{classCFloatingMeasure_aa0cec9966c6c08db75c493e44396cfc2}} 
 \index{C\+Floating\+Measure@{C\+Floating\+Measure}!df\+Floating@{df\+Floating}}
@@ -1132,7 +1148,7 @@ Definition at line 407 of file Floating\+Measure.\+h.
 
 
 
-Definition at line 408 of file Floating\+Measure.\+h.
+Definition at line 410 of file Floating\+Measure.\+h.
 
 \mbox{\Hypertarget{classCFloatingMeasure_a6bc7bd6e563e69cbf29692cd97153115}\label{classCFloatingMeasure_a6bc7bd6e563e69cbf29692cd97153115}} 
 \index{C\+Floating\+Measure@{C\+Floating\+Measure}!pfm\+Precision@{pfm\+Precision}}
@@ -1142,7 +1158,7 @@ Definition at line 408 of file Floating\+Measure.\+h.
 
 
 
-Definition at line 409 of file Floating\+Measure.\+h.
+Definition at line 411 of file Floating\+Measure.\+h.
 
 
 
