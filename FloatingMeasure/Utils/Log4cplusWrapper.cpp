@@ -22,31 +22,22 @@
  * SOFTWARE.
  */
 
-#include <Utils/Utils.h>
-/**
- * @brief estimate the numerical error for a 64bit double incrementing the LSB.
- *       The maximal relative error is about 2.3e-16. Hence, for a value of 1e+308
- *       the error is about 1e+292.
- */
-double DoubleMachineEpsilon(double dValue)
-{ 
-    dbl_64 s;
-    s.d64 = dValue;
-    s.i64++;
-        
-    // logging
-    LOGTRACE("FloatingMeasure::Utils::DoubleMachineEpsilon ","DoubleMachineEpsilon(" + to_string( dValue ) + ") = " + to_string(fabs(s.d64 - dValue)));
-    
-    return fabs(s.d64 - dValue);
+#include "Log4cplusWrapper.h"
+#include <iostream>
 
-}
-double Round2Precision(const double dValue,const int nPrecision)
+CLog4cplusWrapper::CLog4cplusWrapper()
 {
-    double dFactor = pow(10.,nPrecision);
-    bool bPos = dValue >0;
-    return double ( (long)(dValue*dFactor + (bPos ? 1 : -1)*(0.5)) )/dFactor; 
+    // do everything to instantiate the Log4cplus::Logger
+    initialize();
+    
+    // Initialization and deinitialization.
+    PropertyConfigurator config(LOG4CPLUS_CONFIG_PATH);
+    config.configure();
+    
+    cout << "called constructor of CLog4cplusWrapper" << endl;
 }
-string Bool2String(const bool bBool)
+
+CLog4cplusWrapper::~CLog4cplusWrapper()
 {
-    return bBool ? "true" : "false";
 }
+

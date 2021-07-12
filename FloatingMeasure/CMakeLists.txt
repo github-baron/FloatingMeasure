@@ -5,10 +5,13 @@ cmake_minimum_required(VERSION 3.0.0)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 
-#Rename the source files that will create the library, to a proper name!
+
+# create list of all commonly used files
 set(floatingmeasure_LIB
     Utils/Utils.h
     Utils/Utils.cpp
+    Utils/Singleton.h
+    Utils/CommonUtils.h
     Measure/VectorHandle.h
     Measure/VectorHandle.cpp
     Measure/PreMeasure.h
@@ -22,7 +25,70 @@ set(floatingmeasure_LIB
     DigFloat/DigFloat.cpp
     FloatingMeasure/FloatingMeasure.cpp
 )
+
+
+#######################################
+## add log4cplus support: enable
+## compile switch LOG4CPLUS_ENABLED
+######################################
+#This module defines
+#LOG4CPLUS_INCLUDE_DIRS, where to find tiff.h, etc.
+#LOG4CPLUS_LIBRARIES, the libraries to link against to use log4cplus.
+
+INCLUDE(FindPkgConfig)
+
+FIND_PATH(LOG4CPLUS_INCLUDE_DIRS
+    NAMES logger.h
+    HINTS ${PC_LOG4CPLUS_INCLUDE_DIR}
+    ${CMAKE_INSTALL_PREFIX}/include
+    PATHS
+    C:\\Users\\AnyUser\\Source\\Repos\\log4cplus\\include
+
+)
+message("found log4cplus includes " ${LOG4CPLUS_INCLUDE_DIRS}) 
+include_directories(${LOG4CPLUS_INCLUDE_DIRS})
+
+FIND_LIBRARY(LOG4CPLUS_LIBRARIES
+    NAMES log4cplus
+    HINTS ${PC_LOG4CPLUS_LIBDIR}
+    C:\\Users\\AnyUser\\Source\\Repos\\log4cplus\\lib
+)
+
+message("found log4cplus libraries " ${LOG4CPLUS_LIBRARIES}) 
+
+
+INCLUDE(FindPackageHandleStandardArgs)
+#FIND_PACKAGE_HANDLE_STANDARD_ARGS(CPPUNIT DEFAULT_MSG LOG4CPLUS_LIBRARIES LOG4CPLUS_INCLUDE_DIRS)
+MARK_AS_ADVANCED(LOG4CPLUS_LIBRARIES LOG4CPLUS_INCLUDE_DIRS)
+
+
+#set version to be useable by calling script
+#IF(LOG4CPLUS_INCLUDE_DIRS)
+IF(0)
+    
+    set(LOG4CPLUS_VERSION ${PC_LOG4CPLUS_VERSION} CACHE INTERNAL "log4cplus Version" FORCE)
+    add_compile_definitions(LOG4CPLUS_ENABLED)
+    # append to file list 
+    list(APPEND 
+        floatingmeasure_LIB       
+        Utils/Log4cplusWrapper.h
+        Utils/Log4cplusWrapper.cpp
+    )
+
+    
+ELSE()
+    message(WARNING "Can't find include path for log4cplus: disabling logging" )
+ENDIF()
+
+################### check log4cplus support END ##################
+
 add_library(FloatingMeasure SHARED ${floatingmeasure_LIB})
+
+# link against log4cplus
+IF(LOG4CPLUS_INCLUDE_DIRS) 
+ target_link_libraries(FloatingMeasure ${LOG4CPLUS_LIBRARIES})
+ENDIF()
+
 
 if(EXISTS "${CMAKE_SOURCE_DIR}/.git")
 	execute_process(
@@ -36,7 +102,6 @@ else()
 endif()
 add_definitions(-DGIT_BRANCH=${GIT_BRANCH})
 message( STATUS "LIBRARY_OUTPUT_PATH: " ${LIBRARY_OUTPUT_PATH} )
-
 
 #set build dir for your executable
 #set(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/CMake/lib)

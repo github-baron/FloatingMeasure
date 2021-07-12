@@ -22,31 +22,23 @@
  * SOFTWARE.
  */
 
-#include <Utils/Utils.h>
-/**
- * @brief estimate the numerical error for a 64bit double incrementing the LSB.
- *       The maximal relative error is about 2.3e-16. Hence, for a value of 1e+308
- *       the error is about 1e+292.
- */
-double DoubleMachineEpsilon(double dValue)
-{ 
-    dbl_64 s;
-    s.d64 = dValue;
-    s.i64++;
-        
-    // logging
-    LOGTRACE("FloatingMeasure::Utils::DoubleMachineEpsilon ","DoubleMachineEpsilon(" + to_string( dValue ) + ") = " + to_string(fabs(s.d64 - dValue)));
-    
-    return fabs(s.d64 - dValue);
+#ifndef COMMONUTILS_H
+#define COMMONUTILS_H
 
-}
-double Round2Precision(const double dValue,const int nPrecision)
-{
-    double dFactor = pow(10.,nPrecision);
-    bool bPos = dValue >0;
-    return double ( (long)(dValue*dFactor + (bPos ? 1 : -1)*(0.5)) )/dFactor; 
-}
-string Bool2String(const bool bBool)
-{
-    return bBool ? "true" : "false";
-}
+
+///////////////////////////////////////////////////
+// namespaces
+///////////////////////////////////////////////////
+using namespace std;
+#ifdef __linux__
+using namespace __gnu_cxx;
+#endif
+
+///////////////////////////////////////////////////
+// macro definitions
+///////////////////////////////////////////////////
+#ifdef _WIN32
+#define _WIN_DLL_API __declspec(dllexport) 
+#endif
+
+#endif

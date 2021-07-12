@@ -1,4 +1,4 @@
-/*
+ /*
  * MIT License
  * 
  * Copyright (c) 2020 Michael von Mengershausen
@@ -25,6 +25,7 @@
 #ifndef UTILS_H
 #define UTILS_H
 
+// global includes
 #include<string>
 #include<vector>
 #include<map>
@@ -35,21 +36,25 @@
 #include<assert.h>
 #include<ostream>
 
+// local includes 
+#include "Singleton.h"
+#include "CommonUtils.h"
 
-///////////////////////////////////////////////////
-// namespaces
-///////////////////////////////////////////////////
-using namespace std;
-#ifdef __linux__
-using namespace __gnu_cxx;
+// deal with log4cplus include 
+#ifdef LOG4CPLUS_ENABLED
+
+#include "Log4cplusWrapper.h"
+#else
+// define empty log to commens
+
+#define LOGTRACE(lg,msg);    
+#define LOGDEBUG(lg,msg);    
+#define LOGINFO(lg,msg);
+#define LOGWARN(lg,msg);
+#define LOGIERROR(lg,msg);
+#define LOGFATAL(lg,msg);
 #endif
 
-///////////////////////////////////////////////////
-// macro definitions
-///////////////////////////////////////////////////
-#ifdef _WIN32
-#define _WIN_DLL_API __declspec(dllexport) 
-#endif
 
 
 #define myNAN               nan("1")
@@ -137,63 +142,6 @@ _WIN_DLL_API
 ///////////////////////////////////////////////////
 // classes
 ///////////////////////////////////////////////////
-
- /**
-  * @brief a Singleton class for a generic SingletonObject
-  * 
-  */
- template <typename SingletonObject>
- class 
-#ifdef _WIN32
-_WIN_DLL_API
-#endif
- CSingleton
- {
- public:
-     /**
-      * @brief allocates instance for member CSingleton< SingletonObject >::_instance
-      * 
-      * @return SingletonObject*
-      */
-     static SingletonObject* instance ()
-    {
-       if (!_instance)
-          _instance = new SingletonObject ();
-       return _instance;
-    }
-    
-    /**
-     * @brief virtual destructor
-     * 
-     */
-    virtual ~CSingleton ()
-    {
-       _instance = 0;
-    }
- protected:
-     /**
-      * @brief protected default constructor: <br>
-      * avoids allocation like "SingletonObject MySingleton"
-      * 
-      */
-     CSingleton () { }
- 
-     
- private:
-     /**
-      * @brief private "reflexive" pointer of SingletonObject:<br>
-      * will be instantiated by #CSingleton::instance()
-      * 
-      */
-     static SingletonObject* _instance;
-};
-
- /**
-  * @brief global definition and initialization of #CSingleton::_instance
-  * 
-  */
- template<typename SingletonObject> SingletonObject* CSingleton<SingletonObject>::_instance = nullptr;
-   
 ///////////////////////////////////////////////////
 // template functions
 ///////////////////////////////////////////////////
