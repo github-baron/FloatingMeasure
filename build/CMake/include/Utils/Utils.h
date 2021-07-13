@@ -44,6 +44,7 @@
 #ifdef LOG4CPLUS_ENABLED
 
 #include "Log4cplusWrapper.h"
+#include "LoggingStrings.h"
 #else
 // define empty log to commens
 
@@ -51,7 +52,7 @@
 #define LOGDEBUG(lg,msg);    
 #define LOGINFO(lg,msg);
 #define LOGWARN(lg,msg);
-#define LOGIERROR(lg,msg);
+#define LOGERROR(lg,msg);
 #define LOGFATAL(lg,msg);
 #endif
 

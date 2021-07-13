@@ -97,12 +97,12 @@ typedef CSingleton<CLog4cplusWrapper> CLog4cplusWrapperSingleton;
  *        LOGTRACE("ConfigurableLoggerName","logging text 4 u")
  * 
  */
-#define LOGTRACE(lg,msg)    LOG4CPLUS_TRACE( CLog4cplusWrapperSingleton::instance()->m_Logger.getInstance(LOG4CPLUS_TEXT(lg)),LOG4CPLUS_TEXT(msg));
-#define LOGDEBUG(lg,msg)    LOG4CPLUS_DEBUG( CLog4cplusWrapperSingleton::instance()->m_Logger.getInstance(LOG4CPLUS_TEXT(lg)),LOG4CPLUS_TEXT(msg));
-#define LOGINFO(lg,msg)    LOG4CPLUS_INFO( CLog4cplusWrapperSingleton::instance()->m_Logger.getInstance(LOG4CPLUS_TEXT(lg)),LOG4CPLUS_TEXT(msg));
-#define LOGWARN(lg,msg)    LOG4CPLUS_WARN( CLog4cplusWrapperSingleton::instance()->m_Logger.getInstance(LOG4CPLUS_TEXT(lg)),LOG4CPLUS_TEXT(msg));
-#define LOGIERROR(lg,msg)    LOG4CPLUS_ERROR( CLog4cplusWrapperSingleton::instance()->m_Logger.getInstance(LOG4CPLUS_TEXT(lg)),LOG4CPLUS_TEXT(msg));
-#define LOGFATAL(lg,msg)    LOG4CPLUS_FATAL( CLog4cplusWrapperSingleton::instance()->m_Logger.getInstance(LOG4CPLUS_TEXT(lg)),LOG4CPLUS_TEXT(msg));
+#define LOGTRACE(lg,msg)    LOG4CPLUS_TRACE( CLog4cplusWrapperSingleton::instance()->m_Logger.getInstance(LOG4CPLUS_TEXT(lg)),LOG4CPLUS_TEXT(msg))
+#define LOGDEBUG(lg,msg)    LOG4CPLUS_DEBUG( CLog4cplusWrapperSingleton::instance()->m_Logger.getInstance(LOG4CPLUS_TEXT(lg)),LOG4CPLUS_TEXT(msg))
+#define LOGINFO(lg,msg)     LOG4CPLUS_INFO( CLog4cplusWrapperSingleton::instance()->m_Logger.getInstance(LOG4CPLUS_TEXT(lg)),LOG4CPLUS_TEXT(msg))
+#define LOGWARN(lg,msg)     LOG4CPLUS_WARN( CLog4cplusWrapperSingleton::instance()->m_Logger.getInstance(LOG4CPLUS_TEXT(lg)),LOG4CPLUS_TEXT(msg))
+#define LOGERROR(lg,msg)    LOG4CPLUS_ERROR( CLog4cplusWrapperSingleton::instance()->m_Logger.getInstance(LOG4CPLUS_TEXT(lg)),LOG4CPLUS_TEXT(msg))
+#define LOGFATAL(lg,msg)    LOG4CPLUS_FATAL( CLog4cplusWrapperSingleton::instance()->m_Logger.getInstance(LOG4CPLUS_TEXT(lg)),LOG4CPLUS_TEXT(msg))
 
 
 #endif

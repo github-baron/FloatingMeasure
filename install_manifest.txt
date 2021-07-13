@@ -1,5 +1,6 @@
 /home/michae/projects/FloatingMeasure/build/CMake/lib/libFloatingMeasure.so
 /home/michae/projects/FloatingMeasure/build/CMake//include/Utils/Singleton.h
+/home/michae/projects/FloatingMeasure/build/CMake//include/Utils/LoggingStrings.h
 /home/michae/projects/FloatingMeasure/build/CMake//include/Utils/Log4cplusWrapper.h
 /home/michae/projects/FloatingMeasure/build/CMake//include/Utils/Utils.h
 /home/michae/projects/FloatingMeasure/build/CMake//include/Utils/CommonUtils.h

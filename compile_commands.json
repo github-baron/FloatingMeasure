@@ -1,47 +1,52 @@
 [
 {
   "directory": "/home/michae/projects/FloatingMeasure/FloatingMeasure",
-  "command": "/usr/bin/c++  -DFloatingMeasure_EXPORTS -DGIT_BRANCH=2b0a2724a4fb8478e13c1f6ad01ddbdc82ba4da4 -I/home/michae/projects/FloatingMeasure/FloatingMeasure  -fPIC   -o CMakeFiles/FloatingMeasure.dir/Utils/Utils.cpp.o -c /home/michae/projects/FloatingMeasure/FloatingMeasure/Utils/Utils.cpp",
+  "command": "/usr/bin/c++  -DFloatingMeasure_EXPORTS -DGIT_BRANCH=ecc58852a539190d9d69f18939284e05f93aa4e5 -DLOG4CPLUS_ENABLED -I/home/michae/projects/FloatingMeasure/FloatingMeasure  -fPIC   -o CMakeFiles/FloatingMeasure.dir/Utils/Utils.cpp.o -c /home/michae/projects/FloatingMeasure/FloatingMeasure/Utils/Utils.cpp",
   "file": "/home/michae/projects/FloatingMeasure/FloatingMeasure/Utils/Utils.cpp"
 },
 {
   "directory": "/home/michae/projects/FloatingMeasure/FloatingMeasure",
-  "command": "/usr/bin/c++  -DFloatingMeasure_EXPORTS -DGIT_BRANCH=2b0a2724a4fb8478e13c1f6ad01ddbdc82ba4da4 -I/home/michae/projects/FloatingMeasure/FloatingMeasure  -fPIC   -o CMakeFiles/FloatingMeasure.dir/Measure/VectorHandle.cpp.o -c /home/michae/projects/FloatingMeasure/FloatingMeasure/Measure/VectorHandle.cpp",
+  "command": "/usr/bin/c++  -DFloatingMeasure_EXPORTS -DGIT_BRANCH=ecc58852a539190d9d69f18939284e05f93aa4e5 -DLOG4CPLUS_ENABLED -I/home/michae/projects/FloatingMeasure/FloatingMeasure  -fPIC   -o CMakeFiles/FloatingMeasure.dir/Measure/VectorHandle.cpp.o -c /home/michae/projects/FloatingMeasure/FloatingMeasure/Measure/VectorHandle.cpp",
   "file": "/home/michae/projects/FloatingMeasure/FloatingMeasure/Measure/VectorHandle.cpp"
 },
 {
   "directory": "/home/michae/projects/FloatingMeasure/FloatingMeasure",
-  "command": "/usr/bin/c++  -DFloatingMeasure_EXPORTS -DGIT_BRANCH=2b0a2724a4fb8478e13c1f6ad01ddbdc82ba4da4 -I/home/michae/projects/FloatingMeasure/FloatingMeasure  -fPIC   -o CMakeFiles/FloatingMeasure.dir/Measure/PreMeasure.cpp.o -c /home/michae/projects/FloatingMeasure/FloatingMeasure/Measure/PreMeasure.cpp",
+  "command": "/usr/bin/c++  -DFloatingMeasure_EXPORTS -DGIT_BRANCH=ecc58852a539190d9d69f18939284e05f93aa4e5 -DLOG4CPLUS_ENABLED -I/home/michae/projects/FloatingMeasure/FloatingMeasure  -fPIC   -o CMakeFiles/FloatingMeasure.dir/Measure/PreMeasure.cpp.o -c /home/michae/projects/FloatingMeasure/FloatingMeasure/Measure/PreMeasure.cpp",
   "file": "/home/michae/projects/FloatingMeasure/FloatingMeasure/Measure/PreMeasure.cpp"
 },
 {
   "directory": "/home/michae/projects/FloatingMeasure/FloatingMeasure",
-  "command": "/usr/bin/c++  -DFloatingMeasure_EXPORTS -DGIT_BRANCH=2b0a2724a4fb8478e13c1f6ad01ddbdc82ba4da4 -I/home/michae/projects/FloatingMeasure/FloatingMeasure  -fPIC   -o CMakeFiles/FloatingMeasure.dir/Measure/BaseMeasure.cpp.o -c /home/michae/projects/FloatingMeasure/FloatingMeasure/Measure/BaseMeasure.cpp",
+  "command": "/usr/bin/c++  -DFloatingMeasure_EXPORTS -DGIT_BRANCH=ecc58852a539190d9d69f18939284e05f93aa4e5 -DLOG4CPLUS_ENABLED -I/home/michae/projects/FloatingMeasure/FloatingMeasure  -fPIC   -o CMakeFiles/FloatingMeasure.dir/Measure/BaseMeasure.cpp.o -c /home/michae/projects/FloatingMeasure/FloatingMeasure/Measure/BaseMeasure.cpp",
   "file": "/home/michae/projects/FloatingMeasure/FloatingMeasure/Measure/BaseMeasure.cpp"
 },
 {
   "directory": "/home/michae/projects/FloatingMeasure/FloatingMeasure",
-  "command": "/usr/bin/c++  -DFloatingMeasure_EXPORTS -DGIT_BRANCH=2b0a2724a4fb8478e13c1f6ad01ddbdc82ba4da4 -I/home/michae/projects/FloatingMeasure/FloatingMeasure  -fPIC   -o CMakeFiles/FloatingMeasure.dir/Measure/SimpleMeasure.cpp.o -c /home/michae/projects/FloatingMeasure/FloatingMeasure/Measure/SimpleMeasure.cpp",
+  "command": "/usr/bin/c++  -DFloatingMeasure_EXPORTS -DGIT_BRANCH=ecc58852a539190d9d69f18939284e05f93aa4e5 -DLOG4CPLUS_ENABLED -I/home/michae/projects/FloatingMeasure/FloatingMeasure  -fPIC   -o CMakeFiles/FloatingMeasure.dir/Measure/SimpleMeasure.cpp.o -c /home/michae/projects/FloatingMeasure/FloatingMeasure/Measure/SimpleMeasure.cpp",
   "file": "/home/michae/projects/FloatingMeasure/FloatingMeasure/Measure/SimpleMeasure.cpp"
 },
 {
   "directory": "/home/michae/projects/FloatingMeasure/FloatingMeasure",
-  "command": "/usr/bin/c++  -DFloatingMeasure_EXPORTS -DGIT_BRANCH=2b0a2724a4fb8478e13c1f6ad01ddbdc82ba4da4 -I/home/michae/projects/FloatingMeasure/FloatingMeasure  -fPIC   -o CMakeFiles/FloatingMeasure.dir/Measure/MeasureOperator.cpp.o -c /home/michae/projects/FloatingMeasure/FloatingMeasure/Measure/MeasureOperator.cpp",
+  "command": "/usr/bin/c++  -DFloatingMeasure_EXPORTS -DGIT_BRANCH=ecc58852a539190d9d69f18939284e05f93aa4e5 -DLOG4CPLUS_ENABLED -I/home/michae/projects/FloatingMeasure/FloatingMeasure  -fPIC   -o CMakeFiles/FloatingMeasure.dir/Measure/MeasureOperator.cpp.o -c /home/michae/projects/FloatingMeasure/FloatingMeasure/Measure/MeasureOperator.cpp",
   "file": "/home/michae/projects/FloatingMeasure/FloatingMeasure/Measure/MeasureOperator.cpp"
 },
 {
   "directory": "/home/michae/projects/FloatingMeasure/FloatingMeasure",
-  "command": "/usr/bin/c++  -DFloatingMeasure_EXPORTS -DGIT_BRANCH=2b0a2724a4fb8478e13c1f6ad01ddbdc82ba4da4 -I/home/michae/projects/FloatingMeasure/FloatingMeasure  -fPIC   -o CMakeFiles/FloatingMeasure.dir/Measure/ComplexMeasure.cpp.o -c /home/michae/projects/FloatingMeasure/FloatingMeasure/Measure/ComplexMeasure.cpp",
+  "command": "/usr/bin/c++  -DFloatingMeasure_EXPORTS -DGIT_BRANCH=ecc58852a539190d9d69f18939284e05f93aa4e5 -DLOG4CPLUS_ENABLED -I/home/michae/projects/FloatingMeasure/FloatingMeasure  -fPIC   -o CMakeFiles/FloatingMeasure.dir/Measure/ComplexMeasure.cpp.o -c /home/michae/projects/FloatingMeasure/FloatingMeasure/Measure/ComplexMeasure.cpp",
   "file": "/home/michae/projects/FloatingMeasure/FloatingMeasure/Measure/ComplexMeasure.cpp"
 },
 {
   "directory": "/home/michae/projects/FloatingMeasure/FloatingMeasure",
-  "command": "/usr/bin/c++  -DFloatingMeasure_EXPORTS -DGIT_BRANCH=2b0a2724a4fb8478e13c1f6ad01ddbdc82ba4da4 -I/home/michae/projects/FloatingMeasure/FloatingMeasure  -fPIC   -o CMakeFiles/FloatingMeasure.dir/DigFloat/DigFloat.cpp.o -c /home/michae/projects/FloatingMeasure/FloatingMeasure/DigFloat/DigFloat.cpp",
+  "command": "/usr/bin/c++  -DFloatingMeasure_EXPORTS -DGIT_BRANCH=ecc58852a539190d9d69f18939284e05f93aa4e5 -DLOG4CPLUS_ENABLED -I/home/michae/projects/FloatingMeasure/FloatingMeasure  -fPIC   -o CMakeFiles/FloatingMeasure.dir/DigFloat/DigFloat.cpp.o -c /home/michae/projects/FloatingMeasure/FloatingMeasure/DigFloat/DigFloat.cpp",
   "file": "/home/michae/projects/FloatingMeasure/FloatingMeasure/DigFloat/DigFloat.cpp"
 },
 {
   "directory": "/home/michae/projects/FloatingMeasure/FloatingMeasure",
-  "command": "/usr/bin/c++  -DFloatingMeasure_EXPORTS -DGIT_BRANCH=2b0a2724a4fb8478e13c1f6ad01ddbdc82ba4da4 -I/home/michae/projects/FloatingMeasure/FloatingMeasure  -fPIC   -o CMakeFiles/FloatingMeasure.dir/FloatingMeasure/FloatingMeasure.cpp.o -c /home/michae/projects/FloatingMeasure/FloatingMeasure/FloatingMeasure/FloatingMeasure.cpp",
+  "command": "/usr/bin/c++  -DFloatingMeasure_EXPORTS -DGIT_BRANCH=ecc58852a539190d9d69f18939284e05f93aa4e5 -DLOG4CPLUS_ENABLED -I/home/michae/projects/FloatingMeasure/FloatingMeasure  -fPIC   -o CMakeFiles/FloatingMeasure.dir/FloatingMeasure/FloatingMeasure.cpp.o -c /home/michae/projects/FloatingMeasure/FloatingMeasure/FloatingMeasure/FloatingMeasure.cpp",
   "file": "/home/michae/projects/FloatingMeasure/FloatingMeasure/FloatingMeasure/FloatingMeasure.cpp"
+},
+{
+  "directory": "/home/michae/projects/FloatingMeasure/FloatingMeasure",
+  "command": "/usr/bin/c++  -DFloatingMeasure_EXPORTS -DGIT_BRANCH=ecc58852a539190d9d69f18939284e05f93aa4e5 -DLOG4CPLUS_ENABLED -I/home/michae/projects/FloatingMeasure/FloatingMeasure  -fPIC   -o CMakeFiles/FloatingMeasure.dir/Utils/Log4cplusWrapper.cpp.o -c /home/michae/projects/FloatingMeasure/FloatingMeasure/Utils/Log4cplusWrapper.cpp",
+  "file": "/home/michae/projects/FloatingMeasure/FloatingMeasure/Utils/Log4cplusWrapper.cpp"
 }
 ]
