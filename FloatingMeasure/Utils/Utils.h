@@ -54,6 +54,7 @@
 #define LOGWARN(lg,msg);
 #define LOGERROR(lg,msg);
 #define LOGFATAL(lg,msg);
+
 #endif
 
 
@@ -127,6 +128,7 @@ double
 _WIN_DLL_API
 #endif
  Round2Precision(const double dValue, const int nPrecision);
+ 
 /**
  * @brief returns "true" or "false" as string
  * 
@@ -138,7 +140,20 @@ string
 _WIN_DLL_API
 #endif
  Bool2String(const bool bBool);
-
+ 
+/**
+ * @brief prints double with a given precision
+ * 
+ * @param[in] dValue double to convert to string
+ * @param[in] nPrecision int setting precision used for conversion
+ * @return string
+ */
+string 
+#ifdef _WIN32
+_WIN_DLL_API
+#endif
+ Double2String(const double& dValue);
+    
 
 ///////////////////////////////////////////////////
 // classes
@@ -246,6 +261,22 @@ void SecureDeleteVectorPointer( T* &pt)
     if( pt!=nullptr )
         delete[] pt;
     pt = nullptr;
+}
+
+
+/**
+ * @brief returns pointer address as string
+ * 
+ * @tparam T: object type 
+ * @param pt: the pointer whose address is to be converted into a string
+ * @return string
+ */
+template< class T >
+string  Address2String(const T* pt)
+{
+    ostringstream get_the_address; 
+    get_the_address << pt;
+    return get_the_address.str();     
 }
 
 #endif // UTILS_H

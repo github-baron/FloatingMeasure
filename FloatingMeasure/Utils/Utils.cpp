@@ -50,3 +50,10 @@ string Bool2String(const bool bBool)
 {
     return bBool ? "true" : "false";
 }
+
+string Double2String(const double& dValue)
+{   
+    ostringstream oss;
+    oss << scientific << dValue;
+    return oss.str();
+}

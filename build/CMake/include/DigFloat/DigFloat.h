@@ -29,7 +29,7 @@
 ///////////////////////////////////////////////////
 // includes
 ///////////////////////////////////////////////////
-#include<Utils/Utils.h>
+#include <Utils/Utils.h>
 
 ///////////////////////////////////////////////////
 // macros
@@ -432,7 +432,7 @@ public:
      * 
      * @return bool
      */
-    bool Valid() {return !isnan( RawValue() );}
+    bool Valid() const {return !isnan( RawValue() );}
 
     ///////////////////////////////////////////////////
     // public printing functions
@@ -460,7 +460,7 @@ public:
      * 
      * @return string
      */
-    string DebugOut();
+    string DebugOut() const;
 
     
 protected:

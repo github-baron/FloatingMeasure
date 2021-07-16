@@ -7,6 +7,8 @@ project(FloatingMeasure
 # Find includes in corresponding build directories
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
+set(CMAKE_VERBOSE_MAKEFILE ON)
+
 # Instruct CMake to run moc automatically when needed.
 set(CMAKE_BUILD_DIR ${PROJECT_SOURCE_DIR}/build)
 

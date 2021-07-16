@@ -26,6 +26,7 @@
 #include "DigFloat.h"
 #include <iostream>
 
+
 CDigFloat::CDigFloat()
 {
     _Init();
@@ -67,7 +68,20 @@ CDigFloat& CDigFloat::operator=(const double other)
 
 bool CDigFloat::operator==(const CDigFloat& other) const
 {
+//     LOGTRACE("ErrorLogger","Test checking logging");
+ 
+    LOGTRACE(LS_DigFloat+"operatorCompare","called with args:");
+    LOGTRACE(LS_DigFloat+"operatorCompare",string("CDigFloat other:"));
+    LOGTRACE(LS_DigFloat+"operatorCompare",string("\tvalue            =") + other.RawPrint(20));
+    LOGTRACE(LS_DigFloat+"operatorCompare",string("\t                 =") + to_string(other.Precision()));
+    LOGTRACE(LS_DigFloat+"operatorCompare",string("\tprecision active =") + Bool2String(other.PrecisionActive()));
+    LOGTRACE(LS_DigFloat+"operatorCompare",string("this:") + RawPrint(10));
+    LOGTRACE(LS_DigFloat+"operatorCompare",string("\tvalue            =") + RawPrint(20));
+    LOGTRACE(LS_DigFloat+"operatorCompare",string("\t                 =") + to_string(Precision()));
+    LOGTRACE(LS_DigFloat+"operatorCompare",string("\tprecision active =") + Bool2String(PrecisionActive()));
+    
     double dTotalError = RawError() + other.RawError();
+    LOGTRACE(LS_DigFloat+"operatorCompare",string("calculated total error = ") + Double2String(dTotalError));
     
     // handle precision for other, too
     CDigFloat otherTemp(*this);
@@ -75,12 +89,15 @@ bool CDigFloat::operator==(const CDigFloat& other) const
     // set value to other.Value() 
     otherTemp.Value(other.RawValue());
     
-//     cout << "CDigFloat::operator==(const CDigFloat& other) const" << endl;
-//     cout << fixed << setprecision(30) << "RawValue() = " << RawValue() << endl;
-//     cout << fixed << setprecision(30) << "otherTemp.RawValue() = " << otherTemp.RawValue() << endl;
-//     cout << fixed << setprecision(30) <<"diff = " << fabs(RawValue() - otherTemp.RawValue()) << endl;
-//     cout << fixed << setprecision(30)<< "TotalError = " << dTotalError << endl;
-//     cout << fixed << setprecision(30)<< "TotalError (incl. prec.) = " <<  ( PrecisionActive() ? PrecisionResolution()/2. : 0) + dTotalError << endl;
+    LOGTRACE(LS_DigFloat+"operatorCompare",string("corrected precision for other: "));
+    LOGTRACE(LS_DigFloat+"operatorCompare",string("\tvalue            =") + otherTemp.RawPrint(20));
+    LOGTRACE(LS_DigFloat+"operatorCompare",string("\t                 =") + to_string(otherTemp.Precision()));
+    LOGTRACE(LS_DigFloat+"operatorCompare",string("\tprecision active =") + Bool2String(otherTemp.PrecisionActive()));
+    
+    
+    LOGTRACE(LS_DigFloat+"operatorCompare",string("comparison of : |diff| <= [precision/2] + totalError"));
+    LOGTRACE(LS_DigFloat+"operatorCompare",string("|diff| = " + Double2String(fabs(RawValue()-otherTemp.RawValue()))));
+    LOGTRACE(LS_DigFloat+"operatorCompare",string("right side  = " + Double2String(( PrecisionActive() ? PrecisionResolution()/2. : 0) + dTotalError)));
     
     // now compare: take into account: in case of active precision there is also the same error which must be
     // considered for comparison
@@ -281,7 +298,7 @@ string CDigFloat::RawPrint(const int UserPrecision,bool bWithError /*= true*/) c
         oss << scientific << plmi  << RawError();
     return oss.str();
 }
-string CDigFloat::DebugOut()
+string CDigFloat::DebugOut() const
 {
     ostringstream oss;
     oss << "CDigFloat valid: " << Bool2String(Valid()) << endl

@@ -57,6 +57,7 @@ FIND_LIBRARY(LOG4CPLUS_LIBRARIES
 message("found log4cplus libraries " ${LOG4CPLUS_LIBRARIES}) 
 
 
+
 INCLUDE(FindPackageHandleStandardArgs)
 #FIND_PACKAGE_HANDLE_STANDARD_ARGS(CPPUNIT DEFAULT_MSG LOG4CPLUS_LIBRARIES LOG4CPLUS_INCLUDE_DIRS)
 MARK_AS_ADVANCED(LOG4CPLUS_LIBRARIES LOG4CPLUS_INCLUDE_DIRS)
@@ -70,6 +71,7 @@ IF(LOG4CPLUS_INCLUDE_DIRS AND LOG4CPLUS_LIBRARIES)
     # append to file list 
     list(APPEND 
         floatingmeasure_LIB       
+        Utils/LoggingStrings.h  
         Utils/Log4cplusWrapper.h
         Utils/Log4cplusWrapper.cpp
     )
