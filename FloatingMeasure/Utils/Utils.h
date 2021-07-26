@@ -279,4 +279,45 @@ string  Address2String(const T* pt)
     return get_the_address.str();     
 }
 
+
+/**
+ * @brief returns optimized calculated difference up to 6th order avoiding higher order differences
+ * which results in inaccurate results
+ * 
+ * @tparam T: object type 
+ * @param T& X1 minuend 
+ * @param T& X2 subtrahend 
+ * @return difference of nth order
+ */
+template< class T >
+T DifferenceNthOrder(const T& X1, const T& X2, unsigned int nthOrder)
+{
+    T Diff;
+    switch(nthOrder)
+    {
+        case 1:
+            Diff = X2-X1;
+            break;
+        case 2:
+            Diff = (X2-X1)*(X2+X1);
+            break;
+        case 3:
+            Diff = (X2-X1)*(X2*X2 + X1*X1 + X1*X2);
+            break;
+        case 4:
+            Diff = (X2-X1)*(X2+X1)*(X1*X1+X2*X2);
+            break;
+        case 5:
+            Diff = (X2-X1)*(pow(X2,nthOrder-1)+pow(X1,nthOrder-1)+(X1*X2)*(X1*X1+ X2*X2+ X1*X2));
+            break;
+        case 6:
+            Diff = (X2-X1)*(X2*X2 + X1*X1 + X1*X2) * (X1*X1*X1+X2*X2*X2);
+            break;
+        default:
+            Diff = pow(X2,nthOrder)-pow(X1,nthOrder);
+            break;
+    }
+    
+    return Diff;
+}    
 #endif // UTILS_H

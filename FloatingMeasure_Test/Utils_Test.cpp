@@ -61,4 +61,39 @@ public:
             CPPUNIT_ASSERT_MESSAGE( "numerical error exceeds expected value (" + to_string(iexp) + ")\ndouble machine epsilon=" + osse.str() + "\nread double = " + oss.str() + "\nread long long = " + to_string(s.i64) + "\ncorrected integer = " + to_string(sc.i64)+ "\ncorrected double = " + ossc.str(), DoubleMachineEpsilon(dValue)/dValue < 2.3e-16);
         }
     }
+    
+    void Utils_DifferenceNthOrder()
+    {
+        double d1=1e15-1;
+        double d2=1e15+1;
+        vector<double> vDiff;
+        double dDiff;
+        double dTolerance;
+        
+        // expected differences fo  r order 2 --> 6
+        vDiff.push_back(4e15);
+        vDiff.push_back(6e30);
+        vDiff.push_back(8e45);
+        vDiff.push_back(10e60);
+        vDiff.push_back(12e75);
+        
+        
+        ostringstream oss, ossRes, ossExp;
+        
+        for(unsigned int uiOrder = 2; uiOrder < 7; uiOrder++)
+        {
+            // check 2nd Order
+            double dDiffCompare = pow(d2,uiOrder) - pow(d1,uiOrder);
+            dDiff = vDiff[uiOrder-2];            
+            dTolerance = fabs(dDiff-dDiffCompare);
+            double dTolCalc =  fabs(dDiff-DifferenceNthOrder(d1,d2,uiOrder)) ;
+            oss << uiOrder << ". order difference: " << endl << "expected: " << endl <<  setprecision(20) << dDiff << endl << "but got" << endl << DifferenceNthOrder(d1,d2,uiOrder) << endl <<
+            "usual calculation would have received the following: " << endl << dDiffCompare <<  endl <<  "deviation is: " << endl << setprecision(20) << dTolCalc << endl << "comparison: difference from standard calc. to ideal diff is " << endl << dTolerance << endl;
+            
+            LOGTRACE("Distribution_Test::Utils_DifferenceNthOrder", oss.str());
+            
+            CPPUNIT_ASSERT_MESSAGE( oss.str(), dTolCalc < dTolerance);
+        }
+    }
+    
 };

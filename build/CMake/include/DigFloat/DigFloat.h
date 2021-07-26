@@ -401,6 +401,14 @@ public:
      */
     void Precision(const int UserPrecision) { nPrecision = UserPrecision; dPrecisionResolution = pow(10,-UserPrecision); PrecisionActive(true);}
     
+    
+    /**
+     * @brief sets CDigFloat::nPrecision and CDigFloat::dPrecisionResolution by a DigFloat representing the error calculating log(error,10) for CDigFloat::nPrecision
+     * 
+     * @param dfError: CDigFloat, defining the the error of CDigFloat::dValue
+     */
+    void Precision(CDigFloat& dfError) { Precision( (int)log(CDigFloat( dfError ),10).RawValue()); }
+    
     /**
      * @brief getter for bPrecisionActive
      * 
@@ -490,12 +498,12 @@ protected:
      * @brief keeps the numerical error of CDigFloat::dValue including the propagation due to multiple operations
      * 
      */
-    double dError;
+    long double dError;
     /**
      * @brief the raw value 
      * 
      */
-    double dValue;
+    long double dValue;
     /**
      * @brief number which controls the output precision of CDigFloat::dValue:
      * affected functions

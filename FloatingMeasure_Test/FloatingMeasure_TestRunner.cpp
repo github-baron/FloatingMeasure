@@ -92,6 +92,12 @@ int main( int argc, char* argv[] )
                     &UtilsTest
                     )
                   );
+    runner.addTest( new CppUnit::TestCaller<CUtils_Test> ( 
+                    "Utils: Difference nthOrder",
+                    &CUtils_Test::Utils_DifferenceNthOrder,
+                    &UtilsTest
+                    )
+                  );
 
     /////////////////////////////////////////////////
     //// add all tests of CBaseMeasure_Test
