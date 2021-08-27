@@ -86,339 +86,339 @@ int main( int argc, char* argv[] )
     /////////////////////////////////////////////////
     //// add all tests of CUtils_Test
     /////////////////////////////////////////////////
-    runner.addTest( new CppUnit::TestCaller<CUtils_Test> ( 
-                    "Utils: DoubleMachineEpsilon",
-                    &CUtils_Test::Utils_DoubleMachineEpsilon,
-                    &UtilsTest
-                    )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CUtils_Test> ( 
-                    "Utils: Difference nthOrder",
-                    &CUtils_Test::Utils_DifferenceNthOrder,
-                    &UtilsTest
-                    )
-                  );
-
-    /////////////////////////////////////////////////
-    //// add all tests of CBaseMeasure_Test
-    /////////////////////////////////////////////////
-    runner.addTest( new CppUnit::TestCaller<CBaseMeasure_Test> ( 
-                    "BaseMeasure: consistent SI references",
-                    &CBaseMeasure_Test::SIReference,
-                    &BaseMeasureTest
-                    )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CBaseMeasure_Test> ( 
-                    "BaseMeasure: unique short labels",
-                    &CBaseMeasure_Test::UniqueShortLabel,
-                    &BaseMeasureTest
-                    )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CBaseMeasure_Test> ( 
-                    "BaseMeasure: unique long labels",
-                    &CBaseMeasure_Test::UniqueLongLabel,
-                    &BaseMeasureTest
-                    )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CBaseMeasure_Test> ( 
-                    "BaseMeasure: unique SI factors",
-                    &CBaseMeasure_Test::UniqueSIFactor,
-                    &BaseMeasureTest
-                    )
-                  );
+//    runner.addTest( new CppUnit::TestCaller<CUtils_Test> ( 
+//                    "Utils: DoubleMachineEpsilon",
+//                    &CUtils_Test::Utils_DoubleMachineEpsilon,
+//                    &UtilsTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CUtils_Test> ( 
+//                    "Utils: Difference nthOrder",
+//                    &CUtils_Test::Utils_DifferenceNthOrder,
+//                    &UtilsTest
+//                    )
+//                  );
+//
+//    /////////////////////////////////////////////////
+//    //// add all tests of CBaseMeasure_Test
+//    /////////////////////////////////////////////////
+//    runner.addTest( new CppUnit::TestCaller<CBaseMeasure_Test> ( 
+//                    "BaseMeasure: consistent SI references",
+//                    &CBaseMeasure_Test::SIReference,
+//                    &BaseMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CBaseMeasure_Test> ( 
+//                    "BaseMeasure: unique short labels",
+//                    &CBaseMeasure_Test::UniqueShortLabel,
+//                    &BaseMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CBaseMeasure_Test> ( 
+//                    "BaseMeasure: unique long labels",
+//                    &CBaseMeasure_Test::UniqueLongLabel,
+//                    &BaseMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CBaseMeasure_Test> ( 
+//                    "BaseMeasure: unique SI factors",
+//                    &CBaseMeasure_Test::UniqueSIFactor,
+//                    &BaseMeasureTest
+//                    )
+//                  );
+//    
+//    ///////////////////////////////////////////////
+//    // add all tests of CPreMeasure_Test
+//    ///////////////////////////////////////////////
+//    runner.addTest( new CppUnit::TestCaller<CPreMeasure_Test> ( 
+//                    "PreMeasure: check factors",
+//                    &CPreMeasure_Test::CheckFactors,
+//                    &PreMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CPreMeasure_Test> ( 
+//                    "PreMeasure: check exponents",
+//                    &CPreMeasure_Test::CheckExponents,
+//                    &PreMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CPreMeasure_Test> ( 
+//                    "PreMeasure: check getting ID by factor",
+//                    &CPreMeasure_Test::CheckGetIDByFactor,
+//                    &PreMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CPreMeasure_Test> ( 
+//                    "PreMeasure: check getting ID by exp10",
+//                    &CPreMeasure_Test::CheckGetIDByExp10,
+//                    &PreMeasureTest
+//                    )
+//                  );
+//
+//
+//    ///////////////////////////////////////////////
+//    // add all tests of CSimpleMeasure_Test
+//    ///////////////////////////////////////////////
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: copy constructor",
+//                    &CSimpleMeasure_Test::CopyConstructor,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByShort, operator = , and operator== voltage",
+//                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualVoltage,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByShort, operator = , and operator== current",
+//                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualCurrent,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByShort, operator = , and operator== frequency",
+//                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualFrequency,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByShort, operator = , and operator== resistor",
+//                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualResistor, 
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByShort, operator = , and operator== seconds",
+//                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualSeconds,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByShort, operator = , and operator== meter",
+//                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualMeter,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByShort, operator = , and operator== °K",
+//                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualDegKelvin,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByShort, operator = , and operator== °F",
+//                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualDegFahrenheit,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByShort, operator = , and operator== °C",
+//                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualDegCelsius,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByID by other",
+//                    &CSimpleMeasure_Test::SetByIDOther,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByShort voltage measure",
+//                    &CSimpleMeasure_Test::SetByShortVoltage,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByShort resistor measure",
+//                    &CSimpleMeasure_Test::SetByShortResistor,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByShort temperature measure",
+//                    &CSimpleMeasure_Test::SetByShortTemperature,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByShort time measure",
+//                    &CSimpleMeasure_Test::SetByShortTime,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//
+//    ///////////////////////////////////////////////
+//    // add all tests of CComplexMeasure_Test
+//    ///////////////////////////////////////////////
+//    runner.addTest( new CppUnit::TestCaller<CComplexMeasure_Test> ( 
+//                        "ComplexMeasure: construction",
+//                        &CComplexMeasure_Test::Construction,
+//                        &ComplexMeasureTest
+//                        )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CComplexMeasure_Test> ( 
+//                        "ComplexMeasure: operator= and operator== for voltage",
+//                        &CComplexMeasure_Test::OperatorAssignAndEqualVoltage,
+//                        &ComplexMeasureTest
+//                        )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CComplexMeasure_Test> ( 
+//                        "ComplexMeasure: operator= and operator== for current",
+//                        &CComplexMeasure_Test::OperatorAssignAndEqualCurrent,
+//                        &ComplexMeasureTest
+//                        )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CComplexMeasure_Test> ( 
+//                        "ComplexMeasure: operator= and operator== for seconds",
+//                        &CComplexMeasure_Test::OperatorAssignAndEqualSeconds,
+//                        &ComplexMeasureTest
+//                        )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CComplexMeasure_Test> ( 
+//                        "ComplexMeasure: operator= and operator== for °C",
+//                        &CComplexMeasure_Test::OperatorAssignAndEqualDegCelcius,
+//                        &ComplexMeasureTest
+//                        )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CComplexMeasure_Test> ( 
+//                        "ComplexMeasure: operator= and operator== for °F",
+//                        &CComplexMeasure_Test::OperatorAssignAndEqualDegFahrenheit,
+//                        &ComplexMeasureTest
+//                        )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CComplexMeasure_Test> ( 
+//                        "ComplexMeasure: operator= and operator== for °K",
+//                        &CComplexMeasure_Test::OperatorAssignAndEqualDegKelvin,
+//                        &ComplexMeasureTest
+//                        )
+//                  );    
+//    runner.addTest( new CppUnit::TestCaller<CComplexMeasure_Test> ( 
+//                        "ComplexMeasure: complex expression operator ==",
+//                        &CComplexMeasure_Test::OperatorAssignAndEqualComplexExpression,
+//                        &ComplexMeasureTest
+//                        )
+//                  );      
+//    runner.addTest( new CppUnit::TestCaller<CComplexMeasure_Test> ( 
+//                        "ComplexMeasure: simplify",
+//                        &CComplexMeasure_Test::Simplify,
+//                        &ComplexMeasureTest
+//                        )
+//                  );    
+//    runner.addTest( new CppUnit::TestCaller<CComplexMeasure_Test> ( 
+//                        "ComplexMeasure: old test ... still to be structured",
+//                        &CComplexMeasure_Test::ComplexMeasureTest,
+//                        &ComplexMeasureTest
+//                        )
+//                  );
+//    
+//    ///////////////////////////////////////////////
+//    // add all tests of CDigFloat_Test
+//    ///////////////////////////////////////////////
+//    runner.addTest( new CppUnit::TestCaller<CDigFloat_Test> ( 
+//                        "DigFloat: construction",
+//                        &CDigFloat_Test::Construction,
+//                        &DigFloatTest
+//                        )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CDigFloat_Test> ( 
+//                        "DigFloat: precision",
+//                        &CDigFloat_Test::Precision,
+//                        &DigFloatTest
+//                        )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CDigFloat_Test> ( 
+//                        "DigFloat: valid",
+//                        &CDigFloat_Test::Valid,
+//                        &DigFloatTest
+//                        )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CDigFloat_Test> ( 
+//                        "DigFloat: operators",
+//                        &CDigFloat_Test::Operators,
+//                        &DigFloatTest
+//                        )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CDigFloat_Test> ( 
+//                        "DigFloat: log function",
+//                        &CDigFloat_Test::FunctionLog,
+//                        &DigFloatTest
+//                        )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CDigFloat_Test> ( 
+//                        "DigFloat: pow function",
+//                        &CDigFloat_Test::FunctionPow,
+//                        &DigFloatTest
+//                        )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CDigFloat_Test> ( 
+//                        "DigFloat: error propagation",
+//                        &CDigFloat_Test::ErrorPropagation,
+//                        &DigFloatTest
+//                        )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CDigFloat_Test> ( 
+//                        "DigFloat: error propagation for function sqrt",
+//                        &CDigFloat_Test::ErrorPropagation_sqrt,
+//                        &DigFloatTest
+//                        )
+//                  );
     
-    ///////////////////////////////////////////////
-    // add all tests of CPreMeasure_Test
-    ///////////////////////////////////////////////
-    runner.addTest( new CppUnit::TestCaller<CPreMeasure_Test> ( 
-                    "PreMeasure: check factors",
-                    &CPreMeasure_Test::CheckFactors,
-                    &PreMeasureTest
-                    )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CPreMeasure_Test> ( 
-                    "PreMeasure: check exponents",
-                    &CPreMeasure_Test::CheckExponents,
-                    &PreMeasureTest
-                    )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CPreMeasure_Test> ( 
-                    "PreMeasure: check getting ID by factor",
-                    &CPreMeasure_Test::CheckGetIDByFactor,
-                    &PreMeasureTest
-                    )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CPreMeasure_Test> ( 
-                    "PreMeasure: check getting ID by exp10",
-                    &CPreMeasure_Test::CheckGetIDByExp10,
-                    &PreMeasureTest
-                    )
-                  );
-
-
-    ///////////////////////////////////////////////
-    // add all tests of CSimpleMeasure_Test
-    ///////////////////////////////////////////////
-    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                    "SimpleMeasure: copy constructor",
-                    &CSimpleMeasure_Test::CopyConstructor,
-                    &SimpleMeasureTest
-                    )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                    "SimpleMeasure: SetByShort, operator = , and operator== voltage",
-                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualVoltage,
-                    &SimpleMeasureTest
-                    )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                    "SimpleMeasure: SetByShort, operator = , and operator== current",
-                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualCurrent,
-                    &SimpleMeasureTest
-                    )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                    "SimpleMeasure: SetByShort, operator = , and operator== frequency",
-                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualFrequency,
-                    &SimpleMeasureTest
-                    )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                    "SimpleMeasure: SetByShort, operator = , and operator== resistor",
-                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualResistor, 
-                    &SimpleMeasureTest
-                    )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                    "SimpleMeasure: SetByShort, operator = , and operator== seconds",
-                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualSeconds,
-                    &SimpleMeasureTest
-                    )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                    "SimpleMeasure: SetByShort, operator = , and operator== meter",
-                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualMeter,
-                    &SimpleMeasureTest
-                    )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                    "SimpleMeasure: SetByShort, operator = , and operator== °K",
-                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualDegKelvin,
-                    &SimpleMeasureTest
-                    )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                    "SimpleMeasure: SetByShort, operator = , and operator== °F",
-                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualDegFahrenheit,
-                    &SimpleMeasureTest
-                    )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                    "SimpleMeasure: SetByShort, operator = , and operator== °C",
-                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualDegCelsius,
-                    &SimpleMeasureTest
-                    )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                    "SimpleMeasure: SetByID by other",
-                    &CSimpleMeasure_Test::SetByIDOther,
-                    &SimpleMeasureTest
-                    )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                    "SimpleMeasure: SetByShort voltage measure",
-                    &CSimpleMeasure_Test::SetByShortVoltage,
-                    &SimpleMeasureTest
-                    )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                    "SimpleMeasure: SetByShort resistor measure",
-                    &CSimpleMeasure_Test::SetByShortResistor,
-                    &SimpleMeasureTest
-                    )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                    "SimpleMeasure: SetByShort temperature measure",
-                    &CSimpleMeasure_Test::SetByShortTemperature,
-                    &SimpleMeasureTest
-                    )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                    "SimpleMeasure: SetByShort time measure",
-                    &CSimpleMeasure_Test::SetByShortTime,
-                    &SimpleMeasureTest
-                    )
-                  );
-
-    ///////////////////////////////////////////////
-    // add all tests of CComplexMeasure_Test
-    ///////////////////////////////////////////////
-    runner.addTest( new CppUnit::TestCaller<CComplexMeasure_Test> ( 
-                        "ComplexMeasure: construction",
-                        &CComplexMeasure_Test::Construction,
-                        &ComplexMeasureTest
-                        )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CComplexMeasure_Test> ( 
-                        "ComplexMeasure: operator= and operator== for voltage",
-                        &CComplexMeasure_Test::OperatorAssignAndEqualVoltage,
-                        &ComplexMeasureTest
-                        )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CComplexMeasure_Test> ( 
-                        "ComplexMeasure: operator= and operator== for current",
-                        &CComplexMeasure_Test::OperatorAssignAndEqualCurrent,
-                        &ComplexMeasureTest
-                        )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CComplexMeasure_Test> ( 
-                        "ComplexMeasure: operator= and operator== for seconds",
-                        &CComplexMeasure_Test::OperatorAssignAndEqualSeconds,
-                        &ComplexMeasureTest
-                        )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CComplexMeasure_Test> ( 
-                        "ComplexMeasure: operator= and operator== for °C",
-                        &CComplexMeasure_Test::OperatorAssignAndEqualDegCelcius,
-                        &ComplexMeasureTest
-                        )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CComplexMeasure_Test> ( 
-                        "ComplexMeasure: operator= and operator== for °F",
-                        &CComplexMeasure_Test::OperatorAssignAndEqualDegFahrenheit,
-                        &ComplexMeasureTest
-                        )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CComplexMeasure_Test> ( 
-                        "ComplexMeasure: operator= and operator== for °K",
-                        &CComplexMeasure_Test::OperatorAssignAndEqualDegKelvin,
-                        &ComplexMeasureTest
-                        )
-                  );    
-    runner.addTest( new CppUnit::TestCaller<CComplexMeasure_Test> ( 
-                        "ComplexMeasure: complex expression operator ==",
-                        &CComplexMeasure_Test::OperatorAssignAndEqualComplexExpression,
-                        &ComplexMeasureTest
-                        )
-                  );      
-    runner.addTest( new CppUnit::TestCaller<CComplexMeasure_Test> ( 
-                        "ComplexMeasure: simplify",
-                        &CComplexMeasure_Test::Simplify,
-                        &ComplexMeasureTest
-                        )
-                  );    
-    runner.addTest( new CppUnit::TestCaller<CComplexMeasure_Test> ( 
-                        "ComplexMeasure: old test ... still to be structured",
-                        &CComplexMeasure_Test::ComplexMeasureTest,
-                        &ComplexMeasureTest
-                        )
-                  );
-    
-    ///////////////////////////////////////////////
-    // add all tests of CDigFloat_Test
-    ///////////////////////////////////////////////
-    runner.addTest( new CppUnit::TestCaller<CDigFloat_Test> ( 
-                        "DigFloat: construction",
-                        &CDigFloat_Test::Construction,
-                        &DigFloatTest
-                        )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CDigFloat_Test> ( 
-                        "DigFloat: precision",
-                        &CDigFloat_Test::Precision,
-                        &DigFloatTest
-                        )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CDigFloat_Test> ( 
-                        "DigFloat: valid",
-                        &CDigFloat_Test::Valid,
-                        &DigFloatTest
-                        )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CDigFloat_Test> ( 
-                        "DigFloat: operators",
-                        &CDigFloat_Test::Operators,
-                        &DigFloatTest
-                        )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CDigFloat_Test> ( 
-                        "DigFloat: log function",
-                        &CDigFloat_Test::FunctionLog,
-                        &DigFloatTest
-                        )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CDigFloat_Test> ( 
-                        "DigFloat: pow function",
-                        &CDigFloat_Test::FunctionPow,
-                        &DigFloatTest
-                        )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CDigFloat_Test> ( 
-                        "DigFloat: error propagation",
-                        &CDigFloat_Test::ErrorPropagation,
-                        &DigFloatTest
-                        )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CDigFloat_Test> ( 
-                        "DigFloat: error propagation for function sqrt",
-                        &CDigFloat_Test::ErrorPropagation_sqrt,
-                        &DigFloatTest
-                        )
-                  );
-    
-    ///////////////////////////////////////////////
-    // add all tests of CFloatingMeasure_Test
-    ///////////////////////////////////////////////
-    runner.addTest( new CppUnit::TestCaller<CFloatingMeasure_Test> ( 
-                        "FloatingMeasure: operator=",
-                        &CFloatingMeasure_Test::OperatorEqual,
-                        &FloatingMeasureTest
-                        )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CFloatingMeasure_Test> ( 
-                        "FloatingMeasure: normlaize",
-                        &CFloatingMeasure_Test::Normalize,
-                        &FloatingMeasureTest
-                        )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CFloatingMeasure_Test> ( 
-                        "FloatingMeasure: scale to for temperature",
-                        &CFloatingMeasure_Test::ScaleToTemperature,
-                        &FloatingMeasureTest
-                        )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CFloatingMeasure_Test> ( 
-                        "FloatingMeasure: normalize temperature",
-                        &CFloatingMeasure_Test::NormalizeTemperature,
-                        &FloatingMeasureTest
-                        )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CFloatingMeasure_Test> ( 
-                        "FloatingMeasure: Simplify",
-                        &CFloatingMeasure_Test::Simplify,
-                        &FloatingMeasureTest
-                        )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CFloatingMeasure_Test> ( 
-                        "FloatingMeasure: Valid",
-                        &CFloatingMeasure_Test::Valid,
-                        &FloatingMeasureTest
-                        )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CFloatingMeasure_Test> ( 
-                        "FloatingMeasure: ScaleTo",
-                        &CFloatingMeasure_Test::ScaleTo,
-                        &FloatingMeasureTest
-                        )
-                  );
-    runner.addTest( new CppUnit::TestCaller<CFloatingMeasure_Test> ( 
-                        "FloatingMeasure: Precision",
-                        &CFloatingMeasure_Test::Precision,
-                        &FloatingMeasureTest
-                        )
-                  );
-
-
+//    ///////////////////////////////////////////////
+//    // add all tests of CFloatingMeasure_Test
+//    ///////////////////////////////////////////////
+//    runner.addTest( new CppUnit::TestCaller<CFloatingMeasure_Test> ( 
+//                        "FloatingMeasure: operator=",
+//                        &CFloatingMeasure_Test::OperatorEqual,
+//                        &FloatingMeasureTest
+//                        )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CFloatingMeasure_Test> ( 
+//                        "FloatingMeasure: normlaize",
+//                        &CFloatingMeasure_Test::Normalize,
+//                        &FloatingMeasureTest
+//                        )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CFloatingMeasure_Test> ( 
+//                        "FloatingMeasure: scale to for temperature",
+//                        &CFloatingMeasure_Test::ScaleToTemperature,
+//                        &FloatingMeasureTest
+//                        )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CFloatingMeasure_Test> ( 
+//                        "FloatingMeasure: normalize temperature",
+//                        &CFloatingMeasure_Test::NormalizeTemperature,
+//                        &FloatingMeasureTest
+//                        )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CFloatingMeasure_Test> ( 
+//                        "FloatingMeasure: Simplify",
+//                        &CFloatingMeasure_Test::Simplify,
+//                        &FloatingMeasureTest
+//                        )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CFloatingMeasure_Test> ( 
+//                        "FloatingMeasure: Valid",
+//                        &CFloatingMeasure_Test::Valid,
+//                        &FloatingMeasureTest
+//                        )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CFloatingMeasure_Test> ( 
+//                        "FloatingMeasure: ScaleTo",
+//                        &CFloatingMeasure_Test::ScaleTo,
+//                        &FloatingMeasureTest
+//                        )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CFloatingMeasure_Test> ( 
+//                        "FloatingMeasure: Precision",
+//                        &CFloatingMeasure_Test::Precision,
+//                        &FloatingMeasureTest
+//                        )
+//                  );
+//
+//
     try
     {
         CPPUNIT_NS::stdCOut() << "Running "  <<  testPath;

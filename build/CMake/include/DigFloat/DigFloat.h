@@ -89,7 +89,7 @@ public:
      * 
      * @param Val: double value
      */
-    CDigFloat(const double Val);
+    CDigFloat(const DF_VALUE_TYPE Val);
 
     /**
      * Destructor
@@ -119,7 +119,7 @@ public:
      * @param other: double from which "other" CDigFloat is constructed
      * @return CDigFloat&
      */
-    CDigFloat& operator=(const double other);
+    CDigFloat& operator=(const DF_VALUE_TYPE other);
 
     ///////////////////////////////////////////////////
     // public comparing operators
@@ -142,7 +142,7 @@ public:
      * @param other : double from which "other" CDigFloat is constructed 
      * @return bool, true if absolute deviation is within the allowed deviation range
      */
-    bool operator==(const double other) const;
+    bool operator==(const DF_VALUE_TYPE other) const;
 
     /**
      * @brief operator !=: <br> 
@@ -256,7 +256,7 @@ public:
      * @param other: double added
      * @return CDigFloat
      */
-    CDigFloat& operator+=(const double other);
+    CDigFloat& operator+=(const DF_VALUE_TYPE other);
 
     /**
      * @brief operator-= with double: calls CDigFloat::operator-= with "other" CDigFloat constructed from double.
@@ -264,7 +264,7 @@ public:
      * @param other: double from which "other" CDigFloat is constructed
      * @return CDigFloat&
      */
-    CDigFloat& operator-=(const double other);
+    CDigFloat& operator-=(const DF_VALUE_TYPE other);
 
     /**
      * @brief operator*= with double: calls CDigFloat::operator*= with "other" CDigFloat constructed from double.
@@ -272,7 +272,7 @@ public:
      * @param other: double from which "other" CDigFloat is constructed
      * @return CDigFloat&
      */
-    CDigFloat& operator*=(const double other);
+    CDigFloat& operator*=(const DF_VALUE_TYPE other);
 
     /**
      * @brief operator/= with double: calls CDigFloat::operator/= with "other" CDigFloat constructed from double.
@@ -280,7 +280,7 @@ public:
      * @param other: double from which "other" CDigFloat is constructed
      * @return CDigFloat&
      */
-    CDigFloat& operator/=(const double other);
+    CDigFloat& operator/=(const DF_VALUE_TYPE other);
     
     /**
      * @brief operator+ with double: calls CDigFloat::operator+= with "other" CDigFloat constructed from double.
@@ -288,7 +288,7 @@ public:
      * @param other: double from which "other" CDigFloat is constructed
      * @return CDigFloat
      */
-    CDigFloat operator+(const double other);
+    CDigFloat operator+(const DF_VALUE_TYPE other);
 
     /**
      * @brief operator- with double: calls CDigFloat::operator-= with "other" CDigFloat constructed from double.
@@ -296,7 +296,7 @@ public:
      * @param other: double from which "other" CDigFloat is constructed
      * @return CDigFloat
      */
-    CDigFloat operator-(const double other);
+    CDigFloat operator-(const DF_VALUE_TYPE other);
 
     /**
      * @brief operator* with double: calls CDigFloat::operator*= with "other" CDigFloat constructed from double.
@@ -304,7 +304,7 @@ public:
      * @param other: double from which "other" CDigFloat is constructed
      * @return CDigFloat
      */
-    CDigFloat operator*(const double other);
+    CDigFloat operator*(const DF_VALUE_TYPE other);
 
     /**
      * @brief operator/ with double: calls CDigFloat::operator/= with "other" CDigFloat constructed from double.
@@ -312,7 +312,7 @@ public:
      * @param other: double from which "other" CDigFloat is constructed
      * @return CDigFloat
      */
-    CDigFloat operator/(const double other);
+    CDigFloat operator/(const DF_VALUE_TYPE other);
     
     ///////////////////////////////////////////////////
     // public getter / setter
@@ -322,7 +322,7 @@ public:
      * 
      * @param Val Value to be set to
      */
-    void Value(const double Val);   
+    void Value(const DF_VALUE_TYPE Val);   
     
     /**
      * @brief resets CDigFloat::dError to #DoubleMachineEpsilon ( CDigFloat::dValue)
@@ -345,33 +345,33 @@ public:
      * 
      * @return const double 
      */
-    double Value() const {return PrecisionActive() ? Round2Precision( dValue, Precision()) : dValue;}
+    DF_VALUE_TYPE Value() const {return PrecisionActive() ? Round2Precision( dValue, Precision()) : dValue;}
     
     /**
      * @brief getter of CDigFloat::dValue (no rounding)
      * 
      * @return const double
      */
-    double RawValue() const { return dValue;}
+    DF_VALUE_TYPE RawValue() const { return dValue;}
     
     /**
      * @brief setter of CDigFloat::dValue (no rounding/no error setting)
      * 
      * @return const double
      */
-    void RawValue(const double& other ) { dValue = other;}
+    void RawValue(const DF_VALUE_TYPE& other ) { dValue = other;}
     
     /**
      * @brief getter for CDigFloat::dValue - CDigFloat::dError -  (protected: for internal use only)
      * 
      */
-    double ValueMinLimit() const {return dValue - dError;}
+    DF_VALUE_TYPE ValueMinLimit() const {return dValue - dError;}
 
     /**
      * @brief getter for CDigFloat::dValue + CDigFloat::dError -  (protected: for internal use only)
      * 
      */
-    double ValueMaxLimit() const {return dValue + dError;}
+    DF_VALUE_TYPE ValueMaxLimit() const {return dValue + dError;}
     
     /**
      * @brief getter of CDigFloat::dError conditionally considering CDigFloat::nPrecision: <br>
@@ -379,14 +379,14 @@ public:
      * 
      * @return const double
      */
-    double Error() const {return PrecisionActive() ? Round2Precision( dError, Precision()) : dError;}
+    DF_VALUE_TYPE Error() const {return PrecisionActive() ? Round2Precision( dError, Precision()) : dError;}
     
     /**
      * @brief getter of CDigFloat::dError (no rounding)
      * 
      * @return const double
      */
-    double RawError() const { return dError;}
+    DF_VALUE_TYPE RawError() const { return dError;}
     
     /**
      * @brief getter of CDigFloat::nPrecision
@@ -487,7 +487,7 @@ protected:
      * 
      * @param other: double
      */
-    void Error(const double other) {dError = other;}
+    void Error(const DF_VALUE_TYPE other) {dError = other;}
     
     
     ///////////////////////////////////////////////////
@@ -498,12 +498,12 @@ protected:
      * @brief keeps the numerical error of CDigFloat::dValue including the propagation due to multiple operations
      * 
      */
-    long double dError;
+    DF_VALUE_TYPE dError;
     /**
      * @brief the raw value 
      * 
      */
-    long double dValue;
+    DF_VALUE_TYPE dValue;
     /**
      * @brief number which controls the output precision of CDigFloat::dValue:
      * affected functions
@@ -523,7 +523,7 @@ protected:
      * - CDigFloat::operator== (if CDigFloat::bPrecisionActive == true)
      * 
      */
-    double dPrecisionResolution;
+    DF_VALUE_TYPE dPrecisionResolution;
     /**
      * @brief switches on (=true) / off (=false) the given precision:<br>
      * affected functions

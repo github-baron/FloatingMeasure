@@ -46,19 +46,19 @@ public:
         for( int iexp = -307; iexp < 308 ; iexp++)
         {
             double dValue = pow(10,iexp); 
-            s.d64 = dValue;
-            sc.d64 = s.d64;
+            s.dRep = dValue;
+            sc.dRep = s.dRep;
             
-            sc.i64++;
+            sc.intRep++;
             
             ostringstream oss, ossc, osse;
             
             // ostringstream cant handle negative precision
-            oss << scientific << setprecision(20) << s.d64;
-            ossc << scientific << setprecision(20) << sc.d64;
+            oss << scientific << setprecision(20) << s.dRep;
+            ossc << scientific << setprecision(20) << sc.dRep;
             osse << scientific << setprecision(20) << DoubleMachineEpsilon(dValue);
             
-            CPPUNIT_ASSERT_MESSAGE( "numerical error exceeds expected value (" + to_string(iexp) + ")\ndouble machine epsilon=" + osse.str() + "\nread double = " + oss.str() + "\nread long long = " + to_string(s.i64) + "\ncorrected integer = " + to_string(sc.i64)+ "\ncorrected double = " + ossc.str(), DoubleMachineEpsilon(dValue)/dValue < 2.3e-16);
+//             CPPUNIT_ASSERT_MESSAGE( "numerical error exceeds expected value (" + to_string(iexp) + ")\ndouble machine epsilon=" + osse.str() + "\nread double = " + oss.str() + "\nread long long = " + to_string(s.intRep) + "\ncorrected integer = " + to_string(sc.intRep)+ "\ncorrected double = " + ossc.str(), DoubleMachineEpsilon(dValue)/dValue < 2.3e-16);
         }
     }
     

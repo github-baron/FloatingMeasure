@@ -36,7 +36,7 @@ set(floatingmeasure_LIB
 #LOG4CPLUS_LIBRARIES, the libraries to link against to use log4cplus.
 
 INCLUDE(FindPkgConfig)
-
+######## comment in for log4cplus support #############
 FIND_PATH(LOG4CPLUS_INCLUDE_DIRS
     NAMES logger.h
     HINTS ${PC_LOG4CPLUS_INCLUDE_DIR}
@@ -81,7 +81,7 @@ ELSE()
     message(WARNING "Can't find include path for log4cplus: disabling logging" )
 ENDIF()
 
-################### check log4cplus support END ##################
+################# check log4cplus support END ##################
 
 add_library(FloatingMeasure SHARED ${floatingmeasure_LIB})
 
@@ -129,3 +129,7 @@ install(DIRECTORY ${PROJECT_SOURCE_DIR}/FloatingMeasure/Measure DESTINATION ${CM
         FILES_MATCHING PATTERN "*.h")
 install(DIRECTORY ${PROJECT_SOURCE_DIR}/FloatingMeasure/DigFloat DESTINATION ${CMAKE_INSTALL_PREFIX}/include
         FILES_MATCHING PATTERN "*.h")
+
+
+# finally set the build type 
+set(CMAKE_BUILD_TYPE Debug)

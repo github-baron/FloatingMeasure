@@ -59,6 +59,9 @@
 
 
 
+
+#define DF_VALUE_TYPE       double
+#define DF_INT_TYPE         long long
 #define myNAN               nan("1")
 #define GREEK_SMALL_MU      "\u00b5"
 #define GREEK_CAPITAL_OMEGA "\u03a9"
@@ -88,31 +91,18 @@ union dbl_64{
      * @brief 64 bit integer representation
      * 
      */
-    long long i64;
+    DF_INT_TYPE intRep;
     /**
      * @brief 64 bit double representation
      * 
      */
-    double d64;
+    DF_VALUE_TYPE dRep;
 };
-
 
 
 ///////////////////////////////////////////////////
 // functions
 ///////////////////////////////////////////////////
-
-/**
- * @brief calculates the numerical error for a given double 
- * 
- * @param dValue: double which error is calculated
- * @return double
- */
-double 
-#ifdef _WIN32
-_WIN_DLL_API
-#endif
- DoubleMachineEpsilon (double dValue) ;
 
 /**
  * @brief cuts double according to precision 
@@ -127,7 +117,7 @@ double
 #ifdef _WIN32
 _WIN_DLL_API
 #endif
- Round2Precision(const double dValue, const int nPrecision);
+ Round2Precision(const DF_VALUE_TYPE dValue, const int nPrecision);
  
 /**
  * @brief returns "true" or "false" as string
@@ -152,7 +142,7 @@ string
 #ifdef _WIN32
 _WIN_DLL_API
 #endif
- Double2String(const double& dValue);
+ Double2String(const DF_VALUE_TYPE& dValue);
     
 
 ///////////////////////////////////////////////////
@@ -161,6 +151,30 @@ _WIN_DLL_API
 ///////////////////////////////////////////////////
 // template functions
 ///////////////////////////////////////////////////
+
+/**
+ * @brief calculates the numerical error for a given double 
+ * 
+ * @param dValue: double which error is calculated
+ * @return double
+ */
+template< typename T>
+T 
+#ifdef _WIN32
+_WIN_DLL_API
+#endif
+ DoubleMachineEpsilon(T dValue)
+{ 
+    dbl_64 s;
+    s.dRep = dValue;
+    s.intRep++;
+        
+    // logging
+    LOGTRACE("FloatingMeasure::Utils::DoubleMachineEpsilon ","DoubleMachineEpsilon(" + to_string( dValue ) + ") = " + to_string(fabs(s.dRep - dValue)));
+    
+    return fabs(s.dRep - dValue);
+
+}
 
 /**
  * @brief returns the index of an element within a vector

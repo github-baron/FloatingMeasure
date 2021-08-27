@@ -86,12 +86,12 @@ union dbl_64{
      * @brief 64 bit integer representation
      * 
      */
-    long long i64;
+    long long intRep;
     /**
      * @brief 64 bit double representation
      * 
      */
-    double d64;
+    double dRep;
 };
 
 

@@ -37,7 +37,7 @@ CDigFloat::CDigFloat(const CDigFloat& other)
     *this = other;
 }
 
-CDigFloat::CDigFloat(const double Val)
+CDigFloat::CDigFloat(const DF_VALUE_TYPE Val)
 {
     _Init();
     Value(Val);
@@ -58,7 +58,7 @@ CDigFloat& CDigFloat::operator=(const CDigFloat& other)
     return *this;
 }
 
-CDigFloat& CDigFloat::operator=(const double other)
+CDigFloat& CDigFloat::operator=(const DF_VALUE_TYPE other)
 {
     dValue = other;
     dError = DoubleMachineEpsilon(other);
@@ -80,7 +80,7 @@ bool CDigFloat::operator==(const CDigFloat& other) const
     LOGTRACE(LS_DigFloat+"operatorCompare",string("\t                 =") + to_string(Precision()));
     LOGTRACE(LS_DigFloat+"operatorCompare",string("\tprecision active =") + Bool2String(PrecisionActive()));
     
-    double dTotalError = RawError() + other.RawError();
+    DF_VALUE_TYPE dTotalError = RawError() + other.RawError();
     LOGTRACE(LS_DigFloat+"operatorCompare",string("calculated total error = ") + Double2String(dTotalError));
     
     // handle precision for other, too
@@ -103,7 +103,7 @@ bool CDigFloat::operator==(const CDigFloat& other) const
     // considered for comparison
     return  fabs(RawValue() - otherTemp.RawValue()) <=  ( PrecisionActive() ? PrecisionResolution()/2. : 0) + dTotalError;
 }
-bool CDigFloat::operator==(const double other) const
+bool CDigFloat::operator==(const DF_VALUE_TYPE other) const
 {
     return this->operator==(CDigFloat(other));
 }
@@ -139,7 +139,7 @@ bool CDigFloat::operator!=(const CDigFloat& other) const
 CDigFloat& CDigFloat::operator*=(const CDigFloat& other)
 {
     // calculate the error from half the error range
-    double dErrorCalc = fabs(ValueMaxLimit()*other.ValueMaxLimit()- ValueMinLimit()*other.ValueMinLimit())/2.;
+    DF_VALUE_TYPE dErrorCalc = fabs(ValueMaxLimit()*other.ValueMaxLimit()- ValueMinLimit()*other.ValueMinLimit())/2.;
 
     // now we are ready to calculate the value and calculating the error  by setting the DoubleMachineEpsilon(value)
     (*this) = dValue* other.RawValue();
@@ -219,27 +219,27 @@ CDigFloat CDigFloat::operator/(const CDigFloat& other)
     return dfResult;
 }
 
-CDigFloat & CDigFloat::operator*=(const double other)
+CDigFloat & CDigFloat::operator*=(const DF_VALUE_TYPE other)
 {
     return operator*=(CDigFloat(other));
 }
 
-CDigFloat & CDigFloat::operator/=(const double other)
+CDigFloat & CDigFloat::operator/=(const DF_VALUE_TYPE other)
 {
     return operator/=(CDigFloat(other));
 }
 
-CDigFloat & CDigFloat::operator+=(const double other)
+CDigFloat & CDigFloat::operator+=(const DF_VALUE_TYPE other)
 {
     return operator+=(CDigFloat(other));
 }
 
-CDigFloat & CDigFloat::operator-=(const double other)
+CDigFloat & CDigFloat::operator-=(const DF_VALUE_TYPE other)
 {
     return operator-=(CDigFloat(other));
 }
 
-CDigFloat CDigFloat::operator*(const double other)
+CDigFloat CDigFloat::operator*(const DF_VALUE_TYPE other)
 {
     CDigFloat dfResult(*this);
     dfResult*=other;
@@ -247,28 +247,28 @@ CDigFloat CDigFloat::operator*(const double other)
 
 }
 
-CDigFloat CDigFloat::operator/(const double other)
+CDigFloat CDigFloat::operator/(const DF_VALUE_TYPE other)
 {
     CDigFloat dfResult(*this);
     dfResult/=other;
     return dfResult;
 }
 
-CDigFloat CDigFloat::operator+(const double other)
+CDigFloat CDigFloat::operator+(const DF_VALUE_TYPE other)
 {
     CDigFloat dfResult(*this);
     dfResult+=other;
     return dfResult;
 }
 
-CDigFloat CDigFloat::operator-(const double other)
+CDigFloat CDigFloat::operator-(const DF_VALUE_TYPE other)
 {
     CDigFloat dfResult(*this);
     dfResult-=other;
     return dfResult;
 }
 
-void CDigFloat::Value(const double Val)
+void CDigFloat::Value(const DF_VALUE_TYPE Val)
 {   
     dValue = Val;
     dError = DoubleMachineEpsilon(Val);
@@ -361,7 +361,7 @@ CDigFloat log(const CDigFloat& DF, const CDigFloat& dfBase /*= 0*/)
     // difference of the natural logarithm of:
     // min = value - error 
     // max = value + error
-    double dError;
+    DF_VALUE_TYPE dError;
     // do it for base divisor: take the maximum error from:
     // a) log calculation
     // b) simply setting the base divisor to the value log(base)
@@ -379,7 +379,7 @@ CDigFloat log(const CDigFloat& DF, const CDigFloat& dfBase /*= 0*/)
     if( DF.ValueMinLimit() > 0)
     {
         // calculate the "half error range" error
-        double dError = fabs(logl(DF.ValueMaxLimit()) - logl(DF.ValueMinLimit()))/2.;
+        DF_VALUE_TYPE dError = fabs(logl(DF.ValueMaxLimit()) - logl(DF.ValueMinLimit()))/2.;
         
         //  take the max error of "simple value setting" and "half error range"
         if( dfResult.RawError() < dError)
@@ -401,7 +401,7 @@ CDigFloat pow(const CDigFloat& dfBase, const CDigFloat& dfExp)
     dfResult = ( pow(dfBase.RawValue(), dfExp.RawValue()));
     
     // calculate the error by the half of the total error range
-    double dError = (max(max (pow( dfBase.ValueMaxLimit(),dfExp.ValueMaxLimit()), pow(dfBase.ValueMaxLimit(), dfExp.ValueMinLimit())),
+    DF_VALUE_TYPE dError = (max(max (pow( dfBase.ValueMaxLimit(),dfExp.ValueMaxLimit()), pow(dfBase.ValueMaxLimit(), dfExp.ValueMinLimit())),
                           max (pow( dfBase.ValueMinLimit(),dfExp.ValueMaxLimit()), pow(dfBase.ValueMinLimit(), dfExp.ValueMinLimit()))) -
                       min(min (pow( dfBase.ValueMaxLimit(),dfExp.ValueMaxLimit()), pow(dfBase.ValueMaxLimit(), dfExp.ValueMinLimit())),
                           min (pow( dfBase.ValueMinLimit(),dfExp.ValueMaxLimit()), pow(dfBase.ValueMinLimit(), dfExp.ValueMinLimit())))) / 2.;
@@ -420,7 +420,7 @@ CDigFloat exp(const CDigFloat& dfExp)
     dfResult = exp(dfExp.RawValue());
    
     // calculate the error by the half of the total error range
-    double dError = exp(dfExp.ValueMaxLimit())-exp(dfExp.ValueMinLimit());
+    DF_VALUE_TYPE dError = exp(dfExp.ValueMaxLimit())-exp(dfExp.ValueMinLimit());
                     
     // now take the max error of "simple value setting" and "half error range"
     if( dfResult.RawError() < dError)
@@ -439,7 +439,7 @@ CDigFloat sqrt(const CDigFloat& DF)
     dfResult = sqrt(DF.RawValue());
     
     // calculate the error by the half of the total error range
-    double dError = (sqrt(DF.ValueMaxLimit()) - sqrt(DF.ValueMinLimit()))/2.;
+    DF_VALUE_TYPE dError = (sqrt(DF.ValueMaxLimit()) - sqrt(DF.ValueMinLimit()))/2.;
     
     // now take the max error of "simple value setting" and "half error range"
     if( dfResult.RawError() < dError)

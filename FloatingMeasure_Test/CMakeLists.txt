@@ -65,3 +65,7 @@ target_link_libraries(FloatingMeasure_Test ${CPPUNIT_LIBRARIES} FloatingMeasure)
 # installation directory
 set(CMAKE_INSTALL_PREFIX ${PROJECT_SOURCE_DIR}/../build/CMake/)
 install(TARGETS FloatingMeasure_Test RUNTIME DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
+
+
+# finally set the build type 
+#set(CMAKE_BUILD_TYPE Release)
