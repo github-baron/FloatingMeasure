@@ -29,12 +29,16 @@
 #include<string>
 #include<vector>
 #include<map>
+#include<unordered_map>
 #include<cmath>
 #include<algorithm>
 #include<sstream>
 #include<iomanip>
 #include<assert.h>
 #include<ostream>
+
+// DEBUG
+#include <iostream>
 
 // local includes 
 #include "Singleton.h"
@@ -60,8 +64,8 @@
 
 
 
-#define DF_VALUE_TYPE       double
-#define DF_INT_TYPE         long long
+#define DF_VALUE_TYPE       long double //double
+#define DF_INT_TYPE         __int128 // long long 
 #define myNAN               nan("1")
 #define GREEK_SMALL_MU      "\u00b5"
 #define GREEK_CAPITAL_OMEGA "\u03a9"
@@ -143,6 +147,72 @@ string
 _WIN_DLL_API
 #endif
  Double2String(const DF_VALUE_TYPE& dValue);
+ 
+/**
+ * @brief removes consecutive white spaces from the left side of a string
+ * 
+ * @param[in] str2Trim string to remove white spaces from
+ * @param[in] strTrim string 2 be removed (default space)
+ * @return string without white space character on the left
+ */
+string 
+#ifdef _WIN32
+_WIN_DLL_API
+#endif
+ TrimLeft(const string& str2Trim, const string strTrim = " ");
+ 
+/**
+ * @brief removes consecutive white spaces from the right side of a string
+ * 
+ * @param[in] str2Trim string to remove white spaces from
+ * @param[in] strWhiteSpace white space character (default space)
+ * @return string without white space character on the right
+ */
+string 
+#ifdef _WIN32
+_WIN_DLL_API
+#endif
+ TrimRight(const string& str2Trim, const string strWhiteSpace = " ");
+ 
+ 
+/**
+ * @brief removes consecutive white spaces from the leading and trailing end of a string
+ * 
+ * @param[in] str2Trim string to remove white spaces from
+ * @param[in] strWhiteSpace white space character (default space)
+ * @return string without white space character on the leading and trailing end
+ */
+string 
+#ifdef _WIN32
+_WIN_DLL_API
+#endif
+ Trim(const string& str2Trim, const string strWhiteSpace = " ");
+ 
+/**
+ * @brief prints double with a given precision
+ * 
+ * @param[in] dValue double to convert to string
+ * @param[in] nPrecision int setting precision used for conversion
+ * @return string
+ */
+ vector<string>
+#ifdef _WIN32
+_WIN_DLL_API
+#endif 
+Tokenize(const string& strTotal, const string& strSep, bool bTrim = false);
+    
+/**
+ * @brief concatenates elements of a vector of strings separated by the user given string
+ * 
+ * @param[in] vstrTotal vector of strings to print
+ * @param[in] strSep separator string
+ * @return string
+ */
+ string
+#ifdef _WIN32
+_WIN_DLL_API
+#endif 
+Concat(vector<string> vstr2Print, string strSep = "\n");
     
 
 ///////////////////////////////////////////////////
@@ -217,7 +287,7 @@ _WIN_DLL_API
  }
 
  /**
-  * @brief returns the index of an element within a vector
+  * @brief returns the element within a vector by its index. If not found --> last value
   *
   * @tparam T: template type
   * @param Vec: the vector where the element will be searched
@@ -233,7 +303,7 @@ _WIN_DLL_API
  }
 
  /**
-  * @brief returns the index of an element within a vector
+  * @brief returns the element within a vector by its index. If not found --> last value
   *
   * @tparam T: template type
   * @param pVec: the pointer of the vector where the element will be searched

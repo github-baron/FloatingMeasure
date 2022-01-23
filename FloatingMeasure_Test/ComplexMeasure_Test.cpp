@@ -566,5 +566,13 @@ void ComplexMeasureTest()
         ComplMeas1 = mV*A*us*CComplexMeasure(pmIdent,bmUnknown)*m/us;
         CPPUNIT_ASSERT_MESSAGE( ComplMeas1.DebugOut(), !ComplMeas1.Valid());
     }
+    
+    void ComplexMeasure_Parse()
+    {
+        CComplexMeasure cm2Compare = mm * ks / mm / h / min * V / mA;
+        CComplexMeasure cmResult; cmResult.Parse(cm2Compare.Short());
+        
+        CPPUNIT_ASSERT_MESSAGE( cmResult.DebugOut(), cmResult == cm2Compare);
+    }
      
  };

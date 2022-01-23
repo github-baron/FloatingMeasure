@@ -39,7 +39,7 @@ void CMeasureOperator::_Init()
     vstrShort->resize(eOperation::opLast+1);
     
     (*vstrShort)[opMult] = "*";
-    (*vstrLong)[opMult] = "*";
+    (*vstrLong)[opMult] = "multiply";
     
     (*vstrShort)[opDivide] = "/";
     (*vstrLong)[opDivide] = "divide";

@@ -37,49 +37,49 @@ set(floatingmeasure_LIB
 
 INCLUDE(FindPkgConfig)
 ######## comment in for log4cplus support #############
-FIND_PATH(LOG4CPLUS_INCLUDE_DIRS
-    NAMES logger.h
-    HINTS ${PC_LOG4CPLUS_INCLUDE_DIR}
-    ${CMAKE_INSTALL_PREFIX}/include
-    PATHS
-    C:\\Users\\AnyUser\\Source\\Repos\\log4cplus\\include
-
-)
-message("found log4cplus includes " ${LOG4CPLUS_INCLUDE_DIRS}) 
-include_directories(${LOG4CPLUS_INCLUDE_DIRS})
-
-FIND_LIBRARY(LOG4CPLUS_LIBRARIES
-    NAMES log4cplus
-    HINTS ${PC_LOG4CPLUS_LIBDIR}
-    C:\\Users\\AnyUser\\Source\\Repos\\log4cplus\\lib
-)
-
-message("found log4cplus libraries " ${LOG4CPLUS_LIBRARIES}) 
-
-
-
-INCLUDE(FindPackageHandleStandardArgs)
-#FIND_PACKAGE_HANDLE_STANDARD_ARGS(CPPUNIT DEFAULT_MSG LOG4CPLUS_LIBRARIES LOG4CPLUS_INCLUDE_DIRS)
-MARK_AS_ADVANCED(LOG4CPLUS_LIBRARIES LOG4CPLUS_INCLUDE_DIRS)
-
-
-#set version to be useable by calling script
-IF(LOG4CPLUS_INCLUDE_DIRS AND LOG4CPLUS_LIBRARIES)
-    
-    set(LOG4CPLUS_VERSION ${PC_LOG4CPLUS_VERSION} CACHE INTERNAL "log4cplus Version" FORCE)
-    add_compile_definitions(LOG4CPLUS_ENABLED)
-    # append to file list 
-    list(APPEND 
-        floatingmeasure_LIB       
-        Utils/LoggingStrings.h  
-        Utils/Log4cplusWrapper.h
-        Utils/Log4cplusWrapper.cpp
-    )
-
-    
-ELSE()
-    message(WARNING "Can't find include path for log4cplus: disabling logging" )
-ENDIF()
+##FIND_PATH(LOG4CPLUS_INCLUDE_DIRS
+##    NAMES logger.h
+##    HINTS ${PC_LOG4CPLUS_INCLUDE_DIR}
+##    ${CMAKE_INSTALL_PREFIX}/include
+##    PATHS
+##    C:\\Users\\AnyUser\\Source\\Repos\\log4cplus\\include
+##
+##)
+##message("found log4cplus includes " ${LOG4CPLUS_INCLUDE_DIRS}) 
+##include_directories(${LOG4CPLUS_INCLUDE_DIRS})
+##
+##FIND_LIBRARY(LOG4CPLUS_LIBRARIES
+##    NAMES log4cplus
+##    HINTS ${PC_LOG4CPLUS_LIBDIR}
+##    C:\\Users\\AnyUser\\Source\\Repos\\log4cplus\\lib
+##)
+##
+##message("found log4cplus libraries " ${LOG4CPLUS_LIBRARIES}) 
+##
+##
+##
+##INCLUDE(FindPackageHandleStandardArgs)
+###FIND_PACKAGE_HANDLE_STANDARD_ARGS(CPPUNIT DEFAULT_MSG LOG4CPLUS_LIBRARIES LOG4CPLUS_INCLUDE_DIRS)
+##MARK_AS_ADVANCED(LOG4CPLUS_LIBRARIES LOG4CPLUS_INCLUDE_DIRS)
+##
+##
+###set version to be useable by calling script
+##IF(LOG4CPLUS_INCLUDE_DIRS AND LOG4CPLUS_LIBRARIES)
+##    
+##    set(LOG4CPLUS_VERSION ${PC_LOG4CPLUS_VERSION} CACHE INTERNAL "log4cplus Version" FORCE)
+##    add_compile_definitions(LOG4CPLUS_ENABLED)
+##    # append to file list 
+##    list(APPEND 
+##        floatingmeasure_LIB       
+##        Utils/LoggingStrings.h  
+##        Utils/Log4cplusWrapper.h
+##        Utils/Log4cplusWrapper.cpp
+##    )
+##
+##    
+##ELSE()
+##    message(WARNING "Can't find include path for log4cplus: disabling logging" )
+##ENDIF()
 
 ################# check log4cplus support END ##################
 

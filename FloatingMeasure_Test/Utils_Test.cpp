@@ -96,4 +96,45 @@ public:
         }
     }
     
+    void Utils_TrimLeft()
+    {
+        string str2Trim = "    3     ";
+        string str2Compare = "3     ";
+        string strResult = TrimLeft(str2Trim, " ");
+        CPPUNIT_ASSERT_MESSAGE( string("str2Trim:\n\"") + (str2Trim) + "\"\nstrResult\"" + (strResult) + "\"", strResult == str2Compare);
+    }
+        
+    void Utils_TrimRight()
+    {
+        string str2Trim = "    3     ";
+        string str2Compare = "    3";
+        string strResult = TrimRight(str2Trim, " ");
+        CPPUNIT_ASSERT_MESSAGE( string("str2Trim:\n\"") + (str2Trim) + "\"\nstrResult\"" + (strResult) + "\"", strResult == str2Compare);
+    }
+        
+    void Utils_Trim()
+    {
+        string str2Trim = "    3     ";
+        string str2Compare = "3";
+        string strResult = Trim(str2Trim, " ");
+        CPPUNIT_ASSERT_MESSAGE( string("str2Trim:\n\"") + (str2Trim) + "\"\nstrResult\"" + (strResult) + "\"", strResult == str2Compare);
+    }
+    
+    void Utils_Tokenize()
+    {
+     
+        string str = "1 2 3 4 5 6  7 8 9 10 11   12";
+        vector<string> vstr = Tokenize(str, " ");   
+    
+        CPPUNIT_ASSERT_MESSAGE( string("original string:\n") + str + "\ntokens:\n" + Concat(vstr, "\n"), vstr.size() == 12 );
+        for(int i = 1; i<13;i++)        
+            CPPUNIT_ASSERT_MESSAGE( string("original string (") + to_string(i) + "):\n" + str + "\ntokens:\n" + Concat(vstr, "\n"), i == atoi(vstr[i-1].c_str()) );
+        
+        str = "mm/ks";
+        vstr = Tokenize(str,"/");
+        CPPUNIT_ASSERT_MESSAGE( string("original string:\n") + str + "\ntokens:\n" + Concat(vstr, "\n"), vstr.size() == 2 );
+        CPPUNIT_ASSERT_MESSAGE( string("original string:\n") + str + "\ntokens:\n" + Concat(vstr, "\n"), vstr[0] == "mm" && vstr[1] =="ks");
+       
+    }
+    
 };

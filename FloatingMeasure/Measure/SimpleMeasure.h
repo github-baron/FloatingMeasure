@@ -25,9 +25,11 @@
 #ifndef CSIMPLEUNIT_H
 #define CSIMPLEUNIT_H
 
-#include<Measure/PreMeasure.h>
-#include<Measure/BaseMeasure.h>
+// #include<Measure/PreMeasure.h>
+// #include<Measure/BaseMeasure.h>
 
+#include "PreMeasure.h"
+#include "BaseMeasure.h"
 /**
  * @brief CSimpleMeasure: represents a pre measure combined with a base measure like "mV".<br>
  * This class offers:
@@ -67,6 +69,13 @@ public:
     CSimpleMeasure(const CSimpleMeasure* other);
 
     /**
+     * @brief constructor by string: calls CSimpleMeasure::_Init() and CSimpleMeasure::SetByID
+     *
+     * @param other instance to copy from
+     */
+    CSimpleMeasure(const string& SimpleMeasureString);
+
+    /**
      * @brief Destructor
      */
     ~CSimpleMeasure();
@@ -98,6 +107,14 @@ public:
      * @return const bool
      */
     bool operator!=(const CSimpleMeasure& other) const;
+    
+    /**
+     * @brief Sets pre- and base Measure parsing compound string like "mV"
+     * 
+     * @param strPreLabelBaseLabel: single string consisting of pre and base level (e.g. "mV" or long: "milliVolt")
+     * @param bShort: flag indicating that the string is to be parsed in short version ("mV": flag true) or long version ("milliVolt": flag false)
+     */
+    bool Parse(const string& strPreLabelBaseLabel, bool bShort = true);
     
     /**
      * @brief sets the CSimpleMeasure::PreIndex and CSimpleMeasure::BaseIndex <br>

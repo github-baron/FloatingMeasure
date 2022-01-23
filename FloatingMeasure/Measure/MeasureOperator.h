@@ -27,8 +27,9 @@
 
 #include "VectorHandle.h"
 
-typedef enum{          
-    opMult = 0,        /*!<0  : multiplication is the starting element*/
+typedef enum{ 
+    opFirst = 0,
+    opMult = opFirst,  /*!<0  : multiplication is the starting element*/
     opDivide,          /*!<1  : division */
     opLast,            /*!<2  : last operation ... invalid (for iteration)*/
     opUnknown = opLast /*!<3  : invalid operation = last operation*/
@@ -74,6 +75,12 @@ typedef CSingleton<CMeasureOperator> CMeasureOperatorSingleton;
  * @param Op2Invert: eOperation to invert
  */
 void Invert(eOperation& Op2Invert);
+
+/**
+ * @brief Short cut to the singleton instance of CMeasureOperatorSingleton
+ * 
+ */
+#define OP CMeasureOperatorSingleton::instance()
 
 #endif // CMEASUREOPERATOR_H
 

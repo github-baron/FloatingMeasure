@@ -82,7 +82,7 @@ CPreMeasure::CPreMeasure()
     
     (*vdFactor)[pmHecto]=(1e+2);    
     (*vnExp10)[pmHecto]=(+2);    
-    (*vstrShort)[pmHecto]=("H");    
+    (*vstrShort)[pmHecto]=("h");    
     (*vstrLong)[pmHecto]=("hecto");
     
     (*vdFactor)[pmKilo]=(1e+3);    

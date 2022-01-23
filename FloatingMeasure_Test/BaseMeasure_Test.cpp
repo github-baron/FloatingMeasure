@@ -122,4 +122,78 @@ public:
         
     }
     
+    void ParseShortLabelsBaseMeasures()
+    {
+        // generate parsing string
+        string simpleStringsShort;
+        for( int i = 0; i < bmLast; i++)
+        {
+            // set base measure to compare with
+            eBaseMeasure ActBM = (eBaseMeasure )(i);
+            
+            // now add to label strings
+            simpleStringsShort += BASE->Short(ActBM);
+        }
+        
+        
+        unsigned int uiShortPos = 0;
+        for( int i = 0; i < bmLast; i++)
+        {
+            // set base measure to compare with
+            eBaseMeasure ActBM = (eBaseMeasure )(i);
+            
+            // parse short labels
+            unsigned int uiShortPosOld = uiShortPos;
+            int iShort = BASE->Parse(simpleStringsShort, uiShortPos);
+            CPPUNIT_ASSERT_MESSAGE( BASE->DebugOut(ActBM) + "\n(short parse failure)\nparsed string : " + simpleStringsShort+
+            "\nindex found = " + to_string(iShort) +
+            "\nuiShortPosOld = " + to_string(uiShortPosOld) +
+            "\nuiShortPos = " + to_string(uiShortPos) +
+            "\nexpected length = " + to_string(BASE->Short(ActBM).length()) ,
+                                    iShort == i && uiShortPos == (uiShortPosOld + BASE->Short(ActBM).length()));
+        
+        }
+                
+        
+    }
+    
+    
+    
+    void ParseLongLabelsBaseMeasures()
+    {
+        // generate parsing string
+        string simpleStringsShort;
+        for( int i = 0; i < bmLast; i++)
+        {
+            // set base measure to compare with
+            eBaseMeasure ActBM = (eBaseMeasure )(i);
+            
+            // now add to label strings
+            simpleStringsShort += BASE->Long(ActBM);
+        }
+        
+        
+        unsigned int uiShortPos = 0;
+        for( int i = 0; i < bmLast; i++)
+        {
+            // set base measure to compare with
+            eBaseMeasure ActBM = (eBaseMeasure )(i);
+            
+            // parse short labels
+            unsigned int uiShortPosOld = uiShortPos;
+            int iShort = BASE->Parse(simpleStringsShort, uiShortPos, false);
+            CPPUNIT_ASSERT_MESSAGE( BASE->DebugOut(ActBM) + "\n(long parse failure)\nparsed string : " + simpleStringsShort+
+            "\nindex found = " + to_string(iShort) +
+            "\nuiShortPosOld = " + to_string(uiShortPosOld) +
+            "\nuiShortPos = " + to_string(uiShortPos) +
+            "\nexpected length = " + to_string(BASE->Long(ActBM).length()) ,
+                                    iShort == i && uiShortPos == (uiShortPosOld + BASE->Long(ActBM).length()));
+        
+        }
+                
+        
+                
+        
+    }
+    
  };

@@ -140,8 +140,31 @@ public:
      */
     CComplexMeasure operator/(const CComplexMeasure& other);
 
+    /**
+     * @brief operator ==: checks for this / other == 1
+     * 
+     * @param other: CComplexMeasure to copy into CComplexMeasure::pMeasureRight connecting with #opDivide
+     * @return bool
+     */
     bool operator==(const CComplexMeasure& other) const;
+
+    /**
+     * @brief operator !=: returns !CComplexMeasure::operator==
+     * 
+     * @param other: CComplexMeasure to copy into CComplexMeasure::pMeasureRight connecting with #opDivide
+     * @return bool
+     */
     bool operator!=(const CComplexMeasure& other) const;
+    
+    /**
+     * @brief Sets pre- and base Measure parsing compound string like "mV/kA" 
+     * 
+     * @param strComplexMeasure: single string consisting of pre and base level (e.g. "mV" or long: "milliVolt")
+     * @param bShort: flag indicating that the string is to be parsed in short version ("mV": flag true) or long version ("milliVolt": flag false)
+     * @return bool: flag indicating sucessfull parsing
+     */
+    bool Parse(const string& strComplexMeasure, bool bShort = true);
+    
     /**
      * @brief checks for a CComplexMeasure being scaled (i.e. f* this) to this
      * 

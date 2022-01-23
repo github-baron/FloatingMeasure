@@ -117,6 +117,28 @@ public:
     {
         return GetElementFromVectorByIndex(vdFactor, uiIndex);
     }
+    
+    /**
+     * @brief gets the index of the element in the ::vstrShort / ::vstrLong from a string.<br>
+     * This function is parsing the string from the position to the right comparing the elements of Short / Long
+     * 
+     * @param String2Parse: string which will parsed for short / long label
+     * @param uiStartingPosition: index of starting position from where to begin parsing within String2Parse will be incremented by the size of the parsed label ... if found
+     * @param bShort: flag indicating wether to parse for short or long label
+     * @return unsigned int: index of the label within vstrShort / vstrLong
+     */
+    unsigned int Parse(const string& String2Parse, unsigned int& uiStartingPosition, bool bShort = true, int DefaultIndex = -1) ;
+    
+    /**
+     * @brief gets the index of the element in the ::vstrShort / ::vstrLong from a string.<br>
+     * This function is parsing the string from the position to the left comparing the elements of Short / Long
+     * 
+     * @param String2Parse: string which will parsed for short / long label
+     * @param uiStartingPosition: index of ending position from where to begin parsing within String2Parse will be decremented by the size of the parsed label ... if found
+     * @param bShort: flag indicating wether to parse for short or long label
+     * @return unsigned int: index of the label within vstrShort / vstrLong
+     */
+    unsigned int ParseReverse(const string& String2Parse, unsigned int& uiEndingPosition, bool bShort = true, int Default = -1) ;
  
 protected:
     ///////////////////////////////////////////////////

@@ -50,8 +50,8 @@ enum eBaseMeasure
     bmHour,             /*!<11 : factor: 3600,offset: 0, SIindex:9, short: "h", long: "hour"*/
     bmDay,              /*!<12  : factor: 3600*24,offset: 0, SIindex:9, short: "d", long: "day"*/
     bmMeter,	        /*!<12  : factor: 1, offset: 0, SIindex:13, short: "m", long: "meter"*/
-    bmInch, 	        /*!<13  : factor: 0.0254, offset: 0, SIindex:13, short: "in", long: "inch"*/
-    bmFoot, 	        /*!<14  : factor: 0.3048, offset: 0, SIindex:13, short: "ft", long: "foot"*/
+    bmFoot, 	        /*!<13  : factor: 0.3048, offset: 0, SIindex:13, short: "ft", long: "foot"*/
+    bmInch, 	        /*!<14  : factor: 0.0254, offset: 0, SIindex:13, short: "in", long: "inch"*/
     bmYard, 	        /*!<15  : factor: 0.9144, offset: 0, SIindex:13, short: "yd", long: "yard"*/
     bmMile, 	        /*!<16  : factor: 1609.344, offset: 0, SIindex:13, short: "mi", long: "mile"*/
     bmLast,             /*!<17 : last invalid item*/

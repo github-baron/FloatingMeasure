@@ -62,7 +62,7 @@ public:
         Measure2.SetByShort( "d","V");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "dV"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort(  "","V");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==   "V"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort("da","V");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() == "daV"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
-        Measure2.SetByShort( "H","V");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "HV"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
+        Measure2.SetByShort( "h","V");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "hV"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort( "k","V");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "kV"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort( "M","V");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "MV"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort( "G","V");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "GV"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
@@ -85,7 +85,7 @@ public:
         Measure2.SetByShort( "d","A");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "dA"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort(  "","A");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==   "A"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort("da","A");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() == "daA"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
-        Measure2.SetByShort( "H","A");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "HA"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
+        Measure2.SetByShort( "h","A");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "hA"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort( "k","A");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "kA"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort( "M","A");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "MA"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort( "G","A");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "GA"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
@@ -109,7 +109,7 @@ public:
         Measure2.SetByShort( "d","Hz");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "dHz"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort(  "","Hz");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==   "Hz"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort("da","Hz");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() == "daHz"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
-        Measure2.SetByShort( "H","Hz");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "HHz"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
+        Measure2.SetByShort( "h","Hz");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "hHz"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort( "k","Hz");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "kHz"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort( "M","Hz");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "MHz"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort( "G","Hz");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "GHz"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
@@ -132,7 +132,7 @@ public:
         Measure2.SetByShort( "d","s");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "ds"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort(  "","s");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==   "s"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort("da","s");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() == "das"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
-        Measure2.SetByShort( "H","s");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "Hs"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
+        Measure2.SetByShort( "h","s");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "hs"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort( "k","s");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "ks"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort( "M","s");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "Ms"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort( "G","s");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "Gs"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
@@ -155,7 +155,7 @@ public:
         Measure2.SetByShort( "d",Omega);CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "d"+Omega); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort(  "",Omega);CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==   ""+Omega); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort("da",Omega);CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() == "da"+Omega); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
-        Measure2.SetByShort( "H",Omega);CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "H"+Omega); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
+        Measure2.SetByShort( "h",Omega);CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "h"+Omega); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort( "k",Omega);CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "k"+Omega); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort( "M",Omega);CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "M"+Omega); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort( "G",Omega);CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "G"+Omega); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
@@ -178,7 +178,7 @@ public:
         Measure2.SetByShort( "d","m");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "dm"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort(  "","m");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==   "m"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort("da","m");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() == "dam"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
-        Measure2.SetByShort( "H","m");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "Hm"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
+        Measure2.SetByShort( "h","m");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "hm"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort( "k","m");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "km"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort( "M","m");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "Mm"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort( "G","m");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "Gm"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
@@ -201,7 +201,7 @@ public:
         Measure2.SetByShort( "d","°K");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "d°K"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort(  "","°K");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==   "°K"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort("da","°K");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() == "da°K"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
-        Measure2.SetByShort( "H","°K");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "H°K"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
+        Measure2.SetByShort( "h","°K");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "h°K"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort( "k","°K");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "k°K"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort( "M","°K");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "M°K"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort( "G","°K");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "G°K"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
@@ -224,7 +224,7 @@ public:
         Measure2.SetByShort( "d","°F");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "d°F"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort(  "","°F");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==   "°F"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort("da","°F");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() == "da°F"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
-        Measure2.SetByShort( "H","°F");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "H°F"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
+        Measure2.SetByShort( "h","°F");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "h°F"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort( "k","°F");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "k°F"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort( "M","°F");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "M°F"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort( "G","°F");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "G°F"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
@@ -247,7 +247,7 @@ public:
         Measure2.SetByShort( "d","°C");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "d°C"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort(  "","°C");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==   "°C"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort("da","°C");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() == "da°C"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
-        Measure2.SetByShort( "H","°C");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "H°C"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
+        Measure2.SetByShort( "h","°C");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "h°C"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort( "k","°C");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "k°C"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort( "M","°C");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "M°C"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
         Measure2.SetByShort( "G","°C");CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() , Measure2.Short() ==  "G°C"); Measure2 = Measure1; CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut() + "\n"+ Measure2.DebugOut() , Measure1.DebugOut() == Measure2.DebugOut()); 
@@ -303,9 +303,9 @@ public:
         CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.SIFactor() == 10);
         CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.Short() == "daV");
 
-        Measure1.SetByShort("H","V");
+        Measure1.SetByShort("h","V");
         CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.SIFactor() == 100);
-        CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.Short() == "HV");
+        CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.Short() == "hV");
 
         Measure1.SetByShort("k","V");
         CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.SIFactor() == 1000);
@@ -363,9 +363,9 @@ public:
         CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.SIFactor() == 10);
         CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.Short() == "da"+Omega);
 
-        Measure1.SetByShort("H",Omega);
+        Measure1.SetByShort("h",Omega);
         CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.SIFactor() == 100);
-        CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.Short() == "H"+Omega);
+        CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.Short() == "h"+Omega);
 
         Measure1.SetByShort("k",Omega);
         CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.SIFactor() == 1000);
@@ -421,6 +421,44 @@ public:
         CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.SIFactor() == 3600.*24.*1000);
         CPPUNIT_ASSERT_MESSAGE( Measure1.DebugOut()  , Measure1.Short() == "kd");
         
+    }
+    
+    void ParseShort()
+    {
+        
+        CSimpleMeasure SMByID, SMByString;
+        for(int i = 0; i< pmLast; i++)
+            for(int j = 0; j < bmLast; j++)
+            {
+                // ambigious cases 
+                // min == milliinch <--> min == minute: leave out milliinch
+                if(i==pmMilli && j == bmInch) continue;
+                    
+            
+                SMByID.SetByID((ePreMeasure)i,(eBaseMeasure)j);
+                SMByString.Parse(SMByID.Short());
+                
+                CPPUNIT_ASSERT_MESSAGE(string("set by ID:\n") + SMByID.DebugOut()  +"\n\nset by string:\n" + SMByString.DebugOut(), SMByID == SMByString);
+            }
+    }
+    
+    void ParseLong()
+    {
+        
+        CSimpleMeasure SMByID, SMByString;
+        for(int i = 0; i< pmLast; i++)
+            for(int j = 0; j < bmLast; j++)
+            {
+                // ambigious cases 
+                // min == milliinch <--> min == minute: leave out milliinch
+                if(i==pmMilli && j == bmInch) continue;
+                    
+            
+                SMByID.SetByID((ePreMeasure)i,(eBaseMeasure)j);
+                SMByString.Parse(SMByID.Long(),false);
+                
+                CPPUNIT_ASSERT_MESSAGE(string("set by ID:\n") + SMByID.DebugOut()  +"\n\nset by string:\n" + SMByString.DebugOut(), SMByID == SMByString);
+            }
     }
      
  };

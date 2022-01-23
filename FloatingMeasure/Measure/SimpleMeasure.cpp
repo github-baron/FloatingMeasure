@@ -40,6 +40,15 @@ CSimpleMeasure::CSimpleMeasure(const CSimpleMeasure* other)
     _Init();
     SetByID(other->PreID(),other->BaseID());
 }
+CSimpleMeasure::CSimpleMeasure(const string& SimpleMeasureString)
+{
+    _Init();
+    // try for short label string
+    if(!Parse(SimpleMeasureString))
+        // ... long label string
+        Parse(SimpleMeasureString,false);
+}
+
 CSimpleMeasure::~CSimpleMeasure()
 {
     SecureDeleteObjectPointer(strShort);
@@ -66,12 +75,27 @@ bool CSimpleMeasure::operator!=(const CSimpleMeasure& other) const
     return false;
     
 }
+bool CSimpleMeasure::Parse(const  string& strPreLabelBaseLabel, bool bShort)
+{
+    unsigned int uiPos = strPreLabelBaseLabel.length();
+    eBaseMeasure BaseMeasure = (eBaseMeasure)(BASE->ParseReverse(strPreLabelBaseLabel,uiPos, bShort));
+    ePreMeasure PreMeasure = (ePreMeasure)(PRE->ParseReverse(strPreLabelBaseLabel,uiPos, bShort, ePreMeasure::pmIdent));
+    
+    bool success = (BaseMeasure != bmLast);
+    
+    // only set if sucessfull
+    if(success)
+        SetByID(PreMeasure, BaseMeasure);
+    
+    return success;
+}
+
 void CSimpleMeasure::SetByID(const ePreMeasure PreMeasureEnum, const eBaseMeasure BaseMeasureEnum)
 {
     BaseIndex = BaseMeasureEnum;
     PreIndex = PreMeasureEnum;
     
-    dSIFactor = PRE->Factor(PreID()) * BASE->Factor(BaseID());
+    dSIFactor = PRE->Factor(PreID()) * BASE->Factor(BaseID()); 
     dSIOffset = BASE->Offset(BaseID());
     *strLong   = PRE->Long(PreID()) + BASE->Long(BaseID()) ;
     *strShort  = PRE->Short(PreID()) + BASE->Short(BaseID()) ;

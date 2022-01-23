@@ -30,7 +30,7 @@ class CPreMeasure_Test : public CppUnit::TestFixture  {
 
 private:
     // helping variable 
-    eBaseMeasure ActBM, SIBM ;
+    eBaseMeasure ActPM, SIBM ;
 
 public:
     void setUp()
@@ -195,5 +195,193 @@ public:
         CPPUNIT_ASSERT_MESSAGE( "'"+PRE->Short(PRE->GetIDByExp10(nExp10))+"':"+to_string(PRE->GetIDByExp10(nExp10)), PRE->GetIDByExp10(nExp10) == (pmYotta) );
         
 
+    }   
+    
+    void ParseShortLabelsPreMeasures()
+    {
+        // generate parsing string
+        string mergeString;
+        for( int i = 0; i < pmLast; i++)
+        {
+            // set base measure to compare with
+            ePreMeasure ActPM = (ePreMeasure)(i);
+            
+            // now add to label strings
+            mergeString += PRE->Short(ActPM);
+        }
+        
+        
+        unsigned int uiPos = 0;
+        for( int i = 0; i < pmLast; i++)
+        {
+            // set base measure to compare with
+            ePreMeasure ActPM = (ePreMeasure )(i);
+            
+            // in case of ident --> hop to the next 
+            if(PRE->Long(ActPM).length() == 0)
+                continue;
+            
+            // parse short labels
+            unsigned int uiPosOld = uiPos;
+            int Index = PRE->Parse(mergeString, uiPos);
+            CPPUNIT_ASSERT_MESSAGE( PRE->DebugOut(ActPM) + "\n(short parse failure: Index missmatch)\nparsed string : " + mergeString+
+            "\niterator i = " + to_string(i) +
+            "\nindex found = " + to_string(Index) +
+            "\nuiPosOld = " + to_string(uiPosOld) +
+            "\nuiPos = " + to_string(uiPos) +
+            "\nexpected length = " + to_string(PRE->Short(ActPM).length()) ,
+                                    Index == i );
+            CPPUNIT_ASSERT_MESSAGE( PRE->DebugOut(ActPM) + "\n(short parse failure: length missmatch)\nparsed string : " + mergeString+
+            "\niterator i = " + to_string(i) +
+            "\nindex found = " + to_string(Index) +
+            "\nuiPosOld = " + to_string(uiPosOld) +
+            "\nuiPos = " + to_string(uiPos) +
+            "\nexpected length = " + to_string(PRE->Short(ActPM).length()) ,
+                                    uiPos == (uiPosOld + PRE->Short(ActPM).length()));
+        
+        }
     }
+    
+    void ParseLongLabelsPreMeasures()
+    {
+        // generate parsing string
+        string mergeString;
+        for( int i = 0; i < pmLast; i++)
+        {
+            // set base measure to compare with
+            ePreMeasure ActPM = (ePreMeasure)(i);
+            
+            // now add to label strings
+            mergeString += PRE->Long(ActPM);
+        }
+        
+        
+        unsigned int uiPos = 0;
+        for( int i = 0; i < pmLast; i++)
+        {
+            // set base measure to compare with
+            ePreMeasure ActPM = (ePreMeasure )(i);
+            
+            // in case of ident --> hop to the next 
+            if(PRE->Long(ActPM).length() == 0)
+                continue;
+            
+            // parse short labels
+            unsigned int uiPosOld = uiPos;
+            int Index = PRE->Parse(mergeString, uiPos, false);
+            CPPUNIT_ASSERT_MESSAGE( PRE->DebugOut(ActPM) + "\n(long parse failure: Index missmatch)\nparsed string : " + mergeString+
+            "\niterator i = " + to_string(i) +
+            "\nuiPosOld = " + to_string(uiPosOld) +
+            "\nuiPosOld = " + to_string(uiPosOld) +
+            "\nuiPos = " + to_string(uiPos) +
+            "\nexpected length = " + to_string(PRE->Long(ActPM).length()) ,
+                                    Index == i );
+            CPPUNIT_ASSERT_MESSAGE( PRE->DebugOut(ActPM) + "\n(long parse failure: length missmatch)\nparsed string : " + mergeString+
+            "\niterator i = " + to_string(i) +
+            "\nindex found = " + to_string(Index) +
+            "\nuiPosOld = " + to_string(uiPosOld) +
+            "\nuiPos = " + to_string(uiPos) +
+            "\nexpected length = " + to_string(PRE->Long(ActPM).length()) ,
+                                    uiPos == (uiPosOld + PRE->Long(ActPM).length()));
+        
+        }
+    }
+          
+    
+    void ParseReverseShortLabelsPreMeasures()
+    {
+        // generate parsing string reverted
+        string mergeString;
+        for( int i = pmLast -1 ; i > -1; i--)
+        {
+            // set base measure to compare with
+            ePreMeasure ActPM = (ePreMeasure)(i);
+            
+            // now add to label strings
+            mergeString += PRE->Short(ActPM);
+        }
+        
+        
+        unsigned int uiPos = mergeString.length();
+        for( int i = 0; i < pmLast; i++)
+        {
+            // set base measure to compare with
+            ePreMeasure ActPM = (ePreMeasure )(i);
+            
+            // in case of ident --> hop to the next 
+            if(PRE->Long(ActPM).length() == 0)
+                continue;
+            
+            // parse short labels
+            unsigned int uiPosOld = uiPos;
+            int Index = PRE->ParseReverse(mergeString, uiPos);
+            CPPUNIT_ASSERT_MESSAGE( PRE->DebugOut(ActPM) + "\n(short reverse parse failure: Index missmatch)\nparsed string : " + mergeString+
+            "\niterator i = " + to_string(i) +
+            "\nindex found = " + to_string(Index) +
+            "\nuiPosOld = " + to_string(uiPosOld) +
+            "\nuiPos = " + to_string(uiPos) +
+            "\nexpected length = " + to_string(PRE->Short(ActPM).length()) ,
+                                    Index == i );
+            CPPUNIT_ASSERT_MESSAGE( PRE->DebugOut(ActPM) + "\n(short reverse parse failure: length missmatch)\nparsed string : "+mergeString+
+            "\niterator i = " + to_string(i) +
+            "\nindex found = " + to_string(Index) +
+            "\nuiPosOld = " + to_string(uiPosOld) +
+            "\nuiPos = " + to_string(uiPos) +
+            "\nexpected length = " + to_string(PRE->Short(ActPM).length()) ,
+                                    uiPos == (uiPosOld - PRE->Short(ActPM).length()));
+        
+        }
+    }
+          
+    
+    void ParseReverseLongLabelsPreMeasures()
+    {
+        // generate parsing string reverted
+        string mergeString;
+        for( int i = pmLast -1 ; i > -1; i--)
+        {
+            // set base measure to compare with
+            ePreMeasure ActPM = (ePreMeasure)(i);
+            
+            // now add to label strings
+            mergeString += PRE->Long(ActPM);
+        }
+        
+        
+        unsigned int uiPos = mergeString.length();
+        for( int i = 0; i < pmLast; i++)
+        {
+            // set base measure to compare with
+            ePreMeasure ActPM = (ePreMeasure )(i);
+            
+            // in case of ident --> hop to the next 
+            if(PRE->Long(ActPM).length() == 0)
+                continue;
+            
+            // parse Long labels
+            unsigned int uiPosOld = uiPos;
+            int Index = PRE->ParseReverse(mergeString, uiPos, false, pmIdent);
+            
+            // check for correct index
+            CPPUNIT_ASSERT_MESSAGE( PRE->DebugOut(ActPM) + "\n(Long reverse parse failure: Index missmatch)\nparsed string : " + mergeString+
+            "\niterator i = " + to_string(i) +
+            "\nindex found = " + to_string(Index) +
+            "\nuiPosOld = " + to_string(uiPosOld) +
+            "\nuiPos = " + to_string(uiPos) +
+            "\nexpected length = " + to_string(PRE->Long(ActPM).length()) ,
+                                    Index == i );
+            
+            // check for correct length and string position
+            CPPUNIT_ASSERT_MESSAGE( PRE->DebugOut(ActPM) + "\n(Long reverse parse failure: length missmatch)\nparsed string : "+mergeString+
+            "\niterator i = " + to_string(i) +
+            "\nindex found = " + to_string(Index) +
+            "\nuiPosOld = " + to_string(uiPosOld) +
+            "\nuiPos = " + to_string(uiPos) +
+            "\nexpected length = " + to_string(PRE->Long(ActPM).length()) ,
+                                    uiPos == (uiPosOld - PRE->Long(ActPM).length()));
+        
+        }
+    }
+           
+        
 };

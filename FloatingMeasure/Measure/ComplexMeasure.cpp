@@ -163,6 +163,100 @@ bool CComplexMeasure::operator!=(const CComplexMeasure& other) const
 {
     return !(*this == other);
 }
+bool CComplexMeasure::Parse(const string& strComplexMeasure, bool bShort)
+{
+    // init result
+    bool bSuccess = true;
+    
+    // set the operator string depending on short or long format
+    string strOpSep = bShort ? OP->Short(eOperation::opFirst) : OP->Long(eOperation::opFirst);
+    
+    // start splitting for first operation into tokens :
+    // these will still consist of simplemeasures combined with the operators
+    vector<string> vSimpleMeasures = Tokenize(strComplexMeasure,strOpSep, true);
+    vector<eOperation> vOperations;
+    vOperations.assign(vSimpleMeasures.size()-1, eOperation::opFirst);
+
+    // now iterate over all other operators for all tokens of the first operator
+    for(unsigned int iop = opFirst+1; iop < eOperation::opLast; iop++)
+    {   
+        
+        // set the operator string depending on short or long format
+        strOpSep = bShort ? OP->Short(iop) : OP->Long(iop);
+        
+        cout << "operation " << strOpSep << endl;
+        
+        // these maps keep the next stage of tokenization separating the existing tokens by the next operator
+        unordered_map<int,vector<string>> hm_index_tokens;
+        unordered_map<int,vector<eOperation>> hm_index_operations;
+        for(int itok = 0; itok < vSimpleMeasures.size(); itok++)
+        {
+        
+            
+            hm_index_tokens[itok] = Tokenize(vSimpleMeasures[itok], strOpSep, true);
+            
+            cout << "for token " << itok << " subtokens are " << hm_index_tokens[itok].size() << endl;
+            
+            // now set the operators for this token:
+            // 1. add tokens of new operatore: n-1
+            // 2. add the one old operator
+            hm_index_operations[itok].assign(hm_index_tokens[itok].size()-1,(eOperation)iop);
+            if(itok < vOperations.size())
+                hm_index_operations[itok].push_back(vOperations[itok]);
+
+        }   //endfor(int itok = 0; itok < vSimpleMeasures.size(); itok++)
+        
+        // now set vSimpleMeasures and vOperations togather
+        vSimpleMeasures.clear();
+        vOperations.clear();
+        for(int itok = 0; itok < hm_index_tokens.size(); itok++)
+        {
+            vSimpleMeasures.insert(vSimpleMeasures.end(),hm_index_tokens[itok].begin(),hm_index_tokens[itok].end());
+            vOperations.insert(vOperations.end(),hm_index_operations[itok].begin(),hm_index_operations[itok].end());
+        }
+        
+    }   //endfor(unsigned int iop = 0; iop < eOperation::opLast; iop++)
+    
+    cout << endl << "simple measures:" << endl << Concat(vSimpleMeasures, "\n") << endl << endl;
+    cout << endl << "operations: " << endl;
+    for(int i = 0; i<vOperations.size(); i++)
+        cout << OP->Short(i) << endl;
+    cout << endl;
+    
+    // put to gather and check for parsing errors
+    CComplexMeasure cmResult;
+    CComplexMeasure* pActCM = &cmResult;
+    for(int itok = 0; itok < vSimpleMeasures.size(); itok++)
+    {
+        // generate result pMeasureLeft
+        pActCM->pMeasureLeft = new CSimpleMeasure(vSimpleMeasures[itok]);
+        if(!pActCM->pMeasureLeft->Valid())
+        {
+            bSuccess = false;
+            break;
+        }
+        
+        // add operator AND next pointer for CComplexMeasure if exists
+        if(itok < vOperations.size())
+        {
+            pActCM->opEnum = vOperations[itok];
+            pActCM->pMeasureRight = new CComplexMeasure();
+            
+            
+            // hand over the new pointer 
+            pActCM = pActCM->pMeasureRight;
+            
+        }   //endif(itok < vOperations.size())        
+        
+    }
+    
+    // set result
+    if(bSuccess)
+        this->operator=(cmResult);
+    
+    return bSuccess;
+}
+
 bool CComplexMeasure::Compatible(const CComplexMeasure& other) const
 {
     // compatibility is if measure1 = f * measure2 (no offsets!!)
