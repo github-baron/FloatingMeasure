@@ -261,6 +261,12 @@ public:
     // pipe functions from CComplexMeasure
     /////////////////////////////////////////////////////
     /**
+     * @brief parses a string setting ::dfFloating and ::cmMeasure if parsing is successful
+     * 
+     */
+    bool Parse(const string& str2Parse, bool bShort = true);
+    
+    /**
      * @brief convert to SI unit and remove premeasures != pmIdent
      * 
      */

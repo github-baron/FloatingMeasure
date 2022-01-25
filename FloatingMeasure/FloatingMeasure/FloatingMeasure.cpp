@@ -207,6 +207,96 @@ CFloatingMeasure CFloatingMeasure::operator/(const double& other)
     return result;
 }
 
+bool CFloatingMeasure::Parse(const string& str2Parse, bool bShort)
+{
+    // init result ... be positive
+    bool bSuccess = true;
+    
+    // now prepare for parsing  1*meas/2/meas*3...
+    vector<double> vDouble;
+    vector<string> vMeasString;
+    vector<eOperation> vOperation;
+    double dVal;
+//     char* str=new char[str2Parse.length()];
+    string str; str.resize(str2Parse.length());
+    memset((void*)str.data(),0,sizeof(char)*str2Parse.length());
+    string str2ParseTemp = str2Parse;
+    while(scanf("%g%s",str2ParseTemp.c_str(),dVal, str.data() ) == 2)
+    {
+        // remember value
+        vDouble.push_back(dVal);
+        
+        // set operator (if not given --> mult: e.g. "1m/s" == "1*m/s")
+        vOperation.push_back(eOperation::opMult);
+        for(unsigned int iop = eOperation::opFirst; iop < eOperation::opLast; iop++)
+        {
+            string strOP = bShort ? OP->Short(iop) : OP->Long(iop);
+            if(str.find(strOP) == 0)
+            {
+                // remember operation 
+                vOperation.back() = (eOperation)iop;
+                
+                // shorten the string to search for
+                str2ParseTemp = str.substr(strOP.length(), str.length()-strOP.length());
+                
+                // we found the wanted operator: leave loop
+                break;
+            }
+        }
+        
+        // now do a char by char search for the first numeric character (0-9) or end of string --> new position for a scanf("%g%s")
+        unsigned int nPosNextMeasEnd = 0;
+        while( nPosNextMeasEnd < str2ParseTemp.length())
+            if(!IsNumeric(str2ParseTemp.at(nPosNextMeasEnd))) 
+                nPosNextMeasEnd++;
+            else
+                break;
+        
+        // set the non-numeric string
+        str = str2ParseTemp.substr(0,nPosNextMeasEnd);
+        
+        // get the operator .... if exists: but only if we are not at the end of the string
+        if(nPosNextMeasEnd != str2ParseTemp.length())
+        {
+            // set operator (if not given --> mult: e.g. "m/s2" == "m/s*2")
+            vOperation.push_back(eOperation::opMult);
+            for(unsigned int iop = eOperation::opFirst; iop < eOperation::opLast; iop++)
+            {
+                // search the op from back
+                string strOP = bShort ? OP->Short(iop) : OP->Long(iop);
+                unsigned int uiExpectedPos = str.length() - strOP.length();
+                if(str.find(strOP, uiExpectedPos) == uiExpectedPos )
+                {
+                    // remember operation 
+                    vOperation.back() = (eOperation)iop;
+                    
+                    // shorten the string to search for
+                    str.at(uiExpectedPos) = '0';
+                    
+                    // we found the wanted operator: leave loop
+                    break;
+                }
+            }
+        }
+        
+        // add string part even if it is empty (e.g. 2 * 3 )
+        vMeasString.push_back(str);
+        
+        // get substring
+        str = str2ParseTemp.substr(nPosNextMeasEnd, str2ParseTemp.length() - nPosNextMeasEnd);
+        str2ParseTemp = str;
+        
+        // empty str: prepare for next scanf 
+        memset((void*)str.data(),0,sizeof(char)*str2Parse.length());
+        
+    }
+    
+    // TODO: concatenate values operators and parsed measures to one floating measure
+    
+    return bSuccess;
+    
+}
+
 void CFloatingMeasure::Normalize()
 {   
     // first handle simple case: only one CSimpleMeasure. I.e. when

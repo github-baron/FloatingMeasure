@@ -27,6 +27,7 @@
 
 // global includes
 #include<string>
+#include<cstring>
 #include<vector>
 #include<map>
 #include<unordered_map>
@@ -213,6 +214,18 @@ Tokenize(const string& strTotal, const string& strSep, bool bTrim = false);
 _WIN_DLL_API
 #endif 
 Concat(vector<string> vstr2Print, string strSep = "\n");
+
+/**
+ * @brief checks for a numeric character (0-9)
+ * 
+ * @param[in] c character to check
+ * @return true if numeric
+ */
+bool
+#ifdef _WIN32
+_WIN_DLL_API
+#endif 
+IsNumeric(char c);
     
 
 ///////////////////////////////////////////////////

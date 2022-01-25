@@ -545,11 +545,6 @@ void ComplexMeasureTest()
         CPPUNIT_ASSERT_MESSAGE( ComplMeas1.DebugOut(), ComplMeas1.CMFactor() == 3600.);
         CPPUNIT_ASSERT_MESSAGE( ComplMeas1.DebugOut(), ComplMeas1.CMExp10() == 0);
         
-        
-        
-        
-        
-        
         ComplMeas1 = cmIdent/s;
         ComplMeas1.ScaleTo(cmIdent/h);
         CPPUNIT_ASSERT_MESSAGE( ComplMeas1.DebugOut(), ComplMeas1.Short() == "1/h");

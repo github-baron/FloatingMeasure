@@ -23,7 +23,6 @@
  */
 
 #include <Utils/Utils.h>
-#include <iostream>
 double Round2Precision(const DF_VALUE_TYPE dValue,const int nPrecision)
 {
     double dFactor = pow(10.,nPrecision);
@@ -137,4 +136,18 @@ string Concat(vector<string> vstr2Print, string strSep)
     }
     
     return strTotal;
+}
+
+bool IsNumeric(char c)
+{
+    return c == '0' ||
+           c == '1' ||
+           c == '2' ||
+           c == '3' ||
+           c == '4' ||
+           c == '5' ||
+           c == '6' ||
+           c == '7' ||
+           c == '8' ||
+           c == '9';
 }
