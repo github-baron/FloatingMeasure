@@ -485,7 +485,7 @@ _WIN_DLL_API
 inline operator*(const CComplexMeasure& Measure, const CFloatingMeasure& FloatingMeasure ) { return CFloatingMeasure(FloatingMeasure.Floating(), FloatingMeasure.Measure()*Measure);}
 
 /**
- * @brief operator/ : enables CFloatingMeasure = 10/mV;
+ * @brief operator/ : enables CFloatingMeasure = 10/mV <br> 
  * 
  * @param Floating: CDigFloat 
  * @param Measure: CComplexMeasure

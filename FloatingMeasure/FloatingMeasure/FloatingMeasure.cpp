@@ -279,7 +279,7 @@ bool CFloatingMeasure::Parse(const string& str2Parse, bool bShort)
             }
         }
         
-        // add string part even if it is empty (e.g. 2 * 3 )
+        // add string part even if it is empty (e.g. 2 * [] * 3  )
         vMeasString.push_back(str);
         
         // get substring
@@ -291,7 +291,8 @@ bool CFloatingMeasure::Parse(const string& str2Parse, bool bShort)
         
     }
     
-    // TODO: concatenate values operators and parsed measures to one floating measure
+    //concatenate values operators and parsed measures to one floating measure
+    
     
     return bSuccess;
     
