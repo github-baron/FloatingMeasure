@@ -116,6 +116,7 @@ public:
      */
     bool Parse(const string& strPreLabelBaseLabel, bool bShort = true);
     
+    
     /**
      * @brief sets the CSimpleMeasure::PreIndex and CSimpleMeasure::BaseIndex <br>
      * and adapts the depending members 

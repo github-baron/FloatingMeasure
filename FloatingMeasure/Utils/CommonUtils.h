@@ -41,4 +41,27 @@ using namespace __gnu_cxx;
 #define _WIN_DLL_API __declspec(dllexport) 
 #endif
 
+///////////////////////////////////////////////////
+// compile switches
+///////////////////////////////////////////////////
+#ifdef LONGNUMBER
+    #ifdef _WIN32
+        #define DF_VALUE_TYPE       long double //double
+        #define DF_INT_TYPE         long long 
+        #define STR2INT             stol
+        #define STR2DBL             stold
+    #endif
+    #ifdef __linux__
+        #define DF_VALUE_TYPE       long double //double
+        #define DF_INT_TYPE         __int128 // long long 
+    #endif
+#else
+    #define DF_VALUE_TYPE       double
+    #define DF_INT_TYPE         int
+    #define STR2INT             stoi
+    #define STR2DBL             stod
+#endif
+
+
+
 #endif

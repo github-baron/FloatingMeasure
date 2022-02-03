@@ -122,205 +122,211 @@ int main( int argc, char* argv[] )
                    &UtilsTest
                    )
                  );
+   runner.addTest( new CppUnit::TestCaller<CUtils_Test> ( 
+                   "Utils: checking parsing functions",
+                   &CUtils_Test::Utils_Parse,
+                   &UtilsTest
+                   )
+                 );
 
    /////////////////////////////////////////////////
    //// add all tests of CBaseMeasure_Test
    /////////////////////////////////////////////////
-   runner.addTest( new CppUnit::TestCaller<CBaseMeasure_Test> ( 
-                   "BaseMeasure: consistent SI references",
-                   &CBaseMeasure_Test::SIReference,
-                   &BaseMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CBaseMeasure_Test> ( 
-                   "BaseMeasure: unique short labels",
-                   &CBaseMeasure_Test::UniqueShortLabel,
-                   &BaseMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CBaseMeasure_Test> ( 
-                   "BaseMeasure: unique long labels",
-                   &CBaseMeasure_Test::UniqueLongLabel,
-                   &BaseMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CBaseMeasure_Test> ( 
-                   "BaseMeasure: unique SI factors",
-                   &CBaseMeasure_Test::UniqueSIFactor,
-                   &BaseMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CBaseMeasure_Test> ( 
-                   "BaseMeasure: parsing short labels of base measure ",
-                   &CBaseMeasure_Test::ParseShortLabelsBaseMeasures,
-                   &BaseMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CBaseMeasure_Test> ( 
-                   "BaseMeasure: parsing long labels of base measure",
-                   &CBaseMeasure_Test::ParseLongLabelsBaseMeasures,
-                   &BaseMeasureTest
-                   )
-                 );
-   
+//    runner.addTest( new CppUnit::TestCaller<CBaseMeasure_Test> ( 
+//                    "BaseMeasure: consistent SI references",
+//                    &CBaseMeasure_Test::SIReference,
+//                    &BaseMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CBaseMeasure_Test> ( 
+//                    "BaseMeasure: unique short labels",
+//                    &CBaseMeasure_Test::UniqueShortLabel,
+//                    &BaseMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CBaseMeasure_Test> ( 
+//                    "BaseMeasure: unique long labels",
+//                    &CBaseMeasure_Test::UniqueLongLabel,
+//                    &BaseMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CBaseMeasure_Test> ( 
+//                    "BaseMeasure: unique SI factors",
+//                    &CBaseMeasure_Test::UniqueSIFactor,
+//                    &BaseMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CBaseMeasure_Test> ( 
+//                    "BaseMeasure: parsing short labels of base measure ",
+//                    &CBaseMeasure_Test::ParseShortLabelsBaseMeasures,
+//                    &BaseMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CBaseMeasure_Test> ( 
+//                    "BaseMeasure: parsing long labels of base measure",
+//                    &CBaseMeasure_Test::ParseLongLabelsBaseMeasures,
+//                    &BaseMeasureTest
+//                    )
+//                  );
+//    
    ///////////////////////////////////////////////
    // add all tests of CPreMeasure_Test
    ///////////////////////////////////////////////
-   runner.addTest( new CppUnit::TestCaller<CPreMeasure_Test> ( 
-                   "PreMeasure: check factors",
-                   &CPreMeasure_Test::CheckFactors,
-                   &PreMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CPreMeasure_Test> ( 
-                   "PreMeasure: check exponents",
-                   &CPreMeasure_Test::CheckExponents,
-                   &PreMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CPreMeasure_Test> ( 
-                   "PreMeasure: check getting ID by factor",
-                   &CPreMeasure_Test::CheckGetIDByFactor,
-                   &PreMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CPreMeasure_Test> ( 
-                   "PreMeasure: check getting ID by exp10",
-                   &CPreMeasure_Test::CheckGetIDByExp10,
-                   &PreMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CPreMeasure_Test> ( 
-                   "PreMeasure: parsing short labels of preMeasures",
-                   &CPreMeasure_Test::ParseShortLabelsPreMeasures,
-                   &PreMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CPreMeasure_Test> ( 
-                   "PreMeasure: parsing long labels of preMeasures",
-                   &CPreMeasure_Test::ParseLongLabelsPreMeasures,
-                   &PreMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CPreMeasure_Test> ( 
-                   "PreMeasure: reverse parsing short labels of preMeasures",
-                   &CPreMeasure_Test::ParseReverseShortLabelsPreMeasures,
-                   &PreMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CPreMeasure_Test> ( 
-                   "PreMeasure: reverse parsing long labels of preMeasures",
-                   &CPreMeasure_Test::ParseReverseLongLabelsPreMeasures,
-                   &PreMeasureTest
-                   )
-                 );
-
+//    runner.addTest( new CppUnit::TestCaller<CPreMeasure_Test> ( 
+//                    "PreMeasure: check factors",
+//                    &CPreMeasure_Test::CheckFactors,
+//                    &PreMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CPreMeasure_Test> ( 
+//                    "PreMeasure: check exponents",
+//                    &CPreMeasure_Test::CheckExponents,
+//                    &PreMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CPreMeasure_Test> ( 
+//                    "PreMeasure: check getting ID by factor",
+//                    &CPreMeasure_Test::CheckGetIDByFactor,
+//                    &PreMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CPreMeasure_Test> ( 
+//                    "PreMeasure: check getting ID by exp10",
+//                    &CPreMeasure_Test::CheckGetIDByExp10,
+//                    &PreMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CPreMeasure_Test> ( 
+//                    "PreMeasure: parsing short labels of preMeasures",
+//                    &CPreMeasure_Test::ParseShortLabelsPreMeasures,
+//                    &PreMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CPreMeasure_Test> ( 
+//                    "PreMeasure: parsing long labels of preMeasures",
+//                    &CPreMeasure_Test::ParseLongLabelsPreMeasures,
+//                    &PreMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CPreMeasure_Test> ( 
+//                    "PreMeasure: reverse parsing short labels of preMeasures",
+//                    &CPreMeasure_Test::ParseReverseShortLabelsPreMeasures,
+//                    &PreMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CPreMeasure_Test> ( 
+//                    "PreMeasure: reverse parsing long labels of preMeasures",
+//                    &CPreMeasure_Test::ParseReverseLongLabelsPreMeasures,
+//                    &PreMeasureTest
+//                    )
+//                  );
+// 
 
    ///////////////////////////////////////////////
    // add all tests of CSimpleMeasure_Test
    ///////////////////////////////////////////////
-   runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                   "SimpleMeasure: copy constructor",
-                   &CSimpleMeasure_Test::CopyConstructor,
-                   &SimpleMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                   "SimpleMeasure: SetByShort, operator = , and operator== voltage",
-                   &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualVoltage,
-                   &SimpleMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                   "SimpleMeasure: SetByShort, operator = , and operator== current",
-                   &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualCurrent,
-                   &SimpleMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                   "SimpleMeasure: SetByShort, operator = , and operator== frequency",
-                   &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualFrequency,
-                   &SimpleMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                   "SimpleMeasure: SetByShort, operator = , and operator== resistor",
-                   &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualResistor, 
-                   &SimpleMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                   "SimpleMeasure: SetByShort, operator = , and operator== seconds",
-                   &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualSeconds,
-                   &SimpleMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                   "SimpleMeasure: SetByShort, operator = , and operator== meter",
-                   &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualMeter,
-                   &SimpleMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                   "SimpleMeasure: SetByShort, operator = , and operator== °K",
-                   &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualDegKelvin,
-                   &SimpleMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                   "SimpleMeasure: SetByShort, operator = , and operator== °F",
-                   &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualDegFahrenheit,
-                   &SimpleMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                   "SimpleMeasure: SetByShort, operator = , and operator== °C",
-                   &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualDegCelsius,
-                   &SimpleMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                   "SimpleMeasure: SetByID by other",
-                   &CSimpleMeasure_Test::SetByIDOther,
-                   &SimpleMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                   "SimpleMeasure: SetByShort voltage measure",
-                   &CSimpleMeasure_Test::SetByShortVoltage,
-                   &SimpleMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                   "SimpleMeasure: SetByShort resistor measure",
-                   &CSimpleMeasure_Test::SetByShortResistor,
-                   &SimpleMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                   "SimpleMeasure: SetByShort temperature measure",
-                   &CSimpleMeasure_Test::SetByShortTemperature,
-                   &SimpleMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                   "SimpleMeasure: SetByShort time measure",
-                   &CSimpleMeasure_Test::SetByShortTime,
-                   &SimpleMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                   "SimpleMeasure: set by parsing short label",
-                   &CSimpleMeasure_Test::ParseShort,
-                   &SimpleMeasureTest
-                   )
-                 );
-   runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
-                   "SimpleMeasure: set by parsing long label",
-                   &CSimpleMeasure_Test::ParseLong,
-                   &SimpleMeasureTest
-                   )
-                 );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: copy constructor",
+//                    &CSimpleMeasure_Test::CopyConstructor,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByShort, operator = , and operator== voltage",
+//                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualVoltage,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByShort, operator = , and operator== current",
+//                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualCurrent,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByShort, operator = , and operator== frequency",
+//                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualFrequency,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByShort, operator = , and operator== resistor",
+//                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualResistor, 
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByShort, operator = , and operator== seconds",
+//                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualSeconds,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByShort, operator = , and operator== meter",
+//                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualMeter,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByShort, operator = , and operator== °K",
+//                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualDegKelvin,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByShort, operator = , and operator== °F",
+//                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualDegFahrenheit,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByShort, operator = , and operator== °C",
+//                    &CSimpleMeasure_Test::SetByShortOperatorAssignAndqEualDegCelsius,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByID by other",
+//                    &CSimpleMeasure_Test::SetByIDOther,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByShort voltage measure",
+//                    &CSimpleMeasure_Test::SetByShortVoltage,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByShort resistor measure",
+//                    &CSimpleMeasure_Test::SetByShortResistor,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByShort temperature measure",
+//                    &CSimpleMeasure_Test::SetByShortTemperature,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: SetByShort time measure",
+//                    &CSimpleMeasure_Test::SetByShortTime,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: set by parsing short label",
+//                    &CSimpleMeasure_Test::ParseShort,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
+//    runner.addTest( new CppUnit::TestCaller<CSimpleMeasure_Test> ( 
+//                    "SimpleMeasure: set by parsing long label",
+//                    &CSimpleMeasure_Test::ParseLong,
+//                    &SimpleMeasureTest
+//                    )
+//                  );
 
 //    ///////////////////////////////////////////////
 //    // add all tests of CComplexMeasure_Test
@@ -495,8 +501,14 @@ int main( int argc, char* argv[] )
 //                        &FloatingMeasureTest
 //                        )
 //                  );
-//
-//
+   runner.addTest( new CppUnit::TestCaller<CFloatingMeasure_Test> ( 
+                       "FloatingMeasure: Parsing",
+                       &CFloatingMeasure_Test::FloatingMeasure_Parse,
+                       &FloatingMeasureTest
+                       )
+                 );
+
+
     try
     {
         CPPUNIT_NS::stdCOut() << "Running "  <<  testPath;

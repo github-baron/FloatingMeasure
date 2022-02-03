@@ -105,7 +105,7 @@ vector<string> Tokenize(const string& strTotal, const string& strSep, bool bTrim
     }
     
     // add last element
-    if(nOldPos < strTotal.length()-1)
+    if(nOldPos < strTotal.length())
     {
         string str = strTotal.substr(nOldPos, strTotal.length()-nOldPos);
 //         std::cout << "substring (old=" << nOldPos << ", new=" << strTotal.length() << ") = " << str << std::endl;

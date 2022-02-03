@@ -134,7 +134,58 @@ public:
         vstr = Tokenize(str,"/");
         CPPUNIT_ASSERT_MESSAGE( string("original string:\n") + str + "\ntokens:\n" + Concat(vstr, "\n"), vstr.size() == 2 );
         CPPUNIT_ASSERT_MESSAGE( string("original string:\n") + str + "\ntokens:\n" + Concat(vstr, "\n"), vstr[0] == "mm" && vstr[1] =="ks");
+        
+        str = "1/s*m";
+        vstr = Tokenize(str, "*");
+        CPPUNIT_ASSERT_MESSAGE( string("original string:\n") + str + "\ntokens:\n" + Concat(vstr, "\n"), vstr.size() == 2 );
+        CPPUNIT_ASSERT_MESSAGE( string("original string:\n") + str + "\ntokens:\n" + Concat(vstr, "\n"), vstr[0] == "1/s" && vstr[1] =="m");
        
+    }
+    
+    void Utils_Parse()
+    {
+        string str = "101/mV*s";
+        size_t pos;
+        DF_VALUE_TYPE val = STR2DBL(str,&pos);
+        CPPUNIT_ASSERT_MESSAGE( string("value= ") + to_string(val ), val == 101 );
+        CPPUNIT_ASSERT_MESSAGE( string("value= ") + to_string(val ), pos == 3 );
+        
+        // copy substring 
+        str = str.substr(pos, str.length()-pos);
+        CPPUNIT_ASSERT_MESSAGE( str, str == "/mV*s" );
+        
+        
+        // no check  what happens without number
+        str= "km/34023.e-4mV*s";
+        try
+        {
+            val = STR2DBL(str,&pos);
+        }
+        catch(exception &e)
+        {
+            pos = 0;
+            val = 1;
+        }
+        CPPUNIT_ASSERT_MESSAGE( string("value= ") + to_string(val ), val == 1 );
+        CPPUNIT_ASSERT_MESSAGE( string("value= ") + to_string(val ), pos == 0 );
+        
+        
+        // no check  what happens without number
+        str= "/mV*s";
+        try
+        {
+            val = STR2DBL(str,&pos);
+        }
+        catch(exception &e)
+        {
+            pos = 0;
+            val = 1;
+        }
+        CPPUNIT_ASSERT_MESSAGE( string("value= ") + to_string(val ), val == 1 );
+        CPPUNIT_ASSERT_MESSAGE( string("value= ") + to_string(val ), pos == 0 );
+        str = str.substr(pos, str.length()-pos);
+        CPPUNIT_ASSERT_MESSAGE( str, str == "/mV*s" );
+        
     }
     
 };

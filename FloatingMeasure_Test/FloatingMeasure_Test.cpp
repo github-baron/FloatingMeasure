@@ -204,6 +204,17 @@ public:
         CPPUNIT_ASSERT_MESSAGE( cfTest1.DebugOut(), cfTest1 == 100*uA/mV);
     }
     
+    void FloatingMeasure_Parse()
+    {
+        CFloatingMeasure fm1;
+        fm1.Parse("10*m/s");
+        CPPUNIT_ASSERT_MESSAGE( fm1.DebugOut(), fm1 == 10*m/s);
+        fm1.Parse("m/s*10");
+        CPPUNIT_ASSERT_MESSAGE( fm1.DebugOut(), fm1 == 10*m/s);
+        fm1.Parse("10*m/s/1/s");
+        CPPUNIT_ASSERT_MESSAGE( fm1.DebugOut(), fm1 == 10*m/s/s);
+    }
+    
     void Velocity()
     {
         

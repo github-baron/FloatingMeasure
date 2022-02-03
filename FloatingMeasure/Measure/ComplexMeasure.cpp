@@ -195,7 +195,7 @@ bool CComplexMeasure::Parse(const string& strComplexMeasure, bool bShort)
             
             hm_index_tokens[itok] = Tokenize(vSimpleMeasures[itok], strOpSep, true);
             
-            cout << "for token " << itok << " subtokens are " << hm_index_tokens[itok].size() << endl;
+             cout << "for token (" << itok << ") = " <<  vSimpleMeasures[itok] << endl << " subtokens are  "<< hm_index_tokens[itok].size() << endl;
             
             // now set the operators for this token:
             // 1. add tokens of new operatore: n-1
@@ -217,11 +217,11 @@ bool CComplexMeasure::Parse(const string& strComplexMeasure, bool bShort)
         
     }   //endfor(unsigned int iop = 0; iop < eOperation::opLast; iop++)
     
-    cout << endl << "simple measures:" << endl << Concat(vSimpleMeasures, "\n") << endl << endl;
-    cout << endl << "operations: " << endl;
+    cout << endl << "simple measures:" << endl << Concat(vSimpleMeasures, "\n") << endl << endl << flush;
+    cout << endl << "operations: (" << vOperations.size()  << ")" << endl << flush;
     for(int i = 0; i<vOperations.size(); i++)
-        cout << OP->Short(i) << endl;
-    cout << endl;
+        cout << OP->Short(i) << endl << flush;
+    cout << endl << flush;
     
     // put to gather and check for parsing errors
     CComplexMeasure cmResult;

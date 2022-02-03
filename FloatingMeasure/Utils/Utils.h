@@ -65,8 +65,6 @@
 
 
 
-#define DF_VALUE_TYPE       long double //double
-#define DF_INT_TYPE         __int128 // long long 
 #define myNAN               nan("1")
 #define GREEK_SMALL_MU      "\u00b5"
 #define GREEK_CAPITAL_OMEGA "\u03a9"

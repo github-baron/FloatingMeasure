@@ -213,86 +213,141 @@ bool CFloatingMeasure::Parse(const string& str2Parse, bool bShort)
     bool bSuccess = true;
     
     // now prepare for parsing  1*meas/2/meas*3...
-    vector<double> vDouble;
+    vector<DF_VALUE_TYPE> vDouble;
     vector<string> vMeasString;
     vector<eOperation> vOperation;
-    double dVal;
 //     char* str=new char[str2Parse.length()];
     string str; str.resize(str2Parse.length());
     memset((void*)str.data(),0,sizeof(char)*str2Parse.length());
-    string str2ParseTemp = str2Parse;
-    while(scanf("%g%s",str2ParseTemp.c_str(),dVal, str.data() ) == 2)
-    {
-        // remember value
-        vDouble.push_back(dVal);
+    
+    // parse all values and the corresponding operators in front of it
+    // to generate the double value and remove the corresponding string
+    // parts from str2Parse receiving str4Meas which can be parsed by a
+    // complex measure class
+    size_t tPos = 0;
+    unsigned int uiPos = 0;
+    string str4Val = str2Parse;
+    string str4Meas = "";
+    DF_VALUE_TYPE val;
+    CComplexMeasure meas;
+    eOperation op = eOperation::opUnknown;    
+    while(str4Val.length() > 0)
+    {    
         
-        // set operator (if not given --> mult: e.g. "1m/s" == "1*m/s")
-        vOperation.push_back(eOperation::opMult);
-        for(unsigned int iop = eOperation::opFirst; iop < eOperation::opLast; iop++)
+        cout << "parsing " << str4Val << endl << "str4Meas = " << str4Meas << endl << "value(before) = " << to_string(val) << endl;
+        
+        // for building complex measure string:
+        // for the first time add bmNumber if operator exists
+        // (when a number preceeds the whole str2Parse) 
+        bool bPrependOpMult = false;
+        bool bPrependNumber4FirstTime = (str4Meas.length()==0);
+        
+        try
         {
-            string strOP = bShort ? OP->Short(iop) : OP->Long(iop);
-            if(str.find(strOP) == 0)
+            // get new value and apply to former value
+            switch(op)
             {
-                // remember operation 
-                vOperation.back() = (eOperation)iop;
+                case eOperation::opUnknown:
+                    val = STR2DBL(str4Val, &tPos);
+                    break;
+                case eOperation::opMult:
+                    val *= STR2DBL(str4Val, &tPos);
+                    break;
+                case eOperation::opDivide:
+                    val /= STR2DBL(str4Val, &tPos);
+                    break;
                 
-                // shorten the string to search for
-                str2ParseTemp = str.substr(strOP.length(), str.length()-strOP.length());
-                
-                // we found the wanted operator: leave loop
+            }
+            
+            cout << "value (after) = " << to_string(val) << endl;
+        }
+        catch(exception &e)
+        {
+            
+            cout << "exception part:" << endl;
+            // in case the string is already parsed 
+            if(str4Val.length() < str2Parse.length())
+            {
+                cout << "leaving ..." << endl;
+                // leave : expected a number
+                bSuccess = false;
                 break;
             }
-        }
+            else
+            {
+                
+                cout << "first time: setting to one " << to_string(val) << endl;
+                
+                // the first number if non is found
+                val = 1;
+            }
+        }        
         
-        // now do a char by char search for the first numeric character (0-9) or end of string --> new position for a scanf("%g%s")
-        unsigned int nPosNextMeasEnd = 0;
-        while( nPosNextMeasEnd < str2ParseTemp.length())
-            if(!IsNumeric(str2ParseTemp.at(nPosNextMeasEnd))) 
-                nPosNextMeasEnd++;
+        // remove number part
+        str4Val = str4Val.substr(tPos, str4Val.length()-tPos);        
+        cout << "removing number part: str4Val = " << str4Val << endl;
+        
+        // check: do we have to add multiplication operator for the first time:
+        uiPos = 0;
+        if(bPrependNumber4FirstTime)
+            bPrependOpMult = ((eOperation)(OP->Parse(str4Val,uiPos,bShort, eOperation::opUnknown) == eOperation::opUnknown));
+        cout << "bPrependOpMult is set to " << Bool2String(bPrependOpMult) << endl;
+         
+        // search for next number part for next run
+        tPos = 0; 
+        while(tPos < str4Val.length())
+        {
+            if(!IsNumeric(str4Val.at(tPos)))
+                tPos++;
             else
                 break;
+        }
         
-        // set the non-numeric string
-        str = str2ParseTemp.substr(0,nPosNextMeasEnd);
+        cout << "next pos of number is " << to_string(tPos) << endl;
+            
+        // remember the first numeric position: start of operator
+        uiPos = tPos;
         
-        // get the operator .... if exists: but only if we are not at the end of the string
-        if(nPosNextMeasEnd != str2ParseTemp.length())
+        // reverse parse for operator at the end: e.g. 10*m/s/10/s
+        if(tPos < str4Val.length())
         {
-            // set operator (if not given --> mult: e.g. "m/s2" == "m/s*2")
-            vOperation.push_back(eOperation::opMult);
-            for(unsigned int iop = eOperation::opFirst; iop < eOperation::opLast; iop++)
+            op = (eOperation)OP->ParseReverse(str4Val,uiPos,bShort, eOperation::opUnknown);
+        
+            cout << "Operator is " << BASE->Short(op) << endl;
+            if(op == eOperation::opUnknown)
             {
-                // search the op from back
-                string strOP = bShort ? OP->Short(iop) : OP->Long(iop);
-                unsigned int uiExpectedPos = str.length() - strOP.length();
-                if(str.find(strOP, uiExpectedPos) == uiExpectedPos )
-                {
-                    // remember operation 
-                    vOperation.back() = (eOperation)iop;
-                    
-                    // shorten the string to search for
-                    str.at(uiExpectedPos) = '0';
-                    
-                    // we found the wanted operator: leave loop
-                    break;
-                }
+                cout << "no operator found .... leaving " << endl;
+                // leave : expected an operator
+                bSuccess = false;
+                break;
             }
         }
         
-        // add string part even if it is empty (e.g. 2 * [] * 3  )
-        vMeasString.push_back(str);
+        // now add the the str4Meas part : might be with number for the first if left out (e.g. m/s*10)
+        str4Meas += ((str4Meas.length()==0) ? BASE->Short(bmNumber) : "") + 
+         (bPrependOpMult ? (bShort ? OP->Short(eOperation::opMult) :  OP->Long(eOperation::opMult)) : "") +
+         str4Val.substr(0, uiPos);
+        cout << "adding str4Meas part: str4Meas = " << str4Meas << endl;
         
-        // get substring
-        str = str2ParseTemp.substr(nPosNextMeasEnd, str2ParseTemp.length() - nPosNextMeasEnd);
-        str2ParseTemp = str;
+        // remove complex measure string + operator in str4Val: str4Val starts now with a number
+        // the game starts over again within this while loop
+        str4Val = str4Val.substr(tPos, str4Val.length()-tPos);
         
-        // empty str: prepare for next scanf 
-        memset((void*)str.data(),0,sizeof(char)*str2Parse.length());
+        cout << "removing CM and  operator part: str4Val = " << str4Val << endl;
         
     }
     
-    //concatenate values operators and parsed measures to one floating measure
+    // now val keeps the value part: start to parse the complex measure part :
     
+    bSuccess = meas.Parse(str4Meas, bShort);
+    
+    //concatenate values operators and parsed measures to one floating measure
+    if(bSuccess)
+    {
+        // hand over results only in case of success
+        dfFloating = val;
+        cmMeasure = meas;
+    }
     
     return bSuccess;
     

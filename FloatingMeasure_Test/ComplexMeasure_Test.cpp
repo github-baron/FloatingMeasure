@@ -568,6 +568,11 @@ void ComplexMeasureTest()
         CComplexMeasure cmResult; cmResult.Parse(cm2Compare.Short());
         
         CPPUNIT_ASSERT_MESSAGE( cmResult.DebugOut(), cmResult == cm2Compare);
+        
+        // check for parsing bmNumber 
+        string str = "1/s*m";
+        cmResult.Parse(str);
+        CPPUNIT_ASSERT_MESSAGE( cmResult.DebugOut(), cmResult == m/s);
     }
      
  };
