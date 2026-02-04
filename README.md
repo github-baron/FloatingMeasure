@@ -1,69 +1,178 @@
+# FloatingMeasure – C++ Library for Physical Quantities and Units
+
 ## Synopsis
 
-FloatingMeasure is a class API for physical calculations of floating point numbers with measures. For example the velocity is represented by an expression in your code like </br> 
+FloatingMeasure is a **C++ library for unit-aware numerical calculations with physical quantities**,
+designed for use in **measurement, calibration, and engineering software**.
+
+It provides a class-based API for working with floating point values that explicitly carry
+**physical units and numerical uncertainties**, helping to prevent unit-related and semantic
+calculation errors in technical software systems.
+
+Instead of operating on plain floating point numbers, physical values are represented explicitly
+together with their associated measures.
+For example, a velocity can be expressed in code as:
+
 ```c++
-CFloatingMeasure velocity = 150*km/h;
+CFloatingMeasure velocity = 150 * km / h;
 ```
 
-The measures can be any complex combination of <a href="./FloatingMeasure/Measure/SimpleMeasure.h"> simple measures </a> and the mathematical operation "multiplication" and "division". In our example:</br>
+Measures can be defined as arbitrary combinations of
+[simple measures](./FloatingMeasure/Measure/SimpleMeasure.h)
+using the mathematical operations **multiplication** and **division**.
+
+In the example above:
+
 ```c++
-CComplexMeasure velocity_measure = km/h;  // consisting of </br>
-CSimpleMeasure distance_measure = km; // combined with the time measure by the operator "/"
-CSimpleMeasure time_measure = h;
+CComplexMeasure velocity_measure = km / h;   // consisting of
+CSimpleMeasure  distance_measure = km;       // combined with
+CSimpleMeasure  time_measure     = h;        // by the "/" operator
 ```
-A <a href="./FloatingMeasure/Measure/SimpleMeasure.h"> simple measure </a> consists of a <a href="./FloatingMeasure/Measure/PreMeasure.h"> pre measure </a> and a <a href="./FloatingMeasure/Measure/BaseMeasure.h"> base measure </a>. Thus, this API is easily extendable by any kind of pre measure or base measure. </br>
-In our example the distance_measure consists of the pre measure "k" (kilo) and the base measure "m" (meter).
 
-The "floating" part of this API considers errors due to the numerical floating point representation. As a consequence e.g. the <a href="FloatingMeasure/FloatingMeasure.cpp"> comparison operator </a> allows equality for a range of values given by the numerical error instead of comparing to exact one value (which often fails .... unwanted).  
+A [simple measure](./FloatingMeasure/Measure/SimpleMeasure.h) consists of a
+[pre-measure](./FloatingMeasure/Measure/PreMeasure.h) and a
+[base measure](./FloatingMeasure/Measure/BaseMeasure.h).
 
-Even the history (i.e. the sequence of mathematical operations) of these errors is considered and propagates depending on the mathematical operations and the operands and their error history.
+This design allows the API to be easily extended with additional pre-measures or base measures.
+In the example above, the distance measure consists of the pre-measure **"k"** (kilo)
+and the base measure **"m"** (meter).
 
+---
 
-## Code Example
+## What FloatingMeasure Is
 
-<a href="./FloatingMeasure_Examples/FMEx_Velocity.cpp"> FMEx_Velocity.cpp</a> :</br>
-An example for calculation of a velocity "v" of Usain Bolt, a snail, and the corresponding "snail factor".
+* A C++ library for handling **physical quantities and units**
+* Designed for **unit-aware numerical calculations**
+* Focused on correctness, clarity, and robustness
+* Intended for long-lived **measurement and engineering software**
 
-<a href="./FloatingMeasure_Examples/FMEx_CheckMeasValue.cpp"> FMEx_CheckMeasValue.cpp</a> :</br>
-An example for checking a measurement value against a given tolerance: with and without considering a given precision.
+## What FloatingMeasure Is Not
 
+* Not a template-heavy compile-time unit system
+* Not a general-purpose mathematics library
+* Not optimized for performance-critical HPC workloads
+
+---
+
+## Numerical Precision and Error Propagation
+
+The *floating* aspect of the API explicitly considers numerical errors caused by floating point
+representation.
+
+As a consequence, comparison operators (see
+[comparison operator implementation](FloatingMeasure/FloatingMeasure.cpp))
+allow equality within a tolerance range defined by the accumulated numerical error,
+instead of requiring exact equality, which is often undesirable in numerical software.
+
+FloatingMeasure also tracks the **history of numerical operations**.
+Numerical uncertainties propagate depending on the mathematical operations performed and on the
+error history of the operands involved.
+
+---
+
+## Code Examples
+
+[FMEx_Velocity.cpp](./FloatingMeasure_Examples/FMEx_Velocity.cpp)
+Example demonstrating the calculation of velocities for Usain Bolt, a snail,
+and the resulting *snail factor*.
+
+[FMEx_CheckMeasValue.cpp](./FloatingMeasure_Examples/FMEx_CheckMeasValue.cpp)
+Example showing how to check a measurement value against a given tolerance,
+both with and without explicitly considering a defined numerical precision.
+
+---
+
+## Typical Use Cases
+
+FloatingMeasure is suitable for:
+
+* Measurement and test software
+* Calibration systems
+* Engineering tools with physical units
+* Scientific and numerical software
+* Unit conversion and validation tasks
+
+---
 
 ## Motivation
 
-The FloatingMeasure API can be used in any metrological project. It helps avoiding those classical errors like "off by a factor of thousand" or any other potency of ten: the recalculation from one measure to another is made easy.
+In metrological and engineering software, unit-related errors are a common and often
+hard-to-detect problem. Mixing incompatible units or relying on implicit conversions
+can easily lead to incorrect results.
 
-Additionally, it supports user given precision which is oftenly needed for "reasonable precise" numbers of a given metrological setup: see <a href="./FloatingMeasure_Examples/FMEx_CheckMeasValue.cpp"> FMEx_CheckMeasValue.cpp</a> for illustration.
+FloatingMeasure addresses this by making physical quantities explicit and by handling
+unit conversions in a controlled and transparent way.
+
+Additionally, the API supports **user-defined precision**, which is often required to
+represent *reasonably precise* values in real-world measurement setups.
+See [FMEx_CheckMeasValue.cpp](./FloatingMeasure_Examples/FMEx_CheckMeasValue.cpp)
+for an illustration.
+
+---
 
 ## Installation
 
-The project can be compiled under Linux (CMake) and Windows (Visual Studio 2017). The corresponding build result can be found in the project directory <a href="build/CMake"> build/CMake </a> (for CMake) and <a href="build/VS"> build/VS </a> (for Visual Studio).  Distribute the corresponding "include" and "lib" directories to your favorite installation directory.
+The project can be compiled on:
+
+* **Linux** using CMake
+* **Windows** using Visual Studio 2017
+
+Build results are located in:
+
+* [build/CMake](build/CMake) (CMake)
+* [build/VS](build/VS) (Visual Studio)
+
+Distribute the generated `include` and `lib` directories to your preferred installation location.
+
+---
 
 ## API Reference
 
-Refere to the doxygen generated documentation <a href="Doc/html/index.html"> here. </a>
+Refer to the Doxygen-generated API documentation
+[here](Doc/html/index.html).
+
+---
 
 ## Tests
 
-Testing is done via cppunit which can be found on <a href="https://github.com/Ultimaker/CppUnit"> github </a> for usage under Windows (install and distribute with CMake). Under Linux (at least for Debian) it can be installed via apt.
+Testing is performed using **CppUnit**, available on
+[GitHub](https://github.com/Ultimaker/CppUnit).
 
-For building with CMake the <a href="FloatingMeasure_Test/CMakeLists.txt"> CMakeLists.txt </a> file must be adapted for that. There must be a more elegant way ...
+On Linux (e.g. Debian-based systems), CppUnit can be installed via `apt`.
 
-See how the testing is implemented <a href="FloatingMeasure_Test/FloatingMeasure_Test.cpp"> FloatingMeasure_Test.cpp </a>.
+For CMake builds, the file
+[CMakeLists.txt](FloatingMeasure_Test/CMakeLists.txt)
+must be adapted accordingly.
+
+See
+[FloatingMeasure_Test.cpp](FloatingMeasure_Test/FloatingMeasure_Test.cpp)
+for details on the test implementation.
+
+---
 
 ## Contributors
 
-Contributers are very welcome. Please, share your ideas of how want to use this API and adpat it to your needs.
+Contributions are welcome.
+Feel free to share ideas on how you intend to use the API or how it could be adapted
+to additional use cases.
+
+---
 
 ## Future Development
 
-- idea of "aliases" like : "1\*V\*A = 1\*W" or "1\*kg\*m\*m/s/s = 1\*J"... just an idea
-- any extension of pre and base measures (see above example: "kg" is missing)
-- handling offsets (i.e. especially temperatures are not supported at the moment)
-    - recalculation to SI-measures 
-    - simplification of complex measures
+* Support for *aliases*, e.g.
+  `1 * V * A = 1 * W` or
+  `1 * kg * m * m / s / s = 1 * J`
+* Extension of available pre-measures and base measures (e.g. missing `kg`)
+* Handling of offsets (notably temperature units), including:
 
+  * conversion to SI units
+  * simplification of complex measures
+
+---
 
 ## License
 
-See my <a href="LICENSE"> LICENSE </a> (MIT).
+See the [LICENSE](LICENSE) file (MIT).
+
 
